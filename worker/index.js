@@ -11,10 +11,12 @@ export default {
     if(typeof body.prompt!=='string'||!Array.isArray(body.sources)||body.sources.length>8)return json({error:'invalid_input'},400);
     const model='@cf/zai-org/glm-4.7-flash';
     try {
-      const result=await env.AI.run(model,{messages:[{role:'system',content:body.prompt},{role:'user',content:JSON.stringify({sources:body.sources})}],temperature:.1,max_tokens:3000});
+      const result=await env.AI.run(model,{messages:[{role:'system',content:body.prompt},{role:'user',content:JSON.stringify({sources:body.sources})}],temperature:.1,max_completion_tokens:6000,response_format:{type:'json_object'},chat_template_kwargs:{enable_thinking:false}});
       const text=result?.choices?.[0]?.message?.content ?? result?.response;
       if(typeof text!=='string'||!text.trim())return json({error:'empty_model_response'},502);
-      return json({model,text,generated_at:new Date().toISOString()});
+      const finish_reason=result?.choices?.[0]?.finish_reason;
+      if(finish_reason==='length')return json({error:'model_output_truncated'},502);
+      return json({model,text,finish_reason,generated_at:new Date().toISOString()});
     } catch(error) { return json({error:String(error?.message||error).slice(0,200)},502); }
   }
 };

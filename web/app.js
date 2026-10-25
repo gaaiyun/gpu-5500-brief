@@ -22,7 +22,7 @@ function renderChart(){
     const v=min+(max-min)*i/4,yy=y(v);
     grid+=`<line x1="${bounds.left}" y1="${yy}" x2="${bounds.right}" y2="${yy}" stroke="var(--border)" stroke-dasharray="2 4" stroke-width=".8"/><text x="45" y="${yy+3}" text-anchor="end" fill="var(--muted)" font-size="10" font-family="Consolas,monospace">${(v/10000).toFixed(2)}万</text>`;
   }
-  const labels=rows.map((p,i)=>(i===0||i===rows.length-1||i%Math.ceil(rows.length/5)===0)?`<text x="${x(i)}" y="260" text-anchor="middle" fill="var(--muted)" font-size="10" font-family="Consolas,monospace">${p.date.slice(5).replace('-','/')}</text>`:'').join('');
+  const labels=rows.map((p,i)=>(i===0||i===rows.length-1||(i%Math.ceil(rows.length/5)===0&&i<rows.length-2))?`<text x="${x(i)}" y="260" text-anchor="middle" fill="var(--muted)" font-size="10" font-family="Consolas,monospace">${p.date.slice(5).replace('-','/')}</text>`:'').join('');
   const maxActivity=Math.max(...rows.map(p=>p.activity),1);
   const bars=rows.map((p,i)=>`<rect x="${x(i)-3}" y="${241-p.activity/maxActivity*16}" width="6" height="${p.activity/maxActivity*16}" rx="1" fill="${i===selected?'var(--amber)':'var(--border)'}" opacity=".55"/>`).join('');
   const p=rows[selected];
