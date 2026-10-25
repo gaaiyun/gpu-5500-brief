@@ -1,0 +1,222 @@
+"""Collect public evidence without turning unverified headlines into prices."""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import re
+import sys
+import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+from urllib.parse import quote
+
+import requests
+from bs4 import BeautifulSoup
+
+ROOT = Path(__file__).resolve().parents[1]
+TZ = timezone(timedelta(hours=8))
+HEADERS = {"User-Agent": "GPU5500Brief/1.0 (public-source-monitor; https://github.com/gaaiyun/gpu-5500-brief)"}
+MAX_BYTES = 4_000_000
+
+
+def now_iso():
+    return datetime.now(TZ).isoformat(timespec="seconds")
+
+
+def read_json(path, fallback=None):
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else fallback
+
+
+def save_json(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def fetch(url):
+    response = requests.get(url, headers=HEADERS, timeout=(12, 28), stream=True)
+    response.raise_for_status()
+    body = bytearray()
+    for chunk in response.iter_content(65536):
+        body.extend(chunk)
+        if len(body) > MAX_BYTES:
+            raise ValueError("响应超过采集上限")
+    return bytes(body), response.url, response.headers.get("Content-Type", "")
+
+
+def html_text(content):
+    soup = BeautifulSoup(content.decode("utf-8", errors="replace"), "html.parser")
+    for node in soup(["script", "style", "nav", "header", "footer"]):
+        node.decompose()
+    return re.sub(r"\s+", " ", soup.get_text(" ", strip=True))
+
+
+def extract_signals(source_id, text):
+    upper = text.upper()
+    product_present = bool(re.search(r"RTX\s*PRO\s*5500", upper))
+    if source_id == "nvidia":
+        if not product_present or not re.search(r"84\s*GB", upper):
+            raise ValueError("未识别到目标型号及显存，可能为挑战页或错误页面")
+        coming = "COMING SOON" in upper
+        price_mentions = sorted(set(re.findall(r"(?:US\$|USD\s*|\$|¥|￥)\s*\d[\d,.]*", text)))[:8]
+        return {"coming_soon": coming, "preliminary": "PRELIMINARY" in upper,
+                "needs_review": not coming or bool(price_mentions), "price_mentions": price_mentions,
+                "note": "官方页仍显示 Coming Soon" if coming else "Coming Soon 标记变化，需核验；不自动认定上市"}
+    if source_id == "smm":
+        has_quote = product_present and "9.5万元/张" in text and "预售" in text
+        if not has_quote:
+            raise ValueError("未复现已核查的预售表述；保留旧记录并等待人工复核")
+        return {"historical_quote_present": True, "note": "原报道中的历史预售价仍可复现；未复询卖方"}
+    if source_id in ("cls", "reuters"):
+        if not product_present:
+            raise ValueError("未识别目标型号，可能为挑战页或解析失败")
+        return {"note": "原报道可访问；原文发布日期保持不变"}
+    if source_id == "qudao":
+        return {"excluded": True, "entry_reproduced": product_present,
+                "note": "聚合平台保持排除；页面可访问不代表挂牌或成交已验证"}
+    return {"note": "资料可访问"}
+
+
+def check_source(source, previous, checked_at):
+    result = {"source_id": source["id"], "checked_at": checked_at, "url": source["url"],
+              "published_at": source["published_at"]}
+    try:
+        body, final_url, content_type = fetch(source["url"])
+        if source["id"] == "tansun":
+            if not body.startswith(b"%PDF-"):
+                raise ValueError("公告地址未返回 PDF")
+            signals = {"note": "发行人公告 PDF 可访问；合同不等于到货"}
+            fingerprint = hashlib.sha256(body).hexdigest()
+        else:
+            text = html_text(body)
+            signals = extract_signals(source["id"], text)
+            # Compare meaningful facts, not rotating advertisements/navigation.
+            fingerprint = hashlib.sha256(json.dumps(signals, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+        result.update(status="ok", signals=signals, sha256=fingerprint, final_url=final_url,
+                      last_success_at=checked_at,
+                      changed_since_last=bool(previous and previous.get("sha256") and previous["sha256"] != fingerprint))
+    except Exception as exc:
+        result.update(status="failed", error=str(exc)[:280], last_success_at=previous.get("last_success_at") if previous else None,
+                      signals=previous.get("signals", {}) if previous else {},
+                      sha256=previous.get("sha256") if previous else None, changed_since_last=False)
+    return result
+
+
+def parse_feed(content, feed_id, checked_at):
+    root = ET.fromstring(content)
+    results = []
+    cutoff = datetime.fromisoformat(checked_at) - timedelta(days=21)
+    from email.utils import parsedate_to_datetime
+    for node in root.findall(".//item"):
+        title = node.findtext("title", "").strip()
+        if not re.search(r"5500", title) or not re.search(r"RTX|英伟达|NVIDIA", title, re.I):
+            continue
+        pub_raw = node.findtext("pubDate", "")
+        try:
+            published = parsedate_to_datetime(pub_raw)
+            if published.tzinfo is None:
+                published = published.replace(tzinfo=timezone.utc)
+            if published < cutoff or published > datetime.fromisoformat(checked_at) + timedelta(hours=1):
+                continue
+        except (ValueError, TypeError):
+            continue
+        source = node.find("source")
+        link = node.findtext("link", "").strip()
+        if not link.startswith("https://"):
+            continue
+        results.append({"title": title[:250], "url": link, "published_at": published.isoformat(),
+                        "publisher": source.text if source is not None else "未标明",
+                        "source_url": source.get("url", "") if source is not None else "",
+                        "verification": "headline_only", "feed_id": feed_id})
+    return results
+
+
+def collect_feed(item, checked_at):
+    feed_id, query = item
+    url = "https://news.google.com/rss/search?q=" + quote(query) + "&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
+    try:
+        body, _, _ = fetch(url)
+        entries = parse_feed(body, feed_id, checked_at)
+        return {"id": feed_id, "status": "ok", "checked_at": checked_at, "url": url,
+                "count": len(entries), "entries": entries}
+    except Exception as exc:
+        return {"id": feed_id, "status": "failed", "checked_at": checked_at, "url": url,
+                "error": str(exc)[:280], "entries": []}
+
+
+def forecast_status(evidence, checks, today):
+    forecast = evidence["forecast"]
+    by_id = {c["source_id"]: c for c in checks}
+    anchor_age = (today - datetime.fromisoformat(forecast["anchor_observed_at"]).date()).days
+    reasons = []
+    if anchor_age > 14:
+        reasons.append(f"价格锚点已距今 {anchor_age} 天，缺少直接卖方复询")
+    if by_id.get("smm", {}).get("status") != "ok":
+        reasons.append("预售锚点来源本轮未成功复现")
+    if by_id.get("nvidia", {}).get("status") != "ok":
+        reasons.append("官方页面本轮采集失败")
+    if by_id.get("nvidia", {}).get("signals", {}).get("needs_review"):
+        reasons.append("官方上市标记变化，需要人工复核")
+    expired = today > datetime.fromisoformat(forecast["horizon_end"]).date() or anchor_age > 30
+    if expired:
+        reasons.append("预测期限届满或锚点超过 30 天；停止展示有效数值预测")
+    return {"status": "expired" if expired else "review_required" if reasons else "low_confidence",
+            "anchor_age_days": anchor_age, "reasons": reasons,
+            "reviewed_at": today.isoformat(), "issued_at": forecast["issued_at"],
+            "numeric_forecast_active": not expired,
+            "note": "无新增已核验价格时，保持预测版本及发布日期；每天复核有效性，不生成伪新价。"}
+
+
+def run(offline=False):
+    evidence = read_json(ROOT / "data/evidence.json")
+    previous = read_json(ROOT / "data/state.json", {})
+    checked_at = now_iso()
+    if offline:
+        if not previous:
+            raise ValueError("没有可用于离线构建的采集记录")
+        return previous
+    prev_checks = {c["source_id"]: c for c in previous.get("checks", [])}
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        checks = list(pool.map(lambda s: check_source(s, prev_checks.get(s["id"]), checked_at), evidence["sources"]))
+        feeds = list(pool.map(lambda item: collect_feed(item, checked_at), [
+            ("cn", '"RTX PRO 5500" when:21d'),
+            ("price", '"RTX PRO 5500" (价格 OR 报价 OR 交付 OR price OR delivery) when:21d')]))
+    deduped = {}
+    for feed in feeds:
+        for entry in feed["entries"]:
+            deduped.setdefault(entry["title"].casefold(), entry)
+    # A failed feed never erases the last successful headline collection.
+    headlines = sorted(deduped.values(), key=lambda x: x["published_at"], reverse=True)[:24]
+    carried = not any(f["status"] == "ok" for f in feeds)
+    if carried:
+        headlines = previous.get("headlines", [])
+    today = datetime.fromisoformat(checked_at).date()
+    state = {"schema_version": 1, "checked_at": checked_at, "date": today.isoformat(),
+             "checks": checks, "feeds": [{k:v for k,v in f.items() if k != "entries"} for f in feeds],
+             "headlines": headlines, "headlines_carried_forward": carried,
+             "headline_collection_at": previous.get("headline_collection_at") if carried else checked_at,
+             "forecast_review": forecast_status(evidence, checks, today),
+             "new_verified_price_count": 0,
+             "summary": "本轮自动采集不把新闻标题或聚合挂牌升级为已核验价格；已核验价格更新需要证据复核。"}
+    save_json(ROOT / "data/state.json", state)
+    save_json(ROOT / "data/history" / f"{today.isoformat()}.json", state)
+    healthy = sum(c["status"] == "ok" for c in checks)
+    print(f"Sources: {healthy}/{len(checks)} accessible; feeds: {sum(f['status']=='ok' for f in feeds)}/{len(feeds)}; headlines: {len(headlines)}")
+    for check in checks:
+        print(f"  {check['source_id']}: {check['status']}" + (f" ({check['error']})" if check.get("error") else ""))
+    # Partial source failure is visible, while a complete outage fails CI.
+    if healthy == 0:
+        raise RuntimeError("所有核心来源采集失败；已保留失败记录，禁止宣称刷新成功")
+    return state
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--offline", action="store_true")
+    args = parser.parse_args()
+    try:
+        run(args.offline)
+    except Exception as error:
+        print(str(error), file=sys.stderr)
+        sys.exit(1)

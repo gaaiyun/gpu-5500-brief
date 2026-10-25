@@ -1,0 +1,84 @@
+{
+  "as_of": "2026-10-25",
+  "product": "NVIDIA RTX PRO 5500 Blackwell Workstation Edition",
+  "scope": "中国大陆，单卡，人民币；公开报价未统一税费、数量和交期",
+  "sources": [
+    {
+      "id": "nvidia",
+      "name": "NVIDIA 官方产品页",
+      "url": "https://www.nvidia.com/en-eu/products/workstations/professional-desktop-gpus/rtx-pro-5500/",
+      "published_at": null,
+      "kind": "official_product",
+      "summary": "官方页面显示 Coming Soon；84 GB GDDR7；规格为初步数据、可能变化。所核查页面没有公开售价或确定上市日期。",
+      "limitations": "官网页面状态不证明所有渠道均无样品，也不构成对具体交易进口资格的确认。"
+    },
+    {
+      "id": "smm",
+      "name": "SMM：涨价到了桌面设备 算力紧缺难言见顶",
+      "url": "https://news.smm.cn/news/104154895",
+      "published_at": "2026-10-13",
+      "kind": "reported_presale",
+      "summary": "SMM 报道大陆供货商预售报价 95,000 元/张，行业估计 90,000-95,000 元/张；原文明确两者均为非官方口径。",
+      "limitations": "供应商身份、样本数量、税费、数量、交期及可履行条件未披露；本轮没有直接向供应商复询。"
+    },
+    {
+      "id": "cls",
+      "name": "财联社：数十亿算力订单尚八字未见撇？",
+      "url": "https://www.cls.cn/detail/2500747",
+      "published_at": "2026-10-09",
+      "kind": "interview_estimate",
+      "summary": "柏林云负责人估计约 85,000 元/张；另有受访者预估国内报价或超过 100,000 元。",
+      "limitations": "均为受访者估价，不是官方定价、买盘、批发成交或已核验销售合同单价。"
+    },
+    {
+      "id": "reuters",
+      "name": "Reuters：ByteDance, Alibaba, Tencent place over $35 billion worth of Nvidia chip orders（WBOW 全文转载）",
+      "url": "https://1027wbow.com/2026/10/20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders/",
+      "published_at": "2026-10-20",
+      "kind": "anonymous_sources",
+      "summary": "路透援引匿名消息源报道订单单价约 11,400 美元、需求超过计划供应，早期样品预计 12 月、商业交付预计 2027 年一季度。",
+      "limitations": "阅读的是署名 Thomson Reuters 的全文转载；这些数字来自匿名信源，尚非 NVIDIA 公开定价、产量承诺或实际交付记录。"
+    },
+    {
+      "id": "tansun",
+      "name": "天阳科技：关于签订日常经营合同的公告，2026-070（公告 PDF 镜像）",
+      "url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-10/2026-10-13/12638891.PDF",
+      "published_at": "2026-10-13",
+      "kind": "issuer_filing",
+      "summary": "发行人公告披露与 X 公司签订 20,000 张采购合同；分批发货付款，提示延期、减量及原厂原因下的卖方免责风险。",
+      "limitations": "已核查公告 PDF；公开文本没有披露可用于本报告的单卡价格、总金额或确定交期。合同数量不等于到货数量。"
+    },
+    {
+      "id": "qudao",
+      "name": "宽泛采销集合系统（排除出价格基准）",
+      "url": "https://qudao.co/",
+      "published_at": null,
+      "kind": "excluded_aggregate",
+      "summary": "检索索引出现货源均价 91,400、需求均价 88,700；本轮静态页面未复现该条目，www 与裸域索引日期口径不一致。",
+      "limitations": "缺少逐笔卖家、库存、税费及成交凭据；不能核实为 10 月 24 日有效报价，禁止参与基准和自动调价。"
+    }
+  ],
+  "prices": [
+    {"id":"smm_presale","source_id":"smm","observed_at":"2026-10-13","value_cny":95000,"type":"供应商预售报价（媒体转述）","tax":"未披露","quantity":"未披露","delivery":"未披露","use":"历史预售锚点，非今日成交价"},
+    {"id":"smm_estimate","source_id":"smm","observed_at":"2026-10-13","low_cny":90000,"high_cny":95000,"type":"行业估价","use":"辅助判断，不独立于同一篇 SMM 报道"},
+    {"id":"cls_estimate","source_id":"cls","observed_at":"2026-10-09","value_cny":85000,"type":"受访者估价","use":"早期参考，非实际买盘"},
+    {"id":"cls_high","source_id":"cls","observed_at":"2026-10-09","low_cny":100000,"type":"受访者上行情景估价","use":"不能写成已出现十万元成交"},
+    {"id":"reuters_usd","source_id":"reuters","observed_at":"2026-10-20","value_usd":11400,"type":"匿名信源所述订单价格","use":"美元独立口径；未披露税费及交付条款，不直接兑换作大陆批发价"}
+  ],
+  "forecast": {
+    "version": "2026-10-25-v1",
+    "issued_at": "2026-10-25",
+    "horizon_end": "2026-12-24",
+    "anchor_cny": 95000,
+    "anchor_source_id": "smm",
+    "anchor_observed_at": "2026-10-13",
+    "assumption": "适用未来 30-60 天的公开单卡预售报价讨论；新卡、人民币；税费、数量、付款及交期必须另行统一。",
+    "method": "以 95,000 元历史预售价为锚，对价格作 -15% 到 +20% 的主观敏感性分析并取整到易用区间；没有历史成交序列，未进行统计拟合，不分配情景概率。",
+    "thesis": "在正式供货与成交证据出现前，9万-10万元/张可作为低置信度的基准预售讨论区间；具体分销报盘仍取决于可履行货源及实际成本。",
+    "scenarios": [
+      {"id":"soft","name":"需求降温 / 供应改善","low":80000,"high":90000,"trigger":"独立卖方有效报价连续下降、排队需求撤回，或正式供货增加。","invalidator":"低价仅为无交期的订金广告，不能触发下调。"},
+      {"id":"base","name":"基准情景","low":90000,"high":100000,"trigger":"公开预售锚点仍有效，没有可核验的供应突变。","invalidator":"出现新官方价格、可核验成交或旧锚点已长期失效。"},
+      {"id":"tight","name":"首批供应偏紧","low":100000,"high":115000,"trigger":"能核验的短交期配额稀缺，且客户愿意以付款锁定供应。","invalidator":"仅有大额意向单与媒体标题，没有卖方履行及买方接受证据。"}
+    ]
+  }
+}

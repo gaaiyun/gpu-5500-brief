@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RTX PRO 5500 中国大陆公开价格、供需情报与有来源的情景预测。保留报价原始日期，区分预售、估价和成交。">
+  <meta name="color-scheme" content="light">
+  <title>RTX PRO 5500 · 中国大陆渠道观察</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="masthead"><div class="brand">GPU <span>5500</span><small>中国大陆渠道观察</small></div><nav aria-label="主要导航"><a href="#prices">价格证据</a><a href="#forecast">价格预测</a><a href="#news">每日情报</a><a href="#sources">信息来源</a></nav><a class="report-link" href="report.pdf" target="_blank" rel="noopener">阅读完整报告 ↗</a></header>
+  <main id="main">
+    <div class="edition"><span>大陆市场 / 公开资料研究</span><span id="edition-date">正在读取采集时间</span></div>
+    <section class="intro" aria-labelledby="title"><div><h1 id="title">RTX PRO 5500<br>报价之前，先看证据。</h1><p class="lead">追踪供应、交付与价格预期。每一条报价保留原始日期，每一个预测说明它的依据。</p></div><div class="brief-note"><p id="official-status">官方产品状态正在核查</p><p>95,000 元是 <strong>2026-10-13 媒体转述的预售价</strong>。本轮没有直接复询卖方，尚无可独立核验的大陆批发成交样本。</p><a href="report.pdf" target="_blank" rel="noopener">价格预测与分销分析 PDF ↗</a></div></section>
+    <div id="run-status" class="run-status" role="status">正在读取来源状态…</div>
+    <noscript><p class="notice">请启用 JavaScript 读取每日数据；也可直接下载上方 PDF 报告。</p></noscript>
+    <section id="prices" class="section"><div class="section-head"><div><h2>公开价格证据</h2><p>以下是不同日期、不同口径的观察，不能串成价格涨跌曲线。</p></div><a href="evidence.csv" download>下载证据 CSV ↓</a></div><div class="table-wrap"><table><caption class="sr-only">RTX PRO 5500 公开价格来源及证据口径</caption><thead><tr><th>公开数字</th><th>口径</th><th>原始日期</th><th>可以怎样使用</th></tr></thead><tbody id="price-rows"></tbody></table></div><p class="footnote">来源核查成功表示原报道可复现，不表示卖方今天仍接受该价。税费、交期、付款及数量尚未统一。</p></section>
+    <section id="forecast" class="section forecast-section"><div class="section-head"><div><h2>价格预测 · 条件与区间</h2><p id="forecast-date"></p></div><span id="forecast-state" class="tag"></span></div><p id="forecast-summary" class="forecast-thesis"></p><div id="forecast-warning" class="notice" hidden></div><div id="scenario-list" class="scenario-list"></div><p class="footnote">区间是以 95,000 元为锚的主观敏感性分析，并非额外采集到的市场报价。无统计拟合、置信区间或情景概率；没有新证据时保留原预测版本。</p><details><summary>什么证据会改变判断？</summary><p>官方首次公开价格；至少两家独立、可比较的有效报盘；可核验成交或验收；配额与履约条件发生变化。单一新闻标题或 Coming Soon 字样消失均只触发复核。</p></details></section>
+    <section id="news" class="section"><div class="section-head"><div><h2>每日情报</h2><p id="news-date">新闻线索保留发布日期，标题尚未经正文核验。</p></div><a href="https://github.com/gaaiyun/gpu-5500-brief/actions" target="_blank" rel="noopener">查看更新记录 ↗</a></div><div class="intelligence"><div><h3>已核查的供需信息</h3><p>天阳科技 10 月 13 日公告披露 2 万张采购合同，同时提示延期、减量及原厂原因下卖方免责。签约数量与实际可交付库存仍需分别核实。</p><a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12638891&amp;stockid=" target="_blank" rel="noopener">发行人公告镜像 ↗</a><p>路透 10 月 20 日援引匿名信源，报道需求超过计划供应、商业交付预计始于 2027 年一季度。这些数据尚非厂商公开承诺。</p><a href="https://1027wbow.com/2026/10/20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders/" target="_blank" rel="noopener">Reuters 全文转载 ↗</a></div><div><h3>新近检索线索 <span class="tag">待核实正文</span></h3><ul id="news-items" class="news-list"></ul></div></div></section>
+    <section class="section calculator"><div><h2>分销报价测算</h2><p>将采购、售价和费用按同一税务口径输入。这里计算经营贡献，不等同于财报毛利率；金额仅在当前浏览器计算。</p><div class="inputs"><label>采购成本 / 张（元）<input id="cost" type="number" min="0" step="100" value="90000"></label><label>费用 / 张（元）<input id="fees" type="number" min="0" step="100" value="2000"></label><label>净销售收入 / 张（元）<input id="revenue" type="number" min="1" step="100" value="95000"></label><label>销售数量（张）<input id="quantity" type="number" min="1" step="1" value="1"></label></div></div><div class="calculation"><p>按输入的假设金额计算</p><output id="contribution" aria-live="polite"></output><p id="margin"></p><p class="footnote">默认值为算术示例。公开 95,000 元预售价是否含税未披露，不能直接视为这里的净销售收入。</p></div></section>
+    <section id="sources" class="section"><div class="section-head"><div><h2>信息来源与采集情况</h2><p>每日计划于北京时间 00:35 触发；实际运行可能延迟。采集与证据发布日期分别记录。</p></div><a href="report.md" download>下载可编辑报告 ↓</a></div><div id="source-list" class="source-list"></div></section>
+  </main>
+  <footer><p>GPU 5500 · 中国大陆渠道观察</p><p>资料透明，预测有条件。公开站点不收集采购成本、客户或合同数据。</p><a href="https://github.com/gaaiyun/gpu-5500-brief" target="_blank" rel="noopener">项目与历史数据 ↗</a></footer>
+</body>
+</html>

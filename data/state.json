@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-25T20:22:17+08:00",
+  "date": "2026-10-25",
+  "checks": [
+    {
+      "source_id": "nvidia",
+      "checked_at": "2026-10-25T20:22:17+08:00",
+      "url": "https://www.nvidia.com/en-eu/products/workstations/professional-desktop-gpus/rtx-pro-5500/",
+      "published_at": null,
+      "status": "ok",
+      "signals": {
+        "coming_soon": true,
+        "preliminary": true,
+        "needs_review": false,
+        "price_mentions": [],
+        "note": "官方页仍显示 Coming Soon"
+      },
+      "sha256": "44407bfef09d7a5ae432a2610c0ea157b58e1122350490f3272115d7d0632d26",
+      "final_url": "https://www.nvidia.com/en-eu/products/workstations/professional-desktop-gpus/rtx-pro-5500/",
+      "last_success_at": "2026-10-25T20:22:17+08:00",
+      "changed_since_last": true
+    },
+    {
+      "source_id": "smm",
+      "checked_at": "2026-10-25T20:22:17+08:00",
+      "url": "https://news.smm.cn/news/104154895",
+      "published_at": "2026-10-13",
+      "status": "ok",
+      "signals": {
+        "historical_quote_present": true,
+        "note": "原报道中的历史预售价仍可复现；未复询卖方"
+      },
+      "sha256": "6af43aafc054904aedfd5e0fb8f250a43b829180a0ab0d6516d794a6834a2427",
+      "final_url": "https://news.smm.cn/news/104154895",
+      "last_success_at": "2026-10-25T20:22:17+08:00",
+      "changed_since_last": false
+    },
+    {
+      "source_id": "cls",
+      "checked_at": "2026-10-25T20:22:17+08:00",
+      "url": "https://www.cls.cn/detail/2500747",
+      "published_at": "2026-10-09",
+      "status": "ok",
+      "signals": {
+        "note": "原报道可访问；原文发布日期保持不变"
+      },
+      "sha256": "03412743bcdfaf091c4a274cd4a8be8f44db26128f5d61d14285f4f1429f35cb",
+      "final_url": "https://www.cls.cn/detail/2500747",
+      "last_success_at": "2026-10-25T20:22:17+08:00",
+      "changed_since_last": false
+    },
+    {
+      "source_id": "reuters",
+      "checked_at": "2026-10-25T20:22:17+08:00",
+      "url": "https://1027wbow.com/2026/10/20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders/",
+      "published_at": "2026-10-20",
+      "status": "failed",
+      "error": "403 Client Error: Forbidden for url: https://1027wbow.com/2026/10/20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders/",
+      "last_success_at": null,
+      "signals": {},
+      "sha256": null,
+      "changed_since_last": false
+    },
+    {
+      "source_id": "tansun",
+      "checked_at": "2026-10-25T20:22:17+08:00",
+      "url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-10/2026-10-13/12638891.PDF",
+      "published_at": "2026-10-13",
+      "status": "ok",
+      "signals": {
+        "note": "发行人公告 PDF 可访问；合同不等于到货"
+      },
+      "sha256": "122d27eb4b3682cd76c2c5b3743935f9cab91bed346e1d7c7b60d478a3ddd4e8",
+      "final_url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-10/2026-10-13/12638891.PDF",
+      "last_success_at": "2026-10-25T20:22:17+08:00",
+      "changed_since_last": false
+    },
+    {
+      "source_id": "qudao",
+      "checked_at": "2026-10-25T20:22:17+08:00",
+      "url": "https://qudao.co/",
+      "published_at": null,
+      "status": "ok",
+      "signals": {
+        "excluded": true,
+        "entry_reproduced": false,
+        "note": "聚合平台保持排除；页面可访问不代表挂牌或成交已验证"
+      },
+      "sha256": "3dede350c81d230e727dd5b321a416c7776c937c4b8735d4577176b5610ed529",
+      "final_url": "https://qudao.co/",
+      "last_success_at": "2026-10-25T20:22:17+08:00",
+      "changed_since_last": false
+    }
+  ],
+  "feeds": [
+    {
+      "id": "cn",
+      "status": "ok",
+      "checked_at": "2026-10-25T20:22:17+08:00",
+      "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "count": 9
+    },
+    {
+      "id": "price",
+      "status": "ok",
+      "checked_at": "2026-10-25T20:22:17+08:00",
+      "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20%28%E4%BB%B7%E6%A0%BC%20OR%20%E6%8A%A5%E4%BB%B7%20OR%20%E4%BA%A4%E4%BB%98%20OR%20price%20OR%20delivery%29%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "count": 5
+    }
+  ],
+  "headlines": [
+    {
+      "title": "字节、阿里、腾讯350亿美金，抢英伟达RTX Pro 5500！国产替代战略失败了吗？ - Howl.link",
+      "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE1qczFuaGhpcVhNTzNMV3RfZ2kxZlItdmRmRWRiR0RzeDBTMUJvdHhndHhoT3BVN0RhX0Jj?oc=5",
+      "published_at": "2026-10-22T00:30:00+00:00",
+      "publisher": "Howl.link",
+      "source_url": "https://t.co",
+      "verification": "headline_only",
+      "feed_id": "cn"
+    },
+    {
+      "title": "中国买家面临供应限制，Nvidia RTX PRO 5500 订单突破 300 万 - remio",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcFZ2ek5xMGZNN2w0UG43bWRCMU5SVDNGTGthNjJHYm9xbENld3ljNnZSZ2JmekdSaWtCV0R6RXZjMnBTREZaYWN0YTFsdjZPeVlZb01vRFZ4QmVvWDZ4OWhWWlVWNXUyWDZJOUZORGNSNElxbHhqZy1abG5OWDBfbkd0MU1iY0tZdmc1V3Y1MEFrbTl3emwzSFg4bmVXc3hMd3JaejNUbGd2QmJwc0E?oc=5",
+      "published_at": "2026-10-21T16:54:14+00:00",
+      "publisher": "remio",
+      "source_url": "https://www.remio.ai",
+      "verification": "headline_only",
+      "feed_id": "cn"
+    },
+    {
+      "title": "字节跳动、Alibaba、Tencent据称订购超300万块Nvidia RTX PRO 5500 - 디지털투데이",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOR2Z0SXpCQ2tGZ1pDeS0yTFVjQnZmZW1VdVR5NDF5ZkFWamFtNXl1OFNldXBXWi1XYzhRS1V3bmxGdk84YlVZeFUwbU5NcnFqd054LXA0TFNtOVFOOUN1U0c2Y0tQQUhTTmtkekxic3A0ay02T2UxZm9ydXg4S2hsdXVmVkh3cWhReUg2X2F0QkVGdnpYVDFqQlIzenlhN2YyQnVwck16WHNDcVV4ZXVKOHY1TEJLdmxIZkc2cE5RRHlxdUI4Y3pVMTV3YTduMXcyNUtZREpRekw?oc=5",
+      "published_at": "2026-10-21T04:31:42+00:00",
+      "publisher": "디지털투데이",
+      "source_url": "https://www.digitaltoday.co.kr",
+      "verification": "headline_only",
+      "feed_id": "cn"
+    },
+    {
+      "title": "字节跳动、阿里巴巴、腾讯大量采购NVIDIA RTX PRO 5500 - DIGITIMES",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOX1JNeDl6TnpsSm5IWWJCZXlrUk5XdjVuakZUN1pkcXdLc1pTWXJ2cXplSldEbV8tVGpqT0Y3aHhoQmwxWUc0ZkhWa0lObnJfVWxfWTV4b05aVGpwU1Q4dDlzNUdOS0gtYnJWRWxnV2dKbGU2SzF1bVpGM3I2UWhlZVRJa1BjWmxFcWJnQXFsRkhLd25FTnZiVXhTOEg2N0VFaFhENFJtbDhpcmVYMzdyaA?oc=5",
+      "published_at": "2026-10-21T03:34:00+00:00",
+      "publisher": "DIGITIMES",
+      "source_url": "https://gb-www.digitimes.com.tw",
+      "verification": "headline_only",
+      "feed_id": "cn"
+    },
+    {
+      "title": "喊出300万张订单，英伟达RTX PRO 5500为何遭到提前疯抢？ - 雷峰网",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9Iejhja0dDQ0htMXNiVFJ6eU11cXFUSmM0aDVwb2w2UEZ0V1BlUW9rWDRuOXF5S0JTWHBXZkIyOU5jY2FzNEU0N3RJdDF5SEQ2NGlPb1dkcFNiU0x1cjhBVDJwZTZoaWxXN1Nn?oc=5",
+      "published_at": "2026-10-20T10:27:00+00:00",
+      "publisher": "雷峰网",
+      "source_url": "https://m.leiphone.com",
+      "verification": "headline_only",
+      "feed_id": "cn"
+    },
+    {
+      "title": "天阳科技公告签署销售合同 采购2万张英伟达RTX PRO 5500 GPU - 凤凰网",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9aTTlhZVlDRWpaREVOR2xObTVLTzNzN3d2UVJiSkJoLWVMSXVWTXBuc3NzVnN5ZEJRUS1WZ2ExYlRGT3ZIX1dhN2VJNlQ?oc=5",
+      "published_at": "2026-10-13T07:00:00+00:00",
+      "publisher": "凤凰网",
+      "source_url": "https://feng.ifeng.com",
+      "verification": "headline_only",
+      "feed_id": "cn"
+    },
+    {
+      "title": "天阳科技公告签署销售合同 采购2万张英伟达RTX PRO 5500 GPU - 观点网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8wRDRncVo0X3M0eWZfZDFnSGdHMFZBaDRLSDFDR3k5eU1tcXZDWVY0Y3RvOHlPeVRkejM5eERXd1lLUHh3ekVKUjZhWTBMTG16Vm9JTHhGNms3RmlDLTl6NWF3?oc=5",
+      "published_at": "2026-10-13T01:36:45+00:00",
+      "publisher": "观点网",
+      "source_url": "https://www.guandian.cn",
+      "verification": "headline_only",
+      "feed_id": "cn"
+    },
+    {
+      "title": "天阳科技拟采购2万张英伟达RTX PRO 5500 GPU，规格与5090相当，后者已被禁售 - 凤凰网",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9zZWNSYVRwelJ4R2c5VDdYMkFQdWNFQk8wMTlBNVE2ajIyM1pwOVpDMFVRNXo1MWJic0doa2pCbDZfbXI0S0lnejYtWVU?oc=5",
+      "published_at": "2026-10-09T07:00:00+00:00",
+      "publisher": "凤凰网",
+      "source_url": "https://feng.ifeng.com",
+      "verification": "headline_only",
+      "feed_id": "cn"
+    },
+    {
+      "title": "天阳科技拟采购2万张英伟达RTX PRO 5500 GPU，规格与5090相当，后者已被禁售 - 挖贝网",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1qRzdNdWY5TDlDcnlkSlA4b1o4U3RYRzhHVTJfdjhrMGNNSFlKRGxIQ0ViR0YyT0NjcDdNRzBzOTJueEg0U2N2V0NRazlVZw?oc=5",
+      "published_at": "2026-10-09T07:00:00+00:00",
+      "publisher": "挖贝网",
+      "source_url": "https://www.wabei.cn",
+      "verification": "headline_only",
+      "feed_id": "cn"
+    }
+  ],
+  "headlines_carried_forward": false,
+  "headline_collection_at": "2026-10-25T20:22:17+08:00",
+  "forecast_review": {
+    "status": "low_confidence",
+    "anchor_age_days": 12,
+    "reasons": [],
+    "reviewed_at": "2026-10-25",
+    "issued_at": "2026-10-25",
+    "numeric_forecast_active": true,
+    "note": "无新增已核验价格时，保持预测版本及发布日期；每天复核有效性，不生成伪新价。"
+  },
+  "new_verified_price_count": 0,
+  "summary": "本轮自动采集不把新闻标题或聚合挂牌升级为已核验价格；已核验价格更新需要证据复核。"
+}
