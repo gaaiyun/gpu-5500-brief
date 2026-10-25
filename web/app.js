@@ -57,10 +57,10 @@ function renderEvidence(){
   const channelRows=[
     {label:'宽泛采销 · 卖均',amount:yuan(p.ask),date:p.date,type:'平台参考',note:'公开接口日点；短交期另询'},
     {label:'宽泛采销 · 买均',amount:yuan(p.bid),date:p.date,type:'平台参考',note:'平台求购均价'},
-    {label:'宽泛采销 · 最低挂价',amount:yuan(market.min_ask),date:market.quote_date,type:'约90天期货',note:'原条目预订价；需确认能否继续锁定'}
+    {label:'宽泛采销 · 最低挂价',amount:yuan(market.min_ask),date:market.quote_date||'未标明',type:market.condition||'未标明',note:`交期 ${market.delivery||'未标明'}；需确认能否继续锁定`}
   ];
   const rows=channelRows.map(p=>`<tr><td><a class="link" href="${url(market.source_url)}" target="_blank" rel="noopener">${esc(p.label)} ↗</a><small class="evidence-date">${esc(p.date)}</small></td><td>${p.amount}</td><td>${esc(p.type)}</td><td>${esc(p.note)}</td></tr>`);
-  const names={smm:'SMM',cls:'财联社',reuters:'Reuters'};
+  const names={smm:'SMM',cls:'财联社',reuters:'Reuters',trendforce:'TrendForce'};
   evidence.prices.forEach(p=>{
     const amount=p.value_usd?`$${number(p.value_usd)}`:p.value_cny?yuan(p.value_cny):p.high_cny?`${number(p.low_cny)}—${number(p.high_cny)}`:`> ${number(p.low_cny)}`;
     rows.push(`<tr><td><a class="link" href="${url(source[p.source_id].url)}" target="_blank" rel="noopener">${esc(names[p.source_id])} ↗</a><small class="evidence-date">${esc(p.observed_at)}</small></td><td>${amount}</td><td>${esc(p.type.replace('（媒体转述）',''))}</td><td>${esc(p.use)}</td></tr>`);
@@ -71,7 +71,7 @@ function renderEvidence(){
 function renderIntelligence(){
   const intel=state.intelligence;
   $('intelligence-status').textContent=intel?.status==='workers_ai'?`核心事实与报价含义 · AI摘要已校验 · ${time(intel.generated_at)}`:'核心事实与报价含义 · 来源逐条对应';
-  $('intelligence-items').innerHTML=(intel?.items||[]).map(item=>`<article class="intel-item"><div class="intel-meta"><b>${esc(item.source_id.toUpperCase())}</b><span>${esc(item.date)}</span><small>${esc(item.kind)}</small></div><div class="intel-content"><h3><a href="${url(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a></h3><p>${esc(item.summary)}</p></div><div class="intel-impact"><span>报价含义</span>${esc(item.impact)}<small>跟踪：${esc(item.watch)}</small></div></article>`).join('');
+  $('intelligence-items').innerHTML=(intel?.items||[]).map(item=>`<article class="intel-item"><div class="intel-meta"><b>${esc(item.source||item.source_id.toUpperCase())}</b><span>${esc(item.date)}</span><small>${esc(item.kind)}</small></div><div class="intel-content"><h3><a href="${url(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a></h3><p>${esc(item.summary)}</p></div><div class="intel-impact"><span>报价含义</span>${esc(item.impact)}<small>跟踪：${esc(item.watch)}</small></div></article>`).join('');
   $('headline-count').textContent=`${state.headlines.length} 条`;
   document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
     newsFilter=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('selected',b===button));renderNews();
@@ -80,28 +80,15 @@ function renderIntelligence(){
 function category(title){if(/价格|报价|涨价|price/i.test(title))return 'price';if(/限制|批准|出口|管制|export|policy/i.test(title))return 'policy';return 'supply';}
 function renderNews(){
   const rows=state.headlines.filter(x=>newsFilter==='all'||category(x.title)===newsFilter);
-  $('news-items').innerHTML=rows.length?rows.slice(0,12).map(x=>`<li><a href="${url(x.url)}" target="_blank" rel="noopener">${esc(x.title)} ↗</a><small>${esc(x.publisher)} · ${esc(x.published_at.slice(0,10))}</small></li>`).join(''):'<li>当前筛选下没有新增线索。</li>';
+  $('news-items').innerHTML=rows.length?rows.slice(0,12).map(x=>`<li><a href="${url(x.url)}" target="_blank" rel="noopener">${esc(x.title)} ↗</a><small>${esc(x.publisher)}${x.reprints?.length?` 等${x.reprints.length+1}家`:''} · ${esc(x.published_at.slice(0,10))}</small></li>`).join(''):'<li>当前筛选下没有新增线索。</li>';
 }
 function renderSources(){
   const checks=Object.fromEntries(state.checks.map(c=>[c.source_id,c]));
   const healthy=state.checks.filter(x=>x.status==='ok').length;
   $('source-status').textContent=`${healthy}/${state.checks.length} 可访问 · 原始日期与采集时间分别记录`;
-  const names={nvidia:'NVIDIA 官方产品页',smm:'SMM 预售采访',cls:'财联社估价采访',reuters:'Reuters 订单与供货调查',tansun:'天阳科技合同公告',qudao:'宽泛采销公开行情'};
+  const names={nvidia:'NVIDIA 官方产品页',smm:'SMM 预售采访',cls:'财联社估价采访',reuters:'Reuters 订单与供货独家',trendforce:'TrendForce 价格与配额',tansun:'天阳科技合同公告',qudao:'宽泛采销公开行情'};
   $('source-list').innerHTML=evidence.sources.map(s=>{const c=checks[s.id]||{};return `<details class="source-row"><summary><span>${esc(names[s.id])}</span><small>${esc(s.published_at||'动态来源')}</small><small style="color:${c.status==='ok'?'var(--green)':'var(--red)'}">${c.status==='ok'?'可访问':'采集失败'}</small></summary><p>${esc(s.summary)}<br>${esc(s.limitations)}<br>本轮检查 ${time(c.checked_at)} · 上次成功 ${time(c.last_success_at)}${c.error?`<br>${esc(c.error)}`:''}<br><a href="${url(s.url)}" target="_blank" rel="noopener">查看原始来源 ↗</a></p></details>`;}).join('');
   $('audit-items').innerHTML=market.audit.map(a=>`<div class="audit-item"><h3>${esc(a.title)}</h3><p>${esc(a.detail)}</p></div>`).join('');
-}
-function calculate(){
-  const ids=['cost','fees','revenue','quantity'];const [cost,fees,revenue,quantity]=ids.map(id=>Number($(id).value));
-  if(ids.some(id=>$(id).value==='')||![cost,fees,revenue,quantity].every(Number.isFinite)||cost<0||fees<0||revenue<=0||quantity<1||!Number.isInteger(quantity)){
-    $('contribution').textContent='请输入有效金额';$('margin').textContent='—';return;
-  }
-  const per=revenue-cost-fees;
-  $('contribution').textContent=`${per<0?'-':''}${yuan(Math.abs(per*quantity))}`;
-  $('contribution').classList.toggle('negative',per<0);
-  $('margin').textContent=`${(per/revenue*100).toFixed(2)}%`;
-  $('break-even').textContent=`${yuan(cost+fees)} / 张`;
-  $('target-price').textContent=`${yuan((cost+fees)/.95)} / 张`;
-  if(market){const bid=market.latest.bid-cost-fees;$('bid-result').textContent=`${bid<0?'-':''}${yuan(Math.abs(bid))} / 张`;$('bid-result').className=bid<0?'up':'down';}
 }
 async function load(){
   [evidence,state]=await Promise.all(['evidence.json','state.json'].map(async name=>{const r=await fetch(name,{cache:'no-store'});if(!r.ok)throw new Error(`读取数据失败 ${r.status}`);return r.json();}));
@@ -115,18 +102,22 @@ async function load(){
   $('spread-price').textContent=yuan(stats.spread);$('spread-percent').textContent=`${stats.spread_pct.toFixed(2)}% · 非利润率`;
   $('min-ask').textContent=yuan(market.min_ask);$('max-bid').textContent=yuan(market.max_bid);$('activity').textContent=`${number(p.activity)} 张`;
   $('range-prices').textContent=`${(stats.period_high/10000).toFixed(2)} / ${(stats.period_low/10000).toFixed(2)} 万`;
-  $('delivery-note').textContent=`${yuan(market.min_ask)} 为约90天期货预订；原报价 ${market.quote_date}。图中柱形为平台挂牌活跃度。数据采集 ${time(market.collected_at)}。`;
+  $('min-ask-terms').textContent=market.delivery||'交期未标明';
+  $('delivery-note').textContent=`${yuan(market.min_ask)} 为${market.condition||'未标明货况'}，交期 ${market.delivery||'未标明'}；原报价 ${market.quote_date||'未标明'}。图中柱形为平台挂牌活跃度。数据采集 ${time(market.collected_at)}。`;
   const official=state.checks.find(c=>c.source_id==='nvidia');
   $('official-status').textContent=official?.status==='ok'&&official.signals.coming_soon?'Coming Soon':'官方状态待复核';
   $('daily-brief').innerHTML=state.daily_brief.items.map(b=>`<div class="brief-item"><h3>${esc(b.title)}</h3><p>${esc(b.text)}</p></div>`).join('');
-  const f=evidence.forecast,r=state.forecast_review;
+  const f=evidence.forecast,r=state.forecast_review,base=f.scenarios.find(x=>x.id==='base');
+  const anchorSource=evidence.sources.find(s=>s.id===f.anchor_source_id);
+  $('anchor-price').textContent=yuan(f.anchor_cny);$('anchor-date').textContent=`${anchorSource?.id==='smm'?'SMM':(anchorSource?.name||'')} · ${f.anchor_observed_at.slice(5)}`;
+  $('base-range').textContent=`${(base.low/10000).toFixed(1)}—${(base.high/10000).toFixed(1)} 万 / 张`;
   $('forecast-date').textContent=`首次判断 ${f.issued_at} · 本轮复核 ${r.reviewed_at}`;
   $('forecast-state').textContent={low_confidence:'条件情景',review_required:'待复核',expired:'历史情景'}[r.status];
   if(!r.numeric_forecast_active){document.querySelector('.brief-bottom b').textContent='原预测已到期';}
   if(r.reasons.length){$('forecast-warning').hidden=false;$('forecast-warning').textContent=r.reasons.join('；');}
   $('scenario-rows').innerHTML=[...f.scenarios].sort((a,b)=>(a.id==='base'?-1:b.id==='base'?1:0)).map(x=>`<div class="scenario-row ${esc(x.id)}"><span>${esc(x.name.replace(' / ',' · '))}</span><strong>${x.low/10000}—${x.high/10000} 万</strong><p>${esc(x.trigger)}</p></div>`).join('');
-  $('forecast-basis').textContent=`平台卖均${yuan(p.ask)}与SMM预售锚点¥95,000相差${yuan(95000-p.ask)}。区间为价格敏感性情景，未赋概率。新的独立报盘、官方定价或实际发货触发重估。`;
-  setupChart();renderEvidence();renderIntelligence();renderSources();calculate();
+  const gap=f.anchor_cny-p.ask;
+  $('forecast-basis').textContent=`平台卖均${yuan(p.ask)}与SMM预售锚点${yuan(f.anchor_cny)}相差${gap<0?'-':''}${yuan(Math.abs(gap))}。区间为价格敏感性情景，未赋概率。新的独立报盘、官方定价或实际发货触发重估。`;
+  setupChart();renderEvidence();renderIntelligence();renderSources();
 }
-['cost','fees','revenue','quantity'].forEach(id=>$(id).addEventListener('input',calculate));calculate();
 load().catch(error=>{$('load-error').hidden=false;$('load-error').textContent=error.message;$('run-state').textContent='数据加载失败 · 可打开研究报告';});

@@ -18,6 +18,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak
 
 from research import report_markdown
+from daily_card import render as render_card
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
@@ -99,6 +100,13 @@ def build():
     # Expose daily history without full article copies or private business data.
     history = sorted((ROOT / "data/history").glob("*.json"))
     (DIST / "history.json").write_text(json.dumps([json.loads(p.read_text(encoding="utf-8")) for p in history], ensure_ascii=False), encoding="utf-8")
+    # Every day's image stays published, so images in earlier group messages keep loading.
+    (DIST / "daily").mkdir(exist_ok=True)
+    for path in history:
+        day_state = json.loads(path.read_text(encoding="utf-8"))
+        if day_state.get("channel") and day_state.get("forecast_review"):
+            render_card(evidence, day_state, DIST / "daily" / f"{path.stem}.png")
+    render_card(evidence, state, DIST / "daily" / f"{state['date']}.png")
     markdown = report_markdown(evidence, state)
     (DIST / "report.md").write_text(markdown, encoding="utf-8")
     make_pdf(markdown, DIST / "report.pdf")

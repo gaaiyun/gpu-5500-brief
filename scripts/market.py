@@ -105,8 +105,8 @@ def daily_brief(evidence, market, previous):
     items = [
         {"title":"报价位置", "text":f"平台卖均 {p['ask']:,} 元；SMM 历史预售锚点 {anchor:,} 元，高出 {gap:,} 元（{gap/p['ask']*100:.2f}%）。"},
         {"title":"平台变化", "text":f"中间值较上日 {stats['day_change']:+,} 元（{stats['day_pct']:+.2f}%），较七日前 {stats['week_pct']:+.2f}%。"},
-        {"title":"交期差异", "text":f"最低挂价 {market['min_ask']:,} 元对应 {market['delivery']}期货，原报价 {market['quote_date'] or '未标明'}。"},
-        {"title":"分销判断", "text":"先核实短交期货源与税票，再用 9.5 万元做首轮询盘测试。平台均价用于对照，成交接受度以客户回盘为准。"}]
+        {"title":"交期差异", "text":f"最低挂价 {market['min_ask']:,} 元对应交期 {market['delivery']}，原报价 {market['quote_date'] or '未标明'}。"},
+        {"title":"下一步核实", "text":f"取得短交期货源的当日报价与含税口径，与 {anchor:,} 元预售锚点对照；平台均价只作参考。"}]
     old = (previous or {}).get("latest", {})
     changes = []
     for key,label in [("ask","卖方均价"),("bid","买方均价"),("mid","中间值"),("activity","挂牌活跃度")]:

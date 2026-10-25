@@ -70,7 +70,7 @@ def extract_signals(source_id, text):
         if not has_quote:
             raise ValueError("未复现已核查的预售表述；保留旧记录并等待人工复核")
         return {"historical_quote_present": True, "note": "原报道中的历史预售价仍可复现；未复询卖方"}
-    if source_id in ("cls", "reuters"):
+    if source_id in ("cls", "reuters", "trendforce"):
         if not product_present:
             raise ValueError("未识别目标型号，可能为挑战页或解析失败")
         return {"note": "原报道可访问；原文发布日期保持不变"}
@@ -136,8 +136,12 @@ def parse_feed(content, feed_id, checked_at):
         link = node.findtext("link", "").strip()
         if not link.startswith("https://"):
             continue
+        publisher = source.text if source is not None and source.text else "未标明"
+        # Google News appends " - publisher"; drop it so reprints share one title.
+        if title.endswith(" - " + publisher):
+            title = title[:-len(publisher) - 3].strip()
         results.append({"title": title[:250], "url": link, "published_at": published.isoformat(),
-                        "publisher": source.text if source is not None else "未标明",
+                        "publisher": publisher,
                         "source_url": source.get("url", "") if source is not None else "",
                         "verification": "headline_only", "feed_id": feed_id})
     return results
@@ -154,6 +158,26 @@ def collect_feed(item, checked_at):
     except Exception as exc:
         return {"id": feed_id, "status": "failed", "checked_at": checked_at, "url": url,
                 "error": str(exc)[:280], "entries": []}
+
+
+MAJOR_MEDIA = re.compile(
+    r"Reuters|路透|Bloomberg|彭博|BNN|Financial Times|FT中文|Wall Street Journal|WSJ|华尔街日报|CNBC|Nikkei|日经|"
+    r"South China Morning Post|SCMP|The Information|DIGITIMES|TrendForce|集邦|财联社|第一财经|证券时报|中国证券报|"
+    r"上海证券报|证券日报|21世纪经济|经济观察|财新|界面|澎湃|新华|人民网|央视|中国新闻网|每日经济新闻|雷峰网|集微|36氪", re.I)
+
+
+def merge_headlines(feeds):
+    """Major-media headlines only, one row per headline; later reprints are listed under the earliest publisher."""
+    merged = {}
+    entries = sorted((e for f in feeds for e in f["entries"] if MAJOR_MEDIA.search(e["publisher"])),
+                     key=lambda x: x["published_at"])
+    for entry in entries:
+        key = re.sub(r"[\s\-_|·:：，,。]+", "", entry["title"]).casefold()
+        if key not in merged:
+            merged[key] = dict(entry, reprints=[])
+        elif entry["publisher"] not in [merged[key]["publisher"], *merged[key]["reprints"]]:
+            merged[key]["reprints"].append(entry["publisher"])
+    return sorted(merged.values(), key=lambda x: x["published_at"], reverse=True)[:24]
 
 
 def forecast_status(evidence, checks, today):
@@ -193,13 +217,10 @@ def run(offline=False):
         feeds = list(pool.map(lambda item: collect_feed(item, checked_at), [
             ("cn", '"RTX PRO 5500" when:21d'),
             ("price", '"RTX PRO 5500" (价格 OR 报价 OR 交付 OR price OR delivery) when:21d'),
-            ("global", '"RTX PRO 5500" (Reuters OR NVIDIA OR supply) when:21d')]))
-    deduped = {}
-    for feed in feeds:
-        for entry in feed["entries"]:
-            deduped.setdefault(entry["title"].casefold(), entry)
+            ("global", '"RTX PRO 5500" (Reuters OR NVIDIA OR supply) when:21d'),
+            ("major", '"RTX PRO 5500" (site:reuters.com OR site:bloomberg.com OR site:cls.cn OR site:yicai.com OR site:stcn.com OR site:jiemian.com OR site:21jingji.com OR site:trendforce.com OR site:digitimes.com) when:21d')]))
     # A failed feed never erases the last successful headline collection.
-    headlines = sorted(deduped.values(), key=lambda x: x["published_at"], reverse=True)[:24]
+    headlines = merge_headlines(feeds)
     carried = not any(f["status"] == "ok" for f in feeds)
     if carried:
         headlines = previous.get("headlines", [])

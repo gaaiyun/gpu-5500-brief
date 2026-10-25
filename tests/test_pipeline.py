@@ -58,6 +58,16 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(items[0]["verification"], "headline_only")
         self.assertNotIn("value_cny", items[0])
 
+    def test_reprinted_headlines_merge(self):
+        item = lambda pub, day: f'<item><title>天阳科技公告签署销售合同 采购2万张英伟达RTX PRO 5500 GPU - {pub}</title><link>https://example.com/{pub}</link><pubDate>{day} Oct 2026 01:00:00 GMT</pubDate><source url="https://example.com">{pub}</source></item>'
+        xml = ('<rss><channel>' + item('第一财经', 'Tue, 13') + item('证券时报', 'Wed, 14') + item('财富号', 'Wed, 14') + '</channel></rss>').encode()
+        rows = update.merge_headlines([{"entries": update.parse_feed(xml, "test", "2026-10-25T20:00:00+08:00")}])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["title"], "天阳科技公告签署销售合同 采购2万张英伟达RTX PRO 5500 GPU")
+        self.assertEqual(rows[0]["publisher"], "第一财经")
+        # Self-media reposts are not listed even as reprints.
+        self.assertEqual(rows[0]["reprints"], ["证券时报"])
+
     def test_unknown_or_future_dates_rejected(self):
         xml = b'<rss><channel><item><title>RTX PRO 5500</title><link>https://example.com</link><pubDate>Sun, 25 Oct 2036 01:00:00 GMT</pubDate></item></channel></rss>'
         self.assertEqual(update.parse_feed(xml, "test", "2026-10-25T20:00:00+08:00"), [])

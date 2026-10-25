@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      notify:
+        description: '推送钉钉日报图'
+        type: boolean
+        default: false
   schedule:
     # 16:35 UTC = next day 00:35 Asia/Shanghai. GitHub may delay scheduled jobs.
     - cron: '35 16 * * *'
@@ -37,7 +42,7 @@ jobs:
         run: |
           python -m pip install -r requirements.txt
           sudo apt-get update -qq
-          sudo apt-get install -y -qq fonts-wqy-zenhei
+          sudo apt-get install -y -qq fonts-wqy-zenhei fonts-noto-cjk
       - name: Verify evidence handling
         run: python -m unittest discover -s tests -v
       - name: Collect sources and review forecast
@@ -67,6 +72,13 @@ jobs:
       - name: Publish
         id: deployment
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+      - name: Push daily image to DingTalk
+        # Code pushes only republish the site; the group gets one message per scheduled run.
+        if: github.event_name == 'schedule' || inputs.notify
+        env:
+          DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
+          DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}
+        run: python scripts/notify_dingtalk.py
       - name: Fail visibly after publishing outage state
         if: steps.collect.outcome == 'failure'
         run: |

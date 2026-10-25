@@ -32,12 +32,21 @@
     },
     {
       "id": "reuters",
-      "name": "Reuters：ByteDance, Alibaba, Tencent place over $35 billion worth of Nvidia chip orders（WBOW 全文转载）",
-      "url": "https://1027wbow.com/2026/10/20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders/",
+      "name": "Reuters 独家：ByteDance, Alibaba, Tencent place over $35 billion worth of Nvidia chip orders（BNN Bloomberg 全文转载）",
+      "url": "https://www.bnnbloomberg.ca/business/company-news/2026/10/20/bytedance-alibaba-tencent-place-over-us35-billion-worth-of-nvidia-chip-orders-reuters-exclusive/",
       "published_at": "2026-10-20",
       "kind": "anonymous_sources",
-      "summary": "路透援引匿名消息源报道订单单价约 11,400 美元、需求超过计划供应，早期样品预计 12 月、商业交付预计 2027 年一季度。",
-      "limitations": "阅读的是署名 Thomson Reuters 的全文转载；这些数字来自匿名信源，尚非 NVIDIA 公开定价、产量承诺或实际交付记录。"
+      "summary": "路透援引匿名消息源：三家公司合计订购超 300 万张、单价约 11,400 美元；中国客户总订单超 600 万张；2027 年全球产量可能不超过 300 万张，合作方或只获配申请量的 5%-10%；样品预计 12 月、商业交付预计 2027 年一季度。",
+      "limitations": "阅读的是 BNN Bloomberg 署名 Reuters 的全文转载；数字来自匿名信源，尚非 NVIDIA 公开定价、产量承诺或实际交付记录。"
+    },
+    {
+      "id": "trendforce",
+      "name": "TrendForce 集邦咨询：NVIDIA RTX PRO 5500 Reportedly Draws $35B in China Orders, with Supply Seen at Just 5–10%",
+      "url": "https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/",
+      "published_at": "2026-10-21",
+      "kind": "industry_research_news",
+      "summary": "TrendForce 转述 The Information：RTX PRO 5500 在中国售价约 85,000-90,000 元；并汇总路透所述 5%-10% 获配比例、12 月样品与 2027 年一季度商业交付。",
+      "limitations": "价格为 TrendForce 转述 The Information 报道（原文付费墙，未直接核读），未披露税费、数量和交期；文中订单与产量数字来自路透匿名信源，不是 TrendForce 独立调研。"
     },
     {
       "id": "tansun",
@@ -60,11 +69,59 @@
     }
   ],
   "prices": [
-    {"id":"smm_presale","source_id":"smm","observed_at":"2026-10-13","value_cny":95000,"type":"供应商预售报价（媒体转述）","tax":"未披露","quantity":"未披露","delivery":"未披露","use":"历史预售锚点，非今日成交价"},
-    {"id":"smm_estimate","source_id":"smm","observed_at":"2026-10-13","low_cny":90000,"high_cny":95000,"type":"行业估价","use":"辅助判断，不独立于同一篇 SMM 报道"},
-    {"id":"cls_estimate","source_id":"cls","observed_at":"2026-10-09","value_cny":85000,"type":"受访者估价","use":"早期参考，非实际买盘"},
-    {"id":"cls_high","source_id":"cls","observed_at":"2026-10-09","low_cny":100000,"type":"受访者上行情景估价","use":"不能写成已出现十万元成交"},
-    {"id":"reuters_usd","source_id":"reuters","observed_at":"2026-10-20","value_usd":11400,"type":"匿名信源所述订单价格","use":"美元独立口径；未披露税费及交付条款，不直接兑换作大陆批发价"}
+    {
+      "id": "smm_presale",
+      "source_id": "smm",
+      "observed_at": "2026-10-13",
+      "value_cny": 95000,
+      "type": "供应商预售报价（媒体转述）",
+      "tax": "未披露",
+      "quantity": "未披露",
+      "delivery": "未披露",
+      "use": "历史预售锚点，非今日成交价"
+    },
+    {
+      "id": "smm_estimate",
+      "source_id": "smm",
+      "observed_at": "2026-10-13",
+      "low_cny": 90000,
+      "high_cny": 95000,
+      "type": "行业估价",
+      "use": "辅助判断，不独立于同一篇 SMM 报道"
+    },
+    {
+      "id": "cls_estimate",
+      "source_id": "cls",
+      "observed_at": "2026-10-09",
+      "value_cny": 85000,
+      "type": "受访者估价",
+      "use": "早期参考，非实际买盘"
+    },
+    {
+      "id": "cls_high",
+      "source_id": "cls",
+      "observed_at": "2026-10-09",
+      "low_cny": 100000,
+      "type": "受访者上行情景估价",
+      "use": "不能写成已出现十万元成交"
+    },
+    {
+      "id": "theinformation_price",
+      "source_id": "trendforce",
+      "observed_at": "2026-10-21",
+      "low_cny": 85000,
+      "high_cny": 90000,
+      "type": "媒体报道售价区间（The Information，经 TrendForce 转述）",
+      "use": "大媒体口径的大陆价格区间；税费、数量与交期未披露"
+    },
+    {
+      "id": "reuters_usd",
+      "source_id": "reuters",
+      "observed_at": "2026-10-20",
+      "value_usd": 11400,
+      "type": "匿名信源所述订单价格",
+      "use": "美元独立口径；未披露税费及交付条款，不直接兑换作大陆批发价"
+    }
   ],
   "forecast": {
     "version": "2026-10-25-v1",
@@ -77,9 +134,30 @@
     "method": "以 95,000 元历史预售价为锚，对价格作 -15% 到 +20% 的主观敏感性分析并取整到易用区间；没有历史成交序列，未进行统计拟合，不分配情景概率。",
     "thesis": "在正式供货与成交证据出现前，9万-10万元/张可作为低置信度的基准预售讨论区间；具体分销报盘仍取决于可履行货源及实际成本。",
     "scenarios": [
-      {"id":"soft","name":"需求降温 / 供应改善","low":80000,"high":90000,"trigger":"独立卖方有效报价连续下降、排队需求撤回，或正式供货增加。","invalidator":"低价仅为无交期的订金广告，不能触发下调。"},
-      {"id":"base","name":"基准情景","low":90000,"high":100000,"trigger":"公开预售锚点仍有效，没有可核验的供应突变。","invalidator":"出现新官方价格、可核验成交或旧锚点已长期失效。"},
-      {"id":"tight","name":"首批供应偏紧","low":100000,"high":115000,"trigger":"能核验的短交期配额稀缺，且客户愿意以付款锁定供应。","invalidator":"仅有大额意向单与媒体标题，没有卖方履行及买方接受证据。"}
+      {
+        "id": "soft",
+        "name": "需求降温 / 供应改善",
+        "low": 80000,
+        "high": 90000,
+        "trigger": "独立卖方有效报价连续下降、排队需求撤回，或正式供货增加。",
+        "invalidator": "低价仅为无交期的订金广告，不能触发下调。"
+      },
+      {
+        "id": "base",
+        "name": "基准情景",
+        "low": 90000,
+        "high": 100000,
+        "trigger": "公开预售锚点仍有效，没有可核验的供应突变。",
+        "invalidator": "出现新官方价格、可核验成交或旧锚点已长期失效。"
+      },
+      {
+        "id": "tight",
+        "name": "首批供应偏紧",
+        "low": 100000,
+        "high": 115000,
+        "trigger": "能核验的短交期配额稀缺，且客户愿意以付款锁定供应。",
+        "invalidator": "仅有大额意向单与媒体标题，没有卖方履行及买方接受证据。"
+      }
     ]
   }
 }
