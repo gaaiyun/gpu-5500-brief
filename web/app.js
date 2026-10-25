@@ -11,7 +11,7 @@ let state,evidence,market,range=14,selected=0,newsFilter='all';
 function chartRows(){return market.series.slice(-range);}
 function renderChart(){
   const rows=chartRows(),svg=$('price-chart');selected=Math.min(Math.max(selected,0),rows.length-1);
-  const bounds={left:57,right:780,top:17,bottom:225};
+  const bounds={left:85,right:780,top:17,bottom:225};
   const low=Math.min(...rows.map(p=>p.bid)),high=Math.max(...rows.map(p=>p.ask));
   const pad=Math.max((high-low)*.17,500),min=low-pad,max=high+pad;
   const x=i=>bounds.left+i/(rows.length-1||1)*(bounds.right-bounds.left);
@@ -20,7 +20,7 @@ function renderChart(){
   let grid='';
   for(let i=0;i<5;i++){
     const v=min+(max-min)*i/4,yy=y(v);
-    grid+=`<line x1="${bounds.left}" y1="${yy}" x2="${bounds.right}" y2="${yy}" stroke="var(--border)" stroke-dasharray="2 4" stroke-width=".8"/><text x="45" y="${yy+3}" text-anchor="end" fill="var(--muted)" font-size="10" font-family="Consolas,monospace">${(v/10000).toFixed(2)}万</text>`;
+    grid+=`<line x1="${bounds.left}" y1="${yy}" x2="${bounds.right}" y2="${yy}" stroke="var(--border)" stroke-dasharray="2 4" stroke-width=".8"/><text x="72" y="${yy+3}" text-anchor="end" fill="var(--muted)" font-size="10" font-family="Consolas,monospace">${(v/10000).toFixed(2)}万</text>`;
   }
   const labels=rows.map((p,i)=>(i===0||i===rows.length-1||(i%Math.ceil(rows.length/5)===0&&i<rows.length-2))?`<text x="${x(i)}" y="260" text-anchor="middle" fill="var(--muted)" font-size="10" font-family="Consolas,monospace">${p.date.slice(5).replace('-','/')}</text>`:'').join('');
   const maxActivity=Math.max(...rows.map(p=>p.activity),1);
@@ -40,7 +40,7 @@ function setupChart(){
   box.addEventListener('pointermove',event=>{
     const matrix=$('price-chart').getScreenCTM();if(!matrix)return;
     const point=new DOMPoint(event.clientX,event.clientY).matrixTransform(matrix.inverse());
-    selected=Math.round(Math.max(0,Math.min(1,(point.x-57)/(780-57)))*(chartRows().length-1));
+    selected=Math.round(Math.max(0,Math.min(1,(point.x-85)/(780-85)))*(chartRows().length-1));
     $('chart-tooltip').hidden=false;renderChart();
   });
   box.addEventListener('pointerleave',()=>{$('chart-tooltip').hidden=true;});
