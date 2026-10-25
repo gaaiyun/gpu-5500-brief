@@ -43,6 +43,9 @@ jobs:
       - name: Collect sources and review forecast
         id: collect
         continue-on-error: true
+        env:
+          GPU_AI_ENDPOINT: ${{ vars.GPU_AI_ENDPOINT }}
+          GPU_AI_TOKEN: ${{ secrets.GPU_AI_TOKEN }}
         run: python scripts/update.py
       - name: Preserve daily collection records
         run: |

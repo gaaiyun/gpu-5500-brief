@@ -6,3 +6,6 @@ qa/
 .cache/
 .env
 *.log
+.wrangler/
+.dev.vars
+ClaudeCode_接手提示词.md

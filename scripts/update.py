@@ -14,6 +14,8 @@ from urllib.parse import quote
 
 import requests
 from bs4 import BeautifulSoup
+from market import parse_channel, daily_brief
+from intelligence import enrich
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = timezone(timedelta(hours=8))
@@ -83,7 +85,14 @@ def check_source(source, previous, checked_at):
               "published_at": source["published_at"]}
     try:
         body, final_url, content_type = fetch(source["url"])
-        if source["id"] == "tansun":
+        if source["id"] == "qudao":
+            market = parse_channel(json.loads(body), checked_at)
+            result["market"] = market
+            signals = {"reference_only":True, "latest_date":market["latest"]["date"],
+                       "ask":market["latest"]["ask"],"bid":market["latest"]["bid"],
+                       "note":"公开行情 API 已接入；平台参考口径"}
+            fingerprint = market["data_sha256"]
+        elif source["id"] == "tansun":
             if not body.startswith(b"%PDF-"):
                 raise ValueError("公告地址未返回 PDF")
             signals = {"note": "发行人公告 PDF 可访问；合同不等于到货"}
@@ -100,6 +109,8 @@ def check_source(source, previous, checked_at):
         result.update(status="failed", error=str(exc)[:280], last_success_at=previous.get("last_success_at") if previous else None,
                       signals=previous.get("signals", {}) if previous else {},
                       sha256=previous.get("sha256") if previous else None, changed_since_last=False)
+        if previous and previous.get("market"):
+            result["market"] = previous["market"]
     return result
 
 
@@ -181,7 +192,8 @@ def run(offline=False):
         checks = list(pool.map(lambda s: check_source(s, prev_checks.get(s["id"]), checked_at), evidence["sources"]))
         feeds = list(pool.map(lambda item: collect_feed(item, checked_at), [
             ("cn", '"RTX PRO 5500" when:21d'),
-            ("price", '"RTX PRO 5500" (价格 OR 报价 OR 交付 OR price OR delivery) when:21d')]))
+            ("price", '"RTX PRO 5500" (价格 OR 报价 OR 交付 OR price OR delivery) when:21d'),
+            ("global", '"RTX PRO 5500" (Reuters OR NVIDIA OR supply) when:21d')]))
     deduped = {}
     for feed in feeds:
         for entry in feed["entries"]:
@@ -192,13 +204,18 @@ def run(offline=False):
     if carried:
         headlines = previous.get("headlines", [])
     today = datetime.fromisoformat(checked_at).date()
+    channel_check = next((c for c in checks if c["source_id"] == "qudao"), {})
+    market = channel_check.get("market")
     state = {"schema_version": 1, "checked_at": checked_at, "date": today.isoformat(),
              "checks": checks, "feeds": [{k:v for k,v in f.items() if k != "entries"} for f in feeds],
              "headlines": headlines, "headlines_carried_forward": carried,
              "headline_collection_at": previous.get("headline_collection_at") if carried else checked_at,
              "forecast_review": forecast_status(evidence, checks, today),
+             "channel":market,"channel_status":channel_check.get("status", "failed"),
+             "daily_brief":daily_brief(evidence,market,previous.get("channel")),
              "new_verified_price_count": 0,
              "summary": "本轮自动采集不把新闻标题或聚合挂牌升级为已核验价格；已核验价格更新需要证据复核。"}
+    state["intelligence"] = enrich(evidence,state)
     save_json(ROOT / "data/state.json", state)
     save_json(ROOT / "data/history" / f"{today.isoformat()}.json", state)
     healthy = sum(c["status"] == "ok" for c in checks)

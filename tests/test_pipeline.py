@@ -1,9 +1,11 @@
 import importlib.util
 import unittest
+import sys
 from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
 spec = importlib.util.spec_from_file_location("update", ROOT / "scripts/update.py")
 update = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(update)

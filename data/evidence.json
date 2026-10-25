@@ -50,12 +50,13 @@
     },
     {
       "id": "qudao",
-      "name": "宽泛采销集合系统（排除出价格基准）",
-      "url": "https://qudao.co/",
+      "name": "宽泛采销 · 公开行情接口",
+      "url": "https://qudao.co/api/trends?timeframe=daily",
+      "homepage": "https://qudao.co/",
       "published_at": null,
-      "kind": "excluded_aggregate",
-      "summary": "检索索引出现货源均价 91,400、需求均价 88,700；本轮静态页面未复现该条目，www 与裸域索引日期口径不一致。",
-      "limitations": "缺少逐笔卖家、库存、税费及成交凭据；不能核实为 10 月 24 日有效报价，禁止参与基准和自动调价。"
+      "kind": "channel_reference",
+      "summary": "公开 API 返回目标卡 14 天买卖均价、挂牌活跃度及期货说明，已接入每日采集。",
+      "limitations": "平台曲线 14/14 个日点近似中间值上下各 1.5%；86,000 元对应 9 月 22 日、约 90 天期货。作为平台参考源，统计方法与成交样本待核。"
     }
   ],
   "prices": [
