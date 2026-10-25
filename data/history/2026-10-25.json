@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-25T20:22:17+08:00",
+  "checked_at": "2026-10-25T20:22:57+08:00",
   "date": "2026-10-25",
   "checks": [
     {
       "source_id": "nvidia",
-      "checked_at": "2026-10-25T20:22:17+08:00",
+      "checked_at": "2026-10-25T20:22:57+08:00",
       "url": "https://www.nvidia.com/en-eu/products/workstations/professional-desktop-gpus/rtx-pro-5500/",
       "published_at": null,
       "status": "ok",
@@ -18,12 +18,12 @@
       },
       "sha256": "44407bfef09d7a5ae432a2610c0ea157b58e1122350490f3272115d7d0632d26",
       "final_url": "https://www.nvidia.com/en-eu/products/workstations/professional-desktop-gpus/rtx-pro-5500/",
-      "last_success_at": "2026-10-25T20:22:17+08:00",
-      "changed_since_last": true
+      "last_success_at": "2026-10-25T20:22:57+08:00",
+      "changed_since_last": false
     },
     {
       "source_id": "smm",
-      "checked_at": "2026-10-25T20:22:17+08:00",
+      "checked_at": "2026-10-25T20:22:57+08:00",
       "url": "https://news.smm.cn/news/104154895",
       "published_at": "2026-10-13",
       "status": "ok",
@@ -33,12 +33,12 @@
       },
       "sha256": "6af43aafc054904aedfd5e0fb8f250a43b829180a0ab0d6516d794a6834a2427",
       "final_url": "https://news.smm.cn/news/104154895",
-      "last_success_at": "2026-10-25T20:22:17+08:00",
+      "last_success_at": "2026-10-25T20:22:57+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "cls",
-      "checked_at": "2026-10-25T20:22:17+08:00",
+      "checked_at": "2026-10-25T20:22:57+08:00",
       "url": "https://www.cls.cn/detail/2500747",
       "published_at": "2026-10-09",
       "status": "ok",
@@ -47,24 +47,26 @@
       },
       "sha256": "03412743bcdfaf091c4a274cd4a8be8f44db26128f5d61d14285f4f1429f35cb",
       "final_url": "https://www.cls.cn/detail/2500747",
-      "last_success_at": "2026-10-25T20:22:17+08:00",
+      "last_success_at": "2026-10-25T20:22:57+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "reuters",
-      "checked_at": "2026-10-25T20:22:17+08:00",
+      "checked_at": "2026-10-25T20:22:57+08:00",
       "url": "https://1027wbow.com/2026/10/20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders/",
       "published_at": "2026-10-20",
-      "status": "failed",
-      "error": "403 Client Error: Forbidden for url: https://1027wbow.com/2026/10/20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders/",
-      "last_success_at": null,
-      "signals": {},
-      "sha256": null,
+      "status": "ok",
+      "signals": {
+        "note": "原报道可访问；原文发布日期保持不变"
+      },
+      "sha256": "03412743bcdfaf091c4a274cd4a8be8f44db26128f5d61d14285f4f1429f35cb",
+      "final_url": "https://1027wbow.com/2026/10/20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders/",
+      "last_success_at": "2026-10-25T20:22:57+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "tansun",
-      "checked_at": "2026-10-25T20:22:17+08:00",
+      "checked_at": "2026-10-25T20:22:57+08:00",
       "url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-10/2026-10-13/12638891.PDF",
       "published_at": "2026-10-13",
       "status": "ok",
@@ -73,12 +75,12 @@
       },
       "sha256": "122d27eb4b3682cd76c2c5b3743935f9cab91bed346e1d7c7b60d478a3ddd4e8",
       "final_url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-10/2026-10-13/12638891.PDF",
-      "last_success_at": "2026-10-25T20:22:17+08:00",
+      "last_success_at": "2026-10-25T20:22:57+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "qudao",
-      "checked_at": "2026-10-25T20:22:17+08:00",
+      "checked_at": "2026-10-25T20:22:57+08:00",
       "url": "https://qudao.co/",
       "published_at": null,
       "status": "ok",
@@ -89,7 +91,7 @@
       },
       "sha256": "3dede350c81d230e727dd5b321a416c7776c937c4b8735d4577176b5610ed529",
       "final_url": "https://qudao.co/",
-      "last_success_at": "2026-10-25T20:22:17+08:00",
+      "last_success_at": "2026-10-25T20:22:57+08:00",
       "changed_since_last": false
     }
   ],
@@ -97,14 +99,14 @@
     {
       "id": "cn",
       "status": "ok",
-      "checked_at": "2026-10-25T20:22:17+08:00",
+      "checked_at": "2026-10-25T20:22:57+08:00",
       "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "count": 9
     },
     {
       "id": "price",
       "status": "ok",
-      "checked_at": "2026-10-25T20:22:17+08:00",
+      "checked_at": "2026-10-25T20:22:57+08:00",
       "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20%28%E4%BB%B7%E6%A0%BC%20OR%20%E6%8A%A5%E4%BB%B7%20OR%20%E4%BA%A4%E4%BB%98%20OR%20price%20OR%20delivery%29%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "count": 5
     }
@@ -193,7 +195,7 @@
     }
   ],
   "headlines_carried_forward": false,
-  "headline_collection_at": "2026-10-25T20:22:17+08:00",
+  "headline_collection_at": "2026-10-25T20:22:57+08:00",
   "forecast_review": {
     "status": "low_confidence",
     "anchor_age_days": 12,
