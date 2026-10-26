@@ -35,7 +35,7 @@ def message(state):
     lines = [f"#### RTX PRO 5500 大陆行情日报 {day}",
              f"**渠道（{p['date']}）** 卖均 ¥{p['ask']:,}，买均 ¥{p['bid']:,}，中间值日变动 {stats['day_pct']:+.2f}%；"
              f"最低挂价 ¥{market['min_ask']:,}（{market.get('delivery') or '交期未标明'}，原报价 {market.get('quote_date') or '未标明'}）。"
-             f"来源：[宽泛采销公开接口]({market['source_url']})",
+             f"来源：宽泛采销公开接口 {market['source_url']}",
              f"![日报]({image})",
              "**市场情报**"]
     for n, item in enumerate(pick_items(state), 1):
@@ -43,8 +43,10 @@ def message(state):
                      f"事实：{item['summary']}  \n"
                      f"影响：{item['impact']}  \n"
                      f"跟进：{item['watch']}  \n"
-                     f"来源：[{item.get('source') or item['source_id']}]({item['url']})")
-    lines.append(f"[网站：完整曲线、报价对照与研究报告]({SITE})")
+                     f"来源：{item['source']} {item['url']}")
+    # Bare URLs, not [text](url): markdown links lose their address when copied out of DingTalk.
+    lines.append(f"日报图原图：{image}")
+    lines.append(f"网站（完整曲线、报价对照与研究报告）：{SITE}")
     # The title and text both carry "5500" so a keyword-secured robot also accepts it.
     return {"msgtype": "markdown", "markdown": {"title": f"5500 日报 {day}", "text": "\n\n".join(lines)}}
 
