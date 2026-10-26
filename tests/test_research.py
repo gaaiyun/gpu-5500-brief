@@ -48,6 +48,25 @@ class ResearchTests(unittest.TestCase):
                 self.assertEqual(image.width,1080)
                 self.assertGreater(image.height,900)
 
+    def test_share_page_carries_every_source(self):
+        from share_page import page_html
+        from daily_card import pick_items
+        _,state=load()
+        page=page_html(state)
+        self.assertIn(f"daily/{state['date']}.png",page)
+        for item in pick_items(state):
+            self.assertIn(f'href="{item["url"]}"',page.replace("&amp;","&"))
+        self.assertNotIn("<script",page)
+
+    def test_pushplus_payload(self):
+        import notify_pushplus
+        _,state=load()
+        body=notify_pushplus.payload(state,"t","")
+        self.assertEqual(body["template"],"html")
+        self.assertNotIn("topic",body)
+        self.assertIn(f"daily/{state['date']}.html",body["content"])
+        self.assertEqual(notify_pushplus.payload(state,"t","team")["topic"],"team")
+
     def test_dingtalk_sign_and_message(self):
         import notify_dingtalk
         url=notify_dingtalk.signed_url("https://oapi.dingtalk.com/robot/send?access_token=x","SECtest",1700000000000)

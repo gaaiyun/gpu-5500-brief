@@ -28,11 +28,13 @@ def signed_url(webhook, secret, now_ms=None):
 
 def message(state):
     from daily_card import pick_items
+    from share_page import page_url
     market = state["channel"]
     p, stats = market["latest"], market["stats"]
     day = state["date"]
     image = f"{SITE}daily/{day}.png"
     lines = [f"#### RTX PRO 5500 大陆行情日报 {day}",
+             f"转发微信用这一条链接（图、情报和来源都在里面）：{page_url(day)}",
              f"**渠道（{p['date']}）** 卖均 ¥{p['ask']:,}，买均 ¥{p['bid']:,}，中间值日变动 {stats['day_pct']:+.2f}%；"
              f"最低挂价 ¥{market['min_ask']:,}（{market.get('delivery') or '交期未标明'}，原报价 {market.get('quote_date') or '未标明'}）。"
              f"来源：宽泛采销公开接口 {market['source_url']}",

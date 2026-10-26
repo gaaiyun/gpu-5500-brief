@@ -79,6 +79,13 @@ jobs:
           DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
           DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}
         run: python scripts/notify_dingtalk.py
+      - name: Push daily report to WeChat (PushPlus)
+        # Runs even when the DingTalk push failed, so one channel outage does not silence the other.
+        if: (github.event_name == 'schedule' || inputs.notify) && !cancelled()
+        env:
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          PUSHPLUS_TOPIC: ${{ vars.PUSHPLUS_TOPIC }}
+        run: python scripts/notify_pushplus.py
       - name: Fail visibly after publishing outage state
         if: steps.collect.outcome == 'failure'
         run: |
