@@ -287,7 +287,8 @@ def render(evidence, state, output):
         y += h + 14
 
     # Agent-verified web intelligence from the last week.
-    feed = [x for x in (state.get("feed") or {}).get("items", []) if x.get("age_days", 99) <= 7][:3]
+    # Only A/B items go into the image; C items and leads stay in the site and the message text as links.
+    feed = [x for x in (state.get("feed") or {}).get("items", []) if x.get("age_days", 99) <= 7 and x["grade"] in ("A", "B")][:3]
     if feed:
         y += 12
         d.text((M + 4, y + 10), f"全网追踪 · {len(feed)} 条", font=F(T_H2, True), fill=INK)

@@ -49,6 +49,12 @@ def body_html(state):
                 f"<p><b>[{e(item.get('tier', '核实'))}·{e(item['grade_label'])}] {e(item['title'])}</b>（{e(item['published_at'])}，{e(item['publisher'])}）<br>"
                 f"事实：{e(item['summary'])}<br>影响：{e(item['impact'])}<br>跟进：{e(item['watch'])}{checks}<br>"
                 f"来源：<a href=\"{e(item['url'])}\">{e(item['publisher'])}</a></p>")
+    leads = (state.get("feed") or {}).get("leads", [])
+    if leads:
+        parts.append("<h3>未核实线索（只给链接，点开自行判断）</h3>")
+        parts.append("<p>" + "<br>".join(
+            f"<a href=\"{e(x['url'])}\">{e(x['title'])}</a>（{e(x['publisher'])}{'，' + e(x['published_at']) if x['published_at'] else ''}）"
+            + (f"<br><small>{e(x['snippet'])}</small>" if x["snippet"] else "") for x in leads[:15]) + "</p>")
     parts.append("<p>口径：渠道价为宽泛采销平台参考，不是成交价；媒体价格未统一税费、数量和交期。没有新证据时不改预测。</p>")
     parts.append(f"<p>完整曲线、报价对照与研究报告：<a href=\"{SITE}\">{SITE}</a></p>")
     return "\n".join(parts)

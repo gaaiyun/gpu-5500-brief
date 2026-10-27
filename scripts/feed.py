@@ -80,5 +80,38 @@ def load_feed(payload, today):
     return items[:MAX_ITEMS], rejected
 
 
+MAX_LEADS = 15
+
+
+def load_leads(payload, today):
+    """Unverified leads: link only, for readers to open themselves. Never shown in the daily image."""
+    leads, rejected, seen = [], [], set()
+    for raw in (payload or {}).get("leads", []) if isinstance(payload, dict) else []:
+        try:
+            if not isinstance(raw, dict):
+                raise ValueError("线索不是对象")
+            title, url = str(raw.get("title", "")).strip(), str(raw.get("url", "")).strip()
+            if not title or not url.startswith("https://"):
+                raise ValueError("线索缺标题或 https 链接")
+            if raw.get("source_type") not in SOURCE_TYPES:
+                raise ValueError("来源类型不在白名单")
+            published = raw.get("published_at") or ""
+            if published and date.fromisoformat(published) > today:
+                raise ValueError("发布日期在未来")
+            text = " ".join(str(raw.get(k, "")) for k in ("title", "publisher", "snippet", "found_via"))
+            if re.search(r"<|>|javascript:", text):
+                raise ValueError("文本含标记或脚本")
+        except (ValueError, TypeError) as error:
+            rejected.append({"id": str(raw.get("title") if isinstance(raw, dict) else "?")[:80], "reason": str(error)})
+            continue
+        if title in seen:
+            continue
+        seen.add(title)
+        leads.append({"title": title[:80], "publisher": str(raw.get("publisher", "未标明")).strip()[:40],
+                      "source_type": raw["source_type"], "url": url, "published_at": published,
+                      "found_via": str(raw.get("found_via", "")).strip()[:30], "snippet": str(raw.get("snippet", "")).strip()[:160]})
+    return leads[:MAX_LEADS], rejected
+
+
 def fresh(items, days=7):
     return [x for x in items if x["age_days"] <= days]

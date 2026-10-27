@@ -16,7 +16,7 @@ import requests
 from bs4 import BeautifulSoup
 from market import parse_channel, daily_brief
 from intelligence import enrich
-from feed import load_feed
+from feed import load_feed, load_leads
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = timezone(timedelta(hours=8))
@@ -241,7 +241,8 @@ def run(offline=False):
     # Agent-verified web intelligence (cloud routine writes data/feed.json); invalid items are dropped, not fatal.
     feed_payload = read_json(ROOT / "data/feed.json", {})
     feed_items, feed_rejected = load_feed(feed_payload, today)
-    state["feed"] = {"items": feed_items, "rejected": feed_rejected,
+    feed_leads, leads_rejected = load_leads(feed_payload, today)
+    state["feed"] = {"items": feed_items, "leads": feed_leads, "rejected": feed_rejected + leads_rejected,
                      "updated_at": (feed_payload or {}).get("updated_at"), "agent": (feed_payload or {}).get("agent")}
     save_json(ROOT / "data/state.json", state)
     save_json(ROOT / "data/history" / f"{today.isoformat()}.json", state)

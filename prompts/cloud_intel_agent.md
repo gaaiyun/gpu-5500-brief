@@ -17,6 +17,7 @@ git merge --no-edit origin/main || { git checkout --ours data/feed.json && git a
 - 主流财经与科技媒体：路透、彭博、The Information、FT、WSJ、日经、CNBC、财联社、第一财经、证券时报、21世纪经济报道、界面、澎湃、财新、经济观察报。
 - 行业媒体与研究：TrendForce/集邦、DIGITIMES、雷峰网、集微、36氪、电子工程专辑、Tom's Hardware、VideoCardz。
 - 公众号：通过搜索引擎找它在腾讯新闻、搜狐号、网易号、百家号、新浪看点等平台的镜像；`site:mp.weixin.qq.com` 也要搜。
+- 搜狗微信搜索（公众号的主要入口）：用 WebFetch 打开 `https://weixin.sogou.com/weixin?type=2&query=关键词`（每轮最多 3 个关键词，例如 `RTX PRO 5500`、`RTX PRO 5500 报价`、`RTX PRO 5500 到货`）。结果页里的 `/link?url=` 跳转链接对程序会转到验证码页，**不要打开、不要尝试通过验证码**。只记录结果页上的标题、公众号名、摘要，作为线索写入 `leads`；然后用文章标题原文去普通搜索引擎找它在腾讯新闻、搜狐、网易、百家号、新浪等平台的镜像全文，读到正文的再按第 3 节规则升级为 C 级快讯条目。结果页本身出现验证码就停止搜狗部分。
 - 社媒与社区：微博、知乎、小红书、雪球、什么值得买、X、Reddit。
 - 渠道挂价：京东/淘宝/闲鱼/华强北报价、宽泛采销等撮合平台。只记录读到的挂价原文，不推断成交价。
 
@@ -56,6 +57,17 @@ git merge --no-edit origin/main || { git checkout --ours data/feed.json && git a
 ```
 
 保留发布日期在 45 天以内的条目，总数不超过 12 条，新的在前。文本里不要出现 HTML 标签。
+
+另有顶层数组 `leads`（未核实线索，最多 15 条，只给链接供人点开自己判断，不进日报图）：读不到正文、或可信度不够但与价格/交付/配额相关的内容放这里，不要硬升级成条目。
+
+```json
+{"title": "文章原标题，≤80字", "publisher": "公众号或账号名", "source_type": "公众号|社媒|电商/渠道|行业媒体|主流媒体",
+ "url": "https://...", "published_at": "YYYY-MM-DD 或空字符串", "found_via": "搜狗微信|微博|知乎|...", "snippet": "结果页摘要原文，≤160字"}
+```
+
+搜狗来的线索，url 用按标题搜索的地址：`https://weixin.sogou.com/weixin?type=2&query=` 加 URL 编码后的完整标题（人在浏览器里点开就能找到原文）；如果找到了 mp.weixin.qq.com 或镜像的直接链接，就用直接链接。同一标题只留一条，已经升级为条目的线索从 leads 里删掉，超过 14 天的线索删掉。
+
+只有 A/B 级条目会进日报图；C 级快讯和 leads 只出现在网站和推送文字里。
 
 处理完 inbox 里的链接后，不需要修改 inbox.txt（它在 main 分支上，由人工维护）。
 

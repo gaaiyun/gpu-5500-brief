@@ -2,7 +2,14 @@
   "schema_version": 1,
   "updated_at": "2026-10-27T22:00:00+08:00",
   "agent": "manual-sweep",
-  "searched": ["主流财经与科技媒体", "行业研究", "公众号（经搜索引擎）", "微博/知乎/小红书", "X/Reddit", "电商与渠道挂价"],
+  "searched": [
+    "主流财经与科技媒体",
+    "行业研究",
+    "公众号（经搜索引擎）",
+    "微博/知乎/小红书",
+    "X/Reddit",
+    "电商与渠道挂价"
+  ],
   "items": [
     {
       "id": "leiphone-20261020-channel-quotes",
@@ -15,7 +22,9 @@
       "summary": "雷峰网原创报道（记者陈悦琳）援引匿名业内人士：RTX PRO 5500预期交付报价集中在8万-12万元，大厂采购报价约8.5万元，部分渠道升至8.7万元；英伟达每季度对华供应上限约50万张；OEM厂商11月拿样卡，批量交付最快明年一季度。",
       "impact": "8.5万-8.7万元与TrendForce转述的8.5万-9万元相互印证，低于SMM预售价9.5万元；高于9万元的报盘需靠短交期支撑。",
       "watch": "核实11月样卡是否到位、渠道报价是否继续上移",
-      "corroboration": ["https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/"],
+      "corroboration": [
+        "https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/"
+      ],
       "checked_at": "2026-10-27"
     },
     {
@@ -29,8 +38,57 @@
       "summary": "据The Information报道，工信部要求字节跳动、阿里巴巴等企业上报RTX PRO 5500计划采购量和用途，并表示有意批准采购。英伟达、相关企业与工信部均未公开确认。",
       "impact": "国内审批若落地，大厂需求转为实际订单，首批配额会更紧；审批时间和获批数量未知，暂不改变价格情景。",
       "watch": "跟踪工信部或企业的正式表态与获批数量",
-      "corroboration": ["https://www.eet-china.com/news/202609288049.html"],
+      "corroboration": [
+        "https://www.eet-china.com/news/202609288049.html"
+      ],
       "checked_at": "2026-10-27"
+    }
+  ],
+  "leads": [
+    {
+      "title": "2万张RTX PRO 5500合同披露:验货后、发货前付款,原厂无法供货谁担责?",
+      "publisher": "GPU算力-聪哥",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=2%E4%B8%87%E5%BC%A0RTX%20PRO%205500%E5%90%88%E5%90%8C%E6%8A%AB%E9%9C%B2%3A%E9%AA%8C%E8%B4%A7%E5%90%8E%E3%80%81%E5%8F%91%E8%B4%A7%E5%89%8D%E4%BB%98%E6%AC%BE%2C%E5%8E%9F%E5%8E%82%E6%97%A0%E6%B3%95%E4%BE%9B%E8%B4%A7%E8%B0%81%E6%8B%85%E8%B4%A3%3F",
+      "published_at": "",
+      "found_via": "搜狗微信",
+      "snippet": "讨论天阳科技2万张采购合同的付款节点与原厂无法供货时的责任划分。"
+    },
+    {
+      "title": "狂砸数百亿抢单!RTX PRO 5500到底香在哪?",
+      "publisher": "英腾达科技",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E7%8B%82%E7%A0%B8%E6%95%B0%E7%99%BE%E4%BA%BF%E6%8A%A2%E5%8D%95%21RTX%20PRO%205500%E5%88%B0%E5%BA%95%E9%A6%99%E5%9C%A8%E5%93%AA%3F",
+      "published_at": "",
+      "found_via": "搜狗微信",
+      "snippet": "称国内云厂商已大量下单，英伟达尚未规模出货。"
+    },
+    {
+      "title": "RTX 5090还是RTX PRO 5500?润迅R500给出的答案",
+      "publisher": "润迅人工智能",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%205090%E8%BF%98%E6%98%AFRTX%20PRO%205500%3F%E6%B6%A6%E8%BF%85R500%E7%BB%99%E5%87%BA%E7%9A%84%E7%AD%94%E6%A1%88",
+      "published_at": "",
+      "found_via": "搜狗微信",
+      "snippet": "称深圳发布搭载8张RTX PRO 5500的服务器（文中日期10月13日）。"
+    },
+    {
+      "title": "RTX PRO 5500单卡售价1.14万美元,是英伟达9月新推出来的工作站显卡",
+      "publisher": "大水侃谈",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%E5%8D%95%E5%8D%A1%E5%94%AE%E4%BB%B71.14%E4%B8%87%E7%BE%8E%E5%85%83%2C%E6%98%AF%E8%8B%B1%E4%BC%9F%E8%BE%BE9%E6%9C%88%E6%96%B0%E6%8E%A8%E5%87%BA%E6%9D%A5%E7%9A%84%E5%B7%A5%E4%BD%9C%E7%AB%99%E6%98%BE%E5%8D%A1",
+      "published_at": "",
+      "found_via": "搜狗微信",
+      "snippet": "转述单卡约1.14万美元，称是中国企业可合法购买的最强英伟达芯片。"
+    },
+    {
+      "title": "深度分析:RTX Pro 5500,凭什么?",
+      "publisher": "两年砍柴",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90%3ARTX%20Pro%205500%2C%E5%87%AD%E4%BB%80%E4%B9%88%3F",
+      "published_at": "",
+      "found_via": "搜狗微信",
+      "snippet": "从出口管制与供给缺口角度分析这张卡在国内算力市场的位置。"
     }
   ]
 }

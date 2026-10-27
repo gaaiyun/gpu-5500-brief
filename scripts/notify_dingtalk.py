@@ -53,6 +53,10 @@ def message(state):
             checks = "".join(f"  \n【{c['status']}】{c['text']}" + (f" {c['ref']}" if c["ref"] else "") for c in item.get("claims", []))
             lines.append(f"- **[{item.get('tier', '核实')}·{item['grade_label']}] {item['title']}**（{item['published_at']}，{item['publisher']}）  \n"
                          f"{item['summary']}  \n影响：{item['impact']}{checks}  \n来源：{item['url']}")
+    leads = (state.get("feed") or {}).get("leads", [])
+    if leads:
+        lines.append("**未核实线索（只给链接，点开自行判断）**")
+        lines.append("\n".join(f"- {x['title']}（{x['publisher']}）{x['url']}" for x in leads[:10]))
     # Bare URLs, not [text](url): markdown links lose their address when copied out of DingTalk.
     lines.append(f"日报图原图：{image}")
     lines.append(f"网站（完整曲线、报价对照与研究报告）：{SITE}")

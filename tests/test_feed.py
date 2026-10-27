@@ -56,6 +56,15 @@ class FeedTests(unittest.TestCase):
         post=item(id="p",source_type="社媒",grade="C",claims=[{"text":"a","status":"有出处"}])
         self.assertEqual(len(load_feed({"items":[post]},TODAY)[1]),1)
 
+    def test_leads_are_links_only(self):
+        from feed import load_leads
+        lead={"title":"2万张RTX PRO 5500合同披露","publisher":"GPU算力-聪哥","source_type":"公众号",
+              "url":"https://weixin.sogou.com/weixin?type=2&query=x","found_via":"搜狗微信","snippet":"合同条款"}
+        leads,bad=load_leads({"leads":[lead,dict(lead),dict(lead,title="b",url="http://x"),dict(lead,title="c",published_at="2027-01-01")]},TODAY)
+        self.assertEqual(len(leads),1)
+        self.assertEqual(len(bad),2)
+        self.assertNotIn("grade",leads[0])
+
     def test_garbage_payload(self):
         self.assertEqual(load_feed(None,TODAY),([],[]))
         self.assertEqual(load_feed({"items":"nope"},TODAY)[0],[])

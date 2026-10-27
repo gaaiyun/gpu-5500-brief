@@ -75,6 +75,9 @@ function renderIntelligence(){
   const feed=state.feed?.items||[];
   $('feed-status').textContent=feed.length?`AI 读原文并交叉核对 · ${feed.length} 条 · 更新 ${time(state.feed.updated_at)}`:'暂无通过核对的新增情报';
   $('feed-items').innerHTML=feed.map(item=>`<article class="intel-item"><div class="intel-meta"><b>${esc(item.publisher)}</b><span>${esc(item.published_at)}</span><small class="badge ${item.grade==='C'?'':'amber'}">${esc(item.tier||'核实')} · ${esc(item.grade)} ${esc(item.grade_label)}</small></div><div class="intel-content"><h3><a href="${url(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a></h3><p>${esc(item.summary)}</p>${(item.claims||[]).length?`<ul class="claims">${item.claims.map(c=>`<li class="claim-${c.status==='有出处'?'ok':c.status==='推算'?'calc':'bad'}"><b>${esc(c.status)}</b>${esc(c.text)}${c.ref?` <a href="${url(c.ref)}" target="_blank" rel="noopener">出处 ↗</a>`:''}</li>`).join('')}</ul>`:''}</div><div class="intel-impact"><span>报价含义</span>${esc(item.impact)}<small>跟踪：${esc(item.watch)}${item.corroboration.length?` · 交叉印证 ${item.corroboration.length} 处`:''}</small></div></article>`).join('');
+  const leads=state.feed?.leads||[];
+  $('leads-count').textContent=`${leads.length} 条`;
+  $('leads-items').innerHTML=leads.length?leads.map(x=>`<li><span><a href="${url(x.url)}" target="_blank" rel="noopener">${esc(x.title)} ↗</a>${x.snippet?`<br><small>${esc(x.snippet)}</small>`:''}</span><small>${esc(x.publisher)}${x.published_at?` · ${esc(x.published_at)}`:''}${x.found_via?` · ${esc(x.found_via)}`:''}</small></li>`).join(''):'<li>暂无未核实线索。</li>';
   $('headline-count').textContent=`${state.headlines.length} 条`;
   document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
     newsFilter=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('selected',b===button));renderNews();
