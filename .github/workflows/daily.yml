@@ -6,12 +6,19 @@ on:
   workflow_dispatch:
     inputs:
       notify:
-        description: '推送钉钉日报图'
+        description: '强制推送钉钉与微信（测试用，不受每日一次限制）'
+        type: boolean
+        default: false
+      scheduled:
+        description: '按每日定时任务处理（外部定时器使用，每个渠道当天只推一次）'
         type: boolean
         default: false
   schedule:
-    # 16:35 UTC = next day 00:35 Asia/Shanghai. GitHub may delay scheduled jobs.
+    # 16:35 UTC = next day 00:35 Asia/Shanghai. GitHub often starts scheduled jobs hours late or drops one,
+    # so two backups follow; data/push_log.json keeps each channel to one push per day.
     - cron: '35 16 * * *'
+    - cron: '7 18 * * *'
+    - cron: '13 22 * * *'
 
 permissions:
   contents: write
@@ -25,7 +32,7 @@ concurrency:
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 20
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -45,13 +52,19 @@ jobs:
           sudo apt-get install -y -qq fonts-wqy-zenhei fonts-noto-cjk
       - name: Verify evidence handling
         run: python -m unittest discover -s tests -v
-      - name: Use the cloud agent's intelligence feed
-        # The nightly Claude Code routine pushes a checked data/feed.json to this branch; main keeps a seed copy.
+      - name: Sweep the web for new intelligence
+        # Merges the cloud routine's checked feed when its branch exists, then runs the CI sweep with Workers AI.
+        # Any failure leaves the committed data/feed.json in place.
+        continue-on-error: true
+        timeout-minutes: 6
+        env:
+          GPU_AI_ENDPOINT: ${{ vars.GPU_AI_ENDPOINT }}
+          GPU_AI_TOKEN: ${{ secrets.GPU_AI_TOKEN }}
         run: |
-          if git fetch --depth=1 origin claude/intel-feed 2>/dev/null && git show FETCH_HEAD:data/feed.json > /tmp/feed.json; then
-            cp /tmp/feed.json data/feed.json && echo "Using feed from claude/intel-feed"
+          if git fetch --depth=1 origin claude/intel-feed 2>/dev/null && git show FETCH_HEAD:data/feed.json > /tmp/cloud_feed.json; then
+            python scripts/sweep.py --cloud /tmp/cloud_feed.json
           else
-            echo "No cloud feed yet; using the committed seed"
+            python scripts/sweep.py
           fi
       - name: Collect sources and review forecast
         id: collect
@@ -64,10 +77,11 @@ jobs:
         run: |
           git config user.name 'gaaiyun'
           git config user.email 'gaaiyun@users.noreply.github.com'
-          git add data/state.json data/history
+          git add data/state.json data/history data/feed.json
           if ! git diff --cached --quiet; then
             git commit -m 'chore(情报): 更新来源状态与每日预测复核'
-            git push origin HEAD:main
+            # main may have moved while this run was queued; rebase rather than fail the day's publish.
+            git push origin HEAD:main || { git pull --rebase --autostash origin main && git push origin HEAD:main; }
           fi
       - name: Build website and report
         run: python scripts/build.py
@@ -81,19 +95,41 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
       - name: Push daily image to DingTalk
-        # Code pushes only republish the site; the group gets one message per scheduled run.
-        if: github.event_name == 'schedule' || inputs.notify
+        # Code pushes only republish the site. Scheduled runs and their backups send once a day; a manual notify run always sends.
+        if: github.event_name == 'schedule' || inputs.scheduled || inputs.notify
         env:
           DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
           DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}
-        run: python scripts/notify_dingtalk.py
+          FORCE: ${{ inputs.notify }}
+        run: |
+          if [ "$FORCE" != "true" ] && [ "$(python scripts/push_log.py check dingtalk)" = "sent" ]; then
+            echo "DingTalk already received today's report"; exit 0
+          fi
+          python scripts/notify_dingtalk.py
+          python scripts/push_log.py record dingtalk
       - name: Push daily report to WeChat (PushPlus)
         # Runs even when the DingTalk push failed, so one channel outage does not silence the other.
-        if: (github.event_name == 'schedule' || inputs.notify) && !cancelled()
+        if: (github.event_name == 'schedule' || inputs.scheduled || inputs.notify) && !cancelled()
         env:
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
           PUSHPLUS_TOPIC: ${{ vars.PUSHPLUS_TOPIC }}
-        run: python scripts/notify_pushplus.py
+          FORCE: ${{ inputs.notify }}
+        run: |
+          if [ "$FORCE" != "true" ] && [ "$(python scripts/push_log.py check pushplus)" = "sent" ]; then
+            echo "WeChat group already received today's report"; exit 0
+          fi
+          python scripts/notify_pushplus.py
+          python scripts/push_log.py record pushplus
+      - name: Record today's pushes
+        # A backup run then retries only the channel that failed.
+        if: (github.event_name == 'schedule' || inputs.scheduled || inputs.notify) && !cancelled()
+        run: |
+          [ -f data/push_log.json ] || exit 0
+          git add data/push_log.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore(推送): 记录当日日报推送'
+            git push origin HEAD:main || { git pull --rebase --autostash origin main && git push origin HEAD:main; }
+          fi
       - name: Fail visibly after publishing outage state
         if: steps.collect.outcome == 'failure'
         run: |

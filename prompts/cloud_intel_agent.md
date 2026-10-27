@@ -7,8 +7,12 @@
 ```bash
 git fetch origin
 git checkout claude/intel-feed 2>/dev/null || git checkout -b claude/intel-feed origin/main
-git merge --no-edit origin/main || { git checkout --ours data/feed.json && git add data/feed.json && git commit --no-edit; }
+git merge --no-edit -X theirs origin/main
+# main 上的 feed.json 已合并前一天的云端结果和每日 CI 检索结果，是最新全集，从它开始改。
+git checkout origin/main -- data/feed.json
 ```
+
+每日 CI 另有一轮自动检索（scripts/sweep.py，用便宜模型起草、代码核对数字），结果写在 main 的 data/feed.json 里，`sweep` 字段记录了它读过什么、跳过了什么。你的任务是在它之上做更深的核对：它只能读到少数站点的正文，公众号只能留成线索；你能读到的，就把线索升级成条目。
 
 先读：`data/feed.json`（已有条目，避免重复）、`data/evidence.json`（已核验的核心来源，避免重复）、`git show origin/main:data/inbox.txt`（人工转来的链接，最优先处理）、`scripts/feed.py`（字段校验规则，必须遵守）。
 
@@ -61,7 +65,7 @@ git merge --no-edit origin/main || { git checkout --ours data/feed.json && git a
 另有顶层数组 `leads`（未核实线索，最多 15 条，只给链接供人点开自己判断，不进日报图）：读不到正文、或可信度不够但与价格/交付/配额相关的内容放这里，不要硬升级成条目。
 
 ```json
-{"title": "文章原标题，≤80字", "publisher": "公众号或账号名", "source_type": "公众号|社媒|电商/渠道|行业媒体|主流媒体",
+{"title": "文章原标题，≤80字", "publisher": "公众号或账号名", "source_type": "公众号|社媒|电商/渠道|行业媒体|主流媒体|其他",
  "url": "https://...", "published_at": "YYYY-MM-DD 或空字符串", "found_via": "搜狗微信|微博|知乎|...", "snippet": "结果页摘要原文，≤160字"}
 ```
 

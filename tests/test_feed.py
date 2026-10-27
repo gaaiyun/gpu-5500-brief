@@ -1,7 +1,7 @@
 import json
 import sys
 import unittest
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -18,10 +18,13 @@ def item(**kw):
 
 
 class FeedTests(unittest.TestCase):
-    def test_seed_feed_is_valid(self):
-        items,rejected=load_feed(json.loads((ROOT/"data/feed.json").read_text(encoding="utf-8")),TODAY)
-        self.assertEqual(rejected,[])
-        self.assertGreaterEqual(len(items),2)
+    def test_committed_feed_is_valid(self):
+        # The daily sweep keeps adding dated items: judge them by today's Beijing date, and never by how many are fresh.
+        from feed import load_leads
+        today=datetime.now(timezone(timedelta(hours=8))).date()
+        payload=json.loads((ROOT/"data/feed.json").read_text(encoding="utf-8"))
+        self.assertEqual(load_feed(payload,today)[1],[])
+        self.assertEqual(load_leads(payload,today)[1],[])
 
     def test_bad_items_dropped_not_fatal(self):
         items,rejected=load_feed({"items":[item(),item(id="y",url="http://plain"),item(id="z",published_at="2026-11-30"),

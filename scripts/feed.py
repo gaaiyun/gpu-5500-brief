@@ -81,6 +81,8 @@ def load_feed(payload, today):
 
 
 MAX_LEADS = 15
+# A lead may come from a site nobody has vetted yet; it is only a link, so it does not need a known type.
+LEAD_TYPES = SOURCE_TYPES | {"其他"}
 
 
 def load_leads(payload, today):
@@ -93,7 +95,7 @@ def load_leads(payload, today):
             title, url = str(raw.get("title", "")).strip(), str(raw.get("url", "")).strip()
             if not title or not url.startswith("https://"):
                 raise ValueError("线索缺标题或 https 链接")
-            if raw.get("source_type") not in SOURCE_TYPES:
+            if raw.get("source_type") not in LEAD_TYPES:
                 raise ValueError("来源类型不在白名单")
             published = raw.get("published_at") or ""
             if published and date.fromisoformat(published) > today:
