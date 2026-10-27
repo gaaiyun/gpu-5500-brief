@@ -20,6 +20,8 @@ git merge --no-edit origin/main || { git checkout --ours data/feed.json && git a
 - 社媒与社区：微博、知乎、小红书、雪球、什么值得买、X、Reddit。
 - 渠道挂价：京东/淘宝/闲鱼/华强北报价、宽泛采销等撮合平台。只记录读到的挂价原文，不推断成交价。
 
+每轮至少执行 12 次搜索，上面每一类至少 2 次，中英文都要有。搜索结果里每个看起来有新信息的链接都要用 WebFetch 打开读正文。抓取失败（DNS 失败、403、验证码）的链接记下来，在汇报里如实列出，不要写成“已覆盖”。
+
 关键词组合示例：`RTX PRO 5500 报价`、`RTX PRO 5500 到货`、`RTX PRO 5500 配额`、`RTX PRO 5500 工信部`、`RTX PRO 5500 样卡`、`"RTX PRO 5500" China price`、`"RTX PRO 5500" shipments`。排除同名的 SSD、显示器、手机等无关 5500 产品。
 
 ## 3. 核对规则（硬约束）
@@ -43,7 +45,7 @@ git merge --no-edit origin/main || { git checkout --ours data/feed.json && git a
 
 ## 4. 写入 data/feed.json
 
-保持 `schema_version: 1`。更新 `updated_at`（北京时间 ISO 格式，带 +08:00）、`agent: "cloud-routine"`、`searched`（本轮实际搜过的来源类型列表）。`items` 每条字段：
+保持 `schema_version: 1`。更新 `updated_at`（北京时间 ISO 格式，带 +08:00）、`agent: "cloud-routine"`、`searched`（本轮实际执行过的搜索词原文列表，不超过 30 条；没搜过的不能写）。`items` 每条字段：
 
 ```json
 {"id": "来源-日期-简短英文", "title": "≤60字", "published_at": "YYYY-MM-DD（原文发布日期，不是采集日期）",
@@ -71,4 +73,4 @@ git push origin claude/intel-feed
 
 ## 6. 结束时汇报
 
-用几行中文写清：本轮搜了哪些来源类型、新增几条（各等级几条）、处理了哪些 inbox 链接、跳过了哪些（原因：读不到正文、无关、重复）。没有新内容也照常更新 updated_at 并推送，说明“本轮无新增”。
+用几行中文写清：本轮实际搜索次数和各类来源的搜索次数、打开读到正文的链接数、抓取失败的链接数，新增几条（各等级几条）、处理了哪些 inbox 链接、跳过了哪些（原因：读不到正文、无关、重复）。没有新内容也照常更新 updated_at 并推送，说明“本轮无新增”。
