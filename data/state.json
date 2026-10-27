@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-27T21:50:22+08:00",
+  "checked_at": "2026-10-27T23:59:07+08:00",
   "date": "2026-10-27",
   "checks": [
     {
       "source_id": "nvidia",
-      "checked_at": "2026-10-27T21:50:22+08:00",
+      "checked_at": "2026-10-27T23:59:07+08:00",
       "url": "https://www.nvidia.com/en-eu/products/workstations/professional-desktop-gpus/rtx-pro-5500/",
       "published_at": null,
       "status": "ok",
@@ -18,12 +18,12 @@
       },
       "sha256": "44407bfef09d7a5ae432a2610c0ea157b58e1122350490f3272115d7d0632d26",
       "final_url": "https://www.nvidia.com/en-eu/products/workstations/professional-desktop-gpus/rtx-pro-5500/",
-      "last_success_at": "2026-10-27T21:50:22+08:00",
+      "last_success_at": "2026-10-27T23:59:07+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "smm",
-      "checked_at": "2026-10-27T21:50:22+08:00",
+      "checked_at": "2026-10-27T23:59:07+08:00",
       "url": "https://news.smm.cn/news/104154895",
       "published_at": "2026-10-13",
       "status": "ok",
@@ -33,12 +33,12 @@
       },
       "sha256": "6af43aafc054904aedfd5e0fb8f250a43b829180a0ab0d6516d794a6834a2427",
       "final_url": "https://news.smm.cn/news/104154895",
-      "last_success_at": "2026-10-27T21:50:22+08:00",
+      "last_success_at": "2026-10-27T23:59:07+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "cls",
-      "checked_at": "2026-10-27T21:50:22+08:00",
+      "checked_at": "2026-10-27T23:59:07+08:00",
       "url": "https://www.cls.cn/detail/2500747",
       "published_at": "2026-10-09",
       "status": "ok",
@@ -47,12 +47,12 @@
       },
       "sha256": "03412743bcdfaf091c4a274cd4a8be8f44db26128f5d61d14285f4f1429f35cb",
       "final_url": "https://www.cls.cn/detail/2500747",
-      "last_success_at": "2026-10-27T21:50:22+08:00",
+      "last_success_at": "2026-10-27T23:59:07+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "reuters",
-      "checked_at": "2026-10-27T21:50:22+08:00",
+      "checked_at": "2026-10-27T23:59:07+08:00",
       "url": "https://www.bnnbloomberg.ca/business/company-news/2026/10/20/bytedance-alibaba-tencent-place-over-us35-billion-worth-of-nvidia-chip-orders-reuters-exclusive/",
       "published_at": "2026-10-20",
       "status": "ok",
@@ -61,12 +61,12 @@
       },
       "sha256": "03412743bcdfaf091c4a274cd4a8be8f44db26128f5d61d14285f4f1429f35cb",
       "final_url": "https://www.bnnbloomberg.ca/business/company-news/2026/10/20/bytedance-alibaba-tencent-place-over-us35-billion-worth-of-nvidia-chip-orders-reuters-exclusive/",
-      "last_success_at": "2026-10-27T21:50:22+08:00",
+      "last_success_at": "2026-10-27T23:59:07+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "trendforce",
-      "checked_at": "2026-10-27T21:50:22+08:00",
+      "checked_at": "2026-10-27T23:59:07+08:00",
       "url": "https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/",
       "published_at": "2026-10-21",
       "status": "ok",
@@ -75,12 +75,12 @@
       },
       "sha256": "03412743bcdfaf091c4a274cd4a8be8f44db26128f5d61d14285f4f1429f35cb",
       "final_url": "https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/",
-      "last_success_at": "2026-10-27T21:50:22+08:00",
+      "last_success_at": "2026-10-27T23:59:07+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "tansun",
-      "checked_at": "2026-10-27T21:50:22+08:00",
+      "checked_at": "2026-10-27T23:59:07+08:00",
       "url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-10/2026-10-13/12638891.PDF",
       "published_at": "2026-10-13",
       "status": "ok",
@@ -89,12 +89,12 @@
       },
       "sha256": "122d27eb4b3682cd76c2c5b3743935f9cab91bed346e1d7c7b60d478a3ddd4e8",
       "final_url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-10/2026-10-13/12638891.PDF",
-      "last_success_at": "2026-10-27T21:50:22+08:00",
+      "last_success_at": "2026-10-27T23:59:07+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "qudao",
-      "checked_at": "2026-10-27T21:50:22+08:00",
+      "checked_at": "2026-10-27T23:59:07+08:00",
       "url": "https://qudao.co/api/trends?timeframe=daily",
       "published_at": null,
       "market": {
@@ -257,7 +257,7 @@
         },
         "source_url": "https://qudao.co/api/trends?timeframe=daily",
         "homepage": "https://qudao.co/",
-        "collected_at": "2026-10-27T21:50:22+08:00",
+        "collected_at": "2026-10-27T23:59:07+08:00",
         "age_days": 0,
         "verification": "platform_reference",
         "independent_market_samples": false,
@@ -405,7 +405,7 @@
       },
       "sha256": "b26617ed1dbe652622d54e5f0bd993382252eba238c3b48b4ccfa46bea379283",
       "final_url": "https://qudao.co/api/trends?timeframe=daily",
-      "last_success_at": "2026-10-27T21:50:22+08:00",
+      "last_success_at": "2026-10-27T23:59:07+08:00",
       "changed_since_last": false
     }
   ],
@@ -413,28 +413,28 @@
     {
       "id": "cn",
       "status": "ok",
-      "checked_at": "2026-10-27T21:50:22+08:00",
+      "checked_at": "2026-10-27T23:59:07+08:00",
       "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "count": 8
     },
     {
       "id": "price",
       "status": "ok",
-      "checked_at": "2026-10-27T21:50:22+08:00",
+      "checked_at": "2026-10-27T23:59:07+08:00",
       "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20%28%E4%BB%B7%E6%A0%BC%20OR%20%E6%8A%A5%E4%BB%B7%20OR%20%E4%BA%A4%E4%BB%98%20OR%20price%20OR%20delivery%29%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
-      "count": 6
+      "count": 4
     },
     {
       "id": "global",
       "status": "ok",
-      "checked_at": "2026-10-27T21:50:22+08:00",
+      "checked_at": "2026-10-27T23:59:07+08:00",
       "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20%28Reuters%20OR%20NVIDIA%20OR%20supply%29%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
-      "count": 6
+      "count": 7
     },
     {
       "id": "major",
       "status": "ok",
-      "checked_at": "2026-10-27T21:50:22+08:00",
+      "checked_at": "2026-10-27T23:59:07+08:00",
       "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Acls.cn%20OR%20site%3Ayicai.com%20OR%20site%3Astcn.com%20OR%20site%3Ajiemian.com%20OR%20site%3A21jingji.com%20OR%20site%3Atrendforce.com%20OR%20site%3Adigitimes.com%29%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "count": 0
     }
@@ -462,7 +462,7 @@
     }
   ],
   "headlines_carried_forward": false,
-  "headline_collection_at": "2026-10-27T21:50:22+08:00",
+  "headline_collection_at": "2026-10-27T23:59:07+08:00",
   "forecast_review": {
     "status": "low_confidence",
     "anchor_age_days": 14,
@@ -632,7 +632,7 @@
     },
     "source_url": "https://qudao.co/api/trends?timeframe=daily",
     "homepage": "https://qudao.co/",
-    "collected_at": "2026-10-27T21:50:22+08:00",
+    "collected_at": "2026-10-27T23:59:07+08:00",
     "age_days": 0,
     "verification": "platform_reference",
     "independent_market_samples": false,
@@ -801,7 +801,7 @@
   "new_verified_price_count": 0,
   "summary": "本轮自动采集不把新闻标题或聚合挂牌升级为已核验价格；已核验价格更新需要证据复核。",
   "intelligence": {
-    "status": "fallback",
+    "status": "workers_ai",
     "items": [
       {
         "source_id": "qudao",
@@ -810,8 +810,8 @@
         "date": "2026-10-27",
         "kind": "平台参考",
         "url": "https://qudao.co/api/trends?timeframe=daily",
-        "summary": "平台卖均91,430元、买均88,728元，价差2,702元；最低挂价86,000元，交期3个月（约90天），原报价日期2026-09-22。",
-        "impact": "最低挂价按3个月（约90天）交付，短交期报盘需单独确认。平台日序列存在固定比例关系。",
+        "summary": "平台卖均91,430元、买均88,728元，最低挂价86,000元，交期3个月。",
+        "impact": "最低挂价按3个月交付，短交期报盘需单独确认。",
         "watch": "核实低价有效性与报价算法"
       },
       {
@@ -821,7 +821,7 @@
         "date": "2026-10-13",
         "kind": "媒体采访",
         "url": "https://news.smm.cn/news/104154895",
-        "summary": "SMM 报道大陆供货商预售报价95,000元；行业估计90,000-95,000元。报道未披露供应商、数量和交付条款。",
+        "summary": "SMM报道大陆供货商预售报价95,000元，行业估计90,000-95,000元。",
         "impact": "95,000元可用作首轮报盘锚点，短交期和税票条件决定客户是否接受。",
         "watch": "取得当日可执行报价和交期"
       },
@@ -832,7 +832,7 @@
         "date": "2026-10-20",
         "kind": "路透独家·匿名信源",
         "url": "https://www.bnnbloomberg.ca/business/company-news/2026/10/20/bytedance-alibaba-tencent-place-over-us35-billion-worth-of-nvidia-chip-orders-reuters-exclusive/",
-        "summary": "路透援引匿名信源称中国客户总订单超过600万张、2027年全球计划产量可能不超过300万张，合作方或只获配申请量的5%-10%；商业交付预计2027年一季度。",
+        "summary": "路透援引匿名信源称中国客户总订单超过600万张，2027年全球计划产量可能不超过300万张。",
         "impact": "首批配额偏紧有利于短交期货源报价；订单量不能直接推算实际获配。",
         "watch": "跟踪样品、配额和商业发货"
       },
@@ -843,7 +843,7 @@
         "date": "2026-10-21",
         "kind": "行业研究机构转述",
         "url": "https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/",
-        "summary": "TrendForce转述The Information：RTX PRO 5500在中国售价约85,000-90,000元，未披露税费、数量与交期。",
+        "summary": "TrendForce转述The Information：RTX PRO 5500在中国售价约85,000-90,000元。",
         "impact": "该区间低于SMM预售价95,000元，客户可能据此压价；高于该区间的报盘需以短交期或税票条件支撑。",
         "watch": "核实该区间对应的交期与含税口径"
       },
@@ -854,7 +854,7 @@
         "date": "2026-10-13",
         "kind": "发行人公告",
         "url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-10/2026-10-13/12638891.PDF",
-        "summary": "天阳科技公告采购20,000张RTX PRO 5500，分批发货付款；原厂原因下存在延期、减量及卖方免责条款。",
+        "summary": "天阳科技公告采购20,000张，分批发货付款，原厂原因下存在延期、减量及卖方免责条款。",
         "impact": "分批交付与卖方免责条款使首批到货节奏不确定，短交期现货报价可能继续偏高。",
         "watch": "核实配额及上下游交付责任"
       },
@@ -865,7 +865,7 @@
         "date": "2026-10-09",
         "kind": "媒体采访",
         "url": "https://www.cls.cn/detail/2500747",
-        "summary": "财联社受访者估计单卡约85,000元，另有受访者判断报价或超过100,000元；当时官方尚未定价。",
+        "summary": "财联社受访者估计单卡约85,000元，另有受访者判断报价或超过100,000元。",
         "impact": "较宽预期区间说明报价仍受交期与供货把握影响，不宜把早期估价当采购底价。",
         "watch": "以新报盘替换旧估价"
       },
@@ -876,14 +876,13 @@
         "date": "2026-10-27",
         "kind": "官方页面",
         "url": "https://www.nvidia.com/en-eu/products/workstations/professional-desktop-gpus/rtx-pro-5500/",
-        "summary": "RTX PRO 5500为84GB GDDR7工作站卡。本轮状态：官方页仍显示 Coming Soon。",
+        "summary": "RTX PRO 5500为84GB GDDR7工作站卡，官方页仍显示 Coming Soon。",
         "impact": "关注官方售价和正式发货节点，交付兑现后重新评估首批溢价。",
         "watch": "核对官方价格与可购买状态"
       }
     ],
-    "model": null,
-    "generated_at": "2026-10-27T21:50:22+08:00",
-    "error": "模型引入了输入中没有的数字"
+    "model": "@cf/zai-org/glm-4.7-flash",
+    "generated_at": "2026-10-27T15:59:30.358Z"
   },
   "feed": {
     "items": [
@@ -930,53 +929,143 @@
     ],
     "leads": [
       {
-        "title": "2万张RTX PRO 5500合同披露:验货后、发货前付款,原厂无法供货谁担责?",
-        "publisher": "GPU算力-聪哥",
+        "title": "RTX Pro5500 开放预定,显卡/整机均可接单交付",
+        "publisher": "广州三欣电脑及服务器",
         "source_type": "公众号",
-        "url": "https://weixin.sogou.com/weixin?type=2&query=2%E4%B8%87%E5%BC%A0RTX%20PRO%205500%E5%90%88%E5%90%8C%E6%8A%AB%E9%9C%B2%3A%E9%AA%8C%E8%B4%A7%E5%90%8E%E3%80%81%E5%8F%91%E8%B4%A7%E5%89%8D%E4%BB%98%E6%AC%BE%2C%E5%8E%9F%E5%8E%82%E6%97%A0%E6%B3%95%E4%BE%9B%E8%B4%A7%E8%B0%81%E6%8B%85%E8%B4%A3%3F",
-        "published_at": "",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20Pro5500%20%E5%BC%80%E6%94%BE%E9%A2%84%E5%AE%9A%2C%E6%98%BE%E5%8D%A1/%E6%95%B4%E6%9C%BA%E5%9D%87%E5%8F%AF%E6%8E%A5%E5%8D%95%E4%BA%A4%E4%BB%98",
+        "published_at": "2026-10-27",
         "found_via": "搜狗微信",
-        "snippet": "讨论天阳科技2万张采购合同的付款节点与原厂无法供货时的责任划分。"
+        "snippet": "NVIDIA RTX Pro5500专业算力卡开放预定!支持单独显卡接单,也可配套整机方案交付.适合AI推理、模型微调、专业渲染等算力场..."
       },
       {
-        "title": "狂砸数百亿抢单!RTX PRO 5500到底香在哪?",
-        "publisher": "英腾达科技",
+        "title": "RTX PRO 6000降价了吗?",
+        "publisher": "赢泰云科技",
         "source_type": "公众号",
-        "url": "https://weixin.sogou.com/weixin?type=2&query=%E7%8B%82%E7%A0%B8%E6%95%B0%E7%99%BE%E4%BA%BF%E6%8A%A2%E5%8D%95%21RTX%20PRO%205500%E5%88%B0%E5%BA%95%E9%A6%99%E5%9C%A8%E5%93%AA%3F",
-        "published_at": "",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%206000%E9%99%8D%E4%BB%B7%E4%BA%86%E5%90%97%3F",
+        "published_at": "2026-10-27",
         "found_via": "搜狗微信",
-        "snippet": "称国内云厂商已大量下单，英伟达尚未规模出货。"
+        "snippet": "为什么没有完全承接它的市场,以及 RTX PRO 5500 是否会成为新的替代选择.判断这三个问题,需要把公开报价、产品规格、供货..."
       },
       {
-        "title": "RTX 5090还是RTX PRO 5500?润迅R500给出的答案",
-        "publisher": "润迅人工智能",
+        "title": "RTX PRO 5500报价为何差出几万元?市场在为稀缺货源买单吗?",
+        "publisher": "GPU算力观察-聪哥",
         "source_type": "公众号",
-        "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%205090%E8%BF%98%E6%98%AFRTX%20PRO%205500%3F%E6%B6%A6%E8%BF%85R500%E7%BB%99%E5%87%BA%E7%9A%84%E7%AD%94%E6%A1%88",
-        "published_at": "",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%E6%8A%A5%E4%BB%B7%E4%B8%BA%E4%BD%95%E5%B7%AE%E5%87%BA%E5%87%A0%E4%B8%87%E5%85%83%3F%E5%B8%82%E5%9C%BA%E5%9C%A8%E4%B8%BA%E7%A8%80%E7%BC%BA%E8%B4%A7%E6%BA%90%E4%B9%B0%E5%8D%95%E5%90%97%3F",
+        "published_at": "2026-10-26",
         "found_via": "搜狗微信",
-        "snippet": "称深圳发布搭载8张RTX PRO 5500的服务器（文中日期10月13日）。"
+        "snippet": "最近一段时间,RTX PRO 5500的市场信息明显多了起来.8.5万—9万元、9.5万元、13万元,还有最新报道中的11,400美元,几组数..."
       },
       {
-        "title": "RTX PRO 5500单卡售价1.14万美元,是英伟达9月新推出来的工作站显卡",
-        "publisher": "大水侃谈",
+        "title": "大厂算力采购风向变了?RTX PRO 5500 凭什么成为 RTX 5090 的强力竞争者",
+        "publisher": "东毅科技",
         "source_type": "公众号",
-        "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%E5%8D%95%E5%8D%A1%E5%94%AE%E4%BB%B71.14%E4%B8%87%E7%BE%8E%E5%85%83%2C%E6%98%AF%E8%8B%B1%E4%BC%9F%E8%BE%BE9%E6%9C%88%E6%96%B0%E6%8E%A8%E5%87%BA%E6%9D%A5%E7%9A%84%E5%B7%A5%E4%BD%9C%E7%AB%99%E6%98%BE%E5%8D%A1",
-        "published_at": "",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%A4%A7%E5%8E%82%E7%AE%97%E5%8A%9B%E9%87%87%E8%B4%AD%E9%A3%8E%E5%90%91%E5%8F%98%E4%BA%86%3FRTX%20PRO%205500%20%E5%87%AD%E4%BB%80%E4%B9%88%E6%88%90%E4%B8%BA%20RTX%205090%20%E7%9A%84%E5%BC%BA%E5%8A%9B%E7%AB%9E%E4%BA%89%E8%80%85",
+        "published_at": "2026-10-24",
         "found_via": "搜狗微信",
-        "snippet": "转述单卡约1.14万美元，称是中国企业可合法购买的最强英伟达芯片。"
+        "snippet": "在这一背景下,NVIDIA RTX PRO 5500 开始进入行业视野.相比面向游戏与消费市场的 GeForce RTX 5090,RTX PRO 5500 的吸引力..."
       },
       {
-        "title": "深度分析:RTX Pro 5500,凭什么?",
+        "title": "RTX Pro5500\\6000D\\RTX5090的技术对比分析(含选型思路)",
         "publisher": "两年砍柴",
         "source_type": "公众号",
-        "url": "https://weixin.sogou.com/weixin?type=2&query=%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90%3ARTX%20Pro%205500%2C%E5%87%AD%E4%BB%80%E4%B9%88%3F",
-        "published_at": "",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20Pro5500%5C6000D%5CRTX5090%E7%9A%84%E6%8A%80%E6%9C%AF%E5%AF%B9%E6%AF%94%E5%88%86%E6%9E%90%28%E5%90%AB%E9%80%89%E5%9E%8B%E6%80%9D%E8%B7%AF%29",
+        "published_at": "2026-10-22",
         "found_via": "搜狗微信",
-        "snippet": "从出口管制与供给缺口角度分析这张卡在国内算力市场的位置。"
+        "snippet": "2)RTX PRO 5500(工作站全能卡)优势:和5090一样的完整CUDA/Tensor核心,84G ECC大显存,带显示输出、完整MIG虚拟化,..."
+      },
+      {
+        "title": "等等党又坐不住了!RTX PRO 5500订单超300万张,大厂抢卡,5090怎么办?",
+        "publisher": "小余找你有事",
+        "source_type": "公众号",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=%E7%AD%89%E7%AD%89%E5%85%9A%E5%8F%88%E5%9D%90%E4%B8%8D%E4%BD%8F%E4%BA%86%21RTX%20PRO%205500%E8%AE%A2%E5%8D%95%E8%B6%85300%E4%B8%87%E5%BC%A0%2C%E5%A4%A7%E5%8E%82%E6%8A%A2%E5%8D%A1%2C5090%E6%80%8E%E4%B9%88%E5%8A%9E%3F",
+        "published_at": "2026-10-22",
+        "found_via": "搜狗微信",
+        "snippet": "你纠结当下入手会不会买贵,他们担心的是来年拿不到货.这次掀起风波的,正是 RTX PRO 5500.据路透社10月20日援引知情人士..."
+      },
+      {
+        "title": "350亿美元买不到Nvidia次次次先进逻辑芯片,中国芯片差距多大?",
+        "publisher": "白礁村28号",
+        "source_type": "公众号",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=350%E4%BA%BF%E7%BE%8E%E5%85%83%E4%B9%B0%E4%B8%8D%E5%88%B0Nvidia%E6%AC%A1%E6%AC%A1%E6%AC%A1%E5%85%88%E8%BF%9B%E9%80%BB%E8%BE%91%E8%8A%AF%E7%89%87%2C%E4%B8%AD%E5%9B%BD%E8%8A%AF%E7%89%87%E5%B7%AE%E8%B7%9D%E5%A4%9A%E5%A4%A7%3F",
+        "published_at": "2026-10-22",
+        "found_via": "搜狗微信",
+        "snippet": "RTX PRO 5500作为目前中国买家能合法买到的最强英伟达芯片之... 客户实际到货率可能仅有5%至10%.这从侧面印证了它在特定市..."
+      },
+      {
+        "title": "RTX PRO 5500单卡售价1.14万美元 图一 ,是英伟达9月新推出来的工作站显卡",
+        "publisher": "大水侃谈",
+        "source_type": "公众号",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%E5%8D%95%E5%8D%A1%E5%94%AE%E4%BB%B71.14%E4%B8%87%E7%BE%8E%E5%85%83%20%E5%9B%BE%E4%B8%80%20%2C%E6%98%AF%E8%8B%B1%E4%BC%9F%E8%BE%BE9%E6%9C%88%E6%96%B0%E6%8E%A8%E5%87%BA%E6%9D%A5%E7%9A%84%E5%B7%A5%E4%BD%9C%E7%AB%99%E6%98%BE%E5%8D%A1",
+        "published_at": "2026-10-21",
+        "found_via": "搜狗微信",
+        "snippet": "RTX PRO 5500单卡售价1.14万美元图一,是英伟达9月新推出来的工作站显卡.在合规渠道里,中国企业目前能买到的英伟达最强型..."
+      },
+      {
+        "title": "英伟达RTX PRO 5500中国大单:卡要是明年真到了,国产推理卡替代会慢下来",
+        "publisher": "保持饿保持傻",
+        "source_type": "公众号",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=%E8%8B%B1%E4%BC%9F%E8%BE%BERTX%20PRO%205500%E4%B8%AD%E5%9B%BD%E5%A4%A7%E5%8D%95%3A%E5%8D%A1%E8%A6%81%E6%98%AF%E6%98%8E%E5%B9%B4%E7%9C%9F%E5%88%B0%E4%BA%86%2C%E5%9B%BD%E4%BA%A7%E6%8E%A8%E7%90%86%E5%8D%A1%E6%9B%BF%E4%BB%A3%E4%BC%9A%E6%85%A2%E4%B8%8B%E6%9D%A5",
+        "published_at": "2026-10-21",
+        "found_via": "搜狗微信",
+        "snippet": "腾讯订了300多万张英伟达RTX PRO 5500,中国客户加起来订了... 每个季度给5500留多少产能,直接卡住到货量.还有一层风险在钱..."
+      },
+      {
+        "title": "AI动态 10月21日:一成到货,八成锁死",
+        "publisher": "修身观天下",
+        "source_type": "公众号",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=AI%E5%8A%A8%E6%80%81%2010%E6%9C%8821%E6%97%A5%3A%E4%B8%80%E6%88%90%E5%88%B0%E8%B4%A7%2C%E5%85%AB%E6%88%90%E9%94%81%E6%AD%BB",
+        "published_at": "2026-10-21",
+        "found_via": "搜狗微信",
+        "snippet": "RTX PRO 5500、总值超 350 亿美元,而 2027 年全球产量上限只有 300 万张、中国订单已超 600 万张,到货可能只有 5% 至 10%;..."
+      },
+      {
+        "title": "350亿美元GPU大单传出!三巨头争抢RTX PRO 5500,供货可能只有一小部分?",
+        "publisher": "GPU算力观察-聪哥",
+        "source_type": "公众号",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=350%E4%BA%BF%E7%BE%8E%E5%85%83GPU%E5%A4%A7%E5%8D%95%E4%BC%A0%E5%87%BA%21%E4%B8%89%E5%B7%A8%E5%A4%B4%E4%BA%89%E6%8A%A2RTX%20PRO%205500%2C%E4%BE%9B%E8%B4%A7%E5%8F%AF%E8%83%BD%E5%8F%AA%E6%9C%89%E4%B8%80%E5%B0%8F%E9%83%A8%E5%88%86%3F",
+        "published_at": "2026-10-21",
+        "found_via": "搜狗微信",
+        "snippet": "RTX PRO 5500同样需要上游芯片制造、显存、板卡生产以及后续... 对客户来说,样卡、商业发货和批量到货之间仍有区别.样卡可以..."
+      },
+      {
+        "title": "字节阿里腾讯下单 350 亿美元英伟达卡,但拿不到货",
+        "publisher": "AIFrontWatch",
+        "source_type": "公众号",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%AD%97%E8%8A%82%E9%98%BF%E9%87%8C%E8%85%BE%E8%AE%AF%E4%B8%8B%E5%8D%95%20350%20%E4%BA%BF%E7%BE%8E%E5%85%83%E8%8B%B1%E4%BC%9F%E8%BE%BE%E5%8D%A1%2C%E4%BD%86%E6%8B%BF%E4%B8%8D%E5%88%B0%E8%B4%A7",
+        "published_at": "2026-10-21",
+        "found_via": "搜狗微信",
+        "snippet": "亿美元英伟达卡,但拿不到货AI 前线观察在美国出口管制之下,中... RTX PRO 5500 显卡,按每张约 11400 美元计算,总价值超过 ..."
+      },
+      {
+        "title": "喊出300万张订单,英伟达RTX PRO 5500为何遭到提前疯抢?",
+        "publisher": "雷峰网",
+        "source_type": "公众号",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%96%8A%E5%87%BA300%E4%B8%87%E5%BC%A0%E8%AE%A2%E5%8D%95%2C%E8%8B%B1%E4%BC%9F%E8%BE%BERTX%20PRO%205500%E4%B8%BA%E4%BD%95%E9%81%AD%E5%88%B0%E6%8F%90%E5%89%8D%E7%96%AF%E6%8A%A2%3F",
+        "published_at": "2026-10-20",
+        "found_via": "搜狗微信",
+        "snippet": "早在8月份,服务器产品经理夏寅卿已经开始向客户推介还未面世的RTX PRO 5500.一个月后,这张最新PRO系列专业工作站显卡才..."
+      },
+      {
+        "title": "还没开卖就传出200万颗需求:RTX PRO 5500凭什么这么火?",
+        "publisher": "GPU算力观察-聪哥",
+        "source_type": "公众号",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=%E8%BF%98%E6%B2%A1%E5%BC%80%E5%8D%96%E5%B0%B1%E4%BC%A0%E5%87%BA200%E4%B8%87%E9%A2%97%E9%9C%80%E6%B1%82%3ARTX%20PRO%205500%E5%87%AD%E4%BB%80%E4%B9%88%E8%BF%99%E4%B9%88%E7%81%AB%3F",
+        "published_at": "2026-10-19",
+        "found_via": "搜狗微信",
+        "snippet": "RTX PRO 5500采用Blackwell架构,配备84GB GDDR7 ECC显存,官方公布的显存带宽为1398GB/s,最大功耗为600W.公开硬件媒..."
+      },
+      {
+        "title": "RTX PRO 5500 拆解:性能、三卡对决与价格赌局",
+        "publisher": "算力业务笔记",
+        "source_type": "公众号",
+        "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%20%E6%8B%86%E8%A7%A3%3A%E6%80%A7%E8%83%BD%E3%80%81%E4%B8%89%E5%8D%A1%E5%AF%B9%E5%86%B3%E4%B8%8E%E4%BB%B7%E6%A0%BC%E8%B5%8C%E5%B1%80",
+        "published_at": "2026-10-17",
+        "found_via": "搜狗微信",
+        "snippet": "核心结论RTX PRO 5500 不是一款技术创新的产品,它是一张＂用显存容量重新定价＂的商业牌.它真正的对手不是 RTX 5090,而是..."
       }
     ],
     "rejected": [],
-    "updated_at": "2026-10-27T22:00:00+08:00",
-    "agent": "manual-sweep"
+    "updated_at": "2026-10-27T23:59:07+08:00",
+    "agent": "actions-sweep"
   }
 }
