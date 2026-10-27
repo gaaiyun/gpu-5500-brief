@@ -16,6 +16,7 @@ import requests
 from bs4 import BeautifulSoup
 from market import parse_channel, daily_brief
 from intelligence import enrich
+from feed import load_feed
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = timezone(timedelta(hours=8))
@@ -237,6 +238,11 @@ def run(offline=False):
              "new_verified_price_count": 0,
              "summary": "本轮自动采集不把新闻标题或聚合挂牌升级为已核验价格；已核验价格更新需要证据复核。"}
     state["intelligence"] = enrich(evidence,state)
+    # Agent-verified web intelligence (cloud routine writes data/feed.json); invalid items are dropped, not fatal.
+    feed_payload = read_json(ROOT / "data/feed.json", {})
+    feed_items, feed_rejected = load_feed(feed_payload, today)
+    state["feed"] = {"items": feed_items, "rejected": feed_rejected,
+                     "updated_at": (feed_payload or {}).get("updated_at"), "agent": (feed_payload or {}).get("agent")}
     save_json(ROOT / "data/state.json", state)
     save_json(ROOT / "data/history" / f"{today.isoformat()}.json", state)
     healthy = sum(c["status"] == "ok" for c in checks)

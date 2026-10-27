@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-27T22:00:00+08:00",
+  "agent": "manual-sweep",
+  "searched": ["主流财经与科技媒体", "行业研究", "公众号（经搜索引擎）", "微博/知乎/小红书", "X/Reddit", "电商与渠道挂价"],
+  "items": [
+    {
+      "id": "leiphone-20261020-channel-quotes",
+      "title": "雷峰网：大厂采购报价约8.5万元，部分渠道8.7万元",
+      "published_at": "2026-10-20",
+      "publisher": "雷峰网",
+      "source_type": "行业媒体",
+      "url": "https://www.leiphone.com/category/chips/STx9ZzfDNh5W80Bm.html",
+      "grade": "B",
+      "summary": "雷峰网原创报道（记者陈悦琳）援引匿名业内人士：RTX PRO 5500预期交付报价集中在8万-12万元，大厂采购报价约8.5万元，部分渠道升至8.7万元；英伟达每季度对华供应上限约50万张；OEM厂商11月拿样卡，批量交付最快明年一季度。",
+      "impact": "8.5万-8.7万元与TrendForce转述的8.5万-9万元相互印证，低于SMM预售价9.5万元；高于9万元的报盘需靠短交期支撑。",
+      "watch": "核实11月样卡是否到位、渠道报价是否继续上移",
+      "corroboration": ["https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/"],
+      "checked_at": "2026-10-27"
+    },
+    {
+      "id": "theinformation-20260927-miit-approval",
+      "title": "工信部据报要求企业上报采购量并有意批准",
+      "published_at": "2026-09-28",
+      "publisher": "Investing.com（转述 The Information）",
+      "source_type": "主流媒体",
+      "url": "https://finance.yahoo.com/technology/articles/china-may-permit-alibaba-bytedance-173017962.html",
+      "grade": "B",
+      "summary": "据The Information报道，工信部要求字节跳动、阿里巴巴等企业上报RTX PRO 5500计划采购量和用途，并表示有意批准采购。英伟达、相关企业与工信部均未公开确认。",
+      "impact": "国内审批若落地，大厂需求转为实际订单，首批配额会更紧；审批时间和获批数量未知，暂不改变价格情景。",
+      "watch": "跟踪工信部或企业的正式表态与获批数量",
+      "corroboration": ["https://www.eet-china.com/news/202609288049.html"],
+      "checked_at": "2026-10-27"
+    }
+  ]
+}

@@ -39,6 +39,16 @@ def body_html(state):
             f"影响：{e(item['impact'])}<br>"
             f"跟进：{e(item['watch'])}<br>"
             f"来源：<a href=\"{e(item['url'])}\">{e(item['source'])}</a></p>")
+    feed = [x for x in (state.get("feed") or {}).get("items", []) if x.get("age_days", 99) <= 14]
+    if feed:
+        parts.append("<h3>全网追踪（AI 读原文核对）</h3>")
+        for item in feed[:6]:
+            checks = "".join(f"<br>【{e(c['status'])}】{e(c['text'])}" + (f" <a href=\"{e(c['ref'])}\">出处</a>" if c["ref"] else "")
+                             for c in item.get("claims", []))
+            parts.append(
+                f"<p><b>[{e(item.get('tier', '核实'))}·{e(item['grade_label'])}] {e(item['title'])}</b>（{e(item['published_at'])}，{e(item['publisher'])}）<br>"
+                f"事实：{e(item['summary'])}<br>影响：{e(item['impact'])}<br>跟进：{e(item['watch'])}{checks}<br>"
+                f"来源：<a href=\"{e(item['url'])}\">{e(item['publisher'])}</a></p>")
     parts.append("<p>口径：渠道价为宽泛采销平台参考，不是成交价；媒体价格未统一税费、数量和交期。没有新证据时不改预测。</p>")
     parts.append(f"<p>完整曲线、报价对照与研究报告：<a href=\"{SITE}\">{SITE}</a></p>")
     return "\n".join(parts)

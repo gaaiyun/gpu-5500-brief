@@ -45,6 +45,14 @@ jobs:
           sudo apt-get install -y -qq fonts-wqy-zenhei fonts-noto-cjk
       - name: Verify evidence handling
         run: python -m unittest discover -s tests -v
+      - name: Use the cloud agent's intelligence feed
+        # The nightly Claude Code routine pushes a checked data/feed.json to this branch; main keeps a seed copy.
+        run: |
+          if git fetch --depth=1 origin claude/intel-feed 2>/dev/null && git show FETCH_HEAD:data/feed.json > /tmp/feed.json; then
+            cp /tmp/feed.json data/feed.json && echo "Using feed from claude/intel-feed"
+          else
+            echo "No cloud feed yet; using the committed seed"
+          fi
       - name: Collect sources and review forecast
         id: collect
         continue-on-error: true

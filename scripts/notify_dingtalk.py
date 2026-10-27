@@ -46,6 +46,13 @@ def message(state):
                      f"影响：{item['impact']}  \n"
                      f"跟进：{item['watch']}  \n"
                      f"来源：{item['source']} {item['url']}")
+    feed = [x for x in (state.get("feed") or {}).get("items", []) if x.get("age_days", 99) <= 14]
+    if feed:
+        lines.append("**全网追踪（AI 读原文核对）**")
+        for item in feed[:6]:
+            checks = "".join(f"  \n【{c['status']}】{c['text']}" + (f" {c['ref']}" if c["ref"] else "") for c in item.get("claims", []))
+            lines.append(f"- **[{item.get('tier', '核实')}·{item['grade_label']}] {item['title']}**（{item['published_at']}，{item['publisher']}）  \n"
+                         f"{item['summary']}  \n影响：{item['impact']}{checks}  \n来源：{item['url']}")
     # Bare URLs, not [text](url): markdown links lose their address when copied out of DingTalk.
     lines.append(f"日报图原图：{image}")
     lines.append(f"网站（完整曲线、报价对照与研究报告）：{SITE}")

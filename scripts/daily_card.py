@@ -9,6 +9,8 @@ from urllib.parse import urlparse
 
 from PIL import Image, ImageDraw, ImageFont
 
+from feed import claim_tally
+
 W, M, GAP = 1080, 40, 18
 BG = (243, 245, 248)
 CARD = (255, 255, 255)
@@ -283,6 +285,57 @@ def render(evidence, state, output):
             d.text((M + PAD, ty), line, font=F(T_TINY), fill=MUTED)
             ty += 32
         y += h + 14
+
+    # Agent-verified web intelligence from the last week.
+    feed = [x for x in (state.get("feed") or {}).get("items", []) if x.get("age_days", 99) <= 7][:3]
+    if feed:
+        y += 12
+        d.text((M + 4, y + 10), f"全网追踪 · {len(feed)} 条", font=F(T_H2, True), fill=INK)
+        d.text((W - M, y + 22), "AI 读原文核对", font=F(T_TINY), fill=MUTED, anchor="ra")
+        y += 72
+        for item in feed:
+            title = wrap(d, item["title"], F(T_H3, True), inner, 2)
+            summary = wrap(d, item["summary"], F(T_BODY), inner, 4)
+            impact = wrap(d, item["impact"], F(T_BODY), inner - tag_w, 3)
+            source = wrap(d, f"来源：{item['publisher']} · {urlparse(item['url']).netloc}", F(T_TINY), inner, 2)
+            # Second-hand posts carry their claim check, with the problem claims spelled out.
+            flagged = [c for c in item.get("claims", []) if c["status"] in ("无出处", "与出处不符")][:2]
+            checks = []
+            if item.get("claims"):
+                checks = wrap(d, f"核对：{claim_tally(item)}", F(T_SMALL, True), inner, 2)
+                for c in flagged:
+                    checks += wrap(d, f"【{c['status']}】{c['text']}", F(T_SMALL), inner, 2)
+            h = (24 + 44 + 18 + len(title) * 46 + 10 + len(summary) * LH + 14 + len(impact) * LH
+                 + (len(checks) * 38 + 10 if checks else 0) + 22 + len(source) * 32 + 22)
+            card(y, y + h)
+            grade_fill = {"A": (220, 252, 231), "B": (254, 243, 199)}.get(item["grade"], LINE)
+            chip(M + PAD, y + 24, f"{item.get('tier', '核实')} · {item['grade']} {item['grade_label']}", grade_fill, INK, T_TINY)
+            d.text((W - M - PAD, y + 44), item["published_at"], font=F(T_TINY), fill=MUTED, anchor="rm")
+            ty = y + 24 + 44 + 18
+            for line in title:
+                d.text((M + PAD, ty), line, font=F(T_H3, True), fill=INK)
+                ty += 46
+            ty += 10
+            for line in summary:
+                d.text((M + PAD, ty), line, font=F(T_BODY), fill=TEXT)
+                ty += LH
+            ty += 14
+            d.text((M + PAD, ty), "影响", font=F(T_BODY, True), fill=ASK)
+            for line in impact:
+                d.text((M + PAD + tag_w, ty), line, font=F(T_BODY), fill=INK)
+                ty += LH
+            if checks:
+                ty += 10
+                for i, line in enumerate(checks):
+                    d.text((M + PAD, ty), line, font=F(T_SMALL, i == 0), fill=AMBER if i == 0 else BID)
+                    ty += 38
+            ty += 8
+            d.line([(M + PAD, ty), (W - M - PAD, ty)], fill=LINE, width=1)
+            ty += 14
+            for line in source:
+                d.text((M + PAD, ty), line, font=F(T_TINY), fill=MUTED)
+                ty += 32
+            y += h + 14
 
     # Footer.
     y += 12
