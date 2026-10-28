@@ -21,48 +21,6 @@
   ],
   "items": [
     {
-      "id": "news-20261021-70140c",
-      "title": "大厂抢购RTX PRO 5500，单张报价约8.5万元",
-      "published_at": "2026-10-21",
-      "publisher": "腾讯新闻",
-      "source_type": "公众号",
-      "url": "https://news.qq.com/rain/a/20261021A07X2300",
-      "grade": "C",
-      "summary": "腾讯新闻援引路透社报道，中国客户总订单超600万块；英伟达称2027年全球产量可能不超过300万块；大客户前期报价约8.5万元；工信部9月底要求部分企业上报采购计划并拟批准。",
-      "impact": "大客户报价8.5万元与已收录事件 cls 一致，但总订单量（600万）远超已收录事件 reuters 的 300 万，暗示需求远超预期，可能进一步推高渠道溢价或加剧配额争夺。",
-      "watch": "核实工信部批准采购的具体企业名单及数量。",
-      "corroboration": [],
-      "claims": [
-        {
-          "text": "中国客户总订单超过600万块",
-          "status": "推算",
-          "ref": ""
-        },
-        {
-          "text": "英伟达称2027年全球产量可能不超过300万块",
-          "status": "无出处",
-          "ref": ""
-        },
-        {
-          "text": "大客户前期报价约8.5万元",
-          "status": "有出处",
-          "ref": "https://www.cls.cn/detail/2500747"
-        },
-        {
-          "text": "工信部9月底要求部分企业上报采购计划",
-          "status": "有出处",
-          "ref": "https://finance.yahoo.com/technology/articles/china-may-permit-alibaba-bytedance-173017962.html"
-        },
-        {
-          "text": "最终可能只能满足所订数量的5%至10%",
-          "status": "无出处",
-          "ref": ""
-        }
-      ],
-      "checked_at": "2026-10-28",
-      "found_via": "人工转入"
-    },
-    {
       "id": "leiphone-20261020-channel-quotes",
       "title": "雷峰网：大厂采购报价约8.5万元，部分渠道8.7万元",
       "published_at": "2026-10-20",

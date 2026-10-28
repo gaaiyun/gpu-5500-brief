@@ -8,8 +8,8 @@ sys.path.insert(0,str(ROOT/"scripts"))
 import sweep
 
 TODAY=date(2026,10,27)
-EVENTS={"reuters":{"text":"路透：中国客户总订单超过600万张，合作方或只获配5%-10%","url":"https://example.com/reuters"},
-        "leiphone":{"text":"雷峰网：大厂采购报价约8.5万元","url":"https://example.com/leiphone"}}
+EVENTS={"reuters":{"name":"路透社","date":"2026-10-20","text":"中国客户总订单超过600万张，合作方或只获配5%-10%","url":"https://example.com/reuters"},
+        "leiphone":{"name":"雷峰网","date":"2026-10-20","text":"大厂采购报价约8.5万元","url":"https://example.com/leiphone"}}
 ARTICLE="据路透社报道，三家中国互联网大厂合计订购超过300万块英伟达RTX PRO 5500，客户总订单超过600万张。渠道报价约8.7万元。"
 
 
@@ -79,6 +79,23 @@ class DraftCheckTests(unittest.TestCase):
         self.assertEqual(item["grade"],"C")
         self.assertEqual([c["status"] for c in item["claims"]],["有出处","无出处","无出处"])
         self.assertEqual(item["claims"][0]["ref"],"https://example.com/reuters")
+
+    def test_claims_matching_a_verified_event_are_sourced(self):
+        post=candidate(url="https://news.qq.com/rain/a/1",source_type="公众号",publisher="腾讯新闻",
+                       text=ARTICLE+"最终可能只能满足5%至10%。大厂采购报价约8.5万元。")
+        claims=[{"text":"最终可能只能满足5%至10%","status":"无出处","ref":""},
+                {"text":"大厂采购报价约8.5万元","status":"推算","ref":""},
+                {"text":"路透坐实600万张订单","status":"与出处不符","ref":"reuters"}]
+        item=sweep.build_item(draft(claims=claims),post,EVENTS,TODAY)
+        self.assertEqual([(c["status"],c["ref"]) for c in item["claims"]],
+                         [("有出处","https://example.com/reuters"),("有出处","https://example.com/leiphone"),
+                          ("与出处不符","https://example.com/reuters")])
+        # A lone small figure is too weak to tie a claim to an event.
+        self.assertIsNone(sweep.matching_event("9月底上报",EVENTS))
+
+    def test_internal_ids_become_source_names(self):
+        item=sweep.build_item(draft(impact="与已收录事件 leiphone 的8.5万元一致"),candidate(),EVENTS,TODAY)
+        self.assertEqual(item["impact"],"与雷峰网的8.5万元一致")
 
 
 class SweepTests(unittest.TestCase):

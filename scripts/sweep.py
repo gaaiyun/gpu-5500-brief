@@ -25,7 +25,7 @@ import requests
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 
 from feed import CLAIM_STATUS, MAX_AGE_DAYS, QUICK_TYPES, clean_item, load_leads
-from intelligence import numeric_values
+from intelligence import SOURCE_LABELS, numeric_values
 from update import MAJOR_MEDIA, fetch, now_iso, read_json
 
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
@@ -251,15 +251,32 @@ def read_article(url):
 
 def known_events(feed, evidence):
     """What the site already reports; the model uses it for duplicates and claim checks."""
-    events = {s["id"]: {"text": f"{s['name']}：{s['summary']}", "url": s["url"]} for s in evidence.get("sources", [])}
+    events = {s["id"]: {"name": SOURCE_LABELS.get(s["id"], s["name"]), "date": s.get("published_at") or "", "text": s["summary"],
+                        "url": s["url"]} for s in evidence.get("sources", [])}
     for item in feed.get("items", []):
-        events[item["id"]] = {"text": f"{item['publisher']}（{item['published_at']}）：{item['summary']}", "url": item["url"]}
+        events[item["id"]] = {"name": item["publisher"], "date": item["published_at"], "text": item["summary"], "url": item["url"]}
     return events
+
+
+def matching_event(text, events):
+    """An already-verified event whose figures cover the claim's key figures (not the model number, memory size or years)."""
+    key = {v for v in numeric_values(text) if v not in (5500, 84) and not 1900 <= v <= 2100}
+    if not key or (max(key) < 1000 and len(key) < 2):
+        return None
+    return next((k for k, e in events.items() if key <= numeric_values(e["text"])), None)
+
+
+def readable(text, events):
+    """The model sometimes cites events by their internal ID; readers need the source name."""
+    text = re.sub(r"已收录事件\s*", "", text)
+    for key, event in events.items():
+        text = re.sub(rf"(?<![A-Za-z0-9-]){re.escape(key)}(?![A-Za-z0-9-])", event["name"], text)
+    return re.sub(r"(?<=[一-鿿])\s+(?=[一-鿿])", "", text)
 
 
 def ask_model(batch, events, endpoint, token):
     prompt = (ROOT / "prompts/sweep.md").read_text(encoding="utf-8") + "\n\n已收录事件：\n" + "\n".join(
-        f"- {key}：{value['text'][:160]}" for key, value in events.items())
+        f"- [{key}] {e['name']}（{e['date'] or '日期不详'}）：{e['text']}" for key, e in events.items())
     sources = [{k: c[k] for k in ("source_id", "url", "publisher", "source_type", "published_at", "title", "text")} for c in batch]
     # Unescaped UTF-8 keeps Chinese text inside the Worker's 50k-character input cap.
     raw = json.dumps({"prompt": prompt, "sources": sources}, ensure_ascii=False).encode("utf-8")
@@ -290,6 +307,7 @@ def build_item(draft, candidate, events, today):
         raise ValueError("摘要出现原文没有的数字")
     if not numeric_values(f"{impact} {watch}") <= context:
         raise ValueError("影响判断出现资料中没有的数字")
+    title, summary, impact, watch = (readable(x, events) for x in (title, summary, impact, watch))
     quick = candidate["source_type"] in QUICK_TYPES
     claims = []
     for claim in (draft.get("claims") or [])[:5] if quick else []:
@@ -298,12 +316,16 @@ def build_item(draft, candidate, events, today):
         text, status, ref_id = str(claim.get("text") or "").strip(), claim.get("status"), str(claim.get("ref") or "")
         if not text or status not in CLAIM_STATUS or not numeric_values(text) <= article:
             continue
+        text = readable(text, events)
         ref = events.get(ref_id, {}).get("url", "")
         # "Sourced" must match the cited event's own numbers; anything unprovable is recorded as unsourced.
         if status in ("有出处", "与出处不符") and not ref:
             status = "无出处"
-        if status == "有出处" and not numeric_values(text) <= numeric_values(events[ref_id]["text"]):
+        if status == "有出处" and not numeric_values(text) <= numeric_values(f"{events[ref_id]['text']} {events[ref_id]['date']}"):
             status = "无出处"
+        # The cheap model overlooks sources it was shown; key figures matching a verified event make the claim sourced.
+        if status in ("无出处", "推算") and (match := matching_event(text, events)):
+            status, ref = "有出处", events[match]["url"]
         claims.append({"text": text[:80], "status": status, "ref": ref if status in ("有出处", "与出处不符") else ""})
     item = {"id": item_id(candidate), "title": title, "published_at": candidate["published_at"], "publisher": candidate["publisher"],
             "source_type": candidate["source_type"], "url": candidate["url"], "grade": "C" if quick else "B",
