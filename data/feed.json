@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-28T08:25:28+08:00",
+  "updated_at": "2026-10-28T08:30:16+08:00",
   "agent": "actions-sweep",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -20,6 +20,48 @@
     "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
   ],
   "items": [
+    {
+      "id": "news-20261021-70140c",
+      "title": "腾讯新闻：大厂订单超600万张，获配率仅5%-10%",
+      "published_at": "2026-10-21",
+      "publisher": "腾讯新闻",
+      "source_type": "公众号",
+      "url": "https://news.qq.com/rain/a/20261021A07X2300",
+      "grade": "C",
+      "summary": "腾讯新闻援引路透社报道，中国客户总订单超600万张；英伟达称2027年全球产量可能不超过300万张；最终交付可能仅满足所订数量的5%至10%。",
+      "impact": "获配率极低意味着实际到货量远低于订单，渠道货源将极度稀缺，价格可能进一步上涨。",
+      "watch": "核实获配率5%-10%的具体来源及是否为英伟达官方口径。",
+      "corroboration": [],
+      "claims": [
+        {
+          "text": "中国客户总订单超过600万块",
+          "status": "有出处",
+          "ref": "https://www.bnnbloomberg.ca/business/company-news/2026/10/20/bytedance-alibaba-tencent-place-over-us35-billion-worth-of-nvidia-chip-orders-reuters-exclusive/"
+        },
+        {
+          "text": "2027年全球产量可能不超过300万块",
+          "status": "有出处",
+          "ref": "https://www.bnnbloomberg.ca/business/company-news/2026/10/20/bytedance-alibaba-tencent-place-over-us35-billion-worth-of-nvidia-chip-orders-reuters-exclusive/"
+        },
+        {
+          "text": "最终可能只能满足所订数量的5%至10%",
+          "status": "有出处",
+          "ref": "https://www.bnnbloomberg.ca/business/company-news/2026/10/20/bytedance-alibaba-tencent-place-over-us35-billion-worth-of-nvidia-chip-orders-reuters-exclusive/"
+        },
+        {
+          "text": "给大客户的前期报价约为8.5万元",
+          "status": "有出处",
+          "ref": "https://www.leiphone.com/category/chips/STx9ZzfDNh5W80Bm.html"
+        },
+        {
+          "text": "工信部要求部分企业上报采购计划并拟批准",
+          "status": "有出处",
+          "ref": "https://finance.yahoo.com/technology/articles/china-may-permit-alibaba-bytedance-173017962.html"
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "found_via": "人工转入"
+    },
     {
       "id": "leiphone-20261020-channel-quotes",
       "title": "雷峰网：大厂采购报价约8.5万元，部分渠道8.7万元",
@@ -214,6 +256,8 @@
     ],
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
-    "notes": []
+    "notes": [
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+    ]
   }
 }
