@@ -40,6 +40,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
+          # Queued runs start from the newest main, not the commit that triggered them.
+          ref: main
           fetch-depth: 0
       - name: Python
         uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
@@ -77,12 +79,7 @@ jobs:
         run: |
           git config user.name 'gaaiyun'
           git config user.email 'gaaiyun@users.noreply.github.com'
-          git add data/state.json data/history data/feed.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'chore(情报): 更新来源状态与每日预测复核'
-            # main may have moved while this run was queued; rebase rather than fail the day's publish.
-            git push origin HEAD:main || { git pull --rebase --autostash origin main && git push origin HEAD:main; }
-          fi
+          bash scripts/publish_data.sh 'chore(情报): 更新来源状态与每日预测复核' data/state.json data/history data/feed.json
       - name: Build website and report
         run: python scripts/build.py
       - name: Setup Pages
@@ -125,11 +122,7 @@ jobs:
         if: (github.event_name == 'schedule' || inputs.scheduled || inputs.notify) && !cancelled()
         run: |
           [ -f data/push_log.json ] || exit 0
-          git add data/push_log.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'chore(推送): 记录当日日报推送'
-            git push origin HEAD:main || { git pull --rebase --autostash origin main && git push origin HEAD:main; }
-          fi
+          bash scripts/publish_data.sh 'chore(推送): 记录当日日报推送' data/push_log.json
       - name: Fail visibly after publishing outage state
         if: steps.collect.outcome == 'failure'
         run: |
