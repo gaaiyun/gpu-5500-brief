@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-28T08:20:21+08:00",
+  "updated_at": "2026-10-28T08:25:28+08:00",
   "agent": "actions-sweep",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -20,6 +20,48 @@
     "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
   ],
   "items": [
+    {
+      "id": "news-20261021-70140c",
+      "title": "大厂抢购RTX PRO 5500，单张报价约8.5万元",
+      "published_at": "2026-10-21",
+      "publisher": "腾讯新闻",
+      "source_type": "公众号",
+      "url": "https://news.qq.com/rain/a/20261021A07X2300",
+      "grade": "C",
+      "summary": "腾讯新闻援引路透社报道，中国客户总订单超600万块；英伟达称2027年全球产量可能不超过300万块；大客户前期报价约8.5万元；工信部9月底要求部分企业上报采购计划并拟批准。",
+      "impact": "大客户报价8.5万元与已收录事件 cls 一致，但总订单量（600万）远超已收录事件 reuters 的 300 万，暗示需求远超预期，可能进一步推高渠道溢价或加剧配额争夺。",
+      "watch": "核实工信部批准采购的具体企业名单及数量。",
+      "corroboration": [],
+      "claims": [
+        {
+          "text": "中国客户总订单超过600万块",
+          "status": "推算",
+          "ref": ""
+        },
+        {
+          "text": "英伟达称2027年全球产量可能不超过300万块",
+          "status": "无出处",
+          "ref": ""
+        },
+        {
+          "text": "大客户前期报价约8.5万元",
+          "status": "有出处",
+          "ref": "https://www.cls.cn/detail/2500747"
+        },
+        {
+          "text": "工信部9月底要求部分企业上报采购计划",
+          "status": "有出处",
+          "ref": "https://finance.yahoo.com/technology/articles/china-may-permit-alibaba-bytedance-173017962.html"
+        },
+        {
+          "text": "最终可能只能满足所订数量的5%至10%",
+          "status": "无出处",
+          "ref": ""
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "found_via": "人工转入"
+    },
     {
       "id": "leiphone-20261020-channel-quotes",
       "title": "雷峰网：大厂采购报价约8.5万元，部分渠道8.7万元",
@@ -155,6 +197,16 @@
       "seen_at": "2026-10-27"
     },
     {
+      "title": "350亿美元GPU大单传出!三巨头争抢RTX PRO 5500,供货可能只有一小部分?",
+      "publisher": "GPU算力观察-聪哥",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=350%E4%BA%BF%E7%BE%8E%E5%85%83GPU%E5%A4%A7%E5%8D%95%E4%BC%A0%E5%87%BA%21%E4%B8%89%E5%B7%A8%E5%A4%B4%E4%BA%89%E6%8A%A2RTX%20PRO%205500%2C%E4%BE%9B%E8%B4%A7%E5%8F%AF%E8%83%BD%E5%8F%AA%E6%9C%89%E4%B8%80%E5%B0%8F%E9%83%A8%E5%88%86%3F",
+      "published_at": "2026-10-21",
+      "found_via": "搜狗微信",
+      "snippet": "RTX PRO 5500同样需要上游芯片制造、显存、板卡生产以及后续... 对客户来说,样卡、商业发货和批量到货之间仍有区别.样卡可以...",
+      "seen_at": "2026-10-28"
+    },
+    {
       "title": "字节阿里腾讯下单 350 亿美元英伟达卡,但拿不到货",
       "publisher": "AIFrontWatch",
       "source_type": "公众号",
@@ -193,28 +245,17 @@
       "found_via": "搜狗微信",
       "snippet": "腾讯订了300多万张英伟达RTX PRO 5500,中国客户加起来订了... 每个季度给5500留多少产能,直接卡住到货量.还有一层风险在钱...",
       "seen_at": "2026-10-27"
-    },
-    {
-      "title": "AI动态 10月21日:一成到货,八成锁死",
-      "publisher": "修身观天下",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=AI%E5%8A%A8%E6%80%81%2010%E6%9C%8821%E6%97%A5%3A%E4%B8%80%E6%88%90%E5%88%B0%E8%B4%A7%2C%E5%85%AB%E6%88%90%E9%94%81%E6%AD%BB",
-      "published_at": "2026-10-21",
-      "found_via": "搜狗微信",
-      "snippet": "RTX PRO 5500、总值超 350 亿美元,而 2027 年全球产量上限只有 300 万张、中国订单已超 600 万张,到货可能只有 5% 至 10%;...",
-      "seen_at": "2026-10-27"
     }
   ],
   "sweep": {
     "date": "2026-10-28",
-    "candidates": 0,
-    "read": 0,
-    "added": [],
+    "candidates": 1,
+    "read": 1,
+    "added": [
+      "news-20261021-70140c"
+    ],
     "corroborated": 0,
-    "model": null,
-    "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
-      "雷峰网 RSS 失败：HTTPSConnectionPool(host='www.leiphone.com', port=443): Read timed out. (read timeout=28)"
-    ]
+    "model": "@cf/zai-org/glm-4.7-flash",
+    "notes": []
   }
 }
