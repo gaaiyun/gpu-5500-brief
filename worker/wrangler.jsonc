@@ -5,5 +5,7 @@
   "compatibility_date": "2026-10-25",
   "workers_dev": true,
   "ai": {"binding":"AI"},
+  // 16:35 UTC = 00:35 Asia/Shanghai; dispatches the daily workflow (needs the GH_DISPATCH_TOKEN secret).
+  "triggers": {"crons": ["35 16 * * *"]},
   "observability": {"enabled":true}
 }
