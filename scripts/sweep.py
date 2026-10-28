@@ -139,7 +139,14 @@ def parse_rss(content, found_via):
 def gdelt():
     url = ("https://api.gdeltproject.org/api/v2/doc/doc?query=" + quote('"RTX PRO 5500"')
            + f"&mode=artlist&format=json&timespan={RECENT_DAYS}d&maxrecords=75&sort=datedesc")
-    body, _, _ = fetch(url)
+    try:
+        body, _, _ = fetch(url)
+    except requests.HTTPError as error:
+        # GDELT allows one request per 5 seconds per IP, and CI runners share IPs; one spaced retry.
+        if error.response is None or error.response.status_code != 429:
+            raise
+        time.sleep(8)
+        body, _, _ = fetch(url)
     return [{"url": row.get("url", ""), "title": row.get("title", ""), "published_at": to_date(row.get("seendate")),
              "snippet": "", "body": "", "found_via": "GDELT"} for row in json.loads(body).get("articles", [])]
 
@@ -382,6 +389,8 @@ def sweep(feed, evidence, today, endpoint=None, token=None):
         if row.get("error") or not row.get("published_at"):
             notes.append(f"读取失败 {row['url']}：{row.get('error') or '无发布日期'}")
             leads.append(lead(row, today))
+        elif row.get("inbox") and (today - date.fromisoformat(row["published_at"])).days > MAX_AGE_DAYS:
+            notes.append(f"inbox 链接已超过 {MAX_AGE_DAYS} 天，可从 inbox.txt 删除：{row['url']}")
         elif row.get("inbox") or date.fromisoformat(row["published_at"]) >= oldest:
             readable.append(row)
 
