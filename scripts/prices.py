@@ -281,13 +281,16 @@ def build_board(evidence, market, fx, listings, feed_items, today, previous, quo
     for listing in evidence.get("listings", []):
         state = states.get(listing["id"]) or {"price": listing["price"], "price_since": listing["price_seen_at"]}
         price, symbol = state["price"], SYMBOLS[listing["currency"]]
-        native = f"{symbol}{price:,.2f}（含当地增值税 {listing['vat_rate'] * 100:.0f}%）"
+        # B2B shops quote net prices; only retail prices carry local VAT that has to come off.
+        net = listing.get("ex_vat", False)
+        tax = "不含增值税" if net else f"含当地增值税 {listing['vat_rate'] * 100:.0f}%"
+        native = f"{symbol}{price:,.2f}（{tax}）"
         row = _row(listing["id"], listing["label"], "海外零售", listing["url"], state["price_since"], today, native, 0,
                    note=listing["note"], quote_key=f"{price}{listing['currency']}")
         # The first sighting of a listing is when tracking began, not a repricing.
         row.update(checked=(state.get("last_success_at") or "")[:10] or None, check_status=state.get("status", "ok"),
                    repriced=bool(state.get("previous_price")))
-        cny = price / (1 + listing["vat_rate"]) * rates[listing["currency"]] if rates else None
+        cny = price / (1 if net else 1 + listing["vat_rate"]) * rates[listing["currency"]] if rates else None
         rows.append(_converted(row, cny) if cny else dict(row, low=None, high=None, text=native))
 
     # Team quotes are the freshest mainland prices but unverified: listed and dated, kept out of the published range.

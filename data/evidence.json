@@ -212,15 +212,15 @@
   "listings": [
     {
       "id": "fr_pny_pb",
-      "label": "法国零售 PNY 84GB",
+      "label": "法国零售 PNY 盒装版",
       "region": "法国",
-      "url": "https://www.comparateur-gamer.fr/prix/pny-nvidia-rtx-pro-5500-blackwell-workstation-84gb-3536403410865",
+      "url": "https://www.ldlc.com/en/product/PB00754753.html",
       "currency": "EUR",
       "vat_rate": 0.2,
       "price": 16469.95,
       "price_seen_at": "2026-09-30",
       "sku": "VCNRTXPRO5500-PB",
-      "note": "比价站收录的 Materiel.net 零售价，去掉法国 20% 增值税后折算，未含关税运费"
+      "note": "LDLC 零售价（盒装版，页面写 15 天以上到货；9 月 30 日起 Materiel.net 同价），去掉法国 20% 增值税后折算，未含关税运费"
     },
     {
       "id": "uk_gbics_sb",
@@ -245,6 +245,19 @@
       "price_seen_at": "2026-10-29",
       "sku": "VCNRTXPRO5500-SB",
       "note": "LDLC 零售价（OEM 版），去掉法国 20% 增值税后折算，未含关税运费"
+    },
+    {
+      "id": "de_lieske_sb",
+      "label": "德国 B2B OEM 版",
+      "region": "德国",
+      "url": "https://industry-electronics.com/pny/vcnrtxpro5500-sb-nvidia-rtx-pro-5500-blackwell-84gb-workstation-edition-oem-version-lieske_2141333.htm",
+      "currency": "EUR",
+      "vat_rate": 0.19,
+      "ex_vat": true,
+      "price": 13894.0,
+      "price_seen_at": "2026-10-30",
+      "sku": "VCNRTXPRO5500-SB",
+      "note": "企业采购网店，页面写缺货、已向上游订货、约 20 个工作日发货；按净价折算，未含关税运费"
     }
   ]
 }

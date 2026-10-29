@@ -122,6 +122,16 @@ class BoardTests(unittest.TestCase):
         row = next(r for r in self.board()["rows"] if r["id"] == "fr_materiel")
         self.assertEqual(row["cny"], round(16469.95 / 1.2 * 7.4570))
 
+    def test_b2b_net_price_converted_without_removing_vat(self):
+        ev = evidence()
+        ev["listings"].append({"id": "de_b2b", "label": "德国 B2B", "url": "https://industry-electronics.com/x", "currency": "EUR",
+                               "vat_rate": 0.19, "ex_vat": True, "price": 13894.0, "price_seen_at": "2026-10-30", "note": "B2B"})
+        board = prices.build_board(ev, None, fx(), listing() + [{"id": "de_b2b", "status": "ok", "price": 13894.0,
+                                                                  "price_since": "2026-10-30"}], [], date(2026, 10, 30), None)
+        row = next(r for r in board["rows"] if r["id"] == "de_b2b")
+        self.assertEqual(row["cny"], round(13894.0 * 7.4570))
+        self.assertIn("不含增值税", row["native"])
+
     def test_domestic_range_ignores_converted_prices(self):
         domestic = self.board()["domestic"]
         self.assertEqual((domestic["low"], domestic["high"], domestic["count"]), (85000, 95000, 2))

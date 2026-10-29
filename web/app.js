@@ -57,7 +57,7 @@ function renderEvidence(){
   const changes=Object.fromEntries(board.changes.map(c=>[c.id,c]));
   const rows=board.rows.map(r=>{
     const c=changes[r.id],flag=c?` <span class="badge amber">${c.kind==='新报价'?'今日新报价':`汇率 ${c.delta>0?'+':''}${number(c.delta)}`}</span>`:'';
-    const when=r.kind==='海外零售'?`${r.date} 起此价未变${r.check_status==='ok'&&r.checked?` · ${r.checked.slice(5)} 核对`:' · 本轮未读到页面'}`:`${r.date} · ${r.age_days} 天前`;
+    const when=r.kind==='海外零售'?`${r.date} 起此价未变${r.check_status==='ok'&&r.checked?` · ${r.checked.slice(5)} 核对`:` · 本轮未读到页面${r.checked?`，最后核对 ${r.checked.slice(5)}`:''}`}`:`${r.date} · ${r.age_days} 天前`;
     const amount=r.low?esc(r.text):esc(r.native);
     const note=[r.converted?r.native:'',r.note].filter(Boolean).join('；');
     return `<tr><td><a class="link" href="${url(r.url)}" target="_blank" rel="noopener">${esc(r.label)} ↗</a>${flag}<small class="evidence-date">${esc(when)}</small></td><td>${amount}</td><td>${esc(r.kind)}</td><td>${esc(note)}</td></tr>`;

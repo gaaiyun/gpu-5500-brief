@@ -59,6 +59,14 @@ def get_text(url):
     return fetch(url)[0].decode("utf-8", errors="replace")
 
 
+def get_text_twice(url):
+    """Shop pages drop the odd connection from CI runners; one retry turns most of those into a reading."""
+    try:
+        return get_text(url)
+    except requests.RequestException:
+        return get_text(url)
+
+
 def html_text(content):
     soup = BeautifulSoup(content.decode("utf-8", errors="replace"), "html.parser")
     for node in soup(["script", "style", "nav", "header", "footer"]):
@@ -257,7 +265,7 @@ def run(offline=False):
     with ThreadPoolExecutor(max_workers=4) as pool:
         fx_job = pool.submit(fetch_fx, get_json, previous.get("fx"), checked_at)
         fx_history_job = pool.submit(fetch_fx_history, datetime.fromisoformat(checked_at).date())
-        listings = list(pool.map(lambda x: check_listing(x, prev_listings.get(x["id"]), get_text, checked_at), evidence.get("listings", [])))
+        listings = list(pool.map(lambda x: check_listing(x, prev_listings.get(x["id"]), get_text_twice, checked_at), evidence.get("listings", [])))
         checks = list(pool.map(lambda s: check_source(s, prev_checks.get(s["id"]), checked_at), evidence["sources"]))
         feeds = list(pool.map(lambda item: collect_feed(item, checked_at), [
             ("cn", '"RTX PRO 5500" when:21d'),

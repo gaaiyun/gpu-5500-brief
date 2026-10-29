@@ -261,7 +261,9 @@ def render(evidence, state, output):
             age = "当日" if r["age_days"] == 0 else f"{r['age_days']} 天前"
             when = f"{r['date']}（{age}）"
             if r["kind"] == "海外零售":
-                when = f"{r['date']} 起此价未变，" + (f"{r['checked'][5:]} 核对" if r.get("check_status") == "ok" and r.get("checked") else "本轮未读到页面")
+                ok, last = r.get("check_status") == "ok", r.get("checked")
+                when = f"{r['date']} 起此价未变，" + (f"{last[5:]} 核对" if ok and last else
+                                                    f"本轮未读到页面，最后核对 {last[5:]}" if last else "本轮未读到页面")
             meta = " · ".join(x for x in (when, r["kind"], r["native"] if r["converted"] or not r["low"] else "", r["note"]) if x)
             change = board_changes.get(r["id"])
             flag = ("今日新报价" if change["kind"] == "新报价" else f"汇率 {change['delta']:+,}") if change else ""
