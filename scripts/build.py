@@ -117,10 +117,12 @@ def build():
             src = next(s for s in evidence["sources"] if s["id"] == p["source_id"])
             amount = p.get("value_cny", p.get("value_usd", f"{p.get('low_cny', '')}-{p.get('high_cny', '')}"))
             writer.writerow([p["id"],p["observed_at"],amount,"USD" if "value_usd" in p else "CNY",p["type"],src["url"],src["limitations"]])
-        channel = state.get("channel")
-        if channel:
-            for field,label in [("ask","平台卖方均价"),("bid","平台买方均价"),("mid","平台中间值")]:
-                writer.writerow(["channel_"+field,channel["latest"]["date"],channel["latest"][field],"CNY",label,channel["source_url"],"平台参考口径；原始计算方法未公开"])
+        for r in (state.get("price_board") or {}).get("rows", []):
+            if r["id"] == "channel_min_ask" or r["kind"] == "海外零售" or r["id"].startswith("feed:"):
+                writer.writerow([r["id"], r["date"], r["native"], "原币", r["kind"], r["url"], r["note"]])
+            if r["converted"]:
+                writer.writerow([r["id"] + "_cny_vat", state["price_board"]["fx"]["date"], r["cny_vat"], "CNY",
+                                 "按当日汇率折算并加 13% 增值税，不是新报价", r["url"], r["note"]])
     if state.get("channel"):
         with (DIST / "channel-series.csv").open("w",encoding="utf-8-sig",newline="") as stream:
             writer=csv.DictWriter(stream,fieldnames=["date","ask","bid","mid","high","low","activity"])

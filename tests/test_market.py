@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
-from market import parse_channel, daily_brief
+from market import parse_channel, daily_brief, channel_template
 
 
 def payload():
@@ -47,6 +47,14 @@ class MarketTests(unittest.TestCase):
         result=daily_brief({"forecast":{"anchor_cny":95000}},market,previous)
         self.assertEqual(result["channel_changes"][0]["field"],"ask")
         self.assertNotIn("verified_price",result)
+
+    def test_formula_curve_reports_only_real_quote_changes(self):
+        market=parse_channel(payload(),"2026-10-25T20:00:00+08:00")
+        market["template"]=channel_template(market,None)
+        self.assertTrue(market["template"]["formula"])
+        previous=dict(market,min_ask=88000,latest=dict(market["latest"],ask=90000))
+        result=daily_brief({"forecast":{"anchor_cny":95000}},market,previous)
+        self.assertEqual([c["field"] for c in result["channel_changes"]],["min_ask"])
 
     def test_failure_keeps_original_collection_time(self):
         import update

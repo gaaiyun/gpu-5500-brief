@@ -52,21 +52,25 @@ function setupChart(){
   }));
 }
 function renderEvidence(){
-  const source=Object.fromEntries(evidence.sources.map(s=>[s.id,s]));
-  const p=market.latest;
-  const channelRows=[
-    {label:'宽泛采销 · 卖均',amount:yuan(p.ask),date:p.date,type:'平台参考',note:'公开接口日点；短交期另询'},
-    {label:'宽泛采销 · 买均',amount:yuan(p.bid),date:p.date,type:'平台参考',note:'平台求购均价'},
-    {label:'宽泛采销 · 最低挂价',amount:yuan(market.min_ask),date:market.quote_date||'未标明',type:market.condition||'未标明',note:`交期 ${market.delivery||'未标明'}；需确认能否继续锁定`}
-  ];
-  const rows=channelRows.map(p=>`<tr><td><a class="link" href="${url(market.source_url)}" target="_blank" rel="noopener">${esc(p.label)} ↗</a><small class="evidence-date">${esc(p.date)}</small></td><td>${p.amount}</td><td>${esc(p.type)}</td><td>${esc(p.note)}</td></tr>`);
-  const names={smm:'SMM',cls:'财联社',reuters:'Reuters',trendforce:'TrendForce'};
-  evidence.prices.forEach(p=>{
-    const amount=p.value_usd?`$${number(p.value_usd)}`:p.value_cny?yuan(p.value_cny):p.high_cny?`${number(p.low_cny)}—${number(p.high_cny)}`:`> ${number(p.low_cny)}`;
-    rows.push(`<tr><td><a class="link" href="${url(source[p.source_id].url)}" target="_blank" rel="noopener">${esc(names[p.source_id])} ↗</a><small class="evidence-date">${esc(p.observed_at)}</small></td><td>${amount}</td><td>${esc(p.type.replace('（媒体转述）',''))}</td><td>${esc(p.use)}</td></tr>`);
+  const board=state.price_board,fx=board?.fx||{};
+  if(!board){$('evidence-rows').innerHTML='<tr><td colspan="4">价格证据表在下一轮采集后生成。</td></tr>';return;}
+  const changes=Object.fromEntries(board.changes.map(c=>[c.id,c]));
+  const rows=board.rows.map(r=>{
+    const c=changes[r.id],flag=c?` <span class="badge amber">${c.kind==='新报价'?'今日新报价':`汇率 ${c.delta>0?'+':''}${number(c.delta)}`}</span>`:'';
+    const when=r.kind==='海外零售'?`${r.date} 起此价未变${r.check_status==='ok'&&r.checked?` · ${r.checked.slice(5)} 核对`:' · 本轮未读到页面'}`:`${r.date} · ${r.age_days} 天前`;
+    const amount=r.low?esc(r.text):esc(r.native);
+    const note=[r.converted?r.native:'',r.note].filter(Boolean).join('；');
+    return `<tr><td><a class="link" href="${url(r.url)}" target="_blank" rel="noopener">${esc(r.label)} ↗</a>${flag}<small class="evidence-date">${esc(when)}</small></td><td>${amount}</td><td>${esc(r.kind)}</td><td>${esc(note)}</td></tr>`;
   });
   $('evidence-rows').innerHTML=rows.join('');
-  $('watch-rows').innerHTML=market.watchlist.map(p=>`<tr><td>${esc(p.model)}<small>${esc(p.latest.date)}</small></td><td>${yuan(p.latest.ask)}</td><td class="${changeClass(p.stats.day_pct)}">${pct(p.stats.day_pct)}</td></tr>`).join('');
+  $('fx-note').textContent=fx.rates?`每条报价按原始日期列出 · 海外价格按${fx.label} ${fx.date}${fx.status==='carried'?'（沿用）':''}折算，不是新报价`:'每条报价按原始日期列出 · 本轮未取得汇率，海外价格只列原币';
+  $('today-change').textContent=`今日变化：${board.summary}`;
+  const byId=Object.fromEntries(board.rows.map(r=>[r.id,r]));
+  const dom=board.domestic,usd=byId.reuters_usd,retail=board.rows.find(r=>r.kind==='海外零售'&&r.cny_vat);
+  if(dom){$('kpi-domestic').textContent=`${dom.low/10000}—${dom.high/10000} 万`;$('kpi-domestic-sub').textContent=`${dom.count} 条来源 · 最新 ${dom.latest_date.slice(5)} ${dom.latest_label}`;}
+  if(usd?.cny_vat){$('kpi-usd').textContent=yuan(usd.cny_vat);const move=changes.reuters_usd?.delta;$('kpi-usd-sub').textContent=`${usd.native} × ${fx.rates.USD}${move?` · 日 ${move>0?'+':''}${number(move)}`:''}`;}
+  if(retail){$('kpi-retail').textContent=yuan(retail.cny_vat);$('kpi-retail-sub').textContent=`${retail.native.split('（')[0]} · ${retail.label}`;}
+  $('watch-rows').innerHTML=market.watchlist.map(p=>`<tr><td>${esc(p.model)}</td><td>${p.min_ask?yuan(p.min_ask):'—'}</td><td>${esc(p.quote_date||'未标明')}</td></tr>`).join('');
 }
 function renderIntelligence(){
   const intel=state.intelligence;
@@ -103,9 +107,8 @@ async function load(){
   $('update-time').textContent=`本轮更新 ${time(state.checked_at)}`;
   const stale=(Date.now()-new Date(state.checked_at))/3600000>36;
   $('run-state').textContent=stale?'更新超过36小时，请检查运行记录':`下次计划 00:35 · 渠道 ${state.channel_status==='ok'?'采集成功':'沿用上次记录'}`;
-  $('ask-price').textContent=yuan(p.ask);$('bid-price').textContent=yuan(p.bid);
-  $('ask-change').textContent=`中间值日变动 ${pct(stats.day_pct)}`;$('ask-change').className=changeClass(stats.day_pct);
-  $('spread-price').textContent=yuan(stats.spread);$('spread-percent').textContent=`${stats.spread_pct.toFixed(2)}% · 非利润率`;
+  const template=market.template||{};
+  if(template.synthetic){$('template-badge').textContent='模板存档 · 不计涨跌';$('template-warning').hidden=false;$('template-warning').textContent=`这条曲线${template.reasons.join('，')}。它的日涨跌不代表行情，只保留作存档。`;}
   $('min-ask').textContent=yuan(market.min_ask);$('max-bid').textContent=yuan(market.max_bid);$('activity').textContent=`${number(p.activity)} 张`;
   $('range-prices').textContent=`${(stats.period_high/10000).toFixed(2)} / ${(stats.period_low/10000).toFixed(2)} 万`;
   $('min-ask-terms').textContent=market.delivery||'交期未标明';
@@ -122,8 +125,8 @@ async function load(){
   if(!r.numeric_forecast_active){document.querySelector('.brief-bottom b').textContent='原预测已到期';}
   if(r.reasons.length){$('forecast-warning').hidden=false;$('forecast-warning').textContent=r.reasons.join('；');}
   $('scenario-rows').innerHTML=[...f.scenarios].sort((a,b)=>(a.id==='base'?-1:b.id==='base'?1:0)).map(x=>`<div class="scenario-row ${esc(x.id)}"><span>${esc(x.name.replace(' / ',' · '))}</span><strong>${x.low/10000}—${x.high/10000} 万</strong><p>${esc(x.trigger)}</p></div>`).join('');
-  const gap=f.anchor_cny-p.ask;
-  $('forecast-basis').textContent=`平台卖均${yuan(p.ask)}与SMM预售锚点${yuan(f.anchor_cny)}相差${gap<0?'-':''}${yuan(Math.abs(gap))}。区间为价格敏感性情景，未赋概率。新的独立报盘、官方定价或实际发货触发重估。`;
+  const dom=state.price_board?.domestic;
+  $('forecast-basis').textContent=`${dom?`已披露的大陆报价在${yuan(dom.low)}至${yuan(dom.high)}之间，`:''}SMM预售锚点${yuan(f.anchor_cny)}。区间为价格敏感性情景，未赋概率。新的独立报盘、官方定价或实际发货触发重估。`;
   setupChart();renderEvidence();renderIntelligence();renderSources();
 }
 load().catch(error=>{$('load-error').hidden=false;$('load-error').textContent=error.message;$('run-state').textContent='数据加载失败 · 可打开研究报告';});

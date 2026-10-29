@@ -57,8 +57,10 @@ git checkout origin/main -- data/feed.json
  "publisher": "≤60字", "source_type": "官方|公告|主流媒体|行业媒体|研究机构|公众号|社媒|电商/渠道",
  "url": "https://原始出处", "grade": "A|B|C", "summary": "≤260字", "impact": "≤140字", "watch": "≤60字",
  "corroboration": ["https://..."], "claims": [{"text": "≤80字", "status": "有出处|推算|无出处|与出处不符", "ref": "https://..."}],
- "checked_at": "YYYY-MM-DD"}
+ "price_cny": 92000, "checked_at": "YYYY-MM-DD"}
 ```
+
+`price_cny` 可省略。只有原文写明 RTX PRO 5500 在中国的单卡人民币价格时才填：单个价格填数字，区间填 `[低, 高]`，单位是元（9.2万元写 92000）。美元价、订单总额、别的型号的价格、引用旧报道的价格都不填。A/B 级条目的这个数字会进日报的价格证据表。
 
 保留发布日期在 45 天以内的条目，总数不超过 12 条，新的在前。文本里不要出现 HTML 标签。
 

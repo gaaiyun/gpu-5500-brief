@@ -68,6 +68,10 @@ class EvidenceTests(unittest.TestCase):
         # Self-media reposts are not listed even as reprints.
         self.assertEqual(rows[0]["reprints"], ["证券时报"])
 
+    def test_changes_compare_against_previous_day(self):
+        self.assertEqual(update.previous_day_state(date(2026, 10, 26))["date"], "2026-10-25")
+        self.assertEqual(update.previous_day_state(date(2026, 10, 1)), {})
+
     def test_unknown_or_future_dates_rejected(self):
         xml = b'<rss><channel><item><title>RTX PRO 5500</title><link>https://example.com</link><pubDate>Sun, 25 Oct 2036 01:00:00 GMT</pubDate></item></channel></rss>'
         self.assertEqual(update.parse_feed(xml, "test", "2026-10-25T20:00:00+08:00"), [])

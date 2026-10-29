@@ -78,7 +78,9 @@
       "tax": "未披露",
       "quantity": "未披露",
       "delivery": "未披露",
-      "use": "历史预售锚点，非今日成交价"
+      "use": "历史预售锚点，非今日成交价",
+      "board": "SMM 供应商预售",
+      "board_note": "媒体转述，未披露供应商、税费和交期"
     },
     {
       "id": "smm_estimate",
@@ -95,7 +97,9 @@
       "observed_at": "2026-10-09",
       "value_cny": 85000,
       "type": "受访者估价",
-      "use": "早期参考，非实际买盘"
+      "use": "早期参考，非实际买盘",
+      "board": "财联社受访者估价",
+      "board_note": "另有受访者判断超过 10 万元"
     },
     {
       "id": "cls_high",
@@ -112,7 +116,9 @@
       "low_cny": 85000,
       "high_cny": 90000,
       "type": "媒体报道售价区间（The Information，经 TrendForce 转述）",
-      "use": "大媒体口径的大陆价格区间；税费、数量与交期未披露"
+      "use": "大媒体口径的大陆价格区间；税费、数量与交期未披露",
+      "board": "The Information 售价",
+      "board_note": "经 TrendForce 转述，未披露税费和数量"
     },
     {
       "id": "reuters_usd",
@@ -120,7 +126,8 @@
       "observed_at": "2026-10-20",
       "value_usd": 11400,
       "type": "匿名信源所述订单价格",
-      "use": "美元独立口径；未披露税费及交付条款，不直接兑换作大陆批发价"
+      "use": "美元独立口径；未披露税费及交付条款，不直接兑换作大陆批发价",
+      "board": "路透订单价"
     }
   ],
   "forecast": {
@@ -159,5 +166,31 @@
         "invalidator": "仅有大额意向单与媒体标题，没有卖方履行及买方接受证据。"
       }
     ]
-  }
+  },
+  "listings": [
+    {
+      "id": "fr_pny_pb",
+      "label": "法国零售 PNY 84GB",
+      "region": "法国",
+      "url": "https://www.comparateur-gamer.fr/prix/pny-nvidia-rtx-pro-5500-blackwell-workstation-84gb-3536403410865",
+      "currency": "EUR",
+      "vat_rate": 0.2,
+      "price": 16469.95,
+      "price_seen_at": "2026-09-30",
+      "sku": "VCNRTXPRO5500-PB",
+      "note": "比价站收录的 Materiel.net 零售价，去掉法国 20% 增值税后折算，未含关税运费"
+    },
+    {
+      "id": "uk_gbics_sb",
+      "label": "英国零售 OEM 版",
+      "region": "英国",
+      "url": "https://www.gbics.com/vcnrtxpro5500-sb-nvidia-rtx-pro-5500-blackwell-workstation-edition-oem-version/",
+      "currency": "GBP",
+      "vat_rate": 0.2,
+      "price": 12810,
+      "price_seen_at": "2026-10-29",
+      "sku": "VCNRTXPRO5500-SB",
+      "note": "预订配货价，页面描述写 78GB 与 84GB 不符；去掉英国 20% 增值税后折算"
+    }
+  ]
 }

@@ -82,7 +82,7 @@ def parse_channel(payload, checked_at):
         if candidate:
             try:
                 product = normalize_product(candidate)
-                watchlist.append({k:product[k] for k in ["name","model","unit","latest","stats","quote_date"]})
+                watchlist.append({k:product[k] for k in ["name","model","unit","latest","stats","quote_date","min_ask"]})
             except (ValueError,KeyError,TypeError):
                 continue
     target["watchlist"] = watchlist
@@ -96,21 +96,67 @@ def parse_channel(payload, checked_at):
     return target
 
 
-def daily_brief(evidence, market, previous):
-    if not market:
-        return {"items":[{"title":"渠道数据", "text":"本轮未取得有效渠道记录，保留公开报道中的预售锚点。"}], "channel_changes":[]}
-    p, stats = market["latest"],market["stats"]
+def series_values(market):
+    return [[r[k] for k in ("mid","ask","bid","high","low","activity")] for r in market["series"]]
+
+
+def channel_template(market, previous):
+    """Flag a curve that is a formula or yesterday's numbers under shifted dates; such a curve carries no daily move."""
+    stats = market["stats"]
+    formula = stats["point_count"] >= 7 and stats["fixed_offset_points"] == stats["point_count"]
+    same_values = bool(previous and previous.get("series")) and series_values(previous) == series_values(market)
+    if same_values and previous["latest"]["date"] == market["latest"]["date"]:
+        # A rerun on the same day sees identical dates; keep what the first run of the day found.
+        redated = (previous.get("template") or {}).get("redated", False)
+    else:
+        redated = same_values
+    reasons = []
+    if redated:
+        reasons.append(f"{stats['point_count']} 个日点与上次采集逐点相同，只是日期顺延")
+    if formula:
+        reasons.append("卖均、买均恰为中间值×1.015、×0.985")
+    if stats.get("activity_cycle"):
+        reasons.append("挂牌活跃度按固定步长循环")
+    return {"synthetic": redated or formula, "redated": redated, "formula": formula, "reasons": reasons}
+
+
+def daily_brief(evidence, market, previous, board=None):
     anchor = evidence["forecast"]["anchor_cny"]
-    gap = anchor-p["ask"]
-    items = [
-        {"title":"报价位置", "text":f"平台卖均 {p['ask']:,} 元；SMM 历史预售锚点 {anchor:,} 元，高出 {gap:,} 元（{gap/p['ask']*100:.2f}%）。"},
-        {"title":"平台变化", "text":f"中间值较上日 {stats['day_change']:+,} 元（{stats['day_pct']:+.2f}%），较七日前 {stats['week_pct']:+.2f}%。"},
-        {"title":"交期差异", "text":f"最低挂价 {market['min_ask']:,} 元对应交期 {market['delivery']}，原报价 {market['quote_date'] or '未标明'}。"},
-        {"title":"下一步核实", "text":f"取得短交期货源的当日报价与含税口径，与 {anchor:,} 元预售锚点对照；平台均价只作参考。"}]
-    old = (previous or {}).get("latest", {})
+    items = []
+    domestic = (board or {}).get("domestic")
+    if domestic:
+        items.append({"title":"大陆报价", "text":f"已披露的大陆单卡报价在 {domestic['low']:,}-{domestic['high']:,} 元之间（{domestic['count']} 条来源），"
+                                              f"最新一条是 {domestic['latest_label']}（{domestic['latest_date']}）。"})
+    rows = {r["id"]: r for r in (board or {}).get("rows", [])}
+    usd = rows.get("reuters_usd")
+    if usd and usd["cny"]:
+        fx = board["fx"]
+        items.append({"title":"折算对照", "text":f"路透所述订单价 {usd['native']}，按{fx['label']} {fx['rates']['USD']}（{fx['date']}）折合 {usd['cny']:,} 元，"
+                                              f"加 13% 增值税约 {usd['cny_vat']:,} 元。汇率变了这个数才变，不是新报价。"})
+    if board:
+        items.append({"title":"今日变化", "text":board["summary"]})
+    if not market:
+        items.append({"title":"渠道数据", "text":"本轮未取得有效渠道记录，保留公开报道中的预售锚点。"})
+        return {"items":items, "channel_changes":[]}
+    p, stats = market["latest"], market["stats"]
+    template = market.get("template") or {}
+    channel = f"最低挂价 {market['min_ask']:,} 元为{market['condition']}，交期 {market['delivery']}，原报价 {market['quote_date'] or '未标明'}。"
+    if template.get("synthetic"):
+        channel += "平台 14 日曲线" + "，".join(template["reasons"]) + "，不计入涨跌。"
+    else:
+        channel += f"平台中间值较上日 {stats['day_change']:+,} 元（{stats['day_pct']:+.2f}%），较七日前 {stats['week_pct']:+.2f}%。"
+    items.append({"title":"渠道挂价", "text":channel})
+    items.append({"title":"下一步核实", "text":f"取得短交期货源的当日报价与含税口径，与 {anchor:,} 元预售锚点对照。"})
+    old = previous or {}
     changes = []
-    for key,label in [("ask","卖方均价"),("bid","买方均价"),("mid","中间值"),("activity","挂牌活跃度")]:
-        if key in old and old[key] != p[key]:
-            changes.append({"field":key,"label":label,"before":old[key],"after":p[key],"delta":p[key]-old[key]})
-    return {"items":items,"channel_changes":changes,"reference_band":[p["bid"],p["ask"]],
-            "anchor_gap_cny":gap,"anchor_gap_pct":gap/p["ask"]*100}
+    fields = [("min_ask","最低挂价"),("quote_date","原报价日期"),("delivery","交期")]
+    if not template.get("synthetic"):
+        fields += [("ask","卖方均价"),("bid","买方均价"),("mid","中间值"),("activity","挂牌活跃度")]
+    for key,label in fields:
+        before, after = (old.get(key), market.get(key)) if key in ("min_ask","quote_date","delivery") else (old.get("latest", {}).get(key), p[key])
+        if before is not None and before != after:
+            change = {"field":key,"label":label,"before":before,"after":after}
+            if isinstance(after, (int, float)):
+                change["delta"] = after - before
+            changes.append(change)
+    return {"items":items, "channel_changes":changes}

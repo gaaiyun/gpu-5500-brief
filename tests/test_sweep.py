@@ -65,6 +65,11 @@ class DraftCheckTests(unittest.TestCase):
         self.assertEqual(item["grade"],"B")
         self.assertTrue(item["id"].startswith("ithome-20261026-"))
 
+    def test_card_price_kept_only_when_printed_in_article(self):
+        self.assertEqual(sweep.build_item(draft(price_cny=87000),candidate(),EVENTS,TODAY)["price_cny"],[87000,87000])
+        self.assertNotIn("price_cny",sweep.build_item(draft(price_cny=92000),candidate(),EVENTS,TODAY))
+        self.assertNotIn("price_cny",sweep.build_item(draft(price_cny=3000000),candidate(),EVENTS,TODAY))
+
     def test_number_missing_from_article_rejected(self):
         with self.assertRaises(ValueError):sweep.build_item(draft(summary="渠道报价约9.2万元。"),candidate(),EVENTS,TODAY)
         with self.assertRaises(ValueError):sweep.build_item(draft(impact="可能涨到12万元。"),candidate(),EVENTS,TODAY)

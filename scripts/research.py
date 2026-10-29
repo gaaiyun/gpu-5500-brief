@@ -8,43 +8,47 @@ def report_markdown(e, state):
     if not market:
         raise ValueError('价格研究报告需要有效渠道快照；请先完成采集')
     p=market['latest'];stats=market['stats'];review=state['forecast_review']
-    gap=e['forecast']['anchor_cny']-p['ask']
+    board=state.get('price_board') or {'rows':[],'summary':'','domestic':None,'fx':{}}
+    dom=board['domestic'];fx=board.get('fx') or {}
     expiry='原预测已到期，下列区间保留作历史回顾。' if not review['numeric_forecast_active'] else '基准判断维持，出现新官方价格或可执行报盘后重估。'
     low=market['min_ask'];quote_date=market.get('quote_date') or '未标明';delivery=market.get('delivery') or '未标明'
     low_note=(f"{low:,} 元的原始条目为{market.get('condition') or '未标明货况'}，交期{delivery}，原报价日期 {quote_date}。"
               f"平台监测日期 {p['date']} 不能替代这条原始报价日期；这笔低价能否继续锁定、何时付款需另行确认。")
-    cycle='，挂牌活跃度也呈固定步长循环' if stats.get('activity_cycle') else ''
-    pattern=(f"平台 {stats['fixed_offset_points']}/{stats['point_count']} 个日点近似满足“卖均=中间值×1.015、买均=中间值×0.985”{cycle}。"
-             "因此，本报告把它用于报价对照和线索跟踪，预测判断主要看独立报盘及实际交付变化。")
+    template=market.get('template') or {}
+    redated=f"{stats['point_count']} 个日点与上次采集逐点相同、只是日期顺延；" if template.get('redated') else ''
+    cycle='，挂牌活跃度按固定步长循环' if stats.get('activity_cycle') else ''
+    pattern=(f"平台 14 日曲线{redated}{stats['fixed_offset_points']}/{stats['point_count']} 个日点近似满足“卖均=中间值×1.015、买均=中间值×0.985”{cycle}。"
+             + ("曲线的日涨跌因此不计入行情，" if template.get('synthetic') else "曲线只作参考，") + "本报告采用平台上带原报价日期的最低挂价。")
+    # The channel row is drawn from the snapshot itself so its terms always match the paragraph below.
+    price_rows="\n".join([f"| 宽泛采销最低挂价 | {low:,} | {quote_date} | 渠道挂牌；{market.get('condition') or delivery} |"]+
+                         [f"| {r['label']} | {r['text'] if r['low'] else r['native']} | {r['date']} | {r['kind']}；{r['native'] + '，' if r['converted'] else ''}{r['note']} |"
+                          for r in board['rows'] if r['id']!='channel_min_ask'])
+    fx_note=f"海外价格按{fx['label']}（{fx['date']}）折算，“含税”指加 13% 增值税，未含关税和运费；汇率变动带来的数字变化不是新报价。" if fx.get('rates') else '本轮未取得汇率，海外价格只列原币。'
     official=next((c for c in state['checks'] if c['source_id']=='nvidia'),{})
     if official.get('status')!='ok':official_text='NVIDIA 产品页本轮未采集成功，上市状态沿用上次记录待复核'
     elif official.get('signals',{}).get('coming_soon'):official_text=f"NVIDIA 产品页 {state['date']} 仍显示 Coming Soon"
     else:official_text='NVIDIA 产品页的 Coming Soon 标记已变化，需人工确认是否开售'
     base=next(s for s in e['forecast']['scenarios'] if s['id']=='base')
-    inside=base['low']<=p['ask']<=base['high']
-    base_note=(f"{base['low']/10000:g}万-{base['high']/10000:g}万元的基准覆盖当前平台卖均和SMM预售锚点。" if inside
-               else f"当前平台卖均 {p['ask']:,} 元已落在 {base['low']/10000:g}万-{base['high']/10000:g}万元基准区间之外，需复核基准情景。")
+    inside=bool(dom) and dom['low']<base['high'] and dom['high']>=base['low']
+    base_note=(f"{base['low']/10000:g}万-{base['high']/10000:g}万元的基准与已披露的大陆报价区间重叠。" if inside
+               else f"已披露的大陆报价已不在 {base['low']/10000:g}万-{base['high']/10000:g}万元基准区间内，需复核基准情景。")
+    position=(f"已披露的大陆单卡报价在 {dom['low']:,}-{dom['high']:,} 元之间（{dom['count']} 条来源，最新为 {dom['latest_label']} {dom['latest_date']}）。"
+              if dom else '本轮没有可用的大陆报价。')
     return f"""# RTX PRO 5500：大陆价格判断
 
 {state['date']}｜渠道数据截至 {p['date']}｜人民币 / 张
 
 ## 报价判断
 
-未来 30-60 天预售报价的基准情景维持 **90,000-100,000 元**，95,000 元为当前可引用的大陆预售锚点。大媒体口径（The Information，经 TrendForce 转述）为 85,000-90,000 元，平台卖均 {p['ask']:,} 元{'落在两者之间' if 90000<=p['ask']<=95000 else '在两者之外，需复核报价位置'}。决定成交价的关键是交期、税票及可交付数量。{expiry}
+未来 30-60 天预售报价的基准情景维持 **90,000-100,000 元**，95,000 元为当前可引用的大陆预售锚点。{position}决定成交价的关键是交期、税票及可交付数量。{expiry}
 
 ## 价格依据
 
-| 价格层次 | 金额 | 日期 | 依据 |
+| 来源 | 金额（元/张） | 原始日期 | 口径 |
 | --- | --- | --- | --- |
-| 平台卖方均价 | {p['ask']:,} | {p['date']} | 宽泛采销日序列 |
-| 平台买方均价 | {p['bid']:,} | {p['date']} | 宽泛采销日序列 |
-| 平台最低挂价 | {low:,} | {quote_date} | {market.get('condition') or delivery} |
-| 大陆供应商预售 | 95,000 | 2026-10-13 | SMM 采访报道 |
-| 大媒体售价区间 | 85,000-90,000 | 2026-10-21 | The Information，经 TrendForce 转述 |
-| 较早受访者估价 | 约85,000 | 2026-10-09 | 财联社采访 |
-| 美元订单参考 | USD 11,400 | 2026-10-20 | 路透独家，匿名信源 |
+{price_rows}
 
-渠道买卖差 {stats['spread']:,} 元，约为中间值的 {stats['spread_pct']:.2f}%。SMM 预售锚点比平台卖均高 {gap:,} 元，算术差为 {gap/p['ask']*100:.2f}%。平台中间值日变动 {stats['day_pct']:+.2f}%，较七日前 {stats['week_pct']:+.2f}%。{link('qudao','渠道原始接口')}；{link('smm','SMM 原文')}；{link('trendforce','TrendForce')}；{link('cls','财联社采访')}。
+今日变化：{board['summary']}{fx_note}{link('qudao','渠道原始接口')}；{link('smm','SMM 原文')}；{link('trendforce','TrendForce')}；{link('cls','财联社采访')}。
 
 {low_note}
 
@@ -70,7 +74,7 @@ def report_markdown(e, state):
 
 ## 每日跟踪重点
 
-1. 价格：新增可执行卖方报价、平台买卖差及原报价日期。
+1. 价格：新增可执行卖方报价、平台最低挂价及原报价日期、海外零售页面价。
 2. 供给：官方上市状态、配额确认、发货、到仓和验收。
 3. 条款：付款节点、交付责任及税票口径。
 4. 判断：保持或修改情景的具体证据；没有新证据时保留上一版本。

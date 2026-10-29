@@ -93,6 +93,11 @@ def render(evidence, state, output):
     wan = lambda v: f"{v / 10000:.2f}万"
     p, stats = market["latest"], market["stats"]
     forecast, review = evidence["forecast"], state["forecast_review"]
+    # Days before the price board existed keep their original layout, so images in old group messages stay as sent.
+    board = state.get("price_board")
+    fx = (board or {}).get("fx") or {}
+    board_rows = {r["id"]: r for r in (board or {}).get("rows", [])}
+    board_changes = {c["id"]: c for c in (board or {}).get("changes", [])}
     img = Image.new("RGBA", (W, 7000), BG)
     d = ImageDraw.Draw(img)
     PAD = 28  # inner card padding
@@ -109,7 +114,8 @@ def render(evidence, state, output):
     # Header band.
     d.rectangle([0, 0, W, 268], fill=HEAD)
     d.text((M, 36), "RTX PRO 5500 大陆行情日报", font=F(T_TITLE, True), fill=(255, 255, 255))
-    d.text((M, 112), f"{state['date']} · 84GB · 人民币/张 · 渠道截至 {p['date'][5:]}", font=F(T_SMALL), fill=(148, 163, 184))
+    subtitle = f"汇率 {fx['date'][5:]}" if fx.get("rates") else f"渠道截至 {p['date'][5:]}"
+    d.text((M, 112), f"{state['date']} · 84GB · 人民币/张 · {subtitle}", font=F(T_SMALL), fill=(148, 163, 184))
     official = next((c for c in state["checks"] if c["source_id"] == "nvidia"), {})
     official_text = "官方 Coming Soon" if official.get("status") == "ok" and official.get("signals", {}).get("coming_soon") else "官方状态待复核"
     status = {"low_confidence": "预测 条件情景", "review_required": "预测 待复核", "expired": "预测 已到期"}[review["status"]]
@@ -121,10 +127,28 @@ def render(evidence, state, output):
 
     # KPI cards, 2 x 2.
     cw = (W - 2 * M - GAP) / 2
-    kpis = [("卖方均价", yuan(p["ask"]), f"日 {stats['day_pct']:+.2f}%  周 {stats['week_pct']:+.2f}%", ASK, UP if stats["day_pct"] >= 0 else DOWN),
-            ("买方均价", yuan(p["bid"]), f"求购最高 {yuan(market['max_bid'])}", BID, MUTED),
-            ("买卖差", yuan(stats["spread"]), f"占中间值 {stats['spread_pct']:.2f}%", INK, MUTED),
-            ("最低挂价", yuan(market["min_ask"]), f"交期 {market.get('delivery') or '未标明'}", INK, AMBER)]
+    if board:
+        dom, usd = board.get("domestic"), board_rows.get("reuters_usd")
+        retail = next((r for r in board["rows"] if r["kind"] == "海外零售" and r["cny_vat"]), None)
+        move = (board_changes.get("reuters_usd") or {}).get("delta")
+        kpis = [("大陆报价", f"{dom['low'] / 10000:g}–{dom['high'] / 10000:g}万" if dom else "—",
+                 f"{dom['count']} 条来源 · 最新 {dom['latest_date'][5:]}" if dom else "暂无", ASK, MUTED)]
+        if usd and usd["cny_vat"]:
+            kpis.append(("路透订单价 含税折算", yuan(usd["cny_vat"]),
+                         f"{usd['native']} × {fx['rates']['USD']}" + (f" · 日 {move:+,}" if move else ""), INK,
+                         MUTED if not move else UP if move > 0 else DOWN))
+        elif usd:
+            kpis.append(("路透订单价", usd["native"], "汇率未取得，未折算", INK, MUTED))
+        if retail:
+            kpis.append(("海外零售 含税折算", yuan(retail["cny_vat"]), f"{retail['native'].split('（')[0]} · {retail['label']}", INK, MUTED))
+        kpis.append(("渠道最低挂价", yuan(market["min_ask"]),
+                     f"{market.get('delivery') or '交期未标明'} · 原报价 {(market.get('quote_date') or '未标明')[5:]}", INK, AMBER))
+        kpis = kpis[:4]
+    else:
+        kpis = [("卖方均价", yuan(p["ask"]), f"日 {stats['day_pct']:+.2f}%  周 {stats['week_pct']:+.2f}%", ASK, UP if stats["day_pct"] >= 0 else DOWN),
+                ("买方均价", yuan(p["bid"]), f"求购最高 {yuan(market['max_bid'])}", BID, MUTED),
+                ("买卖差", yuan(stats["spread"]), f"占中间值 {stats['spread_pct']:.2f}%", INK, MUTED),
+                ("最低挂价", yuan(market["min_ask"]), f"交期 {market.get('delivery') or '未标明'}", INK, AMBER)]
     kh = 176
     for i, (label, value, sub, color, sub_color) in enumerate(kpis):
         x0 = M + (i % 2) * (cw + GAP)
@@ -134,52 +158,93 @@ def render(evidence, state, output):
         d.text((x0 + PAD + 18, y0 + 40), label, font=F(T_SMALL), fill=MUTED, anchor="lm")
         d.text((x0 + PAD, y0 + 66), value, font=F(52, True), fill=color)
         d.text((x0 + PAD, y0 + 134), sub, font=F(T_TINY), fill=sub_color)
-    y += 2 * kh + GAP + GAP
+    y += ((len(kpis) + 1) // 2) * (kh + GAP)
 
-    # 14-day chart.
-    rows = market["series"][-14:]
-    ch = 560
-    card(y, y + ch)
-    d.text((M + PAD, y + 24), "14日渠道买卖均价", font=F(T_H2, True), fill=INK)
-    d.text((M + PAD, y + 78), f"区间高 {wan(stats['period_high'])} · 区间低 {wan(stats['period_low'])} · 柱形为挂牌活跃度", font=F(T_TINY), fill=MUTED)
-    lx = W - M - PAD
-    for label, color in (("买方均价", BID), ("卖方均价", ASK)):
-        lx -= d.textlength(label, font=F(T_TINY))
-        d.text((lx, y + 32), label, font=F(T_TINY), fill=TEXT)
-        d.rounded_rectangle([lx - 34, y + 44, lx - 10, y + 50], radius=3, fill=color)
-        lx -= 58
-    left, right, top, bottom = M + 120, W - M - 170, y + 140, y + 430
-    lo_v = min(r["bid"] for r in rows)
-    hi_v = max(r["ask"] for r in rows)
-    pad = max((hi_v - lo_v) * .18, 500)
-    lo, hi = lo_v - pad, hi_v + pad
-    xs = lambda i: left + i / max(len(rows) - 1, 1) * (right - left)
-    ys = lambda v: bottom - (v - lo) / (hi - lo) * (bottom - top)
-    for k in range(5):
-        v = lo + (hi - lo) * k / 4
-        d.line([(left, ys(v)), (right, ys(v))], fill=LINE, width=1)
-        d.text((left - 16, ys(v)), wan(v), font=F(T_TINY), fill=MUTED, anchor="rm")
-    overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    od = ImageDraw.Draw(overlay)
-    od.polygon([(xs(i), ys(r["ask"])) for i, r in enumerate(rows)] + [(xs(i), ys(r["bid"])) for i, r in reversed(list(enumerate(rows)))], fill=(37, 99, 235, 26))
-    max_act = max(max(r["activity"] for r in rows), 1)
-    for i, r in enumerate(rows):
-        h = r["activity"] / max_act * 40
-        od.rounded_rectangle([xs(i) - 8, bottom + 58 - h, xs(i) + 8, bottom + 58], radius=3, fill=(148, 163, 184, 120))
-    img.alpha_composite(overlay)
-    d = ImageDraw.Draw(img)
-    for field, color in (("ask", ASK), ("bid", BID)):
-        pts = [(xs(i), ys(r[field])) for i, r in enumerate(rows)]
-        d.line(pts, fill=color, width=5, joint="curve")
-        ex, ey = pts[-1]
-        d.ellipse([ex - 8, ey - 8, ex + 8, ey + 8], fill=CARD, outline=color, width=5)
-        d.text((ex + 18, ey), yuan(rows[-1][field]), font=F(T_SMALL, True), fill=color, anchor="lm")
-    step = max(1, (len(rows) - 1) // 4)
-    for i in sorted(set(list(range(0, len(rows), step)) + [len(rows) - 1])):
-        if i != len(rows) - 1 and len(rows) - 1 - i < step / 2:
-            continue
-        d.text((xs(i), bottom + 70), rows[i]["date"][5:].replace("-", "/"), font=F(T_TINY), fill=MUTED, anchor="ma")
-    y += ch + GAP
+    if board:
+        # Price evidence: each quote with its own date; converted rows say so.
+        inner = W - 2 * M - 2 * PAD
+        laid = []
+        for r in board["rows"]:
+            age = "当日" if r["age_days"] == 0 else f"{r['age_days']} 天前"
+            when = f"{r['date']}（{age}）"
+            if r["kind"] == "海外零售":
+                when = f"{r['date']} 起此价未变，" + (f"{r['checked'][5:]} 核对" if r.get("check_status") == "ok" and r.get("checked") else "本轮未读到页面")
+            meta = " · ".join(x for x in (when, r["kind"], r["native"] if r["converted"] or not r["low"] else "", r["note"]) if x)
+            change = board_changes.get(r["id"])
+            flag = ("今日新报价" if change["kind"] == "新报价" else f"汇率 {change['delta']:+,}") if change else ""
+            value = r["text"] if r["low"] else "未折算"
+            laid.append((r, wrap(d, meta, F(T_TINY), inner, 2), flag, value))
+        # Closing punctuation may run past the wrap width, so leave room for it.
+        summary = wrap(d, board["summary"], F(T_SMALL), inner - d.textlength("今日变化", font=F(T_SMALL, True)) - 18 - 2 * T_SMALL, 4)
+        h = 96 + sum(48 + len(m) * 32 + 22 for _, m, _, _ in laid) + 14 + len(summary) * 38 + 24
+        card(y, y + h)
+        d.text((M + PAD, y + 24), "价格证据表", font=F(T_H2, True), fill=INK)
+        rate_note = f"{fx['label']} {fx['date'][5:]}" + ("（沿用）" if fx.get("status") == "carried" else "") if fx.get("rates") else "汇率未取得"
+        d.text((W - M - PAD, y + 34), rate_note, font=F(T_TINY), fill=MUTED, anchor="ra")
+        ty = y + 96
+        for r, meta, flag, value in laid:
+            d.text((M + PAD, ty), r["label"], font=F(T_BODY, True), fill=INK)
+            if flag:
+                chip(M + PAD + d.textlength(r["label"], font=F(T_BODY, True)) + 14, ty - 2, flag, (254, 243, 199), AMBER, 20)
+            d.text((W - M - PAD, ty), value, font=F(T_BODY, True), fill=ASK if r["converted"] else INK, anchor="ra")
+            ty += 48
+            for line in meta:
+                d.text((M + PAD, ty), line, font=F(T_TINY), fill=MUTED)
+                ty += 32
+            ty += 10
+            d.line([(M + PAD, ty), (W - M - PAD, ty)], fill=LINE, width=1)
+            ty += 12
+        ty += 14
+        d.text((M + PAD, ty), "今日变化", font=F(T_SMALL, True), fill=AMBER)
+        for line in summary:
+            d.text((M + PAD + d.textlength("今日变化", font=F(T_SMALL, True)) + 18, ty), line, font=F(T_SMALL), fill=INK)
+            ty += 38
+        y += h + GAP
+    else:
+        # 14-day chart.
+        rows = market["series"][-14:]
+        ch = 560
+        card(y, y + ch)
+        d.text((M + PAD, y + 24), "14日渠道买卖均价", font=F(T_H2, True), fill=INK)
+        d.text((M + PAD, y + 78), f"区间高 {wan(stats['period_high'])} · 区间低 {wan(stats['period_low'])} · 柱形为挂牌活跃度", font=F(T_TINY), fill=MUTED)
+        lx = W - M - PAD
+        for label, color in (("买方均价", BID), ("卖方均价", ASK)):
+            lx -= d.textlength(label, font=F(T_TINY))
+            d.text((lx, y + 32), label, font=F(T_TINY), fill=TEXT)
+            d.rounded_rectangle([lx - 34, y + 44, lx - 10, y + 50], radius=3, fill=color)
+            lx -= 58
+        left, right, top, bottom = M + 120, W - M - 170, y + 140, y + 430
+        lo_v = min(r["bid"] for r in rows)
+        hi_v = max(r["ask"] for r in rows)
+        pad = max((hi_v - lo_v) * .18, 500)
+        lo, hi = lo_v - pad, hi_v + pad
+        xs = lambda i: left + i / max(len(rows) - 1, 1) * (right - left)
+        ys = lambda v: bottom - (v - lo) / (hi - lo) * (bottom - top)
+        for k in range(5):
+            v = lo + (hi - lo) * k / 4
+            d.line([(left, ys(v)), (right, ys(v))], fill=LINE, width=1)
+            d.text((left - 16, ys(v)), wan(v), font=F(T_TINY), fill=MUTED, anchor="rm")
+        overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        od = ImageDraw.Draw(overlay)
+        od.polygon([(xs(i), ys(r["ask"])) for i, r in enumerate(rows)] + [(xs(i), ys(r["bid"])) for i, r in reversed(list(enumerate(rows)))], fill=(37, 99, 235, 26))
+        max_act = max(max(r["activity"] for r in rows), 1)
+        for i, r in enumerate(rows):
+            h = r["activity"] / max_act * 40
+            od.rounded_rectangle([xs(i) - 8, bottom + 58 - h, xs(i) + 8, bottom + 58], radius=3, fill=(148, 163, 184, 120))
+        img.alpha_composite(overlay)
+        d = ImageDraw.Draw(img)
+        for field, color in (("ask", ASK), ("bid", BID)):
+            pts = [(xs(i), ys(r[field])) for i, r in enumerate(rows)]
+            d.line(pts, fill=color, width=5, joint="curve")
+            ex, ey = pts[-1]
+            d.ellipse([ex - 8, ey - 8, ex + 8, ey + 8], fill=CARD, outline=color, width=5)
+            d.text((ex + 18, ey), yuan(rows[-1][field]), font=F(T_SMALL, True), fill=color, anchor="lm")
+        step = max(1, (len(rows) - 1) // 4)
+        for i in sorted(set(list(range(0, len(rows), step)) + [len(rows) - 1])):
+            if i != len(rows) - 1 and len(rows) - 1 - i < step / 2:
+                continue
+            d.text((xs(i), bottom + 70), rows[i]["date"][5:].replace("-", "/"), font=F(T_TINY), fill=MUTED, anchor="ma")
+        y += ch + GAP
 
     # Price map: scenario bands with current reference points.
     base = next(s for s in forecast["scenarios"] if s["id"] == "base")
@@ -188,8 +253,13 @@ def render(evidence, state, output):
     ax0, ax1 = M + 44, W - M - 44
     px = lambda v: ax0 + (min(max(v, v0), v1) - v0) / (v1 - v0) * (ax1 - ax0)
     ti = next((x for x in evidence["prices"] if x["id"] == "theinformation_price"), None)
-    marks = [(market["min_ask"], "最低挂价", AMBER), (p["bid"], "平台买均", BID), (p["ask"], "平台卖均", ASK),
-             (forecast["anchor_cny"], "SMM预售", INK)]
+    if board:
+        marks = [(market["min_ask"], "渠道挂价", AMBER), (forecast["anchor_cny"], "SMM预售", INK)]
+        if board_rows.get("reuters_usd", {}).get("cny_vat"):
+            marks.append((board_rows["reuters_usd"]["cny_vat"], "路透含税折算", ASK))
+    else:
+        marks = [(market["min_ask"], "最低挂价", AMBER), (p["bid"], "平台买均", BID), (p["ask"], "平台卖均", ASK),
+                 (forecast["anchor_cny"], "SMM预售", INK)]
     if ti:
         marks.append(((ti["low_cny"] + ti["high_cny"]) / 2, "The Information", AMBER))
     marks.sort(key=lambda m: m[0])
@@ -226,11 +296,11 @@ def render(evidence, state, output):
     y += ph + GAP
 
     # Today's judgement from the daily brief.
-    brief = {b["title"]: b["text"] for b in state["daily_brief"]["items"]}
-    lines_src = [(k, brief[k]) for k in ("报价位置", "平台变化", "交期差异", "下一步核实") if k in brief]
-    label_w = d.textlength("下一步核实", font=F(T_BODY, True)) + 20
+    # Today's change is already under the evidence table.
+    lines_src = [(b["title"], b["text"]) for b in state["daily_brief"]["items"] if not (board and b["title"] == "今日变化")]
+    label_w = max(d.textlength(k, font=F(T_BODY, True)) for k, _ in lines_src) + 20
     text_w = W - 2 * M - 2 * PAD - label_w
-    body = [(k, wrap(d, t, F(T_BODY), text_w, 3)) for k, t in lines_src]
+    body = [(k, wrap(d, t, F(T_BODY), text_w, 4 if board else 3)) for k, t in lines_src]
     h = 92 + sum(len(ls) * LH + 16 for _, ls in body) + 8
     card(y, y + h)
     d.text((M + PAD, y + 24), "今日判断", font=F(T_H2, True), fill=INK)
@@ -340,7 +410,8 @@ def render(evidence, state, output):
 
     # Footer.
     y += 12
-    note = "口径：渠道价为宽泛采销平台参考，不是成交价；媒体价格未统一税费、数量和交期。没有新证据时不改预测。"
+    note = ("口径：海外价格按当日汇率折算，汇率变动不是新报价，未含关税运费；渠道挂价为平台期货报盘，不是成交价；媒体价格未统一税费、数量和交期。没有新证据时不改预测。"
+            if board else "口径：渠道价为宽泛采销平台参考，不是成交价；媒体价格未统一税费、数量和交期。没有新证据时不改预测。")
     for line in wrap(d, note, F(T_TINY), W - 2 * M, 3):
         d.text((M, y), line, font=F(T_TINY), fill=MUTED)
         y += 34

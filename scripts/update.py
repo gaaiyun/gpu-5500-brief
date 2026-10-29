@@ -14,9 +14,10 @@ from urllib.parse import quote
 
 import requests
 from bs4 import BeautifulSoup
-from market import parse_channel, daily_brief
+from market import parse_channel, daily_brief, channel_template
 from intelligence import enrich
 from feed import load_feed, load_leads
+from prices import build_board, check_listing, fetch_fx
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = timezone(timedelta(hours=8))
@@ -46,6 +47,14 @@ def fetch(url):
         if len(body) > MAX_BYTES:
             raise ValueError("响应超过采集上限")
     return bytes(body), response.url, response.headers.get("Content-Type", "")
+
+
+def get_json(url):
+    return json.loads(fetch(url)[0])
+
+
+def get_text(url):
+    return fetch(url)[0].decode("utf-8", errors="replace")
 
 
 def html_text(content):
@@ -204,6 +213,12 @@ def forecast_status(evidence, checks, today):
             "note": "无新增已核验价格时，保持预测版本及发布日期；每天复核有效性，不生成伪新价。"}
 
 
+def previous_day_state(today):
+    """Last archived state before today: reruns within a day all report changes against the same baseline."""
+    days = sorted(p for p in (ROOT / "data/history").glob("*.json") if p.stem < today.isoformat())
+    return read_json(days[-1], {}) if days else {}
+
+
 def run(offline=False):
     evidence = read_json(ROOT / "data/evidence.json")
     previous = read_json(ROOT / "data/state.json", {})
@@ -213,7 +228,10 @@ def run(offline=False):
             raise ValueError("没有可用于离线构建的采集记录")
         return previous
     prev_checks = {c["source_id"]: c for c in previous.get("checks", [])}
+    prev_listings = {x["id"]: x for x in previous.get("listings", [])}
     with ThreadPoolExecutor(max_workers=4) as pool:
+        fx_job = pool.submit(fetch_fx, get_json, previous.get("fx"), checked_at)
+        listings = list(pool.map(lambda x: check_listing(x, prev_listings.get(x["id"]), get_text, checked_at), evidence.get("listings", [])))
         checks = list(pool.map(lambda s: check_source(s, prev_checks.get(s["id"]), checked_at), evidence["sources"]))
         feeds = list(pool.map(lambda item: collect_feed(item, checked_at), [
             ("cn", '"RTX PRO 5500" when:21d'),
@@ -225,31 +243,39 @@ def run(offline=False):
     carried = not any(f["status"] == "ok" for f in feeds)
     if carried:
         headlines = previous.get("headlines", [])
+    fx = fx_job.result()
     today = datetime.fromisoformat(checked_at).date()
     channel_check = next((c for c in checks if c["source_id"] == "qudao"), {})
     market = channel_check.get("market")
+    baseline = previous_day_state(today)
+    if market:
+        market["template"] = channel_template(market, baseline.get("channel"))
+    # Agent-verified web intelligence (cloud routine writes data/feed.json); invalid items are dropped, not fatal.
+    feed_payload = read_json(ROOT / "data/feed.json", {})
+    feed_items, feed_rejected = load_feed(feed_payload, today)
+    feed_leads, leads_rejected = load_leads(feed_payload, today)
+    board = build_board(evidence, market, fx, listings, feed_items, today, baseline.get("price_board"))
     state = {"schema_version": 1, "checked_at": checked_at, "date": today.isoformat(),
              "checks": checks, "feeds": [{k:v for k,v in f.items() if k != "entries"} for f in feeds],
              "headlines": headlines, "headlines_carried_forward": carried,
              "headline_collection_at": previous.get("headline_collection_at") if carried else checked_at,
              "forecast_review": forecast_status(evidence, checks, today),
              "channel":market,"channel_status":channel_check.get("status", "failed"),
-             "daily_brief":daily_brief(evidence,market,previous.get("channel")),
+             "fx":fx,"listings":listings,"price_board":board,
+             "daily_brief":daily_brief(evidence,market,baseline.get("channel"),board),
              "new_verified_price_count": 0,
              "summary": "本轮自动采集不把新闻标题或聚合挂牌升级为已核验价格；已核验价格更新需要证据复核。"}
     state["intelligence"] = enrich(evidence,state)
-    # Agent-verified web intelligence (cloud routine writes data/feed.json); invalid items are dropped, not fatal.
-    feed_payload = read_json(ROOT / "data/feed.json", {})
-    feed_items, feed_rejected = load_feed(feed_payload, today)
-    feed_leads, leads_rejected = load_leads(feed_payload, today)
     state["feed"] = {"items": feed_items, "leads": feed_leads, "rejected": feed_rejected + leads_rejected,
                      "updated_at": (feed_payload or {}).get("updated_at"), "agent": (feed_payload or {}).get("agent")}
     save_json(ROOT / "data/state.json", state)
     save_json(ROOT / "data/history" / f"{today.isoformat()}.json", state)
     healthy = sum(c["status"] == "ok" for c in checks)
     print(f"Sources: {healthy}/{len(checks)} accessible; feeds: {sum(f['status']=='ok' for f in feeds)}/{len(feeds)}; headlines: {len(headlines)}")
-    for check in checks:
-        print(f"  {check['source_id']}: {check['status']}" + (f" ({check['error']})" if check.get("error") else ""))
+    for check in checks + listings:
+        print(f"  {check.get('source_id') or check['id']}: {check['status']}" + (f" ({check['error']})" if check.get("error") else ""))
+    print(f"  fx: {fx['status']} {fx.get('provider', '')} {fx.get('date', '')}" + (f" ({fx['error']})" if fx.get("error") else ""))
+    print(f"  today: {board['summary']}")
     # Partial source failure is visible, while a complete outage fails CI.
     if healthy == 0:
         raise RuntimeError("所有核心来源采集失败；已保留失败记录，禁止宣称刷新成功")

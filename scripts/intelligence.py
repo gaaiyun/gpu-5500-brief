@@ -40,10 +40,14 @@ def fact_briefs(e,state):
                  '关注官方售价和正式发货节点，交付兑现后重新评估首批溢价。','核对官方价格与可购买状态'))
     if channel:
         p=channel['latest'];st=channel['stats'];delivery=channel.get('delivery') or '未标明交期'
-        fixed='平台日序列存在固定比例关系。' if st['fixed_offset_points']==st['point_count'] else ''
-        rows.insert(0,('qudao','渠道价差与最低挂价交期',p['date'],'平台参考',
-                      f"平台卖均{p['ask']:,}元、买均{p['bid']:,}元，价差{st['spread']:,}元；最低挂价{channel['min_ask']:,}元，交期{delivery}，原报价日期{channel.get('quote_date') or '未标明'}。",
-                      f"最低挂价按{delivery}交付，短交期报盘需单独确认。{fixed}",'核实低价有效性与报价算法'))
+        template=channel.get('template') or {}
+        if template.get('synthetic'):
+            curve='平台14日曲线'+'，'.join(template['reasons'])+'，不作行情。'
+        else:
+            curve=f"平台卖均{p['ask']:,}元、买均{p['bid']:,}元，价差{st['spread']:,}元。"
+        rows.insert(0,('qudao','渠道最低挂价与交期',channel.get('quote_date') or p['date'],'平台参考',
+                      f"平台最低挂价{channel['min_ask']:,}元，交期{delivery}，原报价日期{channel.get('quote_date') or '未标明'}。{curve}",
+                      f"最低挂价按{delivery}交付，短交期报盘需单独确认。",'核实低价有效性与报价算法'))
     return [{'source_id':key,'source':SOURCE_LABELS[key],'title':title,'date':date,'kind':kind,'url':by_id[key]['url'],
              'summary':summary,'impact':impact,'watch':watch} for key,title,date,kind,summary,impact,watch in rows]
 

@@ -16,6 +16,19 @@ def load():
     return evidence,state
 
 
+def with_board(evidence,state,usd=6.7147):
+    """The committed state may predate the price board; rebuild one so both layouts stay tested."""
+    from datetime import date
+    from market import channel_template,daily_brief
+    from prices import build_board
+    state=copy.deepcopy(state)
+    fx={"status":"ok","provider":"chinamoney","label":"人民币汇率中间价","date":state["date"],"rates":{"USD":usd,"EUR":7.457,"GBP":8.9101}}
+    state["channel"]["template"]=channel_template(state["channel"],None)
+    state["price_board"]=build_board(evidence,state["channel"],fx,[],[],date.fromisoformat(state["date"]),None)
+    state["daily_brief"]=daily_brief(evidence,state["channel"],None,state["price_board"])
+    return state
+
+
 class ResearchTests(unittest.TestCase):
     def test_low_quote_terms_follow_channel_data(self):
         evidence,state=load()
@@ -42,11 +55,25 @@ class ResearchTests(unittest.TestCase):
         from PIL import Image
         from daily_card import render
         evidence,state=load()
-        with tempfile.TemporaryDirectory() as folder:
-            path=render(evidence,state,Path(folder)/"card.png")
-            with Image.open(path) as image:
-                self.assertEqual(image.width,1080)
-                self.assertGreater(image.height,900)
+        for day_state in (state,with_board(evidence,state)):
+            with tempfile.TemporaryDirectory() as folder:
+                path=render(evidence,day_state,Path(folder)/"card.png")
+                with Image.open(path) as image:
+                    self.assertEqual(image.width,1080)
+                    self.assertGreater(image.height,900)
+
+    def test_board_texts_drop_platform_daily_move(self):
+        import notify_dingtalk
+        from share_page import page_html
+        evidence,state=load()
+        state=with_board(evidence,state)
+        message=notify_dingtalk.message(state)["markdown"]["text"]
+        report=report_markdown(evidence,state)
+        for text in (message,page_html(state),report):
+            self.assertNotIn("日变动",text)
+            self.assertIn("今日无新报价",text)
+        self.assertIn("$11,400",message)
+        self.assertIn("86,499",message)
 
     def test_share_page_carries_every_source(self):
         from share_page import page_html

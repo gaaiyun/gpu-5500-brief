@@ -32,6 +32,11 @@ class FeedTests(unittest.TestCase):
         self.assertEqual([x["id"] for x in items],["x"])
         self.assertEqual(len(rejected),4)
 
+    def test_card_price_normalized_and_bounded(self):
+        items,rejected=load_feed({"items":[item(price_cny=[95000,90000]),item(id="t",url="https://example.com/t",price_cny=3500000000)]},TODAY)
+        self.assertEqual(items[0]["price_cny"],[90000,95000])
+        self.assertEqual([r["id"] for r in rejected],["t"])
+
     def test_grade_a_needs_corroboration(self):
         items,_=load_feed({"items":[item(grade="A",corroboration=["https://example.com/b"])]},TODAY)
         self.assertEqual(items[0]["grade_label"],"多方印证")

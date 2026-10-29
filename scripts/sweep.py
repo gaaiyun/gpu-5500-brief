@@ -24,7 +24,7 @@ from urllib.parse import quote, urlparse
 import requests
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 
-from feed import CLAIM_STATUS, MAX_AGE_DAYS, QUICK_TYPES, clean_item, load_leads
+from feed import CLAIM_STATUS, MAX_AGE_DAYS, QUICK_TYPES, clean_item, is_card_price, load_leads
 from intelligence import SOURCE_LABELS, numeric_values
 from update import MAJOR_MEDIA, fetch, now_iso, read_json
 
@@ -331,6 +331,11 @@ def build_item(draft, candidate, events, today):
             "source_type": candidate["source_type"], "url": candidate["url"], "grade": "C" if quick else "B",
             "summary": summary, "impact": impact, "watch": watch, "corroboration": [], "claims": claims,
             "checked_at": today.isoformat(), "found_via": candidate["found_via"]}
+    # The price board takes this number, so it must be printed in the article itself, not converted or recalled.
+    price = draft.get("price_cny")
+    values = price if isinstance(price, list) else [price]
+    if price is not None and 1 <= len(values) <= 2 and all(is_card_price(v) and round(float(v), 4) in article for v in values):
+        item["price_cny"] = [min(values), max(values)]
     clean_item(item, today)
     return item
 
