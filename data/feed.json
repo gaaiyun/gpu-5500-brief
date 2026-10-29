@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-29T09:47:03+08:00",
+  "updated_at": "2026-10-29T10:59:25+08:00",
   "agent": "actions-sweep",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -197,13 +197,13 @@
       "seen_at": "2026-10-29"
     },
     {
-      "title": "RTX Pro5500\\6000D\\RTX5090的技术对比分析",
+      "title": "RTX Pro5500\\6000D\\RTX5090的技术对比分析(含选型思路)",
       "publisher": "两年砍柴",
       "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20Pro5500%5C6000D%5CRTX5090%E7%9A%84%E6%8A%80%E6%9C%AF%E5%AF%B9%E6%AF%94%E5%88%86%E6%9E%90",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20Pro5500%5C6000D%5CRTX5090%E7%9A%84%E6%8A%80%E6%9C%AF%E5%AF%B9%E6%AF%94%E5%88%86%E6%9E%90%28%E5%90%AB%E9%80%89%E5%9E%8B%E6%80%9D%E8%B7%AF%29",
       "published_at": "2026-10-22",
       "found_via": "搜狗微信",
-      "snippet": "5500,纯推理选 6000D,70B 以上大模型直接上满血 6000.RTX Pro5500\\6000D\\RTX5090的技术对比分析(含选型思路)",
+      "snippet": "3)RTX PRO 6000D(国内特供推理卡)优势:84G ECC显存,带宽高于Pro 5500;功耗低;价格便宜;单卡可放下70B量化大模型;...",
       "seen_at": "2026-10-29"
     },
     {
@@ -254,8 +254,6 @@
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
-    ]
+    "notes": []
   }
 }
