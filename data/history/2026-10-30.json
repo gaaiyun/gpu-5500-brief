@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-30T00:51:23+08:00",
+  "checked_at": "2026-10-30T05:24:57+08:00",
   "date": "2026-10-30",
   "checks": [
     {
       "source_id": "nvidia",
-      "checked_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
       "url": "https://www.nvidia.com/en-eu/products/workstations/professional-desktop-gpus/rtx-pro-5500/",
       "published_at": null,
       "status": "ok",
@@ -18,12 +18,12 @@
       },
       "sha256": "44407bfef09d7a5ae432a2610c0ea157b58e1122350490f3272115d7d0632d26",
       "final_url": "https://www.nvidia.com/en-eu/products/workstations/professional-desktop-gpus/rtx-pro-5500/",
-      "last_success_at": "2026-10-30T00:51:23+08:00",
+      "last_success_at": "2026-10-30T05:24:57+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "smm",
-      "checked_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
       "url": "https://news.smm.cn/news/104154895",
       "published_at": "2026-10-13",
       "status": "ok",
@@ -33,12 +33,12 @@
       },
       "sha256": "6af43aafc054904aedfd5e0fb8f250a43b829180a0ab0d6516d794a6834a2427",
       "final_url": "https://news.smm.cn/news/104154895",
-      "last_success_at": "2026-10-30T00:51:23+08:00",
+      "last_success_at": "2026-10-30T05:24:57+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "cls",
-      "checked_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
       "url": "https://www.cls.cn/detail/2500747",
       "published_at": "2026-10-09",
       "status": "ok",
@@ -47,12 +47,12 @@
       },
       "sha256": "03412743bcdfaf091c4a274cd4a8be8f44db26128f5d61d14285f4f1429f35cb",
       "final_url": "https://www.cls.cn/detail/2500747",
-      "last_success_at": "2026-10-30T00:51:23+08:00",
+      "last_success_at": "2026-10-30T05:24:57+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "reuters",
-      "checked_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
       "url": "https://www.bnnbloomberg.ca/business/company-news/2026/10/20/bytedance-alibaba-tencent-place-over-us35-billion-worth-of-nvidia-chip-orders-reuters-exclusive/",
       "published_at": "2026-10-20",
       "status": "ok",
@@ -61,12 +61,12 @@
       },
       "sha256": "03412743bcdfaf091c4a274cd4a8be8f44db26128f5d61d14285f4f1429f35cb",
       "final_url": "https://www.bnnbloomberg.ca/business/company-news/2026/10/20/bytedance-alibaba-tencent-place-over-us35-billion-worth-of-nvidia-chip-orders-reuters-exclusive/",
-      "last_success_at": "2026-10-30T00:51:23+08:00",
+      "last_success_at": "2026-10-30T05:24:57+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "trendforce",
-      "checked_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
       "url": "https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/",
       "published_at": "2026-10-21",
       "status": "ok",
@@ -75,12 +75,12 @@
       },
       "sha256": "03412743bcdfaf091c4a274cd4a8be8f44db26128f5d61d14285f4f1429f35cb",
       "final_url": "https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/",
-      "last_success_at": "2026-10-30T00:51:23+08:00",
+      "last_success_at": "2026-10-30T05:24:57+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "tansun",
-      "checked_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
       "url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-10/2026-10-13/12638891.PDF",
       "published_at": "2026-10-13",
       "status": "ok",
@@ -89,12 +89,12 @@
       },
       "sha256": "122d27eb4b3682cd76c2c5b3743935f9cab91bed346e1d7c7b60d478a3ddd4e8",
       "final_url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-10/2026-10-13/12638891.PDF",
-      "last_success_at": "2026-10-30T00:51:23+08:00",
+      "last_success_at": "2026-10-30T05:24:57+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "qudao",
-      "checked_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
       "url": "https://qudao.co/api/trends?timeframe=daily",
       "published_at": null,
       "market": {
@@ -257,7 +257,7 @@
         },
         "source_url": "https://qudao.co/api/trends?timeframe=daily",
         "homepage": "https://qudao.co/",
-        "collected_at": "2026-10-30T00:51:23+08:00",
+        "collected_at": "2026-10-30T05:24:57+08:00",
         "age_days": 0,
         "verification": "platform_reference",
         "independent_market_samples": false,
@@ -452,36 +452,36 @@
       },
       "sha256": "5246ae34a0250eaf549c33008cac3fdfa3d75cd5fa9d9f7b61b427c0e8e87ba3",
       "final_url": "https://qudao.co/api/trends?timeframe=daily",
-      "last_success_at": "2026-10-30T00:51:23+08:00",
-      "changed_since_last": true
+      "last_success_at": "2026-10-30T05:24:57+08:00",
+      "changed_since_last": false
     }
   ],
   "feeds": [
     {
       "id": "cn",
       "status": "ok",
-      "checked_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
       "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "count": 9
     },
     {
       "id": "price",
       "status": "ok",
-      "checked_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
       "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20%28%E4%BB%B7%E6%A0%BC%20OR%20%E6%8A%A5%E4%BB%B7%20OR%20%E4%BA%A4%E4%BB%98%20OR%20price%20OR%20delivery%29%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "count": 5
     },
     {
       "id": "global",
       "status": "ok",
-      "checked_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
       "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20%28Reuters%20OR%20NVIDIA%20OR%20supply%29%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "count": 7
     },
     {
       "id": "major",
       "status": "ok",
-      "checked_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
       "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Acls.cn%20OR%20site%3Ayicai.com%20OR%20site%3Astcn.com%20OR%20site%3Ajiemian.com%20OR%20site%3A21jingji.com%20OR%20site%3Atrendforce.com%20OR%20site%3Adigitimes.com%29%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "count": 0
     }
@@ -499,7 +499,7 @@
     }
   ],
   "headlines_carried_forward": false,
-  "headline_collection_at": "2026-10-30T00:51:23+08:00",
+  "headline_collection_at": "2026-10-30T05:24:57+08:00",
   "forecast_review": {
     "status": "low_confidence",
     "anchor_age_days": 9,
@@ -670,7 +670,7 @@
     },
     "source_url": "https://qudao.co/api/trends?timeframe=daily",
     "homepage": "https://qudao.co/",
-    "collected_at": "2026-10-30T00:51:23+08:00",
+    "collected_at": "2026-10-30T05:24:57+08:00",
     "age_days": 0,
     "verification": "platform_reference",
     "independent_market_samples": false,
@@ -867,7 +867,7 @@
       "EUR": 7.457,
       "GBP": 8.9101
     },
-    "checked_at": "2026-10-30T00:51:23+08:00",
+    "checked_at": "2026-10-30T05:24:57+08:00",
     "error": ""
   },
   "fx_history": {
@@ -1067,32 +1067,32 @@
       "id": "fr_pny_pb",
       "status": "ok",
       "price": 16469.95,
-      "checked_at": "2026-10-30T00:51:23+08:00",
-      "last_success_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
+      "last_success_at": "2026-10-30T05:24:57+08:00",
       "price_since": "2026-09-30"
     },
     {
       "id": "uk_gbics_sb",
       "status": "ok",
       "price": 12810.0,
-      "checked_at": "2026-10-30T00:51:23+08:00",
-      "last_success_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
+      "last_success_at": "2026-10-30T05:24:57+08:00",
       "price_since": "2026-10-29"
     },
     {
       "id": "fr_ldlc_oem",
       "status": "ok",
       "price": 18169.95,
-      "checked_at": "2026-10-30T00:51:23+08:00",
-      "last_success_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
+      "last_success_at": "2026-10-30T05:24:57+08:00",
       "price_since": "2026-10-29"
     },
     {
       "id": "de_lieske_sb",
       "status": "ok",
       "price": 13894.0,
-      "checked_at": "2026-10-30T00:51:23+08:00",
-      "last_success_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
+      "last_success_at": "2026-10-30T05:24:57+08:00",
       "price_since": "2026-10-30"
     }
   ],
@@ -1284,7 +1284,7 @@
         "EUR": 7.457,
         "GBP": 8.9101
       },
-      "checked_at": "2026-10-30T00:51:23+08:00",
+      "checked_at": "2026-10-30T05:24:57+08:00",
       "error": ""
     },
     "domestic": {
@@ -1622,7 +1622,7 @@
       }
     ],
     "model": null,
-    "generated_at": "2026-10-30T00:51:23+08:00",
+    "generated_at": "2026-10-30T05:24:57+08:00",
     "error": "模型引入了输入中没有的数字"
   },
   "feed": {
@@ -1853,7 +1853,7 @@
       }
     ],
     "rejected": [],
-    "updated_at": "2026-10-30T00:51:22+08:00",
+    "updated_at": "2026-10-30T05:24:57+08:00",
     "agent": "actions-sweep"
   },
   "digest": {
