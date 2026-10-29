@@ -32,14 +32,37 @@ class EvidenceTests(unittest.TestCase):
     def test_aggregate_always_excluded(self):
         self.assertTrue(update.extract_signals("qudao", "RTX PRO 5500 91400")["excluded"])
 
+    def forecast(self):
+        return {"forecast": {"version": "2026-10-29-v2", "issued_at": "2026-10-29", "horizon_end": "2026-12-28",
+                             "anchor_source_id": "trendforce", "anchor_observed_at": "2026-10-21"}}
+
     def test_forecast_date_does_not_roll(self):
-        review = update.forecast_status(self.evidence, self.checks, date(2026, 10, 26))
-        self.assertEqual(review["issued_at"], "2026-10-25")
+        checks = self.checks + [{"source_id": "trendforce", "status": "ok"}]
+        review = update.forecast_status(self.forecast(), checks, date(2026, 10, 30))
+        self.assertEqual(review["issued_at"], "2026-10-29")
+        self.assertEqual(review["status"], "low_confidence")
+
+    def test_anchor_source_is_the_one_checked(self):
+        review = update.forecast_status(self.forecast(), self.checks, date(2026, 10, 30))
+        self.assertIn("预测锚点来源本轮未成功复现", review["reasons"])
 
     def test_old_anchor_disables_numbers(self):
-        review = update.forecast_status(self.evidence, self.checks, date(2026, 11, 14))
+        review = update.forecast_status(self.forecast(), self.checks, date(2026, 11, 20))
+        self.assertTrue(review["numeric_forecast_active"])
+        review = update.forecast_status(self.forecast(), self.checks, date(2026, 11, 21))
         self.assertFalse(review["numeric_forecast_active"])
         self.assertEqual(review["status"], "expired")
+
+    def test_forecast_versions_are_well_formed(self):
+        versions = self.evidence.get("forecast_history", []) + [self.evidence["forecast"]]
+        prices = {p["id"] for p in self.evidence["prices"]}
+        for f in versions:
+            self.assertIn(f["anchor_price_id"], prices)
+            ids = [s["id"] for s in f["scenarios"]]
+            self.assertEqual(ids, ["soft", "base", "tight"])
+            bands = [(s["low"], s["high"]) for s in f["scenarios"]]
+            self.assertTrue(all(lo < hi for lo, hi in bands))
+            self.assertTrue(all(a[1] == b[0] for a, b in zip(bands, bands[1:])))
 
     def test_failure_keeps_last_success(self):
         original = update.fetch

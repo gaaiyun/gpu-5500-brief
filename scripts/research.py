@@ -28,7 +28,10 @@ def report_markdown(e, state):
     if official.get('status')!='ok':official_text='NVIDIA 产品页本轮未采集成功，上市状态沿用上次记录待复核'
     elif official.get('signals',{}).get('coming_soon'):official_text=f"NVIDIA 产品页 {state['date']} 仍显示 Coming Soon"
     else:official_text='NVIDIA 产品页的 Coming Soon 标记已变化，需人工确认是否开售'
-    base=next(s for s in e['forecast']['scenarios'] if s['id']=='base')
+    f=e['forecast'];base=next(s for s in f['scenarios'] if s['id']=='base')
+    span=lambda s:f"{s['low']:,}-{s['high']:,}"
+    scenario_rows="\n".join(f"| {s['name'].split(' / ')[0]} | {span(s)} | {s['trigger']} |"
+                            for s in sorted(f['scenarios'],key=lambda s:s['id']!='base'))
     inside=bool(dom) and dom['low']<base['high'] and dom['high']>=base['low']
     base_note=(f"{base['low']/10000:g}万-{base['high']/10000:g}万元的基准与已披露的大陆报价区间重叠。" if inside
                else f"已披露的大陆报价已不在 {base['low']/10000:g}万-{base['high']/10000:g}万元基准区间内，需复核基准情景。")
@@ -40,7 +43,7 @@ def report_markdown(e, state):
 
 ## 报价判断
 
-未来 30-60 天预售报价的基准情景维持 **90,000-100,000 元**，95,000 元为当前可引用的大陆预售锚点。{position}决定成交价的关键是交期、税票及可交付数量。{expiry}
+未来 30-60 天预售报价的基准情景为 **{span(base)} 元**（预测版本 {f['version']}）。{position}决定成交价的关键是交期、税票及可交付数量。{expiry}
 
 ## 价格依据
 
@@ -66,11 +69,9 @@ def report_markdown(e, state):
 
 | 情景 | 预售报价区间 | 改判所需变化 |
 | --- | --- | --- |
-| 基准 | 90,000-100,000 | 交付预期维持，供应商继续接受9万元以上报盘 |
-| 需求降温 | 80,000-90,000 | 两家以上独立卖方有效报价下调，或客户撤回订单 |
-| 首批供给偏紧 | 100,000-115,000 | 已核验短交期配额稀缺，客户愿意付款锁货 |
+{scenario_rows}
 
-{base_note}上下行情景围绕9.5万元作价格敏感性分析，不赋发生概率。1月之后的成交价格应结合首批到货、获配数量及客户验收重新判断。
+{base_note}{f['method']}{f.get('revision','')}1月之后的成交价格应结合首批到货、获配数量及客户验收重新判断。
 
 ## 每日跟踪重点
 
@@ -85,5 +86,5 @@ def report_markdown(e, state):
 
 {link('qudao','宽泛采销公开接口')}：平台发布的14天历史序列，已保留采集快照。{link('smm','SMM（10月13日）')}：大陆预售报价。{link('trendforce','TrendForce（10月21日）')}：转述 The Information 售价区间及路透配额信息。{link('cls','财联社（10月9日）')}：从业者估价。{link('reuters','Reuters 独家（10月20日）')}：匿名信源所述订单与供应。{link('tansun','天阳科技公告（10月13日）')}：采购合同及条款。{link('nvidia','NVIDIA')}：官方产品状态。
 
-价格表分别标明平台参考、预售、媒体售价、估价和美元订单口径；现阶段尚缺大陆批发成交及可比较的当日独立报盘。报告首次预测日期 2026-10-25，原观察期限至 2026-12-24。
+价格表分别标明平台参考、预售、媒体售价、估价和美元订单口径；现阶段尚缺大陆批发成交及可比较的当日独立报盘。本版预测 {f['issued_at']} 发布，观察期限至 {f['horizon_end']}。
 """

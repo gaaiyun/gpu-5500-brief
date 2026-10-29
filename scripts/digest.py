@@ -4,7 +4,7 @@ from __future__ import annotations
 from datetime import date
 
 # A rate move or a new unverified lead is worth listing, but it is not news about the price.
-NEWS_TAGS = ("官方", "新报价", "网上挂价", "海外零售", "相关型号", "情报")
+NEWS_TAGS = ("官方", "新报价", "网上挂价", "海外零售", "情报")
 MAX_ITEMS = 8
 
 
@@ -23,16 +23,6 @@ def daily_digest(state, baseline):
         if change["kind"] == "新报价":
             kind = kinds.get(change["id"])
             items.append({"tag": kind if kind in ("海外零售", "网上挂价") else "新报价", "text": change["text"]})
-    if baseline:
-        old = {w["model"]: w for w in (baseline.get("channel") or {}).get("watchlist", [])}
-        for card in (state.get("channel") or {}).get("watchlist", []):
-            before = old.get(card["model"])
-            if not before:
-                continue
-            if before.get("min_ask") and card.get("min_ask") and before["min_ask"] != card["min_ask"]:
-                items.append({"tag": "相关型号", "text": f"{card['model']} 挂价 {before['min_ask']:,}→{card['min_ask']:,}（报价 {card.get('quote_date') or '未标明'}）"})
-            elif card.get("quote_date") and before.get("quote_date") != card["quote_date"]:
-                items.append({"tag": "相关型号", "text": f"{card['model']} 重新报价 {card.get('min_ask') or 0:,}（报价日期 {before.get('quote_date') or '未标明'}→{card['quote_date']}）"})
     fx, old_fx = state.get("fx") or {}, (baseline or {}).get("fx") or {}
     if fx.get("rates") and old_fx.get("rates") and fx.get("date") != old_fx.get("date") and fx.get("label") == old_fx.get("label"):
         moves = [c["text"] for c in board.get("changes", []) if c["kind"] == "汇率"]

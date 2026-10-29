@@ -25,7 +25,7 @@ def evidence():
             {"id": "reuters_usd", "source_id": "reuters", "observed_at": "2026-10-20", "value_usd": 11400, "board": "路透订单价"}],
         "listings": [{"id": "fr_materiel", "label": "法国零售 PNY", "url": "https://www.comparateur-gamer.fr/prix/x",
                       "currency": "EUR", "vat_rate": 0.2, "price": 16469.95, "price_seen_at": "2026-09-30", "note": "比价站"}],
-        "forecast": {"anchor_cny": 95000}}
+        "forecast": {"scenarios": [{"id": "base", "low": 85000, "high": 90000}]}}
 
 
 def fx(usd=6.7147, day="2026-10-29"):

@@ -84,6 +84,12 @@ def pick_items(state):
     return dated + [x for x in items if x["source_id"] == "nvidia"]
 
 
+def forecast_on(evidence, day):
+    """The forecast version in force on that day, so earlier images keep the numbers the group saw."""
+    versions = sorted(evidence.get("forecast_history", []) + [evidence["forecast"]], key=lambda f: f["issued_at"])
+    return next((f for f in reversed(versions) if f["issued_at"] <= day), versions[0])
+
+
 def render(evidence, state, output):
     market = state.get("channel")
     if not market:
@@ -92,7 +98,7 @@ def render(evidence, state, output):
     yuan = lambda v: f"{F.yen}{v:,.0f}"
     wan = lambda v: f"{v / 10000:.2f}万"
     p, stats = market["latest"], market["stats"]
-    forecast, review = evidence["forecast"], state["forecast_review"]
+    forecast, review = forecast_on(evidence, state["date"]), state["forecast_review"]
     # Days before the price board existed keep their original layout, so images in old group messages stay as sent.
     board = state.get("price_board")
     fx = (board or {}).get("fx") or {}
@@ -129,7 +135,7 @@ def render(evidence, state, output):
     digest = state.get("digest")
     if board and digest:
         inner = W - 2 * M - 2 * PAD
-        tag_w = max([d.textlength("相关型号", font=F(T_TINY, True))]) + 30
+        tag_w = d.textlength("海外零售", font=F(T_TINY, True)) + 30
         laid = [(i["tag"], wrap(d, i["text"], F(T_SMALL), inner - tag_w - 12, 2)) for i in digest["items"]]
         head = wrap(d, digest["headline"], F(T_H3, True), inner, 2)
         h = 30 + len(head) * 46 + 16 + sum(len(ls) * 38 + 14 for _, ls in laid) + (0 if laid else 38) + 20
@@ -139,7 +145,7 @@ def render(evidence, state, output):
             d.text((M + PAD, ty), line, font=F(T_H3, True), fill=AMBER if digest["quiet"] else DOWN)
             ty += 46
         ty += 16
-        tag_fill = {"新报价": (220, 252, 231), "网上挂价": (254, 243, 199), "海外零售": (219, 234, 254), "相关型号": (224, 231, 255), "情报": (243, 232, 255),
+        tag_fill = {"新报价": (220, 252, 231), "网上挂价": (254, 243, 199), "海外零售": (219, 234, 254), "情报": (243, 232, 255),
                     "官方": (254, 226, 226), "汇率": (241, 245, 249), "线索": (241, 245, 249), "新闻": (241, 245, 249)}
         for tag, lines in laid:
             chip(M + PAD, ty - 4, tag, tag_fill.get(tag, LINE), INK, T_TINY)
@@ -165,12 +171,7 @@ def render(evidence, state, output):
                          MUTED if not move else UP if move > 0 else DOWN))
         elif usd:
             kpis.append(("路透订单价", usd["native"], "汇率未取得，未折算", INK, MUTED))
-        # A same-memory card with a dated mainland quote is a closer reference than a converted retail price.
-        sister = next((w for w in market.get("watchlist", []) if "6000 D 84" in w["name"].replace("6000D", "6000 D") and w.get("min_ask")), None)
-        if sister:
-            kpis.append(("同平台 6000D 84GB 挂价", yuan(sister["min_ask"]),
-                         f"{sister.get('condition') or '货况未标明'} · 报价 {(sister.get('quote_date') or '未标明')[5:]}", INK, MUTED))
-        elif retail:
+        if retail:
             kpis.append(("海外零售 含税折算", yuan(retail["cny_vat"]), f"{retail['native'].split('（')[0]} · {retail['label']}", INK, MUTED))
         kpis.append(("渠道最低挂价", yuan(market["min_ask"]),
                      f"{market.get('delivery') or '交期未标明'} · 原报价 {(market.get('quote_date') or '未标明')[5:]}", INK, AMBER))
@@ -294,21 +295,6 @@ def render(evidence, state, output):
             d.text((M + PAD + d.textlength("今日变化", font=F(T_SMALL, True)) + 18, ty), line, font=F(T_SMALL), fill=INK)
             ty += 38
         y += h + GAP
-        # Sister cards on the same platform carry real dated quotes; they reprice in batches, unlike the template curve.
-        sisters = [w for w in market.get("watchlist", []) if w.get("min_ask")]
-        if sisters:
-            h = 96 + len(sisters) * 84 + 56
-            card(y, y + h)
-            d.text((M + PAD, y + 24), "同平台相关型号挂价", font=F(T_H2, True), fill=INK)
-            d.text((W - M - PAD, y + 34), "宽泛采销 · 卖方最低挂价", font=F(T_TINY), fill=MUTED, anchor="ra")
-            ty = y + 96
-            for w in sisters:
-                d.text((M + PAD, ty), w["model"], font=F(T_BODY, True), fill=INK)
-                d.text((W - M - PAD, ty), yuan(w["min_ask"]), font=F(T_BODY, True), fill=INK, anchor="ra")
-                d.text((M + PAD, ty + 42), f"报价 {w.get('quote_date') or '未标明'} · {w.get('condition') or '货况未标明'}", font=F(T_TINY), fill=MUTED)
-                ty += 84
-            d.text((M + PAD, ty + 4), f"对照：本卡渠道挂价 {yuan(market['min_ask'])}（{market.get('condition') or '货况未标明'}）", font=F(T_TINY), fill=TEXT)
-            y += h + GAP
     else:
         # 14-day chart.
         rows = market["series"][-14:]
@@ -362,13 +348,14 @@ def render(evidence, state, output):
     ax0, ax1 = M + 44, W - M - 44
     px = lambda v: ax0 + (min(max(v, v0), v1) - v0) / (v1 - v0) * (ax1 - ax0)
     ti = next((x for x in evidence["prices"] if x["id"] == "theinformation_price"), None)
+    smm = next(x["value_cny"] for x in evidence["prices"] if x["id"] == "smm_presale")
     if board:
-        marks = [(market["min_ask"], "渠道挂价", AMBER), (forecast["anchor_cny"], "SMM预售", INK)]
+        marks = [(market["min_ask"], "渠道挂价", AMBER), (smm, "SMM预售", INK)]
         if board_rows.get("reuters_usd", {}).get("cny_vat"):
             marks.append((board_rows["reuters_usd"]["cny_vat"], "路透含税折算", ASK))
     else:
         marks = [(market["min_ask"], "最低挂价", AMBER), (p["bid"], "平台买均", BID), (p["ask"], "平台卖均", ASK),
-                 (forecast["anchor_cny"], "SMM预售", INK)]
+                 (smm, "SMM预售", INK)]
     if ti:
         marks.append(((ti["low_cny"] + ti["high_cny"]) / 2, "The Information", AMBER))
     marks.sort(key=lambda m: m[0])
@@ -393,7 +380,7 @@ def render(evidence, state, output):
     for s in scen:
         d.rectangle([px(s["low"]), axy - 18, px(s["high"]), axy + 18], fill=SCENARIO_COLORS.get(s["id"], LINE))
         d.text(((px(s["low"]) + px(s["high"])) / 2, axy + 32), s["name"].split(" / ")[0], font=F(T_TINY), fill=TEXT, anchor="ma")
-    for v in range(v0, v1 + 1, 10000):
+    for v in range(-(-v0 // 10000) * 10000, v1 + 1, 10000):
         d.text((px(v), axy + 74), f"{v / 10000:g}万", font=F(20), fill=MUTED, anchor="ma")
     if ti:
         d.line([(px(ti["low_cny"]), axy - 27), (px(ti["high_cny"]), axy - 27)], fill=AMBER, width=5)

@@ -199,8 +199,8 @@ def forecast_status(evidence, checks, today):
     reasons = []
     if anchor_age > 14:
         reasons.append(f"价格锚点已距今 {anchor_age} 天，缺少直接卖方复询")
-    if by_id.get("smm", {}).get("status") != "ok":
-        reasons.append("预售锚点来源本轮未成功复现")
+    if by_id.get(forecast["anchor_source_id"], {}).get("status") != "ok":
+        reasons.append("预测锚点来源本轮未成功复现")
     if by_id.get("nvidia", {}).get("status") != "ok":
         reasons.append("官方页面本轮采集失败")
     if by_id.get("nvidia", {}).get("signals", {}).get("needs_review"):
@@ -210,7 +210,7 @@ def forecast_status(evidence, checks, today):
         reasons.append("预测期限届满或锚点超过 30 天；停止展示有效数值预测")
     return {"status": "expired" if expired else "review_required" if reasons else "low_confidence",
             "anchor_age_days": anchor_age, "reasons": reasons,
-            "reviewed_at": today.isoformat(), "issued_at": forecast["issued_at"],
+            "reviewed_at": today.isoformat(), "issued_at": forecast["issued_at"], "version": forecast["version"],
             "numeric_forecast_active": not expired,
             "note": "无新增已核验价格时，保持预测版本及发布日期；每天复核有效性，不生成伪新价。"}
 

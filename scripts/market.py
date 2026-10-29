@@ -124,7 +124,7 @@ def channel_template(market, previous):
 
 
 def daily_brief(evidence, market, previous, board=None):
-    anchor = evidence["forecast"]["anchor_cny"]
+    base = next(s for s in evidence["forecast"]["scenarios"] if s["id"] == "base")
     items = []
     domestic = (board or {}).get("domestic")
     if domestic:
@@ -149,7 +149,7 @@ def daily_brief(evidence, market, previous, board=None):
     else:
         channel += f"平台中间值较上日 {stats['day_change']:+,} 元（{stats['day_pct']:+.2f}%），较七日前 {stats['week_pct']:+.2f}%。"
     items.append({"title":"渠道挂价", "text":channel})
-    items.append({"title":"下一步核实", "text":f"取得短交期货源的当日报价与含税口径，与 {anchor:,} 元预售锚点对照。"})
+    items.append({"title":"下一步核实", "text":f"取得短交期货源的当日报价与含税口径，与 {base['low']:,}-{base['high']:,} 元基准区间对照。"})
     old = previous or {}
     changes = []
     fields = [("min_ask","最低挂价"),("quote_date","原报价日期"),("delivery","交期")]

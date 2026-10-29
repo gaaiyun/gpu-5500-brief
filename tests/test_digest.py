@@ -41,12 +41,11 @@ class DigestTests(unittest.TestCase):
         self.assertIn("-20", fx["text"])
         self.assertTrue(result["quiet"])
 
-    def test_sister_card_repricing_is_news(self):
+    def test_other_cards_stay_out_of_the_digest(self):
         today = state(channel={"watchlist": [{"model": "RTX PRO 6000 D 84G", "min_ask": 67000, "quote_date": "2026-10-30", "condition": "正常供应"}]})
         result = daily_digest(today, baseline())
-        item = next(i for i in result["items"] if i["tag"] == "相关型号")
-        self.assertIn("68,500→67,000", item["text"])
-        self.assertFalse(result["quiet"])
+        self.assertFalse([i for i in result["items"] if "6000" in i["text"]])
+        self.assertTrue(result["quiet"])
 
     def test_new_feed_items_and_leads_listed_once(self):
         feed = {"items": [{"id": "a", "title": "渠道报价约9.2万元", "publisher": "雷峰网", "grade": "B", "grade_label": "单一可信来源",
@@ -67,7 +66,7 @@ class DigestTests(unittest.TestCase):
 
     def test_without_baseline_nothing_is_called_new(self):
         result = daily_digest(state(), {})
-        self.assertFalse([i for i in result["items"] if i["tag"] in ("情报", "线索", "新闻", "相关型号")])
+        self.assertFalse([i for i in result["items"] if i["tag"] in ("情报", "线索", "新闻")])
 
 
 if __name__ == "__main__":

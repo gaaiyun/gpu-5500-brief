@@ -119,16 +119,16 @@ async function load(){
   $('official-status').textContent=official?.status==='ok'&&official.signals.coming_soon?'Coming Soon':'官方状态待复核';
   $('daily-brief').innerHTML=state.daily_brief.items.map(b=>`<div class="brief-item"><h3>${esc(b.title)}</h3><p>${esc(b.text)}</p></div>`).join('');
   const f=evidence.forecast,r=state.forecast_review,base=f.scenarios.find(x=>x.id==='base');
-  const anchorSource=evidence.sources.find(s=>s.id===f.anchor_source_id);
-  $('anchor-price').textContent=yuan(f.anchor_cny);$('anchor-date').textContent=`${anchorSource?.id==='smm'?'SMM':(anchorSource?.name||'')} · ${f.anchor_observed_at.slice(5)}`;
+  const anchor=evidence.prices.find(x=>x.id===f.anchor_price_id)||{};
+  $('anchor-price').textContent=anchor.value_cny?yuan(anchor.value_cny):`${anchor.low_cny/10000}—${anchor.high_cny/10000} 万`;$('anchor-date').textContent=`${anchor.board||''} · ${f.anchor_observed_at.slice(5)}`;
   $('base-range').textContent=`${(base.low/10000).toFixed(1)}—${(base.high/10000).toFixed(1)} 万 / 张`;
-  $('forecast-date').textContent=`首次判断 ${f.issued_at} · 本轮复核 ${r.reviewed_at}`;
+  $('forecast-date').textContent=`${f.version.slice(-2)} 版 ${f.issued_at} 发布 · 本轮复核 ${r.reviewed_at}`;
   $('forecast-state').textContent={low_confidence:'条件情景',review_required:'待复核',expired:'历史情景'}[r.status];
   if(!r.numeric_forecast_active){document.querySelector('.brief-bottom b').textContent='原预测已到期';}
   if(r.reasons.length){$('forecast-warning').hidden=false;$('forecast-warning').textContent=r.reasons.join('；');}
   $('scenario-rows').innerHTML=[...f.scenarios].sort((a,b)=>(a.id==='base'?-1:b.id==='base'?1:0)).map(x=>`<div class="scenario-row ${esc(x.id)}"><span>${esc(x.name.replace(' / ',' · '))}</span><strong>${x.low/10000}—${x.high/10000} 万</strong><p>${esc(x.trigger)}</p></div>`).join('');
   const dom=state.price_board?.domestic;
-  $('forecast-basis').textContent=`${dom?`已披露的大陆报价在${yuan(dom.low)}至${yuan(dom.high)}之间，`:''}SMM预售锚点${yuan(f.anchor_cny)}。区间为价格敏感性情景，未赋概率。新的独立报盘、官方定价或实际发货触发重估。`;
+  $('forecast-basis').textContent=`${dom?`已披露的大陆报价在${yuan(dom.low)}至${yuan(dom.high)}之间。`:''}${f.method}${f.revision?`修订：${f.revision}`:''}新的独立报盘、官方定价或实际发货触发重估。`;
   setupChart();renderEvidence();renderIntelligence();renderSources();
 }
 load().catch(error=>{$('load-error').hidden=false;$('load-error').textContent=error.message;$('run-state').textContent='数据加载失败 · 可打开研究报告';});

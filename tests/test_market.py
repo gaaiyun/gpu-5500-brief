@@ -44,7 +44,7 @@ class MarketTests(unittest.TestCase):
     def test_daily_change_is_separate_from_verified_price(self):
         market=parse_channel(payload(),"2026-10-25T20:00:00+08:00")
         previous={"latest":dict(market["latest"],ask=90000)}
-        result=daily_brief({"forecast":{"anchor_cny":95000}},market,previous)
+        result=daily_brief({"forecast":{"scenarios":[{"id":"base","low":85000,"high":90000}]}},market,previous)
         self.assertEqual(result["channel_changes"][0]["field"],"ask")
         self.assertNotIn("verified_price",result)
 
@@ -53,7 +53,7 @@ class MarketTests(unittest.TestCase):
         market["template"]=channel_template(market,None)
         self.assertTrue(market["template"]["formula"])
         previous=dict(market,min_ask=88000,latest=dict(market["latest"],ask=90000))
-        result=daily_brief({"forecast":{"anchor_cny":95000}},market,previous)
+        result=daily_brief({"forecast":{"scenarios":[{"id":"base","low":85000,"high":90000}]}},market,previous)
         self.assertEqual([c["field"] for c in result["channel_changes"]],["min_ask"])
 
     def test_failure_keeps_original_collection_time(self):
