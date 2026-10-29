@@ -191,6 +191,18 @@
       "price_seen_at": "2026-10-29",
       "sku": "VCNRTXPRO5500-SB",
       "note": "预订配货价，页面描述写 78GB 与 84GB 不符；去掉英国 20% 增值税后折算"
+    },
+    {
+      "id": "fr_ldlc_oem",
+      "label": "法国零售 PNY OEM 版",
+      "region": "法国",
+      "url": "https://www.ldlc.com/en/product/PB00754752.html",
+      "currency": "EUR",
+      "vat_rate": 0.2,
+      "price": 18169.95,
+      "price_seen_at": "2026-10-29",
+      "sku": "VCNRTXPRO5500-SB",
+      "note": "LDLC 零售价（OEM 版），去掉法国 20% 增值税后折算，未含关税运费"
     }
   ]
 }

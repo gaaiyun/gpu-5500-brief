@@ -67,6 +67,7 @@ def message(state):
         lines.append("\n".join(f"- {x['title']}（{x['publisher']}）{x['url']}" for x in leads[:10]))
     # Bare URLs, not [text](url): markdown links lose their address when copied out of DingTalk.
     lines.append(f"日报图原图：{image}")
+    lines.append("看到闲鱼、微信群或供应商的报价，在这里登记（可贴链接和截图），第二天进日报：https://github.com/gaaiyun/gpu-5500-brief/issues/new?template=quote.yml")
     lines.append(f"网站（完整曲线、报价对照与研究报告）：{SITE}")
     # The title and text both carry "5500" so a keyword-secured robot also accepts it.
     return {"msgtype": "markdown", "markdown": {"title": f"5500 日报 {day}", "text": "\n\n".join(lines)}}

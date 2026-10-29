@@ -208,6 +208,50 @@ class QuoteTests(unittest.TestCase):
         self.assertEqual(board["domestic"]["low"], 85000)
 
 
+ISSUE_BODY = ("### 单价（元/张）\n\n98,000\n\n### 来源\n\n闲鱼\n\n### 含税\n\n未知\n\n### 交期或货况\n\n现货\n\n"
+              "### 数量\n\n_No response_\n\n### 看到的日期\n\n2026-10-29\n\n### 链接\n\nhttps://www.goofish.com/item?id=123\n\n"
+              "### 凭证（截图或原文）\n\n![image](https://github.com/user-attachments/assets/abc)\n\n### 备注\n\n卖家称深圳自提")
+
+
+def issue(**kw):
+    base = {"number": 7, "html_url": "https://github.com/gaaiyun/gpu-5500-brief/issues/7", "author_association": "OWNER",
+            "created_at": "2026-10-29T03:00:00Z", "body": ISSUE_BODY, "labels": [{"name": "报价"}]}
+    base.update(kw)
+    return base
+
+
+class IssueQuoteTests(unittest.TestCase):
+    def test_form_becomes_quote_with_link_and_evidence(self):
+        rows, rejected = prices.quotes_from_issues([issue()], date(2026, 10, 29))
+        self.assertEqual(rejected, [])
+        row = rows[0]
+        self.assertEqual((row["price"], row["source"], row["date"], row["tax"]), (98000, "闲鱼", "2026-10-29", "未知"))
+        self.assertEqual(row["url"], "https://www.goofish.com/item?id=123")
+        self.assertTrue(row["evidence"])
+
+    def test_outsiders_ignored(self):
+        rows, rejected = prices.quotes_from_issues([issue(author_association="NONE")], date(2026, 10, 29))
+        self.assertEqual(rows, [])
+
+    def test_bad_price_reported(self):
+        rows, rejected = prices.quotes_from_issues([issue(body=ISSUE_BODY.replace("98,000", "9.8"))], date(2026, 10, 29))
+        self.assertEqual(rows, [])
+        self.assertIn("#7", rejected[0]["line"])
+
+    def test_blank_date_uses_submission_day(self):
+        body = ISSUE_BODY.replace("2026-10-29", "_No response_")
+        rows, _ = prices.quotes_from_issues([issue(body=body, created_at="2026-10-28T17:00:00Z")], date(2026, 10, 29))
+        self.assertEqual(rows[0]["date"], "2026-10-29")
+
+    def test_online_listing_row_links_to_listing(self):
+        rows, _ = prices.quotes_from_issues([issue()], date(2026, 10, 29))
+        board = prices.build_board(evidence(), None, fx(), listing(), [], date(2026, 10, 29), None, quotes=rows)
+        row = next(r for r in board["rows"] if r["id"] == "issue:7")
+        self.assertEqual(row["kind"], "网上挂价")
+        self.assertEqual(row["url"], "https://www.goofish.com/item?id=123")
+        self.assertIn("有截图", row["note"])
+
+
 def channel_payload(start_day):
     rows = []
     for i in range(14):

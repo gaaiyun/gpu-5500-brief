@@ -1,0 +1,66 @@
+name: 报价登记
+description: 记录在闲鱼、微信群、供应商那里看到的 RTX PRO 5500（84GB）单卡报价。提交后网站几分钟内更新，第二天的日报列在“今日新增”。
+title: "[报价] "
+labels: ["报价"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本页面公开可见：不要写对方的名字、电话、微信号。只有仓库成员提交的报价会进日报，标“未公开核实”。
+        撤回一条报价：关闭这个 issue 即可。
+  - type: input
+    id: price
+    attributes:
+      label: 单价（元/张）
+      description: 写元或万，例如 98000 或 9.8万
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: 来源
+      options:
+        - 闲鱼
+        - 微信群/同行群
+        - 供应商报价
+        - 客户询价
+        - 其他网站
+    validations:
+      required: true
+  - type: dropdown
+    id: tax
+    attributes:
+      label: 含税
+      options:
+        - 未知
+        - 含税
+        - 不含税
+  - type: input
+    id: delivery
+    attributes:
+      label: 交期或货况
+      description: 例如 现货、两周、期货三个月
+  - type: input
+    id: qty
+    attributes:
+      label: 数量
+      description: 整数，可留空
+  - type: input
+    id: date
+    attributes:
+      label: 看到的日期
+      description: YYYY-MM-DD，留空就是提交当天
+  - type: input
+    id: link
+    attributes:
+      label: 链接
+      description: 闲鱼商品链接或网页地址，没有可留空
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 凭证（截图或原文）
+      description: 截图可以直接粘贴进来，有凭证的报价在日报里标“有截图”
+  - type: input
+    id: note
+    attributes:
+      label: 备注

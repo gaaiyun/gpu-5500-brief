@@ -79,6 +79,27 @@ def merge_fx_history(old, new, today):
     return dict(sorted(merged.items()))
 
 
+def _quote(qid, day, price, tax, delivery, qty, source, note, today, url="", evidence=False):
+    """One checked quote, or ValueError; None when it is older than the display window."""
+    quoted = date.fromisoformat(day)
+    if quoted > today:
+        raise ValueError("日期在未来")
+    if (today - quoted).days > QUOTE_MAX_AGE:
+        return None
+    price = price.replace(",", "").replace("，", "").replace("元", "").strip()
+    value = float(price[:-1]) * 10000 if price.endswith("万") else float(price)
+    if not 30_000 <= value <= 300_000:
+        raise ValueError("单价不在 3万-30万元")
+    if tax not in QUOTE_TAX or source not in QUOTE_SOURCES:
+        raise ValueError("含税或来源类型不在可选项内")
+    if qty and not qty.isdigit():
+        raise ValueError("数量必须是整数")
+    if re.search(r"[<>]|javascript:", " ".join((delivery, note, url))):
+        raise ValueError("含标记或脚本")
+    return {"id": qid, "date": quoted.isoformat(), "price": int(value), "tax": tax, "delivery": delivery[:20], "qty": qty,
+            "source": source, "note": note[:40], "url": url if url.startswith("https://") else "", "evidence": evidence}
+
+
 def load_quotes(text, today):
     """Team-collected quotes from data/quotes.csv. Returns (rows, rejected); a bad line never stops the run."""
     rows, rejected = [], []
@@ -86,26 +107,46 @@ def load_quotes(text, today):
     for line in lines:
         try:
             cells = next(csv.reader(io.StringIO(line)))
-            cells += [""] * (7 - len(cells))
-            day, price, tax, delivery, qty, source, note = (c.strip() for c in cells[:7])
-            quoted = date.fromisoformat(day)
-            if quoted > today:
-                raise ValueError("日期在未来")
-            if (today - quoted).days > QUOTE_MAX_AGE:
-                continue
-            value = float(price.replace(",", ""))
-            if not 30_000 <= value <= 300_000:
-                raise ValueError("单价不在 3万-30万元")
-            if tax not in QUOTE_TAX or source not in QUOTE_SOURCES:
-                raise ValueError("含税或来源类型不在可选项内")
-            if qty and not qty.isdigit():
-                raise ValueError("数量必须是整数")
-            if re.search(r"[<>]|javascript:", line):
-                raise ValueError("含标记或脚本")
-            rows.append({"id": "quote:" + hashlib.sha1(line.strip().encode()).hexdigest()[:10], "date": quoted.isoformat(),
-                         "price": int(value), "tax": tax, "delivery": delivery[:20], "qty": qty, "source": source, "note": note[:40]})
+            cells += [""] * (8 - len(cells))
+            day, price, tax, delivery, qty, source, note, url = (c.strip() for c in cells[:8])
+            row = _quote("quote:" + hashlib.sha1(line.strip().encode()).hexdigest()[:10], day, price, tax, delivery, qty, source, note, today, url)
+            if row:
+                rows.append(row)
         except (ValueError, StopIteration) as error:
             rejected.append({"line": line[:80], "reason": str(error)})
+    return sorted(rows, key=lambda r: r["date"], reverse=True), rejected
+
+
+ISSUE_FIELDS = {"单价": "price", "来源": "source", "含税": "tax", "交期": "delivery", "数量": "qty", "看到的日期": "date",
+                "链接": "url", "凭证": "evidence", "备注": "note"}
+ISSUE_SOURCES = {"微信群/同行群": "同行群", "其他网站": "其他"}
+TRUSTED_AUTHORS = ("OWNER", "MEMBER", "COLLABORATOR")
+
+
+def quotes_from_issues(issues, today):
+    """Quotes submitted through the repository's quote form. Only the owner and collaborators count, so a stranger cannot plant a price."""
+    rows, rejected = [], []
+    for issue in issues:
+        if issue.get("author_association") not in TRUSTED_AUTHORS or "报价" not in [l["name"] for l in issue.get("labels", [])]:
+            continue
+        fields = {}
+        for block in re.split(r"^### ", issue.get("body") or "", flags=re.M)[1:]:
+            heading, _, value = block.partition("\n")
+            key = next((v for k, v in ISSUE_FIELDS.items() if heading.strip().startswith(k)), None)
+            value = value.strip()
+            if key and value != "_No response_":
+                fields[key] = value
+        # A blank date means the day it was submitted, in Beijing time.
+        submitted = (datetime.fromisoformat(issue["created_at"].replace("Z", "+00:00")) + timedelta(hours=8)).date().isoformat()
+        try:
+            row = _quote(f"issue:{issue['number']}", fields.get("date") or submitted, fields.get("price", ""),
+                         fields.get("tax", "未知"), fields.get("delivery", ""), fields.get("qty", ""),
+                         ISSUE_SOURCES.get(fields.get("source", ""), fields.get("source", "")), fields.get("note", ""), today,
+                         fields.get("url", "") or issue["html_url"], bool(fields.get("evidence")))
+            if row:
+                rows.append(row)
+        except ValueError as error:
+            rejected.append({"line": f"#{issue['number']}", "reason": str(error)})
     return sorted(rows, key=lambda r: r["date"], reverse=True), rejected
 
 
@@ -250,9 +291,14 @@ def build_board(evidence, market, fx, listings, feed_items, today, previous, quo
         rows.append(_converted(row, cny) if cny else dict(row, low=None, high=None, text=native))
 
     # Team quotes are the freshest mainland prices but unverified: listed and dated, kept out of the published range.
-    team = [_row(q["id"], f"团队询价 · {q['source']}", "团队询价", "", q["date"], today, money(q["price"]), q["price"],
-                 note="，".join(x for x in (q["tax"], f"交期{q['delivery']}" if q["delivery"] else "", f"{q['qty']}张" if q["qty"] else "", q["note"]) if x)
-                 + "；未公开核实") for q in quotes]
+    team = []
+    for q in quotes:
+        online = q["source"] in ("闲鱼", "其他") and q["url"] and "github.com" not in q["url"]
+        kind = "网上挂价" if online else "团队询价"
+        note = "，".join(x for x in (q["tax"], f"交期{q['delivery']}" if q["delivery"] else "", f"{q['qty']}张" if q["qty"] else "",
+                                     "有截图" if q.get("evidence") else "", q["note"]) if x)
+        team.append(_row(q["id"], f"{kind} · {q['source']}", kind, q.get("url", ""), q["date"], today, money(q["price"]), q["price"],
+                         note=note + "；未公开核实"))
     domestic = sorted((r for r in rows if not r["converted"] and r["low"]), key=lambda r: r["date"], reverse=True)
     latest = max(domestic, key=lambda r: r["date"], default=None)
     board = {"rows": domestic + team + [r for r in rows if r["converted"] or not r["low"]], "fx": fx,

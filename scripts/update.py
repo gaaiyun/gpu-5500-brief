@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
 import xml.etree.ElementTree as ET
@@ -17,7 +18,7 @@ from bs4 import BeautifulSoup
 from market import parse_channel, daily_brief, channel_template
 from intelligence import enrich
 from feed import load_feed, load_leads
-from prices import FX_HISTORY_DAYS, FX_HISTORY_URL, build_board, build_series, check_listing, fetch_fx, load_quotes, merge_fx_history, parse_fx_history
+from prices import FX_HISTORY_DAYS, FX_HISTORY_URL, build_board, build_series, check_listing, fetch_fx, load_quotes, quotes_from_issues, merge_fx_history, parse_fx_history
 from digest import daily_digest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -228,6 +229,21 @@ def fetch_fx_history(today):
         return {}, str(error)[:160]
 
 
+def fetch_quote_issues():
+    """Open issues filed through the quote form; the Actions token avoids the anonymous rate limit."""
+    repo = os.getenv("GITHUB_REPOSITORY", "gaaiyun/gpu-5500-brief")
+    headers = dict(HEADERS, Accept="application/vnd.github+json")
+    if os.getenv("GITHUB_TOKEN"):
+        headers["Authorization"] = "Bearer " + os.environ["GITHUB_TOKEN"]
+    try:
+        response = requests.get(f"https://api.github.com/repos/{repo}/issues", params={"labels": "报价", "state": "open", "per_page": 50},
+                                headers=headers, timeout=(10, 25))
+        response.raise_for_status()
+        return [x for x in response.json() if "pull_request" not in x], None
+    except Exception as error:
+        return [], str(error)[:160]
+
+
 def run(offline=False):
     evidence = read_json(ROOT / "data/evidence.json")
     previous = read_json(ROOT / "data/state.json", {})
@@ -266,6 +282,9 @@ def run(offline=False):
     feed_leads, leads_rejected = load_leads(feed_payload, today)
     # Team quotes live in a public file: data/quotes.csv carries no supplier names or contacts.
     quotes, quotes_rejected = load_quotes((ROOT / "data/quotes.csv").read_text(encoding="utf-8") if (ROOT / "data/quotes.csv").exists() else "", today)
+    issues, issues_error = fetch_quote_issues()
+    issue_quotes, issues_rejected = quotes_from_issues(issues, today)
+    quotes, quotes_rejected = sorted(quotes + issue_quotes, key=lambda q: q["date"], reverse=True), quotes_rejected + issues_rejected
     board = build_board(evidence, market, fx, listings, feed_items, today, baseline.get("price_board"), quotes)
     # The trend uses the central parity only; a fallback rate would put a jump in the line that the market never made.
     fetched_history, history_error = fx_history_job.result()
@@ -295,7 +314,7 @@ def run(offline=False):
         print(f"  {check.get('source_id') or check['id']}: {check['status']}" + (f" ({check['error']})" if check.get("error") else ""))
     print(f"  fx: {fx['status']} {fx.get('provider', '')} {fx.get('date', '')}" + (f" ({fx['error']})" if fx.get("error") else ""))
     print(f"  fx history: {len(fx_history)} days" + (f" ({history_error})" if history_error else ""))
-    print(f"  quotes: {len(quotes)} kept, {len(quotes_rejected)} rejected")
+    print(f"  quotes: {len(quotes)} kept ({len(issue_quotes)} from issues), {len(quotes_rejected)} rejected" + (f" (issues: {issues_error})" if issues_error else ""))
     print(f"  today: {state['digest']['headline']}")
     for item in state["digest"]["items"]:
         print(f"    [{item['tag']}] {item['text']}")

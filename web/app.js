@@ -96,7 +96,8 @@ function renderNews(){
 function renderSources(){
   const checks=Object.fromEntries(state.checks.map(c=>[c.source_id,c]));
   const healthy=state.checks.filter(x=>x.status==='ok').length;
-  $('source-status').textContent=`${healthy}/${state.checks.length} 可访问 · 原始日期与采集时间分别记录`;
+  const bad=state.quotes_rejected||[];
+  $('source-status').textContent=`${healthy}/${state.checks.length} 可访问 · 原始日期与采集时间分别记录${bad.length?` · ${bad.length} 条登记报价未采用：${bad.map(x=>`${x.line}（${x.reason}）`).join('；')}`:''}`;
   const names={nvidia:'NVIDIA 官方产品页',smm:'SMM 预售采访',cls:'财联社估价采访',reuters:'Reuters 订单与供货独家',trendforce:'TrendForce 价格与配额',tansun:'天阳科技合同公告',qudao:'宽泛采销公开行情'};
   $('source-list').innerHTML=evidence.sources.map(s=>{const c=checks[s.id]||{};return `<details class="source-row"><summary><span>${esc(names[s.id])}</span><small>${esc(s.published_at||'动态来源')}</small><small style="color:${c.status==='ok'?'var(--green)':'var(--red)'}">${c.status==='ok'?'可访问':'采集失败'}</small></summary><p>${esc(s.summary)}<br>${esc(s.limitations)}<br>本轮检查 ${time(c.checked_at)} · 上次成功 ${time(c.last_success_at)}${c.error?`<br>${esc(c.error)}`:''}<br><a href="${url(s.url)}" target="_blank" rel="noopener">查看原始来源 ↗</a></p></details>`;}).join('');
   $('audit-items').innerHTML=market.audit.map(a=>`<div class="audit-item"><h3>${esc(a.title)}</h3><p>${esc(a.detail)}</p></div>`).join('');

@@ -139,7 +139,7 @@ def render(evidence, state, output):
             d.text((M + PAD, ty), line, font=F(T_H3, True), fill=AMBER if digest["quiet"] else DOWN)
             ty += 46
         ty += 16
-        tag_fill = {"新报价": (220, 252, 231), "海外零售": (219, 234, 254), "相关型号": (224, 231, 255), "情报": (243, 232, 255),
+        tag_fill = {"新报价": (220, 252, 231), "网上挂价": (254, 243, 199), "海外零售": (219, 234, 254), "相关型号": (224, 231, 255), "情报": (243, 232, 255),
                     "官方": (254, 226, 226), "汇率": (241, 245, 249), "线索": (241, 245, 249), "新闻": (241, 245, 249)}
         for tag, lines in laid:
             chip(M + PAD, ty - 4, tag, tag_fill.get(tag, LINE), INK, T_TINY)

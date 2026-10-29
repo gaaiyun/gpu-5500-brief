@@ -4,7 +4,7 @@ from __future__ import annotations
 from datetime import date
 
 # A rate move or a new unverified lead is worth listing, but it is not news about the price.
-NEWS_TAGS = ("官方", "新报价", "海外零售", "相关型号", "情报")
+NEWS_TAGS = ("官方", "新报价", "网上挂价", "海外零售", "相关型号", "情报")
 MAX_ITEMS = 8
 
 
@@ -21,7 +21,8 @@ def daily_digest(state, baseline):
         items.append({"tag": "官方", "text": "NVIDIA 产品页 Coming Soon 标记变化，需人工核实是否开售"})
     for change in board.get("changes", []):
         if change["kind"] == "新报价":
-            items.append({"tag": "海外零售" if kinds.get(change["id"]) == "海外零售" else "新报价", "text": change["text"]})
+            kind = kinds.get(change["id"])
+            items.append({"tag": kind if kind in ("海外零售", "网上挂价") else "新报价", "text": change["text"]})
     if baseline:
         old = {w["model"]: w for w in (baseline.get("channel") or {}).get("watchlist", [])}
         for card in (state.get("channel") or {}).get("watchlist", []):

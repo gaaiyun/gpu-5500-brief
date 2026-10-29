@@ -13,6 +13,9 @@ on:
         description: '按每日定时任务处理（外部定时器使用，每个渠道当天只推一次）'
         type: boolean
         default: false
+  issues:
+    # A quote filed through the form shows on the site within minutes; it reaches the group with the next daily push.
+    types: [opened, edited, closed, reopened, labeled]
   schedule:
     # 16:35 UTC = next day 00:35 Asia/Shanghai. GitHub often starts scheduled jobs hours late or drops one,
     # so two backups follow; data/push_log.json keeps each channel to one push per day.
@@ -24,6 +27,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  issues: read
 
 concurrency:
   group: gpu-5500-pages
@@ -31,6 +35,7 @@ concurrency:
 
 jobs:
   update-and-deploy:
+    if: github.event_name != 'issues' || contains(github.event.issue.labels.*.name, '报价')
     runs-on: ubuntu-latest
     timeout-minutes: 20
     environment:
@@ -74,6 +79,7 @@ jobs:
         env:
           GPU_AI_ENDPOINT: ${{ vars.GPU_AI_ENDPOINT }}
           GPU_AI_TOKEN: ${{ secrets.GPU_AI_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: python scripts/update.py
       - name: Preserve daily collection records
         run: |
