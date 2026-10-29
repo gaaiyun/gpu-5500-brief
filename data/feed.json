@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-29T11:25:41+08:00",
+  "updated_at": "2026-10-29T16:06:59+08:00",
   "agent": "actions-sweep",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -96,6 +96,16 @@
     }
   ],
   "leads": [
+    {
+      "title": "深度拆解 RTX PRO 5500",
+      "publisher": "苏哥随笔",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E6%B7%B1%E5%BA%A6%E6%8B%86%E8%A7%A3%20RTX%20PRO%205500",
+      "published_at": "2026-10-29",
+      "found_via": "搜狗微信",
+      "snippet": "在出口管制与 AI 大模型狂飙的夹缝中,NVIDIA 又切出了精准的一刀——RTX PRO 5500.凭着 84GB 超大显存和 GB202 旗舰同款核...",
+      "seen_at": "2026-10-29"
+    },
     {
       "title": "为什么RTX PRO 5500是中国AI最合适的选择?",
       "publisher": "树懒的读书号",
@@ -235,16 +245,6 @@
       "found_via": "搜狗微信",
       "snippet": "RTX PRO 5500作为目前中国买家能合法买到的最强英伟达芯片之... 客户实际到货率可能仅有5%至10%.这从侧面印证了它在特定市...",
       "seen_at": "2026-10-27"
-    },
-    {
-      "title": "350亿美元GPU大单传出!三巨头争抢RTX PRO 5500,供货可能只有一小部分?",
-      "publisher": "GPU算力观察-聪哥",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=350%E4%BA%BF%E7%BE%8E%E5%85%83GPU%E5%A4%A7%E5%8D%95%E4%BC%A0%E5%87%BA%21%E4%B8%89%E5%B7%A8%E5%A4%B4%E4%BA%89%E6%8A%A2RTX%20PRO%205500%2C%E4%BE%9B%E8%B4%A7%E5%8F%AF%E8%83%BD%E5%8F%AA%E6%9C%89%E4%B8%80%E5%B0%8F%E9%83%A8%E5%88%86%3F",
-      "published_at": "2026-10-21",
-      "found_via": "搜狗微信",
-      "snippet": "RTX PRO 5500同样需要上游芯片制造、显存、板卡生产以及后续... 对客户来说,样卡、商业发货和批量到货之间仍有区别.样卡可以...",
-      "seen_at": "2026-10-28"
     }
   ],
   "sweep": {
