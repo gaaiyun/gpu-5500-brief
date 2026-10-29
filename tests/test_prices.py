@@ -156,6 +156,58 @@ class BoardTests(unittest.TestCase):
         self.assertIn("汇率", board["summary"])
 
 
+CCPR_HISTORY = {"data": {"head": ["USD/CNY", "EUR/CNY", "GBP/CNY"]}, "records": [
+    {"date": "2026-10-29", "values": ["6.7147", "7.4570", "8.9101"]},
+    {"date": "2026-10-28", "values": ["6.7165", "7.4499", "8.9097"]},
+    {"date": "2026-10-20", "values": ["6.6780", "7.4900", "8.9000"]}]}
+
+
+class SeriesTests(unittest.TestCase):
+    def test_parity_history_parsed(self):
+        rates = prices.parse_fx_history(CCPR_HISTORY)
+        self.assertEqual(rates["2026-10-28"], {"USD": 6.7165, "EUR": 7.4499, "GBP": 8.9097})
+
+    def test_history_merge_keeps_old_days_and_trims_window(self):
+        merged = prices.merge_fx_history({"2026-01-01": {"USD": 7.0}, "2026-10-01": {"USD": 6.7}},
+                                         prices.parse_fx_history(CCPR_HISTORY), date(2026, 10, 29))
+        self.assertNotIn("2026-01-01", merged)
+        self.assertEqual(sorted(merged)[0], "2026-10-01")
+        self.assertEqual(merged["2026-10-29"]["USD"], 6.7147)
+
+    def test_series_uses_only_what_was_known_that_day(self):
+        series = prices.build_series(evidence(), None, prices.parse_fx_history(CCPR_HISTORY), [], [], date(2026, 10, 29))
+        by_day = {p["date"]: p for p in series}
+        self.assertEqual((by_day["2026-10-13"]["low"], by_day["2026-10-13"]["high"]), (95000, 95000))
+        self.assertEqual((by_day["2026-10-21"]["low"], by_day["2026-10-21"]["high"]), (85000, 95000))
+        self.assertIsNone(by_day["2026-10-19"]["usd_vat"])
+        # Weekend and holiday gaps carry the last published parity.
+        self.assertEqual(by_day["2026-10-24"]["usd_vat"], round(11400 * 6.6780 * 1.13))
+        self.assertEqual(by_day["2026-10-29"]["usd_vat"], 86499)
+        self.assertEqual(by_day["2026-10-21"]["events"], ["The Information 售价"])
+
+
+class QuoteTests(unittest.TestCase):
+    TEXT = ("# 团队询价\n日期,单价,含税,交期,数量,来源类型,备注\n"
+            "2026-10-29,92000,含税,现货,10,供应商报价,深圳\n"
+            "2026-10-29,9200,含税,现货,10,供应商报价,单位写错\n"
+            "2026-11-30,92000,含税,现货,10,供应商报价,未来日期\n"
+            "2026-10-28,93000,不含税,两周,,同行群,\n")
+
+    def test_valid_rows_kept_bad_rows_reported(self):
+        rows, rejected = prices.load_quotes(self.TEXT, date(2026, 10, 29))
+        self.assertEqual([r["price"] for r in rows], [92000, 93000])
+        self.assertEqual(len(rejected), 2)
+
+    def test_team_quotes_listed_but_kept_out_of_published_range(self):
+        rows, _ = prices.load_quotes(self.TEXT, date(2026, 10, 29))
+        board = prices.build_board(evidence(), None, fx(), listing(), [], date(2026, 10, 29), None, quotes=rows)
+        team = [r for r in board["rows"] if r["kind"] == "团队询价"]
+        self.assertEqual(len(team), 2)
+        self.assertIn("未公开核实", team[0]["note"])
+        self.assertEqual(board["domestic"]["high"], 95000)
+        self.assertEqual(board["domestic"]["low"], 85000)
+
+
 def channel_payload(start_day):
     rows = []
     for i in range(14):

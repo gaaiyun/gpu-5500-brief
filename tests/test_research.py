@@ -26,6 +26,11 @@ def with_board(evidence,state,usd=6.7147):
     state["channel"]["template"]=channel_template(state["channel"],None)
     state["price_board"]=build_board(evidence,state["channel"],fx,[],[],date.fromisoformat(state["date"]),None)
     state["daily_brief"]=daily_brief(evidence,state["channel"],None,state["price_board"])
+    from digest import daily_digest
+    from prices import build_series
+    history={state["date"]:fx["rates"],"2026-10-20":dict(fx["rates"],USD=6.678)}
+    state["price_series"]=build_series(evidence,state["channel"],history,[],[],date.fromisoformat(state["date"]))
+    state["digest"]=daily_digest(state,{})
     return state
 
 

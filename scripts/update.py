@@ -17,7 +17,8 @@ from bs4 import BeautifulSoup
 from market import parse_channel, daily_brief, channel_template
 from intelligence import enrich
 from feed import load_feed, load_leads
-from prices import build_board, check_listing, fetch_fx
+from prices import FX_HISTORY_DAYS, FX_HISTORY_URL, build_board, build_series, check_listing, fetch_fx, load_quotes, merge_fx_history, parse_fx_history
+from digest import daily_digest
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = timezone(timedelta(hours=8))
@@ -219,6 +220,14 @@ def previous_day_state(today):
     return read_json(days[-1], {}) if days else {}
 
 
+def fetch_fx_history(today):
+    try:
+        start = (today - timedelta(days=FX_HISTORY_DAYS)).isoformat()
+        return parse_fx_history(get_json(FX_HISTORY_URL.format(start=start, end=today.isoformat()))), None
+    except Exception as error:
+        return {}, str(error)[:160]
+
+
 def run(offline=False):
     evidence = read_json(ROOT / "data/evidence.json")
     previous = read_json(ROOT / "data/state.json", {})
@@ -231,6 +240,7 @@ def run(offline=False):
     prev_listings = {x["id"]: x for x in previous.get("listings", [])}
     with ThreadPoolExecutor(max_workers=4) as pool:
         fx_job = pool.submit(fetch_fx, get_json, previous.get("fx"), checked_at)
+        fx_history_job = pool.submit(fetch_fx_history, datetime.fromisoformat(checked_at).date())
         listings = list(pool.map(lambda x: check_listing(x, prev_listings.get(x["id"]), get_text, checked_at), evidence.get("listings", [])))
         checks = list(pool.map(lambda s: check_source(s, prev_checks.get(s["id"]), checked_at), evidence["sources"]))
         feeds = list(pool.map(lambda item: collect_feed(item, checked_at), [
@@ -254,20 +264,29 @@ def run(offline=False):
     feed_payload = read_json(ROOT / "data/feed.json", {})
     feed_items, feed_rejected = load_feed(feed_payload, today)
     feed_leads, leads_rejected = load_leads(feed_payload, today)
-    board = build_board(evidence, market, fx, listings, feed_items, today, baseline.get("price_board"))
+    # Team quotes live in a public file: data/quotes.csv carries no supplier names or contacts.
+    quotes, quotes_rejected = load_quotes((ROOT / "data/quotes.csv").read_text(encoding="utf-8") if (ROOT / "data/quotes.csv").exists() else "", today)
+    board = build_board(evidence, market, fx, listings, feed_items, today, baseline.get("price_board"), quotes)
+    # The trend uses the central parity only; a fallback rate would put a jump in the line that the market never made.
+    fetched_history, history_error = fx_history_job.result()
+    if fx["status"] == "ok" and fx["provider"] == "chinamoney":
+        fetched_history[fx["date"]] = fx["rates"]
+    fx_history = merge_fx_history(previous.get("fx_history"), fetched_history, today)
     state = {"schema_version": 1, "checked_at": checked_at, "date": today.isoformat(),
              "checks": checks, "feeds": [{k:v for k,v in f.items() if k != "entries"} for f in feeds],
              "headlines": headlines, "headlines_carried_forward": carried,
              "headline_collection_at": previous.get("headline_collection_at") if carried else checked_at,
              "forecast_review": forecast_status(evidence, checks, today),
              "channel":market,"channel_status":channel_check.get("status", "failed"),
-             "fx":fx,"listings":listings,"price_board":board,
+             "fx":fx,"fx_history":fx_history,"listings":listings,"price_board":board,"quotes_rejected":quotes_rejected,
+             "price_series":build_series(evidence,market,fx_history,quotes,feed_items,today),
              "daily_brief":daily_brief(evidence,market,baseline.get("channel"),board),
              "new_verified_price_count": 0,
              "summary": "本轮自动采集不把新闻标题或聚合挂牌升级为已核验价格；已核验价格更新需要证据复核。"}
     state["intelligence"] = enrich(evidence,state)
     state["feed"] = {"items": feed_items, "leads": feed_leads, "rejected": feed_rejected + leads_rejected,
                      "updated_at": (feed_payload or {}).get("updated_at"), "agent": (feed_payload or {}).get("agent")}
+    state["digest"] = daily_digest(state, baseline)
     save_json(ROOT / "data/state.json", state)
     save_json(ROOT / "data/history" / f"{today.isoformat()}.json", state)
     healthy = sum(c["status"] == "ok" for c in checks)
@@ -275,7 +294,11 @@ def run(offline=False):
     for check in checks + listings:
         print(f"  {check.get('source_id') or check['id']}: {check['status']}" + (f" ({check['error']})" if check.get("error") else ""))
     print(f"  fx: {fx['status']} {fx.get('provider', '')} {fx.get('date', '')}" + (f" ({fx['error']})" if fx.get("error") else ""))
-    print(f"  today: {board['summary']}")
+    print(f"  fx history: {len(fx_history)} days" + (f" ({history_error})" if history_error else ""))
+    print(f"  quotes: {len(quotes)} kept, {len(quotes_rejected)} rejected")
+    print(f"  today: {state['digest']['headline']}")
+    for item in state["digest"]["items"]:
+        print(f"    [{item['tag']}] {item['text']}")
     # Partial source failure is visible, while a complete outage fails CI.
     if healthy == 0:
         raise RuntimeError("所有核心来源采集失败；已保留失败记录，禁止宣称刷新成功")

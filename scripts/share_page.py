@@ -41,9 +41,14 @@ def body_html(state):
     day = state["date"]
     e = escape
     if state.get("price_board"):
-        rows = price_lines(state, lambda r: f"<a href=\"{e(r['url'])}\">{e(r['label'])}</a>")
-        head = [f"<p><b>今日变化</b>：{e(state['price_board']['summary'])}</p>",
-                "<p><b>价格证据（按原始日期）</b><br>" + "<br>".join(rows) + "</p>"]
+        rows = price_lines(state, lambda r: f"<a href=\"{e(r['url'])}\">{e(r['label'])}</a>" if r["url"] else e(r["label"]))
+        digest = state.get("digest")
+        if digest:
+            items = "".join(f"<br>[{e(i['tag'])}] " + (f"<a href=\"{e(i['url'])}\">{e(i['text'])}</a>" if i.get("url") else e(i["text"])) for i in digest["items"])
+            head = [f"<p><b>今日新增：{e(digest['headline'])}</b>{items}</p>"]
+        else:
+            head = [f"<p><b>今日变化</b>：{e(state['price_board']['summary'])}</p>"]
+        head.append("<p><b>价格证据（按原始日期）</b><br>" + "<br>".join(rows) + "</p>")
     else:
         head = [f"<p><b>渠道（{e(p['date'])}）</b>卖均 ¥{p['ask']:,}，买均 ¥{p['bid']:,}，中间值日变动 {stats['day_pct']:+.2f}%；"
                 f"最低挂价 ¥{market['min_ask']:,}（交期 {e(market.get('delivery') or '未标明')}，原报价 {e(market.get('quote_date') or '未标明')}）。"
@@ -92,7 +97,7 @@ def page_html(state):
     board = state.get("price_board")
     dom = (board or {}).get("domestic")
     if dom:
-        summary = f"大陆报价 {dom['low']:,}-{dom['high']:,} 元 · {board['summary']}"
+        summary = f"大陆报价 {dom['low']:,}-{dom['high']:,} 元 · " + ((state.get("digest") or {}).get("headline") or board["summary"])
     else:
         summary = f"卖均 ¥{p['ask']:,} · 买均 ¥{p['bid']:,} · 6 条带来源的市场情报"
     return f"""<!doctype html>

@@ -34,8 +34,12 @@ def message(state):
     image = f"{SITE}daily/{day}.png"
     lines = [f"#### RTX PRO 5500 大陆行情日报 {day}",
              f"转发微信用这一条链接（图、情报和来源都在里面）：{page_url(day)}"]
+    digest = state.get("digest")
+    if digest:
+        lines.append(f"**今日新增：{digest['headline']}**  \n"
+                     + "  \n".join(f"[{i['tag']}] {i['text']}" + (f" {i['url']}" if i.get("url") else "") for i in digest["items"]))
     if state.get("price_board"):
-        lines += [f"**今日变化** {state['price_board']['summary']}",
+        lines += ([] if digest else [f"**今日变化** {state['price_board']['summary']}"]) + [
                   "**价格证据（按原始日期）**  \n" + "  \n".join(price_lines(state))]
     else:
         market = state["channel"]

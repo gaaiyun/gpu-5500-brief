@@ -64,7 +64,8 @@ function renderEvidence(){
   });
   $('evidence-rows').innerHTML=rows.join('');
   $('fx-note').textContent=fx.rates?`每条报价按原始日期列出 · 海外价格按${fx.label} ${fx.date}${fx.status==='carried'?'（沿用）':''}折算，不是新报价`:'每条报价按原始日期列出 · 本轮未取得汇率，海外价格只列原币';
-  $('today-change').textContent=`今日变化：${board.summary}`;
+  const digest=state.digest;
+  $('today-change').innerHTML=digest?`<b>今日新增：${esc(digest.headline)}</b>${digest.items.map(i=>`<br>[${esc(i.tag)}] ${i.url?`<a class="link" href="${url(i.url)}" target="_blank" rel="noopener">${esc(i.text)} ↗</a>`:esc(i.text)}`).join('')}`:`今日变化：${esc(board.summary)}`;
   const byId=Object.fromEntries(board.rows.map(r=>[r.id,r]));
   const dom=board.domestic,usd=byId.reuters_usd,retail=board.rows.find(r=>r.kind==='海外零售'&&r.cny_vat);
   if(dom){$('kpi-domestic').textContent=`${dom.low/10000}—${dom.high/10000} 万`;$('kpi-domestic-sub').textContent=`${dom.count} 条来源 · 最新 ${dom.latest_date.slice(5)} ${dom.latest_label}`;}

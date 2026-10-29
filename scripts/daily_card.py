@@ -125,6 +125,32 @@ def render(evidence, state, output):
         x = chip(x, 182, text, (30, 41, 59), (226, 232, 240))
     y = 268 + GAP + 6
 
+    # What changed since yesterday's report comes first; a quiet day says so instead of showing a fake move.
+    digest = state.get("digest")
+    if board and digest:
+        inner = W - 2 * M - 2 * PAD
+        tag_w = max([d.textlength("相关型号", font=F(T_TINY, True))]) + 30
+        laid = [(i["tag"], wrap(d, i["text"], F(T_SMALL), inner - tag_w - 12, 2)) for i in digest["items"]]
+        head = wrap(d, digest["headline"], F(T_H3, True), inner, 2)
+        h = 30 + len(head) * 46 + 16 + sum(len(ls) * 38 + 14 for _, ls in laid) + (0 if laid else 38) + 20
+        d.rounded_rectangle([M, y, W - M, y + h], radius=20, fill=(255, 251, 235) if digest["quiet"] else (236, 253, 245), outline=LINE)
+        ty = y + 30
+        for line in head:
+            d.text((M + PAD, ty), line, font=F(T_H3, True), fill=AMBER if digest["quiet"] else DOWN)
+            ty += 46
+        ty += 16
+        tag_fill = {"新报价": (220, 252, 231), "海外零售": (219, 234, 254), "相关型号": (224, 231, 255), "情报": (243, 232, 255),
+                    "官方": (254, 226, 226), "汇率": (241, 245, 249), "线索": (241, 245, 249), "新闻": (241, 245, 249)}
+        for tag, lines in laid:
+            chip(M + PAD, ty - 4, tag, tag_fill.get(tag, LINE), INK, T_TINY)
+            for line in lines:
+                d.text((M + PAD + tag_w + 12, ty), line, font=F(T_SMALL), fill=TEXT)
+                ty += 38
+            ty += 14
+        if not laid:
+            d.text((M + PAD, ty), "过去一天没有新报道、新线索或汇率变动。", font=F(T_SMALL), fill=MUTED)
+        y += h + GAP
+
     # KPI cards, 2 x 2.
     cw = (W - 2 * M - GAP) / 2
     if board:
@@ -139,7 +165,12 @@ def render(evidence, state, output):
                          MUTED if not move else UP if move > 0 else DOWN))
         elif usd:
             kpis.append(("路透订单价", usd["native"], "汇率未取得，未折算", INK, MUTED))
-        if retail:
+        # A same-memory card with a dated mainland quote is a closer reference than a converted retail price.
+        sister = next((w for w in market.get("watchlist", []) if "6000 D 84" in w["name"].replace("6000D", "6000 D") and w.get("min_ask")), None)
+        if sister:
+            kpis.append(("同平台 6000D 84GB 挂价", yuan(sister["min_ask"]),
+                         f"{sister.get('condition') or '货况未标明'} · 报价 {(sister.get('quote_date') or '未标明')[5:]}", INK, MUTED))
+        elif retail:
             kpis.append(("海外零售 含税折算", yuan(retail["cny_vat"]), f"{retail['native'].split('（')[0]} · {retail['label']}", INK, MUTED))
         kpis.append(("渠道最低挂价", yuan(market["min_ask"]),
                      f"{market.get('delivery') or '交期未标明'} · 原报价 {(market.get('quote_date') or '未标明')[5:]}", INK, AMBER))
@@ -160,6 +191,67 @@ def render(evidence, state, output):
         d.text((x0 + PAD, y0 + 134), sub, font=F(T_TINY), fill=sub_color)
     y += ((len(kpis) + 1) // 2) * (kh + GAP)
 
+    # Reference trend: each day's values use only what was known that day.
+    series = state.get("price_series") or []
+    if board and len(series) >= 2:
+        ch = 700
+        card(y, y + ch)
+        d.text((M + PAD, y + 24), "参考价走势", font=F(T_H2, True), fill=INK)
+        for k, line in enumerate(wrap(d, "按当日可得信息逐日回算：蓝线随人民币中间价变，色带为已披露大陆报价区间，▲为当天出现新报价。",
+                                      F(T_TINY), W - 2 * M - 2 * PAD, 2)):
+            d.text((M + PAD, y + 76 + k * 32), line, font=F(T_TINY), fill=MUTED)
+        lx = W - M - PAD
+        for label, color in (("渠道挂价", AMBER), ("路透含税折算", ASK)):
+            lx -= d.textlength(label, font=F(T_TINY))
+            d.text((lx, y + 32), label, font=F(T_TINY), fill=TEXT)
+            d.rounded_rectangle([lx - 34, y + 44, lx - 10, y + 50], radius=3, fill=color)
+            lx -= 58
+        left, right, top, bottom = M + 120, W - M - 190, y + 170, y + 520
+        values = [v for pt in series for v in (pt["low"], pt["high"], pt["channel"], pt["usd_vat"], *pt["team"]) if v]
+        tick = 5000 if max(values) - min(values) > 12000 else 2000
+        lo, hi = (min(values) // tick) * tick - tick / 2, (max(values) // tick + 1) * tick + tick / 2
+        xs = lambda i: left + i / max(len(series) - 1, 1) * (right - left)
+        ys = lambda v: bottom - (v - lo) / (hi - lo) * (bottom - top)
+        for v in range(int((lo // tick + 1) * tick), int(hi), tick):
+            d.line([(left, ys(v)), (right, ys(v))], fill=LINE, width=1)
+            d.text((left - 16, ys(v)), f"{v / 10000:g}万", font=F(T_TINY), fill=MUTED, anchor="rm")
+        overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        od = ImageDraw.Draw(overlay)
+        for i, pt in enumerate(series):
+            if pt["low"] is not None:
+                x0, x1 = xs(max(i - .5, 0)), xs(min(i + .5, len(series) - 1))
+                od.rectangle([x0, ys(pt["high"]) - 3, x1, ys(pt["low"]) + 3], fill=(37, 99, 235, 30))
+        img.alpha_composite(overlay)
+        d = ImageDraw.Draw(img)
+        for field, color in (("channel", AMBER), ("usd_vat", ASK)):
+            pts = [(xs(i), ys(pt[field])) for i, pt in enumerate(series) if pt[field]]
+            if len(pts) >= 2:
+                d.line(pts, fill=color, width=5 if field == "usd_vat" else 3, joint="curve")
+            if pts:
+                ex, ey = pts[-1]
+                d.ellipse([ex - 7, ey - 7, ex + 7, ey + 7], fill=CARD, outline=color, width=4)
+                d.text((ex + 16, ey + (14 if field == "channel" else -14)), yuan(series[-1][field]), font=F(T_SMALL, True), fill=color, anchor="lm")
+        for i, pt in enumerate(series):
+            for v in pt["team"]:
+                d.ellipse([xs(i) - 7, ys(v) - 7, xs(i) + 7, ys(v) + 7], fill=BID)
+            if pt["events"] or pt["team"]:
+                tx = xs(i)
+                d.polygon([(tx, bottom + 18), (tx - 9, bottom + 34), (tx + 9, bottom + 34)], fill=DOWN)
+        step = max(1, (len(series) - 1) // 5)
+        for i in sorted(set(list(range(0, len(series), step)) + [len(series) - 1])):
+            if i != len(series) - 1 and len(series) - 1 - i < step / 2:
+                continue
+            d.text((xs(i), bottom + 46), series[i]["date"][5:].replace("-", "/"), font=F(T_TINY), fill=MUTED, anchor="ma")
+        first = next((pt for pt in series if pt["usd_vat"]), None)
+        if first and first is not series[-1]:
+            delta = series[-1]["usd_vat"] - first["usd_vat"]
+            last_event = max((pt["date"] for pt in series if pt["events"] or pt["team"]), default="")
+            note = (f"路透含税折算自 {first['date'][5:]} 起 {delta:+,} 元（{delta / first['usd_vat'] * 100:+.2f}%），全部来自汇率变化。"
+                    + (f"最近一次新报价出现在 {last_event[5:]}。" if last_event else ""))
+            for k, line in enumerate(wrap(d, note, F(T_TINY), W - 2 * M - 2 * PAD - 2 * T_TINY, 2)):
+                d.text((M + PAD, y + ch - 84 + k * 32), line, font=F(T_TINY), fill=TEXT)
+        y += ch + GAP
+
     if board:
         # Price evidence: each quote with its own date; converted rows say so.
         inner = W - 2 * M - 2 * PAD
@@ -175,8 +267,9 @@ def render(evidence, state, output):
             value = r["text"] if r["low"] else "未折算"
             laid.append((r, wrap(d, meta, F(T_TINY), inner, 2), flag, value))
         # Closing punctuation may run past the wrap width, so leave room for it.
-        summary = wrap(d, board["summary"], F(T_SMALL), inner - d.textlength("今日变化", font=F(T_SMALL, True)) - 18 - 2 * T_SMALL, 4)
-        h = 96 + sum(48 + len(m) * 32 + 22 for _, m, _, _ in laid) + 14 + len(summary) * 38 + 24
+        # With the digest at the top, the change line would only repeat it.
+        summary = [] if digest else wrap(d, board["summary"], F(T_SMALL), inner - d.textlength("今日变化", font=F(T_SMALL, True)) - 18 - 2 * T_SMALL, 4)
+        h = 96 + sum(48 + len(m) * 32 + 22 for _, m, _, _ in laid) + (14 + len(summary) * 38 if summary else 0) + 24
         card(y, y + h)
         d.text((M + PAD, y + 24), "价格证据表", font=F(T_H2, True), fill=INK)
         rate_note = f"{fx['label']} {fx['date'][5:]}" + ("（沿用）" if fx.get("status") == "carried" else "") if fx.get("rates") else "汇率未取得"
@@ -195,11 +288,27 @@ def render(evidence, state, output):
             d.line([(M + PAD, ty), (W - M - PAD, ty)], fill=LINE, width=1)
             ty += 12
         ty += 14
-        d.text((M + PAD, ty), "今日变化", font=F(T_SMALL, True), fill=AMBER)
+        if summary:
+            d.text((M + PAD, ty), "今日变化", font=F(T_SMALL, True), fill=AMBER)
         for line in summary:
             d.text((M + PAD + d.textlength("今日变化", font=F(T_SMALL, True)) + 18, ty), line, font=F(T_SMALL), fill=INK)
             ty += 38
         y += h + GAP
+        # Sister cards on the same platform carry real dated quotes; they reprice in batches, unlike the template curve.
+        sisters = [w for w in market.get("watchlist", []) if w.get("min_ask")]
+        if sisters:
+            h = 96 + len(sisters) * 84 + 56
+            card(y, y + h)
+            d.text((M + PAD, y + 24), "同平台相关型号挂价", font=F(T_H2, True), fill=INK)
+            d.text((W - M - PAD, y + 34), "宽泛采销 · 卖方最低挂价", font=F(T_TINY), fill=MUTED, anchor="ra")
+            ty = y + 96
+            for w in sisters:
+                d.text((M + PAD, ty), w["model"], font=F(T_BODY, True), fill=INK)
+                d.text((W - M - PAD, ty), yuan(w["min_ask"]), font=F(T_BODY, True), fill=INK, anchor="ra")
+                d.text((M + PAD, ty + 42), f"报价 {w.get('quote_date') or '未标明'} · {w.get('condition') or '货况未标明'}", font=F(T_TINY), fill=MUTED)
+                ty += 84
+            d.text((M + PAD, ty + 4), f"对照：本卡渠道挂价 {yuan(market['min_ask'])}（{market.get('condition') or '货况未标明'}）", font=F(T_TINY), fill=TEXT)
+            y += h + GAP
     else:
         # 14-day chart.
         rows = market["series"][-14:]

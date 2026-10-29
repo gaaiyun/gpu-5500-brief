@@ -76,13 +76,16 @@ def parse_channel(payload, checked_at):
                   independent_market_samples=False,
                   data_sha256=hashlib.sha256(json.dumps(candidates[0],sort_keys=True,ensure_ascii=False).encode()).hexdigest())
     watchlist = []
-    patterns = [r"RTX PRO 6000 D 84", r"RTX PRO 5000 72", r"RTX 5090 32GB 涡轮", r"RTX 5090 32GB 风扇"]
+    patterns = [r"RTX PRO 6000 D 84", r"RTX PRO 5000 72", r"RTX PRO 6000 工作站版 96", r"RTX 5090 32GB 涡轮", r"RTX 5090 32GB 风扇"]
     for pattern in patterns:
-        candidate = next((x for x in products if re.search(pattern,x.get("name", ""), re.I)), None)
+        # Some models are listed twice; the entry carrying a quote date is the one a seller actually priced.
+        matches = sorted((x for x in products if re.search(pattern,x.get("name", ""), re.I)),
+                         key=lambda x: not (x.get("spec_attributes") or {}).get("最新报价日期"))
+        candidate = matches[0] if matches else None
         if candidate:
             try:
                 product = normalize_product(candidate)
-                watchlist.append({k:product[k] for k in ["name","model","unit","latest","stats","quote_date","min_ask"]})
+                watchlist.append({k:product[k] for k in ["name","model","unit","latest","stats","quote_date","min_ask","condition"]})
             except (ValueError,KeyError,TypeError):
                 continue
     target["watchlist"] = watchlist
