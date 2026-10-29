@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-29T10:59:25+08:00",
+  "updated_at": "2026-10-29T11:02:39+08:00",
   "agent": "actions-sweep",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -197,6 +197,16 @@
       "seen_at": "2026-10-29"
     },
     {
+      "title": "350亿美元GPU订单,为什么可能只到货5%—10%",
+      "publisher": "老唐数智观察",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=350%E4%BA%BF%E7%BE%8E%E5%85%83GPU%E8%AE%A2%E5%8D%95%2C%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%AF%E8%83%BD%E5%8F%AA%E5%88%B0%E8%B4%A75%25%E2%80%9410%25",
+      "published_at": "2026-10-22",
+      "found_via": "搜狗微信",
+      "snippet": "RTX PRO 5500 显卡的总标价,订单量超过300万颗.按理说,掏... 而是被一笔笔「下了单也不一定能按时拿到货」的订单推着往前走...",
+      "seen_at": "2026-10-29"
+    },
+    {
       "title": "RTX Pro5500\\6000D\\RTX5090的技术对比分析(含选型思路)",
       "publisher": "两年砍柴",
       "source_type": "公众号",
@@ -235,25 +245,18 @@
       "found_via": "搜狗微信",
       "snippet": "RTX PRO 5500同样需要上游芯片制造、显存、板卡生产以及后续... 对客户来说,样卡、商业发货和批量到货之间仍有区别.样卡可以...",
       "seen_at": "2026-10-28"
-    },
-    {
-      "title": "字节阿里腾讯下单 350 亿美元英伟达卡,但拿不到货",
-      "publisher": "AIFrontWatch",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%AD%97%E8%8A%82%E9%98%BF%E9%87%8C%E8%85%BE%E8%AE%AF%E4%B8%8B%E5%8D%95%20350%20%E4%BA%BF%E7%BE%8E%E5%85%83%E8%8B%B1%E4%BC%9F%E8%BE%BE%E5%8D%A1%2C%E4%BD%86%E6%8B%BF%E4%B8%8D%E5%88%B0%E8%B4%A7",
-      "published_at": "2026-10-21",
-      "found_via": "搜狗微信",
-      "snippet": "亿美元英伟达卡,但拿不到货AI 前线观察在美国出口管制之下,中... RTX PRO 5500 显卡,按每张约 11400 美元计算,总价值超过 ...",
-      "seen_at": "2026-10-28"
     }
   ],
   "sweep": {
     "date": "2026-10-29",
-    "candidates": 0,
-    "read": 0,
+    "candidates": 1,
+    "read": 1,
     "added": [],
     "corroborated": 0,
-    "model": null,
-    "notes": []
+    "model": "@cf/zai-org/glm-4.7-flash",
+    "notes": [
+      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)",
+      "无关：https://news.mydrivers.com/1/1161/1161491.htm"
+    ]
   }
 }
