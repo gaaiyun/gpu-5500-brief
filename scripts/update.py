@@ -20,6 +20,7 @@ from intelligence import enrich
 from feed import load_feed, load_leads
 from prices import FX_HISTORY_DAYS, FX_HISTORY_URL, build_board, build_series, check_listing, fetch_fx, load_quotes, quotes_from_issues, merge_fx_history, parse_fx_history
 from digest import daily_digest
+import push_log
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = timezone(timedelta(hours=8))
@@ -229,6 +230,12 @@ def previous_day_state(today):
     return read_json(days[-1], {}) if days else {}
 
 
+def report_baseline(today):
+    """The last report the group received before today. Counting from it, a quote seen at noon still makes the next
+    morning report, and reruns within a day keep one baseline. Before any report was kept, the previous day's archive."""
+    return push_log.last_report(today.isoformat(), include_day=False) or previous_day_state(today)
+
+
 def fetch_fx_history(today):
     try:
         start = (today - timedelta(days=FX_HISTORY_DAYS)).isoformat()
@@ -293,7 +300,8 @@ def run(offline=False):
     issues, issues_error = fetch_quote_issues()
     issue_quotes, issues_rejected = quotes_from_issues(issues, today)
     quotes, quotes_rejected = sorted(quotes + issue_quotes, key=lambda q: q["date"], reverse=True), quotes_rejected + issues_rejected
-    board = build_board(evidence, market, fx, listings, feed_items, today, baseline.get("price_board"), quotes)
+    reported = report_baseline(today)
+    board = build_board(evidence, market, fx, listings, feed_items, today, reported.get("price_board"), quotes)
     # The trend uses the central parity only; a fallback rate would put a jump in the line that the market never made.
     fetched_history, history_error = fx_history_job.result()
     if fx["status"] == "ok" and fx["provider"] == "chinamoney":
@@ -313,7 +321,7 @@ def run(offline=False):
     state["intelligence"] = enrich(evidence,state)
     state["feed"] = {"items": feed_items, "leads": feed_leads, "rejected": feed_rejected + leads_rejected,
                      "updated_at": (feed_payload or {}).get("updated_at"), "agent": (feed_payload or {}).get("agent")}
-    state["digest"] = daily_digest(state, baseline)
+    state["digest"] = daily_digest(state, reported)
     save_json(ROOT / "data/state.json", state)
     save_json(ROOT / "data/history" / f"{today.isoformat()}.json", state)
     healthy = sum(c["status"] == "ok" for c in checks)

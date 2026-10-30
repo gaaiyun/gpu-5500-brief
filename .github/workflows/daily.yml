@@ -14,7 +14,7 @@ on:
         type: boolean
         default: false
   issues:
-    # A quote filed through the form shows on the site within minutes; it reaches the group with the next daily push.
+    # A quote filed through the form shows on the site within minutes and goes out as a flash alert in the daytime.
     types: [opened, edited, closed, reopened, labeled]
   schedule:
     # 16:35 UTC = next day 00:35 Asia/Shanghai. GitHub often starts scheduled jobs hours late or drops one,
@@ -22,6 +22,9 @@ on:
     - cron: '35 16 * * *'
     - cron: '7 18 * * *'
     - cron: '13 22 * * *'
+    # Daytime patrols, 09:10-21:10 Asia/Shanghai every two hours: refresh the site, send a flash alert for a new quote
+    # or a retail repricing, and act as further backups when the morning report has not gone out yet.
+    - cron: '10 1,3,5,7,9,11,13 * * *'
 
 permissions:
   contents: write
@@ -128,7 +131,21 @@ jobs:
         if: (github.event_name == 'schedule' || inputs.scheduled || inputs.notify) && !cancelled()
         run: |
           [ -f data/push_log.json ] || exit 0
-          bash scripts/publish_data.sh 'chore(推送): 记录当日日报推送' data/push_log.json
+          paths="data/push_log.json"; [ -d data/reported ] && paths="$paths data/reported"
+          bash scripts/publish_data.sh 'chore(推送): 记录当日日报推送' $paths
+      - name: Flash alert for new quotes
+        # Patrols, quote-form filings and data pushes. Counted from the report the group last received, so the next
+        # morning report still lists the change; at most two a day, none at night or before the morning report.
+        if: (github.event_name == 'schedule' || github.event_name == 'issues' || github.event_name == 'push' || inputs.scheduled) && !inputs.notify && !cancelled()
+        env:
+          DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
+          DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          PUSHPLUS_TOPIC: ${{ vars.PUSHPLUS_TOPIC }}
+        run: |
+          python scripts/alerts.py || echo "::warning::价格快讯没有送达，变化会进明早晨报"
+          paths="data/push_log.json"; [ -d data/reported ] && paths="$paths data/reported"
+          bash scripts/publish_data.sh 'chore(推送): 记录价格快讯' $paths
       - name: Fail visibly after publishing outage state
         if: steps.collect.outcome == 'failure'
         run: |

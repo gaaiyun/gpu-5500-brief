@@ -108,7 +108,9 @@ async function load(){
   const p=market.latest,stats=market.stats;
   $('update-time').textContent=`本轮更新 ${time(state.checked_at)}`;
   const stale=(Date.now()-new Date(state.checked_at))/3600000>36;
-  $('run-state').textContent=stale?'更新超过36小时，请检查运行记录':`下次计划 00:35 · 渠道 ${state.channel_status==='ok'?'采集成功':'沿用上次记录'}`;
+  // Beijing times of the morning report and the daytime patrols, in minutes after midnight.
+  const nextRun=()=>{const bj=new Date(Date.now()+8*3600000),now=bj.getUTCHours()*60+bj.getUTCMinutes(),slots=[35,550,670,790,910,1030,1150,1270];const s=slots.find(x=>x>now)??slots[0];return `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;};
+  $('run-state').textContent=stale?'更新超过36小时，请检查运行记录':`下次计划 ${nextRun()} · 渠道 ${state.channel_status==='ok'?'采集成功':'沿用上次记录'}`;
   const template=market.template||{};
   if(template.synthetic){$('template-badge').textContent='模板存档 · 不计涨跌';$('template-warning').hidden=false;$('template-warning').textContent=`这条曲线${template.reasons.join('，')}。它的日涨跌不代表行情，只保留作存档。`;}
   $('min-ask').textContent=yuan(market.min_ask);$('max-bid').textContent=yuan(market.max_bid);$('activity').textContent=`${number(p.activity)} 张`;

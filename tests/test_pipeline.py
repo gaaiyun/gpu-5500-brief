@@ -95,6 +95,20 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(update.previous_day_state(date(2026, 10, 26))["date"], "2026-10-25")
         self.assertEqual(update.previous_day_state(date(2026, 10, 1)), {})
 
+    def test_changes_count_from_the_last_report_received(self):
+        import tempfile
+        saved = update.push_log.REPORTED
+        with tempfile.TemporaryDirectory() as tmp:
+            update.push_log.REPORTED = Path(tmp)
+            try:
+                self.assertEqual(update.report_baseline(date(2026, 10, 26))["date"], "2026-10-25")
+                (Path(tmp) / "2026-10-24.json").write_text('{"date":"2026-10-24","run":"morning"}', encoding="utf-8")
+                (Path(tmp) / "2026-10-26.json").write_text('{"date":"2026-10-26"}', encoding="utf-8")
+                # Today's own report is never its baseline, so reruns after the push keep the same changes.
+                self.assertEqual(update.report_baseline(date(2026, 10, 26))["run"], "morning")
+            finally:
+                update.push_log.REPORTED = saved
+
     def test_unknown_or_future_dates_rejected(self):
         xml = b'<rss><channel><item><title>RTX PRO 5500</title><link>https://example.com</link><pubDate>Sun, 25 Oct 2036 01:00:00 GMT</pubDate></item></channel></rss>'
         self.assertEqual(update.parse_feed(xml, "test", "2026-10-25T20:00:00+08:00"), [])

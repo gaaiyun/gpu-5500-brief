@@ -289,7 +289,7 @@ def build_board(evidence, market, fx, listings, feed_items, today, previous, quo
                    note=listing["note"], quote_key=f"{price}{listing['currency']}")
         # The first sighting of a listing is when tracking began, not a repricing.
         row.update(checked=(state.get("last_success_at") or "")[:10] or None, check_status=state.get("status", "ok"),
-                   repriced=bool(state.get("previous_price")))
+                   repriced=bool(state.get("previous_price")), price=price)
         cny = price / (1 if net else 1 + listing["vat_rate"]) * rates[listing["currency"]] if rates else None
         rows.append(_converted(row, cny) if cny else dict(row, low=None, high=None, text=native))
 

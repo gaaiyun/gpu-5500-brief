@@ -87,7 +87,7 @@ def body_html(state):
                  if state.get("price_board") else
                  "<p>口径：渠道价为宽泛采销平台参考，不是成交价；媒体价格未统一税费、数量和交期。没有新证据时不改预测。</p>")
     parts.append(f"<p>完整曲线、报价对照与研究报告：<a href=\"{SITE}\">{SITE}</a></p>")
-    parts.append("<p>看到闲鱼、微信群或供应商的报价，<a href=\"https://github.com/gaaiyun/gpu-5500-brief/issues/new?template=quote.yml\">在这里登记</a>（可贴链接和截图），第二天进日报。</p>")
+    parts.append("<p>看到闲鱼、微信群或供应商的报价，<a href=\"https://github.com/gaaiyun/gpu-5500-brief/issues/new?template=quote.yml\">在这里登记</a>（可贴链接和截图），几分钟后上网站，白天会以快讯推到群里，22 点后登记的进明早晨报。</p>")
     return "\n".join(parts)
 
 
