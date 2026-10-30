@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-31T05:01:52+08:00",
+  "updated_at": "2026-10-31T06:14:29+08:00",
   "agent": "actions-sweep",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -255,7 +255,8 @@
     "corroborated": 0,
     "model": null,
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
+      "雷峰网 RSS 失败：502 Server Error: Bad Gateway for url: https://www.leiphone.com/feed"
     ]
   }
 }
