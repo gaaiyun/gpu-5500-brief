@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-31T00:25:20+08:00",
+  "updated_at": "2026-10-31T05:01:52+08:00",
   "agent": "actions-sweep",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -254,6 +254,8 @@
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": []
+    "notes": [
+      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)"
+    ]
   }
 }
