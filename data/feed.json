@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-31T09:35:10+08:00",
+  "updated_at": "2026-10-31T14:55:47+08:00",
   "agent": "actions-sweep",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -96,6 +96,16 @@
     }
   ],
   "leads": [
+    {
+      "title": "广州丽泰 2027 年 Q1 将到 2000 片 RTX PRO 5500 工作站算力卡,夯实华南专业算力供给",
+      "publisher": "广州丽泰算力专家",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%B9%BF%E5%B7%9E%E4%B8%BD%E6%B3%B0%202027%20%E5%B9%B4%20Q1%20%E5%B0%86%E5%88%B0%202000%20%E7%89%87%20RTX%20PRO%205500%20%E5%B7%A5%E4%BD%9C%E7%AB%99%E7%AE%97%E5%8A%9B%E5%8D%A1%2C%E5%A4%AF%E5%AE%9E%E5%8D%8E%E5%8D%97%E4%B8%93%E4%B8%9A%E7%AE%97%E5%8A%9B%E4%BE%9B%E7%BB%99",
+      "published_at": "2026-10-31",
+      "found_via": "搜狗微信",
+      "snippet": "RTX PRO 5500 工作站版算力卡,预计将于 2027 年第一季度集中到货入库.作为英伟达 NPN ELITE 精英级合作伙伴、丽台 NVIDIA 专...",
+      "seen_at": "2026-10-31"
+    },
     {
       "title": "深度拆解 RTX PRO 5500",
       "publisher": "苏哥随笔",
@@ -235,16 +245,6 @@
       "found_via": "搜狗微信",
       "snippet": "在这一背景下,NVIDIA RTX PRO 5500 开始进入行业视野.相比面向游戏与消费市场的 GeForce RTX 5090,RTX PRO 5500 的吸引力...",
       "seen_at": "2026-10-27"
-    },
-    {
-      "title": "RTX PRO 5500抢购背后,推理芯片市场的供需博弈与半导体板块下跌深度复盘",
-      "publisher": "小勇小谋",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%E6%8A%A2%E8%B4%AD%E8%83%8C%E5%90%8E%2C%E6%8E%A8%E7%90%86%E8%8A%AF%E7%89%87%E5%B8%82%E5%9C%BA%E7%9A%84%E4%BE%9B%E9%9C%80%E5%8D%9A%E5%BC%88%E4%B8%8E%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%BF%E5%9D%97%E4%B8%8B%E8%B7%8C%E6%B7%B1%E5%BA%A6%E5%A4%8D%E7%9B%98",
-      "published_at": "2026-10-23",
-      "found_via": "搜狗微信",
-      "snippet": "向英伟达下单采购超300万张RTX PRO 5500,按照单卡1.14万美元的报价,订单总金额超过350亿美元.市场消息进一步提及,国内整...",
-      "seen_at": "2026-10-29"
     }
   ],
   "sweep": {
@@ -254,6 +254,8 @@
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": []
+    "notes": [
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+    ]
   }
 }
