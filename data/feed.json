@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-31T14:55:47+08:00",
+  "updated_at": "2026-10-31T21:36:23+08:00",
   "agent": "actions-sweep",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -96,6 +96,16 @@
     }
   ],
   "leads": [
+    {
+      "title": "字节阿里腾讯豪掷350亿美元买英伟达:为什么你用的AI还在转圈",
+      "publisher": "If艾大虾",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%AD%97%E8%8A%82%E9%98%BF%E9%87%8C%E8%85%BE%E8%AE%AF%E8%B1%AA%E6%8E%B7350%E4%BA%BF%E7%BE%8E%E5%85%83%E4%B9%B0%E8%8B%B1%E4%BC%9F%E8%BE%BE%3A%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%A0%E7%94%A8%E7%9A%84AI%E8%BF%98%E5%9C%A8%E8%BD%AC%E5%9C%88",
+      "published_at": "2026-10-31",
+      "found_via": "搜狗微信",
+      "snippet": "那块还没到货的显卡.10月下旬,一条消息在科技圈炸开:字节跳... RTX PRO 5500.按每块约 1.14万美元 的标价计算,总额超过 350...",
+      "seen_at": "2026-10-31"
+    },
     {
       "title": "广州丽泰 2027 年 Q1 将到 2000 片 RTX PRO 5500 工作站算力卡,夯实华南专业算力供给",
       "publisher": "广州丽泰算力专家",
@@ -235,16 +245,6 @@
       "found_via": "搜狗微信",
       "snippet": "RTX PRO 5500,订单价值超过 350 亿美元. 整个国内市场报出来的需求,已经突破 600 万张,但英伟达给到的预期是,2027 年全球...",
       "seen_at": "2026-10-31"
-    },
-    {
-      "title": "大厂算力采购风向变了?RTX PRO 5500 凭什么成为 RTX 5090 的强力竞争者",
-      "publisher": "东毅科技",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%A4%A7%E5%8E%82%E7%AE%97%E5%8A%9B%E9%87%87%E8%B4%AD%E9%A3%8E%E5%90%91%E5%8F%98%E4%BA%86%3FRTX%20PRO%205500%20%E5%87%AD%E4%BB%80%E4%B9%88%E6%88%90%E4%B8%BA%20RTX%205090%20%E7%9A%84%E5%BC%BA%E5%8A%9B%E7%AB%9E%E4%BA%89%E8%80%85",
-      "published_at": "2026-10-24",
-      "found_via": "搜狗微信",
-      "snippet": "在这一背景下,NVIDIA RTX PRO 5500 开始进入行业视野.相比面向游戏与消费市场的 GeForce RTX 5090,RTX PRO 5500 的吸引力...",
-      "seen_at": "2026-10-27"
     }
   ],
   "sweep": {
@@ -255,7 +255,7 @@
     "corroborated": 0,
     "model": null,
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)"
     ]
   }
 }
