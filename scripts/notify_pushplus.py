@@ -10,14 +10,15 @@ import requests
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from share_page import body_html, page_url  # noqa: E402
+from share_page import MIRROR, body_html, page_url  # noqa: E402
 
 API_URL = "https://www.pushplus.plus/send"
 
 
 def payload(state, token, topic=""):
     body = {"token": token, "title": f"RTX PRO 5500 行情日报 {state['date']}",
-            "content": body_html(state) + f"<p>转发用链接：<a href=\"{page_url(state['date'])}\">{page_url(state['date'])}</a></p>",
+            "content": body_html(state) + f"<p>转发用链接：<a href=\"{page_url(state['date'])}\">{page_url(state['date'])}</a><br>"
+                       f"国内打不开时用镜像：<a href=\"{page_url(state['date'], MIRROR)}\">{page_url(state['date'], MIRROR)}</a></p>",
             "template": "html", "channel": "wechat"}
     if topic:
         body["topic"] = topic

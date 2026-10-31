@@ -19,6 +19,7 @@ import push_log  # noqa: E402
 from notify_dingtalk import SITE, signed_url  # noqa: E402
 from notify_pushplus import API_URL as PUSHPLUS_URL  # noqa: E402
 from prices import _changes  # noqa: E402
+from share_page import MIRROR  # noqa: E402
 
 TZ = timezone(timedelta(hours=8))
 MAX_PER_DAY = 2
@@ -111,7 +112,7 @@ def dingtalk_message(found, state, base, now):
     # Bare URLs, not [text](url): markdown links lose their address when copied out of DingTalk.
     items = "\n".join(f"- {_line(e)}" + (f" {e['url']}" if e["url"] else "") for e in found)
     lines = [f"#### RTX PRO 5500 价格快讯 {now:%m-%d %H:%M}", items, _context(state, base),
-             f"完整证据表：{SITE}", "明早晨报照常汇总。"]
+             f"完整证据表：{SITE}  \n国内镜像：{MIRROR}", "明早晨报照常汇总。"]
     return {"msgtype": "markdown", "markdown": {"title": title, "text": "\n\n".join(x for x in lines if x)}}
 
 
@@ -120,7 +121,7 @@ def pushplus_payload(found, state, base, now, token, topic=""):
     items = "".join(f"<li>{esc(_line(e))}" + (f" <a href=\"{esc(e['url'])}\">来源</a>" if e["url"] else "") + "</li>"
                     for e in found)
     body = {"token": token, "title": f"RTX PRO 5500 价格快讯 {now:%m-%d %H:%M}", "template": "html", "channel": "wechat",
-            "content": f"<ul>{items}</ul><p>{esc(_context(state, base))}</p><p>完整证据表：<a href=\"{SITE}\">{SITE}</a></p>"
+            "content": f"<ul>{items}</ul><p>{esc(_context(state, base))}</p><p>完整证据表：<a href=\"{SITE}\">{SITE}</a><br>国内镜像：<a href=\"{MIRROR}\">{MIRROR}</a></p>"
                        "<p>明早晨报照常汇总。</p>"}
     if topic:
         body["topic"] = topic

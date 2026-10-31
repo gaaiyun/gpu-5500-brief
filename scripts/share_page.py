@@ -6,10 +6,12 @@ from html import escape
 from daily_card import pick_items
 
 SITE = "https://gaaiyun.github.io/gpu-5500-brief/"
+# Mainland mirror: nginx on our own server caching the GitHub Pages site. GitHub stays the primary link.
+MIRROR = "https://8.134.9.77/gpu5500/"
 
 
-def page_url(day):
-    return f"{SITE}daily/{day}.html"
+def page_url(day, base=SITE):
+    return f"{base}daily/{day}.html"
 
 
 def image_url(day):
@@ -34,8 +36,9 @@ def price_lines(state, link=None):
     return lines
 
 
-def body_html(state):
-    """Plain tags only, so the same body renders in the share page and in a PushPlus message."""
+def body_html(state, image=None):
+    """Plain tags only, so the same body renders in the share page and in a PushPlus message.
+    The hosted page passes a relative image so its mirror copy loads the image from the mirror too."""
     market = state["channel"]
     p, stats = market["latest"], market["stats"]
     day = state["date"]
@@ -54,7 +57,7 @@ def body_html(state):
                 f"最低挂价 ¥{market['min_ask']:,}（交期 {e(market.get('delivery') or '未标明')}，原报价 {e(market.get('quote_date') or '未标明')}）。"
                 f"来源：<a href=\"{e(market.get('homepage') or market['source_url'])}\">宽泛采销</a></p>"]
     parts = head + [
-        f"<p><img src=\"{e(image_url(day))}\" alt=\"RTX PRO 5500 行情日报 {e(day)}\" style=\"width:100%;height:auto\"></p>",
+        f"<p><img src=\"{e(image or image_url(day))}\" alt=\"RTX PRO 5500 行情日报 {e(day)}\" style=\"width:100%;height:auto\"></p>",
         "<h3>今日判断</h3>",
     ]
     for item in state["daily_brief"]["items"]:
@@ -86,7 +89,7 @@ def body_html(state):
     parts.append("<p>口径：海外价格按当日汇率折算，汇率变动不是新报价，未含关税运费；渠道挂价为平台期货报盘，不是成交价；媒体价格未统一税费、数量和交期。没有新证据时不改预测。</p>"
                  if state.get("price_board") else
                  "<p>口径：渠道价为宽泛采销平台参考，不是成交价；媒体价格未统一税费、数量和交期。没有新证据时不改预测。</p>")
-    parts.append(f"<p>完整曲线、报价对照与研究报告：<a href=\"{SITE}\">{SITE}</a></p>")
+    parts.append(f"<p>完整曲线、报价对照与研究报告：<a href=\"{SITE}\">{SITE}</a><br>国内打不开时用镜像：<a href=\"{MIRROR}\">{MIRROR}</a></p>")
     parts.append("<p>看到闲鱼、微信群或供应商的报价，<a href=\"https://github.com/gaaiyun/gpu-5500-brief/issues/new?template=quote.yml\">在这里登记</a>（可贴链接和截图），几分钟后上网站，白天会以快讯推到群里，22 点后登记的进明早晨报。</p>")
     return "\n".join(parts)
 
@@ -115,6 +118,6 @@ h1{{color:var(--ink);font-size:24px;line-height:1.35;margin:4px 0 12px}} h3{{col
 p{{margin:10px 0;overflow-wrap:anywhere}} a{{color:var(--link)}} img{{border-radius:10px;display:block}}
 </style></head>
 <body><main><h1>{escape(title)}</h1>
-{body_html(state)}
+{body_html(state, image=f"{day}.png")}
 </main></body></html>
 """

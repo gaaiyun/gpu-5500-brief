@@ -134,6 +134,8 @@ class MessageTests(unittest.TestCase):
         self.assertIn("https://example.com/de_b2b", msg["markdown"]["text"])
         self.assertNotIn("](", msg["markdown"]["text"])
         self.assertIn("85,000-90,000", msg["markdown"]["text"])
+        self.assertIn(alerts.MIRROR, msg["markdown"]["text"])
+        self.assertIn(alerts.MIRROR, alerts.pushplus_payload(found, state(), {"low": 85000, "high": 90000}, NOON, "t")["content"])
 
 
 if __name__ == "__main__":

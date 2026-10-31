@@ -90,6 +90,17 @@ class ResearchTests(unittest.TestCase):
             self.assertIn(f'href="{item["url"]}"',page.replace("&amp;","&"))
         self.assertNotIn("<script",page)
 
+    def test_mirror_links_reach_mainland_readers(self):
+        import notify_dingtalk,notify_pushplus
+        from share_page import MIRROR,page_html
+        _,state=load()
+        day=state["date"]
+        page=page_html(state)
+        self.assertIn(f'src="{day}.png"',page)
+        self.assertIn(MIRROR,page)
+        self.assertIn(f"{MIRROR}daily/{day}.html",notify_dingtalk.message(state)["markdown"]["text"])
+        self.assertIn(f"{MIRROR}daily/{day}.html",notify_pushplus.payload(state,"t","")["content"])
+
     def test_pushplus_payload(self):
         import notify_pushplus
         _,state=load()

@@ -28,12 +28,12 @@ def signed_url(webhook, secret, now_ms=None):
 
 def message(state):
     from daily_card import pick_items
-    from share_page import page_url
+    from share_page import MIRROR, page_url
     from share_page import price_lines
     day = state["date"]
     image = f"{SITE}daily/{day}.png"
     lines = [f"#### RTX PRO 5500 大陆行情日报 {day}",
-             f"转发微信用这一条链接（图、情报和来源都在里面）：{page_url(day)}"]
+             f"转发微信用这一条链接（图、情报和来源都在里面）：{page_url(day)}  \n国内打不开时用镜像：{page_url(day, MIRROR)}"]
     digest = state.get("digest")
     if digest:
         lines.append(f"**今日新增：{digest['headline']}**  \n"
@@ -68,7 +68,7 @@ def message(state):
     # Bare URLs, not [text](url): markdown links lose their address when copied out of DingTalk.
     lines.append(f"日报图原图：{image}")
     lines.append("看到闲鱼、微信群或供应商的报价，在这里登记（可贴链接和截图），几分钟后上网站，白天会以快讯推到群里，22 点后登记的进明早晨报：https://github.com/gaaiyun/gpu-5500-brief/issues/new?template=quote.yml")
-    lines.append(f"网站（完整曲线、报价对照与研究报告）：{SITE}")
+    lines.append(f"网站（完整曲线、报价对照与研究报告）：{SITE}  \n国内镜像：{MIRROR}")
     # The title and text both carry "5500" so a keyword-secured robot also accepts it.
     return {"msgtype": "markdown", "markdown": {"title": f"5500 日报 {day}", "text": "\n\n".join(lines)}}
 
