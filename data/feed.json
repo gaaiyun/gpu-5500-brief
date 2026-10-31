@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-31T06:14:29+08:00",
+  "updated_at": "2026-10-31T09:35:10+08:00",
   "agent": "actions-sweep",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -217,6 +217,16 @@
       "seen_at": "2026-10-30"
     },
     {
+      "title": "还没上市就被抢爆?RTX PRO 5500 凭什么",
+      "publisher": "李哥说显卡",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E8%BF%98%E6%B2%A1%E4%B8%8A%E5%B8%82%E5%B0%B1%E8%A2%AB%E6%8A%A2%E7%88%86%3FRTX%20PRO%205500%20%E5%87%AD%E4%BB%80%E4%B9%88",
+      "published_at": "2026-10-24",
+      "found_via": "搜狗微信",
+      "snippet": "RTX PRO 5500,订单价值超过 350 亿美元. 整个国内市场报出来的需求,已经突破 600 万张,但英伟达给到的预期是,2027 年全球...",
+      "seen_at": "2026-10-31"
+    },
+    {
       "title": "大厂算力采购风向变了?RTX PRO 5500 凭什么成为 RTX 5090 的强力竞争者",
       "publisher": "东毅科技",
       "source_type": "公众号",
@@ -235,16 +245,6 @@
       "found_via": "搜狗微信",
       "snippet": "向英伟达下单采购超300万张RTX PRO 5500,按照单卡1.14万美元的报价,订单总金额超过350亿美元.市场消息进一步提及,国内整...",
       "seen_at": "2026-10-29"
-    },
-    {
-      "title": "三家大厂抢购英伟达RTX PRO 5500,映射出中国AI芯片产业现状",
-      "publisher": "半导体咨询",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E4%B8%89%E5%AE%B6%E5%A4%A7%E5%8E%82%E6%8A%A2%E8%B4%AD%E8%8B%B1%E4%BC%9F%E8%BE%BERTX%20PRO%205500%2C%E6%98%A0%E5%B0%84%E5%87%BA%E4%B8%AD%E5%9B%BDAI%E8%8A%AF%E7%89%87%E4%BA%A7%E4%B8%9A%E7%8E%B0%E7%8A%B6",
-      "published_at": "2026-10-23",
-      "found_via": "搜狗微信",
-      "snippet": "RTX PRO 5500的带宽不到B300的两成,互连约为7%,难以组成... ■ 订单是“抢配额”而非真实到货:中国客户合计订单超600万张...",
-      "seen_at": "2026-10-29"
     }
   ],
   "sweep": {
@@ -254,9 +254,6 @@
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
-      "雷峰网 RSS 失败：502 Server Error: Bad Gateway for url: https://www.leiphone.com/feed"
-    ]
+    "notes": []
   }
 }
