@@ -1,23 +1,20 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-02T15:37:08+08:00",
-  "agent": "actions-sweep",
+  "updated_at": "2026-11-02T23:35:57+08:00",
+  "agent": "cloud-routine",
   "searched": [
-    "GDELT \"RTX PRO 5500\"",
-    "IT之家 RSS",
-    "快科技 RSS",
-    "雷峰网 RSS",
-    "钛媒体 RSS",
-    "TrendForce RSS",
-    "DIGITIMES RSS",
-    "Tom's Hardware RSS",
-    "TweakTown RSS",
-    "科技新报 RSS",
-    "INSIDE RSS",
-    "南华早报科技 RSS",
-    "CNBC 科技 RSS",
-    "Google 新闻 \"RTX PRO 5500\" when:3d",
-    "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
+    "RTX PRO 5500 报价 中国 大陆",
+    "RTX PRO 5500 到货 配额 工信部",
+    "\"RTX PRO 5500\" China price shipments",
+    "\"RTX PRO 5500\" China orders Reuters Bloomberg",
+    "RTX PRO 5500 TrendForce 集邦 中国 价格",
+    "site:mp.weixin.qq.com RTX PRO 5500",
+    "RTX PRO 5500 腾讯新闻 搜狐 网易 百家号 显卡 报价",
+    "RTX PRO 5500 知乎 雪球 什么值得买 价格",
+    "RTX PRO 5500 微博 小红书 京东 闲鱼 挂价",
+    "RTX PRO 5500 reddit China price X post",
+    "RTX PRO 5500 样卡 交付 渠道 货源 2026年11月",
+    "RTX PRO 5500 DIGITIMES VideoCardz Tom's Hardware China allocation"
   ],
   "items": [
     {
