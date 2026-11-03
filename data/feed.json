@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-03T15:50:40+08:00",
+  "updated_at": "2026-11-04T01:00:37+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -105,6 +105,16 @@
       "found_via": "搜狗微信",
       "snippet": "如果让你在 RTX 5090 和 RTX PRO 5500 之间选择一张显卡,用来本地部署 AI 大模型,你会选哪一张?RTX 5090,32GB GDDR7 显存...",
       "seen_at": "2026-11-03"
+    },
+    {
+      "title": "RTX PRO 5500 技术拆解:84GB ECC 显存,AI 推理与渲染怎么选",
+      "publisher": "IT满江红DYH",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%20%E6%8A%80%E6%9C%AF%E6%8B%86%E8%A7%A3%3A84GB%20ECC%20%E6%98%BE%E5%AD%98%2CAI%20%E6%8E%A8%E7%90%86%E4%B8%8E%E6%B8%B2%E6%9F%93%E6%80%8E%E4%B9%88%E9%80%89",
+      "published_at": "2026-10-31",
+      "found_via": "搜狗微信",
+      "snippet": "它到底是一张什么卡RTX PRO 5500 基于英伟达 Blackwell 架构、... 来源:渠道报价与路透社报道;仅供参考,以实际成交价为准.)...",
+      "seen_at": "2026-11-04"
     },
     {
       "title": "字节阿里腾讯豪掷350亿美元买英伟达:为什么你用的AI还在转圈",
@@ -235,25 +245,18 @@
       "found_via": "搜狗微信",
       "snippet": "RTX PRO 5500 的优势在于成熟度.它对主流框架、算子、调度工具链的适配几乎是开箱即用.只要上机,绝大多数模型都可以快速跑...",
       "seen_at": "2026-10-28"
-    },
-    {
-      "title": "RTX PRO 5500报价为何差出几万元?市场在为稀缺货源买单吗?",
-      "publisher": "GPU算力观察-聪哥",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%E6%8A%A5%E4%BB%B7%E4%B8%BA%E4%BD%95%E5%B7%AE%E5%87%BA%E5%87%A0%E4%B8%87%E5%85%83%3F%E5%B8%82%E5%9C%BA%E5%9C%A8%E4%B8%BA%E7%A8%80%E7%BC%BA%E8%B4%A7%E6%BA%90%E4%B9%B0%E5%8D%95%E5%90%97%3F",
-      "published_at": "2026-10-26",
-      "found_via": "搜狗微信",
-      "snippet": "最近一段时间,RTX PRO 5500的市场信息明显多了起来.8.5万—9万元、9.5万元、13万元,还有最新报道中的11,400美元,几组数...",
-      "seen_at": "2026-10-27"
     }
   ],
   "sweep": {
-    "date": "2026-11-03",
+    "date": "2026-11-04",
     "candidates": 0,
     "read": 0,
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": []
+    "notes": [
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
+      "雷峰网 RSS 失败：502 Server Error: Bad Gateway for url: https://www.leiphone.com/feed"
+    ]
   }
 }
