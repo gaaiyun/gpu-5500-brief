@@ -1,20 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-03T15:50:40+08:00",
-  "agent": "actions-sweep+cloud-routine",
+  "updated_at": "2026-11-03T23:34:30+08:00",
+  "agent": "cloud-routine",
   "searched": [
-    "RTX PRO 5500 报价 中国 大陆",
-    "RTX PRO 5500 到货 配额 工信部",
-    "\"RTX PRO 5500\" China price shipments",
-    "\"RTX PRO 5500\" China orders Reuters Bloomberg",
-    "RTX PRO 5500 TrendForce 集邦 中国 价格",
-    "site:mp.weixin.qq.com RTX PRO 5500",
-    "RTX PRO 5500 腾讯新闻 搜狐 网易 百家号 显卡 报价",
-    "RTX PRO 5500 知乎 雪球 什么值得买 价格",
-    "RTX PRO 5500 微博 小红书 京东 闲鱼 挂价",
-    "RTX PRO 5500 reddit China price X post",
-    "RTX PRO 5500 样卡 交付 渠道 货源 2026年11月",
-    "RTX PRO 5500 DIGITIMES VideoCardz Tom's Hardware China allocation"
+    "RTX PRO 5500 报价 中国",
+    "RTX PRO 5500 到货 配额",
+    "RTX PRO 5500 China price shipments",
+    "\"RTX PRO 5500\" China orders Reuters",
+    "RTX PRO 5500 工信部 审批 采购",
+    "RTX PRO 5500 京东 价格 挂价",
+    "RTX PRO 5500 样卡 交付 知乎",
+    "RTX PRO 5500 weibo 报价 微博",
+    "\"RTX PRO 5500\" TrendForce DIGITIMES",
+    "RTX PRO 5500 Reddit China price 84GB",
+    "RTX PRO 5500 雪球 什么值得买 显卡 报价",
+    "RTX PRO 5500 公众号 到货 价格 site:mp.weixin.qq.com",
+    "RTX PRO 5500 Tom's Hardware VideoCardz China",
+    "RTX PRO 5500 到货"
   ],
   "items": [
     {
