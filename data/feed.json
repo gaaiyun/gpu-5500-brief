@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-02T23:35:57+08:00",
-  "agent": "cloud-routine",
+  "updated_at": "2026-11-03T15:50:40+08:00",
+  "agent": "actions-sweep+cloud-routine",
   "searched": [
     "RTX PRO 5500 报价 中国 大陆",
     "RTX PRO 5500 到货 配额 工信部",
@@ -93,6 +93,16 @@
     }
   ],
   "leads": [
+    {
+      "title": "RTX 5090 对比 RTX PRO 5500:32GB 和 84GB 显存,跑 AI 大模型差距有多大?",
+      "publisher": "技术学习日常",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%205090%20%E5%AF%B9%E6%AF%94%20RTX%20PRO%205500%3A32GB%20%E5%92%8C%2084GB%20%E6%98%BE%E5%AD%98%2C%E8%B7%91%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B7%AE%E8%B7%9D%E6%9C%89%E5%A4%9A%E5%A4%A7%3F",
+      "published_at": "2026-11-03",
+      "found_via": "搜狗微信",
+      "snippet": "如果让你在 RTX 5090 和 RTX PRO 5500 之间选择一张显卡,用来本地部署 AI 大模型,你会选哪一张?RTX 5090,32GB GDDR7 显存...",
+      "seen_at": "2026-11-03"
+    },
     {
       "title": "字节阿里腾讯豪掷350亿美元买英伟达:为什么你用的AI还在转圈",
       "publisher": "If艾大虾",
@@ -232,27 +242,15 @@
       "found_via": "搜狗微信",
       "snippet": "最近一段时间,RTX PRO 5500的市场信息明显多了起来.8.5万—9万元、9.5万元、13万元,还有最新报道中的11,400美元,几组数...",
       "seen_at": "2026-10-27"
-    },
-    {
-      "title": "一张还没上市的显卡,凭什么先有了“期货价”?——拆解英伟达RTX PRO 5500的期货局",
-      "publisher": "信创生态圈",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E4%B8%80%E5%BC%A0%E8%BF%98%E6%B2%A1%E4%B8%8A%E5%B8%82%E7%9A%84%E6%98%BE%E5%8D%A1%2C%E5%87%AD%E4%BB%80%E4%B9%88%E5%85%88%E6%9C%89%E4%BA%86%E2%80%9C%E6%9C%9F%E8%B4%A7%E4%BB%B7%E2%80%9D%3F%E2%80%94%E2%80%94%E6%8B%86%E8%A7%A3%E8%8B%B1%E4%BC%9F%E8%BE%BERTX%20PRO%205500%E7%9A%84%E6%9C%9F%E8%B4%A7%E5%B1%80",
-      "published_at": "2026-10-25",
-      "found_via": "搜狗微信",
-      "snippet": "RTX PRO 5500在产能排位上是＂让位＂的一方.时间差:12月出... 长达数月的交付空窗期,加上＂下单≠到货＂的配额不确定性,就...",
-      "seen_at": "2026-10-30"
     }
   ],
   "sweep": {
-    "date": "2026-11-02",
+    "date": "2026-11-03",
     "candidates": 0,
     "read": 0,
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
-    ]
+    "notes": []
   }
 }
