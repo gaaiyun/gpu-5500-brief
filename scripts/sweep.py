@@ -298,6 +298,11 @@ def matching_event(text, events):
     return next((k for k, e in events.items() if key <= numeric_values(e["text"])), None)
 
 
+def repost_of(item, events):
+    """The model misses reposts; a self-media post whose figures all come from a known report adds nothing new."""
+    return matching_event(f"{item['title']} {item['summary']}", events) if item["source_type"] in QUICK_TYPES else None
+
+
 def readable(text, events):
     """The model sometimes cites events by their internal ID; readers need the source name."""
     text = re.sub(r"已收录事件\s*", "", text)
@@ -480,7 +485,11 @@ def sweep(feed, evidence, today, endpoint=None, token=None):
                 notes.append(f"重复报道 {target}：{candidate['url']}")
             else:
                 try:
-                    items.append(build_item(draft, candidate, events, today))
+                    item = build_item(draft, candidate, events, today)
+                    if target := repost_of(item, events):
+                        notes.append(f"重复报道 {target}：{candidate['url']}")
+                    else:
+                        items.append(item)
                 except (ValueError, TypeError) as error:
                     notes.append(f"未通过核对 {candidate['url']}：{error}")
                     leads.append(lead(candidate, today))

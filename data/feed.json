@@ -22,43 +22,6 @@
   ],
   "items": [
     {
-      "id": "news-20261104-f2cbb7",
-      "title": "腾讯新闻：英伟达中国客户未来四月仅能收到1%交付",
-      "published_at": "2026-11-04",
-      "publisher": "腾讯新闻",
-      "source_type": "公众号",
-      "url": "https://news.qq.com/rain/a/20261104A07XHU00",
-      "grade": "C",
-      "summary": "财闻海外资讯援引彭博：中国AI与云公司总计订购约600万颗，未来四个月仅能收到数万颗，约占1%。每枚芯片售价超11,000美元，总订单价值约700亿美元。",
-      "impact": "短期交付量极低，客户面临严重缺货。",
-      "watch": "核实首批数千颗年底前、第二批数万颗明年2月左右的交付确认情况。",
-      "corroboration": [],
-      "claims": [
-        {
-          "text": "中国AI与云公司总计订购约600万颗，未来四个月仅能收到数万颗，约占1%。",
-          "status": "有出处",
-          "ref": "https://money.udn.com/money/story/5603/9856924"
-        },
-        {
-          "text": "每枚芯片售价超11,000美元，总订单价值约700亿美元。",
-          "status": "有出处",
-          "ref": "https://money.udn.com/money/story/5603/9856924"
-        },
-        {
-          "text": "首批数千颗芯片于今年底前交付，明年2月左右再交付数万颗。",
-          "status": "无出处",
-          "ref": ""
-        },
-        {
-          "text": "中国超大规模数据中心运营商估计到2027年底可能收到约70万块该芯片。",
-          "status": "有出处",
-          "ref": "https://money.udn.com/money/story/5603/9856924"
-        }
-      ],
-      "checked_at": "2026-11-04",
-      "found_via": "Bing 新闻"
-    },
-    {
       "id": "bloomberg-20261104-udn",
       "title": "彭博：中国客户约600万颗订单，未来4个月预计只到约1%",
       "published_at": "2026-11-04",
@@ -71,7 +34,8 @@
       "watch": "核实首批到货数量和渠道可得性",
       "corroboration": [
         "https://www.caiwennews.com/article/1683955.shtml",
-        "https://www.bloomberg.com/news/articles/2026-11-04/nvidia-china-clients-to-get-1-of-70-billion-rtx-chips-ordered"
+        "https://www.bloomberg.com/news/articles/2026-11-04/nvidia-china-clients-to-get-1-of-70-billion-rtx-chips-ordered",
+        "https://news.qq.com/rain/a/20261104A07XHU00"
       ],
       "claims": [],
       "checked_at": "2026-11-04",

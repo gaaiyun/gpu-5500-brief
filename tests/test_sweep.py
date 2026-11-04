@@ -130,6 +130,16 @@ class DraftCheckTests(unittest.TestCase):
         self.assertEqual(item["impact"],"与雷峰网的8.5万元一致")
 
 
+class RepostTests(unittest.TestCase):
+    def test_self_media_post_with_only_known_figures_is_a_repost(self):
+        post={"source_type":"公众号","title":"腾讯新闻：大厂疯抢","summary":"中国客户总订单超过600万张"}
+        self.assertEqual(sweep.repost_of(post,EVENTS),"reuters")
+
+    def test_a_new_figure_or_a_real_outlet_is_kept(self):
+        self.assertIsNone(sweep.repost_of({"source_type":"公众号","title":"订单","summary":"总订单超过800万张"},EVENTS))
+        self.assertIsNone(sweep.repost_of({"source_type":"行业媒体","title":"订单","summary":"总订单超过600万张"},EVENTS))
+
+
 class SweepTests(unittest.TestCase):
     def setUp(self):
         self.saved={k:getattr(sweep,k) for k in ("gdelt","google_news","sogou","inbox","fetch","read_article","ask_model")}
