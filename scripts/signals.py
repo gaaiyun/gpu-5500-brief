@@ -19,7 +19,7 @@ MENTION_YUAN = re.compile(r"5500[^。；;！？!?\n]{0,40}?(\d{2,3},?\d{3})\s*�
 CHANNEL_WORDS = re.compile(r"到货|将到|现货|开放预定|可预定|接受预定|预定|预订|接单|入库|开售|上架|供货|备货|交付")
 HEAT_DAYS = 30
 TAKE_LIMIT = 160
-DATE_WORDS = re.compile(r"\d{4}\s*年|\d{1,2}\s*月(?:\s*\d{1,2}\s*日)?|\d{1,2}-\d{1,2}|\d+\s*天|Q\d|\d\s*季度")
+DATE_WORDS = re.compile(r"\d{4}\s*年|\d{1,2}\s*月(?:\s*\d{1,2}\s*日)?|(?<!\d)\d{1,2}-\d{1,2}(?!\d)|\d+\s*天|Q\d|\d\s*季度")
 
 
 def _mention(match):
