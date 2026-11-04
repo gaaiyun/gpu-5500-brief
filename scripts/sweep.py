@@ -610,6 +610,12 @@ def sweep(feed, evidence, today, endpoint=None, token=None):
             "seen": candidates + news + posts, "mention_rows": [r for r in read_rows if r.get("text")] + extra + leads + posts}
 
 
+def newest_take(base, cloud):
+    """The analyst's latest note; on the same date the cloud branch's copy is the newer draft."""
+    takes = [x.get("take") for x in (cloud or {}, base) if isinstance(x.get("take"), dict) and x["take"].get("date")]
+    return max(takes, key=lambda x: x["date"], default=None)
+
+
 def merge_feeds(base, cloud):
     """Union of main's feed and the cloud routine's branch feed; the more recently checked copy of an item wins."""
     items, leads = {}, {}
@@ -682,12 +688,11 @@ def run(cloud_path=None, dry_run=False):
         if extra:
             item["corroboration"] = [*(item.get("corroboration") or []), *extra][:5]
     items, leads = finalize(result["items"] + feed["items"], result["leads"] + feed["leads"], today)
-    takes = [x.get("take") for x in (base, cloud or {}) if isinstance(x.get("take"), dict) and x["take"].get("date")]
     old_mentions = (base.get("mentions") or []) + ((cloud or {}).get("mentions") or [])
     payload = {"schema_version": 1, "updated_at": now_iso(), "agent": "actions-sweep" + ("+cloud-routine" if cloud else ""),
                "searched": result["searched"][:30], "items": items, "leads": leads,
                "mentions": collect_mentions(result["mention_rows"], old_mentions, today), "heat": update_heat(base.get("heat"), result["seen"], today),
-               "take": max(takes, key=lambda x: x["date"], default=None),
+               "take": newest_take(base, cloud),
                "sweep": {"date": today.isoformat(), "candidates": result["candidates"], "read": result["read"],
                          "added": [i["id"] for i in result["items"] if i in items],
                          "corroborated": sum(map(len, result["corroborated"].values())), "model": result["model"],
