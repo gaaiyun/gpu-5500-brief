@@ -17,13 +17,13 @@ on:
     # A quote filed through the form shows on the site within minutes and goes out as a flash alert in the daytime.
     types: [opened, edited, closed, reopened, labeled]
   schedule:
-    # 16:35 UTC = next day 00:35 Asia/Shanghai. GitHub often starts scheduled jobs hours late or drops one,
-    # so two backups follow; data/push_log.json keeps each channel to one push per day.
+    # 00:35 Asia/Shanghai: start the new day's page. The report itself waits for 07:00 (scripts/push_log.py), so it carries
+    # overnight news. The cloud analyst's 07:00 push normally triggers it (cloud_feed.yml); 07:30 is the backup, and GitHub
+    # often starts scheduled jobs hours late or drops one.
     - cron: '35 16 * * *'
-    - cron: '7 18 * * *'
-    - cron: '13 22 * * *'
-    # Daytime patrols, 09:10-21:10 Asia/Shanghai every two hours: refresh the site, send a flash alert for a new quote
-    # or a retail repricing, and act as further backups when the morning report has not gone out yet.
+    - cron: '30 23 * * *'
+    # Daytime patrols, 09:10-21:10 Asia/Shanghai every two hours: refresh the site, send a flash alert for a new quote,
+    # a retail repricing, a stock change or a newly verified report, and act as further backups for the morning report.
     - cron: '10 1,3,5,7,9,11,13 * * *'
 
 permissions:
@@ -88,7 +88,7 @@ jobs:
         run: |
           git config user.name 'gaaiyun'
           git config user.email 'gaaiyun@users.noreply.github.com'
-          bash scripts/publish_data.sh 'chore(情报): 更新来源状态与每日预测复核' data/state.json data/history data/feed.json
+          bash scripts/publish_data.sh 'chore(情报): 更新来源状态与每日预测复核' data/state.json data/history data/feed.json data/reading_room.json
       - name: Build website and report
         run: python scripts/build.py
       - name: Setup Pages
@@ -108,8 +108,9 @@ jobs:
           DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}
           FORCE: ${{ inputs.notify }}
         run: |
-          if [ "$FORCE" != "true" ] && [ "$(python scripts/push_log.py check dingtalk)" = "sent" ]; then
-            echo "DingTalk already received today's report"; exit 0
+          status=$(python scripts/push_log.py check dingtalk)
+          if [ "$FORCE" != "true" ] && [ "$status" != "due" ]; then
+            echo "DingTalk report not sent this run: $status"; exit 0
           fi
           python scripts/notify_dingtalk.py
           python scripts/push_log.py record dingtalk
@@ -121,8 +122,9 @@ jobs:
           PUSHPLUS_TOPIC: ${{ vars.PUSHPLUS_TOPIC }}
           FORCE: ${{ inputs.notify }}
         run: |
-          if [ "$FORCE" != "true" ] && [ "$(python scripts/push_log.py check pushplus)" = "sent" ]; then
-            echo "WeChat group already received today's report"; exit 0
+          status=$(python scripts/push_log.py check pushplus)
+          if [ "$FORCE" != "true" ] && [ "$status" != "due" ]; then
+            echo "WeChat report not sent this run: $status"; exit 0
           fi
           python scripts/notify_pushplus.py
           python scripts/push_log.py record pushplus

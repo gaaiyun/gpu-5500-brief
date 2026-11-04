@@ -1,0 +1,20 @@
+name: 云端情报到达后重建
+
+# The cloud analyst pushes its branch around 07:00 Beijing. GitHub's own schedule often runs hours late, so this push is what
+# makes the morning report punctual; the push-log guard still keeps each channel to one report a day.
+on:
+  push:
+    branches: [claude/intel-feed]
+    paths: [data/feed.json]
+
+permissions:
+  actions: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run the daily workflow on main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run daily.yml --repo "$GITHUB_REPOSITORY" --ref main -f scheduled=true

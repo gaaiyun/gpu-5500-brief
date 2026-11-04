@@ -1,7 +1,9 @@
+import os
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
@@ -43,6 +45,41 @@ class PushLogTests(unittest.TestCase):
                 kept=sorted(p.stem for p in push_log.REPORTED.glob("*.json"))
                 self.assertEqual(len(kept),push_log.KEEP_REPORTS)
                 self.assertEqual(kept[-1],"2026-10-31")
+            finally:
+                push_log.PATH,push_log.STATE,push_log.REPORTED=saved
+
+
+class ReportTimeTests(unittest.TestCase):
+    def test_report_waits_for_the_morning_and_sends_once(self):
+        from datetime import datetime
+        with tempfile.TemporaryDirectory() as folder:
+            saved=push_log.PATH
+            push_log.PATH=Path(folder)/"push_log.json"
+            try:
+                night,morning=datetime(2026,11,5,3,tzinfo=push_log.TZ),datetime(2026,11,5,7,5,tzinfo=push_log.TZ)
+                self.assertEqual(push_log.status("dingtalk",night),"wait")
+                self.assertEqual(push_log.status("dingtalk",morning),"due")
+                push_log.save({"dingtalk":push_log.today()})
+                self.assertEqual(push_log.status("dingtalk",morning),"sent")
+            finally:
+                push_log.PATH=saved
+
+
+class ForcedPushTests(unittest.TestCase):
+    def test_forced_push_replaces_the_days_report(self):
+        with tempfile.TemporaryDirectory() as folder:
+            saved=push_log.PATH,push_log.STATE,push_log.REPORTED
+            root=Path(folder)
+            push_log.PATH,push_log.STATE,push_log.REPORTED=root/"push_log.json",root/"state.json",root/"reported"
+            try:
+                push_log.STATE.write_text('{"date":"2026-10-31","v":1}',encoding="utf-8")
+                push_log.snapshot()
+                push_log.STATE.write_text('{"date":"2026-10-31","v":2}',encoding="utf-8")
+                push_log.snapshot()
+                self.assertEqual(push_log.last_report("2026-10-31")["v"],1)
+                with mock.patch.dict(os.environ,{"FORCE":"true"}):
+                    push_log.snapshot()
+                self.assertEqual(push_log.last_report("2026-10-31")["v"],2)
             finally:
                 push_log.PATH,push_log.STATE,push_log.REPORTED=saved
 

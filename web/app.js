@@ -56,7 +56,7 @@ function renderEvidence(){
   if(!board){$('evidence-rows').innerHTML='<tr><td colspan="4">价格证据表在下一轮采集后生成。</td></tr>';return;}
   const changes=Object.fromEntries(board.changes.map(c=>[c.id,c]));
   const rows=board.rows.map(r=>{
-    const c=changes[r.id],flag=c?` <span class="badge amber">${c.kind==='新报价'?'今日新报价':`汇率 ${c.delta>0?'+':''}${number(c.delta)}`}</span>`:'';
+    const c=changes[r.id],flag=c?` <span class="badge amber">${c.kind==='新报价'?'今日新报价':c.kind==='补录'?'今日补录':c.kind==='货况'?'货况变化':`汇率 ${c.delta>0?'+':''}${number(c.delta)}`}</span>`:'';
     const when=r.kind==='海外零售'?`${r.date} 起此价未变${r.check_status==='ok'&&r.checked?` · ${r.checked.slice(5)} 核对`:` · 本轮未读到页面${r.checked?`，最后核对 ${r.checked.slice(5)}`:''}`}`:`${r.date} · ${r.age_days} 天前`;
     const amount=r.low?esc(r.text):esc(r.native);
     const note=[r.converted?r.native:'',r.note].filter(Boolean).join('；');
@@ -80,6 +80,11 @@ function renderIntelligence(){
   const feed=state.feed?.items||[];
   $('feed-status').textContent=feed.length?`AI 读原文并交叉核对 · ${feed.length} 条 · 更新 ${time(state.feed.updated_at)}`:'暂无通过核对的新增情报';
   $('feed-items').innerHTML=feed.map(item=>`<article class="intel-item"><div class="intel-meta"><b>${esc(item.publisher)}</b><span>${esc(item.published_at)}</span><small class="badge ${item.grade==='C'?'':'amber'}">${esc(item.tier||'核实')} · ${esc(item.grade)} ${esc(item.grade_label)}</small></div><div class="intel-content"><h3><a href="${url(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a></h3><p>${esc(item.summary)}</p>${(item.claims||[]).length?`<ul class="claims">${item.claims.map(c=>`<li class="claim-${c.status==='有出处'?'ok':c.status==='推算'?'calc':'bad'}"><b>${esc(c.status)}</b>${esc(c.text)}${c.ref?` <a href="${url(c.ref)}" target="_blank" rel="noopener">出处 ↗</a>`:''}</li>`).join('')}</ul>`:''}</div><div class="intel-impact"><span>报价含义</span>${esc(item.impact)}<small>跟踪：${esc(item.watch)}${item.corroboration.length?` · 交叉印证 ${item.corroboration.length} 处`:''}</small></div></article>`).join('');
+  const mentions=state.feed?.mentions||[],channel=state.feed?.channel||[];
+  const price=m=>m.low===m.high?`${m.low/10000} 万元`:`${m.low/10000}—${m.high/10000} 万元`;
+  $('signals-items').innerHTML=[...mentions.map(m=>`<li><span>${m.url?`<a href="${url(m.url)}" target="_blank" rel="noopener">${esc(m.publisher)}：${esc(price(m))} ↗</a>`:`${esc(m.publisher)}：${esc(price(m))}`}</span><small>价格说法 · ${esc(m.date)}</small></li>`),
+    ...channel.map(c=>`<li><span><a href="${url(c.url)}" target="_blank" rel="noopener">${esc(c.title)} ↗</a></span><small>渠道声明 · ${esc(c.publisher)}${c.date?` · ${esc(c.date)}`:''}</small></li>`)].join('')||'<li>暂无</li>';
+  $('signals-count').textContent=`${mentions.length+channel.length} 条`;
   const leads=state.feed?.leads||[];
   $('leads-count').textContent=`${leads.length} 条`;
   $('leads-items').innerHTML=leads.length?leads.map(x=>`<li><span><a href="${url(x.url)}" target="_blank" rel="noopener">${esc(x.title)} ↗</a>${x.snippet?`<br><small>${esc(x.snippet)}</small>`:''}</span><small>${esc(x.publisher)}${x.published_at?` · ${esc(x.published_at)}`:''}${x.found_via?` · ${esc(x.found_via)}`:''}</small></li>`).join(''):'<li>暂无未核实线索。</li>';
@@ -109,7 +114,7 @@ async function load(){
   $('update-time').textContent=`本轮更新 ${time(state.checked_at)}`;
   const stale=(Date.now()-new Date(state.checked_at))/3600000>36;
   // Beijing times of the morning report and the daytime patrols, in minutes after midnight.
-  const nextRun=()=>{const bj=new Date(Date.now()+8*3600000),now=bj.getUTCHours()*60+bj.getUTCMinutes(),slots=[35,550,670,790,910,1030,1150,1270];const s=slots.find(x=>x>now)??slots[0];return `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;};
+  const nextRun=()=>{const bj=new Date(Date.now()+8*3600000),now=bj.getUTCHours()*60+bj.getUTCMinutes(),slots=[420,450,550,670,790,910,1030,1150,1270];const s=slots.find(x=>x>now)??slots[0];return `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;};
   $('run-state').textContent=stale?'更新超过36小时，请检查运行记录':`下次计划 ${nextRun()} · 渠道 ${state.channel_status==='ok'?'采集成功':'沿用上次记录'}`;
   const template=market.template||{};
   if(template.synthetic){$('template-badge').textContent='模板存档 · 不计涨跌';$('template-warning').hidden=false;$('template-warning').textContent=`这条曲线${template.reasons.join('，')}。它的日涨跌不代表行情，只保留作存档。`;}
@@ -122,7 +127,7 @@ async function load(){
   $('daily-brief').innerHTML=state.daily_brief.items.map(b=>`<div class="brief-item"><h3>${esc(b.title)}</h3><p>${esc(b.text)}</p></div>`).join('');
   const f=evidence.forecast,r=state.forecast_review,base=f.scenarios.find(x=>x.id==='base');
   const anchor=evidence.prices.find(x=>x.id===f.anchor_price_id)||{};
-  $('anchor-price').textContent=anchor.value_cny?yuan(anchor.value_cny):`${anchor.low_cny/10000}—${anchor.high_cny/10000} 万`;$('anchor-date').textContent=`${anchor.board||''} · ${f.anchor_observed_at.slice(5)}`;
+  $('anchor-price').textContent=anchor.native||(anchor.value_cny?yuan(anchor.value_cny):`${anchor.low_cny/10000}—${anchor.high_cny/10000} 万`);$('anchor-date').textContent=`${anchor.board||''} · ${f.anchor_observed_at.slice(5)}`;
   $('base-range').textContent=`${(base.low/10000).toFixed(1)}—${(base.high/10000).toFixed(1)} 万 / 张`;
   $('forecast-date').textContent=`${f.version.slice(-2)} 版 ${f.issued_at} 发布 · 本轮复核 ${r.reviewed_at}`;
   $('forecast-state').textContent={low_confidence:'条件情景',review_required:'待复核',expired:'历史情景'}[r.status];

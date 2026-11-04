@@ -59,6 +59,33 @@ class DiscoveryTests(unittest.TestCase):
         self.assertTrue(sweep.sogou_blocked("<html>antispider</html>","https://weixin.sogou.com/antispider/?from=x"))
 
 
+class BingTests(unittest.TestCase):
+    FEED=("""<rss version="2.0"><channel>"""
+          """<item><title>Nvidia allocates 1% of $70B RTX chip order to China</title>"""
+          """<link>http://www.bing.com/news/apiclick.aspx?ref=FexRss&amp;url=https%3a%2f%2fwww.caiwennews.com%2farticle%2f1.shtml&amp;c=1</link>"""
+          """<description>first batch by year end</description><pubDate>Tue, 03 Nov 2026 15:59:00 GMT</pubDate></item>"""
+          """<item><title>RTX PRO 5500 orders</title><link>https://example.com/direct</link>"""
+          """<description></description><pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate></item>"""
+          """<item><title>Radeon pricing roundup</title><link>https://example.com/other</link>"""
+          """<description>no such card</description><pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate></item>"""
+          """</channel></rss>""").encode()
+
+    def test_publisher_address_comes_out_of_the_bing_link(self):
+        rows=sweep.parse_bing(self.FEED)
+        self.assertEqual(rows[0]["url"],"https://www.caiwennews.com/article/1.shtml")
+        self.assertEqual(rows[0]["found_via"],"Bing 新闻")
+        self.assertEqual(rows[0]["published_at"],date(2026,11,3))
+        self.assertEqual(rows[1]["url"],"https://example.com/direct")
+
+    def test_headline_without_the_model_name_is_kept_but_other_cards_are_not(self):
+        self.assertEqual(len(sweep.parse_bing(self.FEED)),2)
+
+    def test_outlets_that_carry_the_story_can_be_read(self):
+        for url in ("https://money.udn.com/money/story/5603/9856924","https://www.caiwennews.com/article/1.shtml",
+                    "https://www.investing.com/news/x","https://en.sedaily.com/international/x"):
+            self.assertIsNotNone(sweep.classify(url),url)
+
+
 class DraftCheckTests(unittest.TestCase):
     def test_checked_draft_becomes_grade_b(self):
         item=sweep.build_item(draft(),candidate(),EVENTS,TODAY)
@@ -101,6 +128,60 @@ class DraftCheckTests(unittest.TestCase):
     def test_internal_ids_become_source_names(self):
         item=sweep.build_item(draft(impact="与已收录事件 leiphone 的8.5万元一致"),candidate(),EVENTS,TODAY)
         self.assertEqual(item["impact"],"与雷峰网的8.5万元一致")
+
+
+class CloudVerifyTests(unittest.TestCase):
+    ITEM={"id":"c1","title":"彭博：约600万颗","url":"https://a.example/1","publisher":"彭博","source_type":"主流媒体","published_at":"2026-10-27",
+          "summary":"订购约600万颗，总值约700亿美元，约占1%","corroboration":["https://b.example/2"]}
+
+    def reader(self,pages):
+        def read(url,**_):
+            if url not in pages:raise RuntimeError("blocked")
+            return pages[url],"",None
+        return read
+
+    def test_numbers_printed_in_the_article_pass(self):
+        kept,leads,notes=sweep.verify_cloud([dict(self.ITEM)],set(),TODAY,self.reader({"https://a.example/1":"ordered about 6 million chips worth $70 billion, roughly 1%"}))
+        self.assertEqual(kept[0]["ci_checked"],TODAY.isoformat());self.assertEqual(leads,[])
+
+    def test_a_readable_relay_can_stand_in_for_a_paywalled_original(self):
+        kept,leads,_=sweep.verify_cloud([dict(self.ITEM)],set(),TODAY,self.reader({"https://b.example/2":"共订购约600万颗，总值约700亿美元，约占1%"}))
+        self.assertEqual(len(kept),1)
+
+    def test_invented_number_or_unreadable_page_goes_back_to_links(self):
+        kept,leads,notes=sweep.verify_cloud([dict(self.ITEM)],set(),TODAY,self.reader({"https://a.example/1":"约600万颗"}))
+        self.assertEqual(kept,[]);self.assertEqual(leads[0]["found_via"],"云端条目未通过复核");self.assertIn("原文没有",notes[0])
+        kept,leads,notes=sweep.verify_cloud([dict(self.ITEM)],set(),TODAY,self.reader({}))
+        self.assertEqual(kept,[]);self.assertIn("blocked",notes[0])
+
+    def test_items_already_on_main_are_not_read_again(self):
+        kept,_,_=sweep.verify_cloud([dict(self.ITEM)],{"https://a.example/1"},TODAY,self.reader({}))
+        self.assertEqual(len(kept),1)
+
+    def test_committed_room_holds_short_snippets_only(self):
+        text="第一句没有数字。"+"未来4个月预计只到数万颗，约占订单1%。"+"甲"*300+"5500售价9万元。"
+        entry=sweep.room_entry({"url":"https://x/1","title":"t","published_at":TODAY,"text":text},"5500",TODAY)
+        self.assertEqual(entry["published_at"],TODAY.isoformat());self.assertNotIn("text",entry)
+        self.assertTrue(all(len(s)<=80 for s in entry["snippets"]))
+        self.assertIn("约占订单1%",entry["snippets"][0])
+
+    def test_room_expires_and_keeps_the_newest_reading(self):
+        old=[{"url":"https://x/1","seen_at":"2026-10-01"},{"url":"https://x/2","seen_at":"2026-10-26","snippets":["旧"]}]
+        room=sweep.merge_room(old,[{"url":"https://x/2","seen_at":"2026-10-27","snippets":["新"],"published_at":"2026-10-27"}],TODAY)
+        self.assertEqual([(r["url"],r["snippets"]) for r in room],[("https://x/2",["新"])])
+
+
+class RepostTests(unittest.TestCase):
+    def test_self_media_post_with_only_known_figures_is_a_repost(self):
+        post={"source_type":"公众号","title":"腾讯新闻：大厂疯抢","summary":"中国客户总订单超过600万张"}
+        self.assertEqual(sweep.repost_of(post,EVENTS),"reuters")
+
+    def test_a_relay_by_a_real_outlet_is_a_repost_too(self):
+        self.assertEqual(sweep.repost_of({"source_type":"行业媒体","title":"快科技：大厂疯抢","summary":"总订单超过600万张"},EVENTS),"reuters")
+
+    def test_a_new_figure_or_no_figures_is_kept(self):
+        self.assertIsNone(sweep.repost_of({"source_type":"公众号","title":"订单","summary":"总订单超过800万张"},EVENTS))
+        self.assertIsNone(sweep.repost_of({"source_type":"行业媒体","title":"工信部批准采购","summary":"已获批准"},EVENTS))
 
 
 class SweepTests(unittest.TestCase):

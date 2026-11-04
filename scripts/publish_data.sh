@@ -7,9 +7,10 @@ message="$1"; shift
 git add -- "$@"
 git diff --cached --quiet && exit 0
 git commit -q -m "$message"
-for attempt in 1 2 3; do
+for attempt in 1 2 3 4 5; do
   git push -q origin HEAD:main && exit 0
-  echo "main moved; replaying this run's data on top (attempt $attempt)"
+  echo "main moved or GitHub errored; replaying this run's data on top (attempt $attempt)"
+  sleep $((attempt * 10))
   saved=$(mktemp -d)
   for path in "$@"; do
     [ -e "$path" ] && mkdir -p "$saved/$(dirname "$path")" && cp -r "$path" "$saved/$(dirname "$path")/"

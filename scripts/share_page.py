@@ -3,7 +3,8 @@ from __future__ import annotations
 
 from html import escape
 
-from daily_card import pick_items
+from daily_card import BRIEF_ITEMS, extra_feed, pick_items
+from signals import mention_price
 
 SITE = "https://gaaiyun.github.io/gpu-5500-brief/"
 # Mainland mirror: nginx on our own server caching the GitHub Pages site. GitHub stays the primary link.
@@ -36,9 +37,10 @@ def price_lines(state, link=None):
     return lines
 
 
-def body_html(state, image=None):
+def body_html(state, image=None, brief=False):
     """Plain tags only, so the same body renders in the share page and in a PushPlus message.
-    The hosted page passes a relative image so its mirror copy loads the image from the mirror too."""
+    The hosted page passes a relative image so its mirror copy loads the image from the mirror too.
+    `brief` keeps a push message within PushPlus's size limit; the full lists stay on the page it links to."""
     market = state["channel"]
     p, stats = market["latest"], market["stats"]
     day = state["date"]
@@ -63,14 +65,29 @@ def body_html(state, image=None):
     for item in state["daily_brief"]["items"]:
         parts.append(f"<p><b>{e(item['title'])}</b>：{e(item['text'])}</p>")
     parts.append("<h3>市场情报</h3>")
-    for n, item in enumerate(pick_items(state), 1):
+    for n, item in enumerate(pick_items(state, BRIEF_ITEMS if brief else None), 1):
         parts.append(
             f"<p><b>{n}. {e(item['title'])}</b>（{e(item['date'])}）<br>"
             f"事实：{e(item['summary'])}<br>"
             f"影响：{e(item['impact'])}<br>"
             f"跟进：{e(item['watch'])}<br>"
             f"来源：<a href=\"{e(item['url'])}\">{e(item['source'])}</a></p>")
-    feed = [x for x in (state.get("feed") or {}).get("items", []) if x.get("age_days", 99) <= 14]
+    all_feed = extra_feed(state, 14)
+    feed = [x for x in all_feed if x.get("scope") != "context"]
+    related = [x for x in all_feed if x.get("scope") == "context"]
+    if related:
+        parts.append("<h3>相关动态（影响供需，不是 5500 本身）</h3>")
+        for item in related[:4]:
+            parts.append(f"<p><b>{e(item['title'])}</b>（{e(item['published_at'])}，{e(item['publisher'])}）<br>{e(item['summary'])}<br>"
+                         f"含义：{e(item['impact'])}<br>来源：<a href=\"{e(item['url'])}\">{e(item['publisher'])}</a></p>")
+    mentions = (state.get("feed") or {}).get("mentions") or []
+    if mentions:
+        rows = [f"{e(m['date'][5:])} {e(m['publisher'])}：{e(mention_price(m))}" + (f" <a href=\"{e(m['url'])}\">来源</a>" if m["url"] else "") for m in mentions[:8]]
+        parts.append("<h3>网上价格说法（未核实，不计入大陆报价区间）</h3><p>" + "<br>".join(rows) + "</p>")
+    channel = (state.get("feed") or {}).get("channel") or []
+    if channel:
+        rows = [f"{e(c['date'][5:])} {e(c['publisher'])}：<a href=\"{e(c['url'])}\">{e(c['title'])}</a>" for c in channel[:5]]
+        parts.append("<h3>渠道声明（商家自述，未核实）</h3><p>" + "<br>".join(rows) + "</p>")
     if feed:
         parts.append("<h3>全网追踪（AI 读原文核对）</h3>")
         for item in feed[:6]:
@@ -85,7 +102,7 @@ def body_html(state, image=None):
         parts.append("<h3>未核实线索（只给链接，点开自行判断）</h3>")
         parts.append("<p>" + "<br>".join(
             f"<a href=\"{e(x['url'])}\">{e(x['title'])}</a>（{e(x['publisher'])}{'，' + e(x['published_at']) if x['published_at'] else ''}）"
-            + (f"<br><small>{e(x['snippet'])}</small>" if x["snippet"] else "") for x in leads[:15]) + "</p>")
+            + (f"<br><small>{e(x['snippet'])}</small>" if x["snippet"] else "") for x in leads[:5 if brief else 10]) + "</p>")
     parts.append("<p>口径：海外价格按当日汇率折算，汇率变动不是新报价，未含关税运费；渠道挂价为平台期货报盘，不是成交价；媒体价格未统一税费、数量和交期。没有新证据时不改预测。</p>"
                  if state.get("price_board") else
                  "<p>口径：渠道价为宽泛采销平台参考，不是成交价；媒体价格未统一税费、数量和交期。没有新证据时不改预测。</p>")

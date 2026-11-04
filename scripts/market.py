@@ -123,19 +123,37 @@ def channel_template(market, previous):
     return {"synthetic": redated or formula, "redated": redated, "formula": formula, "reasons": reasons}
 
 
-def daily_brief(evidence, market, previous, board=None):
+def supply_text(supply, today):
+    """Reported delivery milestones with a countdown to the next one; a passed date asks whether it was met."""
+    parts, counting = [], False
+    for m in supply["milestones"]:
+        days = (date.fromisoformat(m["date"]) - today).days
+        note = "（节点已过，待核实到货）" if days < 0 else f"（还有 {days} 天）" if not counting else ""
+        counting = counting or days >= 0
+        parts.append(f"{m['label']}{m['when']}{note}")
+    return f"{supply['source']}（{supply['as_of'][5:]}）：{supply['summary']}。{'；'.join(parts)}。{supply['confirmed']}。"
+
+
+def daily_brief(evidence, market, previous, board=None, today=None):
     base = next(s for s in evidence["forecast"]["scenarios"] if s["id"] == "base")
     items = []
     domestic = (board or {}).get("domestic")
     if domestic:
         items.append({"title":"大陆报价", "text":f"已披露的大陆单卡报价在 {domestic['low']:,}-{domestic['high']:,} 元之间（{domestic['count']} 条来源），"
                                               f"最新一条是 {domestic['latest_label']}（{domestic['latest_date']}）。"})
+    if evidence.get("supply") and today:
+        items.append({"title":"供应与交付", "text":supply_text(evidence["supply"], today)})
+    if evidence["forecast"].get("thesis"):
+        forecast = evidence["forecast"]
+        items.append({"title":"当前预测", "text":f"{forecast['version'][-2:]} 版（{forecast['issued_at']}）：{forecast['thesis']}"})
     rows = {r["id"]: r for r in (board or {}).get("rows", [])}
     usd = rows.get("reuters_usd")
     if usd and usd["cny"]:
         fx = board["fx"]
         items.append({"title":"折算对照", "text":f"路透所述订单价 {usd['native']}，按{fx['label']} {fx['rates']['USD']}（{fx['date']}）折合 {usd['cny']:,} 元，"
-                                              f"加 13% 增值税约 {usd['cny_vat']:,} 元。汇率变了这个数才变，不是新报价。"})
+                                              f"加 13% 增值税约 {usd['cny_vat']:,} 元。"
+                                              + (f"彭博所述单价{rows['bloomberg_usd']['native']}，同样折算约 {rows['bloomberg_usd']['cny_vat']:,} 元起。" if rows.get("bloomberg_usd", {}).get("cny_vat") else "")
+                                              + "汇率变了这些数才变，不是新报价。"})
     if board:
         items.append({"title":"今日变化", "text":board["summary"]})
     if not market:
@@ -145,11 +163,11 @@ def daily_brief(evidence, market, previous, board=None):
     template = market.get("template") or {}
     channel = f"最低挂价 {market['min_ask']:,} 元为{market['condition']}，交期 {market['delivery']}，原报价 {market['quote_date'] or '未标明'}。"
     if template.get("synthetic"):
-        channel += "平台 14 日曲线" + "，".join(template["reasons"]) + "，不计入涨跌。"
+        channel += "平台 14 日曲线是固定模板，不计入涨跌。"
     else:
         channel += f"平台中间值较上日 {stats['day_change']:+,} 元（{stats['day_pct']:+.2f}%），较七日前 {stats['week_pct']:+.2f}%。"
     items.append({"title":"渠道挂价", "text":channel})
-    items.append({"title":"下一步核实", "text":f"取得短交期货源的当日报价与含税口径，与 {base['low']:,}-{base['high']:,} 元基准区间对照。"})
+    items.append({"title":"下一步核实", "text":f"核实首批到货，取得短交期货源的当日报价与含税口径，与 {base['low']:,}-{base['high']:,} 元基准区间对照。"})
     old = previous or {}
     changes = []
     fields = [("min_ask","最低挂价"),("quote_date","原报价日期"),("delivery","交期")]

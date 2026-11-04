@@ -3,6 +3,7 @@
 The first push of each report also keeps a copy of that state in data/reported/: the next morning report and the
 day's flash alerts count changes from what the group last received."""
 import json
+import os
 import shutil
 import sys
 from datetime import datetime, timedelta, timezone
@@ -12,6 +13,7 @@ PATH = Path(__file__).resolve().parents[1] / "data/push_log.json"
 STATE = PATH.parent / "state.json"
 REPORTED = PATH.parent / "reported"
 KEEP_REPORTS = 10
+REPORT_HOUR = 7   # Beijing time; night runs refresh the site, the first run after this sends the day's report
 TZ = timezone(timedelta(hours=8))
 
 
@@ -39,7 +41,8 @@ def snapshot():
     """Keep the state a report was built from; a backup run that retries one channel later does not replace it."""
     state = json.loads(STATE.read_text(encoding="utf-8"))
     target = REPORTED / f"{state['date']}.json"
-    if not target.exists():
+    # A forced re-push is the report the group saw last, so alerts and tomorrow's changes count from it.
+    if os.getenv("FORCE") == "true" or not target.exists():
         REPORTED.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(STATE, target)
     prune()
@@ -63,10 +66,16 @@ def record(channel):
     snapshot()
 
 
+def status(channel, now=None):
+    if sent(channel):
+        return "sent"
+    return "wait" if (now or datetime.now(TZ)).hour < REPORT_HOUR else "due"
+
+
 if __name__ == "__main__":
     action, channel = sys.argv[1], sys.argv[2]
     if action == "check":
-        print("sent" if sent(channel) else "pending")
+        print(status(channel))
     elif action == "record":
         record(channel)
     else:

@@ -90,6 +90,23 @@ class ListingTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             prices.parse_listing(html, "GBP")
 
+    def test_stock_wording_comes_from_the_page_text(self):
+        html = '<div>Buy now <a href="#x">In stock in over 15 days</a> Be notified</div><script>In stock today</script>'
+        self.assertEqual(prices.parse_stock(html, r"In stock in over \d+ days|Out of stock|In stock"), "In stock in over 15 days")
+        html = "<p>Availability: Pre order now for stock allocation - Only UK</p>"
+        self.assertEqual(prices.parse_stock(html, r"Availability:\s*([^-]{3,60}?)\s*-"), "Pre order now for stock allocation")
+        self.assertIsNone(prices.parse_stock("<p>nothing</p>", r"In stock"))
+
+    def test_changed_stock_wording_is_recorded_and_a_missing_one_keeps_the_last(self):
+        page = lambda stock: self.page('{"@type":"Product","offers":{"@type":"AggregateOffer","lowPrice":"16469.95","priceCurrency":"EUR"}}') + stock
+        seed = dict(evidence()["listings"][0], stock_pattern=r"In stock in over \d+ days|In stock")
+        first = prices.check_listing(seed, listing()[0], lambda _: page("In stock in over 15 days"), "2026-10-30T00:35:00+08:00")
+        self.assertEqual((first["stock"], first["stock_since"]), ("In stock in over 15 days", "2026-10-30"))
+        later = prices.check_listing(seed, first, lambda _: page("In stock"), "2026-11-02T00:35:00+08:00")
+        self.assertEqual((later["stock"], later["stock_since"]), ("In stock", "2026-11-02"))
+        gone = prices.check_listing(seed, later, lambda _: page(""), "2026-11-03T00:35:00+08:00")
+        self.assertEqual((gone["stock"], gone["stock_since"]), ("In stock", "2026-11-02"))
+
     def test_unchanged_price_keeps_its_date(self):
         html = self.page('{"@type":"Product","offers":{"@type":"AggregateOffer","lowPrice":"16469.95","priceCurrency":"EUR"}}')
         seed = evidence()["listings"][0]
@@ -143,6 +160,45 @@ class BoardTests(unittest.TestCase):
         self.assertEqual(kinds["reuters_usd"], "汇率")
         self.assertTrue(board["summary"].startswith("今日无新报价"))
         self.assertIn("2026-10-21", board["summary"])
+
+    def test_stock_change_is_reported_once_there_is_an_earlier_reading(self):
+        day = date(2026, 10, 29)
+        old = prices.build_board(evidence(), None, fx(), [dict(listing()[0], stock="In stock in over 15 days")], [], day, None)
+        new = prices.build_board(evidence(), None, fx(), [dict(listing()[0], stock="In stock")], [], day, old)
+        change = next(c for c in new["changes"] if c["kind"] == "货况")
+        self.assertIn("In stock in over 15 days → In stock", change["text"])
+        self.assertIn("货况", new["summary"])
+        first = prices.build_board(evidence(), None, fx(), listing(), [], day, None)
+        again = prices.build_board(evidence(), None, fx(), [dict(listing()[0], stock="In stock")], [], day, first)
+        self.assertFalse([c for c in again["changes"] if c["kind"] == "货况"])
+
+    def test_old_quote_added_today_is_backfill_not_a_new_quote(self):
+        ev = evidence()
+        ev["sources"].append({"id": "lp", "url": "https://example.com/lp"})
+        ev["prices"].append({"id": "lp_price", "source_id": "lp", "observed_at": "2026-10-09", "value_cny": 89999, "board": "旧预售页"})
+        yesterday = prices.build_board(evidence(), None, fx(), listing(), [], date(2026, 10, 29), None)
+        board = prices.build_board(ev, None, fx(), listing(), [], date(2026, 10, 29), yesterday)
+        change = next(c for c in board["changes"] if c["id"] == "lp_price")
+        self.assertEqual(change["kind"], "补录")
+        self.assertIn("2026-10-09", change["text"])
+        self.assertIn("补录", board["summary"])
+        self.assertIn("今日无新报价", board["summary"])
+
+    def test_every_dollar_report_marks_its_day_on_the_trend(self):
+        ev = evidence()
+        ev["sources"].append({"id": "bb", "url": "https://example.com/bb"})
+        ev["prices"].append({"id": "bb_usd", "source_id": "bb", "observed_at": "2026-10-29", "value_usd": 11000, "board": "彭博单价下限"})
+        series = prices.build_series(ev, None, prices.parse_fx_history(CCPR_HISTORY), [], [], date(2026, 10, 29))
+        self.assertIn("彭博单价下限", series[-1]["events"])
+
+    def test_dollar_floor_keeps_its_wording(self):
+        ev = evidence()
+        ev["sources"].append({"id": "bb", "url": "https://example.com/bb"})
+        ev["prices"].append({"id": "bb_usd", "source_id": "bb", "observed_at": "2026-10-29", "value_usd": 11000, "native": "超过 $11,000", "board": "彭博单价下限", "board_note": "匿名信源，是下限"})
+        row = next(r for r in prices.build_board(ev, None, fx(), listing(), [], date(2026, 10, 29), None)["rows"] if r["id"] == "bb_usd")
+        self.assertEqual(row["native"], "超过 $11,000")
+        self.assertEqual(row["note"], "匿名信源，是下限")
+        self.assertTrue(row["converted"])
 
     def test_new_listing_price_is_reported(self):
         board = self.board(previous=self.board(), rows=listing(15999.0, "2026-10-29"))
