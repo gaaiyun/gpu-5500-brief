@@ -49,6 +49,22 @@ class PushLogTests(unittest.TestCase):
                 push_log.PATH,push_log.STATE,push_log.REPORTED=saved
 
 
+class ReportTimeTests(unittest.TestCase):
+    def test_report_waits_for_the_morning_and_sends_once(self):
+        from datetime import datetime
+        with tempfile.TemporaryDirectory() as folder:
+            saved=push_log.PATH
+            push_log.PATH=Path(folder)/"push_log.json"
+            try:
+                night,morning=datetime(2026,11,5,3,tzinfo=push_log.TZ),datetime(2026,11,5,7,5,tzinfo=push_log.TZ)
+                self.assertEqual(push_log.status("dingtalk",night),"wait")
+                self.assertEqual(push_log.status("dingtalk",morning),"due")
+                push_log.save({"dingtalk":push_log.today()})
+                self.assertEqual(push_log.status("dingtalk",morning),"sent")
+            finally:
+                push_log.PATH=saved
+
+
 class ForcedPushTests(unittest.TestCase):
     def test_forced_push_replaces_the_days_report(self):
         with tempfile.TemporaryDirectory() as folder:

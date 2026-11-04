@@ -317,7 +317,8 @@
       "price": 16469.95,
       "price_seen_at": "2026-09-30",
       "sku": "VCNRTXPRO5500-PB",
-      "note": "LDLC 零售价（盒装版，页面写 15 天以上到货；9 月 30 日起 Materiel.net 同价），去掉法国 20% 增值税后折算，未含关税运费"
+      "note": "LDLC 零售价（盒装版；9 月 30 日起 Materiel.net 同价），去掉法国 20% 增值税后折算，未含关税运费",
+      "stock_pattern": "In stock in over \\d+ days|In stock within [^.]{0,25}|Out of stock|In stock"
     },
     {
       "id": "uk_gbics_sb",
@@ -329,7 +330,8 @@
       "price": 12810,
       "price_seen_at": "2026-10-29",
       "sku": "VCNRTXPRO5500-SB",
-      "note": "预订配货价，页面描述写 78GB 与 84GB 不符；去掉英国 20% 增值税后折算"
+      "note": "页面描述写 78GB 与 84GB 不符；去掉英国 20% 增值税后折算",
+      "stock_pattern": "Availability:\\s*([^-–]{3,60}?)\\s*[-–]"
     },
     {
       "id": "fr_ldlc_oem",
@@ -341,7 +343,8 @@
       "price": 18169.95,
       "price_seen_at": "2026-10-29",
       "sku": "VCNRTXPRO5500-SB",
-      "note": "LDLC 零售价（OEM 版），去掉法国 20% 增值税后折算，未含关税运费"
+      "note": "LDLC 零售价（OEM 版），去掉法国 20% 增值税后折算，未含关税运费",
+      "stock_pattern": "In stock in over \\d+ days|In stock within [^.]{0,25}|Out of stock|In stock"
     },
     {
       "id": "de_lieske_sb",
@@ -354,14 +357,15 @@
       "price": 13894.0,
       "price_seen_at": "2026-10-30",
       "sku": "VCNRTXPRO5500-SB",
-      "note": "企业采购网店，页面写缺货、已向上游订货、约 20 个工作日发货；按净价折算，未含关税运费"
+      "note": "企业采购网店，页面写缺货、已向上游订货；按净价折算，未含关税运费",
+      "stock_pattern": "ready for dispatch within \\d+ working days|in stock and ready[^.]{0,30}"
     }
   ],
   "supply": {
     "source": "彭博",
     "as_of": "2026-11-04",
     "source_id": "bloomberg",
-    "summary": "约 600 万颗订单，未来 4 个月预计只到约 1%",
+    "summary": "约 600 万颗订单，未来 4 个月预计只到约 1%；英伟达称排期冲突，产能转向 Rubin 等下一代",
     "confirmed": "目前只有前两批获确认，累计数是买方估计",
     "milestones": [
       {
@@ -380,5 +384,31 @@
         "when": "到 2027 年底，可能因产能调整而变化"
       }
     ]
-  }
+  },
+  "calendar": [
+    {
+      "date": "2026-11-18",
+      "label": "NVIDIA 三季度财报",
+      "why": "听中国收入和产能分配口径",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873"
+    },
+    {
+      "date": "2026-11-18",
+      "label": "腾讯三季度财报",
+      "why": "听资本开支和 GPU 到货说法",
+      "url": "https://m.cls.cn/detail/2505509"
+    },
+    {
+      "date": "2026-11-30",
+      "label": "样品卡与最早交付窗口",
+      "why": "头部服务器厂商 11 月拿样，渠道称最快月底交付",
+      "url": "https://www.leiphone.com/category/chips/STx9ZzfDNh5W80Bm.html"
+    },
+    {
+      "date": "2026-12-31",
+      "label": "首批数千颗到货截止",
+      "why": "彭博所述，首个可核实的供应节点",
+      "url": "https://money.udn.com/money/story/5603/9856924"
+    }
+  ]
 }

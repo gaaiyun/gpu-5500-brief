@@ -40,9 +40,12 @@ def events(state, report):
     today = date.fromisoformat(state["date"])
     found = []
     for change in _changes(list(rows.values()), old):
+        r, prev = rows[change["id"]], before.get(change["id"])
+        if change["kind"] == "货况":
+            found.append({"key": f"{r['id']}|stock|{r['stock']}", "tag": "货况", "text": change["text"], "url": r.get("url", "")})
+            continue
         if change["kind"] != "新报价":
             continue
-        r, prev = rows[change["id"]], before.get(change["id"])
         if r["kind"] == "海外零售":
             if prev is None:
                 continue
@@ -70,10 +73,10 @@ def events(state, report):
     seen = {x["id"] for x in (report.get("feed") or {}).get("items", [])}
     for item in (state.get("feed") or {}).get("items", []):
         # Unverified posts stay in the morning report's link list.
-        if item["id"] not in seen and item.get("grade") in ("A", "B") and item.get("age_days", 99) <= NEWS_MAX_AGE:
+        if item["id"] not in seen and item.get("grade") in ("A", "B") and item.get("age_days", 99) <= NEWS_MAX_AGE and item.get("scope") != "context":
             found.append({"key": f"feed|{item['id']}", "tag": "情报", "text": f"{item['title']}（{item['publisher']}，{item['published_at']}）", "url": item["url"]})
     # Mainland quotes first, then reports; overseas retail is context.
-    return sorted(found, key=lambda e: {"情报": 1, "海外零售": 2}.get(e["tag"], 0))
+    return sorted(found, key=lambda e: {"货况": 1, "情报": 1, "海外零售": 2}.get(e["tag"], 0))
 
 
 def blocked(log, now):

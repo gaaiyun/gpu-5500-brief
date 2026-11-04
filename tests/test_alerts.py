@@ -89,6 +89,16 @@ class NewsEventTests(unittest.TestCase):
         self.assertEqual(alerts.events(self.feed(self.item(age_days=5)), self.feed()), [])
         self.assertEqual(alerts.events(self.feed(self.item(grade="C")), self.feed()), [])
 
+    def test_related_market_news_waits_for_the_morning_report(self):
+        self.assertEqual(alerts.events(self.feed(self.item(scope="context")), self.feed()), [])
+
+    def test_stock_change_is_news(self):
+        old = state(dict(listing(13894.0, 117077), stock="ready for dispatch within 20 working days"))
+        new = state(dict(listing(13894.0, 117077), stock="ready for dispatch within 5 working days"))
+        found = alerts.events(new, old)
+        self.assertEqual(found[0]["tag"], "货况")
+        self.assertIn("5 working days", found[0]["key"])
+
     def test_quotes_come_before_news_and_retail_last(self):
         quote = row("quote:7", "团队询价", "¥88,000", label="团队询价")
         old = dict(self.feed(), price_board=state(listing(13894.0, 117077))["price_board"])

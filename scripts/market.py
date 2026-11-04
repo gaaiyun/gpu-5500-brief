@@ -163,7 +163,7 @@ def daily_brief(evidence, market, previous, board=None, today=None):
     template = market.get("template") or {}
     channel = f"最低挂价 {market['min_ask']:,} 元为{market['condition']}，交期 {market['delivery']}，原报价 {market['quote_date'] or '未标明'}。"
     if template.get("synthetic"):
-        channel += "平台 14 日曲线" + "，".join(template["reasons"]) + "，不计入涨跌。"
+        channel += "平台 14 日曲线是固定模板，不计入涨跌。"
     else:
         channel += f"平台中间值较上日 {stats['day_change']:+,} 元（{stats['day_pct']:+.2f}%），较七日前 {stats['week_pct']:+.2f}%。"
     items.append({"title":"渠道挂价", "text":channel})

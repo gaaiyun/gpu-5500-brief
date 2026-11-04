@@ -154,7 +154,8 @@ def render(evidence, state, output):
             ty += 46
         ty += 16
         tag_fill = {"新报价": (220, 252, 231), "网上挂价": (254, 243, 199), "海外零售": (219, 234, 254), "情报": (243, 232, 255),
-                    "官方": (254, 226, 226), "汇率": (241, 245, 249), "线索": (241, 245, 249), "新闻": (241, 245, 249)}
+                    "官方": (254, 226, 226), "汇率": (241, 245, 249), "线索": (241, 245, 249), "新闻": (241, 245, 249),
+                    "货况": (219, 234, 254), "相关": (243, 232, 255), "说法": (254, 243, 199), "渠道": (254, 243, 199)}
         for tag, lines in laid:
             chip(M + PAD, ty - 4, tag, tag_fill.get(tag, LINE), INK, T_TINY)
             for line in lines:
@@ -274,7 +275,7 @@ def render(evidence, state, output):
                                                     f"本轮未读到页面，最后核对 {last[5:]}" if last else "本轮未读到页面")
             meta = " · ".join(x for x in (when, r["kind"], r["native"] if r["converted"] or not r["low"] else "", r["note"]) if x)
             change = board_changes.get(r["id"])
-            flag = ({"新报价": "今日新报价", "补录": "今日补录"}.get(change["kind"]) or f"汇率 {change['delta']:+,}") if change else ""
+            flag = ({"新报价": "今日新报价", "补录": "今日补录", "货况": "货况变化"}.get(change["kind"]) or f"汇率 {change['delta']:+,}") if change else ""
             value = r["text"] if r["low"] else "未折算"
             laid.append((r, wrap(d, meta, F(T_TINY), inner, 2), flag, value))
         # Closing punctuation may run past the wrap width, so leave room for it.
@@ -406,7 +407,7 @@ def render(evidence, state, output):
     lines_src = [(b["title"], b["text"]) for b in state["daily_brief"]["items"] if not (board and b["title"] in ("今日变化", "当前预测"))]
     label_w = max(d.textlength(k, font=F(T_BODY, True)) for k, _ in lines_src) + 20
     text_w = W - 2 * M - 2 * PAD - label_w
-    body = [(k, wrap(d, t, F(T_BODY), text_w, 4 if board else 3)) for k, t in lines_src]
+    body = [(k, wrap(d, t, F(T_BODY), text_w, 6 if board else 3)) for k, t in lines_src]
     h = 92 + sum(len(ls) * LH + 16 for _, ls in body) + 8
     card(y, y + h)
     d.text((M + PAD, y + 24), "今日判断", font=F(T_H2, True), fill=INK)

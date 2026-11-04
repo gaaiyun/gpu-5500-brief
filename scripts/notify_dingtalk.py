@@ -28,6 +28,7 @@ def signed_url(webhook, secret, now_ms=None):
 
 def message(state):
     from daily_card import BRIEF_ITEMS, extra_feed, pick_items
+    from signals import mention_price
     from share_page import MIRROR, page_url
     from share_page import price_lines
     day = state["date"]
@@ -39,7 +40,7 @@ def message(state):
         lines.append(f"**今日新增：{digest['headline']}**  \n"
                      + "  \n".join(f"[{i['tag']}] {i['text']}" + (f" {i['url']}" if i.get("url") else "") for i in digest["items"]))
     # DingTalk has no judgement section; these two change when the evidence does.
-    lines += [f"**{b['title']}** {b['text']}" for b in (state.get("daily_brief") or {}).get("items", []) if b["title"] in ("供应与交付", "当前预测")]
+    lines += [f"**{b['title']}** {b['text']}" for b in (state.get("daily_brief") or {}).get("items", []) if b["title"] in ("今日点评", "供应与交付", "接下来", "讨论热度", "当前预测")]
     if state.get("price_board"):
         lines += ([] if digest else [f"**今日变化** {state['price_board']['summary']}"]) + [
                   "**价格证据（按原始日期）**  \n" + "  \n".join(price_lines(state))]
@@ -56,7 +57,21 @@ def message(state):
                      f"影响：{item['impact']}  \n"
                      f"跟进：{item['watch']}  \n"
                      f"来源：{item['source']} {item['url']}")
-    feed = extra_feed(state, 14)
+    all_feed = extra_feed(state, 14)
+    feed = [x for x in all_feed if x.get("scope") != "context"]
+    related = [x for x in all_feed if x.get("scope") == "context"]
+    if related:
+        lines.append("**相关动态（影响供需，不是 5500 本身）**")
+        for item in related[:4]:
+            lines.append(f"- **{item['title']}**（{item['published_at']}，{item['publisher']}）  \n{item['summary']}  \n含义：{item['impact']}  \n来源：{item['url']}")
+    mentions = (state.get("feed") or {}).get("mentions") or []
+    if mentions:
+        lines.append("**网上价格说法（未核实，不计入大陆报价区间）**")
+        lines.append("\n".join(f"- {m['date'][5:]} {m['publisher']}：{mention_price(m)}" + (f" {m['url']}" if m["url"] else "") for m in mentions[:6]))
+    channel = (state.get("feed") or {}).get("channel") or []
+    if channel:
+        lines.append("**渠道声明（商家自述，未核实）**")
+        lines.append("\n".join(f"- {c['date'][5:]} {c['publisher']}：{c['title']} {c['url']}" for c in channel[:5]))
     if feed:
         lines.append("**全网追踪（AI 读原文核对）**")
         for item in feed[:6]:

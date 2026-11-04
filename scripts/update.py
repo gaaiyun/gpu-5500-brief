@@ -20,6 +20,7 @@ from intelligence import enrich
 from feed import load_feed, load_leads
 from prices import FX_HISTORY_DAYS, FX_HISTORY_URL, build_board, build_series, check_listing, fetch_fx, load_quotes, quotes_from_issues, merge_fx_history, parse_fx_history
 from digest import daily_digest
+from signals import channel_signals, clean_mentions, extend_brief
 import push_log
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -323,7 +324,9 @@ def run(offline=False):
     state["intelligence"] = enrich(evidence,state)
     state["feed"] = {"items": feed_items, "leads": feed_leads, "rejected": feed_rejected + leads_rejected,
                      "updated_at": (feed_payload or {}).get("updated_at"), "agent": (feed_payload or {}).get("agent"),
-                     "sweep": (feed_payload or {}).get("sweep")}
+                     "sweep": (feed_payload or {}).get("sweep"), "mentions": clean_mentions((feed_payload or {}).get("mentions")),
+                     "channel": channel_signals(feed_leads), "heat": (feed_payload or {}).get("heat") or {}, "take": (feed_payload or {}).get("take")}
+    extend_brief(state, evidence, today)
     state["digest"] = daily_digest(state, reported)
     save_json(ROOT / "data/state.json", state)
     save_json(ROOT / "data/history" / f"{today.isoformat()}.json", state)

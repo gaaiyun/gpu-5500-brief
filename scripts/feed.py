@@ -9,7 +9,8 @@ GRADES = {"A": "多方印证", "B": "单一可信来源", "C": "待核实线索"
 QUICK_TYPES = {"公众号", "社媒"}
 CLAIM_STATUS = ("有出处", "推算", "无出处", "与出处不符")
 MAX_AGE_DAYS = 45
-MAX_ITEMS = 12
+MAX_ITEMS = 16
+SCOPES = ("5500", "context")  # context: not about the card itself, but it moves its supply or demand
 TEXT_LIMITS = {"title": 60, "summary": 260, "impact": 140, "watch": 60, "publisher": 60}
 # A per-card yuan price; order totals and dollar figures fall outside it.
 CARD_PRICE_RANGE = (30_000, 300_000)
@@ -56,14 +57,19 @@ def clean_item(item, today):
     text = " ".join([item[f] for f in ("title", "summary", "impact", "watch")] + [c["text"] for c in claims])
     if re.search(r"<|>|javascript:", text):
         raise ValueError("文本含标记或脚本")
+    scope = item.get("scope") or "5500"
+    if scope not in SCOPES:
+        raise ValueError("scope 只能是 5500 或 context")
     price = item.get("price_cny")
+    if price is not None and scope == "context":
+        raise ValueError("相关动态不能带 5500 的价格")
     if price is not None:
         values = price if isinstance(price, list) else [price]
         if not 1 <= len(values) <= 2 or not all(is_card_price(v) for v in values):
             raise ValueError("price_cny 只能是 3万-30万元的单卡价或区间")
         price = [min(values), max(values)]
     return {**{k: item[k].strip() for k in ("id", "title", "published_at", "publisher", "source_type", "url", "grade", "summary", "impact", "watch")},
-            "grade_label": GRADES[item["grade"]], "corroboration": corroboration[:5], "claims": claims, "price_cny": price,
+            "grade_label": GRADES[item["grade"]], "corroboration": corroboration[:5], "claims": claims, "price_cny": price, "scope": scope,
             "tier": "快讯" if quick else "核实",
             "checked_at": str(item.get("checked_at") or "")[:10], "age_days": (today - published).days}
 
@@ -92,7 +98,7 @@ def load_feed(payload, today):
     return items[:MAX_ITEMS], rejected
 
 
-MAX_LEADS = 15
+MAX_LEADS = 30
 # A lead may come from a site nobody has vetted yet; it is only a link, so it does not need a known type.
 LEAD_TYPES = SOURCE_TYPES | {"其他"}
 

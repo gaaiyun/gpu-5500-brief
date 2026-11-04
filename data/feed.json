@@ -22,6 +22,25 @@
   ],
   "items": [
     {
+      "id": "ft-20261103-51-rule",
+      "title": "FT：英伟达要求云客户至少51%服务卖给非中国公司",
+      "published_at": "2026-11-03",
+      "publisher": "金融时报（雅虎财经转载 AFP）",
+      "source_type": "主流媒体",
+      "scope": "context",
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-orders-data-center-clients-080911859.html",
+      "grade": "B",
+      "summary": "FT援引五名知情人士：英伟达的云计算客户须把至少51%的服务卖给非中国公司，只影响未来合同，不影响现有协议。英伟达未确认也未否认。如何计量和执行尚未披露。",
+      "impact": "中国公司经海外云租算力的路径可能收紧，部分需求或转向境内合规卡，对 5500 需求偏多。这是推断。",
+      "watch": "核实是否写入合同及中国客户如何应对",
+      "corroboration": [
+        "https://www.tomshardware.com/tech-industry/data-centers/nvidia-tells-data-center-operators-to-limit-business-from-chinese-customers-with-new-global-restrictions-report-claims-allegedly-restricted-to-49-percent-of-the-total-ensuring-51-percent-are-non-chinese-outfits"
+      ],
+      "claims": [],
+      "checked_at": "2026-11-04",
+      "found_via": "人工检索"
+    },
+    {
       "id": "bloomberg-20261104-udn",
       "title": "彭博：中国客户约600万颗订单，未来4个月预计只到约1%",
       "published_at": "2026-11-04",

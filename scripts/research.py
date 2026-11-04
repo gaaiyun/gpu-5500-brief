@@ -82,7 +82,7 @@ def report_markdown(e, state):
 3. 条款：付款节点、交付责任及税票口径。
 4. 判断：保持或修改情景的具体证据；没有新证据时保留上一版本。
 
-本轮采集 {state['checked_at']}。来源可访问 {sum(c['status']=='ok' for c in state['checks'])}/{len(state['checks'])}。每日北京时间 00:35 出晨报，白天 9 点到 21 点每两小时巡检一次，新报价、零售改价或新核实的报道以快讯推送；页面记录实际执行时间。
+本轮采集 {state['checked_at']}。来源可访问 {sum(c['status']=='ok' for c in state['checks'])}/{len(state['checks'])}。每日北京时间 7 点左右出晨报，白天 9 点到 21 点每两小时巡检一次，新报价、零售改价、货况变化或新核实的报道以快讯推送；页面记录实际执行时间。
 
 ## 来源与口径
 

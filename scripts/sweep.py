@@ -26,6 +26,7 @@ from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 
 from feed import CLAIM_STATUS, MAX_AGE_DAYS, QUICK_TYPES, clean_item, is_card_price, load_leads
 from intelligence import SOURCE_LABELS, numeric_values
+from signals import collect_mentions, update_heat
 from update import MAJOR_MEDIA, fetch, now_iso, read_json
 
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
@@ -40,8 +41,15 @@ MAX_READ = 8         # article fetches per run
 BATCH = 3            # articles per model call, well under the Worker's 50k input cap
 LEAD_DAYS = 14
 MAX_ITEMS_KEPT = 20
-MAX_LEADS_KEPT = 15
+MAX_LEADS_KEPT = 30
 EXCERPT_CHARS = 3500
+VERIFY_CHARS = 30000
+MAX_VERIFY = 8       # cloud items re-read per run; the rest wait for the next run
+ROOM_PATH = ROOT / "data/reading_room.json"
+ROOM_DAYS = 5
+ROOM_MAX = 40
+MAX_ROOM_EXTRA = 6   # articles from unvetted sites read for the cloud analyst only
+MAX_CONTEXT_READ = 6
 
 # Publisher and source type by domain. A domain missing here can only ever become a link-only lead.
 DOMAINS = {
@@ -87,6 +95,11 @@ GOOGLE_NEWS_EDITIONS = [("zh-CN", "CN", "CN:zh-Hans"), ("en-US", "US", "US:en")]
 BING_QUERIES = [('"RTX PRO 5500"', "zh-cn"), ('"RTX Pro 5500"', "en-us"), ("英伟达 RTX 5500 订单", "zh-cn")]
 # Big stories often drop the model name from the headline ("1% of $70 billion RTX chips"); the article text is checked later.
 VENDOR = re.compile(r"NVIDIA|英伟达|辉达|輝達", re.I)
+# What moves the card's supply or demand without naming it: export rules, substitutes, capacity, memory.
+CONTEXT_QUERIES = [("Nvidia China chips export", "en-us"), ("Nvidia China data center rule", "en-us"), ("英伟达 中国 芯片 供应", "zh-cn"),
+                   ("华为 昇腾 价格", "zh-cn"), ("Nvidia Rubin TSMC capacity", "en-us"), ("GDDR7 price shortage", "en-us")]
+CONTEXT_TOPIC = re.compile(r"中国|中企|China|Chinese|出口|export|昇腾|Ascend|华为|Huawei|寒武纪|Cambricon|Rubin|GDDR", re.I)
+CONTEXT_DAYS = 3
 SOGOU_QUERIES = ["RTX PRO 5500", "RTX PRO 5500 报价", "RTX PRO 5500 到货"]
 CONTENT = "{http://purl.org/rss/1.0/modules/content/}encoded"
 
@@ -177,14 +190,14 @@ def google_news():
     return rows
 
 
-def parse_bing(content):
+def parse_bing(content, product_only=True):
     """Bing News RSS. Its links carry the publisher's address, so unlike Google News the article can be opened and graded."""
     rows = []
     for node in xml_root(content).iter("item"):
         link = node.findtext("link", "").strip()
         title, snippet = strip_html(node.findtext("title", "")), strip_html(node.findtext("description", ""))
         text = f"{title} {snippet}"
-        if not PRODUCT.search(text) and not (re.search(r"RTX", text, re.I) and VENDOR.search(text)):
+        if product_only and not PRODUCT.search(text) and not (re.search(r"RTX", text, re.I) and VENDOR.search(text)):
             continue
         rows.append({"url": parse_qs(urlparse(link).query).get("url", [link])[0], "title": title,
                      "published_at": to_date(node.findtext("pubDate")), "snippet": snippet[:160], "body": "", "found_via": "Bing 新闻"})
@@ -196,6 +209,15 @@ def bing():
     for query, language in BING_QUERIES:
         rows += parse_bing(fetch(f"https://www.bing.com/news/search?q={quote(query)}&format=rss&setlang={language}")[0])
     return rows
+
+
+def context_search(today):
+    rows = []
+    for query, language in CONTEXT_QUERIES:
+        rows += parse_bing(fetch(f"https://www.bing.com/news/search?q={quote(query)}&format=rss&setlang={language}")[0], product_only=False)
+    oldest = today - timedelta(days=CONTEXT_DAYS)
+    return [r for r in rows if r["published_at"] and oldest <= r["published_at"] <= today and classify(r["url"])
+            and CONTEXT_TOPIC.search(f"{r['title']} {r['snippet']}")]
 
 
 def sogou_page(html):
@@ -244,9 +266,9 @@ def inbox():
             for line in lines if line.strip().startswith("https://")]
 
 
-def excerpt(paragraphs):
+def excerpt(paragraphs, limit=EXCERPT_CHARS):
     paragraphs = list(dict.fromkeys(p for p in paragraphs if len(p) >= 12))
-    return "\n".join(p for i, p in enumerate(paragraphs) if i < 2 or KEY_PARAGRAPH.search(p))[:EXCERPT_CHARS]
+    return "\n".join(p for i, p in enumerate(paragraphs) if i < 2 or KEY_PARAGRAPH.search(p))[:limit]
 
 
 def page_meta(soup, *names):
@@ -258,7 +280,7 @@ def page_meta(soup, *names):
     return ""
 
 
-def read_article(url):
+def read_article(url, require_product=True, limit=EXCERPT_CHARS):
     body, _, content_type = fetch(url)
     if "html" not in content_type.lower():
         raise ValueError("不是网页正文")
@@ -273,12 +295,84 @@ def read_article(url):
     paragraphs = [re.sub(r"\s+", " ", p.get_text(" ", strip=True)) for p in root.find_all(["p", "h2", "h3", "li"])]
     if sum(map(len, paragraphs)) < 200:
         paragraphs = [re.sub(r"\s+", " ", line).strip() for line in root.get_text("\n").splitlines()]
-    text = excerpt(paragraphs)
-    if not PRODUCT.search(text):
+    text = excerpt(paragraphs, limit)
+    if require_product and not PRODUCT.search(text):
         raise ValueError("正文未提到 RTX PRO 5500")
     if len(text) < 150:
         raise ValueError("正文过短")
     return text, title, published
+
+
+def key_snippets(text, limit=6, width=80):
+    """Short factual lines for the cloud analyst. The repository is public, so article text itself is never committed."""
+    lines = []
+    for sentence in re.split(r"(?<=[。！？；;])|(?<=[.!?])\s+|\n", text):
+        sentence = (sentence or "").strip()
+        if re.search(r"\d", sentence) and KEY_PARAGRAPH.search(sentence) and sentence[:width] not in lines:
+            lines.append(sentence[:width])
+        if len(lines) >= limit:
+            break
+    return lines
+
+
+def room_entry(row, scope, today):
+    published = row.get("published_at")
+    return {"url": row["url"], "title": str(row.get("title") or "")[:100], "publisher": row.get("publisher") or "", "source_type": row.get("source_type") or "其他",
+            "published_at": published.isoformat() if isinstance(published, date) else (published or ""), "scope": scope,
+            "snippets": key_snippets(row.get("text") or ""), "seen_at": today.isoformat(), "found_via": row.get("found_via", "")}
+
+
+def merge_room(old, new, today):
+    """Articles CI could open in the last few days; the cloud analyst, whose network cannot, works from this list."""
+    rows = {r["url"]: r for r in (old or []) if isinstance(r, dict) and r.get("url")}
+    rows.update({r["url"]: r for r in new})
+    cutoff = (today - timedelta(days=ROOM_DAYS)).isoformat()
+    kept = [r for r in rows.values() if r.get("seen_at", "") >= cutoff]
+    return sorted(kept, key=lambda r: (r.get("published_at", ""), r["url"]), reverse=True)[:ROOM_MAX]
+
+
+SCALE = {"thousand": 1e3, "million": 1e6, "billion": 1e9}
+
+
+def article_numbers(text):
+    """Numbers printed in an article, with English scales read the way numeric_values reads 万 and 亿."""
+    values = numeric_values(text)
+    for number, unit in re.findall(r"(\d[\d,]*(?:\.\d+)?)\s*(thousand|million|billion)", text, re.I):
+        values.add(round(float(number.replace(",", "")) * SCALE[unit.lower()], 4))
+    return values
+
+
+def verify_cloud(items, known_urls, today, reader=None):
+    """The cloud analyst finds and judges but cannot open pages. Every new item is re-read here; a figure the article does
+    not print, or a page nobody can open, sends it back to the unverified links."""
+    reader = reader or read_article
+    kept, leads, notes, checked = [], [], [], 0
+    for item in items:
+        if item.get("url") in known_urls or item.get("ci_checked"):
+            kept.append(item)
+            continue
+        if checked >= MAX_VERIFY:
+            continue
+        checked += 1
+        numbers, reason = None, ""
+        for url in [item.get("url"), *(item.get("corroboration") or [])]:
+            try:
+                text, _, _ = reader(url, require_product=item.get("scope") != "context", limit=VERIFY_CHARS)
+                numbers = article_numbers(f"{text} {item.get('published_at', '')}")
+                break
+            except Exception as error:
+                reason = str(error)[:80]
+        price = item.get("price_cny")
+        prices = price if isinstance(price, list) else [price] if price is not None else []
+        claimed = numeric_values(f"{item.get('title', '')} {item.get('summary', '')}") | {round(float(v), 4) for v in prices}
+        if numbers is not None and claimed <= numbers:
+            kept.append(dict(item, ci_checked=today.isoformat()))
+            continue
+        reason = "原文没有这些数字" if numbers is not None else reason or "读不到正文"
+        notes.append(f"云端条目未通过复核 {item.get('url')}：{reason}")
+        leads.append(lead({"title": item.get("title"), "publisher": item.get("publisher"), "source_type": item.get("source_type"), "url": item.get("url"),
+                           "published_at": item.get("published_at", ""), "found_via": "云端条目未通过复核", "snippet": item.get("summary", "")}, today))
+    return kept, leads, notes
 
 
 def known_events(feed, evidence):
@@ -403,6 +497,7 @@ def sweep(feed, evidence, today, endpoint=None, token=None):
             candidates += rows
     candidates += attempt("Bing 新闻 " + " / ".join(q for q, _ in BING_QUERIES), bing)
     candidates += inbox()
+    context = attempt("Bing 相关动态", lambda: context_search(today))
     news = attempt(f"Google 新闻 {GOOGLE_NEWS_QUERY}", google_news)
     posts = attempt("搜狗微信 " + " / ".join(SOGOU_QUERIES), lambda: sogou(notes))
 
@@ -449,6 +544,21 @@ def sweep(feed, evidence, today, endpoint=None, token=None):
 
     with ThreadPoolExecutor(max_workers=4) as pool:
         read_rows = list(pool.map(read, queue[:MAX_READ]))
+    room = [room_entry(row, "5500", today) for row in read_rows if row.get("text")]
+
+    def peek(row, **options):
+        """Read for the cloud analyst only; these never become items on their own."""
+        try:
+            return dict(row, text=read_article(row["url"], **options)[0])
+        except Exception:
+            return None
+
+    direct = [x for x in leads if x["found_via"] in ("Bing 新闻", "GDELT") and "bing.com" not in x["url"]][:MAX_ROOM_EXTRA]
+    fresh_context = [dict(x, publisher=classify(x["url"])[0], source_type=classify(x["url"])[1]) for x in context if x["url"] not in known][:MAX_CONTEXT_READ]
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        extra = [x for x in pool.map(peek, direct) if x]
+        related = [x for x in pool.map(lambda r: peek(r, require_product=False), fresh_context) if x]
+    room += [room_entry(row, "5500", today) for row in extra] + [room_entry(row, "context", today) for row in related]
     readable = []
     for row in read_rows:
         if row.get("error") or not row.get("published_at"):
@@ -494,7 +604,8 @@ def sweep(feed, evidence, today, endpoint=None, token=None):
                     notes.append(f"未通过核对 {candidate['url']}：{error}")
                     leads.append(lead(candidate, today))
     return {"items": items, "corroborated": corroborated, "leads": leads, "notes": notes, "searched": searched,
-            "candidates": len(queue), "read": len(readable), "model": model}
+            "candidates": len(queue), "read": len(readable), "model": model, "room": room,
+            "seen": candidates + news + posts, "mention_rows": [r for r in read_rows if r.get("text")] + extra + leads + posts}
 
 
 def merge_feeds(base, cloud):
@@ -553,19 +664,28 @@ def run(cloud_path=None, dry_run=False):
     base = read_json(path, {}) or {}
     cloud = read_json(Path(cloud_path), None) if cloud_path and Path(cloud_path).exists() else None
     feed = merge_feeds(base, cloud)
+    verify_notes = []
+    if cloud:
+        feed["items"], demoted, verify_notes = verify_cloud(feed["items"], {i.get("url") for i in base.get("items") or []}, today)
+        feed["leads"] = demoted + feed["leads"]
     try:
         result = sweep(feed, read_json(ROOT / "data/evidence.json"), today, os.getenv("GPU_AI_ENDPOINT"), os.getenv("GPU_AI_TOKEN"))
     except Exception as error:
         # A broken sweep still publishes the merged feed, so the cloud routine's work is never lost.
         result = {"items": [], "corroborated": {}, "leads": [], "notes": [f"本轮检索中断：{str(error)[:160]}"], "searched": [],
-                  "candidates": 0, "read": 0, "model": None}
+                  "candidates": 0, "read": 0, "model": None, "room": [], "seen": [], "mention_rows": []}
+    result["notes"] = verify_notes + result["notes"]
     for item in feed["items"]:
         extra = [u for u in result["corroborated"].get(item["id"], []) if u not in (item.get("corroboration") or [])]
         if extra:
             item["corroboration"] = [*(item.get("corroboration") or []), *extra][:5]
     items, leads = finalize(result["items"] + feed["items"], result["leads"] + feed["leads"], today)
+    takes = [x.get("take") for x in (base, cloud or {}) if isinstance(x.get("take"), dict) and x["take"].get("date")]
+    old_mentions = (base.get("mentions") or []) + ((cloud or {}).get("mentions") or [])
     payload = {"schema_version": 1, "updated_at": now_iso(), "agent": "actions-sweep" + ("+cloud-routine" if cloud else ""),
                "searched": result["searched"][:30], "items": items, "leads": leads,
+               "mentions": collect_mentions(result["mention_rows"], old_mentions, today), "heat": update_heat(base.get("heat"), result["seen"], today),
+               "take": max(takes, key=lambda x: x["date"], default=None),
                "sweep": {"date": today.isoformat(), "candidates": result["candidates"], "read": result["read"],
                          "added": [i["id"] for i in result["items"] if i in items],
                          "corroborated": sum(map(len, result["corroborated"].values())), "model": result["model"],
@@ -578,6 +698,7 @@ def run(cloud_path=None, dry_run=False):
         tmp = path.with_suffix(".tmp")
         tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         tmp.replace(path)
+        ROOM_PATH.write_text(json.dumps(merge_room(read_json(ROOM_PATH, []), result["room"], today), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     return payload
 
 

@@ -17,6 +17,16 @@ def item(**kw):
     base.update(kw);return base
 
 
+class ScopeTests(unittest.TestCase):
+    def test_related_items_keep_their_scope_and_cannot_carry_a_price(self):
+        items,bad=load_feed({"items":[item(scope="context"),item(id="y",url="https://example.com/b")]},TODAY)
+        self.assertEqual(sorted(i["scope"] for i in items),["5500","context"])
+        items,bad=load_feed({"items":[item(scope="context",price_cny=90000)]},TODAY)
+        self.assertEqual(items,[]);self.assertIn("相关动态",bad[0]["reason"])
+        items,bad=load_feed({"items":[item(scope="other")]},TODAY)
+        self.assertEqual(items,[])
+
+
 class FeedTests(unittest.TestCase):
     def test_committed_feed_is_valid(self):
         # The daily sweep keeps adding dated items: judge them by today's Beijing date, and never by how many are fresh.
