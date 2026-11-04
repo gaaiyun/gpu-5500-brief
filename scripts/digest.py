@@ -6,6 +6,7 @@ from datetime import date
 # A rate move or a new unverified lead is worth listing, but it is not news about the price.
 NEWS_TAGS = ("官方", "新报价", "网上挂价", "海外零售", "情报")
 MAX_ITEMS = 8
+FX_NOTABLE = .01     # smaller daily moves only shift the converted figures; the price table still shows them
 
 
 def _coming_soon(state):
@@ -23,8 +24,11 @@ def daily_digest(state, baseline):
         if change["kind"] == "新报价":
             kind = kinds.get(change["id"])
             items.append({"tag": kind if kind in ("海外零售", "网上挂价") else "新报价", "text": change["text"]})
+        elif change["kind"] == "补录":
+            items.append({"tag": "补录", "text": change["text"]})
     fx, old_fx = state.get("fx") or {}, (baseline or {}).get("fx") or {}
-    if fx.get("rates") and old_fx.get("rates") and fx.get("date") != old_fx.get("date") and fx.get("label") == old_fx.get("label"):
+    if (fx.get("rates") and old_fx.get("rates") and fx.get("date") != old_fx.get("date") and fx.get("label") == old_fx.get("label")
+            and max(abs(v / old_fx["rates"][c] - 1) for c, v in fx["rates"].items() if c in old_fx["rates"]) >= FX_NOTABLE):
         moves = [c["text"] for c in board.get("changes", []) if c["kind"] == "汇率"]
         items.append({"tag": "汇率", "text": f"{fx['label']}（美元）{old_fx['rates']['USD']}→{fx['rates']['USD']}"
                                              + (f"；含税折算 {'，'.join(moves)}" if moves else "")})
@@ -46,6 +50,12 @@ def daily_digest(state, baseline):
     last = max(quotes, key=lambda r: r["since"], default=None)
     days = (date.fromisoformat(state["date"]) - date.fromisoformat(last["since"])).days if last else None
     news = [i for i in items if i["tag"] in NEWS_TAGS]
+    # A quiet day should show the search still ran; two weeks of an empty sweep went unnoticed without this line.
+    sweep = (state.get("feed") or {}).get("sweep")
+    if sweep and not news:
+        items.append({"tag": "检索", "text": f"今日检索到 {sweep['candidates']} 篇可读来源，读正文 {sweep['read']} 篇，新增 {len(sweep.get('added') or [])} 条"
+                      if sweep["candidates"] else "今日全网检索没有发现新文章"})
+    items.sort(key=lambda i: i["tag"] not in NEWS_TAGS)
     if news:
         headline = f"今日 {len(news)} 条新报价或新动态"
     elif last:

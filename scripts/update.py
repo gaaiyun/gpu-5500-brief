@@ -142,7 +142,9 @@ def parse_feed(content, feed_id, checked_at):
     from email.utils import parsedate_to_datetime
     for node in root.findall(".//item"):
         title = node.findtext("title", "").strip()
-        if not re.search(r"5500", title) or not re.search(r"RTX|英伟达|NVIDIA", title, re.I):
+        # The query already requires the model in the article; big-story headlines often just say "RTX chips".
+        names_vendor = re.search(r"英伟达|辉达|輝達|NVIDIA", title, re.I)
+        if not (re.search(r"5500", title) and (names_vendor or re.search(r"RTX", title, re.I))) and not (names_vendor and re.search(r"RTX", title, re.I)):
             continue
         pub_raw = node.findtext("pubDate", "")
         try:
@@ -315,12 +317,13 @@ def run(offline=False):
              "channel":market,"channel_status":channel_check.get("status", "failed"),
              "fx":fx,"fx_history":fx_history,"listings":listings,"price_board":board,"quotes_rejected":quotes_rejected,
              "price_series":build_series(evidence,market,fx_history,quotes,feed_items,today),
-             "daily_brief":daily_brief(evidence,market,baseline.get("channel"),board),
+             "daily_brief":daily_brief(evidence,market,baseline.get("channel"),board,today),
              "new_verified_price_count": 0,
              "summary": "本轮自动采集不把新闻标题或聚合挂牌升级为已核验价格；已核验价格更新需要证据复核。"}
     state["intelligence"] = enrich(evidence,state)
     state["feed"] = {"items": feed_items, "leads": feed_leads, "rejected": feed_rejected + leads_rejected,
-                     "updated_at": (feed_payload or {}).get("updated_at"), "agent": (feed_payload or {}).get("agent")}
+                     "updated_at": (feed_payload or {}).get("updated_at"), "agent": (feed_payload or {}).get("agent"),
+                     "sweep": (feed_payload or {}).get("sweep")}
     state["digest"] = daily_digest(state, reported)
     save_json(ROOT / "data/state.json", state)
     save_json(ROOT / "data/history" / f"{today.isoformat()}.json", state)

@@ -81,6 +81,11 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(items[0]["verification"], "headline_only")
         self.assertNotIn("value_cny", items[0])
 
+    def test_headline_naming_only_nvidia_and_rtx_is_kept(self):
+        xml = (b'<rss><channel><item><title>Nvidia China Clients to Get 1% of $70 Billion RTX Chips Ordered - Bloomberg</title>'
+               b'<link>https://news.google.com/a</link><pubDate>Sat, 24 Oct 2026 01:00:00 GMT</pubDate><source url="https://www.bloomberg.com">Bloomberg</source></item></channel></rss>')
+        self.assertEqual(len(update.parse_feed(xml, "test", "2026-10-25T20:00:00+08:00")), 1)
+
     def test_reprinted_headlines_merge(self):
         item = lambda pub, day: f'<item><title>天阳科技公告签署销售合同 采购2万张英伟达RTX PRO 5500 GPU - {pub}</title><link>https://example.com/{pub}</link><pubDate>{day} Oct 2026 01:00:00 GMT</pubDate><source url="https://example.com">{pub}</source></item>'
         xml = ('<rss><channel>' + item('第一财经', 'Tue, 13') + item('证券时报', 'Wed, 14') + item('财富号', 'Wed, 14') + '</channel></rss>').encode()

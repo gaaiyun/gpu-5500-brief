@@ -28,6 +28,7 @@ FX_PROVIDERS = (
 RATE_BOUNDS = {"USD": (5, 9), "EUR": (5, 11), "GBP": (6, 13)}
 SYMBOLS = {"USD": "$", "EUR": "€", "GBP": "£"}
 FEED_PRICE_MAX_AGE = 30
+BACKFILL_AGE = 7     # a quote this old first filed today is backfill, not news
 
 
 def parse_fx(provider, payload):
@@ -156,9 +157,10 @@ def build_series(evidence, market, fx_history, quotes, feed_items, today):
               for p in evidence["prices"] if p.get("board") and "value_usd" not in p]
     events += [(x["published_at"], x["publisher"], *x["price_cny"]) for x in feed_items
                if x.get("price_cny") and x.get("grade") in ("A", "B")]
-    usd = next((p for p in evidence["prices"] if p.get("board") and "value_usd" in p), None)
+    dollars = [p for p in evidence["prices"] if p.get("board") and "value_usd" in p]
+    usd = dollars[0] if dollars else None  # the line follows one quote; later dollar reports only mark their day
     channel = (market.get("quote_date") or market["latest"]["date"], market["min_ask"]) if market else None
-    dated = [e[0] for e in events] + ([usd["observed_at"]] if usd else []) + [q["date"] for q in quotes]
+    dated = [e[0] for e in events] + [p["observed_at"] for p in dollars] + [q["date"] for q in quotes]
     if not dated:
         return []
     start = max(today - timedelta(days=SERIES_DAYS - 1), date.fromisoformat(min(dated)))
@@ -172,7 +174,7 @@ def build_series(evidence, market, fx_history, quotes, feed_items, today):
                        "low": min((e[2] for e in known), default=None), "high": max((e[3] for e in known), default=None),
                        "channel": channel[1] if channel and channel[0] <= day else None,
                        "usd_vat": round(usd["value_usd"] * rate * (1 + CN_VAT)) if usd and rate and usd["observed_at"] <= day else None,
-                       "events": [e[1] for e in events if e[0] == day] + ([usd["board"]] if usd and usd["observed_at"] == day else []),
+                       "events": [e[1] for e in events if e[0] == day] + [p["board"] for p in dollars if p["observed_at"] == day],
                        "team": [q["price"] for q in quotes if q["date"] == day]})
     return points
 
@@ -262,8 +264,8 @@ def build_board(evidence, market, fx, listings, feed_items, today, previous, quo
             continue
         url = sources[p["source_id"]]["url"]
         if "value_usd" in p:
-            row = _row(p["id"], p["board"], "订单报道", url, p["observed_at"], today, f"${p['value_usd']:,}", 0,
-                       note="匿名信源；按当日汇率折算，不是新报价，未含关税", quote_key=f"{p['id']}:{p['value_usd']}")
+            row = _row(p["id"], p["board"], "订单报道", url, p["observed_at"], today, p.get("native") or f"${p['value_usd']:,}", 0,
+                       note=p.get("board_note") or "匿名信源；按当日汇率折算，不是新报价，未含关税", quote_key=f"{p['id']}:{p['value_usd']}")
             rows.append(_converted(row, p["value_usd"] * rates["USD"]) if rates else dict(row, low=None, high=None, text=row["native"]))
             continue
         low, high = p.get("value_cny", p.get("low_cny")), p.get("value_cny", p.get("high_cny"))
@@ -321,7 +323,9 @@ def _changes(rows, previous):
     changes = []
     for row in rows:
         before = old.get(row["id"])
-        if before is None:
+        if before is None and row["kind"] != "海外零售" and row.get("age_days", 0) > BACKFILL_AGE:
+            changes.append({"id": row["id"], "label": row["label"], "kind": "补录", "text": f"补录 {row['label']} {row['native']}（原始日期 {row['date']}）"})
+        elif before is None:
             changes.append({"id": row["id"], "label": row["label"], "kind": "新报价", "text": f"新增 {row['label']} {row['native']}"})
         elif before["quote_key"] != row["quote_key"]:
             changes.append({"id": row["id"], "label": row["label"], "kind": "新报价",
@@ -341,6 +345,9 @@ def _summary(board, fx):
     else:
         latest = max((r for r in board["rows"] if r["kind"] != "海外零售" or r["repriced"]), key=lambda r: r["since"], default=None)
         parts = [f"今日无新报价；最近一次报价更新是 {latest['label']}（{latest['since']}）" if latest else "今日无新报价"]
+    backfill = [c["text"] for c in board["changes"] if c["kind"] == "补录"]
+    if backfill:
+        parts.append("；".join(backfill))
     status = (fx or {}).get("status")
     if status == "failed":
         parts.append("汇率未取得，海外价格只列原币")

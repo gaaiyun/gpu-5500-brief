@@ -56,7 +56,7 @@ function renderEvidence(){
   if(!board){$('evidence-rows').innerHTML='<tr><td colspan="4">价格证据表在下一轮采集后生成。</td></tr>';return;}
   const changes=Object.fromEntries(board.changes.map(c=>[c.id,c]));
   const rows=board.rows.map(r=>{
-    const c=changes[r.id],flag=c?` <span class="badge amber">${c.kind==='新报价'?'今日新报价':`汇率 ${c.delta>0?'+':''}${number(c.delta)}`}</span>`:'';
+    const c=changes[r.id],flag=c?` <span class="badge amber">${c.kind==='新报价'?'今日新报价':c.kind==='补录'?'今日补录':`汇率 ${c.delta>0?'+':''}${number(c.delta)}`}</span>`:'';
     const when=r.kind==='海外零售'?`${r.date} 起此价未变${r.check_status==='ok'&&r.checked?` · ${r.checked.slice(5)} 核对`:` · 本轮未读到页面${r.checked?`，最后核对 ${r.checked.slice(5)}`:''}`}`:`${r.date} · ${r.age_days} 天前`;
     const amount=r.low?esc(r.text):esc(r.native);
     const note=[r.converted?r.native:'',r.note].filter(Boolean).join('；');
@@ -122,7 +122,7 @@ async function load(){
   $('daily-brief').innerHTML=state.daily_brief.items.map(b=>`<div class="brief-item"><h3>${esc(b.title)}</h3><p>${esc(b.text)}</p></div>`).join('');
   const f=evidence.forecast,r=state.forecast_review,base=f.scenarios.find(x=>x.id==='base');
   const anchor=evidence.prices.find(x=>x.id===f.anchor_price_id)||{};
-  $('anchor-price').textContent=anchor.value_cny?yuan(anchor.value_cny):`${anchor.low_cny/10000}—${anchor.high_cny/10000} 万`;$('anchor-date').textContent=`${anchor.board||''} · ${f.anchor_observed_at.slice(5)}`;
+  $('anchor-price').textContent=anchor.native||(anchor.value_cny?yuan(anchor.value_cny):`${anchor.low_cny/10000}—${anchor.high_cny/10000} 万`);$('anchor-date').textContent=`${anchor.board||''} · ${f.anchor_observed_at.slice(5)}`;
   $('base-range').textContent=`${(base.low/10000).toFixed(1)}—${(base.high/10000).toFixed(1)} 万 / 张`;
   $('forecast-date').textContent=`${f.version.slice(-2)} 版 ${f.issued_at} 发布 · 本轮复核 ${r.reviewed_at}`;
   $('forecast-state').textContent={low_confidence:'条件情景',review_required:'待复核',expired:'历史情景'}[r.status];

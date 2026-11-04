@@ -56,6 +56,20 @@ class MarketTests(unittest.TestCase):
         result=daily_brief({"forecast":{"scenarios":[{"id":"base","low":85000,"high":90000}]}},market,previous)
         self.assertEqual([c["field"] for c in result["channel_changes"]],["min_ask"])
 
+    def test_supply_brief_counts_down_to_the_next_delivery(self):
+        from datetime import date
+        market=parse_channel(payload(),"2026-10-25T20:00:00+08:00")
+        evidence={"forecast":{"scenarios":[{"id":"base","low":85000,"high":90000}],"version":"2026-11-04-v3","issued_at":"2026-11-04","thesis":"基准不变"},
+                  "supply":{"source":"彭博","as_of":"2026-11-04","summary":"未来 4 个月只到约 1%","confirmed":"目前只有前两批获确认",
+                            "milestones":[{"date":"2026-12-31","label":"首批数千颗","when":"年底前"},{"date":"2027-02-28","label":"第二批数万颗","when":"约 2027 年 2 月"}]}}
+        items={i["title"]:i["text"] for i in daily_brief(evidence,market,None,today=date(2026,11,4))["items"]}
+        self.assertIn("首批数千颗年底前（还有 57 天）",items["供应与交付"])
+        self.assertIn("第二批数万颗约 2027 年 2 月",items["供应与交付"])
+        self.assertIn("基准不变",items["当前预测"])
+        later={i["title"]:i["text"] for i in daily_brief(evidence,market,None,today=date(2027,1,5))["items"]}
+        self.assertIn("首批数千颗年底前（节点已过，待核实到货）",later["供应与交付"])
+        self.assertIn("第二批数万颗约 2027 年 2 月（还有 54 天）",later["供应与交付"])
+
     def test_failure_keeps_original_collection_time(self):
         import update
         old=update.fetch

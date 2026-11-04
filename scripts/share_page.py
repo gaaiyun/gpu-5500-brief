@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from html import escape
 
-from daily_card import pick_items
+from daily_card import extra_feed, pick_items
 
 SITE = "https://gaaiyun.github.io/gpu-5500-brief/"
 # Mainland mirror: nginx on our own server caching the GitHub Pages site. GitHub stays the primary link.
@@ -70,7 +70,7 @@ def body_html(state, image=None):
             f"影响：{e(item['impact'])}<br>"
             f"跟进：{e(item['watch'])}<br>"
             f"来源：<a href=\"{e(item['url'])}\">{e(item['source'])}</a></p>")
-    feed = [x for x in (state.get("feed") or {}).get("items", []) if x.get("age_days", 99) <= 14]
+    feed = extra_feed(state, 14)
     if feed:
         parts.append("<h3>全网追踪（AI 读原文核对）</h3>")
         for item in feed[:6]:
@@ -85,7 +85,7 @@ def body_html(state, image=None):
         parts.append("<h3>未核实线索（只给链接，点开自行判断）</h3>")
         parts.append("<p>" + "<br>".join(
             f"<a href=\"{e(x['url'])}\">{e(x['title'])}</a>（{e(x['publisher'])}{'，' + e(x['published_at']) if x['published_at'] else ''}）"
-            + (f"<br><small>{e(x['snippet'])}</small>" if x["snippet"] else "") for x in leads[:15]) + "</p>")
+            + (f"<br><small>{e(x['snippet'])}</small>" if x["snippet"] else "") for x in leads[:10]) + "</p>")
     parts.append("<p>口径：海外价格按当日汇率折算，汇率变动不是新报价，未含关税运费；渠道挂价为平台期货报盘，不是成交价；媒体价格未统一税费、数量和交期。没有新证据时不改预测。</p>"
                  if state.get("price_board") else
                  "<p>口径：渠道价为宽泛采销平台参考，不是成交价；媒体价格未统一税费、数量和交期。没有新证据时不改预测。</p>")

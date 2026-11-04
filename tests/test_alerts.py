@@ -71,6 +71,31 @@ class EventTests(unittest.TestCase):
         self.assertEqual(alerts.events(state(listing(13500.0, 113755)), None), [])
 
 
+class NewsEventTests(unittest.TestCase):
+    def feed(self, *items):
+        return dict(state(), feed={"items": list(items)})
+
+    def item(self, **kw):
+        return dict({"id": "a1", "title": "彭博：只到约1%", "publisher": "彭博", "published_at": "2026-10-31", "grade": "B", "age_days": 0, "url": "https://example.com/a"}, **kw)
+
+    def test_new_verified_report_is_news(self):
+        found = alerts.events(self.feed(self.item()), self.feed())
+        self.assertEqual(found[0]["tag"], "情报")
+        self.assertEqual(found[0]["key"], "feed|a1")
+        self.assertIn("只到约1%", found[0]["text"])
+
+    def test_report_already_seen_old_or_unverified_is_not(self):
+        self.assertEqual(alerts.events(self.feed(self.item()), self.feed(self.item())), [])
+        self.assertEqual(alerts.events(self.feed(self.item(age_days=5)), self.feed()), [])
+        self.assertEqual(alerts.events(self.feed(self.item(grade="C")), self.feed()), [])
+
+    def test_quotes_come_before_news_and_retail_last(self):
+        quote = row("quote:7", "团队询价", "¥88,000", label="团队询价")
+        old = dict(self.feed(), price_board=state(listing(13894.0, 117077))["price_board"])
+        new = dict(self.feed(self.item()), price_board=state(listing(13500.0, 113755), quote)["price_board"])
+        self.assertEqual([e["tag"] for e in alerts.events(new, old)], ["团队询价", "情报", "海外零售"])
+
+
 class PolicyTests(unittest.TestCase):
     def test_daytime_after_the_morning_report_may_send(self):
         self.assertIsNone(alerts.blocked(log(), NOON))

@@ -3,6 +3,7 @@
 The first push of each report also keeps a copy of that state in data/reported/: the next morning report and the
 day's flash alerts count changes from what the group last received."""
 import json
+import os
 import shutil
 import sys
 from datetime import datetime, timedelta, timezone
@@ -39,7 +40,8 @@ def snapshot():
     """Keep the state a report was built from; a backup run that retries one channel later does not replace it."""
     state = json.loads(STATE.read_text(encoding="utf-8"))
     target = REPORTED / f"{state['date']}.json"
-    if not target.exists():
+    # A forced re-push is the report the group saw last, so alerts and tomorrow's changes count from it.
+    if os.getenv("FORCE") == "true" or not target.exists():
         REPORTED.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(STATE, target)
     prune()

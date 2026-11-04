@@ -59,6 +59,33 @@ class DiscoveryTests(unittest.TestCase):
         self.assertTrue(sweep.sogou_blocked("<html>antispider</html>","https://weixin.sogou.com/antispider/?from=x"))
 
 
+class BingTests(unittest.TestCase):
+    FEED=("""<rss version="2.0"><channel>"""
+          """<item><title>Nvidia allocates 1% of $70B RTX chip order to China</title>"""
+          """<link>http://www.bing.com/news/apiclick.aspx?ref=FexRss&amp;url=https%3a%2f%2fwww.caiwennews.com%2farticle%2f1.shtml&amp;c=1</link>"""
+          """<description>first batch by year end</description><pubDate>Tue, 03 Nov 2026 15:59:00 GMT</pubDate></item>"""
+          """<item><title>RTX PRO 5500 orders</title><link>https://example.com/direct</link>"""
+          """<description></description><pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate></item>"""
+          """<item><title>Radeon pricing roundup</title><link>https://example.com/other</link>"""
+          """<description>no such card</description><pubDate>Tue, 03 Nov 2026 01:00:00 GMT</pubDate></item>"""
+          """</channel></rss>""").encode()
+
+    def test_publisher_address_comes_out_of_the_bing_link(self):
+        rows=sweep.parse_bing(self.FEED)
+        self.assertEqual(rows[0]["url"],"https://www.caiwennews.com/article/1.shtml")
+        self.assertEqual(rows[0]["found_via"],"Bing 新闻")
+        self.assertEqual(rows[0]["published_at"],date(2026,11,3))
+        self.assertEqual(rows[1]["url"],"https://example.com/direct")
+
+    def test_headline_without_the_model_name_is_kept_but_other_cards_are_not(self):
+        self.assertEqual(len(sweep.parse_bing(self.FEED)),2)
+
+    def test_outlets_that_carry_the_story_can_be_read(self):
+        for url in ("https://money.udn.com/money/story/5603/9856924","https://www.caiwennews.com/article/1.shtml",
+                    "https://www.investing.com/news/x","https://en.sedaily.com/international/x"):
+            self.assertIsNotNone(sweep.classify(url),url)
+
+
 class DraftCheckTests(unittest.TestCase):
     def test_checked_draft_becomes_grade_b(self):
         item=sweep.build_item(draft(),candidate(),EVENTS,TODAY)

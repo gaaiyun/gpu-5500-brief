@@ -1,6 +1,7 @@
 import copy
 import json
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -66,6 +67,39 @@ class ResearchTests(unittest.TestCase):
                 with Image.open(path) as image:
                     self.assertEqual(image.width,1080)
                     self.assertGreater(image.height,900)
+
+    def test_image_renders_every_kind_of_change(self):
+        from daily_card import render
+        evidence,state=load()
+        state=with_board(evidence,state)
+        rows=state["price_board"]["rows"]
+        state["price_board"]["changes"]=[{"id":rows[0]["id"],"label":"x","kind":"补录","text":"补录 x"},
+                                         {"id":rows[1]["id"],"label":"y","kind":"新报价","text":"新增 y"},
+                                         {"id":rows[-1]["id"],"label":"z","kind":"汇率","delta":12,"text":"z +12 元"}]
+        with tempfile.TemporaryDirectory() as folder:
+            self.assertTrue(render(evidence,state,Path(folder)/"card.png"))
+
+    def test_image_never_runs_off_its_canvas(self):
+        from PIL import Image
+        from daily_card import render
+        evidence,state=load()
+        state=with_board(evidence,state)
+        row=state["price_board"]["rows"][0]
+        state["price_board"]["rows"]+=[dict(row,id=f"extra{n}",label=f"多出来的报价 {n}") for n in range(30)]
+        with tempfile.TemporaryDirectory() as folder:
+            with Image.open(render(evidence,state,Path(folder)/"card.png")) as image:
+                self.assertEqual(image.convert("RGB").getpixel((5,image.height-5)),(243,245,248))
+
+    def test_image_and_dingtalk_keep_the_newest_reports_without_repeats(self):
+        import notify_dingtalk
+        from daily_card import BRIEF_ITEMS,extra_feed,pick_items
+        evidence,state=load()
+        state=with_board(evidence,state)
+        state["intelligence"]={"items":fact_briefs(evidence,state)}
+        self.assertEqual(len(pick_items(state,BRIEF_ITEMS)),BRIEF_ITEMS)
+        self.assertEqual(pick_items(state,BRIEF_ITEMS)[0]["source_id"],"bloomberg")
+        state["feed"]={"items":[{"id":"a","url":evidence["sources"][0]["url"],"age_days":0},{"id":"b","url":"https://example.com/b","age_days":0}]}
+        self.assertEqual([x["id"] for x in extra_feed(state,7)],["b"])
 
     def test_board_texts_drop_platform_daily_move(self):
         import notify_dingtalk

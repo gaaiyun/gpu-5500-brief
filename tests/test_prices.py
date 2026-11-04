@@ -144,6 +144,34 @@ class BoardTests(unittest.TestCase):
         self.assertTrue(board["summary"].startswith("今日无新报价"))
         self.assertIn("2026-10-21", board["summary"])
 
+    def test_old_quote_added_today_is_backfill_not_a_new_quote(self):
+        ev = evidence()
+        ev["sources"].append({"id": "lp", "url": "https://example.com/lp"})
+        ev["prices"].append({"id": "lp_price", "source_id": "lp", "observed_at": "2026-10-09", "value_cny": 89999, "board": "旧预售页"})
+        yesterday = prices.build_board(evidence(), None, fx(), listing(), [], date(2026, 10, 29), None)
+        board = prices.build_board(ev, None, fx(), listing(), [], date(2026, 10, 29), yesterday)
+        change = next(c for c in board["changes"] if c["id"] == "lp_price")
+        self.assertEqual(change["kind"], "补录")
+        self.assertIn("2026-10-09", change["text"])
+        self.assertIn("补录", board["summary"])
+        self.assertIn("今日无新报价", board["summary"])
+
+    def test_every_dollar_report_marks_its_day_on_the_trend(self):
+        ev = evidence()
+        ev["sources"].append({"id": "bb", "url": "https://example.com/bb"})
+        ev["prices"].append({"id": "bb_usd", "source_id": "bb", "observed_at": "2026-10-29", "value_usd": 11000, "board": "彭博单价下限"})
+        series = prices.build_series(ev, None, prices.parse_fx_history(CCPR_HISTORY), [], [], date(2026, 10, 29))
+        self.assertIn("彭博单价下限", series[-1]["events"])
+
+    def test_dollar_floor_keeps_its_wording(self):
+        ev = evidence()
+        ev["sources"].append({"id": "bb", "url": "https://example.com/bb"})
+        ev["prices"].append({"id": "bb_usd", "source_id": "bb", "observed_at": "2026-10-29", "value_usd": 11000, "native": "超过 $11,000", "board": "彭博单价下限", "board_note": "匿名信源，是下限"})
+        row = next(r for r in prices.build_board(ev, None, fx(), listing(), [], date(2026, 10, 29), None)["rows"] if r["id"] == "bb_usd")
+        self.assertEqual(row["native"], "超过 $11,000")
+        self.assertEqual(row["note"], "匿名信源，是下限")
+        self.assertTrue(row["converted"])
+
     def test_new_listing_price_is_reported(self):
         board = self.board(previous=self.board(), rows=listing(15999.0, "2026-10-29"))
         change = next(c for c in board["changes"] if c["id"] == "fr_materiel")

@@ -27,7 +27,7 @@ def signed_url(webhook, secret, now_ms=None):
 
 
 def message(state):
-    from daily_card import pick_items
+    from daily_card import BRIEF_ITEMS, extra_feed, pick_items
     from share_page import MIRROR, page_url
     from share_page import price_lines
     day = state["date"]
@@ -38,6 +38,8 @@ def message(state):
     if digest:
         lines.append(f"**今日新增：{digest['headline']}**  \n"
                      + "  \n".join(f"[{i['tag']}] {i['text']}" + (f" {i['url']}" if i.get("url") else "") for i in digest["items"]))
+    # DingTalk has no judgement section; these two change when the evidence does.
+    lines += [f"**{b['title']}** {b['text']}" for b in (state.get("daily_brief") or {}).get("items", []) if b["title"] in ("供应与交付", "当前预测")]
     if state.get("price_board"):
         lines += ([] if digest else [f"**今日变化** {state['price_board']['summary']}"]) + [
                   "**价格证据（按原始日期）**  \n" + "  \n".join(price_lines(state))]
@@ -48,13 +50,13 @@ def message(state):
                      f"最低挂价 ¥{market['min_ask']:,}（{market.get('delivery') or '交期未标明'}，原报价 {market.get('quote_date') or '未标明'}）。"
                      f"来源：宽泛采销公开接口 {market['source_url']}")
     lines += [f"![日报]({image})", "**市场情报**"]
-    for n, item in enumerate(pick_items(state), 1):
+    for n, item in enumerate(pick_items(state, BRIEF_ITEMS), 1):
         lines.append(f"{n}. **{item['title']}**（{item['date']}）  \n"
                      f"事实：{item['summary']}  \n"
                      f"影响：{item['impact']}  \n"
                      f"跟进：{item['watch']}  \n"
                      f"来源：{item['source']} {item['url']}")
-    feed = [x for x in (state.get("feed") or {}).get("items", []) if x.get("age_days", 99) <= 14]
+    feed = extra_feed(state, 14)
     if feed:
         lines.append("**全网追踪（AI 读原文核对）**")
         for item in feed[:6]:

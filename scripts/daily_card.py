@@ -31,6 +31,8 @@ CHIP = {"reuters": (255, 237, 213), "trendforce": (224, 231, 255), "smm": (220, 
 # Type scale. Body text is sized for reading in a phone chat bubble, not for print.
 T_TITLE, T_H2, T_H3, T_BODY, T_SMALL, T_TINY = 54, 36, 33, 29, 25, 22
 LH = 44  # body line height
+CANVAS_HEIGHT = 14000  # drawn tall, then cropped to the content; content past this edge would come out black
+BRIEF_ITEMS = 4  # the image and DingTalk carry the newest reports; the site and share page keep the full list
 
 FONT_SETS = [  # (regular, bold, ttc index)
     ("C:/Windows/Fonts/msyh.ttc", "C:/Windows/Fonts/msyhbd.ttc", 0),
@@ -77,11 +79,17 @@ def wrap(draw, text, font, width, max_lines=4):
     return lines
 
 
-def pick_items(state):
+def pick_items(state, limit=None):
     from intelligence import SOURCE_LABELS
     items = [dict(x, source=x.get("source") or SOURCE_LABELS.get(x["source_id"], x["source_id"])) for x in (state.get("intelligence") or {}).get("items", []) if x["source_id"] != "qudao"]
     dated = sorted([x for x in items if x["source_id"] != "nvidia"], key=lambda x: x["date"], reverse=True)
-    return dated + [x for x in items if x["source_id"] == "nvidia"]
+    return (dated + [x for x in items if x["source_id"] == "nvidia"])[:limit]
+
+
+def extra_feed(state, days):
+    """Feed items from the last `days`, minus reports already listed as market intelligence."""
+    listed = {x["url"] for x in (state.get("intelligence") or {}).get("items", [])}
+    return [x for x in (state.get("feed") or {}).get("items", []) if x.get("age_days", 99) <= days and x["url"] not in listed]
 
 
 def forecast_on(evidence, day):
@@ -104,7 +112,7 @@ def render(evidence, state, output):
     fx = (board or {}).get("fx") or {}
     board_rows = {r["id"]: r for r in (board or {}).get("rows", [])}
     board_changes = {c["id"]: c for c in (board or {}).get("changes", [])}
-    img = Image.new("RGBA", (W, 7000), BG)
+    img = Image.new("RGBA", (W, CANVAS_HEIGHT), BG)
     d = ImageDraw.Draw(img)
     PAD = 28  # inner card padding
 
@@ -266,7 +274,7 @@ def render(evidence, state, output):
                                                     f"本轮未读到页面，最后核对 {last[5:]}" if last else "本轮未读到页面")
             meta = " · ".join(x for x in (when, r["kind"], r["native"] if r["converted"] or not r["low"] else "", r["note"]) if x)
             change = board_changes.get(r["id"])
-            flag = ("今日新报价" if change["kind"] == "新报价" else f"汇率 {change['delta']:+,}") if change else ""
+            flag = ({"新报价": "今日新报价", "补录": "今日补录"}.get(change["kind"]) or f"汇率 {change['delta']:+,}") if change else ""
             value = r["text"] if r["low"] else "未折算"
             laid.append((r, wrap(d, meta, F(T_TINY), inner, 2), flag, value))
         # Closing punctuation may run past the wrap width, so leave room for it.
@@ -395,7 +403,7 @@ def render(evidence, state, output):
 
     # Today's judgement from the daily brief.
     # Today's change is already under the evidence table.
-    lines_src = [(b["title"], b["text"]) for b in state["daily_brief"]["items"] if not (board and b["title"] == "今日变化")]
+    lines_src = [(b["title"], b["text"]) for b in state["daily_brief"]["items"] if not (board and b["title"] in ("今日变化", "当前预测"))]
     label_w = max(d.textlength(k, font=F(T_BODY, True)) for k, _ in lines_src) + 20
     text_w = W - 2 * M - 2 * PAD - label_w
     body = [(k, wrap(d, t, F(T_BODY), text_w, 4 if board else 3)) for k, t in lines_src]
@@ -412,8 +420,8 @@ def render(evidence, state, output):
     y += h + GAP
 
     # Intelligence cards.
-    items = pick_items(state)
-    d.text((M + 4, y + 10), f"市场情报 · {len(items)} 条", font=F(T_H2, True), fill=INK)
+    items = pick_items(state, BRIEF_ITEMS)
+    d.text((M + 4, y + 10), f"市场情报 · 最新 {len(items)} 条", font=F(T_H2, True), fill=INK)
     y += 72
     tag_w = d.textlength("影响", font=F(T_BODY, True)) + 18
     inner = W - 2 * M - 2 * PAD
@@ -456,7 +464,7 @@ def render(evidence, state, output):
 
     # Agent-verified web intelligence from the last week.
     # Only A/B items go into the image; C items and leads stay in the site and the message text as links.
-    feed = [x for x in (state.get("feed") or {}).get("items", []) if x.get("age_days", 99) <= 7 and x["grade"] in ("A", "B")][:3]
+    feed = [x for x in extra_feed(state, 7) if x["grade"] in ("A", "B")][:3]
     if feed:
         y += 12
         d.text((M + 4, y + 10), f"全网追踪 · {len(feed)} 条", font=F(T_H2, True), fill=INK)
@@ -517,5 +525,7 @@ def render(evidence, state, output):
     d.text((M, y + 6), f"采集 {generated} 北京时间", font=F(T_TINY), fill=MUTED)
     d.text((M, y + 42), f"完整情报与报告 {SITE}", font=F(T_TINY), fill=ASK)
     y += 42 + 34 + M
+    if y > CANVAS_HEIGHT:
+        raise ValueError(f"日报图内容高度 {y} 超过画布 {CANVAS_HEIGHT}")
     img.crop((0, 0, W, int(y))).convert("RGB").save(output, optimize=True)
     return output

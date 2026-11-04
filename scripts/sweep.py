@@ -19,7 +19,7 @@ from datetime import date, datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from urllib.parse import quote, urlparse
+from urllib.parse import parse_qs, quote, urlparse
 
 import requests
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
@@ -60,6 +60,14 @@ DOMAINS = {
     "tomshardware.com": ("Tom's Hardware", "行业媒体"), "tweaktown.com": ("TweakTown", "行业媒体"),
     "videocardz.com": ("VideoCardz", "行业媒体"), "nvidia.com": ("NVIDIA", "官方"), "nvidia.cn": ("NVIDIA", "官方"),
     "cninfo.com.cn": ("巨潮资讯", "公告"),
+    # Outlets relaying paywalled reports (Bloomberg, The Information); the relay is what can actually be read and checked.
+    "udn.com": ("经济日报", "主流媒体"), "ctee.com.tw": ("工商时报", "主流媒体"), "cnyes.com": ("鉅亨网", "主流媒体"),
+    "zaobao.com.sg": ("联合早报", "主流媒体"), "sedaily.com": ("首尔经济", "主流媒体"), "rfi.fr": ("法广", "主流媒体"),
+    "finance.yahoo.com": ("雅虎财经", "主流媒体"), "investing.com": ("Investing.com", "行业媒体"),
+    "caiwennews.com": ("财闻", "行业媒体"), "sina.com.cn": ("新浪财经", "行业媒体"), "ifeng.com": ("凤凰网", "行业媒体"),
+    "huxiu.com": ("虎嗅", "行业媒体"), "pedaily.cn": ("投资界", "行业媒体"), "ijiwei.com": ("爱集微", "行业媒体"),
+    "icsmart.cn": ("芯智讯", "行业媒体"), "wccftech.com": ("Wccftech", "行业媒体"), "techpowerup.com": ("TechPowerUp", "行业媒体"),
+    "hothardware.com": ("HotHardware", "行业媒体"),
     # Self-media platforms: fast and often second-hand, so they enter as grade C with every claim checked.
     "mp.weixin.qq.com": ("微信公众号", "公众号"), "sohu.com": ("搜狐号", "公众号"), "163.com": ("网易号", "公众号"),
     "baijiahao.baidu.com": ("百家号", "公众号"), "toutiao.com": ("今日头条", "公众号"), "qq.com": ("腾讯新闻", "公众号"),
@@ -76,6 +84,9 @@ OUTLET_FEEDS = {
 }
 GOOGLE_NEWS_QUERY = '"RTX PRO 5500" when:3d'
 GOOGLE_NEWS_EDITIONS = [("zh-CN", "CN", "CN:zh-Hans"), ("en-US", "US", "US:en")]
+BING_QUERIES = [('"RTX PRO 5500"', "zh-cn"), ('"RTX Pro 5500"', "en-us"), ("英伟达 RTX 5500 订单", "zh-cn")]
+# Big stories often drop the model name from the headline ("1% of $70 billion RTX chips"); the article text is checked later.
+VENDOR = re.compile(r"NVIDIA|英伟达|辉达|輝達", re.I)
 SOGOU_QUERIES = ["RTX PRO 5500", "RTX PRO 5500 报价", "RTX PRO 5500 到货"]
 CONTENT = "{http://purl.org/rss/1.0/modules/content/}encoded"
 
@@ -163,6 +174,27 @@ def google_news():
                 title = title[:-len(publisher) - 3].strip()
             rows.append({"title": title, "url": node.findtext("link", "").strip(), "publisher": publisher or "未标明",
                          "published_at": to_date(node.findtext("pubDate")), "snippet": "", "found_via": "Google 新闻"})
+    return rows
+
+
+def parse_bing(content):
+    """Bing News RSS. Its links carry the publisher's address, so unlike Google News the article can be opened and graded."""
+    rows = []
+    for node in xml_root(content).iter("item"):
+        link = node.findtext("link", "").strip()
+        title, snippet = strip_html(node.findtext("title", "")), strip_html(node.findtext("description", ""))
+        text = f"{title} {snippet}"
+        if not PRODUCT.search(text) and not (re.search(r"RTX", text, re.I) and VENDOR.search(text)):
+            continue
+        rows.append({"url": parse_qs(urlparse(link).query).get("url", [link])[0], "title": title,
+                     "published_at": to_date(node.findtext("pubDate")), "snippet": snippet[:160], "body": "", "found_via": "Bing 新闻"})
+    return rows
+
+
+def bing():
+    rows = []
+    for query, language in BING_QUERIES:
+        rows += parse_bing(fetch(f"https://www.bing.com/news/search?q={quote(query)}&format=rss&setlang={language}")[0])
     return rows
 
 
@@ -364,6 +396,7 @@ def sweep(feed, evidence, today, endpoint=None, token=None):
     with ThreadPoolExecutor(max_workers=6) as pool:
         for rows in pool.map(lambda pair: attempt(f"{pair[0]} RSS", lambda: parse_rss(fetch(pair[1])[0], pair[0])), OUTLET_FEEDS.items()):
             candidates += rows
+    candidates += attempt("Bing 新闻 " + " / ".join(q for q, _ in BING_QUERIES), bing)
     candidates += inbox()
     news = attempt(f"Google 新闻 {GOOGLE_NEWS_QUERY}", google_news)
     posts = attempt("搜狗微信 " + " / ".join(SOGOU_QUERIES), lambda: sogou(notes))

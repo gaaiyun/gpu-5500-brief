@@ -33,13 +33,30 @@ class DigestTests(unittest.TestCase):
         self.assertEqual(result["days_since_quote"], 9)
         self.assertIn("距最近一次新报价 9 天", result["headline"])
 
-    def test_rate_move_listed_but_not_counted_as_news(self):
-        today = state(price_board=dict(state()["price_board"], changes=[{"id": "reuters_usd", "kind": "汇率", "delta": -20, "text": "路透订单价 -20 元"}]))
-        result = daily_digest(today, baseline())
+    def test_large_rate_move_listed_but_not_counted_as_news(self):
+        today = state(price_board=dict(state()["price_board"], changes=[{"id": "reuters_usd", "kind": "汇率", "delta": -900, "text": "路透订单价 -900 元"}]))
+        old = baseline(fx={"status": "ok", "label": "人民币汇率中间价", "date": "2026-10-28", "rates": {"USD": 6.8}})
+        result = daily_digest(today, old)
         fx = next(i for i in result["items"] if i["tag"] == "汇率")
-        self.assertIn("6.7165→6.7147", fx["text"])
-        self.assertIn("-20", fx["text"])
+        self.assertIn("6.8→6.7147", fx["text"])
+        self.assertIn("-900", fx["text"])
         self.assertTrue(result["quiet"])
+
+    def test_small_rate_move_stays_out_of_the_digest(self):
+        today = state(price_board=dict(state()["price_board"], changes=[{"id": "reuters_usd", "kind": "汇率", "delta": -20, "text": "路透订单价 -20 元"}]))
+        self.assertFalse([i for i in daily_digest(today, baseline())["items"] if i["tag"] == "汇率"])
+
+    def test_backfilled_quote_listed_but_not_counted_as_news(self):
+        today = state(price_board=dict(state()["price_board"], changes=[{"id": "old", "kind": "补录", "text": "补录 某报价 ¥85,000（原始日期 2026-10-09）"}]))
+        result = daily_digest(today, baseline())
+        self.assertEqual([i["tag"] for i in result["items"]][0], "补录")
+        self.assertTrue(result["quiet"])
+
+    def test_quiet_day_says_what_was_searched(self):
+        today = state(feed={"items": [], "leads": [], "sweep": {"candidates": 5, "read": 3, "added": []}})
+        self.assertIn("读正文 3 篇", next(i for i in daily_digest(today, baseline())["items"] if i["tag"] == "检索")["text"])
+        today = state(feed={"items": [], "leads": [], "sweep": {"candidates": 0, "read": 0, "added": []}})
+        self.assertIn("没有发现", next(i for i in daily_digest(today, baseline())["items"] if i["tag"] == "检索")["text"])
 
     def test_other_cards_stay_out_of_the_digest(self):
         today = state(channel={"watchlist": [{"model": "RTX PRO 6000 D 84G", "min_ask": 67000, "quote_date": "2026-10-30", "condition": "正常供应"}]})

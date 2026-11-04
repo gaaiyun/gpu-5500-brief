@@ -25,12 +25,13 @@ TZ = timezone(timedelta(hours=8))
 MAX_PER_DAY = 2
 DAY_HOURS = (8, 22)      # Beijing time; a change found at night waits for the morning report or the next patrol
 NEW_ROW_MAX_AGE = 7      # a report older than this found today is backfill, not news
+NEWS_MAX_AGE = 2         # a verified article this recent is worth interrupting for
 KEEP_DAYS = 7
 REVIEW_MOVE = .15        # a bigger one-day move on a shop page is more often a page change than a repricing
 
 
 def events(state, report):
-    """New or changed quotes since `report`; a rate move or a listing's first sighting is not news."""
+    """New or changed quotes and newly verified reports since `report`; a rate move or a listing's first sighting is not news."""
     old = (report or {}).get("price_board")
     if not old:
         return []
@@ -66,8 +67,13 @@ def events(state, report):
             text = f"{r['label']} {prev['native']} → {r['native']}（原报价日期 {r['date']}）"
             tag = "新报价"
         found.append({"key": f"{r['id']}|{r['quote_key']}", "tag": tag, "text": text, "url": r.get("url", "")})
-    # Mainland quotes first; overseas retail is context.
-    return sorted(found, key=lambda e: e["tag"] == "海外零售")
+    seen = {x["id"] for x in (report.get("feed") or {}).get("items", [])}
+    for item in (state.get("feed") or {}).get("items", []):
+        # Unverified posts stay in the morning report's link list.
+        if item["id"] not in seen and item.get("grade") in ("A", "B") and item.get("age_days", 99) <= NEWS_MAX_AGE:
+            found.append({"key": f"feed|{item['id']}", "tag": "情报", "text": f"{item['title']}（{item['publisher']}，{item['published_at']}）", "url": item["url"]})
+    # Mainland quotes first, then reports; overseas retail is context.
+    return sorted(found, key=lambda e: {"情报": 1, "海外零售": 2}.get(e["tag"], 0))
 
 
 def blocked(log, now):

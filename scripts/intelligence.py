@@ -9,7 +9,7 @@ import requests
 ROOT=Path(__file__).resolve().parents[1]
 
 
-SOURCE_LABELS={'qudao':'宽泛采销公开接口','smm':'SMM 上海有色网','reuters':'路透社独家（BNN Bloomberg 转载）',
+SOURCE_LABELS={'bloomberg':'彭博（经济日报转述）','leiphone':'雷峰网','yicai':'第一财经（新浪科技转载）','qudao':'宽泛采销公开接口','smm':'SMM 上海有色网','reuters':'路透社独家（BNN Bloomberg 转载）',
                'trendforce':'TrendForce 集邦咨询（转述 The Information）','tansun':'天阳科技公告 2026-070',
                'cls':'财联社','nvidia':'NVIDIA 官网产品页'}
 
@@ -18,6 +18,9 @@ def fact_briefs(e,state):
     by_id={s['id']:s for s in e['sources']}
     channel=state.get('channel')
     rows=[
+        ('bloomberg','未来4个月预计只到订单的约1%','2026-11-04','彭博·匿名信源',
+         '彭博援引知情人士：中国AI与云企业共订购约600万颗，每颗超过1.1万美元，总值约700亿美元；未来4个月预计只到数万颗，约占1%。首批数千颗预计年底前，第二批数万颗预计明年2月左右，目前只有这两批获确认；大型云厂商估计2027年底前累计约70万颗，可能调整。',
+         '到货远低于路透此前的5%-10%，短交期货源会更紧；单价折算后仍接近8.5万-9万元基准，上行风险主要在短交期现货。','核实首批到货数量和渠道可得性'),
         ('smm','大陆供应商预售参考9.5万元','2026-10-13','媒体采访',
          'SMM 报道大陆供货商预售报价95,000元；行业估计90,000-95,000元。报道未披露供应商、数量和交付条款。',
          '95,000元可用作首轮报盘锚点，短交期和税票条件决定客户是否接受。','取得当日可执行报价和交期'),
