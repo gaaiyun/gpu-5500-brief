@@ -22,6 +22,7 @@ git checkout claude/intel-feed 2>/dev/null || git checkout -b claude/intel-feed 
 git merge --no-edit -X theirs origin/main
 # main 上的 feed.json 已合并前一天的云端结果和 CI 检索结果，是最新全集，从它开始改。
 git checkout origin/main -- data/feed.json
+python3 -m pip install -q requests beautifulsoup4 2>/dev/null   # 第 6 步的检查要用
 ```
 
 先读：`data/feed.json`（已有条目和 `sweep.notes`，避免重复；`sweep.notes` 里有你昨天的条目为什么没通过复核）、`data/evidence.json`（已核验来源和当前预测）、`data/reading_room.json`、`data/state.json` 里的 `digest` 和 `price_board`（今天的价格表）、`git show origin/main:data/inbox.txt`（人工转来的链接，最优先）。
@@ -75,7 +76,7 @@ git checkout origin/main -- data/feed.json
 ```bash
 python -c "import json,sys; sys.path.insert(0,'scripts'); from datetime import date; from feed import load_feed; items,bad=load_feed(json.load(open('data/feed.json',encoding='utf-8')),date.today()); print(len(items),'ok',bad); sys.exit(1 if bad else 0)"
 python -m unittest tests.test_feed
-python -c "import json,sys; sys.path.insert(0,'scripts'); from datetime import datetime,timedelta,timezone; from signals import allowed_numbers,clean_take; f=json.load(open('data/feed.json',encoding='utf-8')); e=json.load(open('data/evidence.json',encoding='utf-8')); s=json.load(open('data/state.json',encoding='utf-8')); t=clean_take(f.get('take'),datetime.now(timezone(timedelta(hours=8))).date(),allowed_numbers(e,f['items'],s['price_board']['rows'])); print('take ok' if t else 'take 不会显示：日期不是今天、超长或用了证据里没有的数字，改好再推'); sys.exit(0 if t else 1)"
+python3 -c "import json,sys; sys.path.insert(0,'scripts'); from datetime import datetime,timedelta,timezone; from signals import allowed_numbers,clean_take; f=json.load(open('data/feed.json',encoding='utf-8')); e=json.load(open('data/evidence.json',encoding='utf-8')); s=json.load(open('data/state.json',encoding='utf-8')); t=clean_take(f.get('take'),datetime.now(timezone(timedelta(hours=8))).date(),allowed_numbers(e,f['items'],s['price_board']['rows'])); print('take ok' if t else 'take 不会显示：日期不是今天、超长或用了证据里没有的数字，改好再推'); sys.exit(0 if t else 1)"
 git add data/feed.json
 git commit -m "chore(情报): 全网情报核对 $(TZ=Asia/Shanghai date +%F)"
 git push origin claude/intel-feed

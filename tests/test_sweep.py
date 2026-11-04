@@ -171,6 +171,14 @@ class CloudVerifyTests(unittest.TestCase):
         self.assertEqual([(r["url"],r["snippets"]) for r in room],[("https://x/2",["新"])])
 
 
+class TakeMergeTests(unittest.TestCase):
+    def test_cloud_draft_wins_on_the_same_day_and_an_older_note_never_returns(self):
+        old,new={"take":{"date":"2026-11-04","text":"旧稿"}},{"take":{"date":"2026-11-04","text":"新稿"}}
+        self.assertEqual(sweep.newest_take(old,new)["text"],"新稿")
+        self.assertEqual(sweep.newest_take({"take":{"date":"2026-11-05","text":"今天"}},new)["text"],"今天")
+        self.assertIsNone(sweep.newest_take({},None))
+
+
 class RepostTests(unittest.TestCase):
     def test_self_media_post_with_only_known_figures_is_a_repost(self):
         post={"source_type":"公众号","title":"腾讯新闻：大厂疯抢","summary":"中国客户总订单超过600万张"}

@@ -37,6 +37,7 @@ class ChannelTests(unittest.TestCase):
         leads = [{"title": "广州丽泰 2027 年 Q1 将到 2000 片 RTX PRO 5500", "publisher": "广州丽泰", "source_type": "公众号", "url": "https://x/1", "published_at": "2026-10-31"},
                  {"title": "RTX Pro5500 开放预定，显卡/整机均可接单交付", "publisher": "广州三欣", "source_type": "公众号", "url": "https://x/2", "published_at": "2026-10-27"},
                  {"title": "深度拆解 RTX PRO 5500", "publisher": "苏哥随笔", "source_type": "公众号", "url": "https://x/3", "published_at": "2026-10-29"},
+                 {"title": "RTX 5090 要停产了，板卡厂已经订不到货了", "publisher": "浅谈杂谈", "source_type": "公众号", "url": "https://x/5", "published_at": "2026-10-27"},
                  {"title": "英伟达交付受限", "publisher": "路透", "source_type": "主流媒体", "url": "https://x/4", "published_at": "2026-10-29"}]
         self.assertEqual([r["publisher"] for r in signals.channel_signals(leads)], ["广州丽泰", "广州三欣"])
 
