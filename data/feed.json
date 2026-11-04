@@ -1,25 +1,20 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T17:39:13+08:00",
-  "agent": "actions-sweep+cloud-routine",
+  "updated_at": "2026-11-04T18:30:00+08:00",
+  "agent": "cloud-routine",
   "searched": [
-    "GDELT \"RTX PRO 5500\"",
-    "IT之家 RSS",
-    "快科技 RSS",
-    "雷峰网 RSS",
-    "钛媒体 RSS",
-    "TrendForce RSS",
-    "DIGITIMES RSS",
-    "Tom's Hardware RSS",
-    "TweakTown RSS",
-    "科技新报 RSS",
-    "INSIDE RSS",
-    "南华早报科技 RSS",
-    "CNBC 科技 RSS",
-    "Bing 新闻 \"RTX PRO 5500\" / \"RTX Pro 5500\" / 英伟达 RTX 5500 订单",
-    "Bing 相关动态",
-    "Google 新闻 \"RTX PRO 5500\" when:3d",
-    "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
+    "RTX Pro 5500 China shipment allocation",
+    "RTX PRO 5500 国内 报价 现货 渠道",
+    "Nvidia China export BIS RTX Pro November 2026",
+    "昇腾 寒武纪 价格 供应 11月",
+    "RTX 5090 国内 价格 涨价",
+    "GDDR7 price supply shortage",
+    "算力租赁 价格 英伟达 600万 RTX Pro 5500",
+    "丽台 PNY RTX PRO 5500 交付",
+    "工信部 英伟达 采购 审批 RTX Pro",
+    "台积电 英伟达 产能 Rubin 11月",
+    "浪潮 新华三 联想 RTX PRO 5500 服务器 样品",
+    "Nvidia 51% non-Chinese cloud rule Alibaba ByteDance reaction"
   ],
   "items": [
     {
@@ -38,7 +33,8 @@
         "https://www.bloomberg.com/news/articles/2026-11-04/nvidia-china-clients-to-get-1-of-70-billion-rtx-chips-ordered",
         "https://news.qq.com/rain/a/20261104A07XHU00",
         "https://news.mydrivers.com/1/1163/1163119.htm",
-        "https://finance.sina.com.cn/tech/discovery/2026-11-04/doc-inixqhkw1566166.shtml"
+        "https://finance.sina.com.cn/tech/discovery/2026-11-04/doc-inixqhkw1566166.shtml",
+        "https://en.sedaily.com/international/2026/11/04/nvidia-to-fill-just-1-percent-of-chinese-chip-orders-amid"
       ],
       "claims": [],
       "checked_at": "2026-11-04",
@@ -476,7 +472,10 @@
       "wechat": 0
     }
   },
-  "take": null,
+  "take": {
+    "date": "2026-11-04",
+    "text": "彭博称中国客户订购约600万颗、未来4个月预计只到约1%，比路透此前的5%-10%更紧。首尔经济日报写作约6万颗，口径不一。现有渠道价仍是约8.5万-9万元，短交期货源别指望降价。"
+  },
   "sweep": {
     "date": "2026-11-04",
     "candidates": 2,
