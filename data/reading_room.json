@@ -1,5 +1,128 @@
 [
  {
+  "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-can-only-fulfill-1-percent-of-chinas-massive-usd70-billion-gpu-order-for-ai-chips-report-claims-supply-constraints-choke-export-friendly-rtx-pro-5500-deliveries-despite-huge-demand",
+  "title": "Nvidia can only fulfill 1% of China’s massive $70 billion GPU order for AI chips, report claims — su",
+  "publisher": "Tom's Hardware",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-04",
+  "scope": "5500",
+  "snippets": [
+   "Bloomberg is reporting that, according to unnamed sources, only \"some tens of th",
+   "Demand for the RTX Pro 5500 has far outstripped Nvidia's planned production.",
+   "According to earlier reports, Chinese firms were suggested to have spent $35 bil",
+   "This new report suggests that amount has risen to $70 billion, at a cost of $11,",
+   "Chinese demand for the RTX Pro 5500 is based on its performance and its unique s",
+   "The RTX Pro 5500 has the same CUDA cores as its flagship gaming GPU, the RTX 509"
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "Tom's Hardware"
+ },
+ {
+  "url": "https://www.tmtpost.com/8193553.html",
+  "title": "42亿GPU采购背后，游族网络跨界AI算力生意",
+  "publisher": "钛媒体",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-04",
+  "scope": "5500",
+  "snippets": [
+   "42亿大单，巨额采购义务",
+   "公告显示，游族网络全资子公司上海游族信息技术有限公司近日与A公司签署《销售合同》，游族信息向A公司采购型号为PRO5500（PCIe）的GPU产品，协议总金额4",
+   "值得注意的是，42.25亿元是含税金额，最终收入仍取决于实际交付和会计确认。",
+   "据媒体10月20日报道，字节跳动、阿里巴巴和腾讯已向供应商提出大规模RTX PRO 5500采购需求，但由于需求超过计划供应量，英伟达无法保证全部交付。",
+   "游族网络合同中的PRO5500（PCIe）与上述产品名称相近，但尚不能确认完全相同。",
+   "看似盈利明显改善，扣非归母净利润却只有2717.62万元，同比下降33.93%。"
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "钛媒体"
+ },
+ {
+  "url": "https://www.stheadline.com/zh-hans/loadnext/0/3633426",
+  "title": "阿里腾讯等据报订购600万枚Nvidia晶片 未来4个月料仅收货1%",
+  "publisher": "www.stheadline.com",
+  "source_type": "其他",
+  "published_at": "2026-11-04",
+  "scope": "5500",
+  "snippets": [
+   "жҚ®еҪӯеҚҡеј•иҝ°ж¶ҲжҒҜжҠҘйҒ“пјҢйҳҝйҮҢе·ҙе·ҙпјҲ9988пјүгҖҒи…ҫи®ҜпјҲ700пјүгҖҒеӯ—иҠӮи",
+   "RTX Pro 5500йқһжңҖе…Ҳиҝӣжҷ¶зүҮ",
+   "жҠҘйҒ“жҢҮпјҢRTX Pro 5500е№¶йқһиӢұдјҹиҫҫжңҖе…Ҳиҝӣзҡ„AIжҷ¶зүҮпјҢе…¶иҝҗз®—иғҪеҠӣжңӘ",
+   "жҚ®жӮүпјҢдёӯеӣҪдё»иҰҒAIејҖеҸ‘е•Ҷйў„и®ЎпјҢд»Ҡе№ҙеә•еүҚеҸҜж”¶еҲ°йҰ–жү№ж•°еҚғжһҡRTX",
+   "йҡҸзқҖиӢұдјҹиҫҫйў„ж–ҷйҖҗжӯҘеўһдә§пјҢдёҖеҗҚзҹҘжғ…дәәеЈ«еј•иҝ°дё»иҰҒд№°е®¶зҡ„еҶ…йғ",
+   "иӢұдјҹиҫҫзҡ„AIжҷ¶зүҮз”ұеҸ°з§Ҝз”өд»Је·ҘгҖӮж¶ҲжҒҜжҢҮпјҢйҡҸзқҖдёӨе®¶е…¬еҸёе°ҶжӣҙеӨҡ"
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1097174503_122967788",
+  "title": "英伟达51%、甲骨文取消交易与美国会变局",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-04",
+  "scope": "context",
+  "snippets": [
+   "英伟达51%的要求、甲骨文取消的交易与美国国会变局",
+   "11月3日，美国中期选举投票当天，英国《金融时报》（Financial Times, FT）披露，英伟达（NVIDIA）最近向部分全球数据中心和云服务合作伙伴提",
+   "同是本周的第三则消息是《金融时报》11月4日的报道：美国云计算企业甲骨文（Oracle）取消了与腾讯一项估计价值约70亿美元的海外GPU租赁交易。",
+   "早在今年1月15日，美国商务部工业与安全局（BIS）修订先进计算芯片出口审查规则，将符合特定性能条件的英伟达H200、AMD MI325X等芯片对华出口申请，从",
+   "规则还规定，特定芯片对中国及澳门的出口数量，不得超过向美国最终用户供应数量的50%。",
+   "（这一50%属于特定芯片出口许可证的数量条件，与此次英伟达据报提出的云服务非中国客户占比51%要求不是同一回事，但两者都表明，先进GPU的供应正在与客户身份、业"
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1097119505_121948416",
+  "title": "一卡难求！英伟达中国客户未来四月只能收到1% RTX芯片",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-04",
+  "scope": "context",
+  "snippets": [
+   "知情人士称，中国主要AI开发商预计首批数千颗芯片将于今年底前交付，明年2月左右再交付数万颗；",
+   "由于英伟达将更多产能分配给Rubin等下一代产品，其已警告客户未来产能受限，RTX Pro 5500供应预计将持续紧张。",
+   "另一位知情人士透露，根据主要买家内部测算，随着英伟达扩大产量，中国超大规模数据中心运营商估计到2027年底可能收到约70万颗该芯片，但最终出货量可能随产能调整而"
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.guandian.cn/article/20261104/623030.html",
+  "title": "中国云企业订购约600万枚英伟达RTX芯片 未来四个月仅到货1%",
+  "publisher": "www.guandian.cn",
+  "source_type": "其他",
+  "published_at": "2026-11-04",
+  "scope": "5500",
+  "snippets": [
+   "据知情人士透露，阿里巴巴、腾讯、字节跳动等中国AI和云运算公司合共向英伟达订购约600万枚RTX Pro 5500芯片，总订单价值约700亿美元，未来四个月预计",
+   "观点网讯： 据知情人士透露，阿里巴巴、腾讯、字节跳动及其他中国AI和云运算公司，合共已向英伟达订购约600万枚RTX Pro 5500芯片。",
+   "若每枚芯片售价超过1.1万美元计算，目前总订单价值约为700亿美元。",
+   "交付安排方面，知情人士表示，中国主要AI开发商预计首批数千颗芯片于今年底前交付，明年2月左右再交付数万颗，目前仅这些交付量得到确认。",
+   "产能方面，因英伟达将更多产能分配给Rubin等下一代产品，其已警告客户未来产能受限，RTX Pro 5500供应预计持续紧张。",
+   "背景方面，报道指，美国禁止英伟达向中国出口最顶尖芯片，但RTX Pro 5500性能尚未达到限制门槛。"
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://wccftech.com/chinese-tech-giants-wait-months-nvidia-rtx-pro-5500-cuda-dominance/",
+  "title": "Chinese Tech Giants Choose To Wait Months To Receive 1% Of Ordered RTX PRO 5500 Units, Proving NVIDI",
+  "publisher": "Wccftech",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-04",
+  "scope": "5500",
+  "snippets": [
+   "China’s artificial intelligence sector has poured tens of billions of dollars in",
+   "The Chinese have also carved out various smuggling routes to deliver NVIDIA’s to",
+   "Aside from NVIDIA’s unrivaled CUDA software stack, its manufacturing yields, and",
+   "Chinese firms have also settled for this GPU since it complies with United State",
+   "Even so, the reality that top-tier Chinese firms prefer to wait on a 1 percent a",
+   "NVIDIA RTX PRO 5000 Blackwell"
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://news.mydrivers.com/1/1163/1163119.htm",
   "title": "一卡难求！英伟达中国客户未来四月只能收到1% RTX芯片",
   "publisher": "快科技",
@@ -18,6 +141,24 @@
   "found_via": "快科技"
  },
  {
+  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-china-clients-1-70-031424389.html",
+  "title": "Nvidia China Clients to Get 1% of $70 Billion RTX Chips Ordered",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-04",
+  "scope": "5500",
+  "snippets": [
+   "Nvidia China Clients to Get 1% of $70 Billion RTX Chips Ordered",
+   "Morgan Stanley Offers $2.3 Billion Debt for Dell Family Deal",
+   "and other Chinese AI and cloud firms have in total ordered about 6 million of Nv",
+   "At more than $11,000 a chip, the total orders so far are valued at about $70 bil",
+   "While the US bars Nvidia from selling its most cutting-edge chips to China, the ",
+   "Major Chinese AI developers expect the first batch of several thousand RTX Pro 5"
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://finance.sina.com.cn/tech/discovery/2026-11-04/doc-inixqhkw1566166.shtml",
   "title": "一卡难求！英伟达中国客户未来四月只能收到1% RTX芯片",
   "publisher": "新浪财经",
@@ -33,6 +174,23 @@
    "另一位知情人士透露，根据主要买家内部测算，随着英伟达扩大产量，中国超大规模数据中心运营商估计到2027年底可能收到约70万颗该芯片，但最终出货量可能随产能调整而"
   ],
   "seen_at": "2026-11-04",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://coinpedia.org/crypto-live-news/nvidia-stock-news-nvda-rises-as-70-billion-china-chip-order-stuck-in-queue/",
+  "title": "Nvidia Stock News: NVDA Rises As $70 Billion China Chip Order Stuck In Queue",
+  "publisher": "coinpedia.org",
+  "source_type": "其他",
+  "published_at": "2026-11-04",
+  "scope": "5500",
+  "snippets": [
+   "Chinese tech giants have placed orders for about 6 million of Nvidia’s RTX Pro 5",
+   "Nvidia shares rose 1.32% to $209.42 before the open, helped by strong AI outlook",
+   "AMD CEO Lisa Su said revenue could rise over 80% in 2027, while Super Micro lift",
+   "The stock remains below its 20, 50 and 100-day averages but above its 200-day le",
+   "Nvidia reports on November 17, with revenue expected at $109.17 billion."
+  ],
+  "seen_at": "2026-11-05",
   "found_via": "Bing 新闻"
  },
  {
@@ -64,7 +222,7 @@
    "The community Narrative focuses on diversified AI infrastructure spending from h",
    "See how these catalysts shape NVIDIA's path to a $329 fair value ."
   ],
-  "seen_at": "2026-11-04",
+  "seen_at": "2026-11-05",
   "found_via": "Bing 新闻"
  }
 ]
