@@ -1,5 +1,23 @@
 [
  {
+  "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-chinese-clients-just-1-180024708.html",
+  "title": "Nvidia’s Chinese Clients Will Get Just 1% of $70 Billion in RTX Chip Orders",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-05",
+  "scope": "5500",
+  "snippets": [
+   "Chinese AI and cloud firms, Alibaba among them, have ordered about 6 million NVI",
+   "Analysts still expect NVIDIA's revenue to reach $692 billion in the year ending ",
+   "NVIDIA trades at 17x forward earnings, its lowest in three years, with its next ",
+   "Alibaba ( BABA:NYSE ) , Tencent, ByteDance and other Chinese AI and cloud firms ",
+   "The news came a day after the Financial Times reported that NVIDIA told its clou",
+   "TIKR tracks 62 analysts on Nvidia."
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-can-only-fulfill-1-percent-of-chinas-massive-usd70-billion-gpu-order-for-ai-chips-report-claims-supply-constraints-choke-export-friendly-rtx-pro-5500-deliveries-despite-huge-demand",
   "title": "Nvidia can only fulfill 1% of China’s massive $70 billion GPU order for AI chips, report claims — su",
   "publisher": "Tom's Hardware",
@@ -105,6 +123,23 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/nvidia-stock-faces-china-supply-squeeze-amid-ai-chip-demand/70458324",
+  "title": "Nvidia stock faces China supply squeeze amid AI chip demand",
+  "publisher": "www.ad-hoc-news.de",
+  "source_type": "其他",
+  "published_at": "2026-11-04",
+  "scope": "5500",
+  "snippets": [
+   "Chinese AI developers are facing a sharp shortfall in Nvidia's RTX Pro 5500 chip",
+   "Their internal estimates point to roughly 700,000 units by the end of 2027, alth",
+   "The RTX Pro 5500 is not covered by the same restrictions as Nvidia's most advanc",
+   "Bloomberg reported that Nvidia and Taiwan Semiconductor Manufacturing Company ar",
+   "The real-time quote of Nvidia stock stood at 180.36 euros on Lang & Schwarz at 1"
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://wccftech.com/chinese-tech-giants-wait-months-nvidia-rtx-pro-5500-cuda-dominance/",
   "title": "Chinese Tech Giants Choose To Wait Months To Receive 1% Of Ordered RTX PRO 5500 Units, Proving NVIDI",
   "publisher": "Wccftech",
@@ -189,6 +224,20 @@
    "AMD CEO Lisa Su said revenue could rise over 80% in 2027, while Super Micro lift",
    "The stock remains below its 20, 50 and 100-day averages but above its 200-day le",
    "Nvidia reports on November 17, with revenue expected at $109.17 billion."
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261103A0CJKF00",
+  "title": "DeepSeek下一代大模型，昇腾芯片承担训练",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-03",
+  "scope": "context",
+  "snippets": [
+   "DeepSeek则在官方API页面提到，受限于高端算力，目前V4-Pro模型的服务吞吐仍有限，预计下半年昇腾950超节点批量上市后，Pro价格会大幅下调。",
+   "9月30日，DeepSeek宣布，正式开源面向华为昇腾算力平台的基础设施组件，涵盖TileLang高级语言编译工具、高性能计算库（DeepGEMM、 Flash"
   ],
   "seen_at": "2026-11-05",
   "found_via": "Bing 新闻"

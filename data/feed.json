@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-05T01:08:23+08:00",
+  "updated_at": "2026-11-05T06:10:50+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -141,6 +141,26 @@
   ],
   "leads": [
     {
+      "title": "Nvidia’s Chinese Clients Will Get Just 1% of $70 Billion in RTX Chip Orders",
+      "publisher": "雅虎财经",
+      "source_type": "主流媒体",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-chinese-clients-just-1-180024708.html",
+      "published_at": "2026-11-05",
+      "found_via": "Bing 新闻",
+      "snippet": "Key TakeawaysChinese AI and cloud firms, Alibaba among them, have ordered about 6 million NVIDIA RTX Pro 5500 chips worth about $70 billion, but expect to get o",
+      "seen_at": "2026-11-05"
+    },
+    {
+      "title": "Nvidia stock faces China supply squeeze amid AI chip demand",
+      "publisher": "www.ad-hoc-news.de",
+      "source_type": "其他",
+      "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/nvidia-stock-faces-china-supply-squeeze-amid-ai-chip-demand/70458324",
+      "published_at": "2026-11-04",
+      "found_via": "Bing 新闻",
+      "snippet": "Nvidia stock faces a fresh China supply constraint as AI developers compete for limited RTX Pro 5500 shipments. The report sharpens focus on production capacity",
+      "seen_at": "2026-11-05"
+    },
+    {
       "title": "阿里腾讯等据报订购600万枚Nvidia晶片 未来4个月料仅收货1%",
       "publisher": "www.stheadline.com",
       "source_type": "其他",
@@ -258,16 +278,6 @@
       "published_at": "2026-11-04",
       "found_via": "搜狗微信",
       "snippet": "近期市场关注RTX PRO 5500. 听说字节等大厂有大量订购,大厂... 部分国内算力服务商的订单要到2027年Q1才能到货;据了解,大...",
-      "seen_at": "2026-11-05"
-    },
-    {
-      "title": "Nvidia China Clients to Get 1% of $70 Billion RTX Chips Ordered",
-      "publisher": "雅虎财经",
-      "source_type": "主流媒体",
-      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-china-clients-1-70-031424389.html",
-      "published_at": "2026-11-04",
-      "found_via": "Bing 新闻",
-      "snippet": "Chinese AI developers expect to receive just a small fraction of the advanced Nvidia Corp. chips they've ordered over the next several months, as the US company",
       "seen_at": "2026-11-05"
     },
     {
@@ -429,16 +439,6 @@
       "found_via": "搜狗微信",
       "snippet": "为什么没有完全承接它的市场,以及 RTX PRO 5500 是否会成为新的替代选择.判断这三个问题,需要把公开报价、产品规格、供货...",
       "seen_at": "2026-10-27"
-    },
-    {
-      "title": "大厂疯抢5500,RTX 5090会被取代吗?",
-      "publisher": "算力圈视界",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%A4%A7%E5%8E%82%E7%96%AF%E6%8A%A25500%2CRTX%205090%E4%BC%9A%E8%A2%AB%E5%8F%96%E4%BB%A3%E5%90%97%3F",
-      "published_at": "2026-10-26",
-      "found_via": "搜狗微信",
-      "snippet": "渠道信息显示,RTX PRO 5500 国内直单报价约8万—9.5万元人民币.RTX 5090 虽已从9月前的约3.5万元涨至国内现货5.1万—5.5万...",
-      "seen_at": "2026-10-30"
     }
   ],
   "mentions": [
@@ -485,7 +485,7 @@
       "wechat": 3
     },
     "2026-11-05": {
-      "media": 1,
+      "media": 4,
       "wechat": 0
     }
   },
@@ -501,8 +501,8 @@
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
-      "未通过核对 https://finance.yahoo.com/technology/ai/articles/nvidia-china-clients-1-70-031424389.html：摘要出现原文没有的数字",
+      "雷峰网 RSS 失败：502 Server Error: Bad Gateway for url: https://www.leiphone.com/feed",
+      "未通过核对 https://finance.yahoo.com/markets/stocks/articles/nvidia-chinese-clients-just-1-180024708.html：摘要出现原文没有的数字",
       "无关：https://www.tmtpost.com/8193553.html",
       "重复报道 bloomberg：https://www.tomshardware.com/pc-components/gpus/nvidia-can-only-fulfill-1-percent-of-chinas-massive-usd70-billion-gpu-order-for-ai-chips-report-claims-supply-constraints-choke-export-friendly-rtx-pro-5500-deliveries-despite-huge-demand",
       "无关：https://wccftech.com/chinese-tech-giants-wait-months-nvidia-rtx-pro-5500-cuda-dominance/"
