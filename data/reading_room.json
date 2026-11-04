@@ -1,0 +1,70 @@
+[
+ {
+  "url": "https://news.mydrivers.com/1/1163/1163119.htm",
+  "title": "一卡难求！英伟达中国客户未来四月只能收到1% RTX芯片",
+  "publisher": "快科技",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-04",
+  "scope": "5500",
+  "snippets": [
+   "快科技11月4日消息，据知情人士透露， 几家大型中国AI与云计算公司总计订购了约600万颗英伟达（NVDA.US）RTX Pro 5500芯片。",
+   "然而， 这些公司预计在未来四个月内仅能收到数万颗芯片，约占订单总量的1%。",
+   "每颗芯片售价超过11,000美元，订单总价值约700亿美元。",
+   "知情人士称，中国主要AI开发商预计首批数千颗芯片将于今年底前交付，明年2月左右再交付数万颗；",
+   "由于英伟达将更多产能分配给Rubin等下一代产品，其已警告客户未来产能受限，RTX Pro 5500供应预计将持续紧张。",
+   "另一位知情人士透露，根据主要买家内部测算，随着英伟达扩大产量，中国超大规模数据中心运营商估计到2027年底可能收到约70万颗该芯片，但最终出货量可能随产能调整而"
+  ],
+  "seen_at": "2026-11-04",
+  "found_via": "快科技"
+ },
+ {
+  "url": "https://finance.sina.com.cn/tech/discovery/2026-11-04/doc-inixqhkw1566166.shtml",
+  "title": "一卡难求！英伟达中国客户未来四月只能收到1% RTX芯片",
+  "publisher": "新浪财经",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-04",
+  "scope": "5500",
+  "snippets": [
+   "快科技11月4日消息，据知情人士透露， 几家大型中国AI与云计算公司总计订购了约600万颗英伟达（NVDA.US）RTX Pro 5500芯片。",
+   "然而， 这些公司预计在未来四个月内仅能收到数万颗芯片，约占订单总量的1%。",
+   "每颗芯片售价超过11,000美元，订单总价值约700亿美元。",
+   "知情人士称，中国主要AI开发商预计首批数千颗芯片将于今年底前交付，明年2月左右再交付数万颗；",
+   "由于英伟达将更多产能分配给Rubin等下一代产品，其已警告客户未来产能受限，RTX Pro 5500供应预计将持续紧张。",
+   "另一位知情人士透露，根据主要买家内部测算，随着英伟达扩大产量，中国超大规模数据中心运营商估计到2027年底可能收到约70万颗该芯片，但最终出货量可能随产能调整而"
+  ],
+  "seen_at": "2026-11-04",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-orders-data-centre-clients-050013308.html",
+  "title": "Nvidia orders data centre clients to reduce China exposure",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-03",
+  "scope": "context",
+  "snippets": [
+   "A rack of Nvidia's B300 chips, which sells for about $600,000 internationally, l",
+   "The B300, which is not allowed to be sold in China due to US export controls, is",
+   "Nvidia shares have fallen more than 13 per cent in the past month but remain 7 p"
+  ],
+  "seen_at": "2026-11-04",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-nvda-asking-cloud-clients-232102833.html",
+  "title": "What Is Nvidia (NVDA) Asking Cloud Clients To Change Under New China Rules?",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-03",
+  "scope": "context",
+  "snippets": [
+   "Nvidia's new 51% non Chinese sales rule for data center clients sits alongside w",
+   "Take a look at 4 other big wins we have identified for NVIDIA.",
+   "Requiring data center clients to source at least 51% of sales from non Chinese c",
+   "The community Narrative focuses on diversified AI infrastructure spending from h",
+   "See how these catalysts shape NVIDIA's path to a $329 fair value ."
+  ],
+  "seen_at": "2026-11-04",
+  "found_via": "Bing 新闻"
+ }
+]
