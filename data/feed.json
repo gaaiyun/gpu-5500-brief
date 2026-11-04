@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T17:57:04+08:00",
+  "updated_at": "2026-11-04T18:01:15+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -479,7 +479,7 @@
   },
   "take": {
     "date": "2026-11-04",
-    "text": "彭博称中国客户订购约600万颗、未来4个月预计只到约1%，比路透此前的5%-10%更紧。首尔经济日报写作约6万颗，口径不一。现有渠道价仍是约8.5万-9万元，短交期货源别指望降价。"
+    "text": "近期没有新的价格或交付消息。彭博称未来4个月只到约1%，首尔经济日报给出的绝对数量与彭博口径不一。现有渠道价仍是约8.5万-9万元，短期货源仍紧。"
   },
   "sweep": {
     "date": "2026-11-04",
@@ -489,7 +489,7 @@
     "corroborated": 0,
     "model": null,
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)"
     ]
   }
 }
