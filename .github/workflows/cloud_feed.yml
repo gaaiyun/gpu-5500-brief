@@ -17,4 +17,10 @@ jobs:
       - name: Run the daily workflow on main
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh workflow run daily.yml --repo "$GITHUB_REPOSITORY" --ref main -f scheduled=true
+        # GitHub's API returns the odd 500; retry rather than leave the report to the late schedule.
+        run: |
+          for attempt in 1 2 3 4 5; do
+            gh workflow run daily.yml --repo "$GITHUB_REPOSITORY" --ref main -f scheduled=true && exit 0
+            sleep $((attempt * 20))
+          done
+          exit 1
