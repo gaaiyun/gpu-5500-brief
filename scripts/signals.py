@@ -88,7 +88,7 @@ def channel_signals(leads):
     for lead in leads:
         if lead.get("source_type") not in ("公众号", "社媒", "电商/渠道", "其他"):
             continue
-        if CHANNEL_WORDS.search(lead.get("title", "")):
+        if "5500" in lead.get("title", "") and CHANNEL_WORDS.search(lead["title"]):
             rows.append({"date": lead.get("published_at", ""), "publisher": lead.get("publisher", ""), "title": lead["title"], "url": lead["url"]})
     return rows
 
