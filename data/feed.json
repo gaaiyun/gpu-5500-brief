@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T15:15:01+08:00",
+  "updated_at": "2026-11-04T15:21:16+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -270,15 +270,11 @@
   ],
   "sweep": {
     "date": "2026-11-04",
-    "candidates": 2,
-    "read": 2,
-    "added": [
-      "news-20261104-f2cbb7"
-    ],
+    "candidates": 0,
+    "read": 0,
+    "added": [],
     "corroborated": 0,
-    "model": "@cf/zai-org/glm-4.7-flash",
-    "notes": [
-      "未通过核对 https://technews.tw/2026/11/04/nvidia-china-clients-to-get-1-percent-of-70-billion-rtx-chips-ordered/：摘要出现原文没有的数字"
-    ]
+    "model": null,
+    "notes": []
   }
 }
