@@ -28,7 +28,7 @@ git checkout origin/main -- data/feed.json
 
 ## 3. 搜索（每轮至少 12 次，中英文都有）
 
-对最可能有新消息的 4 个查询用 `mode: "extended"`，其余用 `"standard"`。搜不到不代表没有，换词再搜，别用同一组词每天重复。
+分两轮。第一轮覆盖下面五类，对最可能有新消息的 4 个查询用 `mode: "extended"`，其余用 `"standard"`。第二轮至少 6 次追搜：第一轮冒出的新说法、新数字、新公司名要追到出处，第一轮没结果的类别换词再搜。别用同一组词每天重复，也别搜完第一轮就收工。
 
 - **5500 本身**：报价、到货、现货、配额、样卡、交付、审批、工信部、海关；`"RTX Pro 5500"` 加 China、shipment、allocation、Bloomberg、Reuters、The Information。
 - **渠道和买家**：丽台、PNY、服务器厂商（浪潮、新华三、联想、超聚变）、算力租赁公司、上市公司采购公告（天阳科技等）、招标中标。
@@ -44,6 +44,7 @@ git checkout origin/main -- data/feed.json
 4. 同一事件不重复。转述旧消息的只把链接加进原条目的 corroboration。新事实推翻旧条目时，在旧条目 watch 写明“已被 xxx 更新”，再新增一条。
 5. **相关动态**：不是讲 5500 本身、但确实影响它供需的事件也要收，写 `"scope": "context"`，不能带 `price_cny`。impact 必须说清它对 5500 的影响路径，说不清就不收。泛泛的 AI 芯片新闻、股价涨跌不收。每天最多新增 3 条。
 6. 文本里不要出现 HTML 标签。不写“值得注意”“建议持续关注”这类套话。
+7. 搜到的东西分三档处理，不要因为不够写成条目就丢掉：够格的写 `items`；说了大陆价格的记 `mentions`；与价格、交付、渠道有关但证据不足的放 `leads`。转述已收录事件的才只加 corroboration。
 
 ## 5. 写入 data/feed.json
 
@@ -65,7 +66,7 @@ git checkout origin/main -- data/feed.json
 
 `mentions`（网上价格说法，未核实，不计入大陆报价区间）：搜到有人说这张卡在大陆卖多少钱就记一行，`{"date": "YYYY-MM-DD", "publisher": "谁说的", "low": 85000, "high": 90000, "url": "https://...", "found_via": "搜索摘录"}`，单价写 low=high。保留已有的行。
 
-`take`（今日点评）：`{"date": "今天的北京日期", "text": "≤160字"}`。用一两句话告诉采销团队今天最该知道什么、对报价或交付意味着什么，新情况优先；没有新情况就说清现在在等什么节点。只能用 evidence、feed 和价格表里已有的数字，否则这条不显示。不要复述预测全文，不写套话。
+`take`（今日点评）：`{"date": "今天的北京日期", "text": "≤160字"}`。用一两句话告诉采销团队今天最该知道什么、对报价或交付意味着什么，新情况优先；没有新情况就说清现在在等什么节点（`data/evidence.json` 的 `calendar` 和 `supply`）。价格和数量只能用 evidence、你写进 items 的条目和价格表里已有的数字（日期和天数不受限），否则这条不显示；推送前用第 6 步的命令检查。不要复述预测全文，不写套话。
 
 只有 A/B 级条目进日报图；C 级、线索和说法只出现在网站和推送文字里。不需要修改 inbox.txt。
 
@@ -74,6 +75,7 @@ git checkout origin/main -- data/feed.json
 ```bash
 python -c "import json,sys; sys.path.insert(0,'scripts'); from datetime import date; from feed import load_feed; items,bad=load_feed(json.load(open('data/feed.json',encoding='utf-8')),date.today()); print(len(items),'ok',bad); sys.exit(1 if bad else 0)"
 python -m unittest tests.test_feed
+python -c "import json,sys; sys.path.insert(0,'scripts'); from datetime import datetime,timedelta,timezone; from signals import allowed_numbers,clean_take; f=json.load(open('data/feed.json',encoding='utf-8')); e=json.load(open('data/evidence.json',encoding='utf-8')); s=json.load(open('data/state.json',encoding='utf-8')); t=clean_take(f.get('take'),datetime.now(timezone(timedelta(hours=8))).date(),allowed_numbers(e,f['items'],s['price_board']['rows'])); print('take ok' if t else 'take 不会显示：日期不是今天、超长或用了证据里没有的数字，改好再推'); sys.exit(0 if t else 1)"
 git add data/feed.json
 git commit -m "chore(情报): 全网情报核对 $(TZ=Asia/Shanghai date +%F)"
 git push origin claude/intel-feed

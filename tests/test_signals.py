@@ -81,6 +81,10 @@ class TakeTests(unittest.TestCase):
         self.assertIsNone(signals.clean_take(dict(ok, text="长" * 200), TODAY, allowed))
         self.assertIsNone(signals.clean_take(None, TODAY, allowed))
 
+    def test_dates_and_countdowns_are_not_market_claims(self):
+        take = {"date": "2026-11-05", "text": "距11月18日财报还有13天，2027年2月第二批到货前别指望降价，二季度再看，11-30前盯样品。"}
+        self.assertEqual(signals.clean_take(take, TODAY, set())["text"], take["text"])
+
 
 class BriefTests(unittest.TestCase):
     def test_note_leads_and_events_follow_supply(self):

@@ -19,6 +19,7 @@ MENTION_YUAN = re.compile(r"5500[^。；;！？!?\n]{0,40}?(\d{2,3},?\d{3})\s*�
 CHANNEL_WORDS = re.compile(r"到货|将到|现货|开放预定|可预定|接受预定|预定|预订|接单|入库|开售|上架|供货|备货|交付")
 HEAT_DAYS = 30
 TAKE_LIMIT = 160
+DATE_WORDS = re.compile(r"\d{4}\s*年|\d{1,2}\s*月(?:\s*\d{1,2}\s*日)?|(?<!\d)\d{1,2}-\d{1,2}(?!\d)|\d+\s*天|Q\d|\d\s*季度")
 
 
 def _mention(match):
@@ -152,18 +153,23 @@ def clean_take(take, today, allowed):
         return None
     if not text or not 0 <= age <= 1 or len(text) > TAKE_LIMIT or re.search(r"<|>|javascript:", text):
         return None
-    if not numeric_values(text) <= allowed:
+    # Dates and countdowns are not claims about the market; prices and quantities must already be in the evidence.
+    if not numeric_values(DATE_WORDS.sub(" ", text)) <= allowed:
         return None
     return {"date": take["date"], "text": text}
+
+
+def allowed_numbers(evidence, feed_items, rows):
+    """Every figure the note may use: the evidence file, the checked feed items and today's price table."""
+    return numeric_values(json.dumps([evidence.get("sources"), evidence.get("prices"), evidence.get("forecast"), evidence.get("supply"),
+                                      feed_items, rows], ensure_ascii=False))
 
 
 def extend_brief(state, evidence, today):
     """Add what is computed after the feed is loaded. The analyst's note leads; dated events and heat follow the supply line."""
     items = state["daily_brief"]["items"]
     feed = state.get("feed") or {}
-    allowed = numeric_values(json.dumps([evidence.get("sources"), evidence.get("prices"), evidence.get("forecast"), evidence.get("supply"),
-                                         feed.get("items"), (state.get("price_board") or {}).get("rows")], ensure_ascii=False))
-    take = clean_take(feed.get("take"), today, allowed)
+    take = clean_take(feed.get("take"), today, allowed_numbers(evidence, feed.get("items"), (state.get("price_board") or {}).get("rows")))
     feed["take"] = take
     if take:
         items.insert(0, {"title": "今日点评", "text": f"{take['text']}（AI 据下列证据整理）"})
