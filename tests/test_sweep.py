@@ -176,9 +176,12 @@ class RepostTests(unittest.TestCase):
         post={"source_type":"公众号","title":"腾讯新闻：大厂疯抢","summary":"中国客户总订单超过600万张"}
         self.assertEqual(sweep.repost_of(post,EVENTS),"reuters")
 
-    def test_a_new_figure_or_a_real_outlet_is_kept(self):
+    def test_a_relay_by_a_real_outlet_is_a_repost_too(self):
+        self.assertEqual(sweep.repost_of({"source_type":"行业媒体","title":"快科技：大厂疯抢","summary":"总订单超过600万张"},EVENTS),"reuters")
+
+    def test_a_new_figure_or_no_figures_is_kept(self):
         self.assertIsNone(sweep.repost_of({"source_type":"公众号","title":"订单","summary":"总订单超过800万张"},EVENTS))
-        self.assertIsNone(sweep.repost_of({"source_type":"行业媒体","title":"订单","summary":"总订单超过600万张"},EVENTS))
+        self.assertIsNone(sweep.repost_of({"source_type":"行业媒体","title":"工信部批准采购","summary":"已获批准"},EVENTS))
 
 
 class SweepTests(unittest.TestCase):

@@ -23,38 +23,6 @@
   ],
   "items": [
     {
-      "id": "news-20261104-8f1c06",
-      "title": "快科技：知情人士称中国客户未来四月仅收1% RTX Pro 5500",
-      "published_at": "2026-11-04",
-      "publisher": "快科技",
-      "source_type": "行业媒体",
-      "url": "https://news.mydrivers.com/1/1163/1163119.htm",
-      "grade": "B",
-      "summary": "快科技11月4日消息，据知情人士透露，几家大型中国AI与云计算公司总计订购约600万颗RTX Pro 5500芯片；未来四个月预计仅收到数万颗，约占1%；每颗售价超过11,000美元，订单总值约700亿美元；首批数千颗预计年底前交付，明年2月左右再交付数万颗；中国超大规模数据中心运营商估计到2027年底可能收到约70万颗。",
-      "impact": "未来四个月交付量极少，渠道货源将极度稀缺，价格可能维持高位或进一步上涨。",
-      "watch": "核实首批数千颗与数万颗的具体交付时间节点是否与彭博报道一致。",
-      "corroboration": [],
-      "claims": [],
-      "checked_at": "2026-11-04",
-      "found_via": "快科技"
-    },
-    {
-      "id": "finance-20261104-5739ce",
-      "title": "新浪财经：快科技转述知情人士称未来四月仅收1% RTX Pro 5500",
-      "published_at": "2026-11-04",
-      "publisher": "新浪财经",
-      "source_type": "行业媒体",
-      "url": "https://finance.sina.com.cn/tech/discovery/2026-11-04/doc-inixqhkw1566166.shtml",
-      "grade": "B",
-      "summary": "新浪财经11月4日消息，据知情人士透露，几家大型中国AI与云计算公司总计订购约600万颗RTX Pro 5500芯片；未来四个月预计仅收到数万颗，约占1%；每颗售价超过11,000美元，订单总值约700亿美元；首批数千颗预计年底前交付，明年2月左右再交付数万颗；中国超大规模数据中心运营商估计到2027年底可能收到约70万颗。",
-      "impact": "未来四个月交付量极少，渠道货源将极度稀缺，价格可能维持高位或进一步上涨。",
-      "watch": "核实首批数千颗与数万颗的具体交付时间节点是否与彭博报道一致。",
-      "corroboration": [],
-      "claims": [],
-      "checked_at": "2026-11-04",
-      "found_via": "Bing 新闻"
-    },
-    {
       "id": "bloomberg-20261104-udn",
       "title": "彭博：中国客户约600万颗订单，未来4个月预计只到约1%",
       "published_at": "2026-11-04",
@@ -68,7 +36,9 @@
       "corroboration": [
         "https://www.caiwennews.com/article/1683955.shtml",
         "https://www.bloomberg.com/news/articles/2026-11-04/nvidia-china-clients-to-get-1-of-70-billion-rtx-chips-ordered",
-        "https://news.qq.com/rain/a/20261104A07XHU00"
+        "https://news.qq.com/rain/a/20261104A07XHU00",
+        "https://news.mydrivers.com/1/1163/1163119.htm",
+        "https://finance.sina.com.cn/tech/discovery/2026-11-04/doc-inixqhkw1566166.shtml"
       ],
       "claims": [],
       "checked_at": "2026-11-04",

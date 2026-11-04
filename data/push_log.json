@@ -1,4 +1,17 @@
 {
   "dingtalk": "2026-11-04",
-  "pushplus": "2026-11-04"
+  "pushplus": "2026-11-04",
+  "alerts": [
+    {
+      "at": "2026-11-04T17:41:20+08:00",
+      "keys": [
+        "feed|finance-20261104-5739ce",
+        "feed|news-20261104-8f1c06"
+      ],
+      "channels": [
+        "dingtalk",
+        "pushplus"
+      ]
+    }
+  ]
 }

@@ -393,8 +393,8 @@ def matching_event(text, events):
 
 
 def repost_of(item, events):
-    """The model misses reposts; a self-media post whose figures all come from a known report adds nothing new."""
-    return matching_event(f"{item['title']} {item['summary']}", events) if item["source_type"] in QUICK_TYPES else None
+    """The cheap model misses reposts; an article whose figures all come from a known report adds nothing new, whoever carries it."""
+    return matching_event(f"{item['title']} {item['summary']}", events)
 
 
 def readable(text, events):
@@ -597,6 +597,8 @@ def sweep(feed, evidence, today, endpoint=None, token=None):
                 try:
                     item = build_item(draft, candidate, events, today)
                     if target := repost_of(item, events):
+                        if candidate["source_type"] not in QUICK_TYPES and any(i["id"] == target for i in feed["items"]):
+                            corroborated.setdefault(target, []).append(candidate["url"])
                         notes.append(f"重复报道 {target}：{candidate['url']}")
                     else:
                         items.append(item)
