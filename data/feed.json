@@ -1,22 +1,65 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-05T06:10:50+08:00",
-  "agent": "actions-sweep+cloud-routine",
+  "updated_at": "2026-11-05T07:20:00+08:00",
+  "agent": "cloud-routine",
   "searched": [
-    "RTX Pro 5500 China shipment allocation",
-    "RTX PRO 5500 渠道 现货 报价 到货",
-    "英伟达 RTX PRO 5500 工信部 审批 海关",
-    "Nvidia China export BIS Rubin GDDR7 supply",
-    "华为昇腾 寒武纪 价格 供应 算力租赁",
-    "RTX 5090 国内 价格 RTX PRO 6000",
-    "丽台 PNY 浪潮 新华三 联想 RTX PRO 5500 样卡",
-    "RTX Pro 5500 Reuters partners allocation 2027",
-    "Nvidia 51% non-China cloud clients rule",
-    "GDDR7 price shortage Samsung SK hynix Micron",
-    "RTX PRO 5500 采购公告 中标 上市公司",
-    "RTX PRO 5500 Seoul Economic Daily 60,000 chips"
+    "游族网络 PRO5500 GPU 采购 42.25亿 公告",
+    "RTX Pro 5500 China price yuan per card",
+    "RTX PRO 5500 现货 报价 渠道 万元",
+    "Oracle Tencent GPU lease cancelled 51% rule",
+    "RTX Pro 5500 浪潮 新华三 联想 超聚变 服务器 交付",
+    "昇腾950 价格 供应 寒武纪",
+    "GDDR7 price shortage November 2026",
+    "BIS export controls Nvidia China RTX Pro",
+    "游族网络 GPU 交易对手 A公司",
+    "RTX 5090 国内 价格 11月",
+    "RTX PRO 6000 国内 价格 现货",
+    "算力租赁 价格 RTX Pro 5500 上市公司 采购",
+    "Nvidia Rubin TSMC allocation RTX Pro 5500 supply",
+    "工信部 英伟达 RTX Pro 5500 审批 海关"
   ],
   "items": [
+    {
+      "id": "youzu-20261103-gpu-contract",
+      "title": "游族网络公告：子公司签42.25亿元PRO5500(PCIe)采购合同",
+      "published_at": "2026-11-03",
+      "publisher": "游族网络公告（同花顺转载）",
+      "source_type": "公告",
+      "scope": "5500",
+      "url": "https://stock.10jqka.com.cn/20261103/c681420041.shtml",
+      "grade": "A",
+      "summary": "游族网络公告：子公司上海游族信息技术有限公司与A公司签销售合同，采购型号为PRO5500(PCIe)的GPU产品，协议总金额42.25亿元（含税）。合同约定分批交付，订单价格可能因原厂或上级供应商调整而变动；交易对手信息豁免披露。公司提示交付延期等风险，供方不承担违约责任。",
+      "impact": "这是上市公司对5500的大额采购公告，说明有渠道方愿按合同承接分批交付；价格条款允许随原厂调整，渠道报价存在上浮空间。单价未披露，这是推断。",
+      "watch": "核实A公司身份、首批交付时间",
+      "corroboration": [
+        "https://www.sohu.com/a/1096708872_313745",
+        "https://internet.cnmo.com/finance/821780.html",
+        "https://m.21jingji.com/article/20261104/herald/25256aac208d0713a5a643a833f929ca.html"
+      ],
+      "claims": [],
+      "checked_at": "2026-11-05",
+      "found_via": "云端检索"
+    },
+    {
+      "id": "ft-20261104-oracle-tencent",
+      "title": "FT：甲骨文取消与腾讯的约70亿美元GPU租赁交易",
+      "published_at": "2026-11-04",
+      "publisher": "金融时报（彭博转述）",
+      "source_type": "主流媒体",
+      "scope": "context",
+      "url": "https://thenextweb.com/news/oracle-cancels-tencent-ai-chip-lease",
+      "grade": "B",
+      "summary": "FT援引两名知情人士：甲骨文取消了一笔约70亿美元、为期五年的交易，原计划在东南亚向腾讯租赁最多10万颗AI芯片，起因是美方官员表达关切。报道称广东官员也曾约谈腾讯，要求支持国产芯片。公司均未公开确认。",
+      "impact": "腾讯经海外云取得算力的路径变窄，需求更可能回到境内可采购的卡，对5500需求偏多。这是推断，FT并未直接把二者挂钩。",
+      "watch": "核实腾讯是否追加境内采购",
+      "corroboration": [
+        "https://www.bloomberg.com/news/articles/2026-11-04/oracle-scraps-7-billion-deal-to-lease-chips-to-tencent-ft-says",
+        "https://www.sohu.com/a/1097174503_122967788"
+      ],
+      "claims": [],
+      "checked_at": "2026-11-05",
+      "found_via": "云端检索"
+    },
     {
       "id": "bloomberg-20261104-udn",
       "title": "彭博：中国客户约600万颗订单，未来4个月预计只到约1%",
@@ -485,8 +528,8 @@
     }
   },
   "take": {
-    "date": "2026-11-04",
-    "text": "近期没有新的价格或交付消息。彭博称未来4个月只到约1%，首尔经济日报给出的绝对数量与彭博口径不一。现有渠道价仍是约8.5万-9万元，短期货源仍紧。"
+    "date": "2026-11-05",
+    "text": "游族网络公告签下42.25亿元PRO5500采购合同，分批交付、价格可随原厂调整。对照彭博称未来4个月只到约1%，这类大单实际交付要排队，现货继续偏紧。"
   },
   "sweep": {
     "date": "2026-11-05",
