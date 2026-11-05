@@ -106,6 +106,23 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://finance.yahoo.com/technology/ai/articles/china-rationing-h200-chips-171408234.html",
+  "title": "China Is Rationing H200 Chips",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-05",
+  "scope": "context",
+  "snippets": [
+   "There are about 600,000 Nvidia H200 chips in Hong Kong awaiting a green light fr",
+   "Nvidia's H200 chips are to AI development what shovels were to the gold rush.",
+   "An eight-card H200 server was offered for over 6 million yuan ( about $900,000) ",
+   "And specifically for Nvidia, at least $1 billion of Nvidia AI chips were reporte",
+   "Nvidia's earnings on November 17 will shed more light on the H200 chip backlog."
+  ],
+  "seen_at": "2026-11-06",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-chinese-clients-just-1-180024708.html",
   "title": "Nvidia’s Chinese Clients Will Get Just 1% of $70 Billion in RTX Chip Orders",
   "publisher": "雅虎财经",
@@ -138,7 +155,7 @@
    "RTX Pro 5500：合规边界上的“次优解”",
    "RTX Pro 5500之所以成为中国客户的集中抢购对象，根源在于美国出口管制塑造的市场扭曲。"
   ],
-  "seen_at": "2026-11-05",
+  "seen_at": "2026-11-06",
   "found_via": "Bing 新闻"
  },
  {
