@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-05T11:46:25+08:00",
+  "updated_at": "2026-11-05T15:53:58+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -22,6 +22,54 @@
     "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
   ],
   "items": [
+    {
+      "id": "news-20261105-10bb1f",
+      "title": "快科技：AI巨头砸4700亿元买RTX Pro 5500，英伟达只能交付1%",
+      "published_at": "2026-11-05",
+      "publisher": "快科技",
+      "source_type": "行业媒体",
+      "url": "https://news.mydrivers.com/1/1163/1163315.htm",
+      "grade": "B",
+      "summary": "快科技11月5日消息，据报道称国内AI与云计算企业已向英伟达下达约600万颗RTX Pro 5500芯片订单，总价值约700亿美元（约合人民币4702亿元）。知情人士透露未来四个月预计只能收到约1%的订单量，即数万颗。英伟达2027年RTX Pro 5500全球规划产能不足300万颗，仅中国订单规模已远超全球产能两倍。首批样品预计2026年12月供应，商业出货预计2027年第一季度，到2027年底中国客户累计能拿到的总量可能仅为70万颗左右。",
+      "impact": "未来四个月交付量仅占总订单1%，意味着首批数千颗预计年底前到货，后续交付节奏将严重受制于英伟达全球产能限制。",
+      "watch": "核实首批数千颗与数万颗的具体交付时间节点及获配比例5%-10%的来源。",
+      "corroboration": [],
+      "claims": [],
+      "checked_at": "2026-11-05",
+      "found_via": "快科技"
+    },
+    {
+      "id": "leiphone-20261105-1b0532",
+      "title": "雷峰网：游族网络公告采购42.25亿元PRO5500 GPU",
+      "published_at": "2026-11-05",
+      "publisher": "雷峰网",
+      "source_type": "行业媒体",
+      "url": "https://www.leiphone.com/category/zaobao/uojoiQ2Owilfvr8B.html",
+      "grade": "B",
+      "summary": "雷峰网11月4日消息，A股游戏公司游族网络公告全资子公司拟采购金额为42.25亿元的GPU，推进公司转型升级。子公司上海游族信息技术有限公司与A公司签署《销售合同》，采购型号为PRO5500（PCIe）的GPU产品，协议总金额为人民币42.25亿元。公司提示交付延期等风险，供方不承担违约责任。",
+      "impact": "42.25亿元的采购合同为RTX PRO 5500在游戏/企业级市场的应用提供了具体案例，但分批交付模式增加了短期到货的不确定性。",
+      "watch": "核实合同中具体采购数量及分批交付的详细时间表。",
+      "corroboration": [],
+      "claims": [],
+      "checked_at": "2026-11-05",
+      "found_via": "雷峰网"
+    },
+    {
+      "id": "eet-china-20261104-7d6789",
+      "title": "电子工程专辑：英伟达芯片对华交付受限，中国买家短期或仅获1%订单",
+      "published_at": "2026-11-04",
+      "publisher": "电子工程专辑",
+      "source_type": "行业媒体",
+      "url": "https://www.eet-china.com/news/202611052831.html",
+      "grade": "B",
+      "summary": "电子工程专辑11月4日消息，据彭博社援引知情人士消息，未来几个月中国AI和云计算企业预计仅能收到英伟达先进芯片订单中的一小部分。此前报道称阿里巴巴、腾讯、字节跳动等公司合计订购约600万颗英伟达RTX Pro 5500芯片。知情人士透露首批数千颗RTX Pro 5500芯片预计于今年年底交付，下一批数万颗芯片可能在2027年2月左右到货。",
+      "impact": "首批数千颗预计年底前到货，第二批数万颗预计2027年2月到货，明确了短期交付的时间窗口。",
+      "watch": "核实首批数千颗与数万颗的具体交付时间节点及获配比例5%-10%的来源。",
+      "corroboration": [],
+      "claims": [],
+      "checked_at": "2026-11-05",
+      "found_via": "Bing 新闻"
+    },
     {
       "id": "bloomberg-20261104-udn",
       "title": "彭博：中国客户约600万颗订单，未来4个月预计只到约1%",
@@ -162,13 +210,23 @@
   ],
   "leads": [
     {
-      "title": "600万颗！AI巨头砸4700亿元买RTX Pro 5500：英伟达只能交付1%",
-      "publisher": "驱动之家",
+      "title": "传中国云巨头砸700亿美元，订购600万张RTX Pro 5500显卡",
+      "publisher": "finance.china.com",
       "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5ldFFCUTFzRXBVMmhKSzN2UkJtU0hsM1pPZG9scDM0V2Q2dVRxUG9WU1FUWUh1TktBblY4N2gybDBySUg5U3JaT0RxR3JQWmFETk5sN0NlalY?oc=5",
+      "url": "https://finance.china.com/TMT/13004688/20261105/49843530.html",
       "published_at": "2026-11-05",
-      "found_via": "Google 新闻",
-      "snippet": "",
+      "found_via": "Bing 新闻",
+      "snippet": "据彭博社11月4日报道，阿里巴巴、腾讯、字节跳动等中国科技公司合计向英伟达订购了约600万张RTX Pro 5500显卡，订单总值接近700亿美元，但预计在未来四个月内，他们只能收到数万张，交付率约为订单总量的1%。这订单数字较此前路透社报道的超过300万张翻了一倍，意味着供应缺口比外界原先预估的更为严峻。 报道援引匿",
+      "seen_at": "2026-11-05"
+    },
+    {
+      "title": "AI每日大事记_1104-1105(第 21 期)",
+      "publisher": "码农starkey",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=AI%E6%AF%8F%E6%97%A5%E5%A4%A7%E4%BA%8B%E8%AE%B0_1104-1105%28%E7%AC%AC%2021%20%E6%9C%9F%29",
+      "published_at": "2026-11-05",
+      "found_via": "搜狗微信",
+      "snippet": "RTX Pro 5500,未来四个月预计仅到货数万颗,约占订单 1%,单价超 1.1 万美元;产能被优先分配给 Rubin 等下一代产品,直接牵动...",
       "seen_at": "2026-11-05"
     },
     {
@@ -204,11 +262,31 @@
     {
       "title": "Nvidia can only fulfill 1% of China’s massive $70 billion GPU order for AI chips",
       "publisher": "Tom's Hardware",
-      "source_type": "行业媒体",
-      "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-can-only-fulfill-1-percent-of-chinas-massive-usd70-billion-gpu-order-for-ai-chips-report-claims-supply-constraints-choke-export-friendly-rtx-pro-5500-deliveries-despite-huge-demand",
+      "source_type": "其他",
+      "url": "https://news.google.com/rss/articles/CBMi1gJBVV95cUxQcmV4blNtRDNTUkp6OTh1cGd1OG5wcnNQaV8xTkpZV3pYQklTN09GYW9td1RuS3ZCWW14YWZMT0dCcER6TEpSczBUMjNXVGtxS0p5MnYyNUlFekNZTHZ3aS1qZURGX29HZE5hbjlCMGFpSFBlSUhlUVBKV3ZvNDFSanF5ZjhsWnVsWFZPbjM1WkZnQ1JpOTVOdE10ZHcwX0daY2htSDNWdFdTYmJKWnNyTTJfbGlLTmd4MEFXRkdiX3h1NzRHS1Y4MFZMNWpGZS1aOHNWSDhBSlFLT182dFFzVDRHVDJGX05Ca0d6dmRHMXhaNkxPWVdRWGRxUGF1T3NTMVJmSFVPRFF2SEJFX3BPU25YdlNtOFRkNzFGTkZYQmNSeGtDVHk4cXB3MldYZ2pUcXhqa29DeHN1aVF3T1hsdDY1UzVubG0zODB2YWtEUzBfdWplZnc?oc=5",
       "published_at": "2026-11-04",
-      "found_via": "Tom's Hardware",
-      "snippet": "Just 1% of chips promised to major Chinese companies to power their AI ambitions will be delivered, according to reports.",
+      "found_via": "Google 新闻",
+      "snippet": "",
+      "seen_at": "2026-11-05"
+    },
+    {
+      "title": "中国巨头700 亿美元抢合规GPU，英伟达却只给 1%！",
+      "publisher": "搜狐号",
+      "source_type": "公众号",
+      "url": "https://www.sohu.com/a/1097416162_458015",
+      "published_at": "2026-11-04",
+      "found_via": "Bing 新闻",
+      "snippet": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 包括字节跳动、阿里巴巴和腾讯在内的中国科技巨头，将只能拿到它们所订购 英伟达芯片中的一小部分。彭博社援引未具名消息人士的说法报道称，未来几个月内只会交付「数万块、约占总量的 1%」的 RTX Pro 5500 工作站 GPU。 市场对 RTX Pro 550",
+      "seen_at": "2026-11-05"
+    },
+    {
+      "title": "买卡难、租约被取消、云服务被曝设限：国内AI大厂海外算力连遭变数",
+      "publisher": "腾讯新闻",
+      "source_type": "公众号",
+      "url": "https://news.qq.com/rain/a/20261105A05QIE00",
+      "published_at": "2026-11-04",
+      "found_via": "Bing 新闻",
+      "snippet": "【TechWeb】11月5日消息，据国外媒体报道，中国科技企业通过采购芯片、海外租赁及云计算服务获取AI算力，近期接连出现供应和合作方面的不确定性。在芯片采购方面，阿里巴巴、腾讯、字节跳动及其他中国AI和云计算企业合计订购了约600万张英伟达RTX Pro ...",
       "seen_at": "2026-11-05"
     },
     {
@@ -430,36 +508,6 @@
       "found_via": "搜狗微信",
       "snippet": "那块还没到货的显卡.10月下旬,一条消息在科技圈炸开:字节跳... RTX PRO 5500.按每块约 1.14万美元 的标价计算,总额超过 350...",
       "seen_at": "2026-10-31"
-    },
-    {
-      "title": "广州丽泰 2027 年 Q1 将到 2000 片 RTX PRO 5500 工作站算力卡,夯实华南专业算力供给",
-      "publisher": "广州丽泰算力专家",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%B9%BF%E5%B7%9E%E4%B8%BD%E6%B3%B0%202027%20%E5%B9%B4%20Q1%20%E5%B0%86%E5%88%B0%202000%20%E7%89%87%20RTX%20PRO%205500%20%E5%B7%A5%E4%BD%9C%E7%AB%99%E7%AE%97%E5%8A%9B%E5%8D%A1%2C%E5%A4%AF%E5%AE%9E%E5%8D%8E%E5%8D%97%E4%B8%93%E4%B8%9A%E7%AE%97%E5%8A%9B%E4%BE%9B%E7%BB%99",
-      "published_at": "2026-10-31",
-      "found_via": "搜狗微信",
-      "snippet": "RTX PRO 5500 工作站版算力卡,预计将于 2027 年第一季度集中到货入库.作为英伟达 NPN ELITE 精英级合作伙伴、丽台 NVIDIA 专...",
-      "seen_at": "2026-10-31"
-    },
-    {
-      "title": "300万张订单的RTX PRO 5500,BAT算力管制下",
-      "publisher": "AI人工智能行业动态",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=300%E4%B8%87%E5%BC%A0%E8%AE%A2%E5%8D%95%E7%9A%84RTX%20PRO%205500%2CBAT%E7%AE%97%E5%8A%9B%E7%AE%A1%E5%88%B6%E4%B8%8B",
-      "published_at": "2026-10-29",
-      "found_via": "搜狗微信",
-      "snippet": "路透社刚爆了个大料:字节、阿里、腾讯三家,一口气向英伟达下了超 300 万张 RTX PRO 5500 显卡的订单.按单卡 1.14 万美元算,...",
-      "seen_at": "2026-11-02"
-    },
-    {
-      "title": "深度拆解 RTX PRO 5500",
-      "publisher": "苏哥随笔",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E6%B7%B1%E5%BA%A6%E6%8B%86%E8%A7%A3%20RTX%20PRO%205500",
-      "published_at": "2026-10-29",
-      "found_via": "搜狗微信",
-      "snippet": "在出口管制与 AI 大模型狂飙的夹缝中,NVIDIA 又切出了精准的一刀——RTX PRO 5500.凭着 84GB 超大显存和 GB202 旗舰同款核...",
-      "seen_at": "2026-10-29"
     }
   ],
   "mentions": [
@@ -514,7 +562,7 @@
       "wechat": 3
     },
     "2026-11-05": {
-      "media": 4,
+      "media": 7,
       "wechat": 4
     }
   },
@@ -524,17 +572,21 @@
   },
   "sweep": {
     "date": "2026-11-05",
-    "candidates": 4,
+    "candidates": 7,
     "read": 4,
-    "added": [],
+    "added": [
+      "news-20261105-10bb1f",
+      "leiphone-20261105-1b0532",
+      "eet-china-20261104-7d6789"
+    ],
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
       "云端条目未通过复核 https://thenextweb.com/news/oracle-cancels-tencent-ai-chip-lease：原文没有这些数字",
       "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
-      "未通过核对 https://news.mydrivers.com/1/1163/1163315.htm：摘要出现原文没有的数字",
-      "未通过核对 https://www.tomshardware.com/pc-components/gpus/nvidia-can-only-fulfill-1-percent-of-chinas-massive-usd70-billion-gpu-order-for-ai-chips-report-claims-supply-constraints-choke-export-friendly-rtx-pro-5500-deliveries-despite-huge-demand：摘要出现原文没有的数字",
-      "重复报道 bloomberg：https://www.eet-china.com/news/202611052831.html",
+      "读取失败 https://news.qq.com/rain/a/20261105A0504F00：正文未提到 RTX PRO 5500",
+      "读取失败 https://www.sohu.com/a/1097416162_458015：正文未提到 RTX PRO 5500",
+      "读取失败 https://news.qq.com/rain/a/20261105A05QIE00：正文未提到 RTX PRO 5500",
       "无关：https://wccftech.com/chinese-tech-giants-wait-months-nvidia-rtx-pro-5500-cuda-dominance/"
     ]
   }

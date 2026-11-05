@@ -1,5 +1,23 @@
 [
  {
+  "url": "https://www.leiphone.com/category/zaobao/uojoiQ2Owilfvr8B.html",
+  "title": "子公司把母公司告了！安世半导体起诉闻泰科技，索赔134亿元；中兴手机账号主体变更，将调整为上海申启纪元；腾讯混元正式发布Hy4",
+  "publisher": "雷峰网",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-05",
+  "scope": "5500",
+  "snippets": [
+   "闻泰科技随后披露，安世方面的索赔金额合计高达20亿美元（约134.36亿元）。",
+   "据悉，本轮资金将主要用于扩大M50规模化交付，推进新一代M6X与下一代3D CIM产品研发，并持续完善软件工具链与产业生态，推动端边AI在更多终端场景落地。",
+   "全球汽车产业规模庞大，从零部件到整车、销售，再到服务和金融，总规模大体上在7万亿到9万亿美元，而AI在汽车行业的应用将创造超过1.2万亿美元的商业价值。",
+   "11月3日晚间，A股游戏公司游族网络发布合同公告，宣布全资子公司拟采购金额为42.25亿元的GPU，推进公司转型升级。",
+   "具体来看，公告显示，上海游族信息技术有限公司（简称游族信息）近日与A公司签署了《销售合同》，游族信息向A公司采购型号为PRO5500（PCIe）的GPU产品，协",
+   "据公开信息，型号PRO5500 (PCIe)对应英伟达基于Blackwell架构的RTX PRO 5500专业级卡，配备84GB GDDR7存储，定位企业级AI"
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "雷峰网"
+ },
+ {
   "url": "https://news.mydrivers.com/1/1163/1163315.htm",
   "title": "600万颗！AI巨头砸4700亿元买RTX Pro 5500：英伟达只能交付1%",
   "publisher": "快科技",
@@ -31,6 +49,24 @@
    "Alibaba ( BABA:NYSE ) , Tencent, ByteDance and other Chinese AI and cloud firms ",
    "The news came a day after the Financial Times reported that NVIDIA told its clou",
    "TIKR tracks 62 analysts on Nvidia."
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.china.com/TMT/13004688/20261105/49843530.html",
+  "title": "传中国云巨头砸700亿美元，订购600万张RTX Pro 5500显卡",
+  "publisher": "finance.china.com",
+  "source_type": "其他",
+  "published_at": "2026-11-05",
+  "scope": "5500",
+  "snippets": [
+   "据彭博社11月4日报道，阿里巴巴、腾讯、字节跳动等中国科技公司合计向英伟达订购了约600万张RTX Pro 5500显卡，订单总值接近700亿美元，但预计在未来",
+   "这订单数字较此前路透社报道的超过300万张翻了一倍，意味着供应缺口比外界原先预估的更为严峻。",
+   "报道援引匿名知情人士消息称，中国主要AI开发商预计首批数千张显卡将于今年底前交付，明年2月左右再交付数万张。",
+   "由于单个RTX Pro 5500售价超过1.1万美元，据此估算订单价值近700亿美元价值。",
+   "RTX Pro 5500：合规边界上的“次优解”",
+   "RTX Pro 5500之所以成为中国客户的集中抢购对象，根源在于美国出口管制塑造的市场扭曲。"
   ],
   "seen_at": "2026-11-05",
   "found_via": "Bing 新闻"
@@ -260,6 +296,21 @@
    "AMD CEO Lisa Su said revenue could rise over 80% in 2027, while Super Micro lift",
    "The stock remains below its 20, 50 and 100-day averages but above its 200-day le",
    "Nvidia reports on November 17, with revenue expected at $109.17 billion."
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261103A0F06000",
+  "title": "华为昇腾迎来质变催化！DeepSeekV5开启国产预训练时代，算力全链迎新 ...",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-03",
+  "scope": "context",
+  "snippets": [
+   "DeepSeek官方曾公开表示，受高端算力供给限制，V4-Pro模型服务吞吐有限，预计下半年昇腾950超节点量产后，模型服务价格将大幅下调，侧面印证了昇腾算力在",
+   "同年9月30日，DeepSeek正式开源面向昇腾平台的全套基础设施组件，涵盖TileLang高级语言编译工具、高性能计算库与分布式通信库，与英伟达平台的开源组件",
+   "通富微电 在 CoWoS-S 技术领域布局领先，7nm Chiplet 量产良率表现优异，同时承接国产高端芯片的封装订单。"
   ],
   "seen_at": "2026-11-05",
   "found_via": "Bing 新闻"
