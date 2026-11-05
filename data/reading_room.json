@@ -1,5 +1,128 @@
 [
  {
+  "url": "https://www.rfi.fr/cn/%E7%A7%91%E6%8A%80%E4%B8%8E%E6%96%87%E5%8C%96/20261105-%E5%8C%97%E4%BA%AC%E6%9C%AA%E6%89%B9%E5%87%86%E5%A4%A7%E8%A7%84%E6%A8%A1%E8%BF%9B%E5%8F%A3-%E7%BA%A6%E6%9C%8960%E4%B8%87%E6%9E%9A%E8%8B%B1%E4%BC%9F%E8%BE%BEh200%E8%8A%AF%E7%89%87%E8%A2%AB%E6%8C%87%E6%BB%9E%E7%95%99%E9%A6%99%E6%B8%AF",
+  "title": "北京未批准大规模进口 约60万枚英伟达H200芯片被指滞留香港",
+  "publisher": "法广",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-05",
+  "scope": "context",
+  "snippets": [
+   "据路透社援引两位知情人士报导称，约有60万枚英伟达先进人工智能芯片目前存放在香港，等待运往中国内地。",
+   "H200并非英伟达最新款的人工智能处理器，但它所具备的能力是目前中国国产替代产品尚无法比拟的。",
+   "自2022年以来，美国政府实施的出口管制旨在限制中国获取英伟达的先进芯片以及制造这些芯片所需的设备。",
+   "据一位知情人士透露，截至10月底，在中国内地，一台搭载8枚H200芯片的服务器售价超过600万元人民币，约为一年前价格的三倍。",
+   "该人士还指出，搭载英伟达更新款、受到美国出口管制限制的Blackwell芯片的服务器，单台报价则超过了2000万元人民币。",
+   "路透社上月报导称，字节跳动、阿里巴巴和腾讯已订购了超过300万张英伟达RTX Pro 5500显卡——这是一款性能较弱、符合出口管制要求的产品——其总标价超过3"
+  ],
+  "seen_at": "2026-11-06",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.leiphone.com/category/zaobao/uojoiQ2Owilfvr8B.html",
+  "title": "子公司把母公司告了！安世半导体起诉闻泰科技，索赔134亿元；中兴手机账号主体变更，将调整为上海申启纪元；腾讯混元正式发布Hy4",
+  "publisher": "雷峰网",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-05",
+  "scope": "5500",
+  "snippets": [
+   "闻泰科技随后披露，安世方面的索赔金额合计高达20亿美元（约134.36亿元）。",
+   "据悉，本轮资金将主要用于扩大M50规模化交付，推进新一代M6X与下一代3D CIM产品研发，并持续完善软件工具链与产业生态，推动端边AI在更多终端场景落地。",
+   "全球汽车产业规模庞大，从零部件到整车、销售，再到服务和金融，总规模大体上在7万亿到9万亿美元，而AI在汽车行业的应用将创造超过1.2万亿美元的商业价值。",
+   "11月3日晚间，A股游戏公司游族网络发布合同公告，宣布全资子公司拟采购金额为42.25亿元的GPU，推进公司转型升级。",
+   "具体来看，公告显示，上海游族信息技术有限公司（简称游族信息）近日与A公司签署了《销售合同》，游族信息向A公司采购型号为PRO5500（PCIe）的GPU产品，协",
+   "据公开信息，型号PRO5500 (PCIe)对应英伟达基于Blackwell架构的RTX PRO 5500专业级卡，配备84GB GDDR7存储，定位企业级AI"
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "雷峰网"
+ },
+ {
+  "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/nvidia-stock-faces-fresh-china-chip-delivery-squeeze/70465362",
+  "title": "Nvidia stock faces fresh China chip delivery squeeze",
+  "publisher": "www.ad-hoc-news.de",
+  "source_type": "其他",
+  "published_at": "2026-11-05",
+  "scope": "5500",
+  "snippets": [
+   "Chinese AI and cloud companies have ordered about 6 million RTX Pro 5500 chips f",
+   "The RTX Pro 5500 is not among the most advanced Nvidia products restricted by US",
+   "One buyer's internal estimate pointed to roughly 700,000 units by the end of 202",
+   "Nvidia stock traded at 166.26 euros on Lang & Schwarz at 17:30 CET on Thursday, "
+  ],
+  "seen_at": "2026-11-06",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://videocardz.com/newz/nvidia-rtx-pro-5500-blackwell-appears-at-17999-msrp-higher-than-rtx-pro-6000",
+  "title": "NVIDIA RTX PRO 5500 Blackwell appears at $17,999 MSRP, higher than RTX PRO 6000",
+  "publisher": "VideoCardz",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-05",
+  "scope": "5500",
+  "snippets": [
+   "RTX PRO 5500 Blackwell 84GB gets first US retailer pricing",
+   "NVIDIA’s upcoming RTX PRO 5500 Blackwell has appeared at SHI Government Solution",
+   "The listing covers the PNY Workstation Edition with part number VCNRTXPRO5500B-P",
+   "The RTX PRO 5500 Blackwell features 21,760 CUDA cores and 84GB of GDDR7 ECC memo",
+   "RTX Pro 5500 Blackwell pricing is making me scratch my head.",
+   "MSRP is $18k?!!"
+  ],
+  "seen_at": "2026-11-06",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.mydrivers.com/1/1163/1163315.htm",
+  "title": "600万颗！AI巨头砸4700亿元买RTX Pro 5500：英伟达只能交付1%",
+  "publisher": "快科技",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-05",
+  "scope": "5500",
+  "snippets": [
+   "快科技11月5日消息，据报道， 国内AI与云计算企业已向英伟达下达了约600万颗RTX Pro 5500芯片的订单，总价值高达700亿美元（快科技注：约合人民币",
+   "然而，知情人士透露，在未来四个月内， 这些企业预计只能收到约1%的订单量，即数万颗芯片。",
+   "英伟达2027年RTX Pro 5500的全球规划产能不足300万颗，仅中国市场的订单规模就已远超其全球产能的两倍。",
+   "RTX Pro 5500之所以成为中国市场的抢手货，源于其独特的合规身份。",
+   "由于英伟达将台积电的先进产能优先分配给了利润更高的Rubin等数据中心平台，RTX Pro 5500在资源分配中处于靠后位置。",
+   "首批样品预计2026年12月供应，商业出货则要等到2027年第一季度， 且到2027年底中国客户累计能拿到的总量可能仅为70万颗左右。"
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "快科技"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-chips-stockpile-hong-kong-120548918.html",
+  "title": "Nvidia chips stockpile in Hong Kong awaits China import approval - report",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-05",
+  "scope": "context",
+  "snippets": [
+   "Investing.com -- About 600,000 Nvidia artificial intelligence chips are stored i",
+   "The H200 is not Nvidia's newest AI processor, but it has capabilities that Chine",
+   "US export controls since 2022 have restricted China's access to advanced Nvidia ",
+   "An eight-card H200 server was offered for more than 6 million yuan ($900,000) in",
+   "Servers using Nvidia's newer Blackwell chips, which fall under US export control",
+   "ByteDance, Alibaba and Tencent had ordered more than 3 million Nvidia RTX Pro 55"
+  ],
+  "seen_at": "2026-11-06",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/china-rationing-h200-chips-171408234.html",
+  "title": "China Is Rationing H200 Chips",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-05",
+  "scope": "context",
+  "snippets": [
+   "There are about 600,000 Nvidia H200 chips in Hong Kong awaiting a green light fr",
+   "Nvidia's H200 chips are to AI development what shovels were to the gold rush.",
+   "An eight-card H200 server was offered for over 6 million yuan ( about $900,000) ",
+   "And specifically for Nvidia, at least $1 billion of Nvidia AI chips were reporte",
+   "Nvidia's earnings on November 17 will shed more light on the H200 chip backlog."
+  ],
+  "seen_at": "2026-11-06",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-chinese-clients-just-1-180024708.html",
   "title": "Nvidia’s Chinese Clients Will Get Just 1% of $70 Billion in RTX Chip Orders",
   "publisher": "雅虎财经",
@@ -18,8 +141,44 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://finance.china.com/TMT/13004688/20261105/49843530.html",
+  "title": "传中国云巨头砸700亿美元，订购600万张RTX Pro 5500显卡",
+  "publisher": "finance.china.com",
+  "source_type": "其他",
+  "published_at": "2026-11-05",
+  "scope": "5500",
+  "snippets": [
+   "据彭博社11月4日报道，阿里巴巴、腾讯、字节跳动等中国科技公司合计向英伟达订购了约600万张RTX Pro 5500显卡，订单总值接近700亿美元，但预计在未来",
+   "这订单数字较此前路透社报道的超过300万张翻了一倍，意味着供应缺口比外界原先预估的更为严峻。",
+   "报道援引匿名知情人士消息称，中国主要AI开发商预计首批数千张显卡将于今年底前交付，明年2月左右再交付数万张。",
+   "由于单个RTX Pro 5500售价超过1.1万美元，据此估算订单价值近700亿美元价值。",
+   "RTX Pro 5500：合规边界上的“次优解”",
+   "RTX Pro 5500之所以成为中国客户的集中抢购对象，根源在于美国出口管制塑造的市场扭曲。"
+  ],
+  "seen_at": "2026-11-06",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://cj.sina.com.cn/articles/view/5953466437/162dab0450670bh1rw",
+  "title": "600万颗！AI巨头砸4700亿元买RTX Pro 5500：英伟达只能交付1%",
+  "publisher": "新浪财经",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-05",
+  "scope": "5500",
+  "snippets": [
+   "快科技11月5日消息，据报道，国内AI与云计算企业已向英伟达下达了约600万颗RTX Pro 5500芯片的订单，总价值高达700亿美元（快科技注：约合人民币4",
+   "然而，知情人士透露，在未来四个月内，这些企业预计只能收到约1%的订单量，即数万颗芯片。",
+   "英伟达2027年RTX Pro 5500的全球规划产能不足300万颗，仅中国市场的订单规模就已远超其全球产能的两倍。",
+   "RTX Pro 5500之所以成为中国市场的抢手货，源于其独特的合规身份。",
+   "由于英伟达将台积电的先进产能优先分配给了利润更高的Rubin等数据中心平台，RTX Pro 5500在资源分配中处于靠后位置。",
+   "首批样品预计2026年12月供应，商业出货则要等到2027年第一季度，且到2027年底中国客户累计能拿到的总量可能仅为70万颗左右。"
+  ],
+  "seen_at": "2026-11-06",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-can-only-fulfill-1-percent-of-chinas-massive-usd70-billion-gpu-order-for-ai-chips-report-claims-supply-constraints-choke-export-friendly-rtx-pro-5500-deliveries-despite-huge-demand",
-  "title": "Nvidia can only fulfill 1% of China’s massive $70 billion GPU order for AI chips, report claims — su",
+  "title": "Nvidia can only fulfill 1% of China’s massive $70 billion GPU order for AI chips, report claims",
   "publisher": "Tom's Hardware",
   "source_type": "行业媒体",
   "published_at": "2026-11-04",
@@ -32,7 +191,7 @@
    "Chinese demand for the RTX Pro 5500 is based on its performance and its unique s",
    "The RTX Pro 5500 has the same CUDA cores as its flagship gaming GPU, the RTX 509"
   ],
-  "seen_at": "2026-11-05",
+  "seen_at": "2026-11-06",
   "found_via": "Tom's Hardware"
  },
  {
@@ -86,7 +245,7 @@
    "规则还规定，特定芯片对中国及澳门的出口数量，不得超过向美国最终用户供应数量的50%。",
    "（这一50%属于特定芯片出口许可证的数量条件，与此次英伟达据报提出的云服务非中国客户占比51%要求不是同一回事，但两者都表明，先进GPU的供应正在与客户身份、业"
   ],
-  "seen_at": "2026-11-05",
+  "seen_at": "2026-11-06",
   "found_via": "Bing 新闻"
  },
  {
@@ -123,6 +282,24 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://www.eet-china.com/news/202611052831.html",
+  "title": "英伟达芯片对华交付受限，中国买家短期或仅获1%订单",
+  "publisher": "电子工程专辑",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-04",
+  "scope": "5500",
+  "snippets": [
+   "此前，有外媒报道称，阿里巴巴、腾讯、字节跳动等公司合计订购约600万颗英伟达RTX Pro 5500芯片。",
+   "最新消息是，未来四个月的交付量可能只有数万颗，约占总订单的1%。",
+   "据悉，该芯片单价超过1.1万美元，其订单总价值估计约为700亿美元。",
+   "知情人士透露，首批数千颗RTX Pro 5500芯片预计于今年年底交付，下一批数万颗芯片可能在2027年2月左右到货，这两个阶段是目前已经确认的交付安排。",
+   "按照一家主要买家的内部测算，随着英伟达逐步提升产能，中国大型科技公司到2027年底有望累计收到约70万颗芯片。",
+   "RTX Pro 5500虽不属于英伟达性能最强的AI加速器，但仍是中国市场能够获得的重要AI计算产品之一。"
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/nvidia-stock-faces-china-supply-squeeze-amid-ai-chip-demand/70458324",
   "title": "Nvidia stock faces China supply squeeze amid AI chip demand",
   "publisher": "www.ad-hoc-news.de",
@@ -154,7 +331,7 @@
    "Even so, the reality that top-tier Chinese firms prefer to wait on a 1 percent a",
    "NVIDIA RTX PRO 5000 Blackwell"
   ],
-  "seen_at": "2026-11-05",
+  "seen_at": "2026-11-06",
   "found_via": "Bing 新闻"
  },
  {
@@ -229,6 +406,21 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://news.qq.com/rain/a/20261103A0F06000",
+  "title": "华为昇腾迎来质变催化！DeepSeekV5开启国产预训练时代，算力全链迎新 ...",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-03",
+  "scope": "context",
+  "snippets": [
+   "DeepSeek官方曾公开表示，受高端算力供给限制，V4-Pro模型服务吞吐有限，预计下半年昇腾950超节点量产后，模型服务价格将大幅下调，侧面印证了昇腾算力在",
+   "同年9月30日，DeepSeek正式开源面向昇腾平台的全套基础设施组件，涵盖TileLang高级语言编译工具、高性能计算库与分布式通信库，与英伟达平台的开源组件",
+   "通富微电 在 CoWoS-S 技术领域布局领先，7nm Chiplet 量产良率表现优异，同时承接国产高端芯片的封装订单。"
+  ],
+  "seen_at": "2026-11-05",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://news.qq.com/rain/a/20261103A0CJKF00",
   "title": "DeepSeek下一代大模型，昇腾芯片承担训练",
   "publisher": "腾讯新闻",
@@ -271,7 +463,7 @@
    "The community Narrative focuses on diversified AI infrastructure spending from h",
    "See how these catalysts shape NVIDIA's path to a $329 fair value ."
   ],
-  "seen_at": "2026-11-05",
+  "seen_at": "2026-11-06",
   "found_via": "Bing 新闻"
  }
 ]

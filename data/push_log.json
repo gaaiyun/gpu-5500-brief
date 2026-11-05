@@ -1,12 +1,24 @@
 {
-  "dingtalk": "2026-11-04",
-  "pushplus": "2026-11-04",
+  "dingtalk": "2026-11-05",
+  "pushplus": "2026-11-05",
   "alerts": [
     {
       "at": "2026-11-04T17:41:20+08:00",
       "keys": [
         "feed|finance-20261104-5739ce",
         "feed|news-20261104-8f1c06"
+      ],
+      "channels": [
+        "dingtalk",
+        "pushplus"
+      ]
+    },
+    {
+      "at": "2026-11-05T15:55+08:00",
+      "keys": [
+        "feed|news-20261105-10bb1f",
+        "feed|leiphone-20261105-1b0532",
+        "feed|eet-china-20261104-7d6789"
       ],
       "channels": [
         "dingtalk",
