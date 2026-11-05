@@ -1,24 +1,76 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-06T06:16:20+08:00",
-  "agent": "actions-sweep+cloud-routine",
+  "updated_at": "2026-11-06T07:20:00+08:00",
+  "agent": "cloud-routine",
   "searched": [
-    "游族网络 PRO5500 GPU 采购 42.25亿 公告",
-    "RTX Pro 5500 China price yuan per card",
-    "RTX PRO 5500 现货 报价 渠道 万元",
-    "Oracle Tencent GPU lease cancelled 51% rule",
-    "RTX Pro 5500 浪潮 新华三 联想 超聚变 服务器 交付",
+    "RTX Pro 5500 China price shipment",
+    "RTX PRO 5500 国内 现货 报价 渠道 到货",
+    "Oracle Tencent GPU lease cancelled",
+    "RTX PRO 5500 SHI $17,999 PNY",
+    "H200 Hong Kong 600,000 Reuters",
     "昇腾950 价格 供应 寒武纪",
-    "GDDR7 price shortage November 2026",
-    "BIS export controls Nvidia China RTX Pro",
-    "游族网络 GPU 交易对手 A公司",
-    "RTX 5090 国内 价格 11月",
-    "RTX PRO 6000 国内 价格 现货",
-    "算力租赁 价格 RTX Pro 5500 上市公司 采购",
-    "Nvidia Rubin TSMC allocation RTX Pro 5500 supply",
-    "工信部 英伟达 RTX Pro 5500 审批 海关"
+    "RTX 5090 价格 国内 涨价",
+    "GDDR7 price supply shortage",
+    "Nvidia 51% non-Chinese cloud FT",
+    "工信部 RTX Pro 5500 批准 采购",
+    "PRO5500 采购 公告 合同 上市公司",
+    "丽台 PNY RTX PRO 5500 代理 交付",
+    "Nvidia earnings Nov 17 China TSMC Rubin",
+    "算力租赁 价格 H200 租金"
   ],
   "items": [
+    {
+      "id": "reuters-20261105-h200-hk",
+      "title": "路透：约60万枚H200滞留香港，北京未批大规模进口",
+      "published_at": "2026-11-05",
+      "publisher": "法广（援引路透社）",
+      "source_type": "主流媒体",
+      "scope": "context",
+      "url": "https://www.rfi.fr/cn/%E7%A7%91%E6%8A%80%E4%B8%8E%E6%96%87%E5%8C%96/20261105-%E5%8C%97%E4%BA%AC%E6%9C%AA%E6%89%B9%E5%87%86%E5%A4%A7%E8%A7%84%E6%A8%A1%E8%BF%9B%E5%8F%A3-%E7%BA%A6%E6%9C%8960%E4%B8%87%E6%9E%9A%E8%8B%B1%E4%BC%9F%E8%BE%BEh200%E8%8A%AF%E7%89%87%E8%A2%AB%E6%8C%87%E6%BB%9E%E7%95%99%E9%A6%99%E6%B8%AF",
+      "grade": "B",
+      "summary": "据路透社援引两位知情人士，约有60万枚英伟达H200芯片存放在香港，等待运往内地。另一位知情人士称，截至10月底，内地一台搭载8枚H200的服务器售价超过600万元人民币，约为一年前价格的三倍。路透上月报导称字节、阿里、腾讯已订购超过300万张RTX Pro 5500。",
+      "impact": "进口审批仍是瓶颈：H200有货也进不来，说明5500即便到货也可能卡在批准环节；H200服务器价格走高会把需求推向合规的5500。以上为推断。",
+      "watch": "工信部对5500的批文与首批到货",
+      "corroboration": [
+        "https://finance.yahoo.com/technology/ai/articles/nvidia-chips-stockpile-hong-kong-120548918.html"
+      ],
+      "claims": [],
+      "checked_at": "2026-11-06"
+    },
+    {
+      "id": "ft-20261104-oracle-tencent",
+      "title": "FT：甲骨文取消与腾讯的海外GPU租赁交易",
+      "published_at": "2026-11-04",
+      "publisher": "搜狐（转述金融时报）",
+      "source_type": "主流媒体",
+      "scope": "context",
+      "url": "https://www.sohu.com/a/1097174503_122967788",
+      "grade": "B",
+      "summary": "《金融时报》11月4日报道：美国云计算企业甲骨文取消了与腾讯一项估计价值约70亿美元的海外GPU租赁交易。此前一天，FT还报道英伟达要求云客户至少51%的服务卖给非中国公司。",
+      "impact": "腾讯经海外云租算力的路径收窄，算力缺口更依赖境内可采购的卡，对5500需求偏多。这是推断，腾讯和甲骨文均未在摘录中确认。",
+      "watch": "腾讯11月18日财报的资本开支和到货说法",
+      "corroboration": [
+        "https://www.bloomberg.com/news/articles/2026-11-04/oracle-scraps-7-billion-deal-to-lease-chips-to-tencent-ft-says"
+      ],
+      "claims": [],
+      "checked_at": "2026-11-06"
+    },
+    {
+      "id": "videocardz-20261105-shi-msrp",
+      "title": "VideoCardz：5500在美国经销商SHI现身，标价17,999美元",
+      "published_at": "2026-11-05",
+      "publisher": "VideoCardz",
+      "source_type": "行业媒体",
+      "scope": "5500",
+      "url": "https://videocardz.com/newz/nvidia-rtx-pro-5500-blackwell-appears-at-17999-msrp-higher-than-rtx-pro-6000",
+      "grade": "B",
+      "summary": "VideoCardz称RTX PRO 5500 Blackwell 84GB在美国经销商SHI Government Solutions出现首个零售标价，为PNY Workstation Edition，MSRP为17,999美元。该卡配备21,760个CUDA核心和84GB GDDR7 ECC显存。",
+      "impact": "这是美国政府采购渠道的挂牌价，不是英伟达官方价，也不是大陆价；只能作为海外标价的参照，大陆报价仍以渠道报价为准。推断。",
+      "watch": "英伟达是否公布官方价格",
+      "corroboration": [],
+      "claims": [],
+      "checked_at": "2026-11-06"
+    },
     {
       "id": "news-20261105-10bb1f",
       "title": "快科技：AI巨头砸4700亿元买RTX Pro 5500，英伟达只能交付1%",
@@ -562,8 +614,8 @@
     }
   },
   "take": {
-    "date": "2026-11-05",
-    "text": "游族网络公告签下42.25亿元PRO5500采购合同，分批交付、价格可随原厂调整。对照彭博称未来4个月只到约1%，这类大单实际交付要排队，现货继续偏紧。"
+    "date": "2026-11-06",
+    "text": "路透称约60万枚H200滞留香港、北京未批大规模进口；FT称甲骨文取消腾讯租赁。海外算力路径收紧，需求更压向5500，但交付仍只有年底前数千颗、2027年2月左右数万颗两个确认节点。"
   },
   "sweep": {
     "date": "2026-11-06",
