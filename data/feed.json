@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-06T07:06:14+08:00",
+  "updated_at": "2026-11-07T00:44:06+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -22,6 +22,22 @@
     "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
   ],
   "items": [
+    {
+      "id": "finance-20261106-c232df",
+      "title": "RTX PRO 5500在美国标价超12万元",
+      "published_at": "2026-11-06",
+      "publisher": "新浪财经",
+      "source_type": "行业媒体",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-11-06/doc-inixuiyu8241405.shtml",
+      "grade": "B",
+      "summary": "快科技11月6日消息，RTX PRO 5500 Blackwell在美国零售商SHI Government Solutions上架，PNY版本标价17999美元，折扣后约17408.63美元。",
+      "impact": "美国渠道零售价倒挂，侧面印证中国市场需求旺盛推高价格。",
+      "watch": "核实该价格是否为官方MSRP或仅限特定渠道/版本。",
+      "corroboration": [],
+      "claims": [],
+      "checked_at": "2026-11-07",
+      "found_via": "Bing 新闻"
+    },
     {
       "id": "news-20261105-10bb1f",
       "title": "快科技：AI巨头砸4700亿元买RTX Pro 5500，英伟达只能交付1%",
@@ -72,8 +88,7 @@
         "https://finance.yahoo.com/technology/ai/articles/nvidia-chips-stockpile-hong-kong-120548918.html"
       ],
       "claims": [],
-      "checked_at": "2026-11-06",
-      "ci_checked": "2026-11-06"
+      "checked_at": "2026-11-06"
     },
     {
       "id": "videocardz-20261105-shi-msrp",
@@ -89,8 +104,7 @@
       "watch": "英伟达是否公布官方价格",
       "corroboration": [],
       "claims": [],
-      "checked_at": "2026-11-06",
-      "ci_checked": "2026-11-06"
+      "checked_at": "2026-11-06"
     },
     {
       "id": "eet-china-20261104-7d6789",
@@ -147,8 +161,7 @@
         "https://www.bloomberg.com/news/articles/2026-11-04/oracle-scraps-7-billion-deal-to-lease-chips-to-tencent-ft-says"
       ],
       "claims": [],
-      "checked_at": "2026-11-06",
-      "ci_checked": "2026-11-06"
+      "checked_at": "2026-11-06"
     },
     {
       "id": "ft-20261103-51-rule",
@@ -267,6 +280,56 @@
   ],
   "leads": [
     {
+      "title": "小弟骑到大哥头上! RTX PRO 5500定价反超RTX PRO 6000：售价超12万元",
+      "publisher": "www.msn.cn",
+      "source_type": "其他",
+      "url": "https://www.msn.cn/zh-cn/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6%E5%92%8C%E8%AE%BE%E5%A4%87/%E5%B0%8F%E5%BC%9F%E9%AA%91%E5%88%B0%E5%A4%A7%E5%93%A5%E5%A4%B4%E4%B8%8A-rtx-pro-5500%E5%AE%9A%E4%BB%B7%E5%8F%8D%E8%B6%85rtx-pro-6000-%E5%94%AE%E4%BB%B7%E8%B6%8512%E4%B8%87%E5%85%83/ar-AA2gRf1U",
+      "published_at": "2026-11-06",
+      "found_via": "Bing 新闻",
+      "snippet": "快科技11月6日消息，据报道，NVIDIA RTX PRO 5500 Blackwell工作站显卡已在美国零售商SHI Government Solutions上架。 PNY版本标价17999美元（快科技注：约合人民币120907元），折扣后仍需17408.63美元（快科技注：约合人民币116934元）。令人意外的是，",
+      "seen_at": "2026-11-07"
+    },
+    {
+      "title": "PNY RTX PRO 5500零售标价17999美元 高于RTX PRO 6000",
+      "publisher": "www.msn.cn",
+      "source_type": "其他",
+      "url": "https://www.msn.cn/zh-cn/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6%E5%92%8C%E8%AE%BE%E5%A4%87/pny-rtx-pro-5500%E9%9B%B6%E5%94%AE%E6%A0%87%E4%BB%B717999%E7%BE%8E%E5%85%83-%E9%AB%98%E4%BA%8Ertx-pro-6000/ar-AA2gROr8",
+      "published_at": "2026-11-06",
+      "found_via": "Bing 新闻",
+      "snippet": "美国零售商SHI Government Solutions上架了PNY制造的英伟达 RTX PRO 5500工作站显卡，页面标示建议零售价为17999美元，折后价为17408.63美元。这一零售标价高于规格更强的RTX PRO 6000。英伟达美国商城所列RTX PRO 6000售价为16000美元，配备24064个C",
+      "seen_at": "2026-11-07"
+    },
+    {
+      "title": "英伟达RTX PRO 5500工作站显卡报价高达17999美元比旗舰RTX PRO 6000还贵- nVIDIA",
+      "publisher": "cnBeta.COM",
+      "source_type": "其他",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE93TkoyUEJjcHZHU2ZBdHVuTDNibWduREp2T0F3QmZxVElneThocldqRUlLTm5KQ21mYURwaWZEUlhzR0I1Z2dEellPU3VMTHpTaERuNGlZdW1Uci1scEZzVw?oc=5",
+      "published_at": "2026-11-06",
+      "found_via": "Google 新闻",
+      "snippet": "",
+      "seen_at": "2026-11-07"
+    },
+    {
+      "title": "NVIDIA RTX PRO 5500 Listing Spotted at $17,999, More Than the Flagship RTX PRO 6",
+      "publisher": "TechPowerUp",
+      "source_type": "其他",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNmx0Sl9oVnJqMlZ3Vk10OHFkNDZpZ3plWENxZ21DVWtNQ2VGMVRLX0w2cXFRMk4zT05GTTlyZlctaHlyRlV5V1lERWtEcXBlOHlkNmpXTHRERzVpT3VmRjZ1Y0daekxjQ3RPd2xmNnJuYlVVaXhTRnZvajlGWlJNZnhIUE5uVWJsOVp3VWQyWGY5dTg2SGhDX1lGSmNwV1dBSS1OSm5zVHhuaUxmcl9BcWtvZzVlTDdtaGhqU9IBwgFBVV95cUxQSkVveEZKWlh6d1BabXpYRUZvYjJsNHBSS3BkRXRxU0RLZENEamhSTlY5eUZzTVNXaXBOLXB2aEdXd0lMYkpMSUhfLUFTcGl4R2J1QTQyY19WNW9XeHljYWFyd29yaUx5QTRQVWlUTjUxZ1F5dnl2eDZSTFhoNkFuM2hqRWtKdXdmTjN3Q3oxNUNKSWc1S3NQakYxcFJoM2lhTHlvc2I2cDItQnFWLVlSOGlUTGN6bEdFZVBpS1dIa2FQQQ?oc=5",
+      "published_at": "2026-11-06",
+      "found_via": "Google 新闻",
+      "snippet": "",
+      "seen_at": "2026-11-07"
+    },
+    {
+      "title": "RTX PRO 5500 Blackwell上架出现价格倒挂",
+      "publisher": "泡泡科技星球",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%20Blackwell%E4%B8%8A%E6%9E%B6%E5%87%BA%E7%8E%B0%E4%BB%B7%E6%A0%BC%E5%80%92%E6%8C%82",
+      "published_at": "2026-11-06",
+      "found_via": "搜狗微信",
+      "snippet": "日消息,NVIDIA RTX PRO 5500 Blackwell 专业工作站显卡现身美国零售商 SHI Government Solutions 商品页面,PNY 版本标价 17999...",
+      "seen_at": "2026-11-07"
+    },
+    {
       "title": "Nvidia RTX Pro 5500 Shortage Leaves China Facing a Reported 1% Delivery Rate",
       "publisher": "remio",
       "source_type": "其他",
@@ -278,13 +341,13 @@
     },
     {
       "title": "传中国云巨头砸700亿美元，订购600万张RTX Pro 5500显卡",
-      "publisher": "中华网财经",
+      "publisher": "finance.china.com",
       "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1tcWJIN3dqRTN2ay1icjdLM1VwMTFBQVN5N1VONjVGamVQSnVuZmNCem5aRnYtaEY4blZsa1c2Ml93dHlrZEFhTXE3dXdrMW1KaVhVVVJ0MGpqeGhTeXMxelVpWExtaE51S0Q1Tld3?oc=5",
+      "url": "https://finance.china.com/TMT/13004688/20261105/49843530.html",
       "published_at": "2026-11-05",
-      "found_via": "Google 新闻",
-      "snippet": "",
-      "seen_at": "2026-11-06"
+      "found_via": "Bing 新闻",
+      "snippet": "据彭博社11月4日报道，阿里巴巴、腾讯、字节跳动等中国科技公司合计向英伟达订购了约600万张RTX Pro 5500显卡，订单总值接近700亿美元，但预计在未来四个月内，他们只能收到数万张，交付率约为订单总量的1%。这订单数字较此前路透社报道的超过300万张翻了一倍，意味着供应缺口比外界原先预估的更为严峻。 报道援引匿",
+      "seen_at": "2026-11-07"
     },
     {
       "title": "Nvidia’s Chinese Clients Will Get Just 1% of $70 Billion in RTX Chip Orders",
@@ -347,24 +410,24 @@
       "seen_at": "2026-11-05"
     },
     {
-      "title": "Chinese Tech Giants Choose To Wait Months To Receive 1% Of Ordered RTX PRO 5500 ",
-      "publisher": "Wccftech",
-      "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPNno0NHlJajVDaTVmOV9ocmF6NnptN21SNjJoWWdjSklRLWY2eDRrXzJlUzA1VWRMeWo1VE5vS1VMUkFLVmM2TVpZcmtWRUQ1czJOV1NReTF4Ym1qbEQzcC04bm82VDV1SXdYYUU0Y2RQWUpjX3VZcDRteFVuelBSVEVNVzJqRmF6TXVaem9aQ3FHQdIBlwFBVV95cUxOWjJsa3laR1ZtdXQ1ZzVzZTljZmJ5d0ZUT3dXcGJUc0lqTkp0ak5NTFJrejA1V0x6emFxQTgxSzEzZzhrTWk4dy0yV3RVXzZITVhBUlZZRGNVWE4tRV82eVZGYy0weU5lZHlNMkZieWl1LTA4Z0tKS2t4cVA0TjNJcHBrSm5weGNtXzZ6SDRXSTdBczBZTHZj?oc=5",
-      "published_at": "2026-11-04",
-      "found_via": "Google 新闻",
-      "snippet": "",
-      "seen_at": "2026-11-06"
-    },
-    {
       "title": "Nvidia can only fulfill 1% of China’s massive $70 billion GPU order for AI chips",
       "publisher": "Tom's Hardware",
-      "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMi1gJBVV95cUxQcmV4blNtRDNTUkp6OTh1cGd1OG5wcnNQaV8xTkpZV3pYQklTN09GYW9td1RuS3ZCWW14YWZMT0dCcER6TEpSczBUMjNXVGtxS0p5MnYyNUlFekNZTHZ3aS1qZURGX29HZE5hbjlCMGFpSFBlSUhlUVBKV3ZvNDFSanF5ZjhsWnVsWFZPbjM1WkZnQ1JpOTVOdE10ZHcwX0daY2htSDNWdFdTYmJKWnNyTTJfbGlLTmd4MEFXRkdiX3h1NzRHS1Y4MFZMNWpGZS1aOHNWSDhBSlFLT182dFFzVDRHVDJGX05Ca0d6dmRHMXhaNkxPWVdRWGRxUGF1T3NTMVJmSFVPRFF2SEJFX3BPU25YdlNtOFRkNzFGTkZYQmNSeGtDVHk4cXB3MldYZ2pUcXhqa29DeHN1aVF3T1hsdDY1UzVubG0zODB2YWtEUzBfdWplZnc?oc=5",
+      "source_type": "行业媒体",
+      "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-can-only-fulfill-1-percent-of-chinas-massive-usd70-billion-gpu-order-for-ai-chips-report-claims-supply-constraints-choke-export-friendly-rtx-pro-5500-deliveries-despite-huge-demand",
       "published_at": "2026-11-04",
-      "found_via": "Google 新闻",
-      "snippet": "",
-      "seen_at": "2026-11-06"
+      "found_via": "Tom's Hardware",
+      "snippet": "Just 1% of chips promised to major Chinese companies to power their AI ambitions will be delivered, according to reports.",
+      "seen_at": "2026-11-07"
+    },
+    {
+      "title": "Chinese Tech Giants Choose To Wait Months To Receive 1% Of Ordered RTX PRO 5500 ",
+      "publisher": "Wccftech",
+      "source_type": "行业媒体",
+      "url": "https://wccftech.com/chinese-tech-giants-wait-months-nvidia-rtx-pro-5500-cuda-dominance/",
+      "published_at": "2026-11-04",
+      "found_via": "Bing 新闻",
+      "snippet": "Chinese tech firms are willing to endure massive delivery delays for NVIDIA RTX Pro 5500 GPUs rather than pivot to domestic alternatives, anchored by the CUDA e",
+      "seen_at": "2026-11-07"
     },
     {
       "title": "中国巨头700 亿美元抢合规GPU，英伟达却只给 1%！",
@@ -515,56 +578,6 @@
       "found_via": "科技新报",
       "snippet": "彭博（Bloomberg）報導指出，中國人工智慧與雲端業者向輝達（NVIDIA）下單的 RTX PRO 550 […]",
       "seen_at": "2026-11-04"
-    },
-    {
-      "title": "RTX PRO 6000 Blackwell 美国官方渠道价格涨至13250美元",
-      "publisher": "Wccftech",
-      "source_type": "行业媒体",
-      "url": "https://wccftech.com/nvidia-96-gb-rtx-pro-6000-blackwell-price-hits-13250-over-50-percent-hike/",
-      "published_at": "2026-11-04",
-      "found_via": "WebSearch",
-      "snippet": "发布时约8000美元，现价13250美元，主因GDDR7显存成本上升。发布日期待核。",
-      "seen_at": "2026-11-04"
-    },
-    {
-      "title": "Nvidia RTX Pro 5500 Orders From China Hit $70B, Only 1% to Ship",
-      "publisher": "shiftdelete.net",
-      "source_type": "其他",
-      "url": "https://shiftdelete.net/en/nvidia-rtx-pro-5500",
-      "published_at": "2026-11-03",
-      "found_via": "Bing 新闻",
-      "snippet": "Chinese firms ordered about 6 million Nvidia RTX Pro 5500 cards worth $70 billion but expect only 1% in four months, Bloomberg reports. Here is why.",
-      "seen_at": "2026-11-04"
-    },
-    {
-      "title": "Nvidia allocates 1% of $70B RTX chip order to China clients",
-      "publisher": "cryptobriefing.com",
-      "source_type": "其他",
-      "url": "https://cryptobriefing.com/nvidia-rtx-pro-5500-china-allocation/",
-      "published_at": "2026-11-03",
-      "found_via": "Bing 新闻",
-      "snippet": "Bloomberg reports Nvidia's Chinese clients will get 1% of a $70 billion RTX chip order as RTX PRO 5500 demand far outstrips 2027 capacity.",
-      "seen_at": "2026-11-04"
-    },
-    {
-      "title": "RTX 5090 对比 RTX PRO 5500:32GB 和 84GB 显存,跑 AI 大模型差距有多大?",
-      "publisher": "技术学习日常",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%205090%20%E5%AF%B9%E6%AF%94%20RTX%20PRO%205500%3A32GB%20%E5%92%8C%2084GB%20%E6%98%BE%E5%AD%98%2C%E8%B7%91%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B7%AE%E8%B7%9D%E6%9C%89%E5%A4%9A%E5%A4%A7%3F",
-      "published_at": "2026-11-03",
-      "found_via": "搜狗微信",
-      "snippet": "如果让你在 RTX 5090 和 RTX PRO 5500 之间选择一张显卡,用来本地部署 AI 大模型,你会选哪一张?RTX 5090,32GB GDDR7 显存...",
-      "seen_at": "2026-11-03"
-    },
-    {
-      "title": "RTX PRO 5500 技术拆解:84GB ECC 显存,AI 推理与渲染怎么选",
-      "publisher": "IT满江红DYH",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%20%E6%8A%80%E6%9C%AF%E6%8B%86%E8%A7%A3%3A84GB%20ECC%20%E6%98%BE%E5%AD%98%2CAI%20%E6%8E%A8%E7%90%86%E4%B8%8E%E6%B8%B2%E6%9F%93%E6%80%8E%E4%B9%88%E9%80%89",
-      "published_at": "2026-10-31",
-      "found_via": "搜狗微信",
-      "snippet": "它到底是一张什么卡RTX PRO 5500 基于英伟达 Blackwell 架构、... 来源:渠道报价与路透社报道;仅供参考,以实际成交价为准.)...",
-      "seen_at": "2026-11-06"
     }
   ],
   "mentions": [
@@ -574,6 +587,14 @@
       "low": 70000,
       "high": 70000,
       "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%85%A8%E6%9D%91%E7%9A%84%E5%B8%8C%E6%9C%9B%20PRO%205500%20%21%E5%92%8C%20PRO%206000%E3%80%81PRO%206000D%E7%9A%84%E5%AF%B9%E6%AF%94",
+      "found_via": "搜狗微信"
+    },
+    {
+      "date": "2026-10-26",
+      "publisher": "算力圈视界",
+      "low": 80000,
+      "high": 95000,
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%A4%A7%E5%8E%82%E7%96%AF%E6%8A%A25500%2CRTX%205090%E4%BC%9A%E8%A2%AB%E5%8F%96%E4%BB%A3%E5%90%97%3F",
       "found_via": "搜狗微信"
     },
     {
@@ -615,8 +636,8 @@
       "wechat": 4
     },
     "2026-11-06": {
-      "media": 2,
-      "wechat": 0
+      "media": 7,
+      "wechat": 2
     }
   },
   "take": {
@@ -624,15 +645,20 @@
     "text": "路透称约60万枚H200滞留香港、北京未批大规模进口；FT称甲骨文取消腾讯租赁。海外算力路径收紧，需求更压向5500，但交付仍只有年底前数千颗、2027年2月左右数万颗两个确认节点。"
   },
   "sweep": {
-    "date": "2026-11-06",
-    "candidates": 2,
-    "read": 1,
-    "added": [],
+    "date": "2026-11-07",
+    "candidates": 5,
+    "read": 5,
+    "added": [
+      "finance-20261106-c232df"
+    ],
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "读取失败 https://www.sohu.com/a/1097403897_128469：正文未提到 RTX PRO 5500",
-      "未通过核对 https://finance.yahoo.com/markets/stocks/articles/nvidia-chinese-clients-just-1-180024708.html：摘要出现原文没有的数字"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
+      "无关：https://www.tweaktown.com/rss/click/news/114529/?c=news-mf",
+      "无关：https://www.tweaktown.com/news/114529/nvidias-rtx-pro-5500-is-chinas-most-wanted-gpu-and-almost-nobody-is-getting-one-soon/index.html",
+      "未通过核对 https://www.tomshardware.com/pc-components/gpus/nvidia-can-only-fulfill-1-percent-of-chinas-massive-usd70-billion-gpu-order-for-ai-chips-report-claims-supply-constraints-choke-export-friendly-rtx-pro-5500-deliveries-despite-huge-demand：摘要出现原文没有的数字",
+      "未通过核对 https://wccftech.com/chinese-tech-giants-wait-months-nvidia-rtx-pro-5500-cuda-dominance/：摘要出现原文没有的数字"
     ]
   }
 }
