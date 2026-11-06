@@ -50,6 +50,38 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://lufkindailynews.com/news_reuters/business/nvidia-chips-pile-up-in-hong-kong-as-china-withholds-import-approval/article_34a11941-bd07-58cb-adcd-e9bf7af9cab4.html",
+  "title": "Nvidia chips pile up in Hong Kong as China withholds import approval",
+  "publisher": "lufkindailynews.com",
+  "source_type": "其他",
+  "published_at": "2026-11-06",
+  "scope": "5500",
+  "snippets": [
+   "FILE PHOTO: Nvidia logo is seen in this illustration created on June 11, 2026.",
+   "Nov 5 (Reuters) - About 600,000 of Nvidia's advanced artificial intelligence chi",
+   "The H200 is not Nvidia's newest AI processor, but it has capabilities that Chine",
+   "US export controls since 2022 have sought to restrict China's access to advanced",
+   "An eight-card H200 server was offered for more than 6 million yuan ($900,000) in",
+   "Servers using Nvidia's newer Blackwell chips, which fall under US export control"
+  ],
+  "seen_at": "2026-11-07",
+  "found_via": "GDELT"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/nvidias-quiet-ultimatum-stop-china-180957689.html",
+  "title": "Nvidia's Quiet New Ultimatum to Stop China Chip Smuggling",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-06",
+  "scope": "context",
+  "snippets": [
+   "In March, authorities arrested Super Micro Computer co-founder Wally Liaw on cha",
+   "Customs authorities recently seized about $12.1 million of advanced AI chips at "
+  ],
+  "seen_at": "2026-11-07",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://finance.sina.com.cn/tech/roll/2026-11-06/doc-inixuiyu8241405.shtml",
   "title": "小弟骑到大哥头上！RTX PRO 5500定价反超RTX PRO 6000：售价超12万元",
   "publisher": "新浪财经",
