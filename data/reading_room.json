@@ -31,6 +31,24 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://www.rfi.fr/cn/%E4%B8%AD%E5%9B%BD/20261107-%E7%BA%BD%E6%97%B6%E6%8F%AD%E4%B8%AD%E5%9B%BD%E4%B8%A4%E5%AE%B6%E8%8A%AF%E7%89%87%E5%95%86%E8%8E%B7%E7%BE%8E%E6%89%B9%E5%87%86%E5%A4%84%E7%90%86%E8%8B%B1%E4%BC%9F%E8%BE%BE%E8%8A%AF%E7%89%87-%E5%BD%A2%E5%90%8C%E7%A9%BA%E5%A3%B3",
+  "title": "纽时揭中国两家芯片商获美批准处理英伟达芯片“形同空壳”",
+  "publisher": "法广",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-07",
+  "scope": "context",
+  "snippets": [
+   "美国特朗普政府批准多家中国企业，购买或组装英伟达（Nvidia）先进人工智能芯片H200，但《纽约时报》调查发现，其中两家获批企业在中国的登记办公室形同空壳，不",
+   "《纽约时报》周六（7日）报道，其中一家企业新矩阵（New Matrix）成立仅约17个月，今年获美国商务部批准，负责将英伟达H200芯片组装成人工智能电脑。",
+   "报道指出，新矩阵是第二家获准处理英伟达H200芯片、但在登记地址找不到实际营运迹象的中国企业。",
+   "该公司获美国批准取得H200芯片，负责将芯片组装成人工智能伺服器，再交付其他客户。",
+   "《纽约时报》进一步调查发现，其他获准购买或处理H200芯片的中国企业，也与遭美国制裁的公司或中国军事供应商有关联。",
+   "特朗普于2025年12月批准英伟达向中国出售H200芯片，放宽拜登政府时期的部分出口限制。"
+  ],
+  "seen_at": "2026-11-08",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-nvda-tightens-chip-tracking-001552079.html",
   "title": "Nvidia (NVDA) Tightens Chip Tracking In Southeast Asia",
   "publisher": "雅虎财经",
@@ -41,7 +59,7 @@
    "Check out 2 warning signs (1 major) that NVIDIA investors should know about.",
    "See how these catalysts shape NVIDIA's path to a $329 fair value ."
   ],
-  "seen_at": "2026-11-07",
+  "seen_at": "2026-11-08",
   "found_via": "Bing 新闻"
  },
  {
@@ -77,7 +95,7 @@
    "Read more : ByteDance, Alibaba, and Tencent order NVIDIA RTX PRO 5500 chips wort",
    "The RTX PRO 5500 is a Blackwell-based GPU with 84GB of GDDR7 memory that complie"
   ],
-  "seen_at": "2026-11-07",
+  "seen_at": "2026-11-08",
   "found_via": "Bing 新闻"
  },
  {
@@ -494,7 +512,7 @@
    "Even so, the reality that top-tier Chinese firms prefer to wait on a 1 percent a",
    "NVIDIA RTX PRO 5000 Blackwell"
   ],
-  "seen_at": "2026-11-07",
+  "seen_at": "2026-11-08",
   "found_via": "Bing 新闻"
  },
  {
