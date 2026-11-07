@@ -18,6 +18,19 @@
   "found_via": "钛媒体"
  },
  {
+  "url": "https://www.sohu.com/a/1098515909_122434967",
+  "title": "黄仁勋还是被查了！表面上是查新加坡转卖，实则逼英伟达查下家",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-07",
+  "scope": "context",
+  "snippets": [
+   "据《金融时报》等媒体报道，英伟达以口头方式向全球数据中心客户传达了一条新规矩：未来新签的合约中，至少51%的服务必须卖给非中国企业；"
+  ],
+  "seen_at": "2026-11-07",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-nvda-tightens-chip-tracking-001552079.html",
   "title": "Nvidia (NVDA) Tightens Chip Tracking In Southeast Asia",
   "publisher": "雅虎财经",
@@ -77,6 +90,24 @@
   "snippets": [
    "路透社近日引述“知情人士”的话称，大约有60万枚英伟达H200芯片，由于未获中方批准放行，目前滞留在香港。",
    "2022年，美方以“国家安全”为由，对华实施高端芯片出口管制，英伟达先进芯片随即被列入对华禁售清单。"
+  ],
+  "seen_at": "2026-11-07",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261106A05F7K00",
+  "title": "小弟骑到大哥头上！RTX PRO 5500定价反超RTX PRO 6000：售价超12万元",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-06",
+  "scope": "5500",
+  "snippets": [
+   "快科技11月6日消息，据报道， NVIDIA RTX PRO 5500 Blackwell工作站显卡已在美国零售商SHI Government Solution",
+   "PNY版本标价17999美元（快科技注：约合人民币120907元），折扣后仍需17408.63美元（快科技注：约合人民币116934元）。",
+   "令人意外的是，这个价格比NVIDIA自家旗舰RTX PRO 6000的16000美元官方标价还高出约1400美元。",
+   "从规格上看， RTX PRO 5500本该是RTX PRO 6000的“小弟”。",
+   "市场分析指出，中国市场的巨大需求是推高RTX PRO 5500价格的关键因素。",
+   "而中国企业的总订单量据称已突破600万张，远超NVIDIA 2027年约300万张的规划产能。"
   ],
   "seen_at": "2026-11-07",
   "found_via": "Bing 新闻"
