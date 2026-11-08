@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-08T04:28:54+08:00",
+  "updated_at": "2026-11-08T10:39:50+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -348,22 +348,22 @@
     },
     {
       "title": "PNY RTX PRO 5500零售标价17999美元 高于RTX PRO 6000",
-      "publisher": "3DM",
+      "publisher": "www.msn.cn",
       "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5PSG5tN0RmVWdSOVRHUkw5LXZEVFFuT2tYS3A4ckxaM2dEdjd5S0dhOU1lVVQ4TmxlbkNBeHRCQzlvNkNSY3pXMndDOXBYTlBCZ2xTcExfNTBETDFZ?oc=5",
+      "url": "https://www.msn.cn/zh-cn/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6%E5%92%8C%E8%AE%BE%E5%A4%87/pny-rtx-pro-5500%E9%9B%B6%E5%94%AE%E6%A0%87%E4%BB%B717999%E7%BE%8E%E5%85%83-%E9%AB%98%E4%BA%8Ertx-pro-6000/ar-AA2gROr8",
       "published_at": "2026-11-06",
-      "found_via": "Google 新闻",
-      "snippet": "",
+      "found_via": "Bing 新闻",
+      "snippet": "美国零售商SHI Government Solutions上架了PNY制造的英伟达 RTX PRO 5500工作站显卡，页面标示建议零售价为17999美元，折后价为17408.63美元。这一零售标价高于规格更强的RTX PRO 6000。英伟达美国商城所列RTX PRO 6000售价为16000美元，配备24064个C",
       "seen_at": "2026-11-08"
     },
     {
       "title": "NVIDIA's RTX PRO 5500 is China's most wanted GPU, and almost nobody is getting o",
       "publisher": "TweakTown",
       "source_type": "行业媒体",
-      "url": "https://www.tweaktown.com/news/114529/nvidias-rtx-pro-5500-is-chinas-most-wanted-gpu-and-almost-nobody-is-getting-one-soon/index.html",
+      "url": "https://www.tweaktown.com/rss/click/news/114529/?c=news-mf",
       "published_at": "2026-11-06",
-      "found_via": "Bing 新闻",
-      "snippet": "Alibaba, Tencent, and ByteDance lead Chinese orders for 6 million NVIDIA RTX PRO 5500 GPUs worth $70 billion, but expect only roughly 1% in four months.",
+      "found_via": "TweakTown",
+      "snippet": "Alibaba, Tencent, and ByteDance lead Chinese orders for 6 million NVIDIA RTX PRO 5500 GPUs worth $70 billion, but expect only roughly 1% in four months. Continu",
       "seen_at": "2026-11-08"
     },
     {
@@ -428,12 +428,12 @@
     },
     {
       "title": "传中国云巨头砸700亿美元，订购600万张RTX Pro 5500显卡",
-      "publisher": "中华网财经",
+      "publisher": "finance.china.com",
       "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1tcWJIN3dqRTN2ay1icjdLM1VwMTFBQVN5N1VONjVGamVQSnVuZmNCem5aRnYtaEY4blZsa1c2Ml93dHlrZEFhTXE3dXdrMW1KaVhVVVJ0MGpqeGhTeXMxelVpWExtaE51S0Q1Tld3?oc=5",
+      "url": "https://finance.china.com/TMT/13004688/20261105/49843530.html",
       "published_at": "2026-11-05",
-      "found_via": "Google 新闻",
-      "snippet": "",
+      "found_via": "Bing 新闻",
+      "snippet": "据彭博社11月4日报道，阿里巴巴、腾讯、字节跳动等中国科技公司合计向英伟达订购了约600万张RTX Pro 5500显卡，订单总值接近700亿美元，但预计在未来四个月内，他们只能收到数万张，交付率约为订单总量的1%。这订单数字较此前路透社报道的超过300万张翻了一倍，意味着供应缺口比外界原先预估的更为严峻。 报道援引匿",
       "seen_at": "2026-11-08"
     },
     {
@@ -699,14 +699,14 @@
   },
   "sweep": {
     "date": "2026-11-08",
-    "candidates": 2,
-    "read": 2,
+    "candidates": 1,
+    "read": 1,
     "added": [],
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "未通过核对 https://www.tweaktown.com/news/114529/nvidias-rtx-pro-5500-is-chinas-most-wanted-gpu-and-almost-nobody-is-getting-one-soon/index.html：摘要出现原文没有的数字",
-      "未通过核对 https://wccftech.com/chinese-tech-giants-wait-months-nvidia-rtx-pro-5500-cuda-dominance/：摘要出现原文没有的数字"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
+      "未通过核对 https://www.tweaktown.com/rss/click/news/114529/?c=news-mf：摘要出现原文没有的数字"
     ]
   }
 }
