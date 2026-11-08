@@ -269,6 +269,24 @@
   "found_via": "快科技"
  },
  {
+  "url": "https://news.17173.com/content/11052026/113433219.shtml",
+  "title": "600万颗！AI巨头砸4700亿元买RTX Pro 5500：英伟达只能交付1%",
+  "publisher": "news.17173.com",
+  "source_type": "其他",
+  "published_at": "2026-11-05",
+  "scope": "5500",
+  "snippets": [
+   "据报道，国内AI与云计算企业已向英伟达下达了约600万颗RTX Pro 5500芯片的订单，总价值高达700亿美元（注：约合人民币4702亿元）。",
+   "然而，知情人士透露，在未来四个月内，这些企业预计只能收到约1%的订单量，即数万颗芯片。",
+   "英伟达2027年RTX Pro 5500的全球规划产能不足300万颗，仅中国市场的订单规模就已远超其全球产能的两倍。",
+   "RTX Pro 5500之所以成为中国市场的抢手货，源于其独特的合规身份。",
+   "由于英伟达将台积电的先进产能优先分配给了利润更高的Rubin等数据中心平台，RTX Pro 5500在资源分配中处于靠后位置。",
+   "首批样品预计2026年12月供应，商业出货则要等到2027年第一季度，且到2027年底中国客户累计能拿到的总量可能仅为70万颗左右。"
+  ],
+  "seen_at": "2026-11-08",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-chips-stockpile-hong-kong-120548918.html",
   "title": "Nvidia chips stockpile in Hong Kong awaits China import approval - report",
   "publisher": "雅虎财经",
