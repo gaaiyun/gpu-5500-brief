@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-08T23:56:26+08:00",
+  "updated_at": "2026-11-09T04:45:42+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -348,23 +348,23 @@
     },
     {
       "title": "PNY RTX PRO 5500零售标价17999美元 高于RTX PRO 6000",
-      "publisher": "www.msn.cn",
+      "publisher": "3DM",
       "source_type": "其他",
-      "url": "https://www.msn.cn/zh-cn/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6%E5%92%8C%E8%AE%BE%E5%A4%87/pny-rtx-pro-5500%E9%9B%B6%E5%94%AE%E6%A0%87%E4%BB%B717999%E7%BE%8E%E5%85%83-%E9%AB%98%E4%BA%8Ertx-pro-6000/ar-AA2gROr8",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5PSG5tN0RmVWdSOVRHUkw5LXZEVFFuT2tYS3A4ckxaM2dEdjd5S0dhOU1lVVQ4TmxlbkNBeHRCQzlvNkNSY3pXMndDOXBYTlBCZ2xTcExfNTBETDFZ?oc=5",
       "published_at": "2026-11-06",
-      "found_via": "Bing 新闻",
-      "snippet": "美国零售商SHI Government Solutions上架了PNY制造的英伟达 RTX PRO 5500工作站显卡，页面标示建议零售价为17999美元，折后价为17408.63美元。这一零售标价高于规格更强的RTX PRO 6000。英伟达美国商城所列RTX PRO 6000售价为16000美元，配备24064个C",
-      "seen_at": "2026-11-08"
+      "found_via": "Google 新闻",
+      "snippet": "",
+      "seen_at": "2026-11-09"
     },
     {
       "title": "NVIDIA's RTX PRO 5500 is China's most wanted GPU, and almost nobody is getting o",
       "publisher": "TweakTown",
       "source_type": "行业媒体",
-      "url": "https://www.tweaktown.com/rss/click/news/114529/?c=news-mf",
+      "url": "https://www.tweaktown.com/news/114529/nvidias-rtx-pro-5500-is-chinas-most-wanted-gpu-and-almost-nobody-is-getting-one-soon/index.html",
       "published_at": "2026-11-06",
-      "found_via": "TweakTown",
-      "snippet": "Alibaba, Tencent, and ByteDance lead Chinese orders for 6 million NVIDIA RTX PRO 5500 GPUs worth $70 billion, but expect only roughly 1% in four months. Continu",
-      "seen_at": "2026-11-08"
+      "found_via": "Bing 新闻",
+      "snippet": "Alibaba, Tencent, and ByteDance lead Chinese orders for 6 million NVIDIA RTX PRO 5500 GPUs worth $70 billion, but expect only roughly 1% in four months.",
+      "seen_at": "2026-11-09"
     },
     {
       "title": "RTX PRO 5500 China shipments: the four-month forecast",
@@ -427,14 +427,64 @@
       "seen_at": "2026-11-06"
     },
     {
-      "title": "传中国云巨头砸700亿美元，订购600万张RTX Pro 5500显卡",
-      "publisher": "finance.china.com",
-      "source_type": "其他",
-      "url": "https://finance.china.com/TMT/13004688/20261105/49843530.html",
+      "title": "600 万订单,到货 1%!RTX PRO 5500,管制下唯一通道",
+      "publisher": "GPU闪修侠",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=600%20%E4%B8%87%E8%AE%A2%E5%8D%95%2C%E5%88%B0%E8%B4%A7%201%25%21RTX%20PRO%205500%2C%E7%AE%A1%E5%88%B6%E4%B8%8B%E5%94%AF%E4%B8%80%E9%80%9A%E9%81%93",
       "published_at": "2026-11-05",
-      "found_via": "Bing 新闻",
-      "snippet": "据彭博社11月4日报道，阿里巴巴、腾讯、字节跳动等中国科技公司合计向英伟达订购了约600万张RTX Pro 5500显卡，订单总值接近700亿美元，但预计在未来四个月内，他们只能收到数万张，交付率约为订单总量的1%。这订单数字较此前路透社报道的超过300万张翻了一倍，意味着供应缺口比外界原先预估的更为严峻。 报道援引匿",
-      "seen_at": "2026-11-08"
+      "found_via": "搜狗微信",
+      "snippet": "阿里、腾讯、字节等公司合计订购约600万颗NVIDIA RTX PRO 5500,单价逾1.1万美元,总货值约700亿美元,但未来四个月预计只能...",
+      "seen_at": "2026-11-09"
+    },
+    {
+      "title": "传中国云巨头砸700亿美元,订购600万张RTX Pro 5500显卡",
+      "publisher": "芯智讯",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E4%BC%A0%E4%B8%AD%E5%9B%BD%E4%BA%91%E5%B7%A8%E5%A4%B4%E7%A0%B8700%E4%BA%BF%E7%BE%8E%E5%85%83%2C%E8%AE%A2%E8%B4%AD600%E4%B8%87%E5%BC%A0RTX%20Pro%205500%E6%98%BE%E5%8D%A1",
+      "published_at": "2026-11-05",
+      "found_via": "搜狗微信",
+      "snippet": "据彭博社11月4日报道,阿里巴巴、腾讯、字节跳动等中国科技公司合计向英伟达订购了约600万张RTX Pro 5500显卡,订单总值接近...",
+      "seen_at": "2026-11-09"
+    },
+    {
+      "title": "600万颗RTX Pro 5500,只到货6万颗",
+      "publisher": "山东菏泽信息圈",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=600%E4%B8%87%E9%A2%97RTX%20Pro%205500%2C%E5%8F%AA%E5%88%B0%E8%B4%A76%E4%B8%87%E9%A2%97",
+      "published_at": "2026-11-05",
+      "found_via": "搜狗微信",
+      "snippet": "11月4日,彭博社引述知情人士称,阿里巴巴、腾讯、字节跳动等中国AI企业合计向英伟达订购约600万颗RTX Pro 5500,每颗超过1.1...",
+      "seen_at": "2026-11-09"
+    },
+    {
+      "title": "【今日科技大事件】2026年11月05日:英伟达中国缺卡,OpenAI 融资遇冷",
+      "publisher": "Si科技早知mi",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E3%80%90%E4%BB%8A%E6%97%A5%E7%A7%91%E6%8A%80%E5%A4%A7%E4%BA%8B%E4%BB%B6%E3%80%912026%E5%B9%B411%E6%9C%8805%E6%97%A5%3A%E8%8B%B1%E4%BC%9F%E8%BE%BE%E4%B8%AD%E5%9B%BD%E7%BC%BA%E5%8D%A1%2COpenAI%20%E8%9E%8D%E8%B5%84%E9%81%87%E5%86%B7",
+      "published_at": "2026-11-05",
+      "found_via": "搜狗微信",
+      "snippet": "RTX Pro 5500 到货寥寥,等于给国产算力留出了更紧迫的替代空间.后摩智能拿到数十亿 B 轮、M50 被 150 多个产品定点,说明资本...",
+      "seen_at": "2026-11-09"
+    },
+    {
+      "title": "英伟达 RTX PRO 5500 中国订单超 600 万张,供货安排牵动推理扩容/SpaceX 将 2027 年数据中心目标上调至约 13GW,多地开工建设",
+      "publisher": "穷鲸鱼宝典",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E8%8B%B1%E4%BC%9F%E8%BE%BE%20RTX%20PRO%205500%20%E4%B8%AD%E5%9B%BD%E8%AE%A2%E5%8D%95%E8%B6%85%20600%20%E4%B8%87%E5%BC%A0%2C%E4%BE%9B%E8%B4%A7%E5%AE%89%E6%8E%92%E7%89%B5%E5%8A%A8%E6%8E%A8%E7%90%86%E6%89%A9%E5%AE%B9/SpaceX%20%E5%B0%86%202027%20%E5%B9%B4%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E7%9B%AE%E6%A0%87%E4%B8%8A%E8%B0%83%E8%87%B3%E7%BA%A6%2013GW%2C%E5%A4%9A%E5%9C%B0%E5%BC%80%E5%B7%A5%E5%BB%BA%E8%AE%BE",
+      "published_at": "2026-11-05",
+      "found_via": "搜狗微信",
+      "snippet": "RTX PRO 5500 中国订单超 600 万张,供货安排牵动推理扩容05 ... 订单对应的服务容量,需要随实际到货和部署逐步形成.“▮ ...",
+      "seen_at": "2026-11-09"
+    },
+    {
+      "title": "英伟达对华RTX Pro 5500订单仅交付约1%:700亿美元需求遇产能瓶颈",
+      "publisher": "老龙皇",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E8%8B%B1%E4%BC%9F%E8%BE%BE%E5%AF%B9%E5%8D%8ERTX%20Pro%205500%E8%AE%A2%E5%8D%95%E4%BB%85%E4%BA%A4%E4%BB%98%E7%BA%A61%25%3A700%E4%BA%BF%E7%BE%8E%E5%85%83%E9%9C%80%E6%B1%82%E9%81%87%E4%BA%A7%E8%83%BD%E7%93%B6%E9%A2%88",
+      "published_at": "2026-11-05",
+      "found_via": "搜狗微信",
+      "snippet": "RTX Pro 5500作为面向数据中心的高端显卡,被大量用于推理集群... 对买家而言,实际到货比例可能只有订单量的百分之一左右,这意...",
+      "seen_at": "2026-11-09"
     },
     {
       "title": "Nvidia’s Chinese Clients Will Get Just 1% of $70 Billion in RTX Chip Orders",
@@ -565,56 +615,6 @@
       "found_via": "Bing 新闻",
       "snippet": "据知情人士透露，阿里巴巴、腾讯、字节跳动等中国AI和云运算公司合共向英伟达订购约600万枚RTX Pro 5500芯片，总订单价值约700亿美元，未来四个月预计仅能到货数万枚，约占订购量1%。",
       "seen_at": "2026-11-05"
-    },
-    {
-      "title": "Nvidia Stock News: NVDA Rises As $70 Billion China Chip Order Stuck In Queue",
-      "publisher": "coinpedia.org",
-      "source_type": "其他",
-      "url": "https://coinpedia.org/crypto-live-news/nvidia-stock-news-nvda-rises-as-70-billion-china-chip-order-stuck-in-queue/",
-      "published_at": "2026-11-04",
-      "found_via": "Bing 新闻",
-      "snippet": "Chinese tech giants have placed orders for about 6 million of Nvidia’s RTX Pro 5500 chips, worth roughly $70 billion, but most of that demand will go ...",
-      "seen_at": "2026-11-05"
-    },
-    {
-      "title": "报道称：未来几个月，Nvidia交付的中国市场RTX Pro 5500订单仅约占1%",
-      "publisher": "Mezha.net",
-      "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOb0hJVHJTVC0wUnVSZkJLdGVLTEZVQnNRVWY2eVFONTNYSUR2YXhVUGZUakFWN3dLMWctdzgtUWFLRXNsNENsNDhYRTJibzhzLW8xUWFNdzFTZ3BraEVpY2dBZFNrck1VS1pTTjZZSVB5Q09GbFJCTGl6NmV1ejFzdTJUMnNaZGVubnBVZ3h0RU5yMjFoakhkRA?oc=5",
-      "published_at": "2026-11-04",
-      "found_via": "Google 新闻",
-      "snippet": "",
-      "seen_at": "2026-11-05"
-    },
-    {
-      "title": "Nvidia RTX PRO 5500 China Orders: What’s Confirmed [2026]",
-      "publisher": "https://tech-insider.org/",
-      "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQdDJmSjExQTF0aEh6TkR2ZU5LVjl4VDZuNE96MWdaekxkcVk2bHRGNDB6c2RFXzBJNkRDQmw1SVZsdmJZdVc3SUVQak1xUVIzMUpDMktDNllveGc3RzFZV1FSb1RtREp2ZkZWQ3dMcURKWmltcFg3SDd5aUllb3RoVGNidUtWMWY0eDlDRVd3?oc=5",
-      "published_at": "2026-11-04",
-      "found_via": "Google 新闻",
-      "snippet": "",
-      "seen_at": "2026-11-05"
-    },
-    {
-      "title": "Report: Nvidia to deliver only about 1% of Chinese RTX Pro 5500 orders in coming",
-      "publisher": "Mezha.net",
-      "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNdnM3TGdEd25ZTF9zMlpsMldrUW9PakNIZU03aTIyNGtnaGhWc19lanhCa0YtQ1huQU9kdnFBRGRsa3FqLWZFT0ZTV2hUTTJ0RDhTdHNNOExDSWktb21mRnlyQkluVjhyZTFnVTd0d3FLcHh5Mml6Sm9sYXBKbUlvdmt3?oc=5",
-      "published_at": "2026-11-04",
-      "found_via": "Google 新闻",
-      "snippet": "",
-      "seen_at": "2026-11-05"
-    },
-    {
-      "title": "Chinese AI Giants Place NT$2.3 Trillion Order for Nvidia RTX Pro 5500, but Actua",
-      "publisher": "BigGo Finance",
-      "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQbENTUmwtbmRkQ3RfUHpmNkRYbm1kbVB1N1h3aFE5UEQ3UWpVYUxadERpTTdVVF9ONTFsTl9JUi0wZGZmcXJSUTJQVTBIVVFreFlTMURlZm5VNmN6c1FQMWNWLVlYZE5UT0VVSTVkNXdQX0tzdEE?oc=5",
-      "published_at": "2026-11-04",
-      "found_via": "Google 新闻",
-      "snippet": "",
-      "seen_at": "2026-11-05"
     }
   ],
   "mentions": [
@@ -678,7 +678,7 @@
     },
     "2026-11-05": {
       "media": 13,
-      "wechat": 4
+      "wechat": 8
     },
     "2026-11-06": {
       "media": 11,
@@ -698,14 +698,15 @@
     "text": "路透称约60万枚H200滞留香港、北京未批大规模进口；FT称甲骨文取消腾讯租赁。海外算力路径收紧，需求更压向5500，但交付仍只有年底前数千颗、2027年2月左右数万颗两个确认节点。"
   },
   "sweep": {
-    "date": "2026-11-08",
+    "date": "2026-11-09",
     "candidates": 1,
     "read": 1,
     "added": [],
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "未通过核对 https://www.tweaktown.com/rss/click/news/114529/?c=news-mf：摘要出现原文没有的数字"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
+      "未通过核对 https://www.tweaktown.com/news/114529/nvidias-rtx-pro-5500-is-chinas-most-wanted-gpu-and-almost-nobody-is-getting-one-soon/index.html：摘要出现原文没有的数字"
     ]
   }
 }
