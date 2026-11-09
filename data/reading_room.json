@@ -1,5 +1,23 @@
 [
  {
+  "url": "https://www.sohu.com/a/1098953115_117917",
+  "title": "一辆装满英伟达芯片的卡车连车带货消失，给中国硬通货厂商提个醒",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-08",
+  "scope": "context",
+  "snippets": [
+   "最近英伟达这桩“芯片大劫案”闹得全网皆知：一批价值1140万美元的AI芯片与硬件，从加州奥克兰仓库正规提货后凭空失联，连车带货彻底失踪。",
+   "首先是它好销赃，全球黑市对高端GPU的需求旺盛到离谱，一颗顶级GPU在美国境内值55万美元，出了国境线就能卖到100万美元甚至更高。",
+   "这批货放在英伟达身上，不算多，而值得关注的另一个点是，这个案子跟今年东山精密800G光模块海外失窃案颇为类似。",
+   "直到7月初才在机构圈传出“小作文”，说货值高达2700万美元，折合人民币约1.93亿。",
+   "800G光模块是当前AI算力基建的核心刚需，海外正规渠道单只现货价普遍在数千到上万美元，换算人民币几万块一只很正常。",
+   "对比英伟达的失窃案，就会发现类似点，与AI芯片类似，800G光模块体积小、价值高、不愁销路，是窃贼眼中的完美标的—— 一个小包装箱就能装几千万的货，偷出来转手就"
+  ],
+  "seen_at": "2026-11-09",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://wccftech.com/nvidia-jensen-huang-rejects-anthropic-china-chip-ban-america-competition-vera-rubin/",
   "title": "NVIDIA’s Jensen Huang Rejects Anthropic’s Total China Chip Ban Push, Says “I Completely Disagree” An",
   "publisher": "Wccftech",
@@ -144,6 +162,24 @@
    "而中国企业的总订单量据称已突破600万张，远超NVIDIA 2027年约300万张的规划产能。"
   ],
   "seen_at": "2026-11-07",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.17173.com/content/11062026/113411469.shtml",
+  "title": "小弟骑到大哥头上！RTX PRO 5500定价反超RTX PRO 6000：售价超12万元",
+  "publisher": "news.17173.com",
+  "source_type": "其他",
+  "published_at": "2026-11-06",
+  "scope": "5500",
+  "snippets": [
+   "据报道，NVIDIA RTX PRO 5500 Blackwell工作站显卡已在美国零售商SHI Government Solutions上架。",
+   "PNY版本标价17999美元（注：约合人民币120907元），折扣后仍需17408.63美元（注：约合人民币116934元）。",
+   "令人意外的是，这个价格比NVIDIA自家旗舰RTX PRO 6000的16000美元官方标价还高出约1400美元。",
+   "从规格上看，RTX PRO 5500本该是RTX PRO 6000的“小弟”。",
+   "市场分析指出，中国市场的巨大需求是推高RTX PRO 5500价格的关键因素。",
+   "而中国企业的总订单量据称已突破600万张，远超NVIDIA 2027年约300万张的规划产能。"
+  ],
+  "seen_at": "2026-11-09",
   "found_via": "Bing 新闻"
  },
  {
@@ -645,38 +681,6 @@
   "snippets": [
    "DeepSeek则在官方API页面提到，受限于高端算力，目前V4-Pro模型的服务吞吐仍有限，预计下半年昇腾950超节点批量上市后，Pro价格会大幅下调。",
    "9月30日，DeepSeek宣布，正式开源面向华为昇腾算力平台的基础设施组件，涵盖TileLang高级语言编译工具、高性能计算库（DeepGEMM、 Flash"
-  ],
-  "seen_at": "2026-11-06",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-orders-data-centre-clients-050013308.html",
-  "title": "Nvidia orders data centre clients to reduce China exposure",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-03",
-  "scope": "context",
-  "snippets": [
-   "A rack of Nvidia's B300 chips, which sells for about $600,000 internationally, l",
-   "The B300, which is not allowed to be sold in China due to US export controls, is",
-   "Nvidia shares have fallen more than 13 per cent in the past month but remain 7 p"
-  ],
-  "seen_at": "2026-11-04",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-nvda-asking-cloud-clients-232102833.html",
-  "title": "What Is Nvidia (NVDA) Asking Cloud Clients To Change Under New China Rules?",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-03",
-  "scope": "context",
-  "snippets": [
-   "Nvidia's new 51% non Chinese sales rule for data center clients sits alongside w",
-   "Take a look at 4 other big wins we have identified for NVIDIA.",
-   "Requiring data center clients to source at least 51% of sales from non Chinese c",
-   "The community Narrative focuses on diversified AI infrastructure spending from h",
-   "See how these catalysts shape NVIDIA's path to a $329 fair value ."
   ],
   "seen_at": "2026-11-06",
   "found_via": "Bing 新闻"

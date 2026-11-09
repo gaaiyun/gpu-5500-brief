@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-09T04:45:42+08:00",
+  "updated_at": "2026-11-09T10:56:04+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -317,6 +317,16 @@
   ],
   "leads": [
     {
+      "title": "RTX 5090 Price vs RTX PRO 5500: 32GB vs 84GB [2026]",
+      "publisher": "tech-insider.org",
+      "source_type": "其他",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1fSHZ0TjljYmt4UTROa0FXZnpGeUpIajhaOUtXV3BYSzdBRzdIU2ZTWDYzN3I5UjVtMzlPMzJuOFVEcjlYQVlmZ0FSRV9lRGlRV1BkY3lVbHhoY3ltdFl1Nnhld0tkdmdxWjlid05wU1NrQmVHTS1nQkt3bDFrZ1E?oc=5",
+      "published_at": "2026-11-09",
+      "found_via": "Google 新闻",
+      "snippet": "",
+      "seen_at": "2026-11-09"
+    },
+    {
       "title": "英伟达 RTX PRO 5500|约84GB GDDR7|约21760 CUDA|Blackwell工作站版",
       "publisher": "AI芯集网",
       "source_type": "公众号",
@@ -348,12 +358,12 @@
     },
     {
       "title": "PNY RTX PRO 5500零售标价17999美元 高于RTX PRO 6000",
-      "publisher": "3DM",
+      "publisher": "www.msn.cn",
       "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5PSG5tN0RmVWdSOVRHUkw5LXZEVFFuT2tYS3A4ckxaM2dEdjd5S0dhOU1lVVQ4TmxlbkNBeHRCQzlvNkNSY3pXMndDOXBYTlBCZ2xTcExfNTBETDFZ?oc=5",
+      "url": "https://www.msn.cn/zh-cn/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6%E5%92%8C%E8%AE%BE%E5%A4%87/pny-rtx-pro-5500%E9%9B%B6%E5%94%AE%E6%A0%87%E4%BB%B717999%E7%BE%8E%E5%85%83-%E9%AB%98%E4%BA%8Ertx-pro-6000/ar-AA2gROr8",
       "published_at": "2026-11-06",
-      "found_via": "Google 新闻",
-      "snippet": "",
+      "found_via": "Bing 新闻",
+      "snippet": "美国零售商SHI Government Solutions上架了PNY制造的英伟达 RTX PRO 5500工作站显卡，页面标示建议零售价为17999美元，折后价为17408.63美元。这一零售标价高于规格更强的RTX PRO 6000。英伟达美国商城所列RTX PRO 6000售价为16000美元，配备24064个C",
       "seen_at": "2026-11-09"
     },
     {
@@ -605,16 +615,6 @@
       "found_via": "Bing 新闻",
       "snippet": "据彭博引述消息报道，阿里巴巴（9988）、腾讯（700）、字节跳动及其他中国AI与云端企业，合共订购约600万枚Nvidia RTX Pro 5500晶片，订单总值约700亿美元。不过，买家预计未来四个月只能收到数万枚，相当于订购量约1%。 RTX Pro 5500非最先进晶片 报道指，RTX Pro 5500并非英伟",
       "seen_at": "2026-11-05"
-    },
-    {
-      "title": "中国云企业订购约600万枚英伟达RTX芯片 未来四个月仅到货1%",
-      "publisher": "www.guandian.cn",
-      "source_type": "其他",
-      "url": "https://www.guandian.cn/article/20261104/623030.html",
-      "published_at": "2026-11-04",
-      "found_via": "Bing 新闻",
-      "snippet": "据知情人士透露，阿里巴巴、腾讯、字节跳动等中国AI和云运算公司合共向英伟达订购约600万枚RTX Pro 5500芯片，总订单价值约700亿美元，未来四个月预计仅能到货数万枚，约占订购量1%。",
-      "seen_at": "2026-11-05"
     }
   ],
   "mentions": [
@@ -689,6 +689,10 @@
       "wechat": 2
     },
     "2026-11-08": {
+      "media": 3,
+      "wechat": 0
+    },
+    "2026-11-09": {
       "media": 1,
       "wechat": 0
     }
@@ -699,14 +703,13 @@
   },
   "sweep": {
     "date": "2026-11-09",
-    "candidates": 1,
-    "read": 1,
+    "candidates": 0,
+    "read": 0,
     "added": [],
     "corroborated": 0,
-    "model": "@cf/zai-org/glm-4.7-flash",
+    "model": null,
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
-      "未通过核对 https://www.tweaktown.com/news/114529/nvidias-rtx-pro-5500-is-chinas-most-wanted-gpu-and-almost-nobody-is-getting-one-soon/index.html：摘要出现原文没有的数字"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
     ]
   }
 }
