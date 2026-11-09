@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-09T10:56:04+08:00",
+  "updated_at": "2026-11-09T15:54:06+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -87,7 +87,8 @@
       "impact": "未来四个月交付量仅占总订单1%，意味着首批数千颗预计年底前到货，后续交付节奏将严重受制于英伟达全球产能限制。",
       "watch": "核实首批数千颗与数万颗的具体交付时间节点及获配比例5%-10%的来源。",
       "corroboration": [
-        "https://cj.sina.com.cn/articles/view/5953466437/162dab0450670bh1rw"
+        "https://cj.sina.com.cn/articles/view/5953466437/162dab0450670bh1rw",
+        "https://finance.sina.com.cn/stock/t/2026-11-05/doc-inixrytw8895818.shtml"
       ],
       "claims": [],
       "checked_at": "2026-11-05",
@@ -357,13 +358,13 @@
       "seen_at": "2026-11-07"
     },
     {
-      "title": "PNY RTX PRO 5500零售标价17999美元 高于RTX PRO 6000",
-      "publisher": "www.msn.cn",
-      "source_type": "其他",
-      "url": "https://www.msn.cn/zh-cn/%E6%8A%80%E6%9C%AF/%E7%A1%AC%E4%BB%B6%E5%92%8C%E8%AE%BE%E5%A4%87/pny-rtx-pro-5500%E9%9B%B6%E5%94%AE%E6%A0%87%E4%BB%B717999%E7%BE%8E%E5%85%83-%E9%AB%98%E4%BA%8Ertx-pro-6000/ar-AA2gROr8",
+      "title": "【资讯】PNY RTX PRO 5500零售标价17999美元 高于RTX PRO 6000",
+      "publisher": "手游巴士",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E3%80%90%E8%B5%84%E8%AE%AF%E3%80%91PNY%20RTX%20PRO%205500%E9%9B%B6%E5%94%AE%E6%A0%87%E4%BB%B717999%E7%BE%8E%E5%85%83%20%E9%AB%98%E4%BA%8ERTX%20PRO%206000",
       "published_at": "2026-11-06",
-      "found_via": "Bing 新闻",
-      "snippet": "美国零售商SHI Government Solutions上架了PNY制造的英伟达 RTX PRO 5500工作站显卡，页面标示建议零售价为17999美元，折后价为17408.63美元。这一零售标价高于规格更强的RTX PRO 6000。英伟达美国商城所列RTX PRO 6000售价为16000美元，配备24064个C",
+      "found_via": "搜狗微信",
+      "snippet": "NVIDIA RTX PRO 5500 Blackwell专业工作站显卡在美国零售商SHI Government Solutions标价17999美元(约12.09万元人民币),折...",
       "seen_at": "2026-11-09"
     },
     {
@@ -685,15 +686,15 @@
       "wechat": 3
     },
     "2026-11-07": {
-      "media": 4,
+      "media": 6,
       "wechat": 2
     },
     "2026-11-08": {
-      "media": 3,
+      "media": 5,
       "wechat": 0
     },
     "2026-11-09": {
-      "media": 1,
+      "media": 3,
       "wechat": 0
     }
   },
@@ -703,13 +704,14 @@
   },
   "sweep": {
     "date": "2026-11-09",
-    "candidates": 0,
-    "read": 0,
+    "candidates": 1,
+    "read": 1,
     "added": [],
-    "corroborated": 0,
-    "model": null,
+    "corroborated": 1,
+    "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
+      "重复报道 news-20261105-10bb1f：https://finance.sina.com.cn/stock/t/2026-11-05/doc-inixrytw8895818.shtml"
     ]
   }
 }
