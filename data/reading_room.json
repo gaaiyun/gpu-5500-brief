@@ -1,5 +1,38 @@
 [
  {
+  "url": "https://www.tomshardware.com/tech-industry/policy/nvidia-cracks-down-on-overseas-cloud-ai-gpu-rentals-for-china-partners-face-51-percent-non-chinese-quota-as-black-market-b300-rack-prices-surge-to-usd2-8-million",
+  "title": "Nvidia cracks down on overseas cloud AI GPU rentals for China",
+  "publisher": "Tom's Hardware",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-10",
+  "scope": "5500",
+  "snippets": [
+   "Nvidia has told cloud partners worldwide that at least 51% of their services mus",
+   "Meanwhile, a B300 rack that sells for about $600,000 internationally reportedly ",
+   "Chinese customers have ordered more than 6 million of Nvidia’s export-compliant "
+  ],
+  "seen_at": "2026-11-10",
+  "found_via": "Tom's Hardware"
+ },
+ {
+  "url": "https://www.eet-china.com/news/202611092617.html",
+  "title": "60万颗英伟达H200芯片滞留香港，中方未批准大规模进口",
+  "publisher": "电子工程专辑",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-09",
+  "scope": "context",
+  "snippets": [
+   "路透社近日引述多名 \"知情人士\" 报道称，约有60万颗英伟达H200人工智能芯片目前存放在香港，等待运往中国内地。",
+   "综合路透社报道及亚洲日报、每日经济等媒体的转述，三名知情人士表示，近几个月来，中国已允许部分H200芯片进入境内：几家中国大型互联网公司各自获得了约1万颗芯片的",
+   "回顾时间线：2026年1月中旬，中国海关传达了不允许H200进入中国内地的方针，并要求国内企业克制不必要的采购；",
+   "3月，英伟达获得对多家中国客户销售H200的许可；",
+   "8月，字节跳动和腾讯分别获得约1万颗供应。",
+   "有知情人士称，截至2026年10月底，一台配备8张H200显卡的服务器在中国内地的报价超过600万元人民币，约为一年前价格的三倍；"
+  ],
+  "seen_at": "2026-11-10",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-probe-puts-china-exposed-051236166.html",
   "title": "Nvidia Probe Puts China Exposed US Chip Stocks In Focus",
   "publisher": "雅虎财经",
@@ -15,6 +48,21 @@
    "Market Cap: US$19.6b"
   ],
   "seen_at": "2026-11-09",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/jensen-huang-affair-alleged-chinese-180952926.html",
+  "title": "Jensen Huang’s affair with alleged Chinese spy puts Nvidia’s China ambitions under scrutiny",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-09",
+  "scope": "context",
+  "snippets": [
+   "In the three months ended July 26, Nvidia recorded $7.9 billion in revenue from ",
+   "afterward, the government reversed restrictions on Nvidia's H20 chips and allowe",
+   "The idea that Huang needed any encouragement in the form of an attractive woman "
+  ],
+  "seen_at": "2026-11-10",
   "found_via": "Bing 新闻"
  },
  {
@@ -48,24 +96,6 @@
    "直到7月初才在机构圈传出“小作文”，说货值高达2700万美元，折合人民币约1.93亿。",
    "800G光模块是当前AI算力基建的核心刚需，海外正规渠道单只现货价普遍在数千到上万美元，换算人民币几万块一只很正常。",
    "对比英伟达的失窃案，就会发现类似点，与AI芯片类似，800G光模块体积小、价值高、不愁销路，是窃贼眼中的完美标的—— 一个小包装箱就能装几千万的货，偷出来转手就"
-  ],
-  "seen_at": "2026-11-09",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.eet-china.com/news/202611092617.html",
-  "title": "60万颗英伟达H200芯片滞留香港，中方未批准大规模进口",
-  "publisher": "电子工程专辑",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-08",
-  "scope": "context",
-  "snippets": [
-   "路透社近日引述多名 \"知情人士\" 报道称，约有60万颗英伟达H200人工智能芯片目前存放在香港，等待运往中国内地。",
-   "综合路透社报道及亚洲日报、每日经济等媒体的转述，三名知情人士表示，近几个月来，中国已允许部分H200芯片进入境内：几家中国大型互联网公司各自获得了约1万颗芯片的",
-   "回顾时间线：2026年1月中旬，中国海关传达了不允许H200进入中国内地的方针，并要求国内企业克制不必要的采购；",
-   "3月，英伟达获得对多家中国客户销售H200的许可；",
-   "8月，字节跳动和腾讯分别获得约1万颗供应。",
-   "有知情人士称，截至2026年10月底，一台配备8张H200显卡的服务器在中国内地的报价超过600万元人民币，约为一年前价格的三倍；"
   ],
   "seen_at": "2026-11-09",
   "found_via": "Bing 新闻"
@@ -132,7 +162,7 @@
    "《纽约时报》进一步调查发现，其他获准购买或处理H200芯片的中国企业，也与遭美国制裁的公司或中国军事供应商有关联。",
    "特朗普于2025年12月批准英伟达向中国出售H200芯片，放宽拜登政府时期的部分出口限制。"
   ],
-  "seen_at": "2026-11-09",
+  "seen_at": "2026-11-10",
   "found_via": "Bing 新闻"
  },
  {
@@ -232,7 +262,7 @@
    "市场分析指出，中国市场的巨大需求是推高RTX PRO 5500价格的关键因素。",
    "而中国企业的总订单量据称已突破600万张，远超NVIDIA 2027年约300万张的规划产能。"
   ],
-  "seen_at": "2026-11-09",
+  "seen_at": "2026-11-10",
   "found_via": "Bing 新闻"
  },
  {
@@ -654,42 +684,6 @@
    "NVIDIA RTX PRO 5000 Blackwell"
   ],
   "seen_at": "2026-11-08",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://news.mydrivers.com/1/1163/1163119.htm",
-  "title": "一卡难求！英伟达中国客户未来四月只能收到1% RTX芯片",
-  "publisher": "快科技",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-04",
-  "scope": "5500",
-  "snippets": [
-   "快科技11月4日消息，据知情人士透露， 几家大型中国AI与云计算公司总计订购了约600万颗英伟达（NVDA.US）RTX Pro 5500芯片。",
-   "然而， 这些公司预计在未来四个月内仅能收到数万颗芯片，约占订单总量的1%。",
-   "每颗芯片售价超过11,000美元，订单总价值约700亿美元。",
-   "知情人士称，中国主要AI开发商预计首批数千颗芯片将于今年底前交付，明年2月左右再交付数万颗；",
-   "由于英伟达将更多产能分配给Rubin等下一代产品，其已警告客户未来产能受限，RTX Pro 5500供应预计将持续紧张。",
-   "另一位知情人士透露，根据主要买家内部测算，随着英伟达扩大产量，中国超大规模数据中心运营商估计到2027年底可能收到约70万颗该芯片，但最终出货量可能随产能调整而"
-  ],
-  "seen_at": "2026-11-04",
-  "found_via": "快科技"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-china-clients-1-70-031424389.html",
-  "title": "Nvidia China Clients to Get 1% of $70 Billion RTX Chips Ordered",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-04",
-  "scope": "5500",
-  "snippets": [
-   "Nvidia China Clients to Get 1% of $70 Billion RTX Chips Ordered",
-   "Morgan Stanley Offers $2.3 Billion Debt for Dell Family Deal",
-   "and other Chinese AI and cloud firms have in total ordered about 6 million of Nv",
-   "At more than $11,000 a chip, the total orders so far are valued at about $70 bil",
-   "While the US bars Nvidia from selling its most cutting-edge chips to China, the ",
-   "Major Chinese AI developers expect the first batch of several thousand RTX Pro 5"
-  ],
-  "seen_at": "2026-11-05",
   "found_via": "Bing 新闻"
  }
 ]
