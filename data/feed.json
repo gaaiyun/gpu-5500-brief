@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-11T01:00:04+08:00",
+  "updated_at": "2026-11-11T05:56:41+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -356,6 +356,16 @@
   ],
   "leads": [
     {
+      "title": "【智算ABC】NVIDIA RTX PRO 5500 GPU大揭秘:以工作站之名,行算力基础设施之实",
+      "publisher": "科学千里眼",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E3%80%90%E6%99%BA%E7%AE%97ABC%E3%80%91NVIDIA%20RTX%20PRO%205500%20GPU%E5%A4%A7%E6%8F%AD%E7%A7%98%3A%E4%BB%A5%E5%B7%A5%E4%BD%9C%E7%AB%99%E4%B9%8B%E5%90%8D%2C%E8%A1%8C%E7%AE%97%E5%8A%9B%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E4%B9%8B%E5%AE%9E",
+      "published_at": "2026-11-10",
+      "found_via": "搜狗微信",
+      "snippet": "RTX PRO 5500 Blackwell Workstation Edition 专业工作站显卡,以 84GB ECC GDDR7 显存、21,760 个 CUDA 核心与 600W 功耗预...",
+      "seen_at": "2026-11-11"
+    },
+    {
       "title": "RTX PRO5500 显存神卡到货倒计时!国内首批,手慢无",
       "publisher": "龙游星海",
       "source_type": "公众号",
@@ -644,16 +654,6 @@
       "found_via": "搜狗微信",
       "snippet": "RTX Pro 5500,未来四个月预计仅到货数万颗,约占订单 1%,单价超 1.1 万美元;产能被优先分配给 Rubin 等下一代产品,直接牵动...",
       "seen_at": "2026-11-05"
-    },
-    {
-      "title": "GB300、RTX PRO 5500 入局,Token 成本倒逼算力租赁选型重构,英伟达与国产 GPU 怎么权衡?",
-      "publisher": "AlgoNova 智算",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=GB300%E3%80%81RTX%20PRO%205500%20%E5%85%A5%E5%B1%80%2CToken%20%E6%88%90%E6%9C%AC%E5%80%92%E9%80%BC%E7%AE%97%E5%8A%9B%E7%A7%9F%E8%B5%81%E9%80%89%E5%9E%8B%E9%87%8D%E6%9E%84%2C%E8%8B%B1%E4%BC%9F%E8%BE%BE%E4%B8%8E%E5%9B%BD%E4%BA%A7%20GPU%20%E6%80%8E%E4%B9%88%E6%9D%83%E8%A1%A1%3F",
-      "published_at": "2026-11-05",
-      "found_via": "搜狗微信",
-      "snippet": "RTX PRO 5500(Blackwell):今年算力租赁市场的 “黑马推理卡”很多客户容易混淆:RTX PRO 5500 不是旗舰训练卡,是 Blackwell ...",
-      "seen_at": "2026-11-05"
     }
   ],
   "mentions": [
@@ -737,7 +737,7 @@
     },
     "2026-11-10": {
       "media": 7,
-      "wechat": 1
+      "wechat": 2
     }
   },
   "take": {
@@ -752,8 +752,7 @@
     "corroborated": 0,
     "model": null,
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
-      "雷峰网 RSS 失败：502 Server Error: Bad Gateway for url: https://www.leiphone.com/feed"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
     ]
   }
 }
