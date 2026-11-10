@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-10T07:10:00+08:00",
-  "agent": "cloud-routine",
+  "updated_at": "2026-11-11T05:56:41+08:00",
+  "agent": "actions-sweep+cloud-routine",
   "searched": [
     "RTX Pro 5500 China price shipment allocation",
     "RTX PRO 5500 报价 现货 渠道 丽台 浪潮 交付",
@@ -17,6 +17,43 @@
     "PRO5500 公告 采购合同 上市公司"
   ],
   "items": [
+    {
+      "id": "news-20261106-71d4ba",
+      "title": "腾讯新闻：RTX PRO 5500 美国标价超旗舰，称国内需求推高价格",
+      "published_at": "2026-11-06",
+      "publisher": "腾讯新闻",
+      "source_type": "公众号",
+      "url": "https://news.qq.com/rain/a/20261106A05ZSM00",
+      "grade": "C",
+      "summary": "腾讯新闻11月6日消息，RTX PRO 5500 Blackwell在美国零售商SHI Government Solutions标价17999美元，折合人民币约120907元；折扣后约17408.63美元，约合人民币116934元。文章称国内企业订单总量已突破600万张，超出NVIDIA 2027年300万张产能。",
+      "impact": "美国渠道高价可能进一步刺激国内市场对RTX PRO 5500的抢购预期，加剧供需失衡。",
+      "watch": "核实美国渠道标价与国内实际到货价的关联性。",
+      "corroboration": [],
+      "claims": [
+        {
+          "text": "RTX PRO 5500 Blackwell在美国零售商SHI Government Solutions标价17999美元",
+          "status": "有出处",
+          "ref": "https://news.qq.com/rain/a/20261106A05F7K00"
+        },
+        {
+          "text": "RTX PRO 5500 Blackwell在美国零售商SHI Government Solutions折扣后约17408.63美元",
+          "status": "有出处",
+          "ref": "https://news.qq.com/rain/a/20261106A05F7K00"
+        },
+        {
+          "text": "国内企业订单总量已突破600万张",
+          "status": "有出处",
+          "ref": "https://news.mydrivers.com/1/1163/1163315.htm"
+        },
+        {
+          "text": "超出NVIDIA 2027年300万张产能",
+          "status": "有出处",
+          "ref": "https://news.mydrivers.com/1/1163/1163315.htm"
+        }
+      ],
+      "checked_at": "2026-11-10",
+      "found_via": "Bing 新闻"
+    },
     {
       "id": "news-20261106-420253",
       "title": "RTX PRO 5500定价反超RTX PRO 6000：售价超12万元",
@@ -314,22 +351,24 @@
   ],
   "leads": [
     {
-      "title": "中国移动：2027年采购总金额预计5000亿元以上，算力投资1000亿元以上",
-      "publisher": "财联社",
-      "source_type": "主流媒体",
-      "url": "https://www.cls.cn/detail/2527866",
-      "published_at": "2026-11-09",
-      "found_via": "搜索摘录",
-      "snippet": "2027年预计采购总金额5000亿元以上，其中算力投资1000亿元以上；AI超节点集采明确锁定华为CANN生态。"
+      "title": "【智算ABC】NVIDIA RTX PRO 5500 GPU大揭秘:以工作站之名,行算力基础设施之实",
+      "publisher": "科学千里眼",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E3%80%90%E6%99%BA%E7%AE%97ABC%E3%80%91NVIDIA%20RTX%20PRO%205500%20GPU%E5%A4%A7%E6%8F%AD%E7%A7%98%3A%E4%BB%A5%E5%B7%A5%E4%BD%9C%E7%AB%99%E4%B9%8B%E5%90%8D%2C%E8%A1%8C%E7%AE%97%E5%8A%9B%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E4%B9%8B%E5%AE%9E",
+      "published_at": "2026-11-10",
+      "found_via": "搜狗微信",
+      "snippet": "RTX PRO 5500 Blackwell Workstation Edition 专业工作站显卡,以 84GB ECC GDDR7 显存、21,760 个 CUDA 核心与 600W 功耗预...",
+      "seen_at": "2026-11-11"
     },
     {
-      "title": "SMM：长三角H100最高月租金从87,000元涨至92,000元",
-      "publisher": "上海有色网 SMM",
-      "source_type": "行业媒体",
-      "url": "https://news.metal.com/newscontent/104204056-smm-computing-power-midday-review-h100-falls-below-90000-for-the-first-time-5090-turbo-continues-to-decline",
-      "published_at": "2026-11-04",
-      "found_via": "搜索摘录",
-      "snippet": "11月4日长三角H100最高月租金涨至92,000元，最低78,000元不变。"
+      "title": "RTX PRO5500 显存神卡到货倒计时!国内首批,手慢无",
+      "publisher": "龙游星海",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO5500%20%E6%98%BE%E5%AD%98%E7%A5%9E%E5%8D%A1%E5%88%B0%E8%B4%A7%E5%80%92%E8%AE%A1%E6%97%B6%21%E5%9B%BD%E5%86%85%E9%A6%96%E6%89%B9%2C%E6%89%8B%E6%85%A2%E6%97%A0",
+      "published_at": "2026-11-10",
+      "found_via": "搜狗微信",
+      "snippet": "通知RTX PRO5500 显存神卡到货倒计时!热点资讯 84GB 显存,600W 功耗,全球疯抢——这张卡,我们即将到货,而且是“国内首...",
+      "seen_at": "2026-11-11"
     },
     {
       "title": "RTX 5090 Price vs RTX PRO 5500: 32GB vs 84GB [2026]",
@@ -340,6 +379,16 @@
       "found_via": "Google 新闻",
       "snippet": "",
       "seen_at": "2026-11-09"
+    },
+    {
+      "title": "中国移动：2027年采购总金额预计5000亿元以上，算力投资1000亿元以上",
+      "publisher": "财联社",
+      "source_type": "主流媒体",
+      "url": "https://www.cls.cn/detail/2527866",
+      "published_at": "2026-11-09",
+      "found_via": "搜索摘录",
+      "snippet": "2027年预计采购总金额5000亿元以上，其中算力投资1000亿元以上；AI超节点集采明确锁定华为CANN生态。",
+      "seen_at": "2026-11-10"
     },
     {
       "title": "英伟达 RTX PRO 5500|约84GB GDDR7|约21760 CUDA|Blackwell工作站版",
@@ -482,6 +531,26 @@
       "seen_at": "2026-11-06"
     },
     {
+      "title": "RTX 5090 对比 RTX PRO 5500:32GB 和 84GB 显存,跑 AI 大模型差距有多大?",
+      "publisher": "技术学习日常",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%205090%20%E5%AF%B9%E6%AF%94%20RTX%20PRO%205500%3A32GB%20%E5%92%8C%2084GB%20%E6%98%BE%E5%AD%98%2C%E8%B7%91%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B7%AE%E8%B7%9D%E6%9C%89%E5%A4%9A%E5%A4%A7%3F",
+      "published_at": "2026-11-05",
+      "found_via": "搜狗微信",
+      "snippet": "上一期我们对比了 RTX 5090 和 RTX PRO 5500.一个是消费级旗舰,32GB 显存;一个是专业工作站显卡,84GB 显存.文章发布后...",
+      "seen_at": "2026-11-10"
+    },
+    {
+      "title": "P5500:成也萧何!败也萧何?​",
+      "publisher": "两年砍柴",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=P5500%3A%E6%88%90%E4%B9%9F%E8%90%A7%E4%BD%95%21%E8%B4%A5%E4%B9%9F%E8%90%A7%E4%BD%95%3F%E2%80%8B",
+      "published_at": "2026-11-05",
+      "found_via": "搜狗微信",
+      "snippet": "RTX Pro 5500,或许就是这句话最好的例证.最近圈子里都在聊它.一边是大厂排队下单,订单传闻有几百亿(美金哦);另一边所有...",
+      "seen_at": "2026-11-10"
+    },
+    {
       "title": "货币资金不足12亿,百亿游戏巨头拟砸42亿买GPU",
       "publisher": "雷达Finance",
       "source_type": "公众号",
@@ -580,36 +649,6 @@
       "found_via": "搜狗微信",
       "snippet": "RTX Pro 5500,未来四个月预计仅到货数万颗,约占订单 1%,单价超 1.1 万美元;产能被优先分配给 Rubin 等下一代产品,直接牵动...",
       "seen_at": "2026-11-05"
-    },
-    {
-      "title": "GB300、RTX PRO 5500 入局,Token 成本倒逼算力租赁选型重构,英伟达与国产 GPU 怎么权衡?",
-      "publisher": "AlgoNova 智算",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=GB300%E3%80%81RTX%20PRO%205500%20%E5%85%A5%E5%B1%80%2CToken%20%E6%88%90%E6%9C%AC%E5%80%92%E9%80%BC%E7%AE%97%E5%8A%9B%E7%A7%9F%E8%B5%81%E9%80%89%E5%9E%8B%E9%87%8D%E6%9E%84%2C%E8%8B%B1%E4%BC%9F%E8%BE%BE%E4%B8%8E%E5%9B%BD%E4%BA%A7%20GPU%20%E6%80%8E%E4%B9%88%E6%9D%83%E8%A1%A1%3F",
-      "published_at": "2026-11-05",
-      "found_via": "搜狗微信",
-      "snippet": "RTX PRO 5500(Blackwell):今年算力租赁市场的 “黑马推理卡”很多客户容易混淆:RTX PRO 5500 不是旗舰训练卡,是 Blackwell ...",
-      "seen_at": "2026-11-05"
-    },
-    {
-      "title": "AI热度榜Top10|四巨头宣誓作证",
-      "publisher": "知潜",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=AI%E7%83%AD%E5%BA%A6%E6%A6%9CTop10%7C%E5%9B%9B%E5%B7%A8%E5%A4%B4%E5%AE%A3%E8%AA%93%E4%BD%9C%E8%AF%81",
-      "published_at": "2026-11-05",
-      "found_via": "搜狗微信",
-      "snippet": "英伟达中国缺卡:RTX Pro 5500订单仅1%到货◦︎ Anthropic预计2028年创收700亿美元◦︎ Anthropic开源FlashProve,17秒识破套壳...",
-      "seen_at": "2026-11-05"
-    },
-    {
-      "title": "AI 全球要闻 TOP10 | 2026年11月5日",
-      "publisher": "富纳云图",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=AI%20%E5%85%A8%E7%90%83%E8%A6%81%E9%97%BB%20TOP10%20%7C%202026%E5%B9%B411%E6%9C%885%E6%97%A5",
-      "published_at": "2026-11-05",
-      "found_via": "搜狗微信",
-      "snippet": "5500订单仅约1%到货(Nvidia RTX Pro 5500 Shortage in China, Only ~1% of Orders Fulfilled)多家中国AI与云公司合计订购约600万...",
-      "seen_at": "2026-11-05"
     }
   ],
   "mentions": [
@@ -627,6 +666,14 @@
       "low": 80000,
       "high": 120000,
       "url": "https://weixin.sogou.com/weixin?type=2&query=%E8%B4%A7%E5%B8%81%E8%B5%84%E9%87%91%E4%B8%8D%E8%B6%B312%E4%BA%BF%2C%E7%99%BE%E4%BA%BF%E6%B8%B8%E6%88%8F%E5%B7%A8%E5%A4%B4%E6%8B%9F%E7%A0%B842%E4%BA%BF%E4%B9%B0GPU",
+      "found_via": "搜狗微信"
+    },
+    {
+      "date": "2026-11-04",
+      "publisher": "企报News",
+      "low": 80000,
+      "high": 120000,
+      "url": "https://weixin.sogou.com/weixin?type=2&query=42.25%E4%BA%BF%E7%A0%B8%E5%90%91GPU%3A%E6%B8%B8%E6%97%8F%E6%8A%BC%E6%B3%A8%E7%AE%97%E5%8A%9B%2C%E6%98%AF%E8%BD%AC%E5%9E%8B%E8%BF%98%E6%98%AF%E5%86%92%E9%99%A9%3F",
       "found_via": "搜狗微信"
     },
     {
@@ -669,7 +716,7 @@
     },
     "2026-11-06": {
       "media": 11,
-      "wechat": 5
+      "wechat": 6
     },
     "2026-11-07": {
       "media": 8,
@@ -680,12 +727,12 @@
       "wechat": 0
     },
     "2026-11-09": {
-      "media": 3,
+      "media": 4,
       "wechat": 0
     },
     "2026-11-10": {
-      "media": 2,
-      "wechat": 0
+      "media": 7,
+      "wechat": 2
     }
   },
   "take": {
@@ -693,15 +740,14 @@
     "text": "Tom's Hardware跟进了51%新规，H200仍滞留香港未获大规模进口批准：海外算力路径收紧，需求更压向5500。但确认的交付节点仍只有年底前数千颗、2027年2月左右数万颗，11月18日NVIDIA财报是下一个口径。"
   },
   "sweep": {
-    "date": "2026-11-10",
-    "candidates": 1,
-    "read": 1,
+    "date": "2026-11-11",
+    "candidates": 0,
+    "read": 0,
     "added": [],
     "corroborated": 0,
-    "model": "@cf/zai-org/glm-4.7-flash",
+    "model": null,
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
-      "无关：https://www.tomshardware.com/tech-industry/policy/nvidia-cracks-down-on-overseas-cloud-ai-gpu-rentals-for-china-partners-face-51-percent-non-chinese-quota-as-black-market-b300-rack-prices-surge-to-usd2-8-million"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
     ]
   }
 }
