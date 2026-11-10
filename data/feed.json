@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-10T07:06:16+08:00",
+  "updated_at": "2026-11-10T08:25:35+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -609,14 +609,14 @@
       "seen_at": "2026-11-05"
     },
     {
-      "title": "Chinese Tech Giants Choose To Wait Months To Receive 1% Of Ordered RTX PRO 5500 ",
-      "publisher": "Wccftech",
-      "source_type": "行业媒体",
-      "url": "https://wccftech.com/chinese-tech-giants-wait-months-nvidia-rtx-pro-5500-cuda-dominance/",
+      "title": "42.25亿砸向GPU:游族押注算力,是转型还是冒险?",
+      "publisher": "企报News",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=42.25%E4%BA%BF%E7%A0%B8%E5%90%91GPU%3A%E6%B8%B8%E6%97%8F%E6%8A%BC%E6%B3%A8%E7%AE%97%E5%8A%9B%2C%E6%98%AF%E8%BD%AC%E5%9E%8B%E8%BF%98%E6%98%AF%E5%86%92%E9%99%A9%3F",
       "published_at": "2026-11-04",
-      "found_via": "Bing 新闻",
-      "snippet": "Chinese tech firms are willing to endure massive delivery delays for NVIDIA RTX Pro 5500 GPUs rather than pivot to domestic alternatives, anchored by the CUDA e",
-      "seen_at": "2026-11-08"
+      "found_via": "搜狗微信",
+      "snippet": "市场报价方面,RTX PRO 5500的预期交付报价集中在8万元至12万元人民币区间,部分渠道报价约8.7万元;外媒报道的BAT预购单价...",
+      "seen_at": "2026-11-10"
     }
   ],
   "mentions": [
@@ -634,6 +634,14 @@
       "low": 80000,
       "high": 120000,
       "url": "https://weixin.sogou.com/weixin?type=2&query=%E8%B4%A7%E5%B8%81%E8%B5%84%E9%87%91%E4%B8%8D%E8%B6%B312%E4%BA%BF%2C%E7%99%BE%E4%BA%BF%E6%B8%B8%E6%88%8F%E5%B7%A8%E5%A4%B4%E6%8B%9F%E7%A0%B842%E4%BA%BF%E4%B9%B0GPU",
+      "found_via": "搜狗微信"
+    },
+    {
+      "date": "2026-11-04",
+      "publisher": "企报News",
+      "low": 80000,
+      "high": 120000,
+      "url": "https://weixin.sogou.com/weixin?type=2&query=42.25%E4%BA%BF%E7%A0%B8%E5%90%91GPU%3A%E6%B8%B8%E6%97%8F%E6%8A%BC%E6%B3%A8%E7%AE%97%E5%8A%9B%2C%E6%98%AF%E8%BD%AC%E5%9E%8B%E8%BF%98%E6%98%AF%E5%86%92%E9%99%A9%3F",
       "found_via": "搜狗微信"
     },
     {
@@ -706,6 +714,8 @@
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": []
+    "notes": [
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+    ]
   }
 }
