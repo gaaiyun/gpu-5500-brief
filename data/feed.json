@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-10T08:25:35+08:00",
+  "updated_at": "2026-11-10T12:50:36+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -479,6 +479,26 @@
       "seen_at": "2026-11-06"
     },
     {
+      "title": "RTX 5090 对比 RTX PRO 5500:32GB 和 84GB 显存,跑 AI 大模型差距有多大?",
+      "publisher": "技术学习日常",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%205090%20%E5%AF%B9%E6%AF%94%20RTX%20PRO%205500%3A32GB%20%E5%92%8C%2084GB%20%E6%98%BE%E5%AD%98%2C%E8%B7%91%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B7%AE%E8%B7%9D%E6%9C%89%E5%A4%9A%E5%A4%A7%3F",
+      "published_at": "2026-11-05",
+      "found_via": "搜狗微信",
+      "snippet": "上一期我们对比了 RTX 5090 和 RTX PRO 5500.一个是消费级旗舰,32GB 显存;一个是专业工作站显卡,84GB 显存.文章发布后...",
+      "seen_at": "2026-11-10"
+    },
+    {
+      "title": "P5500:成也萧何!败也萧何?​",
+      "publisher": "两年砍柴",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=P5500%3A%E6%88%90%E4%B9%9F%E8%90%A7%E4%BD%95%21%E8%B4%A5%E4%B9%9F%E8%90%A7%E4%BD%95%3F%E2%80%8B",
+      "published_at": "2026-11-05",
+      "found_via": "搜狗微信",
+      "snippet": "RTX Pro 5500,或许就是这句话最好的例证.最近圈子里都在聊它.一边是大厂排队下单,订单传闻有几百亿(美金哦);另一边所有...",
+      "seen_at": "2026-11-10"
+    },
+    {
       "title": "货币资金不足12亿,百亿游戏巨头拟砸42亿买GPU",
       "publisher": "雷达Finance",
       "source_type": "公众号",
@@ -597,26 +617,6 @@
       "found_via": "搜狗微信",
       "snippet": "英伟达中国缺卡:RTX Pro 5500订单仅1%到货◦︎ Anthropic预计2028年创收700亿美元◦︎ Anthropic开源FlashProve,17秒识破套壳...",
       "seen_at": "2026-11-05"
-    },
-    {
-      "title": "AI 全球要闻 TOP10 | 2026年11月5日",
-      "publisher": "富纳云图",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=AI%20%E5%85%A8%E7%90%83%E8%A6%81%E9%97%BB%20TOP10%20%7C%202026%E5%B9%B411%E6%9C%885%E6%97%A5",
-      "published_at": "2026-11-05",
-      "found_via": "搜狗微信",
-      "snippet": "5500订单仅约1%到货(Nvidia RTX Pro 5500 Shortage in China, Only ~1% of Orders Fulfilled)多家中国AI与云公司合计订购约600万...",
-      "seen_at": "2026-11-05"
-    },
-    {
-      "title": "42.25亿砸向GPU:游族押注算力,是转型还是冒险?",
-      "publisher": "企报News",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=42.25%E4%BA%BF%E7%A0%B8%E5%90%91GPU%3A%E6%B8%B8%E6%97%8F%E6%8A%BC%E6%B3%A8%E7%AE%97%E5%8A%9B%2C%E6%98%AF%E8%BD%AC%E5%9E%8B%E8%BF%98%E6%98%AF%E5%86%92%E9%99%A9%3F",
-      "published_at": "2026-11-04",
-      "found_via": "搜狗微信",
-      "snippet": "市场报价方面,RTX PRO 5500的预期交付报价集中在8万元至12万元人民币区间,部分渠道报价约8.7万元;外媒报道的BAT预购单价...",
-      "seen_at": "2026-11-10"
     }
   ],
   "mentions": [
