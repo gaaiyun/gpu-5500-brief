@@ -230,6 +230,24 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://news.qq.com/rain/a/20261106A05ZSM00",
+  "title": "RTX PRO 5500 Blackwell上架出现价格倒挂，规格低于旗舰PRO 6000售价反而更高",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-06",
+  "scope": "5500",
+  "snippets": [
+   "11 月 6 日消息，NVIDIA RTX PRO 5500 Blackwell 专业工作站显卡现身美国零售商 SHI Government Solutions",
+   "即便折扣后售价仍达到 17408.63 美元，约合人民币 116934 元。",
+   "一个极具反差的现象随之出现：这款定位低于旗舰的显卡，渠道售价已经超过 RTX PRO 6000 16000 美元的官方定价，溢价约 1400 美元。",
+   "从硬件规格来看，RTX PRO 5500 本是 RTX PRO 6000 的次一级型号。",
+   "市场分析认为，国内市场旺盛的采购需求，是推高 RTX PRO 5500 价格的关键。",
+   "据悉国内企业订单总量已经突破 600 万张，大幅超出 NVIDIA 规划的 2027 年 300 万张产能。"
+  ],
+  "seen_at": "2026-11-10",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://news.qq.com/rain/a/20261106A05F7K00",
   "title": "小弟骑到大哥头上！RTX PRO 5500定价反超RTX PRO 6000：售价超12万元",
   "publisher": "腾讯新闻",
@@ -666,24 +684,6 @@
    "The real-time quote of Nvidia stock stood at 180.36 euros on Lang & Schwarz at 1"
   ],
   "seen_at": "2026-11-05",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://wccftech.com/chinese-tech-giants-wait-months-nvidia-rtx-pro-5500-cuda-dominance/",
-  "title": "Chinese Tech Giants Choose To Wait Months To Receive 1% Of Ordered RTX PRO 5500 Units, Proving NVIDI",
-  "publisher": "Wccftech",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-04",
-  "scope": "5500",
-  "snippets": [
-   "China’s artificial intelligence sector has poured tens of billions of dollars in",
-   "The Chinese have also carved out various smuggling routes to deliver NVIDIA’s to",
-   "Aside from NVIDIA’s unrivaled CUDA software stack, its manufacturing yields, and",
-   "Chinese firms have also settled for this GPU since it complies with United State",
-   "Even so, the reality that top-tier Chinese firms prefer to wait on a 1 percent a",
-   "NVIDIA RTX PRO 5000 Blackwell"
-  ],
-  "seen_at": "2026-11-08",
   "found_via": "Bing 新闻"
  }
 ]

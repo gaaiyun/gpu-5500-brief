@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-10T12:50:36+08:00",
+  "updated_at": "2026-11-10T16:20:11+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -22,6 +22,43 @@
     "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
   ],
   "items": [
+    {
+      "id": "news-20261106-71d4ba",
+      "title": "腾讯新闻：RTX PRO 5500 美国标价超旗舰，称国内需求推高价格",
+      "published_at": "2026-11-06",
+      "publisher": "腾讯新闻",
+      "source_type": "公众号",
+      "url": "https://news.qq.com/rain/a/20261106A05ZSM00",
+      "grade": "C",
+      "summary": "腾讯新闻11月6日消息，RTX PRO 5500 Blackwell在美国零售商SHI Government Solutions标价17999美元，折合人民币约120907元；折扣后约17408.63美元，约合人民币116934元。文章称国内企业订单总量已突破600万张，超出NVIDIA 2027年300万张产能。",
+      "impact": "美国渠道高价可能进一步刺激国内市场对RTX PRO 5500的抢购预期，加剧供需失衡。",
+      "watch": "核实美国渠道标价与国内实际到货价的关联性。",
+      "corroboration": [],
+      "claims": [
+        {
+          "text": "RTX PRO 5500 Blackwell在美国零售商SHI Government Solutions标价17999美元",
+          "status": "有出处",
+          "ref": "https://news.qq.com/rain/a/20261106A05F7K00"
+        },
+        {
+          "text": "RTX PRO 5500 Blackwell在美国零售商SHI Government Solutions折扣后约17408.63美元",
+          "status": "有出处",
+          "ref": "https://news.qq.com/rain/a/20261106A05F7K00"
+        },
+        {
+          "text": "国内企业订单总量已突破600万张",
+          "status": "有出处",
+          "ref": "https://news.mydrivers.com/1/1163/1163315.htm"
+        },
+        {
+          "text": "超出NVIDIA 2027年300万张产能",
+          "status": "有出处",
+          "ref": "https://news.mydrivers.com/1/1163/1163315.htm"
+        }
+      ],
+      "checked_at": "2026-11-10",
+      "found_via": "Bing 新闻"
+    },
     {
       "id": "news-20261106-420253",
       "title": "RTX PRO 5500定价反超RTX PRO 6000：售价超12万元",
@@ -684,7 +721,7 @@
     },
     "2026-11-06": {
       "media": 11,
-      "wechat": 5
+      "wechat": 6
     },
     "2026-11-07": {
       "media": 8,
@@ -695,11 +732,11 @@
       "wechat": 0
     },
     "2026-11-09": {
-      "media": 3,
+      "media": 4,
       "wechat": 0
     },
     "2026-11-10": {
-      "media": 3,
+      "media": 7,
       "wechat": 0
     }
   },
@@ -709,13 +746,13 @@
   },
   "sweep": {
     "date": "2026-11-10",
-    "candidates": 0,
-    "read": 0,
-    "added": [],
+    "candidates": 1,
+    "read": 1,
+    "added": [
+      "news-20261106-71d4ba"
+    ],
     "corroborated": 0,
-    "model": null,
-    "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
-    ]
+    "model": "@cf/zai-org/glm-4.7-flash",
+    "notes": []
   }
 }
