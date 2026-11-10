@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-10T16:20:11+08:00",
+  "updated_at": "2026-11-11T01:00:04+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -356,6 +356,16 @@
   ],
   "leads": [
     {
+      "title": "RTX PRO5500 显存神卡到货倒计时!国内首批,手慢无",
+      "publisher": "龙游星海",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO5500%20%E6%98%BE%E5%AD%98%E7%A5%9E%E5%8D%A1%E5%88%B0%E8%B4%A7%E5%80%92%E8%AE%A1%E6%97%B6%21%E5%9B%BD%E5%86%85%E9%A6%96%E6%89%B9%2C%E6%89%8B%E6%85%A2%E6%97%A0",
+      "published_at": "2026-11-10",
+      "found_via": "搜狗微信",
+      "snippet": "通知RTX PRO5500 显存神卡到货倒计时!热点资讯 84GB 显存,600W 功耗,全球疯抢——这张卡,我们即将到货,而且是“国内首...",
+      "seen_at": "2026-11-11"
+    },
+    {
       "title": "RTX 5090 Price vs RTX PRO 5500: 32GB vs 84GB [2026]",
       "publisher": "tech-insider.org",
       "source_type": "其他",
@@ -644,16 +654,6 @@
       "found_via": "搜狗微信",
       "snippet": "RTX PRO 5500(Blackwell):今年算力租赁市场的 “黑马推理卡”很多客户容易混淆:RTX PRO 5500 不是旗舰训练卡,是 Blackwell ...",
       "seen_at": "2026-11-05"
-    },
-    {
-      "title": "AI热度榜Top10|四巨头宣誓作证",
-      "publisher": "知潜",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=AI%E7%83%AD%E5%BA%A6%E6%A6%9CTop10%7C%E5%9B%9B%E5%B7%A8%E5%A4%B4%E5%AE%A3%E8%AA%93%E4%BD%9C%E8%AF%81",
-      "published_at": "2026-11-05",
-      "found_via": "搜狗微信",
-      "snippet": "英伟达中国缺卡:RTX Pro 5500订单仅1%到货◦︎ Anthropic预计2028年创收700亿美元◦︎ Anthropic开源FlashProve,17秒识破套壳...",
-      "seen_at": "2026-11-05"
     }
   ],
   "mentions": [
@@ -737,7 +737,7 @@
     },
     "2026-11-10": {
       "media": 7,
-      "wechat": 0
+      "wechat": 1
     }
   },
   "take": {
@@ -745,14 +745,15 @@
     "text": "Tom's Hardware跟进了51%新规，H200仍滞留香港未获大规模进口批准：海外算力路径收紧，需求更压向5500。但确认的交付节点仍只有年底前数千颗、2027年2月左右数万颗，11月18日NVIDIA财报是下一个口径。"
   },
   "sweep": {
-    "date": "2026-11-10",
-    "candidates": 1,
-    "read": 1,
-    "added": [
-      "news-20261106-71d4ba"
-    ],
+    "date": "2026-11-11",
+    "candidates": 0,
+    "read": 0,
+    "added": [],
     "corroborated": 0,
-    "model": "@cf/zai-org/glm-4.7-flash",
-    "notes": []
+    "model": null,
+    "notes": [
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
+      "雷峰网 RSS 失败：502 Server Error: Bad Gateway for url: https://www.leiphone.com/feed"
+    ]
   }
 }
