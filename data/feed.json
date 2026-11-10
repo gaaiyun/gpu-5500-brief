@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-11T05:56:41+08:00",
+  "updated_at": "2026-11-11T07:06:59+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -22,6 +22,26 @@
     "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
   ],
   "items": [
+    {
+      "id": "cnbc-20261110-huang-probe",
+      "title": "英伟达董事会调查黄仁勋涉疑似中国间谍事件，新对华管制风险上升",
+      "published_at": "2026-11-10",
+      "publisher": "CNBC（另见雅虎财经转述）",
+      "source_type": "主流媒体",
+      "scope": "context",
+      "url": "https://www.cnbc.com/2026/11/10/jensen-huang-nvidia-china-ties.html",
+      "grade": "B",
+      "summary": "据法国《费加罗报》报道（法广转述），英伟达董事会周日启动调查，以确定其CEO是否成为“外国情报行动的目标”，结果尚不明朗。雅虎财经称英伟达可能面临新的美国对华先进芯片出口限制，并称有关报道称其CEO正被调查。CNBC称此事使英伟达的中国问题进一步复杂化。",
+      "impact": "推断：若美方因此收紧对华出口或追踪要求，5500目前的‘非管制’地位可能被重新审视，影响交付节奏；也可能令北京更谨慎对待英伟达采购批文。尚无针对5500的具体措施。",
+      "watch": "BIS是否动5500；11月18日财报口径",
+      "corroboration": [
+        "https://finance.yahoo.com/technology/articles/nvidia-faces-potential-us-chip-113730642.html",
+        "https://www.rfi.fr/cn/%E4%B8%93%E6%A0%8F%E6%A3%80%E7%B4%A2/%E6%B3%95%E5%9B%BD%E6%8A%A5%E7%BA%B8%E6%91%98%E8%A6%81/20261110-%E5%8D%B1%E9%99%A9%E7%9A%84%E5%85%B3%E7%B3%BB-%E8%8B%B1%E4%BC%9F%E8%BE%BEceo%E9%99%B7%E7%96%91%E4%BC%BC%E4%B8%AD%E5%9B%BD%E9%97%B4%E8%B0%8D%E4%BA%8B%E4%BB%B6%E9%9C%87%E8%8D%A1%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%A1%8C%E4%B8%9A"
+      ],
+      "claims": [],
+      "checked_at": "2026-11-11",
+      "ci_checked": "2026-11-11"
+    },
     {
       "id": "news-20261106-71d4ba",
       "title": "腾讯新闻：RTX PRO 5500 美国标价超旗舰，称国内需求推高价格",
@@ -376,6 +396,16 @@
       "seen_at": "2026-11-11"
     },
     {
+      "title": "Congress Wants China Chip Limits in the Defense Bill After Nvidia’s Spy Scandal",
+      "publisher": "雅虎财经",
+      "source_type": "主流媒体",
+      "url": "https://finance.yahoo.com/technology/ai/articles/congress-wants-china-chip-limits-142719076.html",
+      "published_at": "2026-11-10",
+      "found_via": "reading_room",
+      "snippet": "国会有人要求把对华芯片限制写入国防授权法案；摘录未涉及5500。",
+      "seen_at": "2026-11-11"
+    },
+    {
       "title": "RTX 5090 Price vs RTX PRO 5500: 32GB vs 84GB [2026]",
       "publisher": "tech-insider.org",
       "source_type": "其他",
@@ -536,6 +566,16 @@
       "seen_at": "2026-11-06"
     },
     {
+      "title": "GB300、RTX PRO 5500 入局,Token 成本倒逼算力租赁选型重构,英伟达与国产 GPU 怎么权衡?",
+      "publisher": "AlgoNova 智算",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=GB300%E3%80%81RTX%20PRO%205500%20%E5%85%A5%E5%B1%80%2CToken%20%E6%88%90%E6%9C%AC%E5%80%92%E9%80%BC%E7%AE%97%E5%8A%9B%E7%A7%9F%E8%B5%81%E9%80%89%E5%9E%8B%E9%87%8D%E6%9E%84%2C%E8%8B%B1%E4%BC%9F%E8%BE%BE%E4%B8%8E%E5%9B%BD%E4%BA%A7%20GPU%20%E6%80%8E%E4%B9%88%E6%9D%83%E8%A1%A1%3F",
+      "published_at": "2026-11-05",
+      "found_via": "搜狗微信",
+      "snippet": "RTX PRO 5500(Blackwell):今年算力租赁市场的 “黑马推理卡”很多客户容易混淆:RTX PRO 5500 不是旗舰训练卡,是 Blackwell ...",
+      "seen_at": "2026-11-11"
+    },
+    {
       "title": "RTX 5090 对比 RTX PRO 5500:32GB 和 84GB 显存,跑 AI 大模型差距有多大?",
       "publisher": "技术学习日常",
       "source_type": "公众号",
@@ -634,26 +674,6 @@
       "found_via": "Bing 新闻",
       "snippet": "Key TakeawaysChinese AI and cloud firms, Alibaba among them, have ordered about 6 million NVIDIA RTX Pro 5500 chips worth about $70 billion, but expect to get o",
       "seen_at": "2026-11-06"
-    },
-    {
-      "title": "Nvidia stock faces fresh China chip delivery squeeze",
-      "publisher": "www.ad-hoc-news.de",
-      "source_type": "其他",
-      "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/nvidia-stock-faces-fresh-china-chip-delivery-squeeze/70465362",
-      "published_at": "2026-11-05",
-      "found_via": "Bing 新闻",
-      "snippet": "Nvidia stock faces a fresh China supply squeeze as AI firms await RTX Pro 5500 chips. Demand is strong, but near-term deliveries remain limited. Chinese AI and ",
-      "seen_at": "2026-11-06"
-    },
-    {
-      "title": "AI每日大事记_1104-1105(第 21 期)",
-      "publisher": "码农starkey",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=AI%E6%AF%8F%E6%97%A5%E5%A4%A7%E4%BA%8B%E8%AE%B0_1104-1105%28%E7%AC%AC%2021%20%E6%9C%9F%29",
-      "published_at": "2026-11-05",
-      "found_via": "搜狗微信",
-      "snippet": "RTX Pro 5500,未来四个月预计仅到货数万颗,约占订单 1%,单价超 1.1 万美元;产能被优先分配给 Rubin 等下一代产品,直接牵动...",
-      "seen_at": "2026-11-05"
     }
   ],
   "mentions": [
@@ -736,13 +756,13 @@
       "wechat": 0
     },
     "2026-11-10": {
-      "media": 7,
+      "media": 10,
       "wechat": 2
     }
   },
   "take": {
-    "date": "2026-11-10",
-    "text": "Tom's Hardware跟进了51%新规，H200仍滞留香港未获大规模进口批准：海外算力路径收紧，需求更压向5500。但确认的交付节点仍只有年底前数千颗、2027年2月左右数万颗，11月18日NVIDIA财报是下一个口径。"
+    "date": "2026-11-11",
+    "text": "新情况：英伟达董事会调查CEO涉疑似间谍事件，美方可能收紧对华出口，5500暂无针对性措施但交付风险上升。已确认节点仍是年底前数千颗、2027年2月左右数万颗，11月18日财报是下一个口径。"
   },
   "sweep": {
     "date": "2026-11-11",
@@ -751,8 +771,6 @@
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
-    ]
+    "notes": []
   }
 }

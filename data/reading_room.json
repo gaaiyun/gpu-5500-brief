@@ -32,6 +32,20 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://www.sohu.com/a/1099650458_122754726",
+  "title": "轮到中国AI芯片反超，英伟达市值蒸发3000亿，黄仁勋这步棋走错了",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-10",
+  "scope": "context",
+  "snippets": [
+   "2026年5月，英伟达财报发布后，他坐在CNBC镜头前，被问到中国市场，原话是：我们“基本上已经把中国AI芯片市场让给了”中国公司，对华销售先进芯片的审批“不要",
+   "IDC统计2026年上半年，英伟达在中国数据中心AI芯片市场的份额掉到34%，出货量67.8万颗，同比下滑44%。"
+  ],
+  "seen_at": "2026-11-11",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.rfi.fr/cn/%E4%B8%93%E6%A0%8F%E6%A3%80%E7%B4%A2/%E6%B3%95%E5%9B%BD%E6%8A%A5%E7%BA%B8%E6%91%98%E8%A6%81/20261110-%E5%8D%B1%E9%99%A9%E7%9A%84%E5%85%B3%E7%B3%BB-%E8%8B%B1%E4%BC%9F%E8%BE%BEceo%E9%99%B7%E7%96%91%E4%BC%BC%E4%B8%AD%E5%9B%BD%E9%97%B4%E8%B0%8D%E4%BA%8B%E4%BB%B6%E9%9C%87%E8%8D%A1%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%A1%8C%E4%B8%9A",
   "title": "“危险的关系” ：英伟达CEO陷疑似中国间谍事件震荡人工智能行业",
   "publisher": "法广",
@@ -62,6 +76,20 @@
    "Following reports that Chinese model developer DeepSeek was using restricted Nvi",
    "Nvidia revealed it would incur $5.5 billion in costs related to canceled orders ",
    "In the last fiscal year, Nvidia reported that about 9% of its revenue came from "
+  ],
+  "seen_at": "2026-11-11",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261111A039SI00",
+  "title": "英伟达外部律所调查背后：AI芯片交付信任与出口合规的治理大考",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-10",
+  "scope": "context",
+  "snippets": [
+   "2026年11月10日（美国东部时间），Techmeme归档页面收录《纽约时报》相关报道称，英伟达已聘请美国律所Wachtell, Lipton, Rosen ",
+   "2026年11月10日披露的这场外部律所调查，是英伟达在AI芯片超级周期中的一次治理压力测试。"
   ],
   "seen_at": "2026-11-11",
   "found_via": "Bing 新闻"
