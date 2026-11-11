@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-11T15:43:36+08:00",
+  "updated_at": "2026-11-12T01:04:20+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -375,6 +375,16 @@
   ],
   "leads": [
     {
+      "title": "600万张订单背后:RTX PRO 5500为何成为企业算力采购焦点?",
+      "publisher": "万象硅芯OmniS",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=600%E4%B8%87%E5%BC%A0%E8%AE%A2%E5%8D%95%E8%83%8C%E5%90%8E%3ARTX%20PRO%205500%E4%B8%BA%E4%BD%95%E6%88%90%E4%B8%BA%E4%BC%81%E4%B8%9A%E7%AE%97%E5%8A%9B%E9%87%87%E8%B4%AD%E7%84%A6%E7%82%B9%3F",
+      "published_at": "2026-11-11",
+      "found_via": "搜狗微信",
+      "snippet": "据彭博社报道,阿里巴巴、腾讯、字节跳动等中国科技企业向英伟达订购了约600万张 RTX PRO 5500 显卡,订单金额接近700亿美元...",
+      "seen_at": "2026-11-12"
+    },
+    {
       "title": "【智算ABC】NVIDIA RTX PRO 5500 GPU大揭秘:以工作站之名,行算力基础设施之实",
       "publisher": "科学千里眼",
       "source_type": "公众号",
@@ -663,16 +673,6 @@
       "found_via": "搜狗微信",
       "snippet": "RTX Pro 5500作为面向数据中心的高端显卡,被大量用于推理集群... 对买家而言,实际到货比例可能只有订单量的百分之一左右,这意...",
       "seen_at": "2026-11-09"
-    },
-    {
-      "title": "Nvidia’s Chinese Clients Will Get Just 1% of $70 Billion in RTX Chip Orders",
-      "publisher": "雅虎财经",
-      "source_type": "主流媒体",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-chinese-clients-just-1-180024708.html",
-      "published_at": "2026-11-05",
-      "found_via": "Bing 新闻",
-      "snippet": "Key TakeawaysChinese AI and cloud firms, Alibaba among them, have ordered about 6 million NVIDIA RTX Pro 5500 chips worth about $70 billion, but expect to get o",
-      "seen_at": "2026-11-06"
     }
   ],
   "mentions": [
@@ -698,14 +698,6 @@
       "low": 80000,
       "high": 120000,
       "url": "https://weixin.sogou.com/weixin?type=2&query=42.25%E4%BA%BF%E7%A0%B8%E5%90%91GPU%3A%E6%B8%B8%E6%97%8F%E6%8A%BC%E6%B3%A8%E7%AE%97%E5%8A%9B%2C%E6%98%AF%E8%BD%AC%E5%9E%8B%E8%BF%98%E6%98%AF%E5%86%92%E9%99%A9%3F",
-      "found_via": "搜狗微信"
-    },
-    {
-      "date": "2026-10-28",
-      "publisher": "算力之光",
-      "low": 70000,
-      "high": 70000,
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%85%A8%E6%9D%91%E7%9A%84%E5%B8%8C%E6%9C%9B%20PRO%205500%20%21%E5%92%8C%20PRO%206000%E3%80%81PRO%206000D%E7%9A%84%E5%AF%B9%E6%AF%94",
       "found_via": "搜狗微信"
     }
   ],
@@ -757,6 +749,10 @@
     "2026-11-10": {
       "media": 10,
       "wechat": 2
+    },
+    "2026-11-11": {
+      "media": 2,
+      "wechat": 1
     }
   },
   "take": {
@@ -764,14 +760,14 @@
     "text": "新情况：英伟达董事会调查CEO涉疑似间谍事件，美方可能收紧对华出口，5500暂无针对性措施但交付风险上升。已确认节点仍是年底前数千颗、2027年2月左右数万颗，11月18日财报是下一个口径。"
   },
   "sweep": {
-    "date": "2026-11-11",
+    "date": "2026-11-12",
     "candidates": 0,
     "read": 0,
     "added": [],
     "corroborated": 0,
     "model": null,
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)"
     ]
   }
 }
