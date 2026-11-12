@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T16:13:31+08:00",
+  "updated_at": "2026-11-13T01:32:47+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -373,25 +373,19 @@
         "https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/"
       ],
       "checked_at": "2026-10-27"
-    },
-    {
-      "id": "theinformation-20260927-miit-approval",
-      "title": "工信部据报要求企业上报采购量并有意批准",
-      "published_at": "2026-09-28",
-      "publisher": "Investing.com（转述 The Information）",
-      "source_type": "主流媒体",
-      "url": "https://finance.yahoo.com/technology/articles/china-may-permit-alibaba-bytedance-173017962.html",
-      "grade": "B",
-      "summary": "据The Information报道，工信部要求字节跳动、阿里巴巴等企业上报RTX PRO 5500计划采购量和用途，并表示有意批准采购。英伟达、相关企业与工信部均未公开确认。",
-      "impact": "国内审批若落地，大厂需求转为实际订单，首批配额会更紧；审批时间和获批数量未知，暂不改变价格情景。",
-      "watch": "跟踪工信部或企业的正式表态与获批数量",
-      "corroboration": [
-        "https://www.eet-china.com/news/202609288049.html"
-      ],
-      "checked_at": "2026-10-27"
     }
   ],
   "leads": [
+    {
+      "title": "官宣|RTX PRO 5500 现货在即",
+      "publisher": "麦丰云服",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%AE%98%E5%AE%A3%7CRTX%20PRO%205500%20%E7%8E%B0%E8%B4%A7%E5%9C%A8%E5%8D%B3",
+      "published_at": "2026-11-12",
+      "found_via": "搜狗微信",
+      "snippet": "官宣 · 现货在即官宣|RTX PRO 5500 现货在即等了这么久,这张“显存神卡”总算要有现货了——NVIDIA RTX PRO 5500 Blackwell ...",
+      "seen_at": "2026-11-13"
+    },
     {
       "title": "杭州园林：控股子公司签署GPU产品采购合同",
       "publisher": "www.msn.cn",
@@ -681,16 +675,6 @@
       "found_via": "搜狗微信",
       "snippet": "RTX PRO 5500(Blackwell):今年算力租赁市场的 “黑马推理卡”很多客户容易混淆:RTX PRO 5500 不是旗舰训练卡,是 Blackwell ...",
       "seen_at": "2026-11-11"
-    },
-    {
-      "title": "RTX 5090 对比 RTX PRO 5500:32GB 和 84GB 显存,跑 AI 大模型差距有多大?",
-      "publisher": "技术学习日常",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%205090%20%E5%AF%B9%E6%AF%94%20RTX%20PRO%205500%3A32GB%20%E5%92%8C%2084GB%20%E6%98%BE%E5%AD%98%2C%E8%B7%91%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B7%AE%E8%B7%9D%E6%9C%89%E5%A4%9A%E5%A4%A7%3F",
-      "published_at": "2026-11-05",
-      "found_via": "搜狗微信",
-      "snippet": "上一期我们对比了 RTX 5090 和 RTX PRO 5500.一个是消费级旗舰,32GB 显存;一个是专业工作站显卡,84GB 显存.文章发布后...",
-      "seen_at": "2026-11-10"
     }
   ],
   "mentions": [
@@ -754,7 +738,7 @@
     },
     "2026-11-07": {
       "media": 8,
-      "wechat": 2
+      "wechat": 3
     },
     "2026-11-08": {
       "media": 6,
@@ -769,10 +753,14 @@
       "wechat": 2
     },
     "2026-11-11": {
-      "media": 3,
+      "media": 4,
       "wechat": 2
     },
     "2026-11-12": {
+      "media": 3,
+      "wechat": 1
+    },
+    "2026-11-13": {
       "media": 1,
       "wechat": 0
     }
@@ -782,14 +770,12 @@
     "text": "美国国会借黄仁勋事件推动把对华芯片限制写进国防授权法案，5500暂不在管制内，但审批和交付的政策风险上升。已确认节点仍是年底前数千颗、2027年2月左右数万颗，11月18日财报是下一个口径。"
   },
   "sweep": {
-    "date": "2026-11-12",
+    "date": "2026-11-13",
     "candidates": 0,
     "read": 0,
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
-    ]
+    "notes": []
   }
 }

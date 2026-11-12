@@ -8,9 +8,27 @@
   "scope": "context",
   "snippets": [
    "Alice Huang helped facilitate at least $7.5 billion in Nvidia chip shipments to ",
-   "Short seller firm Culper Research estimated in May that more than 20% of Nvidia'"
+   "Short seller firm Culper Research estimated in May that more than 20% of Nvidia'",
+   "Nvidia stock falls 10% as CEO Jensen Huang announces resignation"
   ],
-  "seen_at": "2026-11-12",
+  "seen_at": "2026-11-13",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261113A0058D00",
+  "title": "栽在女人手中的黄仁勋离开英伟达，对人工智能和中国AI影响多大？",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-12",
+  "scope": "context",
+  "snippets": [
+   "11月12日，全球人工智能芯片霸主英伟达突然宣布，创始人黄仁勋辞去公司总裁、首席执行官及董事职务，即刻生效。",
+   "这意味着，执掌英伟达33年的黄仁勋，正式离开了自己一手打造的商业帝国。",
+   "11月8日，英伟达董事会宣布启动独立调查，重点审查黄仁勋是否成为外国情报活动的目标。",
+   "过去33年，黄仁勋最大的贡献，不只是把英伟达从一家游戏显卡公司发展成全球AI芯片霸主，更重要的是，他将芯片制造商、云计算企业、数据中心运营商、AI实验室以及上下",
+   "路透社11月12日报道，中国AI企业已经开始寻找海外数据中心的英伟达算力租赁资源，担心此次风波促使美国进一步收紧对先进芯片的限制，包括通过境外数据中心远程使用芯"
+  ],
+  "seen_at": "2026-11-13",
   "found_via": "Bing 新闻"
  },
  {
@@ -22,6 +40,39 @@
   "scope": "context",
   "snippets": [],
   "seen_at": "2026-11-12",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/export-controls-were-supposed-keep-164038826.html",
+  "title": "Export Controls Were Supposed to Keep AI Chips Out of China. The Rental Loophole Shows Why They Have",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-12",
+  "scope": "context",
+  "snippets": [
+   "Shares traded at $160.56 Thursday morning, down 7.6% on the day and 29.1% over t",
+   "In its Q2 fiscal 2027 earnings release, Nvidia guided third-quarter revenue to $",
+   "On the August 26 call, CFO Colette Kress said Hopper shipments to China-based cu"
+  ],
+  "seen_at": "2026-11-13",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/markets/stocks/articles/china-hawk-export-controls-cost-154411878.html",
+  "title": "China Hawk: Export Controls Have Cost Nvidia “Exactly Zero Sales.” Congress Wants That to Change",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-12",
+  "scope": "context",
+  "snippets": [
+   "NVIDIA's real exposure is Southeast Asia, where McGuire says $80 billion of AI c",
+   "With its chips sold out and its stock at 14x forward earnings, NVIDIA looks less",
+   "TIKR tracks 62 analysts on Nvidia.",
+   "Customers based in China, including Hong Kong, brought NVIDIA $19.7 billion of r",
+   "NVIDIA also took a $4.5 billion charge on the H20, the chip it designed for Chin",
+   "McGuire said trade data show $80 billion of AI chips went to Singapore, Thailand"
+  ],
+  "seen_at": "2026-11-13",
   "found_via": "Bing 新闻"
  },
  {
@@ -391,37 +442,6 @@
   "found_via": "Bing 新闻"
  },
  {
-  "url": "https://www.tmtpost.com/8196665.html",
-  "title": "50系突然疯涨，买不起显卡，年轻人又挤进网吧包夜了",
-  "publisher": "钛媒体",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-07",
-  "scope": "5500",
-  "snippets": [
-   "近日，七彩虹方面宣布正式执行新一轮工厂价格调整政策，英伟达RTX 50系列多款显卡渠道价格全面大幅上调。",
-   "其中搭载RTX 5090 DV2核心的显卡成为溢价“重灾区”，单卡价格上涨区间高达2200元至3300元；",
-   "面向主流用户的RTX 5070与RTX 5060价格最高上调幅度达到1000元。",
-   "长期跟踪显卡价格走势的Tech Spot报告显示，英伟达GeForce RTX 50系列显卡近期价格持续飙升，其中旗舰型号RTX 509呈现断层式领涨，其全球平",
-   "RTX 5090采用Blackwell架构，其搭载GB202核心对标英伟达旗下RTX Pro 6000与RTX Pro 5500等专业显卡，自去年1月发售以来，",
-   "尽管RTX 5090官方定价1999美元(约合人民币13332元)，相较上代产品高出1000美元，但下游市场依然长期有价无市，供不应求。"
-  ],
-  "seen_at": "2026-11-07",
-  "found_via": "钛媒体"
- },
- {
-  "url": "https://www.sohu.com/a/1098515909_122434967",
-  "title": "黄仁勋还是被查了！表面上是查新加坡转卖，实则逼英伟达查下家",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-07",
-  "scope": "context",
-  "snippets": [
-   "据《金融时报》等媒体报道，英伟达以口头方式向全球数据中心客户传达了一条新规矩：未来新签的合约中，至少51%的服务必须卖给非中国企业；"
-  ],
-  "seen_at": "2026-11-07",
-  "found_via": "Bing 新闻"
- },
- {
   "url": "https://www.rfi.fr/cn/%E4%B8%AD%E5%9B%BD/20261107-%E7%BA%BD%E6%97%B6%E6%8F%AD%E4%B8%AD%E5%9B%BD%E4%B8%A4%E5%AE%B6%E8%8A%AF%E7%89%87%E5%95%86%E8%8E%B7%E7%BE%8E%E6%89%B9%E5%87%86%E5%A4%84%E7%90%86%E8%8B%B1%E4%BC%9F%E8%BE%BE%E8%8A%AF%E7%89%87-%E5%BD%A2%E5%90%8C%E7%A9%BA%E5%A3%B3",
   "title": "纽时揭中国两家芯片商获美批准处理英伟达芯片“形同空壳”",
   "publisher": "法广",
@@ -490,20 +510,6 @@
   "found_via": "Bing 新闻"
  },
  {
-  "url": "https://news.sina.com.cn/c/2026-11-06/doc-inixuura8860847.shtml",
-  "title": "中国“不买”英伟达芯片，美国人急什么",
-  "publisher": "新浪财经",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-06",
-  "scope": "context",
-  "snippets": [
-   "路透社近日引述“知情人士”的话称，大约有60万枚英伟达H200芯片，由于未获中方批准放行，目前滞留在香港。",
-   "2022年，美方以“国家安全”为由，对华实施高端芯片出口管制，英伟达先进芯片随即被列入对华禁售清单。"
-  ],
-  "seen_at": "2026-11-07",
-  "found_via": "Bing 新闻"
- },
- {
   "url": "https://news.qq.com/rain/a/20261106A05ZSM00",
   "title": "RTX PRO 5500 Blackwell上架出现价格倒挂，规格低于旗舰PRO 6000售价反而更高",
   "publisher": "腾讯新闻",
@@ -522,24 +528,6 @@
   "found_via": "Bing 新闻"
  },
  {
-  "url": "https://news.qq.com/rain/a/20261106A05F7K00",
-  "title": "小弟骑到大哥头上！RTX PRO 5500定价反超RTX PRO 6000：售价超12万元",
-  "publisher": "腾讯新闻",
-  "source_type": "公众号",
-  "published_at": "2026-11-06",
-  "scope": "5500",
-  "snippets": [
-   "快科技11月6日消息，据报道， NVIDIA RTX PRO 5500 Blackwell工作站显卡已在美国零售商SHI Government Solution",
-   "PNY版本标价17999美元（快科技注：约合人民币120907元），折扣后仍需17408.63美元（快科技注：约合人民币116934元）。",
-   "令人意外的是，这个价格比NVIDIA自家旗舰RTX PRO 6000的16000美元官方标价还高出约1400美元。",
-   "从规格上看， RTX PRO 5500本该是RTX PRO 6000的“小弟”。",
-   "市场分析指出，中国市场的巨大需求是推高RTX PRO 5500价格的关键因素。",
-   "而中国企业的总订单量据称已突破600万张，远超NVIDIA 2027年约300万张的规划产能。"
-  ],
-  "seen_at": "2026-11-07",
-  "found_via": "Bing 新闻"
- },
- {
   "url": "https://news.17173.com/content/11062026/113411469.shtml",
   "title": "小弟骑到大哥头上！RTX PRO 5500定价反超RTX PRO 6000：售价超12万元",
   "publisher": "news.17173.com",
@@ -555,56 +543,6 @@
    "而中国企业的总订单量据称已突破600万张，远超NVIDIA 2027年约300万张的规划产能。"
   ],
   "seen_at": "2026-11-10",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://lufkindailynews.com/news_reuters/business/nvidia-chips-pile-up-in-hong-kong-as-china-withholds-import-approval/article_34a11941-bd07-58cb-adcd-e9bf7af9cab4.html",
-  "title": "Nvidia chips pile up in Hong Kong as China withholds import approval",
-  "publisher": "lufkindailynews.com",
-  "source_type": "其他",
-  "published_at": "2026-11-06",
-  "scope": "5500",
-  "snippets": [
-   "FILE PHOTO: Nvidia logo is seen in this illustration created on June 11, 2026.",
-   "Nov 5 (Reuters) - About 600,000 of Nvidia's advanced artificial intelligence chi",
-   "The H200 is not Nvidia's newest AI processor, but it has capabilities that Chine",
-   "US export controls since 2022 have sought to restrict China's access to advanced",
-   "An eight-card H200 server was offered for more than 6 million yuan ($900,000) in",
-   "Servers using Nvidia's newer Blackwell chips, which fall under US export control"
-  ],
-  "seen_at": "2026-11-07",
-  "found_via": "GDELT"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/nvidias-quiet-ultimatum-stop-china-180957689.html",
-  "title": "Nvidia's Quiet New Ultimatum to Stop China Chip Smuggling",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-06",
-  "scope": "context",
-  "snippets": [
-   "In March, authorities arrested Super Micro Computer co-founder Wally Liaw on cha",
-   "Customs authorities recently seized about $12.1 million of advanced AI chips at "
-  ],
-  "seen_at": "2026-11-07",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.sina.com.cn/tech/roll/2026-11-06/doc-inixuiyu8241405.shtml",
-  "title": "小弟骑到大哥头上！RTX PRO 5500定价反超RTX PRO 6000：售价超12万元",
-  "publisher": "新浪财经",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-06",
-  "scope": "5500",
-  "snippets": [
-   "快科技11月6日消息，据报道， NVIDIA RTX PRO 5500 Blackwell工作站显卡已在美国零售商SHI Government Solution",
-   "PNY版本标价17999美元（快科技注：约合人民币120907元），折扣后仍需17408.63美元（快科技注：约合人民币116934元）。",
-   "令人意外的是，这个价格比NVIDIA自家旗舰RTX PRO 6000的16000美元官方标价还高出约1400美元。",
-   "从规格上看， RTX PRO 5500本该是RTX PRO 6000的“小弟”。",
-   "市场分析指出，中国市场的巨大需求是推高RTX PRO 5500价格的关键因素。",
-   "而中国企业的总订单量据称已突破600万张，远超NVIDIA 2027年约300万张的规划产能。"
-  ],
-  "seen_at": "2026-11-07",
   "found_via": "Bing 新闻"
  },
  {
