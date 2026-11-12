@@ -18,6 +18,19 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://www.rfi.fr/cn/%E5%9B%BD%E9%99%85/20261111-%E7%BE%8E%E5%9B%BD%E8%B4%A2%E9%95%BF%E8%B4%9D%E6%A3%AE%E7%89%B9%E5%B0%B1%E5%AF%B9%E8%BE%93%E5%8D%8E%E8%8A%AF%E7%89%87%E5%AE%89%E5%85%A8%E4%B8%8D%E4%BD%9C%E4%B8%BA%E4%B8%8E%E5%95%86%E5%8A%A1%E9%83%A8%E9%95%BF%E5%8D%A2%E7%89%B9%E5%B0%BC%E5%85%8B%E5%AF%B9%E5%B3%99",
+  "title": "美国财长贝森特就英伟达客户输华芯片安全问题与商务部长卢特尼克 ...",
+  "publisher": "法广",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-11",
+  "scope": "context",
+  "snippets": [
+   "Axios11日引述知情人透露，美国财长贝森特上周在白宫内部就英伟达客户Megaspeed迟迟未被列入“对国家安全构成威胁的企业名单”一事，与商务部长卢特尼克发"
+  ],
+  "seen_at": "2026-11-12",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.rfi.fr/cn/%E4%B8%AD%E5%9B%BD/20261111-%E4%B8%AD%E5%9B%BD%E5%A4%A7%E5%AD%A6%E8%A2%AB%E7%BE%8E%E5%9B%BD%E5%88%97%E5%85%A5%E9%BB%91%E5%90%8D%E5%8D%95-%E4%BB%8D%E8%B4%AD%E4%B9%B0%E8%8B%B1%E4%BC%9F%E8%BE%BEh200%E8%8A%AF%E7%89%87",
   "title": "中国大学被美国列入黑名单 仍购买英伟达h200芯片",
   "publisher": "法广",
@@ -61,6 +74,24 @@
    "ByteDance , Alibaba and Tencent have ordered more than $35bn (£26bn) worth in re",
    "According to AI researcher Epoch AI, the equivalent of 1.6 million high-powered ",
    "Moonshot signed a $65m contract to access Nvidia's powerful B300 chips, accordin"
+  ],
+  "seen_at": "2026-11-12",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/markets/stocks/articles/short-seller-says-china-drove-114625914.html",
+  "title": "A Short Seller Says China Drove “Over 20%” of Nvidia’s Compute Sales. Why Nvidia’s “Under 1%” Doesn’",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-11",
+  "scope": "context",
+  "snippets": [
+   "Culper Research, which is short NVIDIA, says more than 20% of NVIDIA's fiscal 20",
+   "NVIDIA says Hopper shipments to China were under 1% of data center revenue last ",
+   "Other buyers could absorb much of Culper's estimate, and NVIDIA's margin recover",
+   "Culper Research, which is short the stock, said in a post on X back in May that ",
+   "NVIDIA's filing for the quarter ended July 26 said Hopper shipments to China wer",
+   "Megaspeed's Malaysian sister company reportedly bought at least $4.8 billion of "
   ],
   "seen_at": "2026-11-12",
   "found_via": "Bing 新闻"
