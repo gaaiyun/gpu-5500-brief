@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T12:03:39+08:00",
+  "updated_at": "2026-11-12T16:13:31+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -493,6 +493,16 @@
       "seen_at": "2026-11-10"
     },
     {
+      "title": "阿里腾讯字节订了 600 万张英伟达,四个月",
+      "publisher": "AI星轨",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E9%98%BF%E9%87%8C%E8%85%BE%E8%AE%AF%E5%AD%97%E8%8A%82%E8%AE%A2%E4%BA%86%20600%20%E4%B8%87%E5%BC%A0%E8%8B%B1%E4%BC%9F%E8%BE%BE%2C%E5%9B%9B%E4%B8%AA%E6%9C%88",
+      "published_at": "2026-11-07",
+      "found_via": "搜狗微信",
+      "snippet": "RTX PRO 5500.按每张 1.1 万美元算,单子值 700 亿美元.结果未来四个月只能到货几万张,兑现率只有 1%.年底前先来几千张,...",
+      "seen_at": "2026-11-12"
+    },
+    {
       "title": "英伟达 RTX PRO 5500|约84GB GDDR7|约21760 CUDA|Blackwell工作站版",
       "publisher": "AI芯集网",
       "source_type": "公众号",
@@ -681,16 +691,6 @@
       "found_via": "搜狗微信",
       "snippet": "上一期我们对比了 RTX 5090 和 RTX PRO 5500.一个是消费级旗舰,32GB 显存;一个是专业工作站显卡,84GB 显存.文章发布后...",
       "seen_at": "2026-11-10"
-    },
-    {
-      "title": "P5500:成也萧何!败也萧何?​",
-      "publisher": "两年砍柴",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=P5500%3A%E6%88%90%E4%B9%9F%E8%90%A7%E4%BD%95%21%E8%B4%A5%E4%B9%9F%E8%90%A7%E4%BD%95%3F%E2%80%8B",
-      "published_at": "2026-11-05",
-      "found_via": "搜狗微信",
-      "snippet": "RTX Pro 5500,或许就是这句话最好的例证.最近圈子里都在聊它.一边是大厂排队下单,订单传闻有几百亿(美金哦);另一边所有...",
-      "seen_at": "2026-11-10"
     }
   ],
   "mentions": [
@@ -788,6 +788,8 @@
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": []
+    "notes": [
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+    ]
   }
 }

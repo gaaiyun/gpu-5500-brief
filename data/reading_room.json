@@ -1,5 +1,30 @@
 [
  {
+  "url": "https://www.cnbc.com/2026/11/12/nvidia-trump-jensen-chip-export-controls-china-xi-.html",
+  "title": "Jensen Huang's affair with alleged spy revives push to tighten China chip curbs ahead of Trump-Xi su",
+  "publisher": "CNBC",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-12",
+  "scope": "context",
+  "snippets": [
+   "Alice Huang helped facilitate at least $7.5 billion in Nvidia chip shipments to ",
+   "Short seller firm Culper Research estimated in May that more than 20% of Nvidia'"
+  ],
+  "seen_at": "2026-11-12",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/u-finalizing-rule-block-china-042215614.html",
+  "title": "U.S. finalizing rule to block China’s remote AI chip access- The Information",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-12",
+  "scope": "context",
+  "snippets": [],
+  "seen_at": "2026-11-12",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.techpowerup.com/354686/nvidia-geforce-rtx-5080-24-gb-reportedly-cancelled-16-gb-model-remains?cp=2",
   "title": "NVIDIA GeForce RTX 5080 24 GB Reportedly Cancelled, 16 GB Model Remains",
   "publisher": "TechPowerUp",
