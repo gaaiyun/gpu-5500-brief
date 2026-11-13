@@ -1,5 +1,22 @@
 [
  {
+  "url": "https://news.qq.com/rain/a/20261113A0058D00",
+  "title": "栽在女人手中的黄仁勋离开英伟达，对人工智能和中国AI影响多大？",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-13",
+  "scope": "context",
+  "snippets": [
+   "11月12日，全球人工智能芯片霸主英伟达突然宣布，创始人黄仁勋辞去公司总裁、首席执行官及董事职务，即刻生效。",
+   "这意味着，执掌英伟达33年的黄仁勋，正式离开了自己一手打造的商业帝国。",
+   "11月8日，英伟达董事会宣布启动独立调查，重点审查黄仁勋是否成为外国情报活动的目标。",
+   "过去33年，黄仁勋最大的贡献，不只是把英伟达从一家游戏显卡公司发展成全球AI芯片霸主，更重要的是，他将芯片制造商、云计算企业、数据中心运营商、AI实验室以及上下",
+   "路透社11月12日报道，中国AI企业已经开始寻找海外数据中心的英伟达算力租赁资源，担心此次风波促使美国进一步收紧对先进芯片的限制，包括通过境外数据中心远程使用芯"
+  ],
+  "seen_at": "2026-11-13",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.cnbc.com/2026/11/12/nvidia-trump-jensen-chip-export-controls-china-xi-.html",
   "title": "Jensen Huang's affair with alleged spy revives push to tighten China chip curbs ahead of Trump-Xi su",
   "publisher": "CNBC",
@@ -9,23 +26,6 @@
   "snippets": [
    "Alice Huang helped facilitate at least $7.5 billion in Nvidia chip shipments to ",
    "Short seller firm Culper Research estimated in May that more than 20% of Nvidia'"
-  ],
-  "seen_at": "2026-11-13",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://news.qq.com/rain/a/20261113A0058D00",
-  "title": "栽在女人手中的黄仁勋离开英伟达，对人工智能和中国AI影响多大？",
-  "publisher": "腾讯新闻",
-  "source_type": "公众号",
-  "published_at": "2026-11-12",
-  "scope": "context",
-  "snippets": [
-   "11月12日，全球人工智能芯片霸主英伟达突然宣布，创始人黄仁勋辞去公司总裁、首席执行官及董事职务，即刻生效。",
-   "这意味着，执掌英伟达33年的黄仁勋，正式离开了自己一手打造的商业帝国。",
-   "11月8日，英伟达董事会宣布启动独立调查，重点审查黄仁勋是否成为外国情报活动的目标。",
-   "过去33年，黄仁勋最大的贡献，不只是把英伟达从一家游戏显卡公司发展成全球AI芯片霸主，更重要的是，他将芯片制造商、云计算企业、数据中心运营商、AI实验室以及上下",
-   "路透社11月12日报道，中国AI企业已经开始寻找海外数据中心的英伟达算力租赁资源，担心此次风波促使美国进一步收紧对先进芯片的限制，包括通过境外数据中心远程使用芯"
   ],
   "seen_at": "2026-11-13",
   "found_via": "Bing 新闻"
@@ -52,6 +52,24 @@
    "Shares traded at $160.56 Thursday morning, down 7.6% on the day and 29.1% over t",
    "In its Q2 fiscal 2027 earnings release, Nvidia guided third-quarter revenue to $",
    "On the August 26 call, CFO Colette Kress said Hopper shipments to China-based cu"
+  ],
+  "seen_at": "2026-11-13",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/chinas-pla-linked-university-reportedly-193012031.html",
+  "title": "China's PLA-Linked University Reportedly Bought Nvidia's Powerful H200 AI Chips Despite US Export Bl",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-12",
+  "scope": "context",
+  "snippets": [
+   "Last month, Northwestern Polytechnical University, part of China's elite \"Seven ",
+   "The Northwestern Polytechnical University obtained access to H200 chips and othe",
+   "Nvidia's H200 ranks among its most powerful processors for developing and operat",
+   "The university also leased computing capacity powered by eight Nvidia A100 chips",
+   "Shares of Nvidia closed 5.47% lower at $168.89 on Tuesday;",
+   "For accredited investors looking beyond stocks and bonds, EquityMultiple provide"
   ],
   "seen_at": "2026-11-13",
   "found_via": "Bing 新闻"
