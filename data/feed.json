@@ -1,23 +1,63 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-14T06:08:27+08:00",
-  "agent": "actions-sweep+cloud-routine",
+  "updated_at": "2026-11-14T07:30:00+08:00",
+  "agent": "cloud-routine",
   "searched": [
     "RTX PRO 5500 China shipment allocation",
-    "RTX PRO 5500 国内 报价 现货 到货",
-    "Nvidia Huang probe China export controls BIS November 2026",
-    "英伟达 5500 工信部 审批 采购 订单 游族网络",
-    "NDAA Nvidia China chip export amendment White House",
-    "Nvidia earnings November 18 China RTX Pro 5500",
-    "华为昇腾 寒武纪 价格 供应 三季报",
-    "RTX 5090 国内 价格 上涨 RTX PRO 6000 渠道",
-    "GDDR7 price shortage Nvidia TSMC Rubin capacity",
-    "丽台 PNY 浪潮 联想 RTX PRO 5500 服务器 交付",
-    "算力租赁 价格 GPU 采购公告 PRO5500 中标",
-    "White House backs tighter Nvidia China chip controls NDAA",
-    "天阳科技 RTX PRO 5500 公告 采购"
+    "RTX PRO 5500 报价 到货 渠道",
+    "Nvidia Huang resigns China chips export Reuters",
+    "Nvidia remote access China data center curbs BIS",
+    "英伟达 黄仁勋 辞职 RTX PRO 5500 影响 交付",
+    "丽台 PNY RTX PRO 5500 现货 价格 11月",
+    "浪潮 新华三 联想 超聚变 RTX PRO 5500 服务器 样卡",
+    "华为昇腾 寒武纪 价格 供应 11月 2026",
+    "RTX 5090 RTX PRO 6000 China price November 2026",
+    "GDDR7 price shortage TSMC capacity Rubin Nvidia November 2026",
+    "算力租赁 价格 英伟达 海外数据中心 中国 租用 新规",
+    "Nvidia Kress interim CEO China RTX Pro earnings November 18",
+    "Reuters $3 billion Chinese AI data centers Nvidia chips Huang exit",
+    "Nvidia announces Jensen Huang resignation Colette Kress interim CEO",
+    "Malaysia Megaspeed probe Nvidia GPU re-export China",
+    "游族网络 PRO5500 采购 合同 交付",
+    "Chinese AI firms scramble Nvidia chips tighter curbs overseas data centers",
+    "RTX PRO 5500 天阳科技 算力租赁 采购 公告",
+    "杭州园林 杭微天算 采购 RTX PRO 5500"
   ],
   "items": [
+    {
+      "id": "nvidia-20261112-huang-resigns",
+      "title": "英伟达公告：黄仁勋辞去CEO及董事职务，CFO克雷斯任临时CEO",
+      "published_at": "2026-11-12",
+      "publisher": "NVIDIA 公告 / SEC 8-K",
+      "source_type": "官方",
+      "scope": "context",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+      "grade": "A",
+      "summary": "英伟达在11月12日公告中称，黄仁勋辞去总裁、首席执行官和董事会成员职务，即刻生效。CFO科莱特·克雷斯在继续担任CFO的同时出任临时CEO，直至任命正式继任者。董事会启动永久CEO遴选，将考虑内部和外部人选，并任命哈维·琼斯为首任董事会主席。",
+      "impact": "推断：领导层空缺加上美国国会和商务部的对华收紧动向，5500的产能分配和审批节奏更难预判，大陆报价偏向上行。",
+      "watch": "11月18日财报会上对中国和产能的口径",
+      "corroboration": [
+        "https://www.cnbc.com/2026/11/13/nvidia-jensen-huang-washington-congress.html"
+      ],
+      "checked_at": "2026-11-14"
+    },
+    {
+      "id": "theinformation-20261112-remote-access-rule",
+      "title": "The Information：美国商务部拟定稿限制中国企业远程使用海外数据中心英伟达芯片的规则",
+      "published_at": "2026-11-12",
+      "publisher": "雅虎财经转引 The Information",
+      "source_type": "主流媒体",
+      "scope": "context",
+      "url": "https://finance.yahoo.com/technology/ai/articles/u-finalizing-rule-block-china-042215614.html",
+      "grade": "B",
+      "summary": "据 The Information 报道，美国商务部正在定稿一项规则，限制中国AI企业租用海外数据中心里的英伟达算力，原计划本月公布。据同一报道，BIS 还在考虑对按要求报告禁运国家客户及其算力规模的美国运营数据中心给予豁免，仍在与其他部门磋商。规则尚未发布。",
+      "impact": "推断：海外租算力这条路收窄后，中国买家更依赖境内到货的卡，5500不在出口限制内，大陆询价和订单压力可能加大。",
+      "watch": "规则是否在本月公布及适用国家范围",
+      "corroboration": [
+        "https://aiweekly.co/alerts/commerce-readies-rule-to-block-chinas-remote-ai-chip-access"
+      ],
+      "checked_at": "2026-11-14"
+    },
     {
       "id": "thehill-20261111-ndaa-chip-limits",
       "title": "美国国会借黄仁勋事件推动把对华芯片限制写入国防授权法案",
@@ -373,6 +413,24 @@
   ],
   "leads": [
     {
+      "title": "Huang's exit and US scrutiny imperil $3 billion of Chinese AI data centers built on Nvidia chips, Reuters reports",
+      "publisher": "mlq.ai 转述路透",
+      "source_type": "其他",
+      "url": "https://mlq.ai/news/huangs-exit-and-us-scrutiny-imperil-3-billion-of-chinese-ai-data-centers-built-on-nvidia-chips-reuters-reports/",
+      "published_at": "2026-11-13",
+      "found_via": "WebSearch",
+      "snippet": "转述路透：超过30亿美元的中国AI数据中心项目围绕被禁出口的英伟达处理器设计，面临美方收紧风险；未找到路透原文。"
+    },
+    {
+      "title": "Malaysia probes possible Nvidia GPU re-exports to China, targets Megaspeed links",
+      "publisher": "DIGITIMES",
+      "source_type": "行业媒体",
+      "url": "https://www.digitimes.com/news/a20261113VL220/data-nvidia-gpu-ai-chip-investigation.html",
+      "published_at": "2026-11-13",
+      "found_via": "WebSearch",
+      "snippet": "标题称马来西亚调查英伟达GPU可能转口中国，关联Megaspeed，收紧数据管控；正文未读到。"
+    },
+    {
       "title": "官宣|RTX PRO 5500 现货在即",
       "publisher": "麦丰云服",
       "source_type": "公众号",
@@ -651,26 +709,6 @@
       "found_via": "搜狗微信",
       "snippet": "日消息,NVIDIA RTX PRO 5500 Blackwell 专业工作站显卡现身美国零售商 SHI Government Solutions 商品页面,PNY 版本标价 17999...",
       "seen_at": "2026-11-07"
-    },
-    {
-      "title": "Nvidia RTX Pro 5500 Shortage Leaves China Facing a Reported 1% Delivery Rate",
-      "publisher": "remio",
-      "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMlJQN0J2Y2ZnLUdRdm5CaUI4Ql9oTDNsTDNuVkowNkdReEZyVTFaTHJOR05jWFoyX0tTc3RaeFE4dmNqcU5zVHU2cnN5MC1oRVFhQ1hsZ28zdWFGVllheFhkc3RheWFCNWJwdFg0amVPZ3oxQ2kxQWJWRkpFN0FRaHJRemdXQURkQWZibWpBWUJJanVYVHNacTk1d01Lbk1LU0Ew?oc=5",
-      "published_at": "2026-11-06",
-      "found_via": "Google 新闻",
-      "snippet": "",
-      "seen_at": "2026-11-06"
-    },
-    {
-      "title": "AI热度榜Top10|四巨头宣誓作证",
-      "publisher": "知潜",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=AI%E7%83%AD%E5%BA%A6%E6%A6%9CTop10%7C%E5%9B%9B%E5%B7%A8%E5%A4%B4%E5%AE%A3%E8%AA%93%E4%BD%9C%E8%AF%81",
-      "published_at": "2026-11-05",
-      "found_via": "搜狗微信",
-      "snippet": "英伟达中国缺卡:RTX Pro 5500订单仅1%到货◦︎ Anthropic预计2028年创收700亿美元◦︎ Anthropic开源FlashProve,17秒识破套壳...",
-      "seen_at": "2026-11-14"
     }
   ],
   "mentions": [
@@ -762,8 +800,8 @@
     }
   },
   "take": {
-    "date": "2026-11-12",
-    "text": "美国国会借黄仁勋事件推动把对华芯片限制写进国防授权法案，5500暂不在管制内，但审批和交付的政策风险上升。已确认节点仍是年底前数千颗、2027年2月左右数万颗，11月18日财报是下一个口径。"
+    "date": "2026-11-14",
+    "text": "黄仁勋辞职、克雷斯任临时CEO；美方拟定稿的远程访问规则若落地，海外租算力收窄，大陆买家更依赖境内到货的5500。5500不在管制内，但政策风险上升；11月18日财报是下一个口径。"
   },
   "sweep": {
     "date": "2026-11-14",
@@ -773,7 +811,8 @@
     "corroborated": 0,
     "model": null,
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)"
+      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)",
+      "云端：本轮5500本身72小时内无新增原创报道，新增2条相关动态；杭州园林采购5500公告只搜到转载摘录，留作线索。"
     ]
   }
 }
