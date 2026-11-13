@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-13T15:50:20+08:00",
+  "updated_at": "2026-11-14T01:09:01+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -487,6 +487,16 @@
       "seen_at": "2026-11-10"
     },
     {
+      "title": "60 万张 H200 堆在香港,美国批的接货公司是空壳",
+      "publisher": "金牌媒人相亲会",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=60%20%E4%B8%87%E5%BC%A0%20H200%20%E5%A0%86%E5%9C%A8%E9%A6%99%E6%B8%AF%2C%E7%BE%8E%E5%9B%BD%E6%89%B9%E7%9A%84%E6%8E%A5%E8%B4%A7%E5%85%AC%E5%8F%B8%E6%98%AF%E7%A9%BA%E5%A3%B3",
+      "published_at": "2026-11-08",
+      "found_via": "搜狗微信",
+      "snippet": "规模化到货这件事,目前还没发生.同一周彭博社给的另一组数字更直白:合规型号 RTX Pro 5500 已经放行,但中国客户接下来几个...",
+      "seen_at": "2026-11-14"
+    },
+    {
       "title": "阿里腾讯字节订了 600 万张英伟达,四个月",
       "publisher": "AI星轨",
       "source_type": "公众号",
@@ -657,24 +667,14 @@
       "seen_at": "2026-11-06"
     },
     {
-      "title": "新闽江网 | 700亿美元英伟达订单交付承压;网传马斯克收购微软炒掉盖茨截图为伪造;懂淘风控体系持续落地虚拟资产交易纠纷率优于行业均值",
-      "publisher": "商业捕虫网",
+      "title": "AI热度榜Top10|四巨头宣誓作证",
+      "publisher": "知潜",
       "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E6%96%B0%E9%97%BD%E6%B1%9F%E7%BD%91%20%7C%20700%E4%BA%BF%E7%BE%8E%E5%85%83%E8%8B%B1%E4%BC%9F%E8%BE%BE%E8%AE%A2%E5%8D%95%E4%BA%A4%E4%BB%98%E6%89%BF%E5%8E%8B%3B%E7%BD%91%E4%BC%A0%E9%A9%AC%E6%96%AF%E5%85%8B%E6%94%B6%E8%B4%AD%E5%BE%AE%E8%BD%AF%E7%82%92%E6%8E%89%E7%9B%96%E8%8C%A8%E6%88%AA%E5%9B%BE%E4%B8%BA%E4%BC%AA%E9%80%A0%3B%E6%87%82%E6%B7%98%E9%A3%8E%E6%8E%A7%E4%BD%93%E7%B3%BB%E6%8C%81%E7%BB%AD%E8%90%BD%E5%9C%B0%E8%99%9A%E6%8B%9F%E8%B5%84%E4%BA%A7%E4%BA%A4%E6%98%93%E7%BA%A0%E7%BA%B7%E7%8E%87%E4%BC%98%E4%BA%8E%E8%A1%8C%E4%B8%9A%E5%9D%87%E5%80%BC",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=AI%E7%83%AD%E5%BA%A6%E6%A6%9CTop10%7C%E5%9B%9B%E5%B7%A8%E5%A4%B4%E5%AE%A3%E8%AA%93%E4%BD%9C%E8%AF%81",
       "published_at": "2026-11-05",
       "found_via": "搜狗微信",
-      "snippet": "今年底前预计仅数千张到货,明年 2 月再交付数万张.RTX PRO 5500 为 84GB 显存的工作站显卡,性能弱于 H200、B300 等数据中...",
-      "seen_at": "2026-11-12"
-    },
-    {
-      "title": "彭博社:英伟达把产能先给了Rubin,中国600万张RTX订单四个月只到1%,举牌抢配额",
-      "publisher": "读书明悟人生",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%BD%AD%E5%8D%9A%E7%A4%BE%3A%E8%8B%B1%E4%BC%9F%E8%BE%BE%E6%8A%8A%E4%BA%A7%E8%83%BD%E5%85%88%E7%BB%99%E4%BA%86Rubin%2C%E4%B8%AD%E5%9B%BD600%E4%B8%87%E5%BC%A0RTX%E8%AE%A2%E5%8D%95%E5%9B%9B%E4%B8%AA%E6%9C%88%E5%8F%AA%E5%88%B01%25%2C%E4%B8%BE%E7%89%8C%E6%8A%A2%E9%85%8D%E9%A2%9D",
-      "published_at": "2026-11-05",
-      "found_via": "搜狗微信",
-      "snippet": "英伟达RTX PRO 5500 工作站显卡(官方渲染图)|来源:NVIDIA价格也说明它是＂特供＂:大客户前期报价约8.5万元,同期5090渠道...",
-      "seen_at": "2026-11-12"
+      "snippet": "英伟达中国缺卡:RTX Pro 5500订单仅1%到货◦︎ Anthropic预计2028年创收700亿美元◦︎ Anthropic开源FlashProve,17秒识破套壳...",
+      "seen_at": "2026-11-14"
     }
   ],
   "mentions": [
@@ -742,7 +742,7 @@
     },
     "2026-11-08": {
       "media": 6,
-      "wechat": 0
+      "wechat": 1
     },
     "2026-11-09": {
       "media": 5,
@@ -757,11 +757,11 @@
       "wechat": 2
     },
     "2026-11-12": {
-      "media": 3,
+      "media": 4,
       "wechat": 1
     },
     "2026-11-13": {
-      "media": 5,
+      "media": 7,
       "wechat": 0
     }
   },
@@ -770,12 +770,14 @@
     "text": "美国国会借黄仁勋事件推动把对华芯片限制写进国防授权法案，5500暂不在管制内，但审批和交付的政策风险上升。已确认节点仍是年底前数千颗、2027年2月左右数万颗，11月18日财报是下一个口径。"
   },
   "sweep": {
-    "date": "2026-11-13",
+    "date": "2026-11-14",
     "candidates": 0,
     "read": 0,
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": []
+    "notes": [
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+    ]
   }
 }
