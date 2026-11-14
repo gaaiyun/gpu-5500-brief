@@ -1,5 +1,40 @@
 [
  {
+  "url": "https://news.qq.com/rain/a/20261114A0DNT800",
+  "title": "英伟达换帅美媒赌中国输，崔天凯一句话讲清算力自主",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-14",
+  "scope": "context",
+  "snippets": [
+   "英伟达董事会在11月12日宣布黄仁勋辞去总裁、CEO及董事职务， CFO 科莱特·克雷斯出任临时CEO，同时任命哈维·琼斯为这家公司33年历史上首任董事会主席。",
+   "英伟达2026财年中国区营收占比已经降到约9%，而 出口管制 全面铺开前的2022财年，这个数字是26.4%。",
+   "2026年7月截止的季度中，直接来自中国大陆和香港客户的收入为79亿美元，占当季总营收的8.2%，较上一期的21.9%大幅收缩。",
+   "2026年上半年英伟达在华份额降至34%，出货量同比下滑44%。",
+   "美国半导体行业协会的统计也表明，2024年以来的对华限制已经让美国企业承受了显著损失，而527亿美元的本土制造补贴补不回丢掉的中国市场份额。"
+  ],
+  "seen_at": "2026-11-15",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/one-thing-china-lacks-chips-093318967.html",
+  "title": "“The One Thing China Lacks Is Chips”: Why Huawei Can’t Replace Nvidia Yet",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-14",
+  "scope": "context",
+  "snippets": [
+   "18, the day after Nvidia reports earnings.",
+   "TIKR tracks 62 analysts on Nvidia.",
+   "Analysts expect its revenue to nearly double to $412 billion in the fiscal year ",
+   "They see $902 billion two years after that:",
+   "Customers headquartered in China, Hong Kong included, brought in $19.7 billion i",
+   "That was about 9% of revenue, down from $25.0 billion a year earlier."
+  ],
+  "seen_at": "2026-11-15",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.sohu.com/a/1101151651_122747186",
   "title": "英伟达蒸发4200亿，白宫追查\"内鬼\"，中国车间正连轴转造变压器",
   "publisher": "搜狐号",
@@ -27,7 +62,7 @@
   "snippets": [
    "该ETF紧密跟踪国证机器人产业指数(980022)，反映了沪深北交易所相关上市公司的证券价格变化情况。"
   ],
-  "seen_at": "2026-11-14",
+  "seen_at": "2026-11-15",
   "found_via": "Bing 新闻"
  },
  {
@@ -54,7 +89,7 @@
    "另一家名为上海硕曜的公司——可视为Megaspeed在中国的“镜像”企业——曾发布招聘信息，寻求工程师从事“H100、H200及其他GPU型号”（即被禁运的英伟",
    "《信息报》报导称，与黄乐有关联的实体参与了DeepSeek于10月份完成的158亿美元融资。"
   ],
-  "seen_at": "2026-11-14",
+  "seen_at": "2026-11-15",
   "found_via": "Bing 新闻"
  },
  {
@@ -162,7 +197,7 @@
    "Jul 10th 2026 NVIDIA Readies GeForce RTX 5090 SE Graphics Card (180)",
    "Oct 10th 2026 NVIDIA Reportedly Ending the RTX 5090, Reserves GB202 Silicon for "
   ],
-  "seen_at": "2026-11-14",
+  "seen_at": "2026-11-15",
   "found_via": "Bing 新闻"
  },
  {
@@ -542,24 +577,6 @@
   "found_via": "Bing 新闻"
  },
  {
-  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-probe-puts-china-exposed-051236166.html",
-  "title": "Nvidia Probe Puts China Exposed US Chip Stocks In Focus",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-09",
-  "scope": "context",
-  "snippets": [
-   "Operations: Qnity generates about US$2.9b from Semiconductor Technologies and US",
-   "Market Cap: US$24.5b",
-   "Operations: Onto Innovation generates US$1.1b from semiconductor equipment and s",
-   "Market Cap: US$8.5b",
-   "Operations: Entegris generates about US$1.49b from Materials Solutions and US$2.",
-   "Market Cap: US$19.6b"
-  ],
-  "seen_at": "2026-11-09",
-  "found_via": "Bing 新闻"
- },
- {
   "url": "https://finance.yahoo.com/technology/ai/articles/jensen-huang-affair-alleged-chinese-180952926.html",
   "title": "Jensen Huang’s affair with alleged Chinese spy puts Nvidia’s China ambitions under scrutiny",
   "publisher": "雅虎财经",
@@ -572,39 +589,6 @@
    "The idea that Huang needed any encouragement in the form of an attractive woman "
   ],
   "seen_at": "2026-11-10",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1099036347_122986144",
-  "title": "外媒：60万枚英伟达芯片滞留香港，中国为啥卡自己脖子",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-08",
-  "scope": "context",
-  "snippets": [
-   "路透社11月7日引述知情人士的消息说，大约60万枚英伟达H200芯片正滞留在香港，原因是没有拿到中方的批准放行。",
-   "2022年正是美方以“国家安全”为由对华实施高端芯片出口管制，把英伟达先进芯片列入禁售清单。",
-   "路透社此前的报道披露过，英伟达为了换取放松限制，同意把对华芯片销售收入的15%交给美国政府。",
-   "芯片一天压在仓库里，英伟达的库存压力就大一天，美国政府那15%的抽成也就一天到不了账。",
-   "这60万枚卡在香港的H200，到底是中方出于供应链安全考量的正常谨慎、迟早会放行，还是中国市场已经铁了心走自主路线、美国这批落后两代的芯片真就砸手里了？"
-  ],
-  "seen_at": "2026-11-09",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://wccftech.com/nvidia-jensen-huang-rejects-anthropic-china-chip-ban-america-competition-vera-rubin/",
-  "title": "NVIDIA’s Jensen Huang Rejects Anthropic’s Total China Chip Ban Push, Says “I Completely Disagree” An",
-  "publisher": "Wccftech",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-08",
-  "scope": "context",
-  "snippets": [
-   "China currently doesn’t have access to NVIDIA’s B300 GPUs due to the latter bein",
-   "Investigation Finds Chinese Military-Linked Firms Somehow Gained Approval To Ass",
-   "NVIDIA’s Development Of Custom HBM Drops Samsung’s And TSMC’s Foundry Rivalry, A",
-   "NVIDIA GPUs Worth $11.4 Million Stolen From Oakland Fetch A Hefty Price Outside "
-  ],
-  "seen_at": "2026-11-09",
   "found_via": "Bing 新闻"
  },
  {
@@ -623,24 +607,6 @@
    "特朗普于2025年12月批准英伟达向中国出售H200芯片，放宽拜登政府时期的部分出口限制。"
   ],
   "seen_at": "2026-11-10",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.tweaktown.com/news/114529/nvidias-rtx-pro-5500-is-chinas-most-wanted-gpu-and-almost-nobody-is-getting-one-soon/index.html",
-  "title": "NVIDIA's RTX PRO 5500 is China's most wanted GPU, and almost nobody is getting one soon",
-  "publisher": "TweakTown",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-06",
-  "scope": "5500",
-  "snippets": [
-   "Chinese AI firms, including Alibaba, Tencent, and ByteDance, ordered about 6 mil",
-   "NVIDIA's RTX PRO 5500 has become one of the most sought after graphics cards in ",
-   "A Bloomberg report citing \" people familiar with the matter, \" says Chinese AI a",
-   "That figure from Bloomberg builds on Reuters' earlier report that ByteDance, Ali",
-   "Read more : ByteDance, Alibaba, and Tencent order NVIDIA RTX PRO 5500 chips wort",
-   "The RTX PRO 5500 is a Blackwell-based GPU with 84GB of GDDR7 memory that complie"
-  ],
-  "seen_at": "2026-11-09",
   "found_via": "Bing 新闻"
  }
 ]
