@@ -1,29 +1,41 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-15T04:55:12+08:00",
-  "agent": "actions-sweep+cloud-routine",
+  "updated_at": "2026-11-15T07:10:00+08:00",
+  "agent": "cloud-routine",
   "searched": [
-    "RTX PRO 5500 China shipment allocation",
-    "RTX PRO 5500 报价 到货 渠道",
-    "Nvidia Huang resigns China chips export Reuters",
-    "Nvidia remote access China data center curbs BIS",
-    "英伟达 黄仁勋 辞职 RTX PRO 5500 影响 交付",
-    "丽台 PNY RTX PRO 5500 现货 价格 11月",
-    "浪潮 新华三 联想 超聚变 RTX PRO 5500 服务器 样卡",
-    "华为昇腾 寒武纪 价格 供应 11月 2026",
-    "RTX 5090 RTX PRO 6000 China price November 2026",
-    "GDDR7 price shortage TSMC capacity Rubin Nvidia November 2026",
-    "算力租赁 价格 英伟达 海外数据中心 中国 租用 新规",
-    "Nvidia Kress interim CEO China RTX Pro earnings November 18",
-    "Reuters $3 billion Chinese AI data centers Nvidia chips Huang exit",
-    "Nvidia announces Jensen Huang resignation Colette Kress interim CEO",
-    "Malaysia Megaspeed probe Nvidia GPU re-export China",
-    "游族网络 PRO5500 采购 合同 交付",
-    "Chinese AI firms scramble Nvidia chips tighter curbs overseas data centers",
-    "RTX PRO 5500 天阳科技 算力租赁 采购 公告",
-    "杭州园林 杭微天算 采购 RTX PRO 5500"
+    "RTX PRO 5500 China price shipment allocation",
+    "RTX PRO 5500 采购 公告 渠道 报价",
+    "英伟达 RTX Pro 5500 到货 现货 配额 大陆",
+    "Nvidia China export BIS remote access rule RTX Pro",
+    "华为昇腾 寒武纪 价格 供应 11月",
+    "RTX 5090 价格 大陆 涨价 GDDR7",
+    "算力租赁 价格 英伟达 配额 浪潮 新华三 服务器 RTX PRO",
+    "Nvidia Rubin TSMC CoWoS GDDR7 supply November 2026",
+    "RTX PRO 5500 11月14日",
+    "Nvidia Megaspeed Malaysia Singapore investigation GPU China",
+    "杭微天算 云尖信息 华鲲振宇 RTX PRO 5500 问询",
+    "Nvidia earnings November 18 China RTX Pro 5500 Kress guidance",
+    "工信部 RTX Pro 5500 采购 审批 字节 阿里 腾讯 样卡 12月",
+    "丽台 PNY 5500 84GB 预订 价格 万元"
   ],
   "items": [
+    {
+      "id": "digitimes-20261113-malaysia-megaspeed",
+      "title": "DigiTimes：马来西亚调查英伟达GPU可能转口中国，涉Megaspeed关联方",
+      "published_at": "2026-11-13",
+      "publisher": "DigiTimes",
+      "source_type": "行业媒体",
+      "scope": "context",
+      "url": "https://www.digitimes.com/news/a20261113VL220/data-nvidia-gpu-ai-chip-investigation.html",
+      "grade": "B",
+      "summary": "DigiTimes 报道，马来西亚正在调查英伟达GPU是否经当地转口到中国，并针对与 Megaspeed 有关联的数据中心收紧审查。此前美国商务部和新加坡警方已对 Megaspeed 展开调查，Megaspeed 与英伟达均否认违规。",
+      "impact": "推断：东南亚转口与远程租用渠道审查收紧，中国买家更依赖境内到货的5500，大陆询价压力可能上升。",
+      "watch": "马来西亚是否发布具体措施",
+      "corroboration": [
+        "https://www.streetinsider.com/Reuters/US+senator+seeks+Commerce+Department+investigation+into+Singapore-based+Megaspeed/25449176.html"
+      ],
+      "checked_at": "2026-11-15"
+    },
     {
       "id": "sohu-20261112-488c90",
       "title": "杭州园林子公司拟采购3万片RTX PRO 5500 GPU",
@@ -76,7 +88,8 @@
       "impact": "推断：海外租算力这条路收窄后，中国买家更依赖境内到货的卡，5500不在出口限制内，大陆询价和订单压力可能加大。",
       "watch": "规则是否在本月公布及适用国家范围",
       "corroboration": [
-        "https://aiweekly.co/alerts/commerce-readies-rule-to-block-chinas-remote-ai-chip-access"
+        "https://aiweekly.co/alerts/commerce-readies-rule-to-block-chinas-remote-ai-chip-access",
+        "https://www.forbes.com/sites/jonmarkman/2026/11/12/chinese-ai-firms-rush-to-rent-nvidia-chips-abroad-before-a-new-us-rule/"
       ],
       "checked_at": "2026-11-14"
     },
@@ -435,6 +448,15 @@
   ],
   "leads": [
     {
+      "title": "RTX PRO 5500 为什么一卡难求？84GB 显存参数、供货数据与国内首批到货说明",
+      "publisher": "掘金",
+      "source_type": "其他",
+      "url": "https://juejin.cn/post/7706382935100899368",
+      "published_at": "2026-11-14",
+      "found_via": "WebSearch",
+      "snippet": "自称介绍国内首批到货平台，来源性质不明，未核实。"
+    },
+    {
       "title": "Huang's exit and US scrutiny imperil $3 billion of Chinese AI data centers built on Nvidia chips, Reuters reports",
       "publisher": "mlq.ai 转述路透",
       "source_type": "其他",
@@ -723,16 +745,6 @@
       "found_via": "GDELT",
       "snippet": "",
       "seen_at": "2026-11-07"
-    },
-    {
-      "title": "英伟达RTX PRO 5500工作站显卡报价高达17999美元比旗舰RTX PRO 6000还贵- nVIDIA",
-      "publisher": "cnBeta.COM",
-      "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE93TkoyUEJjcHZHU2ZBdHVuTDNibWduREp2T0F3QmZxVElneThocldqRUlLTm5KQ21mYURwaWZEUlhzR0I1Z2dEellPU3VMTHpTaERuNGlZdW1Uci1scEZzVw?oc=5",
-      "published_at": "2026-11-06",
-      "found_via": "Google 新闻",
-      "snippet": "",
-      "seen_at": "2026-11-07"
     }
   ],
   "mentions": [
@@ -828,8 +840,8 @@
     }
   },
   "take": {
-    "date": "2026-11-14",
-    "text": "黄仁勋辞职、克雷斯任临时CEO；美方拟定稿的远程访问规则若落地，海外租算力收窄，大陆买家更依赖境内到货的5500。5500不在管制内，但政策风险上升；11月18日财报是下一个口径。"
+    "date": "2026-11-15",
+    "text": "过去72小时没有5500本身的新价格或交付消息。新增的是马来西亚调查英伟达GPU转口，叠加美方远程访问规则待发布，海外租算力收紧，境内到货的5500更紧俏。下一个口径是11月18日英伟达财报。"
   },
   "sweep": {
     "date": "2026-11-15",
