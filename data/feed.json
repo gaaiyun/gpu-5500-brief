@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-14T07:08:16+08:00",
+  "updated_at": "2026-11-14T11:29:28+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -37,8 +37,7 @@
       "corroboration": [
         "https://www.cnbc.com/2026/11/13/nvidia-jensen-huang-washington-congress.html"
       ],
-      "checked_at": "2026-11-14",
-      "ci_checked": "2026-11-14"
+      "checked_at": "2026-11-14"
     },
     {
       "id": "theinformation-20261112-remote-access-rule",
@@ -55,8 +54,7 @@
       "corroboration": [
         "https://aiweekly.co/alerts/commerce-readies-rule-to-block-chinas-remote-ai-chip-access"
       ],
-      "checked_at": "2026-11-14",
-      "ci_checked": "2026-11-14"
+      "checked_at": "2026-11-14"
     },
     {
       "id": "thehill-20261111-ndaa-chip-limits",
@@ -812,6 +810,8 @@
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": []
+    "notes": [
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+    ]
   }
 }
