@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-15T04:55:12+08:00",
+  "updated_at": "2026-11-15T07:05:24+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -22,6 +22,24 @@
     "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
   ],
   "items": [
+    {
+      "id": "digitimes-20261113-malaysia-megaspeed",
+      "title": "DigiTimes：马来西亚调查英伟达GPU可能转口中国，涉Megaspeed关联方",
+      "published_at": "2026-11-13",
+      "publisher": "DigiTimes",
+      "source_type": "行业媒体",
+      "scope": "context",
+      "url": "https://www.digitimes.com/news/a20261113VL220/data-nvidia-gpu-ai-chip-investigation.html",
+      "grade": "B",
+      "summary": "DigiTimes 报道，马来西亚正在调查英伟达GPU是否经当地转口到中国，并针对与 Megaspeed 有关联的数据中心收紧审查。此前美国商务部和新加坡警方已对 Megaspeed 展开调查，Megaspeed 与英伟达均否认违规。",
+      "impact": "推断：东南亚转口与远程租用渠道审查收紧，中国买家更依赖境内到货的5500，大陆询价压力可能上升。",
+      "watch": "马来西亚是否发布具体措施",
+      "corroboration": [
+        "https://www.streetinsider.com/Reuters/US+senator+seeks+Commerce+Department+investigation+into+Singapore-based+Megaspeed/25449176.html"
+      ],
+      "checked_at": "2026-11-15",
+      "ci_checked": "2026-11-15"
+    },
     {
       "id": "sohu-20261112-488c90",
       "title": "杭州园林子公司拟采购3万片RTX PRO 5500 GPU",
@@ -74,7 +92,8 @@
       "impact": "推断：海外租算力这条路收窄后，中国买家更依赖境内到货的卡，5500不在出口限制内，大陆询价和订单压力可能加大。",
       "watch": "规则是否在本月公布及适用国家范围",
       "corroboration": [
-        "https://aiweekly.co/alerts/commerce-readies-rule-to-block-chinas-remote-ai-chip-access"
+        "https://aiweekly.co/alerts/commerce-readies-rule-to-block-chinas-remote-ai-chip-access",
+        "https://www.forbes.com/sites/jonmarkman/2026/11/12/chinese-ai-firms-rush-to-rent-nvidia-chips-abroad-before-a-new-us-rule/"
       ],
       "checked_at": "2026-11-14"
     },
@@ -433,6 +452,16 @@
   ],
   "leads": [
     {
+      "title": "RTX PRO 5500 为什么一卡难求？84GB 显存参数、供货数据与国内首批到货说明",
+      "publisher": "掘金",
+      "source_type": "其他",
+      "url": "https://juejin.cn/post/7706382935100899368",
+      "published_at": "2026-11-14",
+      "found_via": "WebSearch",
+      "snippet": "自称介绍国内首批到货平台，来源性质不明，未核实。",
+      "seen_at": "2026-11-15"
+    },
+    {
       "title": "Huang's exit and US scrutiny imperil $3 billion of Chinese AI data centers built on Nvidia chips, Reuters reports",
       "publisher": "mlq.ai 转述路透",
       "source_type": "其他",
@@ -440,16 +469,6 @@
       "published_at": "2026-11-13",
       "found_via": "WebSearch",
       "snippet": "转述路透：超过30亿美元的中国AI数据中心项目围绕被禁出口的英伟达处理器设计，面临美方收紧风险；未找到路透原文。",
-      "seen_at": "2026-11-14"
-    },
-    {
-      "title": "Malaysia probes possible Nvidia GPU re-exports to China, targets Megaspeed links",
-      "publisher": "DIGITIMES",
-      "source_type": "行业媒体",
-      "url": "https://www.digitimes.com/news/a20261113VL220/data-nvidia-gpu-ai-chip-investigation.html",
-      "published_at": "2026-11-13",
-      "found_via": "WebSearch",
-      "snippet": "标题称马来西亚调查英伟达GPU可能转口中国，关联Megaspeed，收紧数据管控；正文未读到。",
       "seen_at": "2026-11-14"
     },
     {
@@ -643,6 +662,16 @@
       "seen_at": "2026-11-12"
     },
     {
+      "title": "RTX PRO 5500 Blackwell上架出现价格倒挂",
+      "publisher": "泡泡科技星球",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%20Blackwell%E4%B8%8A%E6%9E%B6%E5%87%BA%E7%8E%B0%E4%BB%B7%E6%A0%BC%E5%80%92%E6%8C%82",
+      "published_at": "2026-11-06",
+      "found_via": "搜狗微信",
+      "snippet": "日消息,NVIDIA RTX PRO 5500 Blackwell 专业工作站显卡现身美国零售商 SHI Government Solutions 商品页面,PNY 版本标价 17999...",
+      "seen_at": "2026-11-15"
+    },
+    {
       "title": "彭博社:英伟达把产能先给了Rubin,中国600",
       "publisher": "读书明悟人生",
       "source_type": "公众号",
@@ -719,16 +748,6 @@
       "url": "https://lufkindailynews.com/news_reuters/business/nvidia-chips-pile-up-in-hong-kong-as-china-withholds-import-approval/article_34a11941-bd07-58cb-adcd-e9bf7af9cab4.html",
       "published_at": "2026-11-06",
       "found_via": "GDELT",
-      "snippet": "",
-      "seen_at": "2026-11-07"
-    },
-    {
-      "title": "英伟达RTX PRO 5500工作站显卡报价高达17999美元比旗舰RTX PRO 6000还贵- nVIDIA",
-      "publisher": "cnBeta.COM",
-      "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE93TkoyUEJjcHZHU2ZBdHVuTDNibWduREp2T0F3QmZxVElneThocldqRUlLTm5KQ21mYURwaWZEUlhzR0I1Z2dEellPU3VMTHpTaERuNGlZdW1Uci1scEZzVw?oc=5",
-      "published_at": "2026-11-06",
-      "found_via": "Google 新闻",
       "snippet": "",
       "seen_at": "2026-11-07"
     }
@@ -826,8 +845,8 @@
     }
   },
   "take": {
-    "date": "2026-11-14",
-    "text": "黄仁勋辞职、克雷斯任临时CEO；美方拟定稿的远程访问规则若落地，海外租算力收窄，大陆买家更依赖境内到货的5500。5500不在管制内，但政策风险上升；11月18日财报是下一个口径。"
+    "date": "2026-11-15",
+    "text": "过去72小时没有5500本身的新价格或交付消息。新增的是马来西亚调查英伟达GPU转口，叠加美方远程访问规则待发布，海外租算力收紧，境内到货的5500更紧俏。下一个口径是11月18日英伟达财报。"
   },
   "sweep": {
     "date": "2026-11-15",
@@ -836,8 +855,6 @@
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
-    ]
+    "notes": []
   }
 }
