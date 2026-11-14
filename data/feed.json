@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-14T15:33:34+08:00",
+  "updated_at": "2026-11-14T23:44:54+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -22,6 +22,28 @@
     "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
   ],
   "items": [
+    {
+      "id": "sohu-20261112-488c90",
+      "title": "杭州园林子公司拟采购3万片RTX PRO 5500 GPU",
+      "published_at": "2026-11-12",
+      "publisher": "搜狐号",
+      "source_type": "公众号",
+      "url": "https://www.sohu.com/a/1100664032_121010226",
+      "grade": "C",
+      "summary": "杭州园林控股子公司杭微天算11月11日公告，与云尖信息、华鲲振宇签署合同，拟合计采购3万片NVIDIA RTX PRO 5500 BLACKWELL GPU，具体数量以实际交付为准。",
+      "impact": "3万张的采购意向可能推高短期渠道需求，但公告提示交付存在较大不确定性，实际到货量可能低于预期。",
+      "watch": "核实3万张订单的最终交付进度及是否计入已收录的大厂订单总量。",
+      "corroboration": [],
+      "claims": [
+        {
+          "text": "拟合计采购3万片NVIDIA RTX PRO 5500 BLACKWELL GPU",
+          "status": "无出处",
+          "ref": ""
+        }
+      ],
+      "checked_at": "2026-11-14",
+      "found_via": "Bing 新闻"
+    },
     {
       "id": "nvidia-20261112-huang-resigns",
       "title": "英伟达公告：黄仁勋辞去CEO及董事职务，CFO克雷斯任临时CEO",
@@ -431,6 +453,16 @@
       "seen_at": "2026-11-14"
     },
     {
+      "title": "美国:B300禁了只放RTXPro5500!中国:巧了,金刚石线锯磨轮也没打算敞开发",
+      "publisher": "鹤去楼空",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E7%BE%8E%E5%9B%BD%3AB300%E7%A6%81%E4%BA%86%E5%8F%AA%E6%94%BERTXPro5500%21%E4%B8%AD%E5%9B%BD%3A%E5%B7%A7%E4%BA%86%2C%E9%87%91%E5%88%9A%E7%9F%B3%E7%BA%BF%E9%94%AF%E7%A3%A8%E8%BD%AE%E4%B9%9F%E6%B2%A1%E6%89%93%E7%AE%97%E6%95%9E%E5%BC%80%E5%8F%91",
+      "published_at": "2026-11-12",
+      "found_via": "搜狗微信",
+      "snippet": "一张卡卡在门槛上2026年10月,路透社报出一条消息,阿里巴巴、腾讯、字节跳动三家合计向英伟达下了超过300万块RTX Pro 5500...",
+      "seen_at": "2026-11-14"
+    },
+    {
       "title": "RTX 5080 24GB突然取消,16GB继续扛!三个好消息,三个坏消息",
       "publisher": "文Q聊硬件",
       "source_type": "公众号",
@@ -699,16 +731,6 @@
       "found_via": "Google 新闻",
       "snippet": "",
       "seen_at": "2026-11-07"
-    },
-    {
-      "title": "NVIDIA RTX PRO 5500 Listing Spotted at $17,999, More Than the Flagship RTX PRO 6",
-      "publisher": "TechPowerUp",
-      "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNmx0Sl9oVnJqMlZ3Vk10OHFkNDZpZ3plWENxZ21DVWtNQ2VGMVRLX0w2cXFRMk4zT05GTTlyZlctaHlyRlV5V1lERWtEcXBlOHlkNmpXTHRERzVpT3VmRjZ1Y0daekxjQ3RPd2xmNnJuYlVVaXhTRnZvajlGWlJNZnhIUE5uVWJsOVp3VWQyWGY5dTg2SGhDX1lGSmNwV1dBSS1OSm5zVHhuaUxmcl9BcWtvZzVlTDdtaGhqU9IBwgFBVV95cUxQSkVveEZKWlh6d1BabXpYRUZvYjJsNHBSS3BkRXRxU0RLZENEamhSTlY5eUZzTVNXaXBOLXB2aEdXd0lMYkpMSUhfLUFTcGl4R2J1QTQyY19WNW9XeHljYWFyd29yaUx5QTRQVWlUTjUxZ1F5dnl2eDZSTFhoNkFuM2hqRWtKdXdmTjN3Q3oxNUNKSWc1S3NQakYxcFJoM2lhTHlvc2I2cDItQnFWLVlSOGlUTGN6bEdFZVBpS1dIa2FQQQ?oc=5",
-      "published_at": "2026-11-06",
-      "found_via": "Google 新闻",
-      "snippet": "",
-      "seen_at": "2026-11-07"
     }
   ],
   "mentions": [
@@ -792,10 +814,14 @@
     },
     "2026-11-12": {
       "media": 4,
-      "wechat": 2
+      "wechat": 3
     },
     "2026-11-13": {
       "media": 8,
+      "wechat": 0
+    },
+    "2026-11-14": {
+      "media": 1,
       "wechat": 0
     }
   },
@@ -805,13 +831,13 @@
   },
   "sweep": {
     "date": "2026-11-14",
-    "candidates": 0,
-    "read": 0,
-    "added": [],
+    "candidates": 1,
+    "read": 1,
+    "added": [
+      "sohu-20261112-488c90"
+    ],
     "corroborated": 0,
-    "model": null,
-    "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
-    ]
+    "model": "@cf/zai-org/glm-4.7-flash",
+    "notes": []
   }
 }

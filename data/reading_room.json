@@ -148,6 +148,42 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://www.techpowerup.com/354686/nvidia-geforce-rtx-5080-24-gb-reportedly-cancelled-16-gb-model-remains?cp=2",
+  "title": "NVIDIA GeForce RTX 5080 24 GB Reportedly Cancelled, 16 GB Model Remains",
+  "publisher": "TechPowerUp",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-12",
+  "scope": "context",
+  "snippets": [
+   "Nov 13th 2026 NVIDIA Allegedly Engineered Scarcity By Funding AI Startups To Buy",
+   "Nov 3rd 2026 NVIDIA GeForce RTX 50-Series Scheduled for up to $500 Price Hike Th",
+   "Mar 30th 2026 NVIDIA Readies Rubin-based GeForce RTX 60-series with Massive RT P",
+   "Jan 16th 2026 NVIDIA Reportedly Ends GeForce RTX 5070 Ti Production, RTX 5060 Ti",
+   "Jul 10th 2026 NVIDIA Readies GeForce RTX 5090 SE Graphics Card (180)",
+   "Oct 10th 2026 NVIDIA Reportedly Ending the RTX 5090, Reserves GB202 Silicon for "
+  ],
+  "seen_at": "2026-11-14",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1100664032_121010226",
+  "title": "杭州园林子公司拟跨界采购3万片GPU，下游订单暂未锁定，上市公司三 ...",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-12",
+  "scope": "5500",
+  "snippets": [
+   "证券代码：300649）发布公告称，公司控股子公司杭微天算（上海）智能科技有限公司近日分别与云尖信息技术股份有限公司、上海华鲲振宇智能科技有限责任公司签署《销售",
+   "公告显示，杭微天算与云尖信息签署的合同约定采购2万片NVIDIA RTX PRO 5500 BLACKWELL及配件产品，与华鲲振宇签署的合同则约定采购1万片同",
+   "根据公告，云尖信息成立于2020年8月，注册资本36,909.3792万元，注册地位于杭州市萧山区，经营范围涵盖软件开发、信息系统集成服务及云计算设备、信息安全",
+   "华鲲振宇成立于2023年10月，注册资本1000万元，注册地位于上海市青浦区。",
+   "业绩方面，杭州园林2026年三季报显示，今年前三季度公司实现营业总收入9180.82万元，同比下降4.24%；",
+   "归属于上市公司股东的净利润为-3395.98万元，上年同期为703.93万元，同比由盈转亏；"
+  ],
+  "seen_at": "2026-11-14",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.cnbc.com/2026/11/12/nvidia-trump-jensen-chip-export-controls-china-xi-.html",
   "title": "Jensen Huang's affair with alleged spy revives push to tighten China chip curbs ahead of Trump-Xi su",
   "publisher": "CNBC",
@@ -221,24 +257,6 @@
    "McGuire said trade data show $80 billion of AI chips went to Singapore, Thailand"
   ],
   "seen_at": "2026-11-14",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.techpowerup.com/354686/nvidia-geforce-rtx-5080-24-gb-reportedly-cancelled-16-gb-model-remains?cp=2",
-  "title": "NVIDIA GeForce RTX 5080 24 GB Reportedly Cancelled, 16 GB Model Remains",
-  "publisher": "TechPowerUp",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-11",
-  "scope": "context",
-  "snippets": [
-   "Mar 30th 2026 NVIDIA Readies Rubin-based GeForce RTX 60-series with Massive RT P",
-   "Nov 3rd 2026 NVIDIA GeForce RTX 50-Series Scheduled for up to $500 Price Hike Th",
-   "Jan 16th 2026 NVIDIA Reportedly Ends GeForce RTX 5070 Ti Production, RTX 5060 Ti",
-   "Jul 10th 2026 NVIDIA Readies GeForce RTX 5090 SE Graphics Card (180)",
-   "Oct 10th 2026 NVIDIA Reportedly Ending the RTX 5090, Reserves GB202 Silicon for ",
-   "Dec 31st 2025 Leaks Predict $5000 RTX 5090 GPUs in 2026 Thanks to AI Industry De"
-  ],
-  "seen_at": "2026-11-12",
   "found_via": "Bing 新闻"
  },
  {
@@ -623,24 +641,6 @@
    "The RTX PRO 5500 is a Blackwell-based GPU with 84GB of GDDR7 memory that complie"
   ],
   "seen_at": "2026-11-09",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://news.qq.com/rain/a/20261106A05ZSM00",
-  "title": "RTX PRO 5500 Blackwell上架出现价格倒挂，规格低于旗舰PRO 6000售价反而更高",
-  "publisher": "腾讯新闻",
-  "source_type": "公众号",
-  "published_at": "2026-11-06",
-  "scope": "5500",
-  "snippets": [
-   "11 月 6 日消息，NVIDIA RTX PRO 5500 Blackwell 专业工作站显卡现身美国零售商 SHI Government Solutions",
-   "即便折扣后售价仍达到 17408.63 美元，约合人民币 116934 元。",
-   "一个极具反差的现象随之出现：这款定位低于旗舰的显卡，渠道售价已经超过 RTX PRO 6000 16000 美元的官方定价，溢价约 1400 美元。",
-   "从硬件规格来看，RTX PRO 5500 本是 RTX PRO 6000 的次一级型号。",
-   "市场分析认为，国内市场旺盛的采购需求，是推高 RTX PRO 5500 价格的关键。",
-   "据悉国内企业订单总量已经突破 600 万张，大幅超出 NVIDIA 规划的 2027 年 300 万张产能。"
-  ],
-  "seen_at": "2026-11-10",
   "found_via": "Bing 新闻"
  }
 ]
