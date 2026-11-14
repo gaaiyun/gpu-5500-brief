@@ -1,5 +1,40 @@
 [
  {
+  "url": "https://news.qq.com/rain/a/20261114A0DNT800",
+  "title": "英伟达换帅美媒赌中国输，崔天凯一句话讲清算力自主",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-14",
+  "scope": "context",
+  "snippets": [
+   "英伟达董事会在11月12日宣布黄仁勋辞去总裁、CEO及董事职务， CFO 科莱特·克雷斯出任临时CEO，同时任命哈维·琼斯为这家公司33年历史上首任董事会主席。",
+   "英伟达2026财年中国区营收占比已经降到约9%，而 出口管制 全面铺开前的2022财年，这个数字是26.4%。",
+   "2026年7月截止的季度中，直接来自中国大陆和香港客户的收入为79亿美元，占当季总营收的8.2%，较上一期的21.9%大幅收缩。",
+   "2026年上半年英伟达在华份额降至34%，出货量同比下滑44%。",
+   "美国半导体行业协会的统计也表明，2024年以来的对华限制已经让美国企业承受了显著损失，而527亿美元的本土制造补贴补不回丢掉的中国市场份额。"
+  ],
+  "seen_at": "2026-11-15",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/one-thing-china-lacks-chips-093318967.html",
+  "title": "“The One Thing China Lacks Is Chips”: Why Huawei Can’t Replace Nvidia Yet",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-14",
+  "scope": "context",
+  "snippets": [
+   "18, the day after Nvidia reports earnings.",
+   "TIKR tracks 62 analysts on Nvidia.",
+   "Analysts expect its revenue to nearly double to $412 billion in the fiscal year ",
+   "They see $902 billion two years after that:",
+   "Customers headquartered in China, Hong Kong included, brought in $19.7 billion i",
+   "That was about 9% of revenue, down from $25.0 billion a year earlier."
+  ],
+  "seen_at": "2026-11-15",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.sohu.com/a/1101151651_122747186",
   "title": "英伟达蒸发4200亿，白宫追查\"内鬼\"，中国车间正连轴转造变压器",
   "publisher": "搜狐号",
@@ -18,6 +53,30 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://www.sohu.com/a/1101063507_122004016",
+  "title": "华为发布首款昇腾原生具身模型，机器人ETF鹏华迎2800万份净申购",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-13",
+  "scope": "context",
+  "snippets": [
+   "该ETF紧密跟踪国证机器人产业指数(980022)，反映了沪深北交易所相关上市公司的证券价格变化情况。"
+  ],
+  "seen_at": "2026-11-15",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1100937546_114984",
+  "title": "华为云具身世界模型发布在即，机器人板块迎催化，机器人ETF易方达 ...",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-13",
+  "scope": "context",
+  "snippets": [],
+  "seen_at": "2026-11-14",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.rfi.fr/cn/%E7%A7%91%E6%8A%80%E4%B8%8E%E6%96%87%E5%8C%96/20261113-%E9%BB%84%E4%B9%90%E5%88%9B%E5%8A%9E%E5%85%AC%E5%8F%B8%E6%9B%BE%E8%8E%B7%E5%A4%9A%E6%AC%BE%E5%AF%B9%E5%8D%8E%E7%A6%81%E5%94%AE%E8%8B%B1%E4%BC%9F%E8%BE%BE%E8%8A%AF%E7%89%87-%E5%85%B3%E8%81%94%E4%BC%81%E4%B8%9A%E6%8D%AE%E6%8A%A5%E6%8A%95%E8%B5%84deepseek",
   "title": "黄乐创办公司曾获多款对华禁售英伟达芯片 关联企业据报投资DeepSeek",
   "publisher": "法广",
@@ -30,7 +89,7 @@
    "另一家名为上海硕曜的公司——可视为Megaspeed在中国的“镜像”企业——曾发布招聘信息，寻求工程师从事“H100、H200及其他GPU型号”（即被禁运的英伟",
    "《信息报》报导称，与黄乐有关联的实体参与了DeepSeek于10月份完成的158亿美元融资。"
   ],
-  "seen_at": "2026-11-14",
+  "seen_at": "2026-11-15",
   "found_via": "Bing 新闻"
  },
  {
@@ -42,6 +101,35 @@
   "scope": "context",
   "snippets": [
    "Nvidia unveils OOI CPO prototype for post-2028 AI needs"
+  ],
+  "seen_at": "2026-11-14",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261114A07I7600",
+  "title": "英伟达换帅，4大变数",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-13",
+  "scope": "context",
+  "snippets": [
+   "英伟达 换帅后首场法说会也将在17日举行，台厂将紧盯 CoWoS 产能预订、新品量产时程与 AI融资政策 ，判断接下来的订单是照走、延后，还是转向其他平台。",
+   "永丰投顾总经理黄柏棠表示，英伟达代理执行长克瑞斯主持的法说会有四大重点，一是本季营收预期约1,080亿美元、明年营收成长预估约7成以及云端积压订单约2兆美元，能",
+   "市场目前仍预期英伟达2027、2028会计年度营收分别为4,126亿美元及6,995亿美元，年增91％及约7成。",
+   "英伟达未来2～3年的产品路线已排定，眼前考验是新团队能否按计划交付。"
+  ],
+  "seen_at": "2026-11-14",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261113A08AKK00",
+  "title": "机器人ETF鹏华盘中净申购2800万份，华为将发布首款昇腾原生具身世界 ...",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-13",
+  "scope": "context",
+  "snippets": [
+   "机器人ETF鹏华(159278)紧密跟踪国证机器人产业指数，国证机器人产业指数反映沪深北交易所机器人产业相关上市公司的证券价格变化情况。"
   ],
   "seen_at": "2026-11-14",
   "found_via": "Bing 新闻"
@@ -90,6 +178,42 @@
   "scope": "context",
   "snippets": [
    "With Huang gone and Colette Kress in as interim CEO, the future of Nvidia, which"
+  ],
+  "seen_at": "2026-11-14",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.techpowerup.com/354686/nvidia-geforce-rtx-5080-24-gb-reportedly-cancelled-16-gb-model-remains?cp=2",
+  "title": "NVIDIA GeForce RTX 5080 24 GB Reportedly Cancelled, 16 GB Model Remains",
+  "publisher": "TechPowerUp",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-12",
+  "scope": "context",
+  "snippets": [
+   "Nov 13th 2026 NVIDIA Allegedly Engineered Scarcity By Funding AI Startups To Buy",
+   "Nov 3rd 2026 NVIDIA GeForce RTX 50-Series Scheduled for up to $500 Price Hike Th",
+   "Mar 30th 2026 NVIDIA Readies Rubin-based GeForce RTX 60-series with Massive RT P",
+   "Jan 16th 2026 NVIDIA Reportedly Ends GeForce RTX 5070 Ti Production, RTX 5060 Ti",
+   "Jul 10th 2026 NVIDIA Readies GeForce RTX 5090 SE Graphics Card (180)",
+   "Oct 10th 2026 NVIDIA Reportedly Ending the RTX 5090, Reserves GB202 Silicon for "
+  ],
+  "seen_at": "2026-11-15",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1100664032_121010226",
+  "title": "杭州园林子公司拟跨界采购3万片GPU，下游订单暂未锁定，上市公司三 ...",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-12",
+  "scope": "5500",
+  "snippets": [
+   "证券代码：300649）发布公告称，公司控股子公司杭微天算（上海）智能科技有限公司近日分别与云尖信息技术股份有限公司、上海华鲲振宇智能科技有限责任公司签署《销售",
+   "公告显示，杭微天算与云尖信息签署的合同约定采购2万片NVIDIA RTX PRO 5500 BLACKWELL及配件产品，与华鲲振宇签署的合同则约定采购1万片同",
+   "根据公告，云尖信息成立于2020年8月，注册资本36,909.3792万元，注册地位于杭州市萧山区，经营范围涵盖软件开发、信息系统集成服务及云计算设备、信息安全",
+   "华鲲振宇成立于2023年10月，注册资本1000万元，注册地位于上海市青浦区。",
+   "业绩方面，杭州园林2026年三季报显示，今年前三季度公司实现营业总收入9180.82万元，同比下降4.24%；",
+   "归属于上市公司股东的净利润为-3395.98万元，上年同期为703.93万元，同比由盈转亏；"
   ],
   "seen_at": "2026-11-14",
   "found_via": "Bing 新闻"
@@ -171,24 +295,6 @@
   "found_via": "Bing 新闻"
  },
  {
-  "url": "https://www.techpowerup.com/354686/nvidia-geforce-rtx-5080-24-gb-reportedly-cancelled-16-gb-model-remains?cp=2",
-  "title": "NVIDIA GeForce RTX 5080 24 GB Reportedly Cancelled, 16 GB Model Remains",
-  "publisher": "TechPowerUp",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-11",
-  "scope": "context",
-  "snippets": [
-   "Mar 30th 2026 NVIDIA Readies Rubin-based GeForce RTX 60-series with Massive RT P",
-   "Nov 3rd 2026 NVIDIA GeForce RTX 50-Series Scheduled for up to $500 Price Hike Th",
-   "Jan 16th 2026 NVIDIA Reportedly Ends GeForce RTX 5070 Ti Production, RTX 5060 Ti",
-   "Jul 10th 2026 NVIDIA Readies GeForce RTX 5090 SE Graphics Card (180)",
-   "Oct 10th 2026 NVIDIA Reportedly Ending the RTX 5090, Reserves GB202 Silicon for ",
-   "Dec 31st 2025 Leaks Predict $5000 RTX 5090 GPUs in 2026 Thanks to AI Industry De"
-  ],
-  "seen_at": "2026-11-12",
-  "found_via": "Bing 新闻"
- },
- {
   "url": "https://www.rfi.fr/cn/%E5%9B%BD%E9%99%85/20261111-%E7%BE%8E%E5%9B%BD%E8%B4%A2%E9%95%BF%E8%B4%9D%E6%A3%AE%E7%89%B9%E5%B0%B1%E5%AF%B9%E8%BE%93%E5%8D%8E%E8%8A%AF%E7%89%87%E5%AE%89%E5%85%A8%E4%B8%8D%E4%BD%9C%E4%B8%BA%E4%B8%8E%E5%95%86%E5%8A%A1%E9%83%A8%E9%95%BF%E5%8D%A2%E7%89%B9%E5%B0%BC%E5%85%8B%E5%AF%B9%E5%B3%99",
   "title": "美国财长贝森特就英伟达客户输华芯片安全问题与商务部长卢特尼克 ...",
   "publisher": "法广",
@@ -230,7 +336,7 @@
    "2026年11月10日（美国东部时间），Techmeme归档页面收录《纽约时报》相关报道称，英伟达已聘请美国律所Wachtell, Lipton, Rosen ",
    "2026年11月10日披露的这场外部律所调查，是英伟达在AI芯片超级周期中的一次治理压力测试。"
   ],
-  "seen_at": "2026-11-12",
+  "seen_at": "2026-11-14",
   "found_via": "Bing 新闻"
  },
  {
@@ -471,24 +577,6 @@
   "found_via": "Bing 新闻"
  },
  {
-  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-probe-puts-china-exposed-051236166.html",
-  "title": "Nvidia Probe Puts China Exposed US Chip Stocks In Focus",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-09",
-  "scope": "context",
-  "snippets": [
-   "Operations: Qnity generates about US$2.9b from Semiconductor Technologies and US",
-   "Market Cap: US$24.5b",
-   "Operations: Onto Innovation generates US$1.1b from semiconductor equipment and s",
-   "Market Cap: US$8.5b",
-   "Operations: Entegris generates about US$1.49b from Materials Solutions and US$2.",
-   "Market Cap: US$19.6b"
-  ],
-  "seen_at": "2026-11-09",
-  "found_via": "Bing 新闻"
- },
- {
   "url": "https://finance.yahoo.com/technology/ai/articles/jensen-huang-affair-alleged-chinese-180952926.html",
   "title": "Jensen Huang’s affair with alleged Chinese spy puts Nvidia’s China ambitions under scrutiny",
   "publisher": "雅虎财经",
@@ -501,39 +589,6 @@
    "The idea that Huang needed any encouragement in the form of an attractive woman "
   ],
   "seen_at": "2026-11-10",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1099036347_122986144",
-  "title": "外媒：60万枚英伟达芯片滞留香港，中国为啥卡自己脖子",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-08",
-  "scope": "context",
-  "snippets": [
-   "路透社11月7日引述知情人士的消息说，大约60万枚英伟达H200芯片正滞留在香港，原因是没有拿到中方的批准放行。",
-   "2022年正是美方以“国家安全”为由对华实施高端芯片出口管制，把英伟达先进芯片列入禁售清单。",
-   "路透社此前的报道披露过，英伟达为了换取放松限制，同意把对华芯片销售收入的15%交给美国政府。",
-   "芯片一天压在仓库里，英伟达的库存压力就大一天，美国政府那15%的抽成也就一天到不了账。",
-   "这60万枚卡在香港的H200，到底是中方出于供应链安全考量的正常谨慎、迟早会放行，还是中国市场已经铁了心走自主路线、美国这批落后两代的芯片真就砸手里了？"
-  ],
-  "seen_at": "2026-11-09",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://wccftech.com/nvidia-jensen-huang-rejects-anthropic-china-chip-ban-america-competition-vera-rubin/",
-  "title": "NVIDIA’s Jensen Huang Rejects Anthropic’s Total China Chip Ban Push, Says “I Completely Disagree” An",
-  "publisher": "Wccftech",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-08",
-  "scope": "context",
-  "snippets": [
-   "China currently doesn’t have access to NVIDIA’s B300 GPUs due to the latter bein",
-   "Investigation Finds Chinese Military-Linked Firms Somehow Gained Approval To Ass",
-   "NVIDIA’s Development Of Custom HBM Drops Samsung’s And TSMC’s Foundry Rivalry, A",
-   "NVIDIA GPUs Worth $11.4 Million Stolen From Oakland Fetch A Hefty Price Outside "
-  ],
-  "seen_at": "2026-11-09",
   "found_via": "Bing 新闻"
  },
  {
@@ -552,78 +607,6 @@
    "特朗普于2025年12月批准英伟达向中国出售H200芯片，放宽拜登政府时期的部分出口限制。"
   ],
   "seen_at": "2026-11-10",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.tweaktown.com/news/114529/nvidias-rtx-pro-5500-is-chinas-most-wanted-gpu-and-almost-nobody-is-getting-one-soon/index.html",
-  "title": "NVIDIA's RTX PRO 5500 is China's most wanted GPU, and almost nobody is getting one soon",
-  "publisher": "TweakTown",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-06",
-  "scope": "5500",
-  "snippets": [
-   "Chinese AI firms, including Alibaba, Tencent, and ByteDance, ordered about 6 mil",
-   "NVIDIA's RTX PRO 5500 has become one of the most sought after graphics cards in ",
-   "A Bloomberg report citing \" people familiar with the matter, \" says Chinese AI a",
-   "That figure from Bloomberg builds on Reuters' earlier report that ByteDance, Ali",
-   "Read more : ByteDance, Alibaba, and Tencent order NVIDIA RTX PRO 5500 chips wort",
-   "The RTX PRO 5500 is a Blackwell-based GPU with 84GB of GDDR7 memory that complie"
-  ],
-  "seen_at": "2026-11-09",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://news.qq.com/rain/a/20261106A05ZSM00",
-  "title": "RTX PRO 5500 Blackwell上架出现价格倒挂，规格低于旗舰PRO 6000售价反而更高",
-  "publisher": "腾讯新闻",
-  "source_type": "公众号",
-  "published_at": "2026-11-06",
-  "scope": "5500",
-  "snippets": [
-   "11 月 6 日消息，NVIDIA RTX PRO 5500 Blackwell 专业工作站显卡现身美国零售商 SHI Government Solutions",
-   "即便折扣后售价仍达到 17408.63 美元，约合人民币 116934 元。",
-   "一个极具反差的现象随之出现：这款定位低于旗舰的显卡，渠道售价已经超过 RTX PRO 6000 16000 美元的官方定价，溢价约 1400 美元。",
-   "从硬件规格来看，RTX PRO 5500 本是 RTX PRO 6000 的次一级型号。",
-   "市场分析认为，国内市场旺盛的采购需求，是推高 RTX PRO 5500 价格的关键。",
-   "据悉国内企业订单总量已经突破 600 万张，大幅超出 NVIDIA 规划的 2027 年 300 万张产能。"
-  ],
-  "seen_at": "2026-11-10",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://news.17173.com/content/11062026/113411469.shtml",
-  "title": "小弟骑到大哥头上！RTX PRO 5500定价反超RTX PRO 6000：售价超12万元",
-  "publisher": "news.17173.com",
-  "source_type": "其他",
-  "published_at": "2026-11-06",
-  "scope": "5500",
-  "snippets": [
-   "据报道，NVIDIA RTX PRO 5500 Blackwell工作站显卡已在美国零售商SHI Government Solutions上架。",
-   "PNY版本标价17999美元（注：约合人民币120907元），折扣后仍需17408.63美元（注：约合人民币116934元）。",
-   "令人意外的是，这个价格比NVIDIA自家旗舰RTX PRO 6000的16000美元官方标价还高出约1400美元。",
-   "从规格上看，RTX PRO 5500本该是RTX PRO 6000的“小弟”。",
-   "市场分析指出，中国市场的巨大需求是推高RTX PRO 5500价格的关键因素。",
-   "而中国企业的总订单量据称已突破600万张，远超NVIDIA 2027年约300万张的规划产能。"
-  ],
-  "seen_at": "2026-11-10",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.sina.com.cn/stock/t/2026-11-05/doc-inixrytw8895818.shtml",
-  "title": "600万颗！AI巨头砸4700亿元买RTX Pro 5500：英伟达只能交付1%",
-  "publisher": "新浪财经",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-05",
-  "scope": "5500",
-  "snippets": [
-   "快科技11月5日消息，据报道，国内AI与云计算企业已向英伟达下达了约600万颗RTX Pro 5500芯片的订单，总价值高达700亿美元（快科技注：约合人民币4",
-   "然而，知情人士透露，在未来四个月内，这些企业预计只能收到约1%的订单量，即数万颗芯片。",
-   "英伟达2027年RTX Pro 5500的全球规划产能不足300万颗，仅中国市场的订单规模就已远超其全球产能的两倍。",
-   "RTX Pro 5500之所以成为中国市场的抢手货，源于其独特的合规身份。",
-   "由于英伟达将台积电的先进产能优先分配给了利润更高的Rubin等数据中心平台，RTX Pro 5500在资源分配中处于靠后位置。",
-   "首批样品预计2026年12月供应，商业出货则要等到2027年第一季度，且到2027年底中国客户累计能拿到的总量可能仅为70万颗左右。"
-  ],
-  "seen_at": "2026-11-09",
   "found_via": "Bing 新闻"
  }
 ]
