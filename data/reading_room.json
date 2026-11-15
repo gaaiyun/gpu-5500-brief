@@ -1,5 +1,19 @@
 [
  {
+  "url": "https://www.sohu.com/a/1101840707_122377700",
+  "title": "英伟达新王就位，黄仁勋遭两党调查，中国算力命脉恐先受波及",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-15",
+  "scope": "context",
+  "snippets": [
+   "几天后，英伟达才宣布把掌舵33年的黄仁勋辞去CEO和董事职务，而首席财务官科莱特·克雷斯被指派临时担任CEO。",
+   "【谷歌抢先一步，竞争压力骤增】 就在英伟达风波发酵的 11 月 9 日，谷歌公布 TPU 8tx 和 TPU 8i Max，进一步扩充第八代张量处理器产品线。"
+  ],
+  "seen_at": "2026-11-15",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://finance.sina.com.cn/wm/2026-11-15/doc-iniyupue9793222.shtml",
   "title": "英伟达创始人风波背后：美国泛化国家安全终将自食恶果",
   "publisher": "新浪财经",
@@ -618,24 +632,6 @@
    "In the three months ended July 26, Nvidia recorded $7.9 billion in revenue from ",
    "afterward, the government reversed restrictions on Nvidia's H20 chips and allowe",
    "The idea that Huang needed any encouragement in the form of an attractive woman "
-  ],
-  "seen_at": "2026-11-10",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.rfi.fr/cn/%E4%B8%AD%E5%9B%BD/20261107-%E7%BA%BD%E6%97%B6%E6%8F%AD%E4%B8%AD%E5%9B%BD%E4%B8%A4%E5%AE%B6%E8%8A%AF%E7%89%87%E5%95%86%E8%8E%B7%E7%BE%8E%E6%89%B9%E5%87%86%E5%A4%84%E7%90%86%E8%8B%B1%E4%BC%9F%E8%BE%BE%E8%8A%AF%E7%89%87-%E5%BD%A2%E5%90%8C%E7%A9%BA%E5%A3%B3",
-  "title": "纽时揭中国两家芯片商获美批准处理英伟达芯片“形同空壳”",
-  "publisher": "法广",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-07",
-  "scope": "context",
-  "snippets": [
-   "美国特朗普政府批准多家中国企业，购买或组装英伟达（Nvidia）先进人工智能芯片H200，但《纽约时报》调查发现，其中两家获批企业在中国的登记办公室形同空壳，不",
-   "《纽约时报》周六（7日）报道，其中一家企业新矩阵（New Matrix）成立仅约17个月，今年获美国商务部批准，负责将英伟达H200芯片组装成人工智能电脑。",
-   "报道指出，新矩阵是第二家获准处理英伟达H200芯片、但在登记地址找不到实际营运迹象的中国企业。",
-   "该公司获美国批准取得H200芯片，负责将芯片组装成人工智能伺服器，再交付其他客户。",
-   "《纽约时报》进一步调查发现，其他获准购买或处理H200芯片的中国企业，也与遭美国制裁的公司或中国军事供应商有关联。",
-   "特朗普于2025年12月批准英伟达向中国出售H200芯片，放宽拜登政府时期的部分出口限制。"
   ],
   "seen_at": "2026-11-10",
   "found_via": "Bing 新闻"
