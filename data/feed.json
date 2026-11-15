@@ -1,22 +1,20 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-16T05:14:12+08:00",
-  "agent": "actions-sweep+cloud-routine",
+  "updated_at": "2026-11-16T07:10:00+08:00",
+  "agent": "cloud-routine",
   "searched": [
     "RTX PRO 5500 China price shipment allocation",
-    "RTX PRO 5500 采购 公告 渠道 报价",
-    "英伟达 RTX Pro 5500 到货 现货 配额 大陆",
-    "Nvidia China export BIS remote access rule RTX Pro",
-    "华为昇腾 寒武纪 价格 供应 11月",
-    "RTX 5090 价格 大陆 涨价 GDDR7",
-    "算力租赁 价格 英伟达 配额 浪潮 新华三 服务器 RTX PRO",
-    "Nvidia Rubin TSMC CoWoS GDDR7 supply November 2026",
-    "RTX PRO 5500 11月14日",
-    "Nvidia Megaspeed Malaysia Singapore investigation GPU China",
-    "杭微天算 云尖信息 华鲲振宇 RTX PRO 5500 问询",
-    "Nvidia earnings November 18 China RTX Pro 5500 Kress guidance",
-    "工信部 RTX Pro 5500 采购 审批 字节 阿里 腾讯 样卡 12月",
-    "丽台 PNY 5500 84GB 预订 价格 万元"
+    "RTX PRO 5500 现货 报价 丽台 渠道",
+    "Nvidia China export remote access rule Commerce November 2026",
+    "RTX PRO 5500 采购 公告 订单",
+    "昇腾 寒武纪 价格 供应 11月",
+    "GDDR7 price supply shortage November 2026",
+    "英伟达 5500 工信部 审批 交付 样卡 12月",
+    "RTX 5090 价格 国内 11月 涨价",
+    "Nvidia earnings November 18 China RTX Pro 5500 guidance",
+    "算力租赁 价格 英伟达 海外云 中国企业 远程 限制",
+    "TSMC Nvidia capacity allocation Rubin RTX PRO Blackwell supply November 2026",
+    "浪潮 新华三 联想 超聚变 RTX PRO 5500 服务器"
   ],
   "items": [
     {
@@ -89,7 +87,9 @@
       "watch": "规则是否在本月公布及适用国家范围",
       "corroboration": [
         "https://aiweekly.co/alerts/commerce-readies-rule-to-block-chinas-remote-ai-chip-access",
-        "https://www.forbes.com/sites/jonmarkman/2026/11/12/chinese-ai-firms-rush-to-rent-nvidia-chips-abroad-before-a-new-us-rule/"
+        "https://www.forbes.com/sites/jonmarkman/2026/11/12/chinese-ai-firms-rush-to-rent-nvidia-chips-abroad-before-a-new-us-rule/",
+        "https://www.techtimes.com/articles/330620/20261113/chinese-firms-rush-reserve-nvidia-chip-capacity-reported-us-rule-requires-local-host-licenses.htm",
+        "https://qz.com/chinese-ai-firms-overseas-nvidia-capacity-crackdown-111226"
       ],
       "checked_at": "2026-11-14"
     },
@@ -448,6 +448,24 @@
   ],
   "leads": [
     {
+      "title": "Chinese AI firms rush to lock in overseas Nvidia capacity before possible U.S. crackdown",
+      "publisher": "Quartz",
+      "source_type": "主流媒体",
+      "url": "https://qz.com/chinese-ai-firms-overseas-nvidia-capacity-crackdown-111226",
+      "published_at": "2026-11-13",
+      "found_via": "WebSearch",
+      "snippet": "中国AI企业在美国远程访问规则出台前抢订海外英伟达算力"
+    },
+    {
+      "title": "Nvidia RTX 50 price hike hits China, up to $500 more on the RTX 5090",
+      "publisher": "pasqualepillitteri.it",
+      "source_type": "其他",
+      "url": "https://pasqualepillitteri.it/en/news/29817/rtx-50-price-hike-china-november",
+      "published_at": "2026-11-05",
+      "found_via": "WebSearch",
+      "snippet": "称七彩虹11月上调RTX 50全系列中国渠道成本价，转述渠道价格表，未经证实"
+    },
+    {
       "title": "RTX PRO 5500 为什么一卡难求？84GB 显存参数、供货数据与国内首批到货说明",
       "publisher": "掘金",
       "source_type": "其他",
@@ -726,26 +744,6 @@
       "found_via": "Bing 新闻",
       "snippet": "Alibaba, Tencent, and ByteDance lead Chinese orders for 6 million NVIDIA RTX PRO 5500 GPUs worth $70 billion, but expect only roughly 1% in four months.",
       "seen_at": "2026-11-09"
-    },
-    {
-      "title": "RTX PRO 5500 China shipments: the four-month forecast",
-      "publisher": "NeoTeo",
-      "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPUUVIaV9vYXo1dGRTNTJBVGxxYlU5RWt5LVFhdWQxQVMybWFBR3dQa1NSVDNvRDlxcWY2Z2hTX0R0alR3bXF1UkdTZUJUUWdqSFdOVXQ1aWd1QUdxdTdVWDI4WjNubGFoRzZOcXVIMkZHeFZmV3pLaFdpOWFmTV9XT1U2Uktzenc?oc=5",
-      "published_at": "2026-11-06",
-      "found_via": "Google 新闻",
-      "snippet": "",
-      "seen_at": "2026-11-07"
-    },
-    {
-      "title": "Nvidia chips pile up in Hong Kong as China withholds import approval",
-      "publisher": "lufkindailynews.com",
-      "source_type": "其他",
-      "url": "https://lufkindailynews.com/news_reuters/business/nvidia-chips-pile-up-in-hong-kong-as-china-withholds-import-approval/article_34a11941-bd07-58cb-adcd-e9bf7af9cab4.html",
-      "published_at": "2026-11-06",
-      "found_via": "GDELT",
-      "snippet": "",
-      "seen_at": "2026-11-07"
     }
   ],
   "mentions": [
@@ -845,8 +843,8 @@
     }
   },
   "take": {
-    "date": "2026-11-15",
-    "text": "过去72小时没有5500本身的新价格或交付消息。新增的是马来西亚调查英伟达GPU转口，叠加美方远程访问规则待发布，海外租算力收紧，境内到货的5500更紧俏。下一个口径是11月18日英伟达财报。"
+    "date": "2026-11-16",
+    "text": "过去72小时仍无5500的新价格、批文或交付消息，样卡12月、商业交付2027年一季度的口径没变。新增只有美方远程访问规则的转述，海外租算力继续收紧。下一个节点是11月18日英伟达财报。"
   },
   "sweep": {
     "date": "2026-11-16",
