@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-15T07:05:24+08:00",
+  "updated_at": "2026-11-15T10:58:42+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -37,8 +37,7 @@
       "corroboration": [
         "https://www.streetinsider.com/Reuters/US+senator+seeks+Commerce+Department+investigation+into+Singapore-based+Megaspeed/25449176.html"
       ],
-      "checked_at": "2026-11-15",
-      "ci_checked": "2026-11-15"
+      "checked_at": "2026-11-15"
     },
     {
       "id": "sohu-20261112-488c90",
@@ -855,6 +854,8 @@
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": []
+    "notes": [
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+    ]
   }
 }
