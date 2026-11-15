@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-15T07:10:00+08:00",
-  "agent": "cloud-routine",
+  "updated_at": "2026-11-16T05:14:12+08:00",
+  "agent": "actions-sweep+cloud-routine",
   "searched": [
     "RTX PRO 5500 China price shipment allocation",
     "RTX PRO 5500 采购 公告 渠道 报价",
@@ -454,7 +454,8 @@
       "url": "https://juejin.cn/post/7706382935100899368",
       "published_at": "2026-11-14",
       "found_via": "WebSearch",
-      "snippet": "自称介绍国内首批到货平台，来源性质不明，未核实。"
+      "snippet": "自称介绍国内首批到货平台，来源性质不明，未核实。",
+      "seen_at": "2026-11-15"
     },
     {
       "title": "Huang's exit and US scrutiny imperil $3 billion of Chinese AI data centers built on Nvidia chips, Reuters reports",
@@ -464,16 +465,6 @@
       "published_at": "2026-11-13",
       "found_via": "WebSearch",
       "snippet": "转述路透：超过30亿美元的中国AI数据中心项目围绕被禁出口的英伟达处理器设计，面临美方收紧风险；未找到路透原文。",
-      "seen_at": "2026-11-14"
-    },
-    {
-      "title": "Malaysia probes possible Nvidia GPU re-exports to China, targets Megaspeed links",
-      "publisher": "DIGITIMES",
-      "source_type": "行业媒体",
-      "url": "https://www.digitimes.com/news/a20261113VL220/data-nvidia-gpu-ai-chip-investigation.html",
-      "published_at": "2026-11-13",
-      "found_via": "WebSearch",
-      "snippet": "标题称马来西亚调查英伟达GPU可能转口中国，关联Megaspeed，收紧数据管控；正文未读到。",
       "seen_at": "2026-11-14"
     },
     {
@@ -667,6 +658,16 @@
       "seen_at": "2026-11-12"
     },
     {
+      "title": "RTX PRO 5500 Blackwell上架出现价格倒挂",
+      "publisher": "泡泡科技星球",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%20Blackwell%E4%B8%8A%E6%9E%B6%E5%87%BA%E7%8E%B0%E4%BB%B7%E6%A0%BC%E5%80%92%E6%8C%82",
+      "published_at": "2026-11-06",
+      "found_via": "搜狗微信",
+      "snippet": "日消息,NVIDIA RTX PRO 5500 Blackwell 专业工作站显卡现身美国零售商 SHI Government Solutions 商品页面,PNY 版本标价 17999...",
+      "seen_at": "2026-11-15"
+    },
+    {
       "title": "彭博社:英伟达把产能先给了Rubin,中国600",
       "publisher": "读书明悟人生",
       "source_type": "公众号",
@@ -835,6 +836,10 @@
       "wechat": 0
     },
     "2026-11-14": {
+      "media": 2,
+      "wechat": 0
+    },
+    "2026-11-16": {
       "media": 1,
       "wechat": 0
     }
@@ -844,14 +849,12 @@
     "text": "过去72小时没有5500本身的新价格或交付消息。新增的是马来西亚调查英伟达GPU转口，叠加美方远程访问规则待发布，海外租算力收紧，境内到货的5500更紧俏。下一个口径是11月18日英伟达财报。"
   },
   "sweep": {
-    "date": "2026-11-15",
+    "date": "2026-11-16",
     "candidates": 0,
     "read": 0,
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
-    ]
+    "notes": []
   }
 }
