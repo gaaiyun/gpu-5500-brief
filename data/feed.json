@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-15T15:48:14+08:00",
+  "updated_at": "2026-11-16T00:18:11+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -848,12 +848,14 @@
     "text": "过去72小时没有5500本身的新价格或交付消息。新增的是马来西亚调查英伟达GPU转口，叠加美方远程访问规则待发布，海外租算力收紧，境内到货的5500更紧俏。下一个口径是11月18日英伟达财报。"
   },
   "sweep": {
-    "date": "2026-11-15",
+    "date": "2026-11-16",
     "candidates": 0,
     "read": 0,
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": []
+    "notes": [
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+    ]
   }
 }
