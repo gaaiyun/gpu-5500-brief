@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-17T03:31:17+08:00",
+  "updated_at": "2026-11-17T07:05:34+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -22,6 +22,25 @@
     "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
   ],
   "items": [
+    {
+      "id": "forbes-20261116-bis-remote-access",
+      "title": "美国商务部发布远程访问规则：中国企业使用海外数据中心需许可",
+      "published_at": "2026-11-16",
+      "publisher": "福布斯（Forbes）",
+      "source_type": "主流媒体",
+      "scope": "context",
+      "url": "https://www.forbes.com/sites/zacharyfolk/2026/11/16/us-closes-loophole-that-allowed-china-to-remotely-access-nvidia-chips/",
+      "grade": "B",
+      "summary": "据多家媒体报道，美国商务部工业与安全局11月16日发布临时最终规则：为总部在中国等受限地区的公司提供超过12 million aggregate TPP算力的数据中心需要许可，现有运营商有90天申请；对新加坡、马来西亚、泰国、印尼和巴西的先进芯片出口另需许可。",
+      "impact": "推断：中国买家靠海外租算力补缺口的路径收窄，5500的大陆本地交付和现货价格更受关注；规则是否覆盖5500需看正文。",
+      "watch": "联邦公报正文与生效日；是否涉及5500",
+      "corroboration": [
+        "https://thenextweb.com/news/us-remote-access-ai-chips-rule-china-singapore-malaysia",
+        "https://fortune.com/2026/11/16/new-commerce-rule-nvidia-chip-singapore-malaysia-china/"
+      ],
+      "checked_at": "2026-11-16",
+      "ci_checked": "2026-11-17"
+    },
     {
       "id": "digitimes-20261113-malaysia-megaspeed",
       "title": "DigiTimes：马来西亚调查英伟达GPU可能转口中国，涉Megaspeed关联方",
@@ -89,7 +108,7 @@
       "grade": "B",
       "summary": "据 The Information 报道，美国商务部正在定稿一项规则，限制中国AI企业租用海外数据中心里的英伟达算力，原计划本月公布。据同一报道，BIS 还在考虑对按要求报告禁运国家客户及其算力规模的美国运营数据中心给予豁免，仍在与其他部门磋商。规则尚未发布。",
       "impact": "推断：海外租算力这条路收窄后，中国买家更依赖境内到货的卡，5500不在出口限制内，大陆询价和订单压力可能加大。",
-      "watch": "规则是否在本月公布及适用国家范围",
+      "watch": "规则是否在本月公布及适用国家范围；已被福布斯11-16更新",
       "corroboration": [
         "https://aiweekly.co/alerts/commerce-readies-rule-to-block-chinas-remote-ai-chip-access",
         "https://www.forbes.com/sites/jonmarkman/2026/11/12/chinese-ai-firms-rush-to-rent-nvidia-chips-abroad-before-a-new-us-rule/",
@@ -433,22 +452,6 @@
       ],
       "checked_at": "2026-10-28",
       "found_via": "人工转入"
-    },
-    {
-      "id": "leiphone-20261020-channel-quotes",
-      "title": "雷峰网：大厂采购报价约8.5万元，部分渠道8.7万元",
-      "published_at": "2026-10-20",
-      "publisher": "雷峰网",
-      "source_type": "行业媒体",
-      "url": "https://www.leiphone.com/category/chips/STx9ZzfDNh5W80Bm.html",
-      "grade": "B",
-      "summary": "雷峰网原创报道（记者陈悦琳）援引匿名业内人士：RTX PRO 5500预期交付报价集中在8万-12万元，大厂采购报价约8.5万元，部分渠道升至8.7万元；英伟达每季度对华供应上限约50万张；OEM厂商11月拿样卡，批量交付最快明年一季度。",
-      "impact": "8.5万-8.7万元与TrendForce转述的8.5万-9万元相互印证，低于SMM预售价9.5万元；高于9万元的报盘需靠短交期支撑。",
-      "watch": "核实11月样卡是否到位、渠道报价是否继续上移",
-      "corroboration": [
-        "https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/"
-      ],
-      "checked_at": "2026-10-27"
     }
   ],
   "leads": [
@@ -854,8 +857,8 @@
     }
   },
   "take": {
-    "date": "2026-11-16",
-    "text": "过去72小时仍无5500的新价格、批文或交付消息，样卡12月、商业交付2027年一季度的口径没变。新增只有美方远程访问规则的转述，海外租算力继续收紧。下一个节点是11月18日英伟达财报。"
+    "date": "2026-11-17",
+    "text": "72小时内5500仍无新价格、批文或交付消息，样卡12月、商业交付2027年一季度的口径没变。新增是美方远程访问规则正式发布，海外租算力继续收紧。下一个节点是11月18日英伟达财报。"
   },
   "sweep": {
     "date": "2026-11-17",
