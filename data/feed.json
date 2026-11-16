@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-16T07:10:00+08:00",
-  "agent": "cloud-routine",
+  "updated_at": "2026-11-17T03:31:17+08:00",
+  "agent": "actions-sweep+cloud-routine",
   "searched": [
     "RTX PRO 5500 China price shipment allocation",
     "RTX PRO 5500 现货 报价 丽台 渠道",
@@ -448,22 +448,14 @@
   ],
   "leads": [
     {
-      "title": "Chinese AI firms rush to lock in overseas Nvidia capacity before possible U.S. crackdown",
-      "publisher": "Quartz",
-      "source_type": "主流媒体",
-      "url": "https://qz.com/chinese-ai-firms-overseas-nvidia-capacity-crackdown-111226",
-      "published_at": "2026-11-13",
-      "found_via": "WebSearch",
-      "snippet": "中国AI企业在美国远程访问规则出台前抢订海外英伟达算力"
-    },
-    {
-      "title": "Nvidia RTX 50 price hike hits China, up to $500 more on the RTX 5090",
-      "publisher": "pasqualepillitteri.it",
-      "source_type": "其他",
-      "url": "https://pasqualepillitteri.it/en/news/29817/rtx-50-price-hike-china-november",
-      "published_at": "2026-11-05",
-      "found_via": "WebSearch",
-      "snippet": "称七彩虹11月上调RTX 50全系列中国渠道成本价，转述渠道价格表，未经证实"
+      "title": "RTX 5090停产被证伪后价格回落,国内推理算力又盯上PRO 5500",
+      "publisher": "谈谈双碳",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%205090%E5%81%9C%E4%BA%A7%E8%A2%AB%E8%AF%81%E4%BC%AA%E5%90%8E%E4%BB%B7%E6%A0%BC%E5%9B%9E%E8%90%BD%2C%E5%9B%BD%E5%86%85%E6%8E%A8%E7%90%86%E7%AE%97%E5%8A%9B%E5%8F%88%E7%9B%AF%E4%B8%8APRO%205500",
+      "published_at": "2026-11-16",
+      "found_via": "搜狗微信",
+      "snippet": "6000服务器版的报价大约在16-18万元.三、PRO 5500瞄准可复制的推理节点下一款值得关注的是RTX PRO 5500 Blackwell.它的正...",
+      "seen_at": "2026-11-17"
     },
     {
       "title": "RTX PRO 5500 为什么一卡难求？84GB 显存参数、供货数据与国内首批到货说明",
@@ -484,6 +476,16 @@
       "found_via": "WebSearch",
       "snippet": "转述路透：超过30亿美元的中国AI数据中心项目围绕被禁出口的英伟达处理器设计，面临美方收紧风险；未找到路透原文。",
       "seen_at": "2026-11-14"
+    },
+    {
+      "title": "Chinese AI firms rush to lock in overseas Nvidia capacity before possible U.S. crackdown",
+      "publisher": "Quartz",
+      "source_type": "主流媒体",
+      "url": "https://qz.com/chinese-ai-firms-overseas-nvidia-capacity-crackdown-111226",
+      "published_at": "2026-11-13",
+      "found_via": "WebSearch",
+      "snippet": "中国AI企业在美国远程访问规则出台前抢订海外英伟达算力",
+      "seen_at": "2026-11-16"
     },
     {
       "title": "美国:B300禁了只放RTXPro5500!中国:巧了,金刚石线锯磨轮也没打算敞开发",
@@ -838,6 +840,10 @@
       "wechat": 0
     },
     "2026-11-16": {
+      "media": 6,
+      "wechat": 1
+    },
+    "2026-11-17": {
       "media": 1,
       "wechat": 0
     }
@@ -847,12 +853,14 @@
     "text": "过去72小时仍无5500的新价格、批文或交付消息，样卡12月、商业交付2027年一季度的口径没变。新增只有美方远程访问规则的转述，海外租算力继续收紧。下一个节点是11月18日英伟达财报。"
   },
   "sweep": {
-    "date": "2026-11-16",
+    "date": "2026-11-17",
     "candidates": 0,
     "read": 0,
     "added": [],
     "corroborated": 0,
     "model": null,
-    "notes": []
+    "notes": [
+      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)"
+    ]
   }
 }
