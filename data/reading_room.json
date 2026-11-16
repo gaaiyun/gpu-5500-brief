@@ -1,5 +1,18 @@
 [
  {
+  "url": "https://www.sohu.com/a/1102402814_163726",
+  "title": "黄仁勋从英伟达辞职后：美国酝酿收紧AI芯片对华出口限制 防止转运等",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-16",
+  "scope": "context",
+  "snippets": [
+   "快科技11月16日消息，黄仁勋卸任英伟达CEO之后，美国国会正在紧锣密鼓酝酿进一步收紧AI芯片对华出口的相关限制规则。"
+  ],
+  "seen_at": "2026-11-17",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://news.mydrivers.com/1/1166/1166056.htm",
   "title": "崩盘开始了！RTX 5090二手价格腰斩：部分型号跌破3万元",
   "publisher": "快科技",
@@ -16,6 +29,21 @@
   ],
   "seen_at": "2026-11-16",
   "found_via": "快科技"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/america-closes-china-ai-chip-170000348.html",
+  "title": "America Closes China’s AI Chip Loophole Before Trump-Xi Summit: Will Markets Feel It?",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-16",
+  "scope": "context",
+  "snippets": [
+   "Beijing has refused Nvidia's H200, even with Washington taking a 25% cut, Trump ",
+   "China still brought in $7.9 billion of Nvidia's $96.2 billion July-quarter reven",
+   "Bitcoin fell 1.1% to about $64,590 Monday, near a three-month low, amid Fed rate"
+  ],
+  "seen_at": "2026-11-17",
+  "found_via": "Bing 新闻"
  },
  {
   "url": "https://finance.yahoo.com/markets/stocks/articles/nvda-stock-dips-again-worst-023023113.html",
@@ -40,13 +68,12 @@
   "published_at": "2026-11-16",
   "scope": "context",
   "snippets": [
-   "03 / 习近平将同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤",
+   "04 / 习近平将同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤",
    "02 / 财经早报丨证监会：进一步深化市场稳定长效机制研究，消息称黄仁勋考虑重返英伟达担任CEO丨2026年11月16日",
    "03 / 黄仁勋讨论重掌英伟达 硅谷盟友游说支持回归",
-   "05 / 英媒：黄仁勋考虑重返英伟达",
-   "10 / 11月16日周末要闻：全美航班延误持续 黄仁勋讨论重掌英伟达 美“火神”火箭发射失败"
+   "05 / 英媒：黄仁勋考虑重返英伟达"
   ],
-  "seen_at": "2026-11-16",
+  "seen_at": "2026-11-17",
   "found_via": "Bing 新闻"
  },
  {
@@ -79,6 +106,23 @@
    "换句话说，51%红线是英伟达向华盛顿证明：自己不只是被动遵守出口清单，而是在主动封堵算力外溢的每一道缝隙。"
   ],
   "seen_at": "2026-11-16",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.rfi.fr/cn/%E5%9B%BD%E9%99%85/20261115-megaspeed%E6%8D%AE%E6%8A%A5%E6%9B%BE%E5%AE%89%E6%8E%92%E5%B0%86%E4%BB%B7%E5%80%BC%E8%BF%91120%E4%BA%BF%E7%BE%8E%E5%85%83%E8%8B%B1%E4%BC%9F%E8%BE%BE%E8%8A%AF%E7%89%87%E8%BF%90%E5%BE%80%E4%B8%AD%E5%9B%BD%E4%BC%81%E4%B8%9A",
+  "title": "Megaspeed据报曾安排将价值近120亿美元英伟达芯片运往中国企业",
+  "publisher": "法广",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-15",
+  "scope": "context",
+  "snippets": [
+   "新加坡云计算公司Megaspeed周日向消费者新闻与商业频道（CNBC）表示，黄乐已于2025年8月从公司离职，并称Megaspeed已针对有关其业务及供应链的",
+   "值得一提的是，《华尔街日报》在周日发表的题为“黄仁勋如何开辟后门路径，让北京得以留在人工智能竞赛中”的长篇报道中提及，英伟达报告称，截至今年7月26日的六个月内",
+   "据做空机构Culper Research的估算——该机构曾于今年5月指出英伟达存在中国问题——英伟达上一财年超过20%的营收来自中国市场。",
+   "报导称，《华尔街日报》所见记录显示，2024年3月至2025年6月期间，Megaspeed安排了将价值近120亿美元的英伟达顶级芯片运往在中国的企业。",
+   "周二，科技媒体《信息报》曾援引两名认识黄乐的人士报导称，黄乐利用与黄仁勋的关系建立商业可信度，其家族企业网络在出口管制收紧的背景下，转运了约24万枚H100、H"
+  ],
+  "seen_at": "2026-11-17",
   "found_via": "Bing 新闻"
  },
  {
@@ -502,140 +546,6 @@
    "7月31日，国家网信办就H20存在的漏洞后门风险约谈英伟达。"
   ],
   "seen_at": "2026-11-13",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1099650564_122465374",
-  "title": "黄仁勋怕啥来啥，英伟达股价暴跌，中国AI芯片迎良机，胜负将揭晓",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-10",
-  "scope": "context",
-  "snippets": [
-   "美股盘前交易时段，英伟达出现明显股价跳水，盘前跌幅一度达到5.54%，伦敦、法兰克福场外交易市场的英伟达股票同步走低。",
-   "就在英伟达承受海外资本市场压力之际，国内多家AI芯片企业交出2026年三季度经营报告。",
-   "燧原科技同样拿到12.12亿元季度营收，下游算力采购需求持续释放，拉动各家产品出货量快速抬升。",
-   "IDC统计的上半年国内AI加速器出货数据可以直观反映市场格局变化，英伟达在华市场份额回落至34%，国内多家本土芯片厂商出货实现大幅增长。",
-   "存储涨价的行业周期，会对全部本土厂商形成成本压力，业内机构判断供应紧张局面至少延续24个月，国产化技术突破会成为周期之中最大变数。"
-  ],
-  "seen_at": "2026-11-11",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1099650458_122754726",
-  "title": "轮到中国AI芯片反超，英伟达市值蒸发3000亿，黄仁勋这步棋走错了",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-10",
-  "scope": "context",
-  "snippets": [
-   "2026年5月，英伟达财报发布后，他坐在CNBC镜头前，被问到中国市场，原话是：我们“基本上已经把中国AI芯片市场让给了”中国公司，对华销售先进芯片的审批“不要",
-   "IDC统计2026年上半年，英伟达在中国数据中心AI芯片市场的份额掉到34%，出货量67.8万颗，同比下滑44%。"
-  ],
-  "seen_at": "2026-11-11",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1099557933_122745057",
-  "title": "出货半年暴跌44%，英伟达在华份额只剩34%，华为已追到身后",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-10",
-  "scope": "context",
-  "snippets": [
-   "8月26日它公布的财报里，截至7月26日的那个季度，营收962亿美元，比去年同期翻了一倍还多。",
-   "据路透社10月13日援引IDC的报告，2026年上半年，英伟达在中国数据中心AI加速器市场出货67.8万颗，同比下降44%，份额降到34%。",
-   "把几组数字放在一起看：英伟达出货降了44%，GPU整体降了26%，非GPU涨了将近80%。",
-   "2025年全年，按IDC的口径，英伟达在中国还有大约55%的份额，半年时间掉了二十多个百分点。",
-   "2025年10月，黄仁勋在美国城堡证券的一场活动上说，英伟达在中国的市场份额从95%降到了0，\"我们100%退出了中国市场\"。",
-   "2026年1月13日，美国正式批准英伟达向中国出口H200，条件开得很细：美国政府从交易里抽成约25%，卖给中国的量不能超过卖给美国客户总量的一半，接收方还要通"
-  ],
-  "seen_at": "2026-11-11",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.rfi.fr/cn/%E4%B8%93%E6%A0%8F%E6%A3%80%E7%B4%A2/%E6%B3%95%E5%9B%BD%E6%8A%A5%E7%BA%B8%E6%91%98%E8%A6%81/20261110-%E5%8D%B1%E9%99%A9%E7%9A%84%E5%85%B3%E7%B3%BB-%E8%8B%B1%E4%BC%9F%E8%BE%BEceo%E9%99%B7%E7%96%91%E4%BC%BC%E4%B8%AD%E5%9B%BD%E9%97%B4%E8%B0%8D%E4%BA%8B%E4%BB%B6%E9%9C%87%E8%8D%A1%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%A1%8C%E4%B8%9A",
-  "title": "“危险的关系” ：英伟达CEO陷疑似中国间谍事件震荡人工智能行业",
-  "publisher": "法广",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-10",
-  "scope": "context",
-  "snippets": [
-   "《费加罗报》的报道写道, 全球AI领域都在摒息关注, 英伟达董事会周日启动调查, 以确定其CEO是否成为“外国情报行动的目标”, 结果尚不明朗，但对63岁的黄仁",
-   "报道指出，英伟达目前约占全球GPU市场的80%，供应开发模型必不可少的芯片。",
-   "报道指出，英伟达成立33年来，始终由黄仁勋掌舵，其子女及女婿也在公司担任重要职务。",
-   "周一，英伟达股价开盘下跌约8%，市值蒸发超过3000亿美元，也反映出投资者的担忧。",
-   "《回声报》发自北京的通讯员报道说，一个市值4.5万亿美元的美国人工智能巨头掌门人，竟与一名可能的中国间谍保持婚外情……对于中国人来说，这简直就像一部精彩的连续剧"
-  ],
-  "seen_at": "2026-11-11",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.cnbc.com/2026/11/10/jensen-huang-nvidia-china-ties.html",
-  "title": "Jensen Huang's affair with alleged Chinese spy further complicates Nvidia’s China problem",
-  "publisher": "CNBC",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-10",
-  "scope": "context",
-  "snippets": [
-   "In December, Trump said Nvidia would be allowed to ship its H200 chips to China,",
-   "Before the initial export controls in 2022, China made up nearly a quarter of Nv",
-   "After the Biden administration tightened export restrictions again, Nvidia redes",
-   "Following reports that Chinese model developer DeepSeek was using restricted Nvi",
-   "Nvidia revealed it would incur $5.5 billion in costs related to canceled orders ",
-   "In the last fiscal year, Nvidia reported that about 9% of its revenue came from "
-  ],
-  "seen_at": "2026-11-11",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/articles/nvidia-faces-potential-us-chip-113730642.html",
-  "title": "Nvidia Faces Potential New US Chip Export Restrictions to China Amid Reported CEO Investigation",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-10",
-  "scope": "context",
-  "snippets": [
-   "Nvidia shares declined more than 4% on Monday before recovering approximately 2%",
-   "Nvidia shares fell more than 4% during Monday's trading session amid reports con"
-  ],
-  "seen_at": "2026-11-11",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/congress-wants-china-chip-limits-142719076.html",
-  "title": "Congress Wants China Chip Limits in the Defense Bill After Nvidia’s Spy Scandal",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-10",
-  "scope": "context",
-  "snippets": [
-   "NVDA faces little earnings risk from China chip limits, since its $108 billion t",
-   "Read More: Learn 7 ways to generate income with a $1,000,000+ portfolio (sponsor",
-   "NVIDIA closed down 4.27% at $178.67, a $4.31 trillion market value.",
-   "After hours, it traded at $180.50, up 1.02%, at 7:59 p.m.",
-   "The House passed its $1.15 trillion version on July 22, 2026, by a four-vote mar",
-   "Learn 7 Ways To Generate Income With A $1,000,000+ Portfolio"
-  ],
-  "seen_at": "2026-11-11",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-sinks-6-report-huang-190935836.html",
-  "title": "NVIDIA Sinks 6% on Report Huang Affair Helped Move $7.5 Billion of Chips Into China",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-10",
-  "scope": "context",
-  "snippets": [
-   "NVIDIA fell 6% after a report that a network tied to Alice Huang moved at least ",
-   "NVIDIA ( NVDA:NASDAQ ) is down 6% today after The Information reported that a ne",
-   "Washington matters more than the $7.5 billion",
-   "One of the network's companies, Shanghai Century Litong, got preferred cloud par",
-   "Spread over nearly three years, the $7.5 billion is less than 4% of the $215.9 b",
-   "TIKR tracks 61 analysts on Nvidia."
-  ],
-  "seen_at": "2026-11-11",
   "found_via": "Bing 新闻"
  }
 ]

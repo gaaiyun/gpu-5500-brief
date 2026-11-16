@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-16T15:54:17+08:00",
+  "updated_at": "2026-11-17T03:31:17+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -453,6 +453,16 @@
   ],
   "leads": [
     {
+      "title": "RTX 5090停产被证伪后价格回落,国内推理算力又盯上PRO 5500",
+      "publisher": "谈谈双碳",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%205090%E5%81%9C%E4%BA%A7%E8%A2%AB%E8%AF%81%E4%BC%AA%E5%90%8E%E4%BB%B7%E6%A0%BC%E5%9B%9E%E8%90%BD%2C%E5%9B%BD%E5%86%85%E6%8E%A8%E7%90%86%E7%AE%97%E5%8A%9B%E5%8F%88%E7%9B%AF%E4%B8%8APRO%205500",
+      "published_at": "2026-11-16",
+      "found_via": "搜狗微信",
+      "snippet": "6000服务器版的报价大约在16-18万元.三、PRO 5500瞄准可复制的推理节点下一款值得关注的是RTX PRO 5500 Blackwell.它的正...",
+      "seen_at": "2026-11-17"
+    },
+    {
       "title": "RTX PRO 5500 为什么一卡难求？84GB 显存参数、供货数据与国内首批到货说明",
       "publisher": "掘金",
       "source_type": "其他",
@@ -741,16 +751,6 @@
       "found_via": "Bing 新闻",
       "snippet": "Alibaba, Tencent, and ByteDance lead Chinese orders for 6 million NVIDIA RTX PRO 5500 GPUs worth $70 billion, but expect only roughly 1% in four months.",
       "seen_at": "2026-11-09"
-    },
-    {
-      "title": "RTX PRO 5500 China shipments: the four-month forecast",
-      "publisher": "NeoTeo",
-      "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPUUVIaV9vYXo1dGRTNTJBVGxxYlU5RWt5LVFhdWQxQVMybWFBR3dQa1NSVDNvRDlxcWY2Z2hTX0R0alR3bXF1UkdTZUJUUWdqSFdOVXQ1aWd1QUdxdTdVWDI4WjNubGFoRzZOcXVIMkZHeFZmV3pLaFdpOWFmTV9XT1U2Uktzenc?oc=5",
-      "published_at": "2026-11-06",
-      "found_via": "Google 新闻",
-      "snippet": "",
-      "seen_at": "2026-11-07"
     }
   ],
   "mentions": [
@@ -845,7 +845,11 @@
       "wechat": 0
     },
     "2026-11-16": {
-      "media": 3,
+      "media": 6,
+      "wechat": 1
+    },
+    "2026-11-17": {
+      "media": 1,
       "wechat": 0
     }
   },
@@ -854,15 +858,14 @@
     "text": "过去72小时仍无5500的新价格、批文或交付消息，样卡12月、商业交付2027年一季度的口径没变。新增只有美方远程访问规则的转述，海外租算力继续收紧。下一个节点是11月18日英伟达财报。"
   },
   "sweep": {
-    "date": "2026-11-16",
-    "candidates": 1,
-    "read": 1,
+    "date": "2026-11-17",
+    "candidates": 0,
+    "read": 0,
     "added": [],
     "corroborated": 0,
-    "model": "@cf/zai-org/glm-4.7-flash",
+    "model": null,
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
-      "无关：https://news.mydrivers.com/1/1166/1166056.htm"
+      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)"
     ]
   }
 }
