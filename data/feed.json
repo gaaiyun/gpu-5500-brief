@@ -1,22 +1,41 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-17T03:31:17+08:00",
-  "agent": "actions-sweep+cloud-routine",
+  "updated_at": "2026-11-17T07:05:00+08:00",
+  "agent": "cloud-routine",
   "searched": [
     "RTX PRO 5500 China price shipment allocation",
-    "RTX PRO 5500 现货 报价 丽台 渠道",
-    "Nvidia China export remote access rule Commerce November 2026",
-    "RTX PRO 5500 采购 公告 订单",
-    "昇腾 寒武纪 价格 供应 11月",
+    "RTX PRO 5500 大陆 报价 到货 渠道 最新",
+    "英伟达 财报 11月18日 中国 产能 RTX PRO 5500",
+    "Commerce Department remote access rule Chinese companies Nvidia",
+    "PRO 5500 GPU 采购 公告 服务器 浪潮 联想 超聚变",
+    "RTX PRO 6000 国内 价格 变化 11月",
     "GDDR7 price supply shortage November 2026",
-    "英伟达 5500 工信部 审批 交付 样卡 12月",
-    "RTX 5090 价格 国内 11月 涨价",
-    "Nvidia earnings November 18 China RTX Pro 5500 guidance",
-    "算力租赁 价格 英伟达 海外云 中国企业 远程 限制",
-    "TSMC Nvidia capacity allocation Rubin RTX PRO Blackwell supply November 2026",
-    "浪潮 新华三 联想 超聚变 RTX PRO 5500 服务器"
+    "BIS interim final rule remote access data center China Malaysia Singapore",
+    "昇腾 950 寒武纪 价格 供应 11月",
+    "算力租赁 价格 11月 租赁 海外 限制 国内",
+    "Nvidia earnings preview Nov 18 China RTX Pro 5500 Rubin",
+    "工信部 RTX PRO 5500 审批 采购 批准",
+    "丽台 PNY RTX PRO 5500 China distributor"
   ],
   "items": [
+    {
+      "id": "forbes-20261116-bis-remote-access",
+      "title": "美国商务部发布远程访问规则：中国企业使用海外数据中心需许可",
+      "published_at": "2026-11-16",
+      "publisher": "福布斯（Forbes）",
+      "source_type": "主流媒体",
+      "scope": "context",
+      "url": "https://www.forbes.com/sites/zacharyfolk/2026/11/16/us-closes-loophole-that-allowed-china-to-remotely-access-nvidia-chips/",
+      "grade": "B",
+      "summary": "据多家媒体报道，美国商务部工业与安全局11月16日发布临时最终规则：为总部在中国等受限地区的公司提供超过12 million aggregate TPP算力的数据中心需要许可，现有运营商有90天申请；对新加坡、马来西亚、泰国、印尼和巴西的先进芯片出口另需许可。",
+      "impact": "推断：中国买家靠海外租算力补缺口的路径收窄，5500的大陆本地交付和现货价格更受关注；规则是否覆盖5500需看正文。",
+      "watch": "联邦公报正文与生效日；是否涉及5500",
+      "corroboration": [
+        "https://thenextweb.com/news/us-remote-access-ai-chips-rule-china-singapore-malaysia",
+        "https://fortune.com/2026/11/16/new-commerce-rule-nvidia-chip-singapore-malaysia-china/"
+      ],
+      "checked_at": "2026-11-16"
+    },
     {
       "id": "digitimes-20261113-malaysia-megaspeed",
       "title": "DigiTimes：马来西亚调查英伟达GPU可能转口中国，涉Megaspeed关联方",
@@ -84,7 +103,7 @@
       "grade": "B",
       "summary": "据 The Information 报道，美国商务部正在定稿一项规则，限制中国AI企业租用海外数据中心里的英伟达算力，原计划本月公布。据同一报道，BIS 还在考虑对按要求报告禁运国家客户及其算力规模的美国运营数据中心给予豁免，仍在与其他部门磋商。规则尚未发布。",
       "impact": "推断：海外租算力这条路收窄后，中国买家更依赖境内到货的卡，5500不在出口限制内，大陆询价和订单压力可能加大。",
-      "watch": "规则是否在本月公布及适用国家范围",
+      "watch": "规则是否在本月公布及适用国家范围；已被福布斯11-16更新",
       "corroboration": [
         "https://aiweekly.co/alerts/commerce-readies-rule-to-block-chinas-remote-ai-chip-access",
         "https://www.forbes.com/sites/jonmarkman/2026/11/12/chinese-ai-firms-rush-to-rent-nvidia-chips-abroad-before-a-new-us-rule/",
@@ -849,8 +868,8 @@
     }
   },
   "take": {
-    "date": "2026-11-16",
-    "text": "过去72小时仍无5500的新价格、批文或交付消息，样卡12月、商业交付2027年一季度的口径没变。新增只有美方远程访问规则的转述，海外租算力继续收紧。下一个节点是11月18日英伟达财报。"
+    "date": "2026-11-17",
+    "text": "72小时内5500仍无新价格、批文或交付消息，样卡12月、商业交付2027年一季度的口径没变。新增是美方远程访问规则正式发布，海外租算力继续收紧。下一个节点是11月18日英伟达财报。"
   },
   "sweep": {
     "date": "2026-11-17",
