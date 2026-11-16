@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-16T10:59:04+08:00",
+  "updated_at": "2026-11-16T15:54:17+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -855,13 +855,14 @@
   },
   "sweep": {
     "date": "2026-11-16",
-    "candidates": 0,
-    "read": 0,
+    "candidates": 1,
+    "read": 1,
     "added": [],
     "corroborated": 0,
-    "model": null,
+    "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
+      "无关：https://news.mydrivers.com/1/1166/1166056.htm"
     ]
   }
 }
