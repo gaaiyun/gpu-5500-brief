@@ -1,23 +1,43 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18T02:29:12+08:00",
-  "agent": "actions-sweep+cloud-routine",
+  "updated_at": "2026-11-18T07:05:00+08:00",
+  "agent": "cloud-routine",
   "searched": [
     "RTX PRO 5500 China price shipment allocation",
-    "RTX PRO 5500 大陆 报价 到货 渠道 最新",
-    "英伟达 财报 11月18日 中国 产能 RTX PRO 5500",
-    "Commerce Department remote access rule Chinese companies Nvidia",
-    "PRO 5500 GPU 采购 公告 服务器 浪潮 联想 超聚变",
-    "RTX PRO 6000 国内 价格 变化 11月",
-    "GDDR7 price supply shortage November 2026",
-    "BIS interim final rule remote access data center China Malaysia Singapore",
-    "昇腾 950 寒武纪 价格 供应 11月",
-    "算力租赁 价格 11月 租赁 海外 限制 国内",
-    "Nvidia earnings preview Nov 18 China RTX Pro 5500 Rubin",
-    "工信部 RTX PRO 5500 审批 采购 批准",
-    "丽台 PNY RTX PRO 5500 China distributor"
+    "RTX PRO 5500 报价 到货 现货 渠道",
+    "英伟达 财报 中国 RTX PRO 5500 交付 Kress",
+    "Nvidia earnings November 2026 China Blackwell workstation supply GDDR7",
+    "丽台 PNY 浪潮 新华三 联想 RTX PRO 5500 服务器 样卡",
+    "昇腾 寒武纪 价格 供应 算力租赁 涨价 11月",
+    "RTX PRO 6000 国内 价格 变化 RTX 5090 价格",
+    "BIS export controls China AI chips rule November 17 2026",
+    "Nvidia Q3 fiscal 2027 results China RTX Pro Kress call guidance",
+    "英伟达财报 11月18日 中国 工作站 Blackwell 克雷斯 电话会",
+    "Nvidia earnings CNBC China sales Jensen Huang not reinstated board",
+    "TSMC Rubin capacity allocation RTX PRO GDDR7 price November 2026",
+    "天阳科技 游族网络 RTX PRO 5500 采购 公告 回复 问询",
+    "RTX Pro 5500 Reuters Bloomberg The Information China approval MIIT"
   ],
   "items": [
+    {
+      "id": "nvidia-20261117-q3fy27-results",
+      "title": "英伟达财报：Q4指引不含中国数据中心算力收入，首份克雷斯任内财报",
+      "published_at": "2026-11-17",
+      "publisher": "NVIDIA 财报 / StockTitan",
+      "source_type": "官方",
+      "scope": "context",
+      "url": "https://www.stocktitan.net/news/NVDA/nvidia-announces-financial-results-for-third-quarter-fiscal-fpx9dw5egxqa.html",
+      "grade": "A",
+      "summary": "英伟达11月17日发布2027财年第三季度财报：营收115.8 billion美元，同比增长103%；预计下一季度营收为130.0 billion美元，上下浮动3%，并假设没有来自中国的数据中心算力收入。这是黄仁勋辞职后的首份财报，由临时CEO克雷斯主持。",
+      "impact": "推断：财报指引把中国数据中心算力排除在外，5500作为大陆买家仍能拿到的工作站卡，不受这条口径直接限制；产能仍由英伟达内部分配，是否倾斜到大陆看后续供货口径。",
+      "watch": "电话会纪要里有无5500供货和中国交付表述",
+      "corroboration": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+        "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html"
+      ],
+      "claims": [],
+      "checked_at": "2026-11-18"
+    },
     {
       "id": "forbes-20261116-bis-remote-access",
       "title": "美国商务部发布远程访问规则：中国企业使用海外数据中心需许可",
@@ -379,7 +399,8 @@
       "watch": "核实是否写入合同及中国客户如何应对",
       "corroboration": [
         "https://www.tomshardware.com/tech-industry/data-centers/nvidia-tells-data-center-operators-to-limit-business-from-chinese-customers-with-new-global-restrictions-report-claims-allegedly-restricted-to-49-percent-of-the-total-ensuring-51-percent-are-non-chinese-outfits",
-        "https://www.tomshardware.com/tech-industry/policy/nvidia-cracks-down-on-overseas-cloud-ai-gpu-rentals-for-china-partners-face-51-percent-non-chinese-quota-as-black-market-b300-rack-prices-surge-to-usd2-8-million"
+        "https://www.tomshardware.com/tech-industry/policy/nvidia-cracks-down-on-overseas-cloud-ai-gpu-rentals-for-china-partners-face-51-percent-non-chinese-quota-as-black-market-b300-rack-prices-surge-to-usd2-8-million",
+        "https://finance.yahoo.com/technology/ai/articles/nvidia-halt-chip-sales-data-081754255.html"
       ],
       "claims": [],
       "checked_at": "2026-11-04",
@@ -450,6 +471,15 @@
     }
   ],
   "leads": [
+    {
+      "title": "RTX 5090二手价格腰斩：部分型号跌破3万元",
+      "publisher": "快科技",
+      "source_type": "行业媒体",
+      "url": "https://news.mydrivers.com/1/1166/1166056.htm",
+      "published_at": "2026-11-16",
+      "found_via": "reading_room",
+      "snippet": "据Reddit网友反馈，该卡二手成交价已从最高10000美元跌至4400美元附近。"
+    },
     {
       "title": "$英伟达(NVDA.US)英伟达：AI 抛售说不通市场正在抛售 AI 股票，但据报道，英伟达收到了来自字节跳动、阿里巴巴和腾讯的 RTX PRO 5500 订单",
       "publisher": "Longbridge",
@@ -739,16 +769,6 @@
       "found_via": "搜狗微信",
       "snippet": "RTX Pro 5500 四个月到货 1%,甲骨文 70 亿美元租约取消,谷歌只能自掏 170 亿美元去怀俄明建 702 兆瓦配 CCS 的机房.具身侧产...",
       "seen_at": "2026-11-10"
-    },
-    {
-      "title": "【资讯】PNY RTX PRO 5500零售标价17999美元 高于RTX PRO 6000",
-      "publisher": "手游巴士",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E3%80%90%E8%B5%84%E8%AE%AF%E3%80%91PNY%20RTX%20PRO%205500%E9%9B%B6%E5%94%AE%E6%A0%87%E4%BB%B717999%E7%BE%8E%E5%85%83%20%E9%AB%98%E4%BA%8ERTX%20PRO%206000",
-      "published_at": "2026-11-06",
-      "found_via": "搜狗微信",
-      "snippet": "NVIDIA RTX PRO 5500 Blackwell专业工作站显卡在美国零售商SHI Government Solutions标价17999美元(约12.09万元人民币),折...",
-      "seen_at": "2026-11-09"
     }
   ],
   "mentions": [
@@ -852,8 +872,8 @@
     }
   },
   "take": {
-    "date": "2026-11-17",
-    "text": "72小时内5500仍无新价格、批文或交付消息，样卡12月、商业交付2027年一季度的口径没变。新增是美方远程访问规则正式发布，海外租算力继续收紧。下一个节点是11月18日英伟达财报。"
+    "date": "2026-11-18",
+    "text": "英伟达财报已出，下一季度指引不含中国数据中心算力收入，5500的口径没有新增。72小时内仍无新的大陆报价、批文或交付消息，样卡12月、商业交付2027年一季度不变。下一步看电话会纪要里有无5500供货表述。"
   },
   "sweep": {
     "date": "2026-11-18",
