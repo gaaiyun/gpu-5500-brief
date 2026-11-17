@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-17T07:05:00+08:00",
-  "agent": "cloud-routine",
+  "updated_at": "2026-11-18T02:29:12+08:00",
+  "agent": "actions-sweep+cloud-routine",
   "searched": [
     "RTX PRO 5500 China price shipment allocation",
     "RTX PRO 5500 大陆 报价 到货 渠道 最新",
@@ -447,25 +447,19 @@
       ],
       "checked_at": "2026-10-28",
       "found_via": "人工转入"
-    },
-    {
-      "id": "leiphone-20261020-channel-quotes",
-      "title": "雷峰网：大厂采购报价约8.5万元，部分渠道8.7万元",
-      "published_at": "2026-10-20",
-      "publisher": "雷峰网",
-      "source_type": "行业媒体",
-      "url": "https://www.leiphone.com/category/chips/STx9ZzfDNh5W80Bm.html",
-      "grade": "B",
-      "summary": "雷峰网原创报道（记者陈悦琳）援引匿名业内人士：RTX PRO 5500预期交付报价集中在8万-12万元，大厂采购报价约8.5万元，部分渠道升至8.7万元；英伟达每季度对华供应上限约50万张；OEM厂商11月拿样卡，批量交付最快明年一季度。",
-      "impact": "8.5万-8.7万元与TrendForce转述的8.5万-9万元相互印证，低于SMM预售价9.5万元；高于9万元的报盘需靠短交期支撑。",
-      "watch": "核实11月样卡是否到位、渠道报价是否继续上移",
-      "corroboration": [
-        "https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/"
-      ],
-      "checked_at": "2026-10-27"
     }
   ],
   "leads": [
+    {
+      "title": "$英伟达(NVDA.US)英伟达：AI 抛售说不通市场正在抛售 AI 股票，但据报道，英伟达收到了来自字节跳动、阿里巴巴和腾讯的 RTX PRO 5500 订单",
+      "publisher": "Longbridge",
+      "source_type": "其他",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5neWhnUGtSWDhwTWFzb3I3Mlh6d3psV0k2UVJaNURELVVhQWRQLWEwY3g5eUc1cE9uTXZfMDNsLURHZEtvVVJOdmFBdWtUMlNxclE5ajVCYlVYNnVLdUY4WA?oc=5",
+      "published_at": "2026-11-17",
+      "found_via": "Google 新闻",
+      "snippet": "",
+      "seen_at": "2026-11-17"
+    },
     {
       "title": "RTX 5090停产被证伪后价格回落,国内推理算力又盯上PRO 5500",
       "publisher": "谈谈双碳",
@@ -755,16 +749,6 @@
       "found_via": "搜狗微信",
       "snippet": "NVIDIA RTX PRO 5500 Blackwell专业工作站显卡在美国零售商SHI Government Solutions标价17999美元(约12.09万元人民币),折...",
       "seen_at": "2026-11-09"
-    },
-    {
-      "title": "NVIDIA's RTX PRO 5500 is China's most wanted GPU, and almost nobody is getting o",
-      "publisher": "TweakTown",
-      "source_type": "行业媒体",
-      "url": "https://www.tweaktown.com/news/114529/nvidias-rtx-pro-5500-is-chinas-most-wanted-gpu-and-almost-nobody-is-getting-one-soon/index.html",
-      "published_at": "2026-11-06",
-      "found_via": "Bing 新闻",
-      "snippet": "Alibaba, Tencent, and ByteDance lead Chinese orders for 6 million NVIDIA RTX PRO 5500 GPUs worth $70 billion, but expect only roughly 1% in four months.",
-      "seen_at": "2026-11-09"
     }
   ],
   "mentions": [
@@ -863,7 +847,7 @@
       "wechat": 1
     },
     "2026-11-17": {
-      "media": 1,
+      "media": 4,
       "wechat": 0
     }
   },
@@ -872,14 +856,16 @@
     "text": "72小时内5500仍无新价格、批文或交付消息，样卡12月、商业交付2027年一季度的口径没变。新增是美方远程访问规则正式发布，海外租算力继续收紧。下一个节点是11月18日英伟达财报。"
   },
   "sweep": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "candidates": 0,
     "read": 0,
     "added": [],
     "corroborated": 0,
     "model": null,
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)"
+      "云端条目未通过复核 https://www.leiphone.com/category/chips/STx9ZzfDNh5W80Bm.html：原文没有这些数字",
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
+      "钛媒体 RSS 失败：404 Client Error: Not Found for url: https://www.tmtpost.com/rss.xml"
     ]
   }
 }
