@@ -1,5 +1,36 @@
 [
  {
+  "url": "https://www.tweaktown.com/news/114710/us-moves-to-cut-chinas-remote-access-to-nvidia-ai-chips-through-overseas-data-centers/index.html",
+  "title": "US moves to cut China's remote access to NVIDIA AI chips through overseas data centers",
+  "publisher": "TweakTown",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-16",
+  "scope": "context",
+  "snippets": [
+   "Read more : Chinese AI companies plan new facility in China with 115,000 NVIDIA "
+  ],
+  "seen_at": "2026-11-17",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1102574602_223785",
+  "title": "美国AI芯片出口管制再收紧！国产链逆势突围，华虹宏力涨超10% ...",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-16",
+  "scope": "context",
+  "snippets": [
+   "中微公司 董事长尹志尧在业绩会上表示，公司在手订单充裕，大客户扩产需求旺盛，预计2027年收入保持快速增长。",
+   "台积电 CoWoS 封装价格近日再度上调约 20% ，此前机构曾报道代工与封测厂商酝酿把报价上调 10% 至 20%，芯片设备交期已从 3 至 6 个月延长至 ",
+   "英伟达将于11月17日盘后发布FQ3财报： LSEG预期营收约1092亿美元、同比+90%、调整后每股收益2.48美元；",
+   "公司指引1080亿美元±2%、非GAAP毛利率74%，Q4毛利率预计触底71-72%；",
+   "数据中心收入上季890亿美元、同比+117%，本季机构预测区间997亿-1108亿美元；",
+   "Q4营收共识1247.3亿美元、同比+83.1%；"
+  ],
+  "seen_at": "2026-11-17",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.sohu.com/a/1102402814_163726",
   "title": "黄仁勋从英伟达辞职后：美国酝酿收紧AI芯片对华出口限制 防止转运等",
   "publisher": "搜狐号",
@@ -86,6 +117,24 @@
    "02 / 财经早报丨证监会：进一步深化市场稳定长效机制研究，消息称黄仁勋考虑重返英伟达担任CEO丨2026年11月16日",
    "03 / 黄仁勋讨论重掌英伟达 硅谷盟友游说支持回归",
    "05 / 英媒：黄仁勋考虑重返英伟达"
+  ],
+  "seen_at": "2026-11-17",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.sina.com.cn/roll/2026-11-17/doc-iniyzhhm7675952.shtml",
+  "title": "【涨停直击】超100万手封单！华为算力概念股涨停",
+  "publisher": "新浪财经",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-16",
+  "scope": "context",
+  "snippets": [
+   "归母净利润亏损1413万元，同比下降106.5%。",
+   "02 / “股神”巴菲特新动作：捐赠55亿美元伯克希尔股票，四家家族基金会获赠",
+   "01 / 黄仁勋讨论重掌英伟达 硅谷盟友游说支持回归",
+   "05 / 财经早报丨证监会：进一步深化市场稳定长效机制研究，消息称黄仁勋考虑重返英伟达担任CEO丨2026年11月16日",
+   "06 / 英媒：黄仁勋考虑重返英伟达",
+   "03 / 部分银行美元存款利率突破4% 投资者还想等等看"
   ],
   "seen_at": "2026-11-17",
   "found_via": "Bing 新闻"
