@@ -25,6 +25,37 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-forms-export-control-board-105132905.html",
+  "title": "Nvidia Forms Export Control Board Committee After Chip Curbs",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-17",
+  "scope": "context",
+  "snippets": [
+   "Nvidia shares are down 16% since Nov."
+  ],
+  "seen_at": "2026-11-18",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.sina.com.cn/roll/2026-11-17/doc-iniyzhhm7675952.shtml",
+  "title": "【涨停直击】超100万手封单！华为算力概念股涨停",
+  "publisher": "新浪财经",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-17",
+  "scope": "context",
+  "snippets": [
+   "归母净利润亏损1413万元，同比下降106.5%。",
+   "02 / “股神”巴菲特新动作：捐赠55亿美元伯克希尔股票，四家家族基金会获赠",
+   "01 / 黄仁勋讨论重掌英伟达 硅谷盟友游说支持回归",
+   "05 / 财经早报丨证监会：进一步深化市场稳定长效机制研究，消息称黄仁勋考虑重返英伟达担任CEO丨2026年11月16日",
+   "06 / 英媒：黄仁勋考虑重返英伟达",
+   "03 / 部分银行美元存款利率突破4% 投资者还想等等看"
+  ],
+  "seen_at": "2026-11-18",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.tweaktown.com/news/114710/us-moves-to-cut-chinas-remote-access-to-nvidia-ai-chips-through-overseas-data-centers/index.html",
   "title": "US moves to cut China's remote access to NVIDIA AI chips through overseas data centers",
   "publisher": "TweakTown",
@@ -167,24 +198,6 @@
    "02 / 财经早报丨证监会：进一步深化市场稳定长效机制研究，消息称黄仁勋考虑重返英伟达担任CEO丨2026年11月16日",
    "03 / 黄仁勋讨论重掌英伟达 硅谷盟友游说支持回归",
    "05 / 英媒：黄仁勋考虑重返英伟达"
-  ],
-  "seen_at": "2026-11-17",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.sina.com.cn/roll/2026-11-17/doc-iniyzhhm7675952.shtml",
-  "title": "【涨停直击】超100万手封单！华为算力概念股涨停",
-  "publisher": "新浪财经",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [
-   "归母净利润亏损1413万元，同比下降106.5%。",
-   "02 / “股神”巴菲特新动作：捐赠55亿美元伯克希尔股票，四家家族基金会获赠",
-   "01 / 黄仁勋讨论重掌英伟达 硅谷盟友游说支持回归",
-   "05 / 财经早报丨证监会：进一步深化市场稳定长效机制研究，消息称黄仁勋考虑重返英伟达担任CEO丨2026年11月16日",
-   "06 / 英媒：黄仁勋考虑重返英伟达",
-   "03 / 部分银行美元存款利率突破4% 投资者还想等等看"
   ],
   "seen_at": "2026-11-17",
   "found_via": "Bing 新闻"
