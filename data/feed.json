@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-17T07:05:34+08:00",
+  "updated_at": "2026-11-17T08:28:39+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -38,8 +38,7 @@
         "https://thenextweb.com/news/us-remote-access-ai-chips-rule-china-singapore-malaysia",
         "https://fortune.com/2026/11/16/new-commerce-rule-nvidia-chip-singapore-malaysia-china/"
       ],
-      "checked_at": "2026-11-16",
-      "ci_checked": "2026-11-17"
+      "checked_at": "2026-11-16"
     },
     {
       "id": "digitimes-20261113-malaysia-megaspeed",
@@ -868,7 +867,8 @@
     "corroborated": 0,
     "model": null,
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)"
+      "云端条目未通过复核 https://www.leiphone.com/category/chips/STx9ZzfDNh5W80Bm.html：原文没有这些数字",
+      "Google 新闻 \"RTX PRO 5500\" when:3d 失败：429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20when%3A3d&hl="
     ]
   }
 }
