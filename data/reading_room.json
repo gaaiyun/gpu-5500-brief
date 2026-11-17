@@ -1,13 +1,38 @@
 [
  {
+  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-halt-chip-sales-data-081754255.html",
+  "title": "Nvidia to halt chip sales to data centers renting over half to China - report",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-17",
+  "scope": "context",
+  "snippets": [
+   "The Financial Times reported earlier this month that Nvidia had verbally told da",
+   "5 that Chinese artificial intelligence startup Moonshot AI had sought access to "
+  ],
+  "seen_at": "2026-11-17",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.tweaktown.com/news/114710/us-moves-to-cut-chinas-remote-access-to-nvidia-ai-chips-through-overseas-data-centers/index.html",
   "title": "US moves to cut China's remote access to NVIDIA AI chips through overseas data centers",
   "publisher": "TweakTown",
   "source_type": "行业媒体",
   "published_at": "2026-11-16",
   "scope": "context",
+  "snippets": [],
+  "seen_at": "2026-11-17",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1102649920_121201017",
+  "title": "黄仁勋刚被赶下台，英伟达东南亚就被一锅端：私德只是引信 ...",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-16",
+  "scope": "context",
   "snippets": [
-   "Read more : Chinese AI companies plan new facility in China with 115,000 NVIDIA "
+   "接下来会看到11月底新规的实施、12月英伟达财报的合规压力、东南亚机房的业务转移。"
   ],
   "seen_at": "2026-11-17",
   "found_via": "Bing 新闻"
@@ -591,24 +616,6 @@
    "Megaspeed's Malaysian sister company reportedly bought at least $4.8 billion of "
   ],
   "seen_at": "2026-11-12",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1099759224_122481539",
-  "title": "英伟达退出中国市场后，黄仁勋曾叹息：伤害中国，美国受伤更严重",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-10",
-  "scope": "context",
-  "snippets": [
-   "2025年12月，特朗普在社交平台上宣布，允许英伟达向中国出售H200芯片，条件是美国政府要从销售额里抽走25%。",
-   "黄仁勋在公开活动中坦言，英伟达在中国受管制高端AI芯片市场的份额已从约95%下滑至零。",
-   "2022年那会儿，英伟达在中国AI加速卡市场的份额超过95%，H100一卡难求，加钱都不一定抢得到。",
-   "英伟达反应倒快，赶紧搞出缩水版A800、H800，参数砍一刀，绕开红线接着卖。",
-   "没办法，英伟达只好再削一刀，推出H20，性能缩水一大截，价格却跟H100差不多，怎么看都别扭。",
-   "7月31日，国家网信办就H20存在的漏洞后门风险约谈英伟达。"
-  ],
-  "seen_at": "2026-11-13",
   "found_via": "Bing 新闻"
  }
 ]
