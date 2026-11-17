@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-17T17:06:31+08:00",
+  "updated_at": "2026-11-18T02:29:12+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -860,14 +860,16 @@
     "text": "72小时内5500仍无新价格、批文或交付消息，样卡12月、商业交付2027年一季度的口径没变。新增是美方远程访问规则正式发布，海外租算力继续收紧。下一个节点是11月18日英伟达财报。"
   },
   "sweep": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "candidates": 0,
     "read": 0,
     "added": [],
     "corroborated": 0,
     "model": null,
     "notes": [
-      "云端条目未通过复核 https://www.leiphone.com/category/chips/STx9ZzfDNh5W80Bm.html：原文没有这些数字"
+      "云端条目未通过复核 https://www.leiphone.com/category/chips/STx9ZzfDNh5W80Bm.html：原文没有这些数字",
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
+      "钛媒体 RSS 失败：404 Client Error: Not Found for url: https://www.tmtpost.com/rss.xml"
     ]
   }
 }
