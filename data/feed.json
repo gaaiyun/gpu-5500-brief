@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18T02:29:12+08:00",
+  "updated_at": "2026-11-18T07:06:35+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -383,7 +383,8 @@
       "watch": "核实是否写入合同及中国客户如何应对",
       "corroboration": [
         "https://www.tomshardware.com/tech-industry/data-centers/nvidia-tells-data-center-operators-to-limit-business-from-chinese-customers-with-new-global-restrictions-report-claims-allegedly-restricted-to-49-percent-of-the-total-ensuring-51-percent-are-non-chinese-outfits",
-        "https://www.tomshardware.com/tech-industry/policy/nvidia-cracks-down-on-overseas-cloud-ai-gpu-rentals-for-china-partners-face-51-percent-non-chinese-quota-as-black-market-b300-rack-prices-surge-to-usd2-8-million"
+        "https://www.tomshardware.com/tech-industry/policy/nvidia-cracks-down-on-overseas-cloud-ai-gpu-rentals-for-china-partners-face-51-percent-non-chinese-quota-as-black-market-b300-rack-prices-surge-to-usd2-8-million",
+        "https://finance.yahoo.com/technology/ai/articles/nvidia-halt-chip-sales-data-081754255.html"
       ],
       "claims": [],
       "checked_at": "2026-11-04",
@@ -455,6 +456,16 @@
   ],
   "leads": [
     {
+      "title": "英伟达财报：Q4指引不含中国数据中心算力收入，首份克雷斯任内财报",
+      "publisher": "NVIDIA 财报 / StockTitan",
+      "source_type": "官方",
+      "url": "https://www.stocktitan.net/news/NVDA/nvidia-announces-financial-results-for-third-quarter-fiscal-fpx9dw5egxqa.html",
+      "published_at": "2026-11-17",
+      "found_via": "云端条目未通过复核",
+      "snippet": "英伟达11月17日发布2027财年第三季度财报：营收115.8 billion美元，同比增长103%；预计下一季度营收为130.0 billion美元，上下浮动3%，并假设没有来自中国的数据中心算力收入。这是黄仁勋辞职后的首份财报，由临时CEO克雷斯主持。",
+      "seen_at": "2026-11-18"
+    },
+    {
       "title": "$英伟达(NVDA.US)英伟达：AI 抛售说不通市场正在抛售 AI 股票，但据报道，英伟达收到了来自字节跳动、阿里巴巴和腾讯的 RTX PRO 5500 订单",
       "publisher": "Longbridge",
       "source_type": "其他",
@@ -473,6 +484,16 @@
       "found_via": "搜狗微信",
       "snippet": "6000服务器版的报价大约在16-18万元.三、PRO 5500瞄准可复制的推理节点下一款值得关注的是RTX PRO 5500 Blackwell.它的正...",
       "seen_at": "2026-11-17"
+    },
+    {
+      "title": "RTX 5090二手价格腰斩：部分型号跌破3万元",
+      "publisher": "快科技",
+      "source_type": "行业媒体",
+      "url": "https://news.mydrivers.com/1/1166/1166056.htm",
+      "published_at": "2026-11-16",
+      "found_via": "reading_room",
+      "snippet": "据Reddit网友反馈，该卡二手成交价已从最高10000美元跌至4400美元附近。",
+      "seen_at": "2026-11-18"
     },
     {
       "title": "RTX PRO 5500 为什么一卡难求？84GB 显存参数、供货数据与国内首批到货说明",
@@ -733,26 +754,6 @@
       "found_via": "搜狗微信",
       "snippet": "阿里、腾讯、字节向英伟达订了 600 万张 RTX Pro 5500,金额接近 700 亿美元.可到货慢得吓人.未来四个月只给“数万张”,约占...",
       "seen_at": "2026-11-10"
-    },
-    {
-      "title": "2026年11月6日 科技资讯",
-      "publisher": "新质科技资讯",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=2026%E5%B9%B411%E6%9C%886%E6%97%A5%20%E7%A7%91%E6%8A%80%E8%B5%84%E8%AE%AF",
-      "published_at": "2026-11-06",
-      "found_via": "搜狗微信",
-      "snippet": "RTX Pro 5500 四个月到货 1%,甲骨文 70 亿美元租约取消,谷歌只能自掏 170 亿美元去怀俄明建 702 兆瓦配 CCS 的机房.具身侧产...",
-      "seen_at": "2026-11-10"
-    },
-    {
-      "title": "【资讯】PNY RTX PRO 5500零售标价17999美元 高于RTX PRO 6000",
-      "publisher": "手游巴士",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E3%80%90%E8%B5%84%E8%AE%AF%E3%80%91PNY%20RTX%20PRO%205500%E9%9B%B6%E5%94%AE%E6%A0%87%E4%BB%B717999%E7%BE%8E%E5%85%83%20%E9%AB%98%E4%BA%8ERTX%20PRO%206000",
-      "published_at": "2026-11-06",
-      "found_via": "搜狗微信",
-      "snippet": "NVIDIA RTX PRO 5500 Blackwell专业工作站显卡在美国零售商SHI Government Solutions标价17999美元(约12.09万元人民币),折...",
-      "seen_at": "2026-11-09"
     }
   ],
   "mentions": [
@@ -856,8 +857,8 @@
     }
   },
   "take": {
-    "date": "2026-11-17",
-    "text": "72小时内5500仍无新价格、批文或交付消息，样卡12月、商业交付2027年一季度的口径没变。新增是美方远程访问规则正式发布，海外租算力继续收紧。下一个节点是11月18日英伟达财报。"
+    "date": "2026-11-18",
+    "text": "英伟达财报已出，下一季度指引不含中国数据中心算力收入，5500的口径没有新增。72小时内仍无新的大陆报价、批文或交付消息，样卡12月、商业交付2027年一季度不变。下一步看电话会纪要里有无5500供货表述。"
   },
   "sweep": {
     "date": "2026-11-18",
@@ -867,9 +868,10 @@
     "corroborated": 0,
     "model": null,
     "notes": [
-      "云端条目未通过复核 https://www.leiphone.com/category/chips/STx9ZzfDNh5W80Bm.html：原文没有这些数字",
+      "云端条目未通过复核 https://www.stocktitan.net/news/NVDA/nvidia-announces-financial-results-for-third-quarter-fiscal-fpx9dw5egxqa.html：原文没有这些数字",
       "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
-      "钛媒体 RSS 失败：404 Client Error: Not Found for url: https://www.tmtpost.com/rss.xml"
+      "钛媒体 RSS 失败：404 Client Error: Not Found for url: https://www.tmtpost.com/rss.xml",
+      "Google 新闻 \"RTX PRO 5500\" when:3d 失败：429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20when%3A3d&hl="
     ]
   }
 }
