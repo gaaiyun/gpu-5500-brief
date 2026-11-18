@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18T16:28:36+08:00",
+  "updated_at": "2026-11-19T01:58:42+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -433,6 +433,16 @@
   ],
   "leads": [
     {
+      "title": "RTX PRO 6000 / 6000D / 5500 到底怎么选?",
+      "publisher": "IT满江红DYH",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%206000%20/%206000D%20/%205500%20%E5%88%B0%E5%BA%95%E6%80%8E%E4%B9%88%E9%80%89%3F",
+      "published_at": "2026-11-18",
+      "found_via": "搜狗微信",
+      "snippet": "RTX PRO 5500 由于走大宗采购,含税市场报价约 9 万元.这里要提醒一个关键点:PRO 5500 官方建议零售价被曝高达 1.8 万美元(...",
+      "seen_at": "2026-11-19"
+    },
+    {
       "title": "【智算ABC】NVIDIA RTX PRO 5500 GPU大揭秘!",
       "publisher": "科学千里眼",
       "source_type": "公众号",
@@ -721,19 +731,17 @@
       "found_via": "搜狗微信",
       "snippet": "NVIDIA RTX PRO 5500 Blackwell专业工作站显卡在美国零售商SHI Government Solutions标价17999美元(约12.09万元人民币),折...",
       "seen_at": "2026-11-18"
-    },
-    {
-      "title": "RTX PRO 5500 Blackwell上架出现价格倒挂",
-      "publisher": "泡泡科技星球",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%20Blackwell%E4%B8%8A%E6%9E%B6%E5%87%BA%E7%8E%B0%E4%BB%B7%E6%A0%BC%E5%80%92%E6%8C%82",
-      "published_at": "2026-11-06",
-      "found_via": "搜狗微信",
-      "snippet": "日消息,NVIDIA RTX PRO 5500 Blackwell 专业工作站显卡现身美国零售商 SHI Government Solutions 商品页面,PNY 版本标价 17999...",
-      "seen_at": "2026-11-15"
     }
   ],
   "mentions": [
+    {
+      "date": "2026-11-18",
+      "publisher": "IT满江红DYH",
+      "low": 90000,
+      "high": 90000,
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%206000%20/%206000D%20/%205500%20%E5%88%B0%E5%BA%95%E6%80%8E%E4%B9%88%E9%80%89%3F",
+      "found_via": "搜狗微信"
+    },
     {
       "date": "2026-11-07",
       "publisher": "IT168",
@@ -748,14 +756,6 @@
       "low": 80000,
       "high": 120000,
       "url": "https://weixin.sogou.com/weixin?type=2&query=%E8%B4%A7%E5%B8%81%E8%B5%84%E9%87%91%E4%B8%8D%E8%B6%B312%E4%BA%BF%2C%E7%99%BE%E4%BA%BF%E6%B8%B8%E6%88%8F%E5%B7%A8%E5%A4%B4%E6%8B%9F%E7%A0%B842%E4%BA%BF%E4%B9%B0GPU",
-      "found_via": "搜狗微信"
-    },
-    {
-      "date": "2026-11-04",
-      "publisher": "企报News",
-      "low": 80000,
-      "high": 120000,
-      "url": "https://weixin.sogou.com/weixin?type=2&query=42.25%E4%BA%BF%E7%A0%B8%E5%90%91GPU%3A%E6%B8%B8%E6%97%8F%E6%8A%BC%E6%B3%A8%E7%AE%97%E5%8A%9B%2C%E6%98%AF%E8%BD%AC%E5%9E%8B%E8%BF%98%E6%98%AF%E5%86%92%E9%99%A9%3F",
       "found_via": "搜狗微信"
     }
   ],
@@ -837,8 +837,8 @@
       "wechat": 0
     },
     "2026-11-18": {
-      "media": 0,
-      "wechat": 1
+      "media": 5,
+      "wechat": 2
     }
   },
   "take": {
@@ -846,14 +846,16 @@
     "text": "英伟达财报已出，下一季度指引不含中国数据中心算力收入，5500的口径没有新增。72小时内仍无新的大陆报价、批文或交付消息，样卡12月、商业交付2027年一季度不变。下一步看电话会纪要里有无5500供货表述。"
   },
   "sweep": {
-    "date": "2026-11-18",
-    "candidates": 0,
-    "read": 0,
+    "date": "2026-11-19",
+    "candidates": 1,
+    "read": 1,
     "added": [],
     "corroborated": 0,
-    "model": null,
+    "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "DIGITIMES RSS 失败：not well-formed (invalid token): line 581, column 79"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
+      "DIGITIMES RSS 失败：not well-formed (invalid token): line 713, column 79",
+      "无关：https://www.leiphone.com/category/chips/WHSLCH74nrSJW6OE.html"
     ]
   }
 }
