@@ -1,5 +1,149 @@
 [
  {
+  "url": "https://www.sohu.com/a/1103226665_118778",
+  "title": "英伟达全面停供H200芯片：全球断供落地，中国AI算力自给率加速跃升",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-18",
+  "scope": "context",
+  "snippets": [
+   "驱动中国11月18日消息 英伟达临时首席执行官科莱特·克雷斯在最新财报电话会上正式确认，公司已全面停止H200芯片供应，不再向包括中国在内的全球任何地区供货，标",
+   "与此同时，英伟达在中国AI半导体市场的份额预计将急剧萎缩至8%，而中国企业总份额将达到八成。",
+   "目前，国产AI芯片已实质性进入商业化落地拐点，在长上下文推理等核心场景下的实测性能不仅对标甚至局部反超H200，算力载体、高速互联及先进封装等配套产业链也同步受"
+  ],
+  "seen_at": "2026-11-19",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1103204620_626761",
+  "title": "英伟达临时CEO：英伟达不再向中国供应H200人工智能芯片",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-18",
+  "scope": "context",
+  "snippets": [
+   "【 美国科技公司英伟达临时首席执行官科莱特·克雷斯表示，英伟达不再向中国供应专为人工智能（AI）系统设计的H200芯片。",
+   "克雷斯在接受美国消费者新闻与商业频道（CNBC）采访时指出：“我们对中国的供应量约占总出货量的10%，但这些产品主要应用于游戏、汽车和工作站领域。"
+  ],
+  "seen_at": "2026-11-18",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.rfi.fr/cn/%E6%94%BF%E6%B2%BB/20261118-%E8%B7%AF%E9%80%8F%E7%8B%AC%E5%AE%B6%E8%B0%83%E6%9F%A5-%E4%B8%AD%E5%9B%BD%E4%BB%8D%E6%9C%89%E8%B6%85%E8%BF%8730%E4%BA%BF%E7%BE%8E%E5%85%83%E7%9A%84%E9%A1%B9%E7%9B%AE%E4%B8%8E%E8%8B%B1%E4%BC%9F%E8%BE%BE%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3",
+  "title": "路透独家调查：中国仍有超过30亿美元的项目与英伟达技术相关",
+  "publisher": "法广",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-18",
+  "scope": "context",
+  "snippets": [
+   "然而，路透社的一项调查显示，中国仍有超过30亿美元的计算基础设施项目与英伟达技术相关。",
+   "路透社审查了150多份招标公告、投资规划文件、建设合同以及中国企业发布的信息，从而识别出一系列相关项目和设备采购合同，其已披露总价值超过230亿元人民币（约合2",
+   "他去年曾表示，英伟达在中国市场的份额已从95%降至零。",
+   "事实上，英伟达在8月提交的一份文件中表示，公司实际上已被排除在中国数据中心计算市场之外。",
+   "不过，路透社10月引用市场研究机构IDC的一份报告称，2026年上半年英伟达仍占中国人工智能加速器出货量的34%。",
+   "这些项目大多围绕受到出口限制的英伟达H100、H200和H800处理器建设。"
+  ],
+  "seen_at": "2026-11-19",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.rfi.fr/cn/%E6%94%BF%E6%B2%BB/20261118-%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%A7%B0%E5%B7%B2%E5%81%9C%E6%AD%A2%E5%90%91%E4%B8%AD%E5%9B%BD%E4%BE%9B%E5%BA%94hopper%E9%AB%98%E7%AB%AF%E8%8A%AF%E7%89%87",
+  "title": "英伟达称已停止向中国供应Hopper高端芯片",
+  "publisher": "法广",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-18",
+  "scope": "context",
+  "snippets": [
+   "在黄仁勋上周辞职后接任代理首席执行官的科莱特·克雷斯（Colette Kress）周二在财报电话会议上表示，第三季度，英伟达向中国销售了价值24亿美元的、获得出",
+   "今年1月，美国调整了H200芯片的出口许可政策，允许在满足安全条件的前提下，对出口申请实行个案审批。",
+   "H200芯片由全球最大晶圆代工企业台积电（TSMC）为英伟达生产。"
+  ],
+  "seen_at": "2026-11-19",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.leiphone.com/category/chips/WHSLCH74nrSJW6OE.html",
+  "title": "黄仁勋归期悬而未决，买GPU的人已经不敢下单",
+  "publisher": "雷峰网",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-18",
+  "scope": "5500",
+  "snippets": [
+   "而他考虑的另一条路——华为昇腾950，据其了解当前订单排期已经排满，交付周期同样存在不确定性。",
+   "从事算力服务生意已有两年的晓宇给雷峰网算了一笔账：B300出厂价格约为400万元，海外实际采购成本达到700万至800万元，一旦运转至国内，市场报价立马翻倍。",
+   "Jason透露，在黄仁勋风波前，国内单台B300现货价已攀升至2200万元左右。",
+   "此前，他所在团队计划从海外采购数十台B300，甚至提前买好了交换机、网卡等配套设备，最终供应方却只交付了两台。",
+   "喊出300万张订单，英伟达RTX PRO 5500为何遭到提前疯抢？"
+  ],
+  "seen_at": "2026-11-19",
+  "found_via": "雷峰网"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261118A0BJR500",
+  "title": "英伟达将不再向中国提供H200芯片？外交部回应",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-18",
+  "scope": "context",
+  "snippets": [
+   "有记者提问：英伟达的临时首席执行官昨天向股东表示，公司已不再向中国供应获准出口的 Hopper架构 数据中心产品，这意味着不再向中国提供此前获准输华的 H200"
+  ],
+  "seen_at": "2026-11-18",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261118A05V4Q00",
+  "title": "H200停售中国：25%关税安排终止，英伟达在华业务进入规则重估期",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-18",
+  "scope": "context",
+  "snippets": [
+   "2026年11月17日（美国东部时间），英伟达首席财务官科莱特·克雷斯表示，英伟达将不再在中国销售H200芯片，并结束其在一项由英伟达CEO黄仁勋与特朗普斡旋促",
+   "因此，英伟达停止在中国销售H200，不能简单理解为一次产品退市。",
+   "英伟达 在中国市场仍可能通过合规型号、服务支持和生态适配维持存在，但H200所代表的高端算力直接销售窗口已经关闭。",
+   "H200对华销售受阻，影响会沿链条传导：云服务商调整采购计划，服务器厂商重排产品配置，渠道商管理库存风险，最终客户重新评估算力建设节奏。",
+   "H200停售事件表明，中美科技竞争已不局限于单点芯片性能，而是扩展到出口管制、关税工具、供应链韧性和软件生态的复合竞争。",
+   "H200停售短期内会影响部分高端训练集群的采购预期，但也会推动行业更重视异构算力池、国产芯片适配和算网调度能力。"
+  ],
+  "seen_at": "2026-11-19",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.sina.com.cn/wm/2026-11-18/doc-inizcvvf6995723.shtml",
+  "title": "“英伟达宣布停止向中国供应”，中方回应",
+  "publisher": "新浪财经",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-18",
+  "scope": "context",
+  "snippets": [
+   "英伟达停止向中国供应H200芯片，外交部回应",
+   "法新社记者提问，英伟达的临时CEO称，将不再向中国出货H200芯片。",
+   "03 / 黄仁勋：愿回归，董事会：无意让他复职，业绩超预期，英伟达盘后涨超4%",
+   "06 / 黄仁勋公开表态：愿意重新执掌英伟达",
+   "10 / 黄仁勋卸任后首次表态：愿意回归 英伟达盘后大涨5%，财报超预期"
+  ],
+  "seen_at": "2026-11-19",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.sina.com.cn/wm/2026-11-18/doc-inizcvvf6967625.shtml",
+  "title": "英伟达临时CEO：英伟达不再向中国供应H200人工智能芯片",
+  "publisher": "新浪财经",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-18",
+  "scope": "context",
+  "snippets": [
+   "【 美国科技公司英伟达临时首席执行官科莱特·克雷斯表示，英伟达不再向中国供应专为人工智能（AI）系统设计的H200芯片。",
+   "克雷斯在接受美国消费者新闻与商业频道（CNBC）采访时指出：“我们对中国的供应量约占总出货量的10%，但这些产品主要应用于游戏、汽车和工作站领域。",
+   "03 / 黄仁勋：愿回归，董事会：无意让他复职，业绩超预期，英伟达盘后涨超4%",
+   "06 / 黄仁勋公开表态：愿意重新执掌英伟达",
+   "10 / 黄仁勋卸任后首次表态：愿意回归 英伟达盘后大涨5%，财报超预期"
+  ],
+  "seen_at": "2026-11-19",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.tweaktown.com/news/114734/after-nvidias-spy-scandal-new-us-rule-still-lets-chinese-firms-rent-gpus-to-power-algorithms/index.html",
   "title": "After NVIDIA's spy scandal, new US rule still lets Chinese firms rent GPUs to power algorithms",
   "publisher": "TweakTown",
@@ -7,6 +151,54 @@
   "published_at": "2026-11-17",
   "scope": "context",
   "snippets": [],
+  "seen_at": "2026-11-18",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1103021960_128075",
+  "title": "H200停售中国：25%关税安排终止，英伟达在华业务进入规则重估期",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-17",
+  "scope": "context",
+  "snippets": [
+   "2026年11月17日（美国东部时间），英伟达首席财务官科莱特·克雷斯表示，英伟达将不再在中国销售H200芯片，并结束其在一项由英伟达CEO黄仁勋与特朗普斡旋促",
+   "因此，英伟达停止在中国销售H200，不能简单理解为一次产品退市。",
+   "英伟达在中国市场仍可能通过合规型号、服务支持和生态适配维持存在，但H200所代表的高端算力直接销售窗口已经关闭。",
+   "H200对华销售受阻，影响会沿链条传导：云服务商调整采购计划，服务器厂商重排产品配置，渠道商管理库存风险，最终客户重新评估算力建设节奏。",
+   "H200停售事件表明，中美科技竞争已不局限于单点芯片性能，而是扩展到出口管制、关税工具、供应链韧性和软件生态的复合竞争。",
+   "H200停售短期内会影响部分高端训练集群的采购预期，但也会推动行业更重视异构算力池、国产芯片适配和算网调度能力。"
+  ],
+  "seen_at": "2026-11-18",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.eet-china.com/news/202611183845.html",
+  "title": "英伟达警告芯片买家：远程向中国提供AI算力或面临美国法律风险",
+  "publisher": "电子工程专辑",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-17",
+  "scope": "context",
+  "snippets": [
+   "11月18日消息，据CNBC援引知情人士报道，英伟达近几个月持续向芯片买家发出提醒，称中国企业通过海外云服务远程获取其人工智能芯片算力，可能使英伟达及相关客户面",
+   "因此，英伟达目前明确表示，不会向那些将超过50%的图形处理器（GPU）出租给中国企业的客户出售芯片。",
+   "此前，《金融时报》也曾报道称，英伟达已口头要求数据中心客户在未来的合同中，将至少51%的算力服务分配给非中国客户。",
+   "美国财政部长斯科特·贝森特11月15日在黄仁勋意外辞去CEO职务后，要求对英伟达进行重大改组，并建议审查公司其他高管，以确保其遵守出口管制规定。",
+   "英伟达此前在8月提交的监管文件中表示，公司致力于“严格遵守所有适用的出口管制规定”。"
+  ],
+  "seen_at": "2026-11-18",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/articles/wake-jensen-huang-scandal-nvidia-150200670.html",
+  "title": "In the Wake of Jensen Huang Scandal, Nvidia Establishes National Security and Export Control Committ",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-17",
+  "scope": "context",
+  "snippets": [
+   "In order to tighten up the company's weak points in the face of a scandal that m"
+  ],
   "seen_at": "2026-11-18",
   "found_via": "Bing 新闻"
  },
@@ -20,6 +212,37 @@
   "snippets": [
    "The Financial Times reported earlier this month that Nvidia had verbally told da",
    "5 that Chinese artificial intelligence startup Moonshot AI had sought access to "
+  ],
+  "seen_at": "2026-11-18",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-forms-export-control-board-105132905.html",
+  "title": "Nvidia Forms Export Control Board Committee After Chip Curbs",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-17",
+  "scope": "context",
+  "snippets": [
+   "Nvidia shares are down 16% since Nov."
+  ],
+  "seen_at": "2026-11-18",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.sina.com.cn/roll/2026-11-17/doc-iniyzhhm7675952.shtml",
+  "title": "【涨停直击】超100万手封单！华为算力概念股涨停",
+  "publisher": "新浪财经",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-17",
+  "scope": "context",
+  "snippets": [
+   "归母净利润亏损1413万元，同比下降106.5%。",
+   "02 / “股神”巴菲特新动作：捐赠55亿美元伯克希尔股票，四家家族基金会获赠",
+   "01 / 黄仁勋讨论重掌英伟达 硅谷盟友游说支持回归",
+   "05 / 财经早报丨证监会：进一步深化市场稳定长效机制研究，消息称黄仁勋考虑重返英伟达担任CEO丨2026年11月16日",
+   "06 / 英媒：黄仁勋考虑重返英伟达",
+   "03 / 部分银行美元存款利率突破4% 投资者还想等等看"
   ],
   "seen_at": "2026-11-18",
   "found_via": "Bing 新闻"
@@ -167,24 +390,6 @@
    "02 / 财经早报丨证监会：进一步深化市场稳定长效机制研究，消息称黄仁勋考虑重返英伟达担任CEO丨2026年11月16日",
    "03 / 黄仁勋讨论重掌英伟达 硅谷盟友游说支持回归",
    "05 / 英媒：黄仁勋考虑重返英伟达"
-  ],
-  "seen_at": "2026-11-17",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.sina.com.cn/roll/2026-11-17/doc-iniyzhhm7675952.shtml",
-  "title": "【涨停直击】超100万手封单！华为算力概念股涨停",
-  "publisher": "新浪财经",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [
-   "归母净利润亏损1413万元，同比下降106.5%。",
-   "02 / “股神”巴菲特新动作：捐赠55亿美元伯克希尔股票，四家家族基金会获赠",
-   "01 / 黄仁勋讨论重掌英伟达 硅谷盟友游说支持回归",
-   "05 / 财经早报丨证监会：进一步深化市场稳定长效机制研究，消息称黄仁勋考虑重返英伟达担任CEO丨2026年11月16日",
-   "06 / 英媒：黄仁勋考虑重返英伟达",
-   "03 / 部分银行美元存款利率突破4% 投资者还想等等看"
   ],
   "seen_at": "2026-11-17",
   "found_via": "Bing 新闻"
@@ -400,169 +605,6 @@
   "scope": "context",
   "snippets": [
    "机器人ETF鹏华(159278)紧密跟踪国证机器人产业指数，国证机器人产业指数反映沪深北交易所机器人产业相关上市公司的证券价格变化情况。"
-  ],
-  "seen_at": "2026-11-14",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://news.qq.com/rain/a/20261113A0058D00",
-  "title": "栽在女人手中的黄仁勋离开英伟达，对人工智能和中国AI影响多大？",
-  "publisher": "腾讯新闻",
-  "source_type": "公众号",
-  "published_at": "2026-11-13",
-  "scope": "context",
-  "snippets": [
-   "11月12日，全球人工智能芯片霸主英伟达突然宣布，创始人黄仁勋辞去公司总裁、首席执行官及董事职务，即刻生效。",
-   "这意味着，执掌英伟达33年的黄仁勋，正式离开了自己一手打造的商业帝国。",
-   "11月8日，英伟达董事会宣布启动独立调查，重点审查黄仁勋是否成为外国情报活动的目标。",
-   "过去33年，黄仁勋最大的贡献，不只是把英伟达从一家游戏显卡公司发展成全球AI芯片霸主，更重要的是，他将芯片制造商、云计算企业、数据中心运营商、AI实验室以及上下",
-   "路透社11月12日报道，中国AI企业已经开始寻找海外数据中心的英伟达算力租赁资源，担心此次风波促使美国进一步收紧对先进芯片的限制，包括通过境外数据中心远程使用芯"
-  ],
-  "seen_at": "2026-11-13",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/articles/forget-nvidia-curbs-china-remote-152845707.html",
-  "title": "Forget Nvidia: Curbs on China’s Remote Chip Access Are a “Nightmare Scenario” for Oracle",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-13",
-  "scope": "context",
-  "snippets": [
-   "4, the Financial Times reported that Oracle had cancelled a five-year deal worth",
-   "The Tencent deal comes to about $1.4 billion a year, and the whole deal was abou",
-   "The consensus available after the Tencent cancellation still projects Oracle's r",
-   "That matters because Oracle's free cash flow went from $11.8 billion in fiscal 2",
-   "Total debt, leases included, rose from $75.9 billion in fiscal 2022 to $167 bill",
-   "Bloomberg also reported that Microsoft is winding down a 2023 deal to rent older"
-  ],
-  "seen_at": "2026-11-14",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-tanks-altman-joins-dario-200730448.html",
-  "title": "Nvidia Tanks as Altman Joins Dario in AI Chip Export Ban",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-13",
-  "scope": "context",
-  "snippets": [
-   "With Huang gone and Colette Kress in as interim CEO, the future of Nvidia, which"
-  ],
-  "seen_at": "2026-11-14",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.techpowerup.com/354686/nvidia-geforce-rtx-5080-24-gb-reportedly-cancelled-16-gb-model-remains?cp=2",
-  "title": "NVIDIA GeForce RTX 5080 24 GB Reportedly Cancelled, 16 GB Model Remains",
-  "publisher": "TechPowerUp",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-12",
-  "scope": "context",
-  "snippets": [
-   "Nov 13th 2026 NVIDIA Allegedly Engineered Scarcity By Funding AI Startups To Buy",
-   "Nov 3rd 2026 NVIDIA GeForce RTX 50-Series Scheduled for up to $500 Price Hike Th",
-   "Mar 30th 2026 NVIDIA Readies Rubin-based GeForce RTX 60-series with Massive RT P",
-   "Jan 16th 2026 NVIDIA Reportedly Ends GeForce RTX 5070 Ti Production, RTX 5060 Ti",
-   "Jul 10th 2026 NVIDIA Readies GeForce RTX 5090 SE Graphics Card (180)",
-   "Oct 10th 2026 NVIDIA Reportedly Ending the RTX 5090, Reserves GB202 Silicon for "
-  ],
-  "seen_at": "2026-11-15",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1100664032_121010226",
-  "title": "杭州园林子公司拟跨界采购3万片GPU，下游订单暂未锁定，上市公司三 ...",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-12",
-  "scope": "5500",
-  "snippets": [
-   "证券代码：300649）发布公告称，公司控股子公司杭微天算（上海）智能科技有限公司近日分别与云尖信息技术股份有限公司、上海华鲲振宇智能科技有限责任公司签署《销售",
-   "公告显示，杭微天算与云尖信息签署的合同约定采购2万片NVIDIA RTX PRO 5500 BLACKWELL及配件产品，与华鲲振宇签署的合同则约定采购1万片同",
-   "根据公告，云尖信息成立于2020年8月，注册资本36,909.3792万元，注册地位于杭州市萧山区，经营范围涵盖软件开发、信息系统集成服务及云计算设备、信息安全",
-   "华鲲振宇成立于2023年10月，注册资本1000万元，注册地位于上海市青浦区。",
-   "业绩方面，杭州园林2026年三季报显示，今年前三季度公司实现营业总收入9180.82万元，同比下降4.24%；",
-   "归属于上市公司股东的净利润为-3395.98万元，上年同期为703.93万元，同比由盈转亏；"
-  ],
-  "seen_at": "2026-11-14",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.cnbc.com/2026/11/12/nvidia-trump-jensen-chip-export-controls-china-xi-.html",
-  "title": "Jensen Huang's affair with alleged spy revives push to tighten China chip curbs ahead of Trump-Xi su",
-  "publisher": "CNBC",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-12",
-  "scope": "context",
-  "snippets": [
-   "Alice Huang helped facilitate at least $7.5 billion in Nvidia chip shipments to ",
-   "Short seller firm Culper Research estimated in May that more than 20% of Nvidia'"
-  ],
-  "seen_at": "2026-11-14",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/export-controls-were-supposed-keep-164038826.html",
-  "title": "Export Controls Were Supposed to Keep AI Chips Out of China. The Rental Loophole Shows Why They Have",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-12",
-  "scope": "context",
-  "snippets": [
-   "Shares traded at $160.56 Thursday morning, down 7.6% on the day and 29.1% over t",
-   "In its Q2 fiscal 2027 earnings release, Nvidia guided third-quarter revenue to $",
-   "On the August 26 call, CFO Colette Kress said Hopper shipments to China-based cu"
-  ],
-  "seen_at": "2026-11-13",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/chinas-pla-linked-university-reportedly-193012031.html",
-  "title": "China's PLA-Linked University Reportedly Bought Nvidia's Powerful H200 AI Chips Despite US Export Bl",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-12",
-  "scope": "context",
-  "snippets": [
-   "Last month, Northwestern Polytechnical University, part of China's elite \"Seven ",
-   "The Northwestern Polytechnical University obtained access to H200 chips and othe",
-   "Nvidia's H200 ranks among its most powerful processors for developing and operat",
-   "The university also leased computing capacity powered by eight Nvidia A100 chips",
-   "Shares of Nvidia closed 5.47% lower at $168.89 on Tuesday;",
-   "For accredited investors looking beyond stocks and bonds, EquityMultiple provide"
-  ],
-  "seen_at": "2026-11-15",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/markets/stocks/articles/china-hawk-export-controls-cost-154411878.html",
-  "title": "China Hawk: Export Controls Have Cost Nvidia “Exactly Zero Sales.” Congress Wants That to Change",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-12",
-  "scope": "context",
-  "snippets": [
-   "NVIDIA's real exposure is Southeast Asia, where McGuire says $80 billion of AI c",
-   "With its chips sold out and its stock at 14x forward earnings, NVIDIA looks less",
-   "TIKR tracks 62 analysts on Nvidia.",
-   "Customers based in China, including Hong Kong, brought NVIDIA $19.7 billion of r",
-   "NVIDIA also took a $4.5 billion charge on the H20, the chip it designed for Chin",
-   "McGuire said trade data show $80 billion of AI chips went to Singapore, Thailand"
-  ],
-  "seen_at": "2026-11-15",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://news.qq.com/rain/a/20261111A039SI00",
-  "title": "英伟达外部律所调查背后：AI芯片交付信任与出口合规的治理大考",
-  "publisher": "腾讯新闻",
-  "source_type": "公众号",
-  "published_at": "2026-11-11",
-  "scope": "context",
-  "snippets": [
-   "2026年11月10日（美国东部时间），Techmeme归档页面收录《纽约时报》相关报道称，英伟达已聘请美国律所Wachtell, Lipton, Rosen ",
-   "2026年11月10日披露的这场外部律所调查，是英伟达在AI芯片超级周期中的一次治理压力测试。"
   ],
   "seen_at": "2026-11-14",
   "found_via": "Bing 新闻"
