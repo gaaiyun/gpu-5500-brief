@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-19T07:06:41+08:00",
+  "updated_at": "2026-11-19T07:10:17+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -36,8 +36,7 @@
       "watch": "昇腾950交付排期与5500渠道询价是否同步上调",
       "corroboration": [],
       "claims": [],
-      "checked_at": "2026-11-19",
-      "ci_checked": "2026-11-19"
+      "checked_at": "2026-11-19"
     },
     {
       "id": "nvidia-20261117-q3fy27-results",
@@ -856,6 +855,7 @@
       "云端条目未通过复核 https://www.rfi.fr/cn/%E6%94%BF%E6%B2%BB/20261118-%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%A7%B0%E5%B7%B2%E5%81%9C%E6%AD%A2%E5%90%91%E4%B8%AD%E5%9B%BD%E4%BE%9B%E5%BA%94hopper%E9%AB%98%E7%AB%AF%E8%8A%AF%E7%89%87：原文没有这些数字",
       "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
       "DIGITIMES RSS 失败：not well-formed (invalid token): line 713, column 79",
+      "重复报道 reuters：https://news.qq.com/rain/a/20261021A07X2300",
       "无关：https://videocardz.com/newz/nvidia-rtx-pro-5500-blackwell-84gb-launches-in-japan"
     ]
   }
