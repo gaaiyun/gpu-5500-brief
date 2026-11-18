@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-19T01:58:42+08:00",
+  "updated_at": "2026-11-19T07:06:41+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -22,6 +22,23 @@
     "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
   ],
   "items": [
+    {
+      "id": "leiphone-20261118-buyers-hesitate",
+      "title": "雷峰网：黄仁勋归期未决，B300现货价与昇腾950排期成买家顾虑",
+      "published_at": "2026-11-18",
+      "publisher": "雷峰网",
+      "source_type": "行业媒体",
+      "scope": "context",
+      "url": "https://www.leiphone.com/category/chips/WHSLCH74nrSJW6OE.html",
+      "grade": "B",
+      "summary": "雷峰网采访算力服务从业者：一位受访者称，华为昇腾950据其了解当前订单排期已经排满，交付周期同样存在不确定性。另一位受访者Jason透露，在黄仁勋风波前，国内单台B300现货价已攀升至2200万元左右；其团队计划从海外采购数十台B300，最终供应方只交付了两台。",
+      "impact": "推断：B300难买、昇腾950排期满，部分买家可能转向5500，推高大陆询价；受访者均为个人说法，样本小。",
+      "watch": "昇腾950交付排期与5500渠道询价是否同步上调",
+      "corroboration": [],
+      "claims": [],
+      "checked_at": "2026-11-19",
+      "ci_checked": "2026-11-19"
+    },
     {
       "id": "nvidia-20261117-q3fy27-results",
       "title": "英伟达财报：Q4指引不含中国数据中心算力收入，首份克雷斯任内财报",
@@ -408,30 +425,19 @@
       "claims": [],
       "checked_at": "2026-11-04",
       "found_via": "人工检索"
-    },
-    {
-      "id": "youzu-20261103-gpu-contract",
-      "title": "游族网络公告：子公司签42.25亿元PRO5500(PCIe)采购合同",
-      "published_at": "2026-11-03",
-      "publisher": "游族网络公告（同花顺转载）",
-      "source_type": "公告",
-      "scope": "5500",
-      "url": "https://stock.10jqka.com.cn/20261103/c681420041.shtml",
-      "grade": "A",
-      "summary": "游族网络公告：子公司上海游族信息技术有限公司与A公司签销售合同，采购型号为PRO5500(PCIe)的GPU产品，协议总金额42.25亿元（含税）。合同约定分批交付，订单价格可能因原厂或上级供应商调整而变动；交易对手信息豁免披露。公司提示交付延期等风险，供方不承担违约责任。",
-      "impact": "这是上市公司对5500的大额采购公告，说明有渠道方愿按合同承接分批交付；价格条款允许随原厂调整，渠道报价存在上浮空间。单价未披露，这是推断。",
-      "watch": "核实A公司身份、首批交付时间",
-      "corroboration": [
-        "https://www.sohu.com/a/1096708872_313745",
-        "https://internet.cnmo.com/finance/821780.html",
-        "https://m.21jingji.com/article/20261104/herald/25256aac208d0713a5a643a833f929ca.html"
-      ],
-      "claims": [],
-      "checked_at": "2026-11-05",
-      "found_via": "云端检索"
     }
   ],
   "leads": [
+    {
+      "title": "法广：英伟达称已停止向中国供应Hopper高端芯片，Q3对华销售24亿美元",
+      "publisher": "法广（RFI）",
+      "source_type": "主流媒体",
+      "url": "https://www.rfi.fr/cn/%E6%94%BF%E6%B2%BB/20261118-%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%A7%B0%E5%B7%B2%E5%81%9C%E6%AD%A2%E5%90%91%E4%B8%AD%E5%9B%BD%E4%BE%9B%E5%BA%94hopper%E9%AB%98%E7%AB%AF%E8%8A%AF%E7%89%87",
+      "published_at": "2026-11-18",
+      "found_via": "云端条目未通过复核",
+      "snippet": "法广报道，黄仁勋上周辞职后接任代理首席执行官的克雷斯在财报电话会议上表示，第三季度英伟达向中国销售了价值24亿美元的、获得出口许可的Hopper产品，并称已停止向中国供应此类芯片。报道提到今年1月美国调整了H200出口许可政策，改为个案审批。",
+      "seen_at": "2026-11-19"
+    },
     {
       "title": "RTX PRO 6000 / 6000D / 5500 到底怎么选?",
       "publisher": "IT满江红DYH",
@@ -451,6 +457,16 @@
       "found_via": "搜狗微信",
       "snippet": "上述价格与供货信息均为市场预期,实际情况以官方发布为准.九、结语:从工作站外设到企业算力基础设施RTX PRO 5500 Blackwell...",
       "seen_at": "2026-11-18"
+    },
+    {
+      "title": "路透独家调查：中国仍有超过30亿美元的项目与英伟达技术相关",
+      "publisher": "法广",
+      "source_type": "主流媒体",
+      "url": "https://www.rfi.fr/cn/%E6%94%BF%E6%B2%BB/20261118-%E8%B7%AF%E9%80%8F%E7%8B%AC%E5%AE%B6%E8%B0%83%E6%9F%A5-%E4%B8%AD%E5%9B%BD%E4%BB%8D%E6%9C%89%E8%B6%85%E8%BF%8730%E4%BA%BF%E7%BE%8E%E5%85%83%E7%9A%84%E9%A1%B9%E7%9B%AE%E4%B8%8E%E8%8B%B1%E4%BC%9F%E8%BE%BE%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3",
+      "published_at": "2026-11-18",
+      "found_via": "reading_room",
+      "snippet": "路透社审查了150多份招标公告、投资规划文件、建设合同，已披露总价值超过230亿元人民币；项目多围绕H100、H200和H800。",
+      "seen_at": "2026-11-19"
     },
     {
       "title": "$英伟达(NVDA.US)英伟达：AI 抛售说不通市场正在抛售 AI 股票，但据报道，英伟达收到了来自字节跳动、阿里巴巴和腾讯的 RTX PRO 5500 订单",
@@ -711,26 +727,6 @@
       "found_via": "搜狗微信",
       "snippet": "RTX PRO 5500 是少数仍能大规模出货的高性能 NVIDIA GPU 之一... 价格波动本身也会随产能释放而收敛,把渠道报价当作长期趋势并...",
       "seen_at": "2026-11-07"
-    },
-    {
-      "title": "50系突然疯涨，买不起显卡，年轻人又挤进网吧包夜了",
-      "publisher": "钛媒体",
-      "source_type": "行业媒体",
-      "url": "https://www.tmtpost.com/8196665.html",
-      "published_at": "2026-11-07",
-      "found_via": "reading_room",
-      "snippet": "七彩虹宣布执行新一轮工厂价格调整，RTX 5090 DV2单卡涨价区间2200元至3300元。",
-      "seen_at": "2026-11-12"
-    },
-    {
-      "title": "【资讯】PNY RTX PRO 5500零售标价17999美元 高于RTX PRO 6000",
-      "publisher": "手游巴士",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E3%80%90%E8%B5%84%E8%AE%AF%E3%80%91PNY%20RTX%20PRO%205500%E9%9B%B6%E5%94%AE%E6%A0%87%E4%BB%B717999%E7%BE%8E%E5%85%83%20%E9%AB%98%E4%BA%8ERTX%20PRO%206000",
-      "published_at": "2026-11-06",
-      "found_via": "搜狗微信",
-      "snippet": "NVIDIA RTX PRO 5500 Blackwell专业工作站显卡在美国零售商SHI Government Solutions标价17999美元(约12.09万元人民币),折...",
-      "seen_at": "2026-11-18"
     }
   ],
   "mentions": [
@@ -839,23 +835,28 @@
     "2026-11-18": {
       "media": 5,
       "wechat": 2
+    },
+    "2026-11-19": {
+      "media": 3,
+      "wechat": 0
     }
   },
   "take": {
-    "date": "2026-11-18",
-    "text": "英伟达财报已出，下一季度指引不含中国数据中心算力收入，5500的口径没有新增。72小时内仍无新的大陆报价、批文或交付消息，样卡12月、商业交付2027年一季度不变。下一步看电话会纪要里有无5500供货表述。"
+    "date": "2026-11-19",
+    "text": "英伟达称已停止向中国供应Hopper芯片，H200这条合规通道关闭，5500的大陆询价压力可能更大。72小时内仍无5500新报价或批文，样卡12月、商业交付2027年一季度不变。"
   },
   "sweep": {
     "date": "2026-11-19",
-    "candidates": 1,
-    "read": 1,
+    "candidates": 2,
+    "read": 2,
     "added": [],
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
+      "云端条目未通过复核 https://www.rfi.fr/cn/%E6%94%BF%E6%B2%BB/20261118-%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%A7%B0%E5%B7%B2%E5%81%9C%E6%AD%A2%E5%90%91%E4%B8%AD%E5%9B%BD%E4%BE%9B%E5%BA%94hopper%E9%AB%98%E7%AB%AF%E8%8A%AF%E7%89%87：原文没有这些数字",
       "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
       "DIGITIMES RSS 失败：not well-formed (invalid token): line 713, column 79",
-      "无关：https://www.leiphone.com/category/chips/WHSLCH74nrSJW6OE.html"
+      "无关：https://videocardz.com/newz/nvidia-rtx-pro-5500-blackwell-84gb-launches-in-japan"
     ]
   }
 }

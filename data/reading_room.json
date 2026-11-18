@@ -1,5 +1,38 @@
 [
  {
+  "url": "https://videocardz.com/newz/nvidia-rtx-pro-5500-blackwell-84gb-launches-in-japan",
+  "title": "NVIDIA RTX PRO 5500 Blackwell 84GB launches in Japan",
+  "publisher": "VideoCardz",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-19",
+  "scope": "5500",
+  "snippets": [
+   "NVIDIA RTX PRO 5500 Blackwell launches in Japan as US listings top $20,000",
+   "Ryosan Ryoyo has launched the NVIDIA RTX PRO 5500 Blackwell Workstation Edition ",
+   "The authorized NVIDIA distributor confirmed on November 18 that it had started o",
+   "The RTX PRO 5500 Blackwell has 21,760 CUDA cores and 84GB of GDDR7 memory with E",
+   "We previously covered the $17,999 MSRP shown by SHI Government Solutions for the",
+   "That listing shows a price of $17,408.63 and asks buyers to verify stock."
+  ],
+  "seen_at": "2026-11-19",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1103284119_163726",
+  "title": "英伟达停止向中国供应H200芯片 外交部回应",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-18",
+  "scope": "context",
+  "snippets": [
+   "法新社记者提问，英伟达的临时CEO称，将不再向中国出货H200芯片。",
+   "当地时间11月17日，英伟达临时首席执行官科莱特·克雷斯在财报电话会上确认，英伟达将停止向中国销售H200 AI芯片。",
+   "而就在英伟达作出上述表态的前一天，美国商务部于11月16日发布新规，限制受管制客户通过远程服务使用部署在海外数据中心的先进芯片。"
+  ],
+  "seen_at": "2026-11-19",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.sohu.com/a/1103226665_118778",
   "title": "英伟达全面停供H200芯片：全球断供落地，中国AI算力自给率加速跃升",
   "publisher": "搜狐号",
@@ -79,6 +112,17 @@
   "found_via": "雷峰网"
  },
  {
+  "url": "https://www.cnbc.com/2026/11/18/nvidia-chips-china-military-ai.html",
+  "title": "China’s military seeks Nvidia’s advanced chips for AI capabilities, commission says",
+  "publisher": "CNBC",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-18",
+  "scope": "context",
+  "snippets": [],
+  "seen_at": "2026-11-19",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://news.qq.com/rain/a/20261118A0BJR500",
   "title": "英伟达将不再向中国提供H200芯片？外交部回应",
   "publisher": "腾讯新闻",
@@ -88,7 +132,21 @@
   "snippets": [
    "有记者提问：英伟达的临时首席执行官昨天向股东表示，公司已不再向中国供应获准出口的 Hopper架构 数据中心产品，这意味着不再向中国提供此前获准输华的 H200"
   ],
-  "seen_at": "2026-11-18",
+  "seen_at": "2026-11-19",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261118A0AO0G00",
+  "title": "英伟达临时CEO：不再向中国供应H200芯片",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-18",
+  "scope": "context",
+  "snippets": [
+   "美国科技公司英伟达临时首席执行官科莱特·克雷斯表示， 英伟达不再向中国供应用于人工智能（AI）系统的 H200芯片 。",
+   "克雷斯在接受 CNBC 电视台采访时指出：“我们对中国的供应量约占总出货量的10%，但这些产品主要应用于游戏、汽车和工作站领域。"
+  ],
+  "seen_at": "2026-11-19",
   "found_via": "Bing 新闻"
  },
  {
@@ -139,6 +197,24 @@
    "03 / 黄仁勋：愿回归，董事会：无意让他复职，业绩超预期，英伟达盘后涨超4%",
    "06 / 黄仁勋公开表态：愿意重新执掌英伟达",
    "10 / 黄仁勋卸任后首次表态：愿意回归 英伟达盘后大涨5%，财报超预期"
+  ],
+  "seen_at": "2026-11-19",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.sina.com.cn/jjxw/2026-11-18/doc-inizeacc6880879.shtml",
+  "title": "“英伟达称停止向中国供应”，中方回应",
+  "publisher": "新浪财经",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-18",
+  "scope": "context",
+  "snippets": [
+   "法新社记者提问，英伟达的临时CEO称，将不再向中国供应H200芯片。",
+   "当地时间11月17日， 美国英伟达公司 公布2027财年第三季度业绩，营收首次突破千亿美元大关，达到1158亿美元，同比增长103%；",
+   "净利润也同比大增105%至653亿美元，双双超出华尔街预期。",
+   "另外，自2026年10月6日的历史最高收盘价算起，截至11月17日，英伟达股价已经累计下跌约35%，市值蒸发约2万亿美元。",
+   "03 / 黄仁勋：愿回归，董事会：无意让他复职，业绩超预期，英伟达盘后涨超4%",
+   "06 / 黄仁勋公开表态：愿意重新执掌英伟达"
   ],
   "seen_at": "2026-11-19",
   "found_via": "Bing 新闻"
@@ -538,75 +614,6 @@
    "该ETF紧密跟踪国证机器人产业指数(980022)，反映了沪深北交易所相关上市公司的证券价格变化情况。"
   ],
   "seen_at": "2026-11-16",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1100937546_114984",
-  "title": "华为云具身世界模型发布在即，机器人板块迎催化，机器人ETF易方达 ...",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-13",
-  "scope": "context",
-  "snippets": [],
-  "seen_at": "2026-11-16",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.rfi.fr/cn/%E7%A7%91%E6%8A%80%E4%B8%8E%E6%96%87%E5%8C%96/20261113-%E9%BB%84%E4%B9%90%E5%88%9B%E5%8A%9E%E5%85%AC%E5%8F%B8%E6%9B%BE%E8%8E%B7%E5%A4%9A%E6%AC%BE%E5%AF%B9%E5%8D%8E%E7%A6%81%E5%94%AE%E8%8B%B1%E4%BC%9F%E8%BE%BE%E8%8A%AF%E7%89%87-%E5%85%B3%E8%81%94%E4%BC%81%E4%B8%9A%E6%8D%AE%E6%8A%A5%E6%8A%95%E8%B5%84deepseek",
-  "title": "黄乐创办公司曾获多款对华禁售英伟达芯片 关联企业据报投资DeepSeek",
-  "publisher": "法广",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-13",
-  "scope": "context",
-  "snippets": [
-   "具体而言，Aperia曾从戴尔购入22台搭载英伟达H800芯片的服务器；",
-   "这些设备搭载了英伟达的H100或H200芯片。",
-   "另一家名为上海硕曜的公司——可视为Megaspeed在中国的“镜像”企业——曾发布招聘信息，寻求工程师从事“H100、H200及其他GPU型号”（即被禁运的英伟",
-   "《信息报》报导称，与黄乐有关联的实体参与了DeepSeek于10月份完成的158亿美元融资。"
-  ],
-  "seen_at": "2026-11-16",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.digitimes.com/news/a20261113VL220/data-nvidia-gpu-ai-chip-investigation.html",
-  "title": "Malaysia probes possible Nvidia GPU re-exports to China, targets Megaspeed links with tighter data c",
-  "publisher": "DIGITIMES",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-13",
-  "scope": "context",
-  "snippets": [
-   "Nvidia unveils OOI CPO prototype for post-2028 AI needs"
-  ],
-  "seen_at": "2026-11-14",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://news.qq.com/rain/a/20261114A07I7600",
-  "title": "英伟达换帅，4大变数",
-  "publisher": "腾讯新闻",
-  "source_type": "公众号",
-  "published_at": "2026-11-13",
-  "scope": "context",
-  "snippets": [
-   "英伟达 换帅后首场法说会也将在17日举行，台厂将紧盯 CoWoS 产能预订、新品量产时程与 AI融资政策 ，判断接下来的订单是照走、延后，还是转向其他平台。",
-   "永丰投顾总经理黄柏棠表示，英伟达代理执行长克瑞斯主持的法说会有四大重点，一是本季营收预期约1,080亿美元、明年营收成长预估约7成以及云端积压订单约2兆美元，能",
-   "市场目前仍预期英伟达2027、2028会计年度营收分别为4,126亿美元及6,995亿美元，年增91％及约7成。",
-   "英伟达未来2～3年的产品路线已排定，眼前考验是新团队能否按计划交付。"
-  ],
-  "seen_at": "2026-11-14",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://news.qq.com/rain/a/20261113A08AKK00",
-  "title": "机器人ETF鹏华盘中净申购2800万份，华为将发布首款昇腾原生具身世界 ...",
-  "publisher": "腾讯新闻",
-  "source_type": "公众号",
-  "published_at": "2026-11-13",
-  "scope": "context",
-  "snippets": [
-   "机器人ETF鹏华(159278)紧密跟踪国证机器人产业指数，国证机器人产业指数反映沪深北交易所机器人产业相关上市公司的证券价格变化情况。"
-  ],
-  "seen_at": "2026-11-14",
   "found_via": "Bing 新闻"
  }
 ]
