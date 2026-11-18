@@ -11,6 +11,54 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://www.sohu.com/a/1103021960_128075",
+  "title": "H200停售中国：25%关税安排终止，英伟达在华业务进入规则重估期",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-17",
+  "scope": "context",
+  "snippets": [
+   "2026年11月17日（美国东部时间），英伟达首席财务官科莱特·克雷斯表示，英伟达将不再在中国销售H200芯片，并结束其在一项由英伟达CEO黄仁勋与特朗普斡旋促",
+   "因此，英伟达停止在中国销售H200，不能简单理解为一次产品退市。",
+   "英伟达在中国市场仍可能通过合规型号、服务支持和生态适配维持存在，但H200所代表的高端算力直接销售窗口已经关闭。",
+   "H200对华销售受阻，影响会沿链条传导：云服务商调整采购计划，服务器厂商重排产品配置，渠道商管理库存风险，最终客户重新评估算力建设节奏。",
+   "H200停售事件表明，中美科技竞争已不局限于单点芯片性能，而是扩展到出口管制、关税工具、供应链韧性和软件生态的复合竞争。",
+   "H200停售短期内会影响部分高端训练集群的采购预期，但也会推动行业更重视异构算力池、国产芯片适配和算网调度能力。"
+  ],
+  "seen_at": "2026-11-18",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.eet-china.com/news/202611183845.html",
+  "title": "英伟达警告芯片买家：远程向中国提供AI算力或面临美国法律风险",
+  "publisher": "电子工程专辑",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-17",
+  "scope": "context",
+  "snippets": [
+   "11月18日消息，据CNBC援引知情人士报道，英伟达近几个月持续向芯片买家发出提醒，称中国企业通过海外云服务远程获取其人工智能芯片算力，可能使英伟达及相关客户面",
+   "因此，英伟达目前明确表示，不会向那些将超过50%的图形处理器（GPU）出租给中国企业的客户出售芯片。",
+   "此前，《金融时报》也曾报道称，英伟达已口头要求数据中心客户在未来的合同中，将至少51%的算力服务分配给非中国客户。",
+   "美国财政部长斯科特·贝森特11月15日在黄仁勋意外辞去CEO职务后，要求对英伟达进行重大改组，并建议审查公司其他高管，以确保其遵守出口管制规定。",
+   "英伟达此前在8月提交的监管文件中表示，公司致力于“严格遵守所有适用的出口管制规定”。"
+  ],
+  "seen_at": "2026-11-18",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/articles/wake-jensen-huang-scandal-nvidia-150200670.html",
+  "title": "In the Wake of Jensen Huang Scandal, Nvidia Establishes National Security and Export Control Committ",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-17",
+  "scope": "context",
+  "snippets": [
+   "In order to tighten up the company's weak points in the face of a scandal that m"
+  ],
+  "seen_at": "2026-11-18",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-halt-chip-sales-data-081754255.html",
   "title": "Nvidia to halt chip sales to data centers renting over half to China - report",
   "publisher": "雅虎财经",
@@ -564,20 +612,6 @@
    "McGuire said trade data show $80 billion of AI chips went to Singapore, Thailand"
   ],
   "seen_at": "2026-11-15",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://news.qq.com/rain/a/20261111A039SI00",
-  "title": "英伟达外部律所调查背后：AI芯片交付信任与出口合规的治理大考",
-  "publisher": "腾讯新闻",
-  "source_type": "公众号",
-  "published_at": "2026-11-11",
-  "scope": "context",
-  "snippets": [
-   "2026年11月10日（美国东部时间），Techmeme归档页面收录《纽约时报》相关报道称，英伟达已聘请美国律所Wachtell, Lipton, Rosen ",
-   "2026年11月10日披露的这场外部律所调查，是英伟达在AI芯片超级周期中的一次治理压力测试。"
-  ],
-  "seen_at": "2026-11-14",
   "found_via": "Bing 新闻"
  }
 ]
