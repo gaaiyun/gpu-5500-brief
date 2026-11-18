@@ -1,24 +1,60 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-19T01:58:42+08:00",
-  "agent": "actions-sweep+cloud-routine",
+  "updated_at": "2026-11-19T07:10:00+08:00",
+  "agent": "cloud-routine",
   "searched": [
-    "RTX PRO 5500 China price shipment allocation",
-    "RTX PRO 5500 报价 到货 现货 渠道",
-    "英伟达 财报 中国 RTX PRO 5500 交付 Kress",
-    "Nvidia earnings November 2026 China Blackwell workstation supply GDDR7",
-    "丽台 PNY 浪潮 新华三 联想 RTX PRO 5500 服务器 样卡",
-    "昇腾 寒武纪 价格 供应 算力租赁 涨价 11月",
-    "RTX PRO 6000 国内 价格 变化 RTX 5090 价格",
-    "BIS export controls China AI chips rule November 17 2026",
-    "Nvidia Q3 fiscal 2027 results China RTX Pro Kress call guidance",
-    "英伟达财报 11月18日 中国 工作站 Blackwell 克雷斯 电话会",
-    "Nvidia earnings CNBC China sales Jensen Huang not reinstated board",
-    "TSMC Rubin capacity allocation RTX PRO GDDR7 price November 2026",
-    "天阳科技 游族网络 RTX PRO 5500 采购 公告 回复 问询",
-    "RTX Pro 5500 Reuters Bloomberg The Information China approval MIIT"
+    "RTX PRO 5500 China shipment allocation",
+    "RTX PRO 5500 大陆 报价 现货 到货",
+    "英伟达 财报电话会 克雷斯 RTX PRO 中国 工作站",
+    "Nvidia Kress H200 China halt RTX Pro workstation China supply",
+    "华为昇腾950 订单 排期 价格",
+    "RTX 5090 价格 华强北 11月",
+    "GDDR7 price shortage November 2026",
+    "BIS export controls Nvidia China remote access rule November 2026",
+    "Reuters investigation China $3 billion data centers Nvidia chips",
+    "Kress CNBC China supply 10% RTX Pro",
+    "黄仁勋归期悬而未决 雷峰网 RTX PRO 5500",
+    "RTX PRO 5500 丽台 PNY 浪潮 联想 新华三 交付",
+    "RTX PRO 5500 采购 公告 算力租赁 合同",
+    "Nvidia Rubin TSMC capacity RTX Pro 5500 2027",
+    "寒武纪 思元 价格 供应 涨价",
+    "RTX PRO 6000 国内 价格 报价 11月"
   ],
   "items": [
+    {
+      "id": "rfi-20261118-hopper-halt",
+      "title": "法广：英伟达称已停止向中国供应Hopper高端芯片，Q3对华销售24亿美元",
+      "published_at": "2026-11-18",
+      "publisher": "法广（RFI）",
+      "source_type": "主流媒体",
+      "scope": "context",
+      "url": "https://www.rfi.fr/cn/%E6%94%BF%E6%B2%BB/20261118-%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%A7%B0%E5%B7%B2%E5%81%9C%E6%AD%A2%E5%90%91%E4%B8%AD%E5%9B%BD%E4%BE%9B%E5%BA%94hopper%E9%AB%98%E7%AB%AF%E8%8A%AF%E7%89%87",
+      "grade": "B",
+      "summary": "法广报道，黄仁勋上周辞职后接任代理首席执行官的克雷斯在财报电话会议上表示，第三季度英伟达向中国销售了价值24亿美元的、获得出口许可的Hopper产品，并称已停止向中国供应此类芯片。报道提到今年1月美国调整了H200出口许可政策，改为个案审批。",
+      "impact": "推断：H200这条对华合规通道关闭，买家可选的合规高端卡进一步收窄，5500的需求压力和渠道询价可能上升；5500本身不在该口径内。",
+      "watch": "电话会纪要是否提及5500或工作站卡对华供货",
+      "corroboration": [
+        "https://finance.sina.com.cn/wm/2026-11-18/doc-inizcvvf6967625.shtml"
+      ],
+      "claims": [],
+      "checked_at": "2026-11-19"
+    },
+    {
+      "id": "leiphone-20261118-buyers-hesitate",
+      "title": "雷峰网：黄仁勋归期未决，B300现货价与昇腾950排期成买家顾虑",
+      "published_at": "2026-11-18",
+      "publisher": "雷峰网",
+      "source_type": "行业媒体",
+      "scope": "context",
+      "url": "https://www.leiphone.com/category/chips/WHSLCH74nrSJW6OE.html",
+      "grade": "B",
+      "summary": "雷峰网采访算力服务从业者：一位受访者称，华为昇腾950据其了解当前订单排期已经排满，交付周期同样存在不确定性。另一位受访者Jason透露，在黄仁勋风波前，国内单台B300现货价已攀升至2200万元左右；其团队计划从海外采购数十台B300，最终供应方只交付了两台。",
+      "impact": "推断：B300难买、昇腾950排期满，部分买家可能转向5500，推高大陆询价；受访者均为个人说法，样本小。",
+      "watch": "昇腾950交付排期与5500渠道询价是否同步上调",
+      "corroboration": [],
+      "claims": [],
+      "checked_at": "2026-11-19"
+    },
     {
       "id": "nvidia-20261117-q3fy27-results",
       "title": "英伟达财报：Q4指引不含中国数据中心算力收入，首份克雷斯任内财报",
@@ -430,6 +466,15 @@
   ],
   "leads": [
     {
+      "title": "路透独家调查：中国仍有超过30亿美元的项目与英伟达技术相关",
+      "publisher": "法广",
+      "source_type": "主流媒体",
+      "url": "https://www.rfi.fr/cn/%E6%94%BF%E6%B2%BB/20261118-%E8%B7%AF%E9%80%8F%E7%8B%AC%E5%AE%B6%E8%B0%83%E6%9F%A5-%E4%B8%AD%E5%9B%BD%E4%BB%8D%E6%9C%89%E8%B6%85%E8%BF%8730%E4%BA%BF%E7%BE%8E%E5%85%83%E7%9A%84%E9%A1%B9%E7%9B%AE%E4%B8%8E%E8%8B%B1%E4%BC%9F%E8%BE%BE%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3",
+      "published_at": "2026-11-18",
+      "found_via": "reading_room",
+      "snippet": "路透社审查了150多份招标公告、投资规划文件、建设合同，已披露总价值超过230亿元人民币；项目多围绕H100、H200和H800。"
+    },
+    {
       "title": "RTX PRO 6000 / 6000D / 5500 到底怎么选?",
       "publisher": "IT满江红DYH",
       "source_type": "公众号",
@@ -718,16 +763,6 @@
       "found_via": "reading_room",
       "snippet": "七彩虹宣布执行新一轮工厂价格调整，RTX 5090 DV2单卡涨价区间2200元至3300元。",
       "seen_at": "2026-11-12"
-    },
-    {
-      "title": "【资讯】PNY RTX PRO 5500零售标价17999美元 高于RTX PRO 6000",
-      "publisher": "手游巴士",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E3%80%90%E8%B5%84%E8%AE%AF%E3%80%91PNY%20RTX%20PRO%205500%E9%9B%B6%E5%94%AE%E6%A0%87%E4%BB%B717999%E7%BE%8E%E5%85%83%20%E9%AB%98%E4%BA%8ERTX%20PRO%206000",
-      "published_at": "2026-11-06",
-      "found_via": "搜狗微信",
-      "snippet": "NVIDIA RTX PRO 5500 Blackwell专业工作站显卡在美国零售商SHI Government Solutions标价17999美元(约12.09万元人民币),折...",
-      "seen_at": "2026-11-18"
     }
   ],
   "mentions": [
@@ -839,8 +874,8 @@
     }
   },
   "take": {
-    "date": "2026-11-18",
-    "text": "英伟达财报已出，下一季度指引不含中国数据中心算力收入，5500的口径没有新增。72小时内仍无新的大陆报价、批文或交付消息，样卡12月、商业交付2027年一季度不变。下一步看电话会纪要里有无5500供货表述。"
+    "date": "2026-11-19",
+    "text": "英伟达称已停止向中国供应Hopper芯片，H200这条合规通道关闭，5500的大陆询价压力可能更大。72小时内仍无5500新报价或批文，样卡12月、商业交付2027年一季度不变。"
   },
   "sweep": {
     "date": "2026-11-19",
