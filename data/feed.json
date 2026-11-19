@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-19T07:10:17+08:00",
+  "updated_at": "2026-11-19T12:25:50+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -618,6 +618,16 @@
       "seen_at": "2026-11-12"
     },
     {
+      "title": "350 亿美元买显卡,可能只到货一成",
+      "publisher": "财精说人话",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=350%20%E4%BA%BF%E7%BE%8E%E5%85%83%E4%B9%B0%E6%98%BE%E5%8D%A1%2C%E5%8F%AF%E8%83%BD%E5%8F%AA%E5%88%B0%E8%B4%A7%E4%B8%80%E6%88%90",
+      "published_at": "2026-11-10",
+      "found_via": "搜狗微信",
+      "snippet": "亿美元买显卡,可能只到货一成.我知道这听着像标题党.单子是... RTX PRO 5500.单价约 1.14 万美元,标价超过 350 亿美元.中...",
+      "seen_at": "2026-11-19"
+    },
+    {
       "title": "【智算ABC】NVIDIA RTX PRO 5500 GPU大揭秘:以工作站之名,行算力基础设施之实",
       "publisher": "科学千里眼",
       "source_type": "公众号",
@@ -715,16 +725,6 @@
       "published_at": "2026-11-07",
       "found_via": "Google 新闻",
       "snippet": "",
-      "seen_at": "2026-11-07"
-    },
-    {
-      "title": "RTX PRO 5500 卖到 12 万元:规格更低,定价反超 RTX PRO 6000",
-      "publisher": "IT168",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%20%E5%8D%96%E5%88%B0%2012%20%E4%B8%87%E5%85%83%3A%E8%A7%84%E6%A0%BC%E6%9B%B4%E4%BD%8E%2C%E5%AE%9A%E4%BB%B7%E5%8F%8D%E8%B6%85%20RTX%20PRO%206000",
-      "published_at": "2026-11-07",
-      "found_via": "搜狗微信",
-      "snippet": "RTX PRO 5500 是少数仍能大规模出货的高性能 NVIDIA GPU 之一... 价格波动本身也会随产能释放而收敛,把渠道报价当作长期趋势并...",
       "seen_at": "2026-11-07"
     }
   ],
@@ -854,7 +854,6 @@
     "notes": [
       "云端条目未通过复核 https://www.rfi.fr/cn/%E6%94%BF%E6%B2%BB/20261118-%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%A7%B0%E5%B7%B2%E5%81%9C%E6%AD%A2%E5%90%91%E4%B8%AD%E5%9B%BD%E4%BE%9B%E5%BA%94hopper%E9%AB%98%E7%AB%AF%E8%8A%AF%E7%89%87：原文没有这些数字",
       "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
-      "DIGITIMES RSS 失败：not well-formed (invalid token): line 713, column 79",
       "重复报道 reuters：https://news.qq.com/rain/a/20261021A07X2300",
       "无关：https://videocardz.com/newz/nvidia-rtx-pro-5500-blackwell-84gb-launches-in-japan"
     ]
