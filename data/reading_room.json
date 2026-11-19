@@ -1,5 +1,20 @@
 [
  {
+  "url": "https://www.sohu.com/a/1103742010_121107745",
+  "title": "花700亿抢GPU的人，现在开始盯上云专线了",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-19",
+  "scope": "5500",
+  "snippets": [
+   "11月4日有条新闻，彭博社报的：阿里、腾讯、字节这些国内大厂，加起来订了大约600万张英伟达RTX Pro 5500，订单金额接近700亿美元。",
+   "但未来四个月只能到货几万张，交付率大概1%。",
+   "700亿美元买一张卡都到不了手，这事听着夸张，但这就是眼下算力市场的真实状态。"
+  ],
+  "seen_at": "2026-11-20",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://videocardz.com/newz/nvidia-rtx-pro-5500-blackwell-84gb-launches-in-japan",
   "title": "NVIDIA RTX PRO 5500 Blackwell 84GB launches in Japan",
   "publisher": "VideoCardz",
@@ -14,7 +29,7 @@
    "We previously covered the $17,999 MSRP shown by SHI Government Solutions for the",
    "That listing shows a price of $17,408.63 and asks buyers to verify stock."
   ],
-  "seen_at": "2026-11-19",
+  "seen_at": "2026-11-20",
   "found_via": "Bing 新闻"
  },
  {
@@ -146,7 +161,7 @@
    "美国科技公司英伟达临时首席执行官科莱特·克雷斯表示， 英伟达不再向中国供应用于人工智能（AI）系统的 H200芯片 。",
    "克雷斯在接受 CNBC 电视台采访时指出：“我们对中国的供应量约占总出货量的10%，但这些产品主要应用于游戏、汽车和工作站领域。"
   ],
-  "seen_at": "2026-11-19",
+  "seen_at": "2026-11-20",
   "found_via": "Bing 新闻"
  },
  {
@@ -198,7 +213,7 @@
    "06 / 黄仁勋公开表态：愿意重新执掌英伟达",
    "10 / 黄仁勋卸任后首次表态：愿意回归 英伟达盘后大涨5%，财报超预期"
   ],
-  "seen_at": "2026-11-19",
+  "seen_at": "2026-11-20",
   "found_via": "Bing 新闻"
  },
  {
@@ -232,7 +247,7 @@
    "03 / 黄仁勋：愿回归，董事会：无意让他复职，业绩超预期，英伟达盘后涨超4%",
    "06 / 黄仁勋公开表态：愿意重新执掌英伟达"
   ],
-  "seen_at": "2026-11-19",
+  "seen_at": "2026-11-20",
   "found_via": "Bing 新闻"
  },
  {
@@ -599,24 +614,6 @@
    "That was about 9% of revenue, down from $25.0 billion a year earlier."
   ],
   "seen_at": "2026-11-15",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1101151651_122747186",
-  "title": "英伟达蒸发4200亿，白宫追查\"内鬼\"，中国车间正连轴转造变压器",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-13",
-  "scope": "context",
-  "snippets": [
-   "面积还没北京朝阳区大的新加坡，给英伟达贡献超两成营收，2年从8%翻近3倍，真正运到当地的芯片不到1%。",
-   "11月9日、10日英伟达2天蒸发4200亿美元，绯闻只是火柴，真正的火药藏在东南亚的仓库里。",
-   "被查的是家叫Megaspeed的新加坡公司，海关记录显示它进口了超13.6万颗英伟达GPU，其中大半是最新的Blackwell系列，可英伟达现场清点，能数出来的",
-   "改名前年底，它账上现金才570万美元，就这点家底，撬动了至少46亿美元的硬件进口。",
-   "2023年美国收紧对华芯片管制后，东南亚注册的英伟达云合作伙伴直接暴涨。",
-   "到了今年7月，英伟达突然砍掉超一半亚洲获批客户，还要求剩下的留51%算力给非中国客户。"
-  ],
-  "seen_at": "2026-11-14",
   "found_via": "Bing 新闻"
  }
 ]
