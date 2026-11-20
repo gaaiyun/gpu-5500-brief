@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-20T16:26:07+08:00",
+  "updated_at": "2026-11-21T01:46:47+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -438,6 +438,26 @@
       "seen_at": "2026-11-20"
     },
     {
+      "title": "NVIDIA RTX PRO 5500 Blackwell 84GB launches in Japan",
+      "publisher": "VideoCardz",
+      "source_type": "行业媒体",
+      "url": "https://videocardz.com/newz/nvidia-rtx-pro-5500-blackwell-84gb-launches-in-japan",
+      "published_at": "2026-11-19",
+      "found_via": "Bing 新闻",
+      "snippet": "The RTX PRO 5500 Blackwell has launched through an authorized Japanese distributor. SHI Government Solutions lists the 84GB card at $17,408.63.",
+      "seen_at": "2026-11-21"
+    },
+    {
+      "title": "花700亿抢GPU的人，现在开始盯上云专线了",
+      "publisher": "搜狐号",
+      "source_type": "公众号",
+      "url": "https://www.sohu.com/a/1103742010_121107745",
+      "published_at": "2026-11-19",
+      "found_via": "Bing 新闻",
+      "snippet": "11月4日有条新闻，彭博社报的：阿里、腾讯、字节这些国内大厂，加起来订了大约600万张英伟达RTX Pro 5500，订单金额接近700亿美元。但未来四个月只能到货几万张，交付率大概1%。 700亿美元买一张卡都到不了手，这事听着夸张，但这就是眼下算力市场的真实状态。所有人都在抢卡，抢机柜，抢电。 可就在同一天，AWS",
+      "seen_at": "2026-11-21"
+    },
+    {
       "title": "PRO 5000涨12%:大厂拿到的 PRO 5500 远远不够,用他做替补",
       "publisher": "算力极客",
       "source_type": "公众号",
@@ -465,7 +485,7 @@
       "published_at": "2026-11-18",
       "found_via": "云端条目未通过复核",
       "snippet": "法广报道，黄仁勋上周辞职后接任代理首席执行官的克雷斯在财报电话会议上表示，第三季度英伟达向中国销售了价值24亿美元的、获得出口许可的Hopper产品，并称已停止向中国供应此类芯片。报道提到今年1月美国调整了H200出口许可政策，改为个案审批。",
-      "seen_at": "2026-11-20"
+      "seen_at": "2026-11-21"
     },
     {
       "title": "RTX PRO 6000 / 6000D / 5500 到底怎么选?",
@@ -706,26 +726,6 @@
       "found_via": "reading_room",
       "snippet": "国会有人要求把对华芯片限制写入国防授权法案；摘录未涉及5500。",
       "seen_at": "2026-11-11"
-    },
-    {
-      "title": "NVIDIA Sinks 6% on Report Huang Affair Helped Move $7.5 Billion of Chips Into China",
-      "publisher": "Yahoo Finance（引The Information）",
-      "source_type": "主流媒体",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-sinks-6-report-huang-190935836.html",
-      "published_at": "2026-11-10",
-      "found_via": "reading_room",
-      "snippet": "The Information称与Alice Huang有关的网络至少转运了价值75亿美元的芯片入华，与5500无直接关系。",
-      "seen_at": "2026-11-12"
-    },
-    {
-      "title": "RTX 5090 Price vs RTX PRO 5500: 32GB vs 84GB [2026]",
-      "publisher": "tech-insider.org",
-      "source_type": "其他",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1fSHZ0TjljYmt4UTROa0FXZnpGeUpIajhaOUtXV3BYSzdBRzdIU2ZTWDYzN3I5UjVtMzlPMzJuOFVEcjlYQVlmZ0FSRV9lRGlRV1BkY3lVbHhoY3ltdFl1Nnhld0tkdmdxWjlid05wU1NrQmVHTS1nQkt3bDFrZ1E?oc=5",
-      "published_at": "2026-11-09",
-      "found_via": "Google 新闻",
-      "snippet": "",
-      "seen_at": "2026-11-09"
     }
   ],
   "mentions": [
@@ -743,14 +743,6 @@
       "low": 120000,
       "high": 120000,
       "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%20%E5%8D%96%E5%88%B0%2012%20%E4%B8%87%E5%85%83%3A%E8%A7%84%E6%A0%BC%E6%9B%B4%E4%BD%8E%2C%E5%AE%9A%E4%BB%B7%E5%8F%8D%E8%B6%85%20RTX%20PRO%206000",
-      "found_via": "搜狗微信"
-    },
-    {
-      "date": "2026-11-06",
-      "publisher": "MBA",
-      "low": 80000,
-      "high": 120000,
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E8%B4%A7%E5%B8%81%E8%B5%84%E9%87%91%E4%B8%8D%E8%B6%B312%E4%BA%BF%2C%E7%99%BE%E4%BA%BF%E6%B8%B8%E6%88%8F%E5%B7%A8%E5%A4%B4%E6%8B%9F%E7%A0%B842%E4%BA%BF%E4%B9%B0GPU",
       "found_via": "搜狗微信"
     }
   ],
@@ -832,7 +824,7 @@
       "wechat": 1
     },
     "2026-11-18": {
-      "media": 5,
+      "media": 6,
       "wechat": 2
     },
     "2026-11-19": {
@@ -849,16 +841,16 @@
     "text": "英伟达称已停止向中国供应Hopper芯片，H200这条合规通道关闭，5500的大陆询价压力可能更大。72小时内仍无5500新报价或批文，样卡12月、商业交付2027年一季度不变。"
   },
   "sweep": {
-    "date": "2026-11-20",
+    "date": "2026-11-21",
     "candidates": 3,
     "read": 3,
     "added": [],
     "corroborated": 0,
-    "model": "@cf/zai-org/glm-4.7-flash",
+    "model": null,
     "notes": [
       "云端条目未通过复核 https://www.rfi.fr/cn/%E6%94%BF%E6%B2%BB/20261118-%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%A7%B0%E5%B7%B2%E5%81%9C%E6%AD%A2%E5%90%91%E4%B8%AD%E5%9B%BD%E4%BE%9B%E5%BA%94hopper%E9%AB%98%E7%AB%AF%E8%8A%AF%E7%89%87：原文没有这些数字",
-      "无关：https://videocardz.com/newz/nvidia-rtx-pro-5500-blackwell-84gb-launches-in-japan",
-      "无关：https://www.sohu.com/a/1103742010_121107745"
+      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)",
+      "模型调用失败：HTTPSConnectionPool(host='gpu-5500-intelligence.gaaiyun-risk-selfcheck.workers.dev', port=443): Read timed out. (read ti"
     ]
   }
 }

@@ -1,5 +1,69 @@
 [
  {
+  "url": "https://www.sohu.com/a/1104169829_121945034",
+  "title": "美媒：阿里巴巴借道新加坡购入英伟达芯片",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-20",
+  "scope": "context",
+  "snippets": [
+   "11月18日，美国媒体报道称，英伟达芯片经新加坡公司Megaspeed采购，最终被中国互联网巨头阿里巴巴实际使用。",
+   "路演后，新加坡公司Megaspeed成立，买下逾40亿美元的英伟达芯片。"
+  ],
+  "seen_at": "2026-11-21",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/video/nvidias-troubles-mount-as-china-chip-sales-face-scrutiny-151642511.html",
+  "title": "Nvidia's troubles mount as China chip sales face scrutiny",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-20",
+  "scope": "context",
+  "snippets": [
+   "\"The 8:30\" hosts Julie Hyman, Pras Subramanian, and Jake Conley discuss mounting",
+   "Like each H200 chip costs like $30 to $40,000."
+  ],
+  "seen_at": "2026-11-21",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/u-approved-879-000-nvidia-142855736.html",
+  "title": "The U.S. Approved 879,000 Nvidia and AMD Chips for China in 6 Months",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-20",
+  "scope": "context",
+  "snippets": [
+   "Commerce approved about 879,000 of 3.4 million requested Nvidia and AMD China ch",
+   "NVIDIA ( NASDAQ:NVDA ) fell 3.30% to $145.98.",
+   "Advanced Micro Devices ( NASDAQ:AMD ) dropped 7.72% to $489.19, although that sl",
+   "The approvals ran from December 2025 through May 2026 and covered NVIDIA's H200 ",
+   "NVIDIA said the approvals carried strict conditions and limited volumes and that",
+   "Its fiscal third quarter included $2.4 billion of Hopper data center shipments t"
+  ],
+  "seen_at": "2026-11-21",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1103991331_122653494",
+  "title": "特批通道作废！英伟达临时CEO官宣：H200芯片不再发往中国",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-19",
+  "scope": "context",
+  "snippets": [
+   "11月17日，英伟达临时CEO科莱特·克雷斯在财报电话会上确认，停止向中国供应获许可的霍珀数据中心芯片，后续业绩预测也不再计算这部分收入。",
+   "这意味着，今年好不容易打开的H200对华供应通道，再次关闭。",
+   "值得留意的是，英伟达第三季度向中国销售的获许可霍珀系列产品，收入已经达到24亿美元。",
+   "H200不是普通消费级显卡，而是英伟达面向人工智能大模型训练和推理的高端数据中心芯片。",
+   "2026年1月，美国商务部进一步明确相关申请采取逐案审查方式，所有出口订单必须经过美方逐案审批，没有批量自动放行机制。",
+   "英伟达2026年第三季度向中国销售的获许可霍珀数据中心产品达到24亿美元。"
+  ],
+  "seen_at": "2026-11-21",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.sohu.com/a/1103742010_121107745",
   "title": "花700亿抢GPU的人，现在开始盯上云专线了",
   "publisher": "搜狐号",
@@ -11,7 +75,7 @@
    "但未来四个月只能到货几万张，交付率大概1%。",
    "700亿美元买一张卡都到不了手，这事听着夸张，但这就是眼下算力市场的真实状态。"
   ],
-  "seen_at": "2026-11-20",
+  "seen_at": "2026-11-21",
   "found_via": "Bing 新闻"
  },
  {
@@ -45,7 +109,7 @@
    "We previously covered the $17,999 MSRP shown by SHI Government Solutions for the",
    "That listing shows a price of $17,408.63 and asks buyers to verify stock."
   ],
-  "seen_at": "2026-11-20",
+  "seen_at": "2026-11-21",
   "found_via": "Bing 新闻"
  },
  {
@@ -260,7 +324,7 @@
    "06 / 黄仁勋公开表态：愿意重新执掌英伟达",
    "10 / 黄仁勋卸任后首次表态：愿意回归 英伟达盘后大涨5%，财报超预期"
   ],
-  "seen_at": "2026-11-20",
+  "seen_at": "2026-11-21",
   "found_via": "Bing 新闻"
  },
  {
@@ -294,7 +358,7 @@
    "03 / 黄仁勋：愿回归，董事会：无意让他复职，业绩超预期，英伟达盘后涨超4%",
    "06 / 黄仁勋公开表态：愿意重新执掌英伟达"
   ],
-  "seen_at": "2026-11-20",
+  "seen_at": "2026-11-21",
   "found_via": "Bing 新闻"
  },
  {
@@ -546,73 +610,6 @@
    "05 / 英媒：黄仁勋考虑重返英伟达"
   ],
   "seen_at": "2026-11-17",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1101840707_122377700",
-  "title": "英伟达新王就位，黄仁勋遭两党调查，中国算力命脉恐先受波及",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-15",
-  "scope": "context",
-  "snippets": [
-   "几天后，英伟达才宣布把掌舵33年的黄仁勋辞去CEO和董事职务，而首席财务官科莱特·克雷斯被指派临时担任CEO。",
-   "【谷歌抢先一步，竞争压力骤增】 就在英伟达风波发酵的 11 月 9 日，谷歌公布 TPU 8tx 和 TPU 8i Max，进一步扩充第八代张量处理器产品线。"
-  ],
-  "seen_at": "2026-11-16",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1101826383_122341237",
-  "title": "11月15日：芯片禁令之后再收网，英伟达出手，封死海外算力租赁这条 ...",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-15",
-  "scope": "context",
-  "snippets": [
-   "据英国《金融时报》11月3日援引知情人士报道，英伟达已要求全球云计算和数据中心客户。",
-   "早在2026年7月，英伟达就通过新版\"白名单\"，把获准采购AI芯片的亚洲客户数量削减过半。",
-   "据知情人士透露，一套英伟达B300芯片机柜国际市场售价约60万美元。",
-   "而2026年10月中国非正式市场成交价高达约280万美元，溢价数倍。",
-   "CEO黄仁勋2026年5月接受美国智库SCSP采访时承认，受出口管制影响，英伟达在中国AI加速器市场的份额已从约90%降至0%。",
-   "换句话说，51%红线是英伟达向华盛顿证明：自己不只是被动遵守出口清单，而是在主动封堵算力外溢的每一道缝隙。"
-  ],
-  "seen_at": "2026-11-17",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.rfi.fr/cn/%E5%9B%BD%E9%99%85/20261115-megaspeed%E6%8D%AE%E6%8A%A5%E6%9B%BE%E5%AE%89%E6%8E%92%E5%B0%86%E4%BB%B7%E5%80%BC%E8%BF%91120%E4%BA%BF%E7%BE%8E%E5%85%83%E8%8B%B1%E4%BC%9F%E8%BE%BE%E8%8A%AF%E7%89%87%E8%BF%90%E5%BE%80%E4%B8%AD%E5%9B%BD%E4%BC%81%E4%B8%9A",
-  "title": "Megaspeed据报曾安排将价值近120亿美元英伟达芯片运往中国企业",
-  "publisher": "法广",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-15",
-  "scope": "context",
-  "snippets": [
-   "新加坡云计算公司Megaspeed周日向消费者新闻与商业频道（CNBC）表示，黄乐已于2025年8月从公司离职，并称Megaspeed已针对有关其业务及供应链的",
-   "值得一提的是，《华尔街日报》在周日发表的题为“黄仁勋如何开辟后门路径，让北京得以留在人工智能竞赛中”的长篇报道中提及，英伟达报告称，截至今年7月26日的六个月内",
-   "据做空机构Culper Research的估算——该机构曾于今年5月指出英伟达存在中国问题——英伟达上一财年超过20%的营收来自中国市场。",
-   "报导称，《华尔街日报》所见记录显示，2024年3月至2025年6月期间，Megaspeed安排了将价值近120亿美元的英伟达顶级芯片运往在中国的企业。",
-   "周二，科技媒体《信息报》曾援引两名认识黄乐的人士报导称，黄乐利用与黄仁勋的关系建立商业可信度，其家族企业网络在出口管制收紧的背景下，转运了约24万枚H100、H"
-  ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.sina.com.cn/wm/2026-11-15/doc-iniyupue9793222.shtml",
-  "title": "英伟达创始人风波背后：美国泛化国家安全终将自食恶果",
-  "publisher": "新浪财经",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-15",
-  "scope": "context",
-  "snippets": [
-   "11月5日美国国会议员要求其就美国国家安全相关事务接受调查，11月12日英伟达宣布黄仁勋已辞去首席执行官职务。",
-   "2025年4月，美国以“防范军事用途”为由封杀英伟达H20芯片对华出口，英伟达当季计提45亿美元损失，被迫减值55亿美元，市值一周蒸发1600亿美元。",
-   "到2026年初，英伟达停止H20生产，转而推动B30芯片的出口许可申请，而H200的放行也未能重新唤起预期中的采购热情。",
-   "04 / 对二乙苯商品报价动态（2026-11-14）",
-   "05 / 聚乙二醇400双油酸酯商品报价动态（2026-11-14）",
-   "09 / 腐植酸钾商品报价动态（2026-11-14）"
-  ],
-  "seen_at": "2026-11-15",
   "found_via": "Bing 新闻"
  }
 ]
