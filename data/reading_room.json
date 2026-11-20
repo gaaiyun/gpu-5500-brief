@@ -46,6 +46,24 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://finance.yahoo.com/technology/ai/articles/trump-treasury-secretary-keeps-nvidia-215837212.html",
+  "title": "Trump’s Treasury Secretary Keeps Nvidia’s H200 China Policy as House Data Show Nearly 880,000 AI Chi",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-20",
+  "scope": "context",
+  "snippets": [
+   "House data show Commerce approved nearly 880,000 NVIDIA and AMD AI chips for Chi",
+   "Treasury Secretary Scott Bessent says the policy letting NVIDIA ( NVDA:NASDAQ ) ",
+   "He said it a day after House data showed nearly 880,000 NVIDIA and Advanced Micr",
+   "As CNBC's Megan Casella reported on Thursday's Closing Bell , the House Foreign ",
+   "TIKR tracks 62 analysts on Nvidia.",
+   "It shipped $2.4 billion of them to China in the quarter ended Oct."
+  ],
+  "seen_at": "2026-11-21",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.sohu.com/a/1103991331_122653494",
   "title": "特批通道作废！英伟达临时CEO官宣：H200芯片不再发往中国",
   "publisher": "搜狐号",
@@ -91,7 +109,7 @@
    "CNN报道，根据其查阅的近300份中国高校及研究机构采购记录，大部分涉及美国出口管制范围内的英伟达芯片，包括A100、A800、H100、H200和H800型号",
    "在CNN调查的90个买家中，约八成是高校，另有研究机构和政府部门参与采购。"
   ],
-  "seen_at": "2026-11-20",
+  "seen_at": "2026-11-21",
   "found_via": "Bing 新闻"
  },
  {
@@ -594,22 +612,6 @@
    "Meanwhile, Morgan Stanley lowered its price target on NVDA to $267 from $300, wh"
   ],
   "seen_at": "2026-11-16",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.sina.com.cn/tob/2026-11-16/doc-iniyxirc2379662.shtml",
-  "title": "华为云：已有80%中国具身智能企业选择昇腾云，在中国具身智能行业 ...",
-  "publisher": "新浪财经",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [
-   "04 / 习近平将同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤",
-   "02 / 财经早报丨证监会：进一步深化市场稳定长效机制研究，消息称黄仁勋考虑重返英伟达担任CEO丨2026年11月16日",
-   "03 / 黄仁勋讨论重掌英伟达 硅谷盟友游说支持回归",
-   "05 / 英媒：黄仁勋考虑重返英伟达"
-  ],
-  "seen_at": "2026-11-17",
   "found_via": "Bing 新闻"
  }
 ]

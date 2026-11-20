@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-21T01:46:47+08:00",
+  "updated_at": "2026-11-21T06:48:53+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -428,6 +428,16 @@
   ],
   "leads": [
     {
+      "title": "黄仁勋一辞职,RTX 5090 涨价?5090降价?",
+      "publisher": "蓝海大脑",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E9%BB%84%E4%BB%81%E5%8B%8B%E4%B8%80%E8%BE%9E%E8%81%8C%2CRTX%205090%20%E6%B6%A8%E4%BB%B7%3F5090%E9%99%8D%E4%BB%B7%3F",
+      "published_at": "2026-11-20",
+      "found_via": "搜狗微信",
+      "snippet": "这部分需求转向了RTX Pro 5500这类不受限的专业加速卡.抢的人一撤,价格的地基就空了.2、货到了11月初新一批RTX 5090到货...",
+      "seen_at": "2026-11-21"
+    },
+    {
       "title": "摩尔线程庐山,中国自己的“PRO 5500”下个月要来了",
       "publisher": "硬件派",
       "source_type": "公众号",
@@ -518,6 +528,16 @@
       "seen_at": "2026-11-19"
     },
     {
+      "title": "甲骨文叫停腾讯467亿算力租约:买卡、租卡、借云,三条路同时变窄",
+      "publisher": "芯光贴贴-- 光电共封装",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E7%94%B2%E9%AA%A8%E6%96%87%E5%8F%AB%E5%81%9C%E8%85%BE%E8%AE%AF467%E4%BA%BF%E7%AE%97%E5%8A%9B%E7%A7%9F%E7%BA%A6%3A%E4%B9%B0%E5%8D%A1%E3%80%81%E7%A7%9F%E5%8D%A1%E3%80%81%E5%80%9F%E4%BA%91%2C%E4%B8%89%E6%9D%A1%E8%B7%AF%E5%90%8C%E6%97%B6%E5%8F%98%E7%AA%84",
+      "published_at": "2026-11-17",
+      "found_via": "搜狗微信",
+      "snippet": "RTX Pro 5500 专业卡,订单总额约700亿美元.但预计在未来四个月里,实际到货可能只有数万张,约占订单的1%.一边是天量订单...",
+      "seen_at": "2026-11-21"
+    },
+    {
       "title": "全球AI算力管制升级下的中国AI产业格局与未来走向",
       "publisher": "慎思明",
       "source_type": "公众号",
@@ -536,6 +556,16 @@
       "found_via": "Google 新闻",
       "snippet": "",
       "seen_at": "2026-11-17"
+    },
+    {
+      "title": "显卡价格突然跳水!RTX 5090狂降22%:5080也跟跌",
+      "publisher": "硬件世界",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E6%98%BE%E5%8D%A1%E4%BB%B7%E6%A0%BC%E7%AA%81%E7%84%B6%E8%B7%B3%E6%B0%B4%21RTX%205090%E7%8B%82%E9%99%8D22%25%3A5080%E4%B9%9F%E8%B7%9F%E8%B7%8C",
+      "published_at": "2026-11-16",
+      "found_via": "搜狗微信",
+      "snippet": "5090在11月初重新到货,部分零售商补充库存后开始调整价格;... 例如配备84GB显存的RTX Pro 5500.另一个叠加因素是经销商的...",
+      "seen_at": "2026-11-21"
     },
     {
       "title": "RTX 5090 现在多少钱?华强北 11 月报价与二手成交价",
@@ -696,36 +726,6 @@
       "found_via": "搜狗微信",
       "snippet": "亿美元买显卡,可能只到货一成.我知道这听着像标题党.单子是... RTX PRO 5500.单价约 1.14 万美元,标价超过 350 亿美元.中...",
       "seen_at": "2026-11-19"
-    },
-    {
-      "title": "【智算ABC】NVIDIA RTX PRO 5500 GPU大揭秘:以工作站之名,行算力基础设施之实",
-      "publisher": "科学千里眼",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E3%80%90%E6%99%BA%E7%AE%97ABC%E3%80%91NVIDIA%20RTX%20PRO%205500%20GPU%E5%A4%A7%E6%8F%AD%E7%A7%98%3A%E4%BB%A5%E5%B7%A5%E4%BD%9C%E7%AB%99%E4%B9%8B%E5%90%8D%2C%E8%A1%8C%E7%AE%97%E5%8A%9B%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E4%B9%8B%E5%AE%9E",
-      "published_at": "2026-11-10",
-      "found_via": "搜狗微信",
-      "snippet": "RTX PRO 5500 Blackwell Workstation Edition 专业工作站显卡,以 84GB ECC GDDR7 显存、21,760 个 CUDA 核心与 600W 功耗预...",
-      "seen_at": "2026-11-11"
-    },
-    {
-      "title": "RTX PRO5500 显存神卡到货倒计时!国内首批,手慢无",
-      "publisher": "龙游星海",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO5500%20%E6%98%BE%E5%AD%98%E7%A5%9E%E5%8D%A1%E5%88%B0%E8%B4%A7%E5%80%92%E8%AE%A1%E6%97%B6%21%E5%9B%BD%E5%86%85%E9%A6%96%E6%89%B9%2C%E6%89%8B%E6%85%A2%E6%97%A0",
-      "published_at": "2026-11-10",
-      "found_via": "搜狗微信",
-      "snippet": "通知RTX PRO5500 显存神卡到货倒计时!热点资讯 84GB 显存,600W 功耗,全球疯抢——这张卡,我们即将到货,而且是“国内首...",
-      "seen_at": "2026-11-11"
-    },
-    {
-      "title": "Congress Wants China Chip Limits in the Defense Bill After Nvidia’s Spy Scandal",
-      "publisher": "雅虎财经",
-      "source_type": "主流媒体",
-      "url": "https://finance.yahoo.com/technology/ai/articles/congress-wants-china-chip-limits-142719076.html",
-      "published_at": "2026-11-10",
-      "found_via": "reading_room",
-      "snippet": "国会有人要求把对华芯片限制写入国防授权法案；摘录未涉及5500。",
-      "seen_at": "2026-11-11"
     }
   ],
   "mentions": [
@@ -817,23 +817,23 @@
     },
     "2026-11-16": {
       "media": 6,
-      "wechat": 2
+      "wechat": 3
     },
     "2026-11-17": {
       "media": 4,
-      "wechat": 1
+      "wechat": 2
     },
     "2026-11-18": {
       "media": 6,
       "wechat": 2
     },
     "2026-11-19": {
-      "media": 6,
+      "media": 7,
       "wechat": 3
     },
     "2026-11-20": {
       "media": 0,
-      "wechat": 1
+      "wechat": 2
     }
   },
   "take": {
@@ -842,15 +842,14 @@
   },
   "sweep": {
     "date": "2026-11-21",
-    "candidates": 3,
-    "read": 3,
+    "candidates": 1,
+    "read": 1,
     "added": [],
     "corroborated": 0,
-    "model": null,
+    "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
       "云端条目未通过复核 https://www.rfi.fr/cn/%E6%94%BF%E6%B2%BB/20261118-%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%A7%B0%E5%B7%B2%E5%81%9C%E6%AD%A2%E5%90%91%E4%B8%AD%E5%9B%BD%E4%BE%9B%E5%BA%94hopper%E9%AB%98%E7%AB%AF%E8%8A%AF%E7%89%87：原文没有这些数字",
-      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)",
-      "模型调用失败：HTTPSConnectionPool(host='gpu-5500-intelligence.gaaiyun-risk-selfcheck.workers.dev', port=443): Read timed out. (read ti"
+      "重复报道 reuters：https://news.qq.com/rain/a/20261021A07X2300"
     ]
   }
 }
