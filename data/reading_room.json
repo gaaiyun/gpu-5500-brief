@@ -138,6 +138,21 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://news.qq.com/rain/a/20261118A0CA7A00",
+  "title": "英伟达全面停供H200芯片：全球断供落地，中国AI算力自给率加速跃升",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-18",
+  "scope": "context",
+  "snippets": [
+   "驱动中国11月18日消息 英伟达临时首席执行官科莱特·克雷斯在最新财报电话会上正式确认，公司已全面停止 H200芯片 供应，不再向包括中国在内的全球任何地区供货",
+   "与此同时，英伟达在中国AI半导体市场的份额预计将急剧萎缩至8%，而中国企业总份额将达到八成。",
+   "目前，国产AI芯片已实质性进入 商业化落地拐点 ，在 长上下文推理 等核心场景下的实测性能不仅对标甚至局部反超H200，算力载体、 高速互联 及 先进封装 等配"
+  ],
+  "seen_at": "2026-11-20",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://news.qq.com/rain/a/20261118A0BJR500",
   "title": "英伟达将不再向中国提供H200芯片？外交部回应",
   "publisher": "腾讯新闻",
@@ -180,6 +195,22 @@
    "H200停售短期内会影响部分高端训练集群的采购预期，但也会推动行业更重视异构算力池、国产芯片适配和算网调度能力。"
   ],
   "seen_at": "2026-11-19",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://m.163.com/news/article/LC1D20Q70001899O.html",
+  "title": "英伟达停止向中国供应H200芯片 外交部回应",
+  "publisher": "网易号",
+  "source_type": "公众号",
+  "published_at": "2026-11-18",
+  "scope": "context",
+  "snippets": [
+   "原标题：英伟达停止向中国供应H200芯片 外交部回应",
+   "法新社记者提问，英伟达的临时CEO称，将不再向中国出货H200芯片。",
+   "傲慢与自负》，甚至批评黄仁勋偷偷给1000美元小费，都是在“掩盖自己的傲慢”。",
+   "贝森特也继续敲打英伟达，威胁董事会10天内必须选定一个外部人来当CEO。"
+  ],
+  "seen_at": "2026-11-20",
   "found_via": "Bing 新闻"
  },
  {
@@ -577,41 +608,6 @@
   "scope": "context",
   "snippets": [
    "新任临时CEO科莱特·克雷斯早在2013年9月就入职英伟达，长期担任首席财务官，十几年职业生涯里只聚焦两件核心工作：保障财报数据持续亮眼，同时规避所有政策合规风"
-  ],
-  "seen_at": "2026-11-15",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://news.qq.com/rain/a/20261114A0DNT800",
-  "title": "英伟达换帅美媒赌中国输，崔天凯一句话讲清算力自主",
-  "publisher": "腾讯新闻",
-  "source_type": "公众号",
-  "published_at": "2026-11-14",
-  "scope": "context",
-  "snippets": [
-   "英伟达董事会在11月12日宣布黄仁勋辞去总裁、CEO及董事职务， CFO 科莱特·克雷斯出任临时CEO，同时任命哈维·琼斯为这家公司33年历史上首任董事会主席。",
-   "英伟达2026财年中国区营收占比已经降到约9%，而 出口管制 全面铺开前的2022财年，这个数字是26.4%。",
-   "2026年7月截止的季度中，直接来自中国大陆和香港客户的收入为79亿美元，占当季总营收的8.2%，较上一期的21.9%大幅收缩。",
-   "2026年上半年英伟达在华份额降至34%，出货量同比下滑44%。",
-   "美国半导体行业协会的统计也表明，2024年以来的对华限制已经让美国企业承受了显著损失，而527亿美元的本土制造补贴补不回丢掉的中国市场份额。"
-  ],
-  "seen_at": "2026-11-15",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/one-thing-china-lacks-chips-093318967.html",
-  "title": "“The One Thing China Lacks Is Chips”: Why Huawei Can’t Replace Nvidia Yet",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-14",
-  "scope": "context",
-  "snippets": [
-   "18, the day after Nvidia reports earnings.",
-   "TIKR tracks 62 analysts on Nvidia.",
-   "Analysts expect its revenue to nearly double to $412 billion in the fiscal year ",
-   "They see $902 billion two years after that:",
-   "Customers headquartered in China, Hong Kong included, brought in $19.7 billion i",
-   "That was about 9% of revenue, down from $25.0 billion a year earlier."
   ],
   "seen_at": "2026-11-15",
   "found_via": "Bing 新闻"

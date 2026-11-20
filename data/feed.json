@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-20T07:13:43+08:00",
+  "updated_at": "2026-11-20T12:13:01+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -428,6 +428,16 @@
   ],
   "leads": [
     {
+      "title": "PRO 5000涨12%:大厂拿到的 PRO 5500 远远不够,用他做替补",
+      "publisher": "算力极客",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=PRO%205000%E6%B6%A812%25%3A%E5%A4%A7%E5%8E%82%E6%8B%BF%E5%88%B0%E7%9A%84%20PRO%205500%20%E8%BF%9C%E8%BF%9C%E4%B8%8D%E5%A4%9F%2C%E7%94%A8%E4%BB%96%E5%81%9A%E6%9B%BF%E8%A1%A5",
+      "published_at": "2026-11-19",
+      "found_via": "搜狗微信",
+      "snippet": "RTX PRO 5500 显卡,目录价合计超过 350 亿美元,单价约 11400 美元一张.11 月 4 日彭博给出的数字更高——中国 AI 与云厂商下...",
+      "seen_at": "2026-11-20"
+    },
+    {
       "title": "杭州园林买RTX PRO 5500:买的是卡,还不是利润",
       "publisher": "马斯克 狗狗 shiba",
       "source_type": "公众号",
@@ -716,16 +726,6 @@
       "found_via": "搜狗微信",
       "snippet": "规模化到货这件事,目前还没发生.同一周彭博社给的另一组数字更直白:合规型号 RTX Pro 5500 已经放行,但中国客户接下来几个...",
       "seen_at": "2026-11-14"
-    },
-    {
-      "title": "阿里腾讯字节订了 600 万张英伟达,四个月",
-      "publisher": "AI星轨",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E9%98%BF%E9%87%8C%E8%85%BE%E8%AE%AF%E5%AD%97%E8%8A%82%E8%AE%A2%E4%BA%86%20600%20%E4%B8%87%E5%BC%A0%E8%8B%B1%E4%BC%9F%E8%BE%BE%2C%E5%9B%9B%E4%B8%AA%E6%9C%88",
-      "published_at": "2026-11-07",
-      "found_via": "搜狗微信",
-      "snippet": "RTX PRO 5500.按每张 1.1 万美元算,单子值 700 亿美元.结果未来四个月只能到货几万张,兑现率只有 1%.年底前先来几千张,...",
-      "seen_at": "2026-11-12"
     }
   ],
   "mentions": [
@@ -836,8 +836,8 @@
       "wechat": 2
     },
     "2026-11-19": {
-      "media": 5,
-      "wechat": 2
+      "media": 6,
+      "wechat": 3
     }
   },
   "take": {
@@ -853,8 +853,9 @@
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
       "云端条目未通过复核 https://www.rfi.fr/cn/%E6%94%BF%E6%B2%BB/20261118-%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%A7%B0%E5%B7%B2%E5%81%9C%E6%AD%A2%E5%90%91%E4%B8%AD%E5%9B%BD%E4%BE%9B%E5%BA%94hopper%E9%AB%98%E7%AB%AF%E8%8A%AF%E7%89%87：原文没有这些数字",
+      "重复报道 reuters：https://news.qq.com/rain/a/20261021A07X2300",
       "无关：https://videocardz.com/newz/nvidia-rtx-pro-5500-blackwell-84gb-launches-in-japan",
-      "重复报道 bloomberg：https://www.sohu.com/a/1103742010_121107745"
+      "无关：https://www.sohu.com/a/1103742010_121107745"
     ]
   }
 }
