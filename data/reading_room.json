@@ -15,6 +15,22 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://www.rfi.fr/cn/%E7%BE%8E%E6%B4%B2/20261119-%E7%BE%8E%E5%9B%BD%E8%8A%AF%E7%89%87%E5%87%BA%E5%8F%A3%E7%AE%A1%E5%88%B6%E9%81%87%E6%8C%91%E6%88%98-cnn%E7%A7%B0%E5%A4%9A%E6%89%80%E4%B8%AD%E5%9B%BD%E9%AB%98%E6%A0%A1%E9%87%87%E8%B4%AD%E8%8B%B1%E4%BC%9F%E8%BE%BE%E8%8A%AF%E7%89%87",
+  "title": "美国芯片出口管制遇挑战 CNN称多所中国高校采购英伟达芯片",
+  "publisher": "法广",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-19",
+  "scope": "context",
+  "snippets": [
+   "其中，CNN调查发现，哈尔滨工业大学今年九月申报采购一枚英伟达A100芯片，价格约7000美元；",
+   "西北工业大学则在九月和十月申报购买四枚H200芯片，总价值约24万美元。",
+   "CNN报道，根据其查阅的近300份中国高校及研究机构采购记录，大部分涉及美国出口管制范围内的英伟达芯片，包括A100、A800、H100、H200和H800型号",
+   "在CNN调查的90个买家中，约八成是高校，另有研究机构和政府部门参与采购。"
+  ],
+  "seen_at": "2026-11-20",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://videocardz.com/newz/nvidia-rtx-pro-5500-blackwell-84gb-launches-in-japan",
   "title": "NVIDIA RTX PRO 5500 Blackwell 84GB launches in Japan",
   "publisher": "VideoCardz",
@@ -595,19 +611,6 @@
    "04 / 对二乙苯商品报价动态（2026-11-14）",
    "05 / 聚乙二醇400双油酸酯商品报价动态（2026-11-14）",
    "09 / 腐植酸钾商品报价动态（2026-11-14）"
-  ],
-  "seen_at": "2026-11-15",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1101383115_122405260",
-  "title": "11.14日：英伟达这一仗打完，美方未来五十年，再也锁死不了中国 ...",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-14",
-  "scope": "context",
-  "snippets": [
-   "新任临时CEO科莱特·克雷斯早在2013年9月就入职英伟达，长期担任首席财务官，十几年职业生涯里只聚焦两件核心工作：保障财报数据持续亮眼，同时规避所有政策合规风"
   ],
   "seen_at": "2026-11-15",
   "found_via": "Bing 新闻"

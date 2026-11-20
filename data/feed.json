@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-20T12:13:01+08:00",
+  "updated_at": "2026-11-20T16:26:07+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -428,6 +428,16 @@
   ],
   "leads": [
     {
+      "title": "摩尔线程庐山,中国自己的“PRO 5500”下个月要来了",
+      "publisher": "硬件派",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E6%91%A9%E5%B0%94%E7%BA%BF%E7%A8%8B%E5%BA%90%E5%B1%B1%2C%E4%B8%AD%E5%9B%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E2%80%9CPRO%205500%E2%80%9D%E4%B8%8B%E4%B8%AA%E6%9C%88%E8%A6%81%E6%9D%A5%E4%BA%86",
+      "published_at": "2026-11-20",
+      "found_via": "搜狗微信",
+      "snippet": "5500为什么大家现在对RTX PRO 5500饥渴到了极点?AI和游戏的产能争夺战早已刺刀见红.英伟达5090和B300的单片晶圆面积接近...",
+      "seen_at": "2026-11-20"
+    },
+    {
       "title": "PRO 5000涨12%:大厂拿到的 PRO 5500 远远不够,用他做替补",
       "publisher": "算力极客",
       "source_type": "公众号",
@@ -486,6 +496,16 @@
       "found_via": "reading_room",
       "snippet": "路透社审查了150多份招标公告、投资规划文件、建设合同，已披露总价值超过230亿元人民币；项目多围绕H100、H200和H800。",
       "seen_at": "2026-11-19"
+    },
+    {
+      "title": "全球AI算力管制升级下的中国AI产业格局与未来走向",
+      "publisher": "慎思明",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%85%A8%E7%90%83AI%E7%AE%97%E5%8A%9B%E7%AE%A1%E5%88%B6%E5%8D%87%E7%BA%A7%E4%B8%8B%E7%9A%84%E4%B8%AD%E5%9B%BDAI%E4%BA%A7%E4%B8%9A%E6%A0%BC%E5%B1%80%E4%B8%8E%E6%9C%AA%E6%9D%A5%E8%B5%B0%E5%90%91",
+      "published_at": "2026-11-17",
+      "found_via": "搜狗微信",
+      "snippet": "美国今年对部分型号改成逐案审批,国内企业可以申请采购,但真正到货量有限;RTX Pro 5500这一类合规工作站显卡订单很大,但交...",
+      "seen_at": "2026-11-20"
     },
     {
       "title": "$英伟达(NVDA.US)英伟达：AI 抛售说不通市场正在抛售 AI 股票，但据报道，英伟达收到了来自字节跳动、阿里巴巴和腾讯的 RTX PRO 5500 订单",
@@ -706,26 +726,6 @@
       "found_via": "Google 新闻",
       "snippet": "",
       "seen_at": "2026-11-09"
-    },
-    {
-      "title": "中国移动：2027年采购总金额预计5000亿元以上，算力投资1000亿元以上",
-      "publisher": "财联社",
-      "source_type": "主流媒体",
-      "url": "https://www.cls.cn/detail/2527866",
-      "published_at": "2026-11-09",
-      "found_via": "搜索摘录",
-      "snippet": "2027年预计采购总金额5000亿元以上，其中算力投资1000亿元以上；AI超节点集采明确锁定华为CANN生态。",
-      "seen_at": "2026-11-10"
-    },
-    {
-      "title": "60 万张 H200 堆在香港,美国批的接货公司是空壳",
-      "publisher": "金牌媒人相亲会",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=60%20%E4%B8%87%E5%BC%A0%20H200%20%E5%A0%86%E5%9C%A8%E9%A6%99%E6%B8%AF%2C%E7%BE%8E%E5%9B%BD%E6%89%B9%E7%9A%84%E6%8E%A5%E8%B4%A7%E5%85%AC%E5%8F%B8%E6%98%AF%E7%A9%BA%E5%A3%B3",
-      "published_at": "2026-11-08",
-      "found_via": "搜狗微信",
-      "snippet": "规模化到货这件事,目前还没发生.同一周彭博社给的另一组数字更直白:合规型号 RTX Pro 5500 已经放行,但中国客户接下来几个...",
-      "seen_at": "2026-11-14"
     }
   ],
   "mentions": [
@@ -829,7 +829,7 @@
     },
     "2026-11-17": {
       "media": 4,
-      "wechat": 0
+      "wechat": 1
     },
     "2026-11-18": {
       "media": 5,
@@ -838,6 +838,10 @@
     "2026-11-19": {
       "media": 6,
       "wechat": 3
+    },
+    "2026-11-20": {
+      "media": 0,
+      "wechat": 1
     }
   },
   "take": {
@@ -853,7 +857,6 @@
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
       "云端条目未通过复核 https://www.rfi.fr/cn/%E6%94%BF%E6%B2%BB/20261118-%E8%8B%B1%E4%BC%9F%E8%BE%BE%E7%A7%B0%E5%B7%B2%E5%81%9C%E6%AD%A2%E5%90%91%E4%B8%AD%E5%9B%BD%E4%BE%9B%E5%BA%94hopper%E9%AB%98%E7%AB%AF%E8%8A%AF%E7%89%87：原文没有这些数字",
-      "重复报道 reuters：https://news.qq.com/rain/a/20261021A07X2300",
       "无关：https://videocardz.com/newz/nvidia-rtx-pro-5500-blackwell-84gb-launches-in-japan",
       "无关：https://www.sohu.com/a/1103742010_121107745"
     ]
