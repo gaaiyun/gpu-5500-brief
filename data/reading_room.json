@@ -1,5 +1,21 @@
 [
  {
+  "url": "https://www.sohu.com/a/1104538416_122483404",
+  "title": "美媒发现：英伟达丢失中国市场之后，最危险的对手正在中国长出来",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-21",
+  "scope": "context",
+  "snippets": [
+   "10月中旬，路透社拿到一份IDC的统计，随后被美国几家财经媒体反复引用：2026年上半年，英伟达在中国数据中心AI芯片市场的份额，掉到了34%。",
+   "英伟达财报里写明，光是一个季度，就因为这批库存积压和没法交付的订单计提了45亿美元的费用。",
+   "公开数据里，昇腾950PR主打推理场景，推理性能达到英伟达H20的三倍。",
+   "英伟达的全球生意并没有垮掉， 最新一个财季营收1158亿美元，数据中心收入1076亿美元，同比翻倍还多，其他市场的需求仍然很强。"
+  ],
+  "seen_at": "2026-11-21",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.sohu.com/a/1104169829_121945034",
   "title": "美媒：阿里巴巴借道新加坡购入英伟达芯片",
   "publisher": "搜狐号",
@@ -597,21 +613,6 @@
    "Bitcoin fell 1.1% to about $64,590 Monday, near a three-month low, amid Fed rate"
   ],
   "seen_at": "2026-11-17",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/markets/stocks/articles/nvda-stock-dips-again-worst-023023113.html",
-  "title": "NVDA Stock Dips Again After Worst Week In 19 Months: Why Michael Burry Sees ‘Mild Manipulation’ In A",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [
-   "Burry highlighted that in late 2025, Nvidia moved its revenue reporting from cou",
-   "Nvidia even recast FY2024 and FY2025 to show how they looked under the new repor",
-   "Meanwhile, Morgan Stanley lowered its price target on NVDA to $267 from $300, wh"
-  ],
-  "seen_at": "2026-11-16",
   "found_via": "Bing 新闻"
  }
 ]
