@@ -1,5 +1,41 @@
 [
  {
+  "url": "https://www.sohu.com/a/1104552091_122653494",
+  "title": "英伟达万万没想到，丢掉中国市场后，最危险的对手正在中国崛起！",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-21",
+  "scope": "context",
+  "snippets": [
+   "2026年11月18日，英伟达传出一个值得关注的消息：公司已经停止向中国发运获准出口的霍珀系列数据中心芯片，暂时没有后续发货计划。",
+   "国际数据公司统计显示，2026年上半年，英伟达在中国数据中心人工智能芯片市场的份额降至34%，华为则达到28%。",
+   "2022年，黄仁勋曾估算，英伟达在中国人工智能芯片市场的份额高达95%。",
+   "2026年上半年，英伟达在中国数据中心人工智能加速器市场出货67.8万颗，同比下降44%，市场份额降至34%。",
+   "中国芯片企业合计份额达到47%，已经超过英伟达一家。",
+   "再看历史变化，2024年英伟达在中国市场的份额约为65%，2025年降至55%，2026年上半年进一步降至34%。"
+  ],
+  "seen_at": "2026-11-22",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1104543956_121207965",
+  "title": "多家英伟达服务器供应商暂停向东南亚出货，以防流入中国！",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-21",
+  "scope": "context",
+  "snippets": [
+   "黄仁勋辞去英伟达首席执行官之后，2028 年年中以后的需求越来越不确定。",
+   "最新的 Grace Blackwell 200 NVL72 服务器机柜起价近 500 万美元，Blackwell 200 GPU 起价 50 万美元。",
+   "该公司高管说，对 11 月 19 日之后下达的订单，公司将按美国新规另行申请出口许可证。",
+   "他又说，近来要让英伟达批准 Blackwell 300 和 GB300 出货越来越难，如今生意更难做，今后不得不把开发客户的重点转向日本和韩国。",
+   "多数近期订单和项目照常进行，但计划在 2028 年和 2029 年实施的中长期项目，不确定性更大。",
+   "一家同时向英伟达、谷歌（Google）和亚马逊（Amazon）供货的企业，其管理人员说：“目前我们所知的是，2027 年的需求和订单仍然保持原样。"
+  ],
+  "seen_at": "2026-11-22",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.sohu.com/a/1104538416_122483404",
   "title": "美媒发现：英伟达丢失中国市场之后，最危险的对手正在中国长出来",
   "publisher": "搜狐号",
@@ -13,6 +49,24 @@
    "英伟达的全球生意并没有垮掉， 最新一个财季营收1158亿美元，数据中心收入1076亿美元，同比翻倍还多，其他市场的需求仍然很强。"
   ],
   "seen_at": "2026-11-21",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/markets/stocks/articles/tsmc-sinks-20-week-nvidia-100729822.html",
+  "title": "TSMC Sinks 20% in a Week on Nvidia Jitters and New US Chip Curbs on China. Time to Buy?",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-21",
+  "scope": "context",
+  "snippets": [
+   "TSMC stock fell 20% in a week on Nvidia jitters and a new US rule that paused so",
+   "16, ahead of the first earnings report from Nvidia ( NVDA:NASDAQ ) since Jensen ",
+   "On Friday, TSMC fell another 9.5% as chip stocks sold off and Reuters reported t",
+   "Nvidia fell 23% over the week, and AMD ( AMD:NASDAQ ) fell 21%, partly on a shor",
+   "And Nvidia, widely reported to be the customer behind 19% of TSMC's 2025 revenue",
+   "Nvidia's revenue more than doubled to $115.8 billion in its fiscal third quarter"
+  ],
+  "seen_at": "2026-11-22",
   "found_via": "Bing 新闻"
  },
  {
@@ -41,6 +95,17 @@
    "Like each H200 chip costs like $30 to $40,000."
   ],
   "seen_at": "2026-11-21",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/video/lutnick-faces-scrutiny-over-nvidia-225714495.html",
+  "title": "Lutnick faces scrutiny over Nvidia chip exports to China",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-20",
+  "scope": "context",
+  "snippets": [],
+  "seen_at": "2026-11-22",
   "found_via": "Bing 新闻"
  },
  {
@@ -125,7 +190,7 @@
    "CNN报道，根据其查阅的近300份中国高校及研究机构采购记录，大部分涉及美国出口管制范围内的英伟达芯片，包括A100、A800、H100、H200和H800型号",
    "在CNN调查的90个买家中，约八成是高校，另有研究机构和政府部门参与采购。"
   ],
-  "seen_at": "2026-11-21",
+  "seen_at": "2026-11-22",
   "found_via": "Bing 新闻"
  },
  {
@@ -550,67 +615,6 @@
   "scope": "context",
   "snippets": [
    "快科技11月16日消息，黄仁勋卸任英伟达CEO之后，美国国会正在紧锣密鼓酝酿进一步收紧AI芯片对华出口的相关限制规则。"
-  ],
-  "seen_at": "2026-11-17",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1102031067_122993442",
-  "title": "英伟达这一仗打完，美国未来50年内都无法在芯片上锁死中国。原因 ...",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [
-   "不到一个月时间，英伟达就迅速拿出了一款严格卡在美方监管红线之内的降级特供方案，H20芯片就在这样的背景下应运而生。",
-   "如今掌舵人迎来更迭，新任临时CEO科莱特·克雷斯早在2013年9月就加入英伟达担任首席财务官，十余年间她的核心工作始终围绕两件事：保障财报数据持续亮眼，严格规避"
-  ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://news.mydrivers.com/1/1166/1166056.htm",
-  "title": "崩盘开始了！RTX 5090二手价格腰斩：部分型号跌破3万元",
-  "publisher": "快科技",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-16",
-  "scope": "5500",
-  "snippets": [
-   "快科技11月16日消息，在经历了漫长的极端短缺和疯狂溢价后，英伟达新一代旗舰显卡RTX 5090的价格泡沫正以惊人的速度破裂。",
-   "据Reddit网友反馈，该卡在二手市场的成交价已从最高10000美元（约合72300元人民币）跌至4400美元（约合29351元人民币）附近。",
-   "这款搭载32GB GDDR7显存的顶级非公版显卡，其二手报价在过去一周内从4800美元（约合34704元人民币）迅速下调至4400美元。",
-   "甚至有个人卖家为求快速回笼资金，将微星万图师3X OC型号的标价直接挂到了3600美元（约合26028元人民币）。",
-   "对于长期极度缺货之后的这次急剧价格回调，最主要的说法之一是：中国公司此前大量抢购旗舰游戏卡用于AI应用，如今这股抢购潮已经退烧，转而采购不受出口限制的专业加速卡",
-   "英伟达CEO黄仁勋辞职的消息传出后，加上日本市场显卡价格跌幅超过20%，卖家担心价格进一步崩盘、以及新型加速卡涌入导致市场饱和，于是折价清出手中的现货。"
-  ],
-  "seen_at": "2026-11-16",
-  "found_via": "快科技"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-scandal-fuels-tougher-china-165802529.html",
-  "title": "The Nvidia scandal fuels tougher China chip rules as Commerce targets Singapore and Malaysia",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [
-   "Current export controls block the most advanced AI processors—made by companies ",
-   "Before the BIS announced its rule on Monday, Dohmen suggested that if Chinese co"
-  ],
-  "seen_at": "2026-11-17",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/america-closes-china-ai-chip-170000348.html",
-  "title": "America Closes China’s AI Chip Loophole Before Trump-Xi Summit: Will Markets Feel It?",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [
-   "Beijing has refused Nvidia's H200, even with Washington taking a 25% cut, Trump ",
-   "China still brought in $7.9 billion of Nvidia's $96.2 billion July-quarter reven",
-   "Bitcoin fell 1.1% to about $64,590 Monday, near a three-month low, amid Fed rate"
   ],
   "seen_at": "2026-11-17",
   "found_via": "Bing 新闻"
