@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-22T00:45:01+08:00",
+  "updated_at": "2026-11-22T05:52:43+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -585,6 +585,16 @@
       "seen_at": "2026-11-17"
     },
     {
+      "title": "黄仁勋辞职、600万颗芯片到货仅1%:国产算力的四大政策资金将加速投放",
+      "publisher": "丁爱民czz的公众号",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E9%BB%84%E4%BB%81%E5%8B%8B%E8%BE%9E%E8%81%8C%E3%80%81600%E4%B8%87%E9%A2%97%E8%8A%AF%E7%89%87%E5%88%B0%E8%B4%A7%E4%BB%851%25%3A%E5%9B%BD%E4%BA%A7%E7%AE%97%E5%8A%9B%E7%9A%84%E5%9B%9B%E5%A4%A7%E6%94%BF%E7%AD%96%E8%B5%84%E9%87%91%E5%B0%86%E5%8A%A0%E9%80%9F%E6%8A%95%E6%94%BE",
+      "published_at": "2026-11-16",
+      "found_via": "搜狗微信",
+      "snippet": "彭博社披露中国厂商订购的约600万颗RTX Pro 5500芯片,未来四个月只能到货数万颗,约占订单总量的1%.两件事叠在一起,摆在...",
+      "seen_at": "2026-11-22"
+    },
+    {
       "title": "显卡价格突然跳水!RTX 5090狂降22%:5080也跟跌",
       "publisher": "硬件世界",
       "source_type": "公众号",
@@ -713,16 +723,6 @@
       "found_via": "搜狗微信",
       "snippet": "字节跳动等——此前向英伟达订购了约600万枚RTX Pro 5500芯片... 5090当天报价4.85万元/张,RTX 5080约1.43万元/张,RTX 5060...",
       "seen_at": "2026-11-21"
-    },
-    {
-      "title": "美国:B300禁了只放RTXPro5500!中国:巧了,金刚石线锯磨轮也没打算敞开发",
-      "publisher": "鹤去楼空",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E7%BE%8E%E5%9B%BD%3AB300%E7%A6%81%E4%BA%86%E5%8F%AA%E6%94%BERTXPro5500%21%E4%B8%AD%E5%9B%BD%3A%E5%B7%A7%E4%BA%86%2C%E9%87%91%E5%88%9A%E7%9F%B3%E7%BA%BF%E9%94%AF%E7%A3%A8%E8%BD%AE%E4%B9%9F%E6%B2%A1%E6%89%93%E7%AE%97%E6%95%9E%E5%BC%80%E5%8F%91",
-      "published_at": "2026-11-12",
-      "found_via": "搜狗微信",
-      "snippet": "一张卡卡在门槛上2026年10月,路透社报出一条消息,阿里巴巴、腾讯、字节跳动三家合计向英伟达下了超过300万块RTX Pro 5500...",
-      "seen_at": "2026-11-14"
     }
   ],
   "mentions": [
@@ -821,8 +821,12 @@
       "wechat": 3
     },
     "2026-11-20": {
-      "media": 1,
+      "media": 2,
       "wechat": 2
+    },
+    "2026-11-21": {
+      "media": 1,
+      "wechat": 0
     },
     "2026-11-22": {
       "media": 0,
@@ -842,7 +846,7 @@
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
       "云端条目未通过复核 https://finance.yahoo.com/technology/ai/articles/u-approved-879-000-nvidia-142855736.html：原文没有这些数字",
-      "重复报道 reuters：https://news.qq.com/rain/a/20261021A07X2300"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
     ]
   }
 }
