@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-22T15:58:10+08:00",
+  "updated_at": "2026-11-23T01:05:00+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -452,7 +452,7 @@
       "published_at": "2026-11-20",
       "found_via": "云端条目未通过复核",
       "snippet": "雅虎财经报道，Commerce approved about 879,000 of 3.4 million requested Nvidia and AMD China chips，批准期为2025年12月至2026年5月，涵盖H200等。英伟达称批准附带严格条件和有限数量，其第三财季向中国出货24亿美元Hopper数",
-      "seen_at": "2026-11-22"
+      "seen_at": "2026-11-23"
     },
     {
       "title": "黄仁勋一辞职,RTX 5090 涨价?5090降价?",
@@ -825,12 +825,16 @@
       "wechat": 2
     },
     "2026-11-21": {
-      "media": 1,
+      "media": 3,
       "wechat": 0
     },
     "2026-11-22": {
-      "media": 1,
+      "media": 5,
       "wechat": 2
+    },
+    "2026-11-23": {
+      "media": 1,
+      "wechat": 0
     }
   },
   "take": {
@@ -838,7 +842,7 @@
     "text": "今天新增两条背景：美方批准的H200类特批通道已关闭，阿里的海外通道又被调查，两者都把需求推向不受限的5500。72小时内仍无5500新报价或批文，样卡12月、商业交付2027年一季度节点不变。"
   },
   "sweep": {
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "candidates": 1,
     "read": 1,
     "added": [],
