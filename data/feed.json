@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-22T05:52:43+08:00",
+  "updated_at": "2026-11-22T11:25:15+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -585,6 +585,16 @@
       "seen_at": "2026-11-17"
     },
     {
+      "title": "大A暴跌 黄仁勋下台 对国产AI是利空还是利好 ?",
+      "publisher": "梓豪谈芯",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%A4%A7A%E6%9A%B4%E8%B7%8C%20%E9%BB%84%E4%BB%81%E5%8B%8B%E4%B8%8B%E5%8F%B0%20%E5%AF%B9%E5%9B%BD%E4%BA%A7AI%E6%98%AF%E5%88%A9%E7%A9%BA%E8%BF%98%E6%98%AF%E5%88%A9%E5%A5%BD%20%3F",
+      "published_at": "2026-11-16",
+      "found_via": "搜狗微信",
+      "snippet": "国内的价格大约是8.5到9万元一张.RTX Pro 5500和5090本身也是Blackwell架构,所以它们跟数据中心用的B200、B300的差别并不在...",
+      "seen_at": "2026-11-22"
+    },
+    {
       "title": "黄仁勋辞职、600万颗芯片到货仅1%:国产算力的四大政策资金将加速投放",
       "publisher": "丁爱民czz的公众号",
       "source_type": "公众号",
@@ -713,16 +723,6 @@
       "found_via": "WebSearch",
       "snippet": "中国AI企业在美国远程访问规则出台前抢订海外英伟达算力",
       "seen_at": "2026-11-16"
-    },
-    {
-      "title": "黄仁勋或被罢免:AI芯片的订单、价格、产能,会不会变天",
-      "publisher": "慧聪电子网",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E9%BB%84%E4%BB%81%E5%8B%8B%E6%88%96%E8%A2%AB%E7%BD%A2%E5%85%8D%3AAI%E8%8A%AF%E7%89%87%E7%9A%84%E8%AE%A2%E5%8D%95%E3%80%81%E4%BB%B7%E6%A0%BC%E3%80%81%E4%BA%A7%E8%83%BD%2C%E4%BC%9A%E4%B8%8D%E4%BC%9A%E5%8F%98%E5%A4%A9",
-      "published_at": "2026-11-12",
-      "found_via": "搜狗微信",
-      "snippet": "字节跳动等——此前向英伟达订购了约600万枚RTX Pro 5500芯片... 5090当天报价4.85万元/张,RTX 5080约1.43万元/张,RTX 5060...",
-      "seen_at": "2026-11-21"
     }
   ],
   "mentions": [
@@ -829,7 +829,7 @@
       "wechat": 0
     },
     "2026-11-22": {
-      "media": 0,
+      "media": 1,
       "wechat": 1
     }
   },
