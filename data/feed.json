@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-22T11:25:15+08:00",
+  "updated_at": "2026-11-22T15:58:10+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -425,6 +425,16 @@
   ],
   "leads": [
     {
+      "title": "84GB 的诱惑,9 万的代价PRO 5500 到货前,五张专业卡怎么选?6.8 万到 15 万,价差 2.2 倍,选错一次亏一年",
+      "publisher": "云显智达",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=84GB%20%E7%9A%84%E8%AF%B1%E6%83%91%2C9%20%E4%B8%87%E7%9A%84%E4%BB%A3%E4%BB%B7PRO%205500%20%E5%88%B0%E8%B4%A7%E5%89%8D%2C%E4%BA%94%E5%BC%A0%E4%B8%93%E4%B8%9A%E5%8D%A1%E6%80%8E%E4%B9%88%E9%80%89%3F6.8%20%E4%B8%87%E5%88%B0%2015%20%E4%B8%87%2C%E4%BB%B7%E5%B7%AE%202.2%20%E5%80%8D%2C%E9%80%89%E9%94%99%E4%B8%80%E6%AC%A1%E4%BA%8F%E4%B8%80%E5%B9%B4",
+      "published_at": "2026-11-22",
+      "found_via": "搜狗微信",
+      "snippet": "月下旬,第一批 RTX PRO 5500 会进国内渠道.84GB GDDR7、21760 个 CUDA 核心、600W,报价 8.5 万到 9 万.价格出来之后,...",
+      "seen_at": "2026-11-22"
+    },
+    {
       "title": "比5090多2.6倍显存,RTX Pro5500到底值多少钱?",
       "publisher": "芯片智联说",
       "source_type": "公众号",
@@ -713,16 +723,6 @@
       "found_via": "WebSearch",
       "snippet": "转述路透：超过30亿美元的中国AI数据中心项目围绕被禁出口的英伟达处理器设计，面临美方收紧风险；未找到路透原文。",
       "seen_at": "2026-11-14"
-    },
-    {
-      "title": "Chinese AI firms rush to lock in overseas Nvidia capacity before possible U.S. crackdown",
-      "publisher": "Quartz",
-      "source_type": "主流媒体",
-      "url": "https://qz.com/chinese-ai-firms-overseas-nvidia-capacity-crackdown-111226",
-      "published_at": "2026-11-13",
-      "found_via": "WebSearch",
-      "snippet": "中国AI企业在美国远程访问规则出台前抢订海外英伟达算力",
-      "seen_at": "2026-11-16"
     }
   ],
   "mentions": [
@@ -830,7 +830,7 @@
     },
     "2026-11-22": {
       "media": 1,
-      "wechat": 1
+      "wechat": 2
     }
   },
   "take": {
