@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-23T06:00:14+08:00",
+  "updated_at": "2026-11-23T11:55:52+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -425,6 +425,26 @@
   ],
   "leads": [
     {
+      "title": "同是84G显存|RTX PRO 5500和6000D怎么选",
+      "publisher": "昇伟线程",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%90%8C%E6%98%AF84G%E6%98%BE%E5%AD%98%7CRTX%20PRO%205500%E5%92%8C6000D%E6%80%8E%E4%B9%88%E9%80%89",
+      "published_at": "2026-11-23",
+      "found_via": "搜狗微信",
+      "snippet": "最近好多人问我:想在本地跑大模型、做渲染,RTX PRO 5500和6000D选哪个? 两张都是84G显存,看着像双胞胎,傻傻分不清. ...",
+      "seen_at": "2026-11-23"
+    },
+    {
+      "title": "专家访谈摘要:英伟达RTX Pro 5500供应缺口以及寒武纪、平头哥、壁仞等国产AI芯片竞争格局分析",
+      "publisher": "Alpha内参",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E4%B8%93%E5%AE%B6%E8%AE%BF%E8%B0%88%E6%91%98%E8%A6%81%3A%E8%8B%B1%E4%BC%9F%E8%BE%BERTX%20Pro%205500%E4%BE%9B%E5%BA%94%E7%BC%BA%E5%8F%A3%E4%BB%A5%E5%8F%8A%E5%AF%92%E6%AD%A6%E7%BA%AA%E3%80%81%E5%B9%B3%E5%A4%B4%E5%93%A5%E3%80%81%E5%A3%81%E4%BB%9E%E7%AD%89%E5%9B%BD%E4%BA%A7AI%E8%8A%AF%E7%89%87%E7%AB%9E%E4%BA%89%E6%A0%BC%E5%B1%80%E5%88%86%E6%9E%90",
+      "published_at": "2026-11-23",
+      "found_via": "搜狗微信",
+      "snippet": "访谈时间:2026年11月 | 受访人:行业专家 一、RTX Pro 5500的订单与供需缺口• 主要OEM厂商汇总的RTX Pro 5500在手订单接...",
+      "seen_at": "2026-11-23"
+    },
+    {
       "title": "84GB 的诱惑,9 万的代价PRO 5500 到货前,五张专业卡怎么选?6.8 万到 15 万,价差 2.2 倍,选错一次亏一年",
       "publisher": "云显智达",
       "source_type": "公众号",
@@ -703,26 +723,6 @@
       "found_via": "搜狗微信",
       "snippet": "NVIDIA RTX PRO 5500 BLACKWELL 及配件产品.杭微天算与上海华鲲振宇智能科技有限责任公司(以下简称“华鲲振宇”或“供方...",
       "seen_at": "2026-11-21"
-    },
-    {
-      "title": "距北京68公里,规划9.7万标准机柜:走进中国联通怀来大数据创新产业园,看京津冀算力新格局",
-      "publisher": "算电局",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E8%B7%9D%E5%8C%97%E4%BA%AC68%E5%85%AC%E9%87%8C%2C%E8%A7%84%E5%88%929.7%E4%B8%87%E6%A0%87%E5%87%86%E6%9C%BA%E6%9F%9C%3A%E8%B5%B0%E8%BF%9B%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9A%E6%80%80%E6%9D%A5%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%9B%E6%96%B0%E4%BA%A7%E4%B8%9A%E5%9B%AD%2C%E7%9C%8B%E4%BA%AC%E6%B4%A5%E5%86%80%E7%AE%97%E5%8A%9B%E6%96%B0%E6%A0%BC%E5%B1%80",
-      "published_at": "2026-11-13",
-      "found_via": "搜狗微信",
-      "snippet": "看懂绿电如何变成绿色算力RTX PRO 5500现状与价格调研:84GB大显存受到关注#算电协同#算力#电力#张家口#京津冀#智算中心#...",
-      "seen_at": "2026-11-21"
-    },
-    {
-      "title": "Huang's exit and US scrutiny imperil $3 billion of Chinese AI data centers built on Nvidia chips, Reuters reports",
-      "publisher": "mlq.ai 转述路透",
-      "source_type": "其他",
-      "url": "https://mlq.ai/news/huangs-exit-and-us-scrutiny-imperil-3-billion-of-chinese-ai-data-centers-built-on-nvidia-chips-reuters-reports/",
-      "published_at": "2026-11-13",
-      "found_via": "WebSearch",
-      "snippet": "转述路透：超过30亿美元的中国AI数据中心项目围绕被禁出口的英伟达处理器设计，面临美方收紧风险；未找到路透原文。",
-      "seen_at": "2026-11-14"
     }
   ],
   "mentions": [
@@ -833,8 +833,8 @@
       "wechat": 2
     },
     "2026-11-23": {
-      "media": 2,
-      "wechat": 0
+      "media": 3,
+      "wechat": 2
     }
   },
   "take": {

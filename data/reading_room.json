@@ -1,5 +1,23 @@
 [
  {
+  "url": "https://www.sohu.com/a/1104953908_122660429",
+  "title": "英伟达失去大半中国市场之后，最危险的对手正在中国长出来",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-23",
+  "scope": "context",
+  "snippets": [
+   "英伟达在中国数据中心人工智能芯片市场的份额掉到34%这件事，放在两年前没人敢信。",
+   "但国际数据公司拿到的数据不会撒谎：2026年上半年，英伟达在华人工智能加速芯片出货67.8万颗，同比砍掉44%，华为昇腾以57.2万颗跟到28%，两者差距从一年",
+   "95%到34%，丢的不只是订单",
+   "英伟达首席财务官在2026财年一季度电话会上说得很直白：当季没有向中国大陆发过任何一颗上一代高端数据中心芯片，而禁令生效前这块业务一个季度就是46亿美元，公司反",
+   "2026年9月，深度求索公司开源了面向华为昇腾950的完整编程工具包，核心是一种替代英伟达编程平台的编译语言，定位就是绕开那道墙，配套的计算工具、通信工具、算法",
+   "国产芯片在能效上已经反超英伟达特供版三到五成，政府从2025年11月起对大型数据中心给出最高50%的能源成本补贴，直接把国产方案的整体使用成本压到客户愿意主动切"
+  ],
+  "seen_at": "2026-11-23",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.rfi.fr/cn/%E4%B8%93%E6%A0%8F%E6%A3%80%E7%B4%A2/%E5%8D%B0%E5%A4%AA%E7%BA%B5%E8%A7%88/20261122-%E5%8F%B0%E6%B9%BE%E5%AD%A6%E8%80%85%E5%BC%A0%E6%98%B1%E8%B0%A6%E8%A7%A3%E8%AF%BB%E8%8B%B1%E4%BC%9F%E8%BE%BE%E9%A3%8E%E6%B3%A2-%E7%BE%8E%E5%9B%BD%E8%83%BD%E5%90%A6%E5%A0%B5%E4%BD%8F%E4%B8%AD%E5%9B%BD%E8%8E%B7%E5%8F%96%E5%85%88%E8%BF%9Bai%E7%AE%97%E5%8A%9B%E7%9A%84%E6%B8%A0%E9%81%93",
   "title": "台湾学者张昱谦（Kenny Chang）解读英伟达风波：美国能否堵住中国 ...",
   "publisher": "法广",
@@ -122,6 +140,17 @@
   "snippets": [
    "DeepSeek-V3总参数6710亿，每个词元激活370亿，训练花掉278.8万英伟达H800 GPU小时。"
   ],
+  "seen_at": "2026-11-23",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1103693352_121752852",
+  "title": "完全断供！英伟达临时CEO对外公布，将不再向中国提供H200芯片",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-20",
+  "scope": "context",
+  "snippets": [],
   "seen_at": "2026-11-23",
   "found_via": "Bing 新闻"
  },
@@ -585,35 +614,6 @@
   "snippets": [
    "Nvidia shares are down 16% since Nov."
   ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.sina.com.cn/roll/2026-11-17/doc-iniyzhhm7675952.shtml",
-  "title": "【涨停直击】超100万手封单！华为算力概念股涨停",
-  "publisher": "新浪财经",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-17",
-  "scope": "context",
-  "snippets": [
-   "归母净利润亏损1413万元，同比下降106.5%。",
-   "02 / “股神”巴菲特新动作：捐赠55亿美元伯克希尔股票，四家家族基金会获赠",
-   "01 / 黄仁勋讨论重掌英伟达 硅谷盟友游说支持回归",
-   "05 / 财经早报丨证监会：进一步深化市场稳定长效机制研究，消息称黄仁勋考虑重返英伟达担任CEO丨2026年11月16日",
-   "06 / 英媒：黄仁勋考虑重返英伟达",
-   "03 / 部分银行美元存款利率突破4% 投资者还想等等看"
-  ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.tweaktown.com/news/114710/us-moves-to-cut-chinas-remote-access-to-nvidia-ai-chips-through-overseas-data-centers/index.html",
-  "title": "US moves to cut China's remote access to NVIDIA AI chips through overseas data centers",
-  "publisher": "TweakTown",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [],
   "seen_at": "2026-11-18",
   "found_via": "Bing 新闻"
  }
