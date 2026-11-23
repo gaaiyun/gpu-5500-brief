@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-24T05:14:50+08:00",
+  "updated_at": "2026-11-24T07:06:53+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -22,6 +22,44 @@
     "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
   ],
   "items": [
+    {
+      "id": "reuters-20261123-5500-cancellations",
+      "title": "路透：部分中国客户开始取消RTX PRO 5500订单，担心该卡无法入境",
+      "published_at": "2026-11-23",
+      "publisher": "路透社（经英为财情转载）",
+      "source_type": "主流媒体",
+      "scope": "5500",
+      "url": "https://www.investing.com/news/stock-market-news/how-nvidias-billiondollar-turnaround-in-china-is-threatened-by-huangs-exit-5044929",
+      "grade": "B",
+      "summary": "路透援引两名知情人士称，部分中国客户已开始取消RTX PRO 5500订单，原因是担心该卡可能不被允许进入中国。路透表示无法确定取消规模，也无法确定美国或中国是否会限制发货。报道发生在黄仁勋辞职之后。",
+      "impact": "推断：取消若扩大，会释放部分已排队的配额，但也说明买家对交付和入境风险的定价在上升；大陆报价短期可能分化。",
+      "watch": "取消规模，以及北京是否表态放行",
+      "corroboration": [
+        "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/11/23/how-nvidias-billion-dollar-turnaround-in-china-is-threatened-by-huangs-exit/"
+      ],
+      "claims": [],
+      "checked_at": "2026-11-24",
+      "ci_checked": "2026-11-24"
+    },
+    {
+      "id": "digitimes-20261123-sea-shipment-pause",
+      "title": "Digitimes：部分英伟达服务器供应商暂停向东南亚发货",
+      "published_at": "2026-11-23",
+      "publisher": "腾讯新闻转述Digitimes",
+      "source_type": "行业媒体",
+      "scope": "context",
+      "url": "https://news.qq.com/rain/a/20261123A0DLR300",
+      "grade": "B",
+      "summary": "2026年11月23日，Digitimes报道称，部分英伟达服务器供应商已暂停向东南亚发货。转述文章同时说明，公开报道尚未披露暂停发货的具体供应商名单、受影响客户和恢复时间。",
+      "impact": "推断：经东南亚转口的合规算力渠道收紧，部分需求可能转向不受管制、可直接入境的5500，推高其询价。",
+      "watch": "暂停范围、供应商名单和恢复时间",
+      "corroboration": [
+        "https://www.sohu.com/a/1104543956_121207965"
+      ],
+      "claims": [],
+      "checked_at": "2026-11-24",
+      "ci_checked": "2026-11-24"
+    },
     {
       "id": "leiphone-20261118-buyers-hesitate",
       "title": "雷峰网：黄仁勋归期未决，B300现货价与昇腾950排期成买家顾虑",
@@ -380,47 +418,6 @@
       "claims": [],
       "checked_at": "2026-11-05",
       "found_via": "Bing 新闻"
-    },
-    {
-      "id": "bloomberg-20261104-udn",
-      "title": "彭博：中国客户约600万颗订单，未来4个月预计只到约1%",
-      "published_at": "2026-11-04",
-      "publisher": "彭博（经济日报转述）",
-      "source_type": "主流媒体",
-      "url": "https://money.udn.com/money/story/5603/9856924",
-      "grade": "B",
-      "summary": "彭博援引知情人士：阿里、腾讯、字节等共订购约600万颗，每颗超过1.1万美元，总值约700亿美元；未来4个月预计只到数万颗，约占1%。首批数千颗预计年底前，第二批数万颗预计明年2月左右，目前只有这两批获确认。",
-      "impact": "到货远低于路透此前的5%-10%，短交期货源会更紧；单价折算后仍接近8.5万-9万元基准。",
-      "watch": "核实首批到货数量和渠道可得性",
-      "corroboration": [
-        "https://www.caiwennews.com/article/1683955.shtml",
-        "https://www.bloomberg.com/news/articles/2026-11-04/nvidia-china-clients-to-get-1-of-70-billion-rtx-chips-ordered",
-        "https://news.qq.com/rain/a/20261104A07XHU00",
-        "https://news.mydrivers.com/1/1163/1163119.htm",
-        "https://finance.sina.com.cn/tech/discovery/2026-11-04/doc-inixqhkw1566166.shtml",
-        "https://en.sedaily.com/international/2026/11/04/nvidia-to-fill-just-1-percent-of-chinese-chip-orders-amid"
-      ],
-      "claims": [],
-      "checked_at": "2026-11-04",
-      "found_via": "人工检索"
-    },
-    {
-      "id": "ft-20261104-oracle-tencent",
-      "title": "FT：甲骨文取消与腾讯的海外GPU租赁交易",
-      "published_at": "2026-11-04",
-      "publisher": "搜狐（转述金融时报）",
-      "source_type": "主流媒体",
-      "scope": "context",
-      "url": "https://www.sohu.com/a/1097174503_122967788",
-      "grade": "B",
-      "summary": "《金融时报》11月4日报道：美国云计算企业甲骨文取消了与腾讯一项估计价值约70亿美元的海外GPU租赁交易。此前一天，FT还报道英伟达要求云客户至少51%的服务卖给非中国公司。",
-      "impact": "腾讯经海外云租算力的路径收窄，算力缺口更依赖境内可采购的卡，对5500需求偏多。这是推断，腾讯和甲骨文均未在摘录中确认。",
-      "watch": "腾讯11月18日财报的资本开支和到货说法",
-      "corroboration": [
-        "https://www.bloomberg.com/news/articles/2026-11-04/oracle-scraps-7-billion-deal-to-lease-chips-to-tencent-ft-says"
-      ],
-      "claims": [],
-      "checked_at": "2026-11-06"
     }
   ],
   "leads": [
@@ -846,8 +843,8 @@
     }
   },
   "take": {
-    "date": "2026-11-21",
-    "text": "今天新增两条背景：美方批准的H200类特批通道已关闭，阿里的海外通道又被调查，两者都把需求推向不受限的5500。72小时内仍无5500新报价或批文，样卡12月、商业交付2027年一季度节点不变。"
+    "date": "2026-11-24",
+    "text": "今天新增：路透称部分中国客户已开始取消5500订单，担心该卡无法入境，规模不明；Digitimes称部分服务器供应商暂停向东南亚发货。均无新报价或批文，样卡11月底、首批数千颗年底的节点未变。"
   },
   "sweep": {
     "date": "2026-11-24",
@@ -857,7 +854,7 @@
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "云端条目未通过复核 https://finance.yahoo.com/technology/ai/articles/u-approved-879-000-nvidia-142855736.html：原文没有这些数字"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
     ]
   }
 }
