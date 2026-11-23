@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-23T16:56:25+08:00",
+  "updated_at": "2026-11-24T05:14:50+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -425,6 +425,16 @@
   ],
   "leads": [
     {
+      "title": "同一颗GB202芯片,两种截然不同的命运:RTX 5090与RTX PRO 5500深度解析!",
+      "publisher": "中能云计算",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=%E5%90%8C%E4%B8%80%E9%A2%97GB202%E8%8A%AF%E7%89%87%2C%E4%B8%A4%E7%A7%8D%E6%88%AA%E7%84%B6%E4%B8%8D%E5%90%8C%E7%9A%84%E5%91%BD%E8%BF%90%3ARTX%205090%E4%B8%8ERTX%20PRO%205500%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%21",
+      "published_at": "2026-11-23",
+      "found_via": "搜狗微信",
+      "snippet": "RTX PRO 5500:容量与可靠性的胜利专业卡则选择了完全不同的路线.RTX PRO 5500将显存容量拔高到了惊人的84GB,是RTX ...",
+      "seen_at": "2026-11-24"
+    },
+    {
       "title": "RTX PRO 5500与Intel CRI来了,国产加速卡如何应对?",
       "publisher": "Quantum AI Infra",
       "source_type": "公众号",
@@ -482,7 +492,7 @@
       "published_at": "2026-11-20",
       "found_via": "云端条目未通过复核",
       "snippet": "雅虎财经报道，Commerce approved about 879,000 of 3.4 million requested Nvidia and AMD China chips，批准期为2025年12月至2026年5月，涵盖H200等。英伟达称批准附带严格条件和有限数量，其第三财季向中国出货24亿美元Hopper数",
-      "seen_at": "2026-11-23"
+      "seen_at": "2026-11-24"
     },
     {
       "title": "黄仁勋一辞职,RTX 5090 涨价?5090降价?",
@@ -713,16 +723,6 @@
       "found_via": "搜狗微信",
       "snippet": "英伟达那600万张RTX Pro 5500、总值约700亿美元的订单,未来四个月预计只能到货约1%,算力仍然紧.动作 先做配套件,不做整...",
       "seen_at": "2026-11-20"
-    },
-    {
-      "title": "RTX PRO 5500 为什么一卡难求？84GB 显存参数、供货数据与国内首批到货说明",
-      "publisher": "掘金",
-      "source_type": "其他",
-      "url": "https://juejin.cn/post/7706382935100899368",
-      "published_at": "2026-11-14",
-      "found_via": "WebSearch",
-      "snippet": "自称介绍国内首批到货平台，来源性质不明，未核实。",
-      "seen_at": "2026-11-15"
     }
   ],
   "mentions": [
@@ -842,7 +842,7 @@
     },
     "2026-11-23": {
       "media": 7,
-      "wechat": 2
+      "wechat": 4
     }
   },
   "take": {
@@ -850,7 +850,7 @@
     "text": "今天新增两条背景：美方批准的H200类特批通道已关闭，阿里的海外通道又被调查，两者都把需求推向不受限的5500。72小时内仍无5500新报价或批文，样卡12月、商业交付2027年一季度节点不变。"
   },
   "sweep": {
-    "date": "2026-11-23",
+    "date": "2026-11-24",
     "candidates": 1,
     "read": 1,
     "added": [],
