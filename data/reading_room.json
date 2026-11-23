@@ -18,6 +18,56 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://news.qq.com/rain/a/20261123A0AWT400",
+  "title": "英伟达高层变动引韩国AI产业链担忧，决策模式是否会发生变化？",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-23",
+  "scope": "context",
+  "snippets": [
+   "另据韩国国际贸易协会的数据，前10个月韩国半导体出口3967.6亿美元，同比暴涨193.1%，占总出口42.7%，几乎是去年同期24.4%的两倍。",
+   "公开信息显示，去年 黄仁勋 访问韩国时，与韩国产业界敲定了超26万张 GPU 采购计划，以及追加预算采购了约13100张 B200 GPU 及 国家6号超算 搭",
+   "以韩国最大的本土搜索引擎NAVER为例，虽然英伟达已完成对该公司10亿美元股权投资并签署最高90亿美元 算力基建 协议，但后续算力扩容及追加投资仍需要看英伟达新",
+   "不仅仅是NAVER一家企业，现代汽车也非常关注此次英伟达人事变动，公司与英伟达基于 Blackwell 芯片搭建 AI工厂 及2028年自动驾驶车型量产计划均建",
+   "在韩国经济中，私人消费占半壁江山，韩国央行对意外下滑给出的理由是，7月股市回调导致金融消费走弱，与此同时，现代汽车在今年8月发起十年来首次罢工，导致乘用车交付延"
+  ],
+  "seen_at": "2026-11-23",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1105166346_121974103",
+  "title": "快讯！英伟达停止对华供应 H200 芯片，中国外交部通告全球：中方已 ...",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-22",
+  "scope": "context",
+  "snippets": [
+   "因应美方强硬出口政策，英伟达突然宣布停止向中国市场交付H200系列 AI 数据中心芯片。",
+   "据公开数据，第三季度的销售收入已经高达 24?亿美元，但随即被抛到零的未来预测，宣告了这条通道的彻底消失。",
+   "3) 中国采购量不得超过美国本土的一半，且美方收取约 25?% 的环节费用。"
+  ],
+  "seen_at": "2026-11-23",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1105164192_122223771",
+  "title": "芯片战争作者提醒：美国制裁英伟达，中国却握牢AI底层配套链条！",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-22",
+  "scope": "context",
+  "snippets": [
+   "微软、谷歌、亚马逊、Meta、思科和CoreWeave等企业却向白宫表达担忧，认为替代中国供应商可能需要长达10年。",
+   "2026年5月31日，英伟达宣布Vera Rubin平台进入全面生产阶段。",
+   "公司公布，这一平台背后有遍布30个国家、超过350家工厂的供应链体系，其中中国台湾地区有150家合作伙伴参与。",
+   "路透社11月17日指出，美国Coherent和Lumentum虽然拥有相关技术，但短期内缺乏足以替代中国供应商的规模化供应能力。",
+   "按照路透社披露，企业向政府反映，替代中国供应商可能需要长达10年。",
+   "深南电路2026年11月9日披露的募集说明书援引Prismark数据指出，2025年中国大陆PCB产值达到496.52亿美元，占全球产值的57.85%。"
+  ],
+  "seen_at": "2026-11-23",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.rfi.fr/cn/%E4%B8%93%E6%A0%8F%E6%A3%80%E7%B4%A2/%E5%8D%B0%E5%A4%AA%E7%BA%B5%E8%A7%88/20261122-%E5%8F%B0%E6%B9%BE%E5%AD%A6%E8%80%85%E5%BC%A0%E6%98%B1%E8%B0%A6%E8%A7%A3%E8%AF%BB%E8%8B%B1%E4%BC%9F%E8%BE%BE%E9%A3%8E%E6%B3%A2-%E7%BE%8E%E5%9B%BD%E8%83%BD%E5%90%A6%E5%A0%B5%E4%BD%8F%E4%B8%AD%E5%9B%BD%E8%8E%B7%E5%8F%96%E5%85%88%E8%BF%9Bai%E7%AE%97%E5%8A%9B%E7%9A%84%E6%B8%A0%E9%81%93",
   "title": "台湾学者张昱谦（Kenny Chang）解读英伟达风波：美国能否堵住中国 ...",
   "publisher": "法广",
@@ -28,6 +78,22 @@
    "RFI：这件事情虽然是近期才曝光的，但《纽约时报》的报道提到，其实早在今年5月特朗普准备访华的时候，就已经有人向他提醒过，英伟达可能存在一些嫌疑或者相关问题。",
    "但你可以看到，整个英伟达的芯片出口政策，不管是H200还是别的系列，特朗普其实都是慢慢地开放，一点一点地开小门。",
    "但我们现在从美国的OpenAI来看，它的收入大概有600亿美元左右。"
+  ],
+  "seen_at": "2026-11-23",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261123A068PI00",
+  "title": "英伟达不卖芯片给中国了，字节拿什么训练豆包？",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-22",
+  "scope": "context",
+  "snippets": [
+   "2026年11月17日 ，英伟达临时CEO 科莱特·克雷斯 在财报电话会上宣布了这样一个事实。",
+   "从 2025年 开始，字节就悄悄地调整了算力供应链。",
+   "2026年6月 有报道称，字节计划向 天数智芯 采购不少于 5 万颗 推理芯片 ，用作 豆包 终端推理。",
+   "字节走这条路，一笔 4.8亿 美元的GPU采购贷款已经开始了。"
   ],
   "seen_at": "2026-11-23",
   "found_via": "Bing 新闻"
@@ -556,63 +622,6 @@
    "H200对华销售受阻，影响会沿链条传导：云服务商调整采购计划，服务器厂商重排产品配置，渠道商管理库存风险，最终客户重新评估算力建设节奏。",
    "H200停售事件表明，中美科技竞争已不局限于单点芯片性能，而是扩展到出口管制、关税工具、供应链韧性和软件生态的复合竞争。",
    "H200停售短期内会影响部分高端训练集群的采购预期，但也会推动行业更重视异构算力池、国产芯片适配和算网调度能力。"
-  ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.eet-china.com/news/202611183845.html",
-  "title": "英伟达警告芯片买家：远程向中国提供AI算力或面临美国法律风险",
-  "publisher": "电子工程专辑",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-17",
-  "scope": "context",
-  "snippets": [
-   "11月18日消息，据CNBC援引知情人士报道，英伟达近几个月持续向芯片买家发出提醒，称中国企业通过海外云服务远程获取其人工智能芯片算力，可能使英伟达及相关客户面",
-   "因此，英伟达目前明确表示，不会向那些将超过50%的图形处理器（GPU）出租给中国企业的客户出售芯片。",
-   "此前，《金融时报》也曾报道称，英伟达已口头要求数据中心客户在未来的合同中，将至少51%的算力服务分配给非中国客户。",
-   "美国财政部长斯科特·贝森特11月15日在黄仁勋意外辞去CEO职务后，要求对英伟达进行重大改组，并建议审查公司其他高管，以确保其遵守出口管制规定。",
-   "英伟达此前在8月提交的监管文件中表示，公司致力于“严格遵守所有适用的出口管制规定”。"
-  ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/articles/wake-jensen-huang-scandal-nvidia-150200670.html",
-  "title": "In the Wake of Jensen Huang Scandal, Nvidia Establishes National Security and Export Control Committ",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-17",
-  "scope": "context",
-  "snippets": [
-   "In order to tighten up the company's weak points in the face of a scandal that m"
-  ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-halt-chip-sales-data-081754255.html",
-  "title": "Nvidia to halt chip sales to data centers renting over half to China - report",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-17",
-  "scope": "context",
-  "snippets": [
-   "The Financial Times reported earlier this month that Nvidia had verbally told da",
-   "5 that Chinese artificial intelligence startup Moonshot AI had sought access to "
-  ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-forms-export-control-board-105132905.html",
-  "title": "Nvidia Forms Export Control Board Committee After Chip Curbs",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-17",
-  "scope": "context",
-  "snippets": [
-   "Nvidia shares are down 16% since Nov."
   ],
   "seen_at": "2026-11-18",
   "found_via": "Bing 新闻"

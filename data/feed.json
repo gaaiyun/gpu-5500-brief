@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-23T11:55:52+08:00",
+  "updated_at": "2026-11-23T16:56:25+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -425,6 +425,16 @@
   ],
   "leads": [
     {
+      "title": "RTX PRO 5500与Intel CRI来了,国产加速卡如何应对?",
+      "publisher": "Quantum AI Infra",
+      "source_type": "公众号",
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%E4%B8%8EIntel%20CRI%E6%9D%A5%E4%BA%86%2C%E5%9B%BD%E4%BA%A7%E5%8A%A0%E9%80%9F%E5%8D%A1%E5%A6%82%E4%BD%95%E5%BA%94%E5%AF%B9%3F",
+      "published_at": "2026-11-23",
+      "found_via": "搜狗微信",
+      "snippet": "RTX PRO 5500与Intel产品示意图三句话RTX PRO 5500Intel CRI定... SMM在2026年10月13日记录过9.5万元/张预售报价.历史市场估...",
+      "seen_at": "2026-11-23"
+    },
+    {
       "title": "同是84G显存|RTX PRO 5500和6000D怎么选",
       "publisher": "昇伟线程",
       "source_type": "公众号",
@@ -713,19 +723,17 @@
       "found_via": "WebSearch",
       "snippet": "自称介绍国内首批到货平台，来源性质不明，未核实。",
       "seen_at": "2026-11-15"
-    },
-    {
-      "title": "30000 张 PRO 5500 GPU大单",
-      "publisher": "云技术",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=30000%20%E5%BC%A0%20PRO%205500%20GPU%E5%A4%A7%E5%8D%95",
-      "published_at": "2026-11-13",
-      "found_via": "搜狗微信",
-      "snippet": "NVIDIA RTX PRO 5500 BLACKWELL 及配件产品.杭微天算与上海华鲲振宇智能科技有限责任公司(以下简称“华鲲振宇”或“供方...",
-      "seen_at": "2026-11-21"
     }
   ],
   "mentions": [
+    {
+      "date": "2026-11-23",
+      "publisher": "Quantum AI Infra",
+      "low": 95000,
+      "high": 95000,
+      "url": "https://weixin.sogou.com/weixin?type=2&query=RTX%20PRO%205500%E4%B8%8EIntel%20CRI%E6%9D%A5%E4%BA%86%2C%E5%9B%BD%E4%BA%A7%E5%8A%A0%E9%80%9F%E5%8D%A1%E5%A6%82%E4%BD%95%E5%BA%94%E5%AF%B9%3F",
+      "found_via": "搜狗微信"
+    },
     {
       "date": "2026-11-18",
       "publisher": "IT满江红DYH",
@@ -833,7 +841,7 @@
       "wechat": 2
     },
     "2026-11-23": {
-      "media": 3,
+      "media": 7,
       "wechat": 2
     }
   },
