@@ -1,60 +1,58 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-24T05:14:50+08:00",
-  "agent": "actions-sweep+cloud-routine",
+  "updated_at": "2026-11-24T07:20:00+08:00",
+  "agent": "cloud-routine",
   "searched": [
-    "RTX PRO 5500 China price shipment allocation",
-    "RTX PRO 5500 国内 报价 到货 渠道",
-    "英伟达 中国 出口 H200 Hopper 停止 工作站 5500 采购",
-    "Megaspeed Alibaba Nvidia chips Singapore report",
-    "昇腾950 寒武纪 价格 供应 11月",
-    "GDDR7 price supply shortage November 2026",
-    "丽台 PNY 浪潮 联想 RTX PRO 5500 服务器 交付",
-    "BIS export controls China chips House Foreign Affairs 879,000 approvals",
-    "Nvidia stops H200 China Kress earnings call Hopper $2.4 billion",
-    "House Foreign Affairs data Commerce approved Nvidia AMD chips China",
-    "腾讯 阿里 三季度 资本开支 GPU 供应 芯片 财报 11月",
-    "RTX 5090 价格 大陆 11月 RTX PRO 6000 涨价",
-    "算力租赁 价格 11月 H200 B300 租金",
-    "Nvidia Rubin TSMC capacity allocation RTX PRO supply November",
-    "天阳科技 游族网络 RTX PRO 5500 采购 公告 交付 进展"
+    "RTX Pro 5500 China shipment allocation",
+    "RTX PRO 5500 报价 现货 到货 渠道",
+    "Nvidia China RTX Pro Bloomberg Reuters November 2026",
+    "英伟达 5500 采购 公告 算力租赁 服务器 浪潮 联想",
+    "Reuters Chinese customers cancel Nvidia RTX Pro 5500 orders",
+    "英伟达 RTX PRO 5500 订单 取消 退单 路透",
+    "昇腾950 寒武纪 价格 交付 订单 排期",
+    "RTX 5090 RTX PRO 6000 国内 价格 上涨",
+    "GDDR7 price shortage Rubin TSMC capacity",
+    "NVIDIA RTX PRO 5500 Blackwell price distributor listing stock",
+    "Digitimes Nvidia server suppliers pause shipments Southeast Asia",
+    "算力租赁 价格 11月 GPU 租金 英伟达",
+    "BIS export controls China Nvidia chips new rule November 2026"
   ],
   "items": [
     {
-      "id": "yahoo-20261120-879k-approvals",
-      "title": "美国商务部批准约879,000颗英伟达和AMD对华芯片，申请共3.4 million颗",
-      "published_at": "2026-11-20",
-      "publisher": "雅虎财经",
+      "id": "reuters-20261123-5500-cancellations",
+      "title": "路透：部分中国客户开始取消RTX PRO 5500订单，担心该卡无法入境",
+      "published_at": "2026-11-23",
+      "publisher": "路透社（经英为财情转载）",
       "source_type": "主流媒体",
-      "scope": "context",
-      "url": "https://finance.yahoo.com/technology/ai/articles/u-approved-879-000-nvidia-142855736.html",
+      "scope": "5500",
+      "url": "https://www.investing.com/news/stock-market-news/how-nvidias-billiondollar-turnaround-in-china-is-threatened-by-huangs-exit-5044929",
       "grade": "B",
-      "summary": "雅虎财经报道，Commerce approved about 879,000 of 3.4 million requested Nvidia and AMD China chips，批准期为2025年12月至2026年5月，涵盖H200等。英伟达称批准附带严格条件和有限数量，其第三财季向中国出货24亿美元Hopper数据中心产品。",
-      "impact": "推断：H200等特批通道已关闭，受限数据中心卡之外的合规算力缺口转向不受限的5500，大陆买家抢货压力更大。",
-      "watch": "国会是否收紧；5500样卡12月是否到位",
+      "summary": "路透援引两名知情人士称，部分中国客户已开始取消RTX PRO 5500订单，原因是担心该卡可能不被允许进入中国。路透表示无法确定取消规模，也无法确定美国或中国是否会限制发货。报道发生在黄仁勋辞职之后。",
+      "impact": "推断：取消若扩大，会释放部分已排队的配额，但也说明买家对交付和入境风险的定价在上升；大陆报价短期可能分化。",
+      "watch": "取消规模，以及北京是否表态放行",
       "corroboration": [
-        "https://finance.yahoo.com/technology/ai/articles/trump-treasury-secretary-keeps-nvidia-215837212.html"
+        "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/11/23/how-nvidias-billion-dollar-turnaround-in-china-is-threatened-by-huangs-exit/"
       ],
       "claims": [],
-      "checked_at": "2026-11-20"
+      "checked_at": "2026-11-24"
     },
     {
-      "id": "yahoo-20261118-megaspeed-alibaba",
-      "title": "英伟达Megaspeed调查牵出阿里：新加坡子公司预付款超41亿美元",
-      "published_at": "2026-11-18",
-      "publisher": "雅虎财经",
-      "source_type": "主流媒体",
+      "id": "digitimes-20261123-sea-shipment-pause",
+      "title": "Digitimes：部分英伟达服务器供应商暂停向东南亚发货",
+      "published_at": "2026-11-23",
+      "publisher": "腾讯新闻转述Digitimes",
+      "source_type": "行业媒体",
       "scope": "context",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-megaspeed-probe-leads-alibaba-052705451.html",
+      "url": "https://news.qq.com/rain/a/20261123A0DLR300",
       "grade": "B",
-      "summary": "雅虎财经称，做空机构Culper Research报告指阿里新加坡子公司在Megaspeed马来西亚分支质押业务后，披露超过$4.1 billion的预付款。纽约时报称Megaspeed替阿里运营英伟达芯片，信源为五名知情人士。Megaspeed否认转运，阿里和Megaspeed未回应询问，指控未获证实。",
-      "impact": "推断：海外数据中心和转口通道被查，阿里等大厂更依赖境内可交付的5500，拿货争夺加剧。",
-      "watch": "美国和新加坡调查结论；阿里是否回应",
+      "summary": "2026年11月23日，Digitimes报道称，部分英伟达服务器供应商已暂停向东南亚发货。转述文章同时说明，公开报道尚未披露暂停发货的具体供应商名单、受影响客户和恢复时间。",
+      "impact": "推断：经东南亚转口的合规算力渠道收紧，部分需求可能转向不受管制、可直接入境的5500，推高其询价。",
+      "watch": "暂停范围、供应商名单和恢复时间",
       "corroboration": [
-        "https://www.sohu.com/a/1104169829_121945034"
+        "https://www.sohu.com/a/1104543956_121207965"
       ],
       "claims": [],
-      "checked_at": "2026-11-20"
+      "checked_at": "2026-11-24"
     },
     {
       "id": "leiphone-20261118-buyers-hesitate",
@@ -880,8 +878,8 @@
     }
   },
   "take": {
-    "date": "2026-11-21",
-    "text": "今天新增两条背景：美方批准的H200类特批通道已关闭，阿里的海外通道又被调查，两者都把需求推向不受限的5500。72小时内仍无5500新报价或批文，样卡12月、商业交付2027年一季度节点不变。"
+    "date": "2026-11-24",
+    "text": "今天新增：路透称部分中国客户已开始取消5500订单，担心该卡无法入境，规模不明；Digitimes称部分服务器供应商暂停向东南亚发货。均无新报价或批文，样卡11月底、首批数千颗年底的节点未变。"
   },
   "sweep": {
     "date": "2026-11-24",
