@@ -1,5 +1,213 @@
 [
  {
+  "url": "https://www.sohu.com/a/1105269881_122654001",
+  "title": "芯片战争作者提醒：美国盯着英伟达，中国却捏着 AI 一半的供应链！",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-23",
+  "scope": "context",
+  "snippets": [],
+  "seen_at": "2026-11-24",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1105166346_121974103",
+  "title": "快讯！英伟达停止对华供应 H200 芯片，中国外交部通告全球：中方已 ...",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-23",
+  "scope": "context",
+  "snippets": [
+   "因应美方强硬出口政策，英伟达突然宣布停止向中国市场交付H200系列 AI 数据中心芯片。",
+   "据公开数据，第三季度的销售收入已经高达 24?亿美元，但随即被抛到零的未来预测，宣告了这条通道的彻底消失。",
+   "3) 中国采购量不得超过美国本土的一半，且美方收取约 25?% 的环节费用。"
+  ],
+  "seen_at": "2026-11-24",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1104953908_122660429",
+  "title": "英伟达失去大半中国市场之后，最危险的对手正在中国长出来",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-23",
+  "scope": "context",
+  "snippets": [
+   "英伟达在中国数据中心人工智能芯片市场的份额掉到34%这件事，放在两年前没人敢信。",
+   "但国际数据公司拿到的数据不会撒谎：2026年上半年，英伟达在华人工智能加速芯片出货67.8万颗，同比砍掉44%，华为昇腾以57.2万颗跟到28%，两者差距从一年",
+   "95%到34%，丢的不只是订单",
+   "英伟达首席财务官在2026财年一季度电话会上说得很直白：当季没有向中国大陆发过任何一颗上一代高端数据中心芯片，而禁令生效前这块业务一个季度就是46亿美元，公司反",
+   "2026年9月，深度求索公司开源了面向华为昇腾950的完整编程工具包，核心是一种替代英伟达编程平台的编译语言，定位就是绕开那道墙，配套的计算工具、通信工具、算法",
+   "国产芯片在能效上已经反超英伟达特供版三到五成，政府从2025年11月起对大型数据中心给出最高50%的能源成本补贴，直接把国产方案的整体使用成本压到客户愿意主动切"
+  ],
+  "seen_at": "2026-11-24",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261123A0DLR300",
+  "title": "英伟达服务器伙伴暂停东南亚发货：AI算力供应链出现“合规交付墙”",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-23",
+  "scope": "context",
+  "snippets": [
+   "2026年11月23日，Digitimes报道称，部分英伟达服务器供应商已暂停向东南亚发货；",
+   "截至2026年11月23日，公开报道尚未披露暂停发货的具体供应商名单、受影响客户和恢复时间。"
+  ],
+  "seen_at": "2026-11-24",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261123A0AWT400",
+  "title": "英伟达高层变动引韩国AI产业链担忧，决策模式是否会发生变化？",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-23",
+  "scope": "context",
+  "snippets": [
+   "另据韩国国际贸易协会的数据，前10个月韩国半导体出口3967.6亿美元，同比暴涨193.1%，占总出口42.7%，几乎是去年同期24.4%的两倍。",
+   "公开信息显示，去年 黄仁勋 访问韩国时，与韩国产业界敲定了超26万张 GPU 采购计划，以及追加预算采购了约13100张 B200 GPU 及 国家6号超算 搭",
+   "以韩国最大的本土搜索引擎NAVER为例，虽然英伟达已完成对该公司10亿美元股权投资并签署最高90亿美元 算力基建 协议，但后续算力扩容及追加投资仍需要看英伟达新",
+   "不仅仅是NAVER一家企业，现代汽车也非常关注此次英伟达人事变动，公司与英伟达基于 Blackwell 芯片搭建 AI工厂 及2028年自动驾驶车型量产计划均建",
+   "在韩国经济中，私人消费占半壁江山，韩国央行对意外下滑给出的理由是，7月股市回调导致金融消费走弱，与此同时，现代汽车在今年8月发起十年来首次罢工，导致乘用车交付延"
+  ],
+  "seen_at": "2026-11-23",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1105164192_122223771",
+  "title": "芯片战争作者提醒：美国制裁英伟达，中国却握牢AI底层配套链条！",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-22",
+  "scope": "context",
+  "snippets": [
+   "微软、谷歌、亚马逊、Meta、思科和CoreWeave等企业却向白宫表达担忧，认为替代中国供应商可能需要长达10年。",
+   "2026年5月31日，英伟达宣布Vera Rubin平台进入全面生产阶段。",
+   "公司公布，这一平台背后有遍布30个国家、超过350家工厂的供应链体系，其中中国台湾地区有150家合作伙伴参与。",
+   "路透社11月17日指出，美国Coherent和Lumentum虽然拥有相关技术，但短期内缺乏足以替代中国供应商的规模化供应能力。",
+   "按照路透社披露，企业向政府反映，替代中国供应商可能需要长达10年。",
+   "深南电路2026年11月9日披露的募集说明书援引Prismark数据指出，2025年中国大陆PCB产值达到496.52亿美元，占全球产值的57.85%。"
+  ],
+  "seen_at": "2026-11-23",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.rfi.fr/cn/%E4%B8%93%E6%A0%8F%E6%A3%80%E7%B4%A2/%E5%8D%B0%E5%A4%AA%E7%BA%B5%E8%A7%88/20261122-%E5%8F%B0%E6%B9%BE%E5%AD%A6%E8%80%85%E5%BC%A0%E6%98%B1%E8%B0%A6%E8%A7%A3%E8%AF%BB%E8%8B%B1%E4%BC%9F%E8%BE%BE%E9%A3%8E%E6%B3%A2-%E7%BE%8E%E5%9B%BD%E8%83%BD%E5%90%A6%E5%A0%B5%E4%BD%8F%E4%B8%AD%E5%9B%BD%E8%8E%B7%E5%8F%96%E5%85%88%E8%BF%9Bai%E7%AE%97%E5%8A%9B%E7%9A%84%E6%B8%A0%E9%81%93",
+  "title": "台湾学者张昱谦（Kenny Chang）解读英伟达风波：美国能否堵住中国 ...",
+  "publisher": "法广",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-22",
+  "scope": "context",
+  "snippets": [
+   "RFI：这件事情虽然是近期才曝光的，但《纽约时报》的报道提到，其实早在今年5月特朗普准备访华的时候，就已经有人向他提醒过，英伟达可能存在一些嫌疑或者相关问题。",
+   "但你可以看到，整个英伟达的芯片出口政策，不管是H200还是别的系列，特朗普其实都是慢慢地开放，一点一点地开小门。",
+   "但我们现在从美国的OpenAI来看，它的收入大概有600亿美元左右。"
+  ],
+  "seen_at": "2026-11-23",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261123A068PI00",
+  "title": "英伟达不卖芯片给中国了，字节拿什么训练豆包？",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-22",
+  "scope": "context",
+  "snippets": [
+   "2026年11月17日 ，英伟达临时CEO 科莱特·克雷斯 在财报电话会上宣布了这样一个事实。",
+   "从 2025年 开始，字节就悄悄地调整了算力供应链。",
+   "2026年6月 有报道称，字节计划向 天数智芯 采购不少于 5 万颗 推理芯片 ，用作 豆包 终端推理。",
+   "字节走这条路，一笔 4.8亿 美元的GPU采购贷款已经开始了。"
+  ],
+  "seen_at": "2026-11-23",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261122A0DD0900",
+  "title": "科技分析丨昇腾910B只抵英伟达H200的十五分之一？是谁在误读刘庆峰 ...",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-22",
+  "scope": "context",
+  "snippets": [
+   "“华为昇腾910B的算力，只有 英伟达H200 的十五分之一。",
+   "科大讯飞今年4月就曾披露，昇腾910B集群在 长思维链强化学习 和 混合专家模型 训练中，最初只有同规模 英伟达 A800 集群约30%的效率。"
+  ],
+  "seen_at": "2026-11-23",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1104552091_122653494",
+  "title": "英伟达万万没想到，丢掉中国市场后，最危险的对手正在中国崛起！",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-21",
+  "scope": "context",
+  "snippets": [
+   "2026年11月18日，英伟达传出一个值得关注的消息：公司已经停止向中国发运获准出口的霍珀系列数据中心芯片，暂时没有后续发货计划。",
+   "国际数据公司统计显示，2026年上半年，英伟达在中国数据中心人工智能芯片市场的份额降至34%，华为则达到28%。",
+   "2022年，黄仁勋曾估算，英伟达在中国人工智能芯片市场的份额高达95%。",
+   "2026年上半年，英伟达在中国数据中心人工智能加速器市场出货67.8万颗，同比下降44%，市场份额降至34%。",
+   "中国芯片企业合计份额达到47%，已经超过英伟达一家。",
+   "再看历史变化，2024年英伟达在中国市场的份额约为65%，2025年降至55%，2026年上半年进一步降至34%。"
+  ],
+  "seen_at": "2026-11-22",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1104543956_121207965",
+  "title": "多家英伟达服务器供应商暂停向东南亚出货，以防流入中国！",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-21",
+  "scope": "context",
+  "snippets": [
+   "黄仁勋辞去英伟达首席执行官之后，2028 年年中以后的需求越来越不确定。",
+   "最新的 Grace Blackwell 200 NVL72 服务器机柜起价近 500 万美元，Blackwell 200 GPU 起价 50 万美元。",
+   "该公司高管说，对 11 月 19 日之后下达的订单，公司将按美国新规另行申请出口许可证。",
+   "他又说，近来要让英伟达批准 Blackwell 300 和 GB300 出货越来越难，如今生意更难做，今后不得不把开发客户的重点转向日本和韩国。",
+   "多数近期订单和项目照常进行，但计划在 2028 年和 2029 年实施的中长期项目，不确定性更大。",
+   "一家同时向英伟达、谷歌（Google）和亚马逊（Amazon）供货的企业，其管理人员说：“目前我们所知的是，2027 年的需求和订单仍然保持原样。"
+  ],
+  "seen_at": "2026-11-23",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1104538416_122483404",
+  "title": "美媒发现：英伟达丢失中国市场之后，最危险的对手正在中国长出来",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-21",
+  "scope": "context",
+  "snippets": [
+   "10月中旬，路透社拿到一份IDC的统计，随后被美国几家财经媒体反复引用：2026年上半年，英伟达在中国数据中心AI芯片市场的份额，掉到了34%。",
+   "英伟达财报里写明，光是一个季度，就因为这批库存积压和没法交付的订单计提了45亿美元的费用。",
+   "公开数据里，昇腾950PR主打推理场景，推理性能达到英伟达H20的三倍。",
+   "英伟达的全球生意并没有垮掉， 最新一个财季营收1158亿美元，数据中心收入1076亿美元，同比翻倍还多，其他市场的需求仍然很强。"
+  ],
+  "seen_at": "2026-11-21",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/markets/stocks/articles/tsmc-sinks-20-week-nvidia-100729822.html",
+  "title": "TSMC Sinks 20% in a Week on Nvidia Jitters and New US Chip Curbs on China. Time to Buy?",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-21",
+  "scope": "context",
+  "snippets": [
+   "TSMC stock fell 20% in a week on Nvidia jitters and a new US rule that paused so",
+   "16, ahead of the first earnings report from Nvidia ( NVDA:NASDAQ ) since Jensen ",
+   "On Friday, TSMC fell another 9.5% as chip stocks sold off and Reuters reported t",
+   "Nvidia fell 23% over the week, and AMD ( AMD:NASDAQ ) fell 21%, partly on a shor",
+   "And Nvidia, widely reported to be the customer behind 19% of TSMC's 2025 revenue",
+   "Nvidia's revenue more than doubled to $115.8 billion in its fiscal third quarter"
+  ],
+  "seen_at": "2026-11-22",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.sohu.com/a/1104169829_121945034",
   "title": "美媒：阿里巴巴借道新加坡购入英伟达芯片",
   "publisher": "搜狐号",
@@ -14,6 +222,30 @@
   "found_via": "Bing 新闻"
  },
  {
+  "url": "https://www.sohu.com/a/1103878830_122341466",
+  "title": "11月20日：没进中国也被卡，英伟达芯片为何逃不过管制，黄仁勋这道 ...",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-20",
+  "scope": "context",
+  "snippets": [
+   "DeepSeek-V3总参数6710亿，每个词元激活370亿，训练花掉278.8万英伟达H800 GPU小时。"
+  ],
+  "seen_at": "2026-11-23",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1103693352_121752852",
+  "title": "完全断供！英伟达临时CEO对外公布，将不再向中国提供H200芯片",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-20",
+  "scope": "context",
+  "snippets": [],
+  "seen_at": "2026-11-23",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://finance.yahoo.com/video/nvidias-troubles-mount-as-china-chip-sales-face-scrutiny-151642511.html",
   "title": "Nvidia's troubles mount as China chip sales face scrutiny",
   "publisher": "雅虎财经",
@@ -25,6 +257,17 @@
    "Like each H200 chip costs like $30 to $40,000."
   ],
   "seen_at": "2026-11-21",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/video/lutnick-faces-scrutiny-over-nvidia-225714495.html",
+  "title": "Lutnick faces scrutiny over Nvidia chip exports to China",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-20",
+  "scope": "context",
+  "snippets": [],
+  "seen_at": "2026-11-22",
   "found_via": "Bing 新闻"
  },
  {
@@ -78,7 +321,7 @@
    "2026年1月，美国商务部进一步明确相关申请采取逐案审查方式，所有出口订单必须经过美方逐案审批，没有批量自动放行机制。",
    "英伟达2026年第三季度向中国销售的获许可霍珀数据中心产品达到24亿美元。"
   ],
-  "seen_at": "2026-11-21",
+  "seen_at": "2026-11-22",
   "found_via": "Bing 新闻"
  },
  {
@@ -109,7 +352,7 @@
    "CNN报道，根据其查阅的近300份中国高校及研究机构采购记录，大部分涉及美国出口管制范围内的英伟达芯片，包括A100、A800、H100、H200和H800型号",
    "在CNN调查的90个买家中，约八成是高校，另有研究机构和政府部门参与采购。"
   ],
-  "seen_at": "2026-11-21",
+  "seen_at": "2026-11-22",
   "found_via": "Bing 新闻"
  },
  {
@@ -232,7 +475,7 @@
   "published_at": "2026-11-18",
   "scope": "context",
   "snippets": [],
-  "seen_at": "2026-11-20",
+  "seen_at": "2026-11-21",
   "found_via": "Bing 新闻"
  },
  {
@@ -308,7 +551,7 @@
    "傲慢与自负》，甚至批评黄仁勋偷偷给1000美元小费，都是在“掩盖自己的傲慢”。",
    "贝森特也继续敲打英伟达，威胁董事会10天内必须选定一个外部人来当CEO。"
   ],
-  "seen_at": "2026-11-20",
+  "seen_at": "2026-11-21",
   "found_via": "Bing 新闻"
  },
  {
@@ -377,241 +620,6 @@
    "06 / 黄仁勋公开表态：愿意重新执掌英伟达"
   ],
   "seen_at": "2026-11-21",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.tweaktown.com/news/114734/after-nvidias-spy-scandal-new-us-rule-still-lets-chinese-firms-rent-gpus-to-power-algorithms/index.html",
-  "title": "After NVIDIA's spy scandal, new US rule still lets Chinese firms rent GPUs to power algorithms",
-  "publisher": "TweakTown",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-17",
-  "scope": "context",
-  "snippets": [],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1103021960_128075",
-  "title": "H200停售中国：25%关税安排终止，英伟达在华业务进入规则重估期",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-17",
-  "scope": "context",
-  "snippets": [
-   "2026年11月17日（美国东部时间），英伟达首席财务官科莱特·克雷斯表示，英伟达将不再在中国销售H200芯片，并结束其在一项由英伟达CEO黄仁勋与特朗普斡旋促",
-   "因此，英伟达停止在中国销售H200，不能简单理解为一次产品退市。",
-   "英伟达在中国市场仍可能通过合规型号、服务支持和生态适配维持存在，但H200所代表的高端算力直接销售窗口已经关闭。",
-   "H200对华销售受阻，影响会沿链条传导：云服务商调整采购计划，服务器厂商重排产品配置，渠道商管理库存风险，最终客户重新评估算力建设节奏。",
-   "H200停售事件表明，中美科技竞争已不局限于单点芯片性能，而是扩展到出口管制、关税工具、供应链韧性和软件生态的复合竞争。",
-   "H200停售短期内会影响部分高端训练集群的采购预期，但也会推动行业更重视异构算力池、国产芯片适配和算网调度能力。"
-  ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.eet-china.com/news/202611183845.html",
-  "title": "英伟达警告芯片买家：远程向中国提供AI算力或面临美国法律风险",
-  "publisher": "电子工程专辑",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-17",
-  "scope": "context",
-  "snippets": [
-   "11月18日消息，据CNBC援引知情人士报道，英伟达近几个月持续向芯片买家发出提醒，称中国企业通过海外云服务远程获取其人工智能芯片算力，可能使英伟达及相关客户面",
-   "因此，英伟达目前明确表示，不会向那些将超过50%的图形处理器（GPU）出租给中国企业的客户出售芯片。",
-   "此前，《金融时报》也曾报道称，英伟达已口头要求数据中心客户在未来的合同中，将至少51%的算力服务分配给非中国客户。",
-   "美国财政部长斯科特·贝森特11月15日在黄仁勋意外辞去CEO职务后，要求对英伟达进行重大改组，并建议审查公司其他高管，以确保其遵守出口管制规定。",
-   "英伟达此前在8月提交的监管文件中表示，公司致力于“严格遵守所有适用的出口管制规定”。"
-  ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/articles/wake-jensen-huang-scandal-nvidia-150200670.html",
-  "title": "In the Wake of Jensen Huang Scandal, Nvidia Establishes National Security and Export Control Committ",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-17",
-  "scope": "context",
-  "snippets": [
-   "In order to tighten up the company's weak points in the face of a scandal that m"
-  ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-halt-chip-sales-data-081754255.html",
-  "title": "Nvidia to halt chip sales to data centers renting over half to China - report",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-17",
-  "scope": "context",
-  "snippets": [
-   "The Financial Times reported earlier this month that Nvidia had verbally told da",
-   "5 that Chinese artificial intelligence startup Moonshot AI had sought access to "
-  ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-forms-export-control-board-105132905.html",
-  "title": "Nvidia Forms Export Control Board Committee After Chip Curbs",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-17",
-  "scope": "context",
-  "snippets": [
-   "Nvidia shares are down 16% since Nov."
-  ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.sina.com.cn/roll/2026-11-17/doc-iniyzhhm7675952.shtml",
-  "title": "【涨停直击】超100万手封单！华为算力概念股涨停",
-  "publisher": "新浪财经",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-17",
-  "scope": "context",
-  "snippets": [
-   "归母净利润亏损1413万元，同比下降106.5%。",
-   "02 / “股神”巴菲特新动作：捐赠55亿美元伯克希尔股票，四家家族基金会获赠",
-   "01 / 黄仁勋讨论重掌英伟达 硅谷盟友游说支持回归",
-   "05 / 财经早报丨证监会：进一步深化市场稳定长效机制研究，消息称黄仁勋考虑重返英伟达担任CEO丨2026年11月16日",
-   "06 / 英媒：黄仁勋考虑重返英伟达",
-   "03 / 部分银行美元存款利率突破4% 投资者还想等等看"
-  ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.tweaktown.com/news/114710/us-moves-to-cut-chinas-remote-access-to-nvidia-ai-chips-through-overseas-data-centers/index.html",
-  "title": "US moves to cut China's remote access to NVIDIA AI chips through overseas data centers",
-  "publisher": "TweakTown",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1102649920_121201017",
-  "title": "黄仁勋刚被赶下台，英伟达东南亚就被一锅端：私德只是引信 ...",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [
-   "接下来会看到11月底新规的实施、12月英伟达财报的合规压力、东南亚机房的业务转移。"
-  ],
-  "seen_at": "2026-11-17",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1102574602_223785",
-  "title": "美国AI芯片出口管制再收紧！国产链逆势突围，华虹宏力涨超10% ...",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [
-   "中微公司 董事长尹志尧在业绩会上表示，公司在手订单充裕，大客户扩产需求旺盛，预计2027年收入保持快速增长。",
-   "台积电 CoWoS 封装价格近日再度上调约 20% ，此前机构曾报道代工与封测厂商酝酿把报价上调 10% 至 20%，芯片设备交期已从 3 至 6 个月延长至 ",
-   "英伟达将于11月17日盘后发布FQ3财报： LSEG预期营收约1092亿美元、同比+90%、调整后每股收益2.48美元；",
-   "公司指引1080亿美元±2%、非GAAP毛利率74%，Q4毛利率预计触底71-72%；",
-   "数据中心收入上季890亿美元、同比+117%，本季机构预测区间997亿-1108亿美元；",
-   "Q4营收共识1247.3亿美元、同比+83.1%；"
-  ],
-  "seen_at": "2026-11-17",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1102402814_163726",
-  "title": "黄仁勋从英伟达辞职后：美国酝酿收紧AI芯片对华出口限制 防止转运等",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [
-   "快科技11月16日消息，黄仁勋卸任英伟达CEO之后，美国国会正在紧锣密鼓酝酿进一步收紧AI芯片对华出口的相关限制规则。"
-  ],
-  "seen_at": "2026-11-17",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1102031067_122993442",
-  "title": "英伟达这一仗打完，美国未来50年内都无法在芯片上锁死中国。原因 ...",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [
-   "不到一个月时间，英伟达就迅速拿出了一款严格卡在美方监管红线之内的降级特供方案，H20芯片就在这样的背景下应运而生。",
-   "如今掌舵人迎来更迭，新任临时CEO科莱特·克雷斯早在2013年9月就加入英伟达担任首席财务官，十余年间她的核心工作始终围绕两件事：保障财报数据持续亮眼，严格规避"
-  ],
-  "seen_at": "2026-11-18",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://news.mydrivers.com/1/1166/1166056.htm",
-  "title": "崩盘开始了！RTX 5090二手价格腰斩：部分型号跌破3万元",
-  "publisher": "快科技",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-16",
-  "scope": "5500",
-  "snippets": [
-   "快科技11月16日消息，在经历了漫长的极端短缺和疯狂溢价后，英伟达新一代旗舰显卡RTX 5090的价格泡沫正以惊人的速度破裂。",
-   "据Reddit网友反馈，该卡在二手市场的成交价已从最高10000美元（约合72300元人民币）跌至4400美元（约合29351元人民币）附近。",
-   "这款搭载32GB GDDR7显存的顶级非公版显卡，其二手报价在过去一周内从4800美元（约合34704元人民币）迅速下调至4400美元。",
-   "甚至有个人卖家为求快速回笼资金，将微星万图师3X OC型号的标价直接挂到了3600美元（约合26028元人民币）。",
-   "对于长期极度缺货之后的这次急剧价格回调，最主要的说法之一是：中国公司此前大量抢购旗舰游戏卡用于AI应用，如今这股抢购潮已经退烧，转而采购不受出口限制的专业加速卡",
-   "英伟达CEO黄仁勋辞职的消息传出后，加上日本市场显卡价格跌幅超过20%，卖家担心价格进一步崩盘、以及新型加速卡涌入导致市场饱和，于是折价清出手中的现货。"
-  ],
-  "seen_at": "2026-11-16",
-  "found_via": "快科技"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-scandal-fuels-tougher-china-165802529.html",
-  "title": "The Nvidia scandal fuels tougher China chip rules as Commerce targets Singapore and Malaysia",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [
-   "Current export controls block the most advanced AI processors—made by companies ",
-   "Before the BIS announced its rule on Monday, Dohmen suggested that if Chinese co"
-  ],
-  "seen_at": "2026-11-17",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/america-closes-china-ai-chip-170000348.html",
-  "title": "America Closes China’s AI Chip Loophole Before Trump-Xi Summit: Will Markets Feel It?",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [
-   "Beijing has refused Nvidia's H200, even with Washington taking a 25% cut, Trump ",
-   "China still brought in $7.9 billion of Nvidia's $96.2 billion July-quarter reven",
-   "Bitcoin fell 1.1% to about $64,590 Monday, near a three-month low, amid Fed rate"
-  ],
-  "seen_at": "2026-11-17",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/markets/stocks/articles/nvda-stock-dips-again-worst-023023113.html",
-  "title": "NVDA Stock Dips Again After Worst Week In 19 Months: Why Michael Burry Sees ‘Mild Manipulation’ In A",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-16",
-  "scope": "context",
-  "snippets": [
-   "Burry highlighted that in late 2025, Nvidia moved its revenue reporting from cou",
-   "Nvidia even recast FY2024 and FY2025 to show how they looked under the new repor",
-   "Meanwhile, Morgan Stanley lowered its price target on NVDA to $267 from $300, wh"
-  ],
-  "seen_at": "2026-11-16",
   "found_via": "Bing 新闻"
  }
 ]
