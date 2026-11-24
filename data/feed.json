@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-24T15:03:22+08:00",
+  "updated_at": "2026-11-24T18:51:06+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -856,8 +856,7 @@
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "云端条目未通过复核 https://money.udn.com/money/story/5603/9856924：原文没有这些数字",
-      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)"
+      "云端条目未通过复核 https://money.udn.com/money/story/5603/9856924：原文没有这些数字"
     ]
   }
 }
