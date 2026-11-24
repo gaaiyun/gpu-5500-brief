@@ -1,21 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-25T05:07:55+08:00",
-  "agent": "actions-sweep+cloud-routine",
+  "updated_at": "2026-11-25T07:20:00+08:00",
+  "agent": "cloud-routine",
   "searched": [
-    "RTX Pro 5500 China shipment allocation",
-    "RTX PRO 5500 报价 现货 到货 渠道",
-    "Nvidia China RTX Pro Bloomberg Reuters November 2026",
-    "英伟达 5500 采购 公告 算力租赁 服务器 浪潮 联想",
-    "Reuters Chinese customers cancel Nvidia RTX Pro 5500 orders",
-    "英伟达 RTX PRO 5500 订单 取消 退单 路透",
-    "昇腾950 寒武纪 价格 交付 订单 排期",
-    "RTX 5090 RTX PRO 6000 国内 价格 上涨",
-    "GDDR7 price shortage Rubin TSMC capacity",
-    "NVIDIA RTX PRO 5500 Blackwell price distributor listing stock",
-    "Digitimes Nvidia server suppliers pause shipments Southeast Asia",
-    "算力租赁 价格 11月 GPU 租金 英伟达",
-    "BIS export controls China Nvidia chips new rule November 2026"
+    "RTX PRO 5500 China orders shipment",
+    "RTX PRO 5500 价格 到货 渠道 11月",
+    "Nvidia China export license H200 BIS November 2026",
+    "昇腾950 价格 供应 寒武纪 订单",
+    "RTX PRO 6000 国内 价格 现货",
+    "GDDR7 price shortage Rubin TSMC allocation Nvidia",
+    "丽台 PNY RTX PRO 5500 报价",
+    "算力租赁 价格 英伟达 采购公告 RTX PRO 5500",
+    "Nvidia RTX Pro 5500 China cancel orders Reuters Huang exit",
+    "英伟达 5500 样卡 11月底 交付 服务器厂商 浪潮 新华三",
+    "Nvidia 15% price hike AI servers memory costs Bloomberg",
+    "RTX 5090 中国 价格 上涨 11月 2026",
+    "天阳科技 游族网络 RTX PRO 5500 采购 公告 问询",
+    "Commerce approved 879,000 AI chips China Mast Nvidia AMD licenses"
   ],
   "items": [
     {
@@ -841,8 +842,8 @@
     }
   },
   "take": {
-    "date": "2026-11-24",
-    "text": "今天新增：路透称部分中国客户已开始取消5500订单，担心该卡无法入境，规模不明；Digitimes称部分服务器供应商暂停向东南亚发货。均无新报价或批文，样卡11月底、首批数千颗年底的节点未变。"
+    "date": "2026-11-25",
+    "text": "过去一天没有新报价、批文或到货消息，路透称部分客户取消订单、Digitimes称服务器供应商暂停东南亚发货仍是最新信号。接下来等11月底样卡和年底首批到货，大陆报价暂按已有区间。"
   },
   "sweep": {
     "date": "2026-11-25",
