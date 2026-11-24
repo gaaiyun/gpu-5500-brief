@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-25T05:07:55+08:00",
+  "updated_at": "2026-11-25T07:06:39+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -845,8 +845,8 @@
     }
   },
   "take": {
-    "date": "2026-11-24",
-    "text": "今天新增：路透称部分中国客户已开始取消5500订单，担心该卡无法入境，规模不明；Digitimes称部分服务器供应商暂停向东南亚发货。均无新报价或批文，样卡11月底、首批数千颗年底的节点未变。"
+    "date": "2026-11-25",
+    "text": "过去一天没有新报价、批文或到货消息，路透称部分客户取消订单、Digitimes称服务器供应商暂停东南亚发货仍是最新信号。接下来等11月底样卡和年底首批到货，大陆报价暂按已有区间。"
   },
   "sweep": {
     "date": "2026-11-25",
@@ -854,11 +854,10 @@
     "read": 1,
     "added": [],
     "corroborated": 0,
-    "model": null,
+    "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "云端条目未通过复核 https://money.udn.com/money/story/5603/9856924：原文没有这些数字",
       "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
-      "模型调用失败：HTTPSConnectionPool(host='gpu-5500-intelligence.gaaiyun-risk-selfcheck.workers.dev', port=443): Read timed out. (read ti"
+      "Google 新闻 \"RTX PRO 5500\" when:3d 失败：503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20when%3A3d&h"
     ]
   }
 }
