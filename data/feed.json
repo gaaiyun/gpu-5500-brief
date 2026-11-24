@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-24T07:06:53+08:00",
+  "updated_at": "2026-11-24T11:02:39+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -38,8 +38,7 @@
         "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/11/23/how-nvidias-billion-dollar-turnaround-in-china-is-threatened-by-huangs-exit/"
       ],
       "claims": [],
-      "checked_at": "2026-11-24",
-      "ci_checked": "2026-11-24"
+      "checked_at": "2026-11-24"
     },
     {
       "id": "digitimes-20261123-sea-shipment-pause",
@@ -57,8 +56,7 @@
         "https://www.sohu.com/a/1104543956_121207965"
       ],
       "claims": [],
-      "checked_at": "2026-11-24",
-      "ci_checked": "2026-11-24"
+      "checked_at": "2026-11-24"
     },
     {
       "id": "leiphone-20261118-buyers-hesitate",
@@ -840,6 +838,10 @@
     "2026-11-23": {
       "media": 7,
       "wechat": 4
+    },
+    "2026-11-24": {
+      "media": 1,
+      "wechat": 0
     }
   },
   "take": {
@@ -854,7 +856,8 @@
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+      "云端条目未通过复核 https://money.udn.com/money/story/5603/9856924：原文没有这些数字",
+      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)"
     ]
   }
 }
