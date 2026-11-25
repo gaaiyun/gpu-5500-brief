@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-25T13:37:46+08:00",
+  "updated_at": "2026-11-25T17:46:24+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -22,6 +22,22 @@
     "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
   ],
   "items": [
+    {
+      "id": "news-20261125-acab0d",
+      "title": "快科技：杭州园林子公司采购2万片RTX PRO 5500 Blackwell GPU",
+      "published_at": "2026-11-25",
+      "publisher": "快科技",
+      "source_type": "行业媒体",
+      "url": "https://news.mydrivers.com/1/1168/1168507.htm",
+      "grade": "B",
+      "summary": "快科技11月25日消息，杭州园林控股子公司杭微天算与华鲲振宇签署采购合同，采购RTX PRO 5500 Blackwell系列GPU及配套服务器，采购数量2万片，最终交付数量以实际到货为准。",
+      "impact": "新增2万片的具体采购订单，虽然占比不大，但验证了企业级客户对RTX PRO 5500的实际采购意愿和落地情况。",
+      "watch": "核实该2万片订单的具体交付时间表及资金来源。",
+      "corroboration": [],
+      "claims": [],
+      "checked_at": "2026-11-25",
+      "found_via": "快科技"
+    },
     {
       "id": "reuters-20261123-5500-cancellations",
       "title": "路透：部分中国客户开始取消RTX PRO 5500订单，担心该卡无法入境",
@@ -400,22 +416,6 @@
       "corroboration": [],
       "claims": [],
       "checked_at": "2026-11-06"
-    },
-    {
-      "id": "eet-china-20261104-7d6789",
-      "title": "电子工程专辑：英伟达芯片对华交付受限，中国买家短期或仅获1%订单",
-      "published_at": "2026-11-04",
-      "publisher": "电子工程专辑",
-      "source_type": "行业媒体",
-      "url": "https://www.eet-china.com/news/202611052831.html",
-      "grade": "B",
-      "summary": "电子工程专辑11月4日消息，据彭博社援引知情人士消息，未来几个月中国AI和云计算企业预计仅能收到英伟达先进芯片订单中的一小部分。此前报道称阿里巴巴、腾讯、字节跳动等公司合计订购约600万颗英伟达RTX Pro 5500芯片。知情人士透露首批数千颗RTX Pro 5500芯片预计于今年年底交付，下一批数万颗芯片可能在2027年2月左右到货。",
-      "impact": "首批数千颗预计年底前到货，第二批数万颗预计2027年2月到货，明确了短期交付的时间窗口。",
-      "watch": "核实首批数千颗与数万颗的具体交付时间节点及获配比例5%-10%的来源。",
-      "corroboration": [],
-      "claims": [],
-      "checked_at": "2026-11-05",
-      "found_via": "Bing 新闻"
     }
   ],
   "leads": [
@@ -842,6 +842,10 @@
     "2026-11-24": {
       "media": 2,
       "wechat": 0
+    },
+    "2026-11-25": {
+      "media": 2,
+      "wechat": 0
     }
   },
   "take": {
@@ -850,9 +854,11 @@
   },
   "sweep": {
     "date": "2026-11-25",
-    "candidates": 1,
-    "read": 1,
-    "added": [],
+    "candidates": 2,
+    "read": 2,
+    "added": [
+      "news-20261125-acab0d"
+    ],
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
