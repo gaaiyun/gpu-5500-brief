@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-25T17:46:24+08:00",
+  "updated_at": "2026-11-26T04:28:14+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -420,6 +420,16 @@
   ],
   "leads": [
     {
+      "title": "RTX Pro 5500中国订单变量 三星、SK海力士GDDR7商机蒙尘",
+      "publisher": "gb-www.digitimes.com.tw",
+      "source_type": "其他",
+      "url": "https://gb-www.digitimes.com.tw/tech/dt/n/shwnws.asp?CnlId=1&id=0000776018_B7ILP4CW2DQRVZ7N1C0H0",
+      "published_at": "2026-11-25",
+      "found_via": "Bing 新闻",
+      "snippet": "随着NVIDIA抢攻中国AI市场的计划受阻，三星电子（Samsung Electronics）与SK海力士（SK Hynix）原本期待的GDDR7需求成长，也增添不确定性。路 ...",
+      "seen_at": "2026-11-26"
+    },
+    {
       "title": "同一颗GB202芯片,两种截然不同的命运:RTX 5090与RTX PRO 5500深度解析!",
       "publisher": "中能云计算",
       "source_type": "公众号",
@@ -708,16 +718,6 @@
       "found_via": "搜狗微信",
       "snippet": "——以 NVIDIA RTX PRO 5500 ETL256 配置为例,解析整柜架构、应用与选型.近期,英伟达 RTX PRO 5500 成为国内算力市场的热...",
       "seen_at": "2026-11-21"
-    },
-    {
-      "title": "丸子热点:企业战略周报",
-      "publisher": "笙歌丸子",
-      "source_type": "公众号",
-      "url": "https://weixin.sogou.com/weixin?type=2&query=%E4%B8%B8%E5%AD%90%E7%83%AD%E7%82%B9%3A%E4%BC%81%E4%B8%9A%E6%88%98%E7%95%A5%E5%91%A8%E6%8A%A5",
-      "published_at": "2026-11-14",
-      "found_via": "搜狗微信",
-      "snippet": "英伟达那600万张RTX Pro 5500、总值约700亿美元的订单,未来四个月预计只能到货约1%,算力仍然紧.动作 先做配套件,不做整...",
-      "seen_at": "2026-11-20"
     }
   ],
   "mentions": [
@@ -844,7 +844,11 @@
       "wechat": 0
     },
     "2026-11-25": {
-      "media": 2,
+      "media": 3,
+      "wechat": 0
+    },
+    "2026-11-26": {
+      "media": 1,
       "wechat": 0
     }
   },
@@ -853,16 +857,15 @@
     "text": "过去一天没有新报价、批文或到货消息，路透称部分客户取消订单、Digitimes称服务器供应商暂停东南亚发货仍是最新信号。接下来等11月底样卡和年底首批到货，大陆报价暂按已有区间。"
   },
   "sweep": {
-    "date": "2026-11-25",
-    "candidates": 2,
-    "read": 2,
-    "added": [
-      "news-20261125-acab0d"
-    ],
+    "date": "2026-11-26",
+    "candidates": 1,
+    "read": 1,
+    "added": [],
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
+      "重复报道 reuters：https://news.qq.com/rain/a/20261021A07X2300"
     ]
   }
 }
