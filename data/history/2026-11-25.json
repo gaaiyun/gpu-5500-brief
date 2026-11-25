@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-25T05:07:55+08:00",
+  "checked_at": "2026-11-25T17:46:24+08:00",
   "date": "2026-11-25",
   "checks": [
     {
       "source_id": "bloomberg",
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "url": "https://money.udn.com/money/story/5603/9856924",
       "published_at": "2026-11-04",
       "status": "ok",
@@ -14,12 +14,12 @@
       },
       "sha256": "a20cab755b429c67067d7a51efa5a4455a7c1884f8e321fb4242cd318c465c0b",
       "final_url": "https://money.udn.com/money/story/5603/9856924",
-      "last_success_at": "2026-11-25T05:07:55+08:00",
+      "last_success_at": "2026-11-25T17:46:24+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "leiphone",
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "url": "https://www.leiphone.com/category/chips/STx9ZzfDNh5W80Bm.html",
       "published_at": "2026-10-20",
       "status": "ok",
@@ -28,12 +28,12 @@
       },
       "sha256": "a20cab755b429c67067d7a51efa5a4455a7c1884f8e321fb4242cd318c465c0b",
       "final_url": "https://www.leiphone.com/category/chips/STx9ZzfDNh5W80Bm.html",
-      "last_success_at": "2026-11-25T05:07:55+08:00",
+      "last_success_at": "2026-11-25T17:46:24+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "yicai",
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "url": "https://finance.sina.com.cn/tech/roll/2026-10-09/doc-iniurfei2972823.shtml",
       "published_at": "2026-10-09",
       "status": "ok",
@@ -42,12 +42,12 @@
       },
       "sha256": "a20cab755b429c67067d7a51efa5a4455a7c1884f8e321fb4242cd318c465c0b",
       "final_url": "https://finance.sina.com.cn/tech/roll/2026-10-09/doc-iniurfei2972823.shtml",
-      "last_success_at": "2026-11-25T05:07:55+08:00",
+      "last_success_at": "2026-11-25T17:46:24+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "nvidia",
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "url": "https://www.nvidia.com/en-eu/products/workstations/professional-desktop-gpus/rtx-pro-5500/",
       "published_at": null,
       "status": "ok",
@@ -60,12 +60,12 @@
       },
       "sha256": "44407bfef09d7a5ae432a2610c0ea157b58e1122350490f3272115d7d0632d26",
       "final_url": "https://www.nvidia.com/en-eu/products/workstations/professional-desktop-gpus/rtx-pro-5500/",
-      "last_success_at": "2026-11-25T05:07:55+08:00",
+      "last_success_at": "2026-11-25T17:46:24+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "smm",
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "url": "https://news.smm.cn/news/104154895",
       "published_at": "2026-10-13",
       "status": "ok",
@@ -75,12 +75,12 @@
       },
       "sha256": "6af43aafc054904aedfd5e0fb8f250a43b829180a0ab0d6516d794a6834a2427",
       "final_url": "https://news.smm.cn/news/104154895",
-      "last_success_at": "2026-11-25T05:07:55+08:00",
+      "last_success_at": "2026-11-25T17:46:24+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "cls",
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "url": "https://www.cls.cn/detail/2500747",
       "published_at": "2026-10-09",
       "status": "ok",
@@ -89,12 +89,12 @@
       },
       "sha256": "03412743bcdfaf091c4a274cd4a8be8f44db26128f5d61d14285f4f1429f35cb",
       "final_url": "https://www.cls.cn/detail/2500747",
-      "last_success_at": "2026-11-25T05:07:55+08:00",
+      "last_success_at": "2026-11-25T17:46:24+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "reuters",
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "url": "https://www.bnnbloomberg.ca/business/company-news/2026/10/20/bytedance-alibaba-tencent-place-over-us35-billion-worth-of-nvidia-chip-orders-reuters-exclusive/",
       "published_at": "2026-10-20",
       "status": "ok",
@@ -103,12 +103,12 @@
       },
       "sha256": "03412743bcdfaf091c4a274cd4a8be8f44db26128f5d61d14285f4f1429f35cb",
       "final_url": "https://www.bnnbloomberg.ca/business/company-news/2026/10/20/bytedance-alibaba-tencent-place-over-us35-billion-worth-of-nvidia-chip-orders-reuters-exclusive/",
-      "last_success_at": "2026-11-25T05:07:55+08:00",
+      "last_success_at": "2026-11-25T17:46:24+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "trendforce",
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "url": "https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/",
       "published_at": "2026-10-21",
       "status": "ok",
@@ -117,12 +117,12 @@
       },
       "sha256": "03412743bcdfaf091c4a274cd4a8be8f44db26128f5d61d14285f4f1429f35cb",
       "final_url": "https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/",
-      "last_success_at": "2026-11-25T05:07:55+08:00",
+      "last_success_at": "2026-11-25T17:46:24+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "tansun",
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-10/2026-10-13/12638891.PDF",
       "published_at": "2026-10-13",
       "status": "ok",
@@ -131,12 +131,12 @@
       },
       "sha256": "122d27eb4b3682cd76c2c5b3743935f9cab91bed346e1d7c7b60d478a3ddd4e8",
       "final_url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-10/2026-10-13/12638891.PDF",
-      "last_success_at": "2026-11-25T05:07:55+08:00",
+      "last_success_at": "2026-11-25T17:46:24+08:00",
       "changed_since_last": false
     },
     {
       "source_id": "qudao",
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "url": "https://qudao.co/api/trends?timeframe=daily",
       "published_at": null,
       "status": "failed",
@@ -502,35 +502,35 @@
     {
       "id": "cn",
       "status": "ok",
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
-      "count": 12
+      "count": 10
     },
     {
       "id": "price",
       "status": "ok",
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20%28%E4%BB%B7%E6%A0%BC%20OR%20%E6%8A%A5%E4%BB%B7%20OR%20%E4%BA%A4%E4%BB%98%20OR%20price%20OR%20delivery%29%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "count": 10
     },
     {
       "id": "global",
       "status": "ok",
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20%28Reuters%20OR%20NVIDIA%20OR%20supply%29%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
-      "count": 8
+      "count": 6
     },
     {
       "id": "major",
       "status": "ok",
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "url": "https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20%28site%3Areuters.com%20OR%20site%3Abloomberg.com%20OR%20site%3Acls.cn%20OR%20site%3Ayicai.com%20OR%20site%3Astcn.com%20OR%20site%3Ajiemian.com%20OR%20site%3A21jingji.com%20OR%20site%3Atrendforce.com%20OR%20site%3Adigitimes.com%29%20when%3A21d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
       "count": 0
     }
   ],
   "headlines": [],
   "headlines_carried_forward": false,
-  "headline_collection_at": "2026-11-25T05:07:55+08:00",
+  "headline_collection_at": "2026-11-25T17:46:24+08:00",
   "forecast_review": {
     "status": "review_required",
     "anchor_age_days": 21,
@@ -894,13 +894,13 @@
     "provider": "chinamoney",
     "label": "人民币汇率中间价",
     "url": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
-    "date": "2026-11-24",
+    "date": "2026-11-25",
     "rates": {
-      "USD": 6.7111,
-      "EUR": 7.3008,
-      "GBP": 8.725
+      "USD": 6.7088,
+      "EUR": 7.3271,
+      "GBP": 8.7637
     },
-    "checked_at": "2026-11-25T05:07:55+08:00",
+    "checked_at": "2026-11-25T17:46:24+08:00",
     "error": ""
   },
   "fx_history": {
@@ -1088,6 +1088,11 @@
       "USD": 6.7111,
       "EUR": 7.3008,
       "GBP": 8.725
+    },
+    "2026-11-25": {
+      "USD": 6.7088,
+      "EUR": 7.3271,
+      "GBP": 8.7637
     }
   },
   "listings": [
@@ -1095,8 +1100,8 @@
       "id": "fr_pny_pb",
       "status": "ok",
       "price": 16469.95,
-      "checked_at": "2026-11-25T05:07:55+08:00",
-      "last_success_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
+      "last_success_at": "2026-11-25T17:46:24+08:00",
       "price_since": "2026-09-30",
       "stock": "In stock in over 15 days",
       "stock_since": "2026-11-04"
@@ -1105,8 +1110,8 @@
       "id": "uk_gbics_sb",
       "status": "ok",
       "price": 12810.0,
-      "checked_at": "2026-11-25T05:07:55+08:00",
-      "last_success_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
+      "last_success_at": "2026-11-25T17:46:24+08:00",
       "price_since": "2026-10-29",
       "stock": "Pre order now for stock allocation",
       "stock_since": "2026-11-04"
@@ -1115,8 +1120,8 @@
       "id": "fr_ldlc_oem",
       "status": "ok",
       "price": 18169.95,
-      "checked_at": "2026-11-25T05:07:55+08:00",
-      "last_success_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
+      "last_success_at": "2026-11-25T17:46:24+08:00",
       "price_since": "2026-10-29",
       "stock": "In stock in over 15 days",
       "stock_since": "2026-11-04"
@@ -1125,8 +1130,8 @@
       "id": "de_lieske_sb",
       "status": "ok",
       "price": 13940.36,
-      "checked_at": "2026-11-25T05:07:55+08:00",
-      "last_success_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
+      "last_success_at": "2026-11-25T17:46:24+08:00",
       "price_since": "2026-11-24",
       "previous_price": 13905.55,
       "stock": "ready for dispatch within 20 working days",
@@ -1252,12 +1257,12 @@
         "age_days": 36,
         "since": "2026-10-20",
         "native": "$11,400",
-        "low": 86452,
-        "high": 86452,
-        "cny": 76507,
-        "cny_vat": 86452,
+        "low": 86423,
+        "high": 86423,
+        "cny": 76480,
+        "cny_vat": 86423,
         "converted": true,
-        "text": "≈¥86,452 含税",
+        "text": "≈¥86,423 含税",
         "note": "匿名信源；按当日汇率折算，不是新报价，未含关税",
         "quote_key": "reuters_usd:11400"
       },
@@ -1270,12 +1275,12 @@
         "age_days": 21,
         "since": "2026-11-04",
         "native": "超过 $11,000",
-        "low": 83419,
-        "high": 83419,
-        "cny": 73822,
-        "cny_vat": 83419,
+        "low": 83390,
+        "high": 83390,
+        "cny": 73797,
+        "cny_vat": 83390,
         "converted": true,
-        "text": "≈¥83,419 含税",
+        "text": "≈¥83,390 含税",
         "note": "匿名信源；每颗超过 1.1 万美元，是下限；按当日汇率折算，不是新报价，未含关税",
         "quote_key": "bloomberg_usd:11000"
       },
@@ -1288,12 +1293,12 @@
         "age_days": 56,
         "since": "2026-09-30",
         "native": "€16,469.95（含当地增值税 20%）",
-        "low": 113230,
-        "high": 113230,
-        "cny": 100203,
-        "cny_vat": 113230,
+        "low": 113637,
+        "high": 113637,
+        "cny": 100564,
+        "cny_vat": 113637,
         "converted": true,
-        "text": "≈¥113,230 含税",
+        "text": "≈¥113,637 含税",
         "note": "页面写“In stock in over 15 days”；LDLC 零售价（盒装版；9 月 30 日起 Materiel.net 同价），去掉法国 20% 增值税后折算，未含关税运费",
         "quote_key": "16469.95EUR",
         "checked": "2026-11-25",
@@ -1311,12 +1316,12 @@
         "age_days": 27,
         "since": "2026-10-29",
         "native": "£12,810.00（含当地增值税 20%）",
-        "low": 105247,
-        "high": 105247,
-        "cny": 93139,
-        "cny_vat": 105247,
+        "low": 105714,
+        "high": 105714,
+        "cny": 93552,
+        "cny_vat": 105714,
         "converted": true,
-        "text": "≈¥105,247 含税",
+        "text": "≈¥105,714 含税",
         "note": "页面写“Pre order now for stock allocation”；页面描述写 78GB 与 84GB 不符；去掉英国 20% 增值税后折算",
         "quote_key": "12810.0GBP",
         "checked": "2026-11-25",
@@ -1334,12 +1339,12 @@
         "age_days": 27,
         "since": "2026-10-29",
         "native": "€18,169.95（含当地增值税 20%）",
-        "low": 124917,
-        "high": 124917,
-        "cny": 110546,
-        "cny_vat": 124917,
+        "low": 125367,
+        "high": 125367,
+        "cny": 110944,
+        "cny_vat": 125367,
         "converted": true,
-        "text": "≈¥124,917 含税",
+        "text": "≈¥125,367 含税",
         "note": "页面写“In stock in over 15 days”；LDLC 零售价（OEM 版），去掉法国 20% 增值税后折算，未含关税运费",
         "quote_key": "18169.95EUR",
         "checked": "2026-11-25",
@@ -1357,12 +1362,12 @@
         "age_days": 1,
         "since": "2026-11-24",
         "native": "€13,940.36（不含增值税）",
-        "low": 115007,
-        "high": 115007,
-        "cny": 101776,
-        "cny_vat": 115007,
+        "low": 115421,
+        "high": 115421,
+        "cny": 102142,
+        "cny_vat": 115421,
         "converted": true,
-        "text": "≈¥115,007 含税",
+        "text": "≈¥115,421 含税",
         "note": "页面写“ready for dispatch within 20 working days”；企业采购网店，页面写缺货、已向上游订货；按净价折算，未含关税运费",
         "quote_key": "13940.36EUR",
         "checked": "2026-11-25",
@@ -1377,13 +1382,13 @@
       "provider": "chinamoney",
       "label": "人民币汇率中间价",
       "url": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
-      "date": "2026-11-24",
+      "date": "2026-11-25",
       "rates": {
-        "USD": 6.7111,
-        "EUR": 7.3008,
-        "GBP": 8.725
+        "USD": 6.7088,
+        "EUR": 7.3271,
+        "GBP": 8.7637
       },
-      "checked_at": "2026-11-25T05:07:55+08:00",
+      "checked_at": "2026-11-25T17:46:24+08:00",
       "error": ""
     },
     "domestic": {
@@ -1398,46 +1403,46 @@
         "id": "reuters_usd",
         "label": "路透订单价",
         "kind": "汇率",
-        "delta": -12,
-        "text": "路透订单价 -12 元"
+        "delta": -41,
+        "text": "路透订单价 -41 元"
       },
       {
         "id": "bloomberg_usd",
         "label": "彭博单价下限",
         "kind": "汇率",
-        "delta": -11,
-        "text": "彭博单价下限 -11 元"
+        "delta": -40,
+        "text": "彭博单价下限 -40 元"
       },
       {
         "id": "fr_pny_pb",
         "label": "法国零售 PNY 盒装版",
         "kind": "汇率",
-        "delta": -756,
-        "text": "法国零售 PNY 盒装版 -756 元"
+        "delta": -349,
+        "text": "法国零售 PNY 盒装版 -349 元"
       },
       {
         "id": "uk_gbics_sb",
         "label": "英国零售 OEM 版",
         "kind": "汇率",
-        "delta": -537,
-        "text": "英国零售 OEM 版 -537 元"
+        "delta": -70,
+        "text": "英国零售 OEM 版 -70 元"
       },
       {
         "id": "fr_ldlc_oem",
         "label": "法国零售 PNY OEM 版",
         "kind": "汇率",
-        "delta": -835,
-        "text": "法国零售 PNY OEM 版 -835 元"
+        "delta": -385,
+        "text": "法国零售 PNY OEM 版 -385 元"
       },
       {
         "id": "de_lieske_sb",
         "label": "德国 B2B OEM 版",
         "kind": "汇率",
-        "delta": -768,
-        "text": "德国 B2B OEM 版 -768 元"
+        "delta": -354,
+        "text": "德国 B2B OEM 版 -354 元"
       }
     ],
-    "summary": "今日无新报价；最近一次报价更新是 德国 B2B OEM 版（2026-11-24）。汇率折算（含税）变动：路透订单价 -12 元，彭博单价下限 -11 元，法国零售 PNY 盒装版 -756 元，英国零售 OEM 版 -537 元，法国零售 PNY OEM 版 -835 元，德国 B2B OEM 版 -768 元（人民币汇率中间价 2026-11-24）。"
+    "summary": "今日无新报价；最近一次报价更新是 德国 B2B OEM 版（2026-11-24）。汇率折算（含税）变动：路透订单价 -41 元，彭博单价下限 -40 元，法国零售 PNY 盒装版 -349 元，英国零售 OEM 版 -70 元，法国零售 PNY OEM 版 -385 元，德国 B2B OEM 版 -354 元（人民币汇率中间价 2026-11-25）。"
   },
   "quotes_rejected": [],
   "price_series": [
@@ -1709,7 +1714,7 @@
       "low": 85000,
       "high": 95000,
       "channel": 86000,
-      "usd_vat": 86452,
+      "usd_vat": 86423,
       "events": [],
       "team": []
     }
@@ -1718,7 +1723,7 @@
     "items": [
       {
         "title": "今日点评",
-        "text": "今天新增：路透称部分中国客户已开始取消5500订单，担心该卡无法入境，规模不明；Digitimes称部分服务器供应商暂停向东南亚发货。均无新报价或批文，样卡11月底、首批数千颗年底的节点未变。（AI 据下列证据整理）"
+        "text": "过去一天没有新报价、批文或到货消息，路透称部分客户取消订单、Digitimes称服务器供应商暂停东南亚发货仍是最新信号。接下来等11月底样卡和年底首批到货，大陆报价暂按已有区间。（AI 据下列证据整理）"
       },
       {
         "title": "大陆报价",
@@ -1742,11 +1747,11 @@
       },
       {
         "title": "折算对照",
-        "text": "路透所述订单价 $11,400，按人民币汇率中间价 6.7111（2026-11-24）折合 76,507 元，加 13% 增值税约 86,452 元。彭博所述单价超过 $11,000，同样折算约 83,419 元起。汇率变了这些数才变，不是新报价。"
+        "text": "路透所述订单价 $11,400，按人民币汇率中间价 6.7088（2026-11-25）折合 76,480 元，加 13% 增值税约 86,423 元。彭博所述单价超过 $11,000，同样折算约 83,390 元起。汇率变了这些数才变，不是新报价。"
       },
       {
         "title": "今日变化",
-        "text": "今日无新报价；最近一次报价更新是 德国 B2B OEM 版（2026-11-24）。汇率折算（含税）变动：路透订单价 -12 元，彭博单价下限 -11 元，法国零售 PNY 盒装版 -756 元，英国零售 OEM 版 -537 元，法国零售 PNY OEM 版 -835 元，德国 B2B OEM 版 -768 元（人民币汇率中间价 2026-11-24）。"
+        "text": "今日无新报价；最近一次报价更新是 德国 B2B OEM 版（2026-11-24）。汇率折算（含税）变动：路透订单价 -41 元，彭博单价下限 -40 元，法国零售 PNY 盒装版 -349 元，英国零售 OEM 版 -70 元，法国零售 PNY OEM 版 -385 元，德国 B2B OEM 版 -354 元（人民币汇率中间价 2026-11-25）。"
       },
       {
         "title": "渠道挂价",
@@ -1762,7 +1767,7 @@
   "new_verified_price_count": 0,
   "summary": "本轮自动采集不把新闻标题或聚合挂牌升级为已核验价格；已核验价格更新需要证据复核。",
   "intelligence": {
-    "status": "workers_ai",
+    "status": "fallback",
     "items": [
       {
         "source_id": "qudao",
@@ -1771,8 +1776,8 @@
         "date": "2026-09-22",
         "kind": "平台参考",
         "url": "https://qudao.co/api/trends?timeframe=daily",
-        "summary": "平台最低挂价86,000元，交期3个月（约90天）。",
-        "impact": "短交期报盘需单独确认。",
+        "summary": "平台最低挂价86,000元，交期3个月（约90天），原报价日期2026-09-22。平台14日曲线14 个日点与上次采集逐点相同，只是日期顺延，卖均、买均恰为中间值×1.015、×0.985，挂牌活跃度按固定步长循环，不作行情。",
+        "impact": "最低挂价按3个月（约90天）交付，短交期报盘需单独确认。",
         "watch": "核实低价有效性与报价算法"
       },
       {
@@ -1782,8 +1787,8 @@
         "date": "2026-11-04",
         "kind": "彭博·匿名信源",
         "url": "https://money.udn.com/money/story/5603/9856924",
-        "summary": "彭博援引知情人士：未来4个月预计只到订单的约1%。",
-        "impact": "短交期货源会更紧；上行风险主要在短交期现货。",
+        "summary": "彭博援引知情人士：中国AI与云企业共订购约600万颗，每颗超过1.1万美元，总值约700亿美元；未来4个月预计只到数万颗，约占1%。首批数千颗预计年底前，第二批数万颗预计明年2月左右，目前只有这两批获确认；大型云厂商估计2027年底前累计约70万颗，可能调整。",
+        "impact": "到货远低于路透此前的5%-10%，短交期货源会更紧；单价折算后仍接近8.5万-9万元基准，上行风险主要在短交期现货。",
         "watch": "核实首批到货数量和渠道可得性"
       },
       {
@@ -1793,8 +1798,8 @@
         "date": "2026-10-13",
         "kind": "媒体采访",
         "url": "https://news.smm.cn/news/104154895",
-        "summary": "大陆供货商预售报价95,000元；行业估计90,000-95,000元。",
-        "impact": "95,000元可用作首轮报盘锚点。",
+        "summary": "SMM 报道大陆供货商预售报价95,000元；行业估计90,000-95,000元。报道未披露供应商、数量和交付条款。",
+        "impact": "95,000元可用作首轮报盘锚点，短交期和税票条件决定客户是否接受。",
         "watch": "取得当日可执行报价和交期"
       },
       {
@@ -1804,8 +1809,8 @@
         "date": "2026-10-20",
         "kind": "路透独家·匿名信源",
         "url": "https://www.bnnbloomberg.ca/business/company-news/2026/10/20/bytedance-alibaba-tencent-place-over-us35-billion-worth-of-nvidia-chip-orders-reuters-exclusive/",
-        "summary": "路透援引匿名信源称中国客户总订单超过600万张，2027年全球计划产量可能不超过300万张。",
-        "impact": "首批配额偏紧有利于短交期货源报价。",
+        "summary": "路透援引匿名信源称中国客户总订单超过600万张、2027年全球计划产量可能不超过300万张，合作方或只获配申请量的5%-10%；商业交付预计2027年一季度。",
+        "impact": "首批配额偏紧有利于短交期货源报价；订单量不能直接推算实际获配。",
         "watch": "跟踪样品、配额和商业发货"
       },
       {
@@ -1815,8 +1820,8 @@
         "date": "2026-10-21",
         "kind": "行业研究机构转述",
         "url": "https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/",
-        "summary": "RTX PRO 5500在中国售价约85,000-90,000元。",
-        "impact": "该区间低于SMM预售价95,000元，客户可能据此压价。",
+        "summary": "TrendForce转述The Information：RTX PRO 5500在中国售价约85,000-90,000元，未披露税费、数量与交期。",
+        "impact": "该区间低于SMM预售价95,000元，客户可能据此压价；高于该区间的报盘需以短交期或税票条件支撑。",
         "watch": "核实该区间对应的交期与含税口径"
       },
       {
@@ -1826,8 +1831,8 @@
         "date": "2026-10-13",
         "kind": "发行人公告",
         "url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-10/2026-10-13/12638891.PDF",
-        "summary": "天阳科技公告采购20,000张，分批发货付款；原厂原因下存在延期、减量及卖方免责条款。",
-        "impact": "首批到货节奏不确定，短交期现货报价可能继续偏高。",
+        "summary": "天阳科技公告采购20,000张RTX PRO 5500，分批发货付款；原厂原因下存在延期、减量及卖方免责条款。",
+        "impact": "分批交付与卖方免责条款使首批到货节奏不确定，短交期现货报价可能继续偏高。",
         "watch": "核实配额及上下游交付责任"
       },
       {
@@ -1837,8 +1842,8 @@
         "date": "2026-10-09",
         "kind": "媒体采访",
         "url": "https://www.cls.cn/detail/2500747",
-        "summary": "财联社受访者估计单卡约85,000元，另有受访者判断报价或超过100,000元。",
-        "impact": "较宽预期区间说明报价仍受交期与供货把握影响。",
+        "summary": "财联社受访者估计单卡约85,000元，另有受访者判断报价或超过100,000元；当时官方尚未定价。",
+        "impact": "较宽预期区间说明报价仍受交期与供货把握影响，不宜把早期估价当采购底价。",
         "watch": "以新报盘替换旧估价"
       },
       {
@@ -1848,16 +1853,37 @@
         "date": "2026-11-25",
         "kind": "官方页面",
         "url": "https://www.nvidia.com/en-eu/products/workstations/professional-desktop-gpus/rtx-pro-5500/",
-        "summary": "RTX PRO 5500为84GB GDDR7工作站卡，官方页仍显示 Coming Soon。",
-        "impact": "关注官方售价和正式发货节点。",
+        "summary": "RTX PRO 5500为84GB GDDR7工作站卡。本轮状态：官方页仍显示 Coming Soon。",
+        "impact": "关注官方售价和正式发货节点，交付兑现后重新评估首批溢价。",
         "watch": "核对官方价格与可购买状态"
       }
     ],
-    "model": "@cf/zai-org/glm-4.7-flash",
-    "generated_at": "2026-11-24T21:08:31.802Z"
+    "model": null,
+    "generated_at": "2026-11-25T17:46:24+08:00",
+    "error": "模型引入了输入中没有的数字"
   },
   "feed": {
     "items": [
+      {
+        "id": "news-20261125-acab0d",
+        "title": "快科技：杭州园林子公司采购2万片RTX PRO 5500 Blackwell GPU",
+        "published_at": "2026-11-25",
+        "publisher": "快科技",
+        "source_type": "行业媒体",
+        "url": "https://news.mydrivers.com/1/1168/1168507.htm",
+        "grade": "B",
+        "summary": "快科技11月25日消息，杭州园林控股子公司杭微天算与华鲲振宇签署采购合同，采购RTX PRO 5500 Blackwell系列GPU及配套服务器，采购数量2万片，最终交付数量以实际到货为准。",
+        "impact": "新增2万片的具体采购订单，虽然占比不大，但验证了企业级客户对RTX PRO 5500的实际采购意愿和落地情况。",
+        "watch": "核实该2万片订单的具体交付时间表及资金来源。",
+        "grade_label": "单一可信来源",
+        "corroboration": [],
+        "claims": [],
+        "price_cny": null,
+        "scope": "5500",
+        "tier": "核实",
+        "checked_at": "2026-11-25",
+        "age_days": 0
+      },
       {
         "id": "reuters-20261123-5500-cancellations",
         "title": "路透：部分中国客户开始取消RTX PRO 5500订单，担心该卡无法入境",
@@ -2232,28 +2258,6 @@
         "tier": "核实",
         "checked_at": "2026-11-07",
         "age_days": 19
-      },
-      {
-        "id": "news-20261105-10bb1f",
-        "title": "快科技：AI巨头砸4700亿元买RTX Pro 5500，英伟达只能交付1%",
-        "published_at": "2026-11-05",
-        "publisher": "快科技",
-        "source_type": "行业媒体",
-        "url": "https://news.mydrivers.com/1/1163/1163315.htm",
-        "grade": "B",
-        "summary": "快科技11月5日消息，据报道称国内AI与云计算企业已向英伟达下达约600万颗RTX Pro 5500芯片订单，总价值约700亿美元（约合人民币4702亿元）。知情人士透露未来四个月预计只能收到约1%的订单量，即数万颗。英伟达2027年RTX Pro 5500全球规划产能不足300万颗，仅中国订单规模已远超全球产能两倍。首批样品预计2026年12月供应，商业出货预计2027年第一季度，到2027年底中国客户累计能拿到的总量可能仅为70万颗左右。",
-        "impact": "未来四个月交付量仅占总订单1%，意味着首批数千颗预计年底前到货，后续交付节奏将严重受制于英伟达全球产能限制。",
-        "watch": "核实首批数千颗与数万颗的具体交付时间节点及获配比例5%-10%的来源。",
-        "grade_label": "单一可信来源",
-        "corroboration": [
-          "https://cj.sina.com.cn/articles/view/5953466437/162dab0450670bh1rw"
-        ],
-        "claims": [],
-        "price_cny": null,
-        "scope": "5500",
-        "tier": "核实",
-        "checked_at": "2026-11-05",
-        "age_days": 20
       }
     ],
     "leads": [
@@ -2529,19 +2533,19 @@
       }
     ],
     "rejected": [],
-    "updated_at": "2026-11-25T05:07:55+08:00",
+    "updated_at": "2026-11-25T17:46:24+08:00",
     "agent": "actions-sweep+cloud-routine",
     "sweep": {
       "date": "2026-11-25",
-      "candidates": 1,
-      "read": 1,
-      "added": [],
+      "candidates": 2,
+      "read": 2,
+      "added": [
+        "news-20261125-acab0d"
+      ],
       "corroborated": 0,
-      "model": null,
+      "model": "@cf/zai-org/glm-4.7-flash",
       "notes": [
-        "云端条目未通过复核 https://money.udn.com/money/story/5603/9856924：原文没有这些数字",
-        "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
-        "模型调用失败：HTTPSConnectionPool(host='gpu-5500-intelligence.gaaiyun-risk-selfcheck.workers.dev', port=443): Read timed out. (read ti"
+        "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
       ]
     },
     "mentions": [
@@ -2680,37 +2684,27 @@
       "2026-11-24": {
         "media": 2,
         "wechat": 0
+      },
+      "2026-11-25": {
+        "media": 2,
+        "wechat": 0
       }
     },
     "take": {
-      "date": "2026-11-24",
-      "text": "今天新增：路透称部分中国客户已开始取消5500订单，担心该卡无法入境，规模不明；Digitimes称部分服务器供应商暂停向东南亚发货。均无新报价或批文，样卡11月底、首批数千颗年底的节点未变。"
+      "date": "2026-11-25",
+      "text": "过去一天没有新报价、批文或到货消息，路透称部分客户取消订单、Digitimes称服务器供应商暂停东南亚发货仍是最新信号。接下来等11月底样卡和年底首批到货，大陆报价暂按已有区间。"
     }
   },
   "digest": {
-    "headline": "今日无新报价，距最近一次新报价 1 天（德国 B2B OEM 版，2026-11-24）",
+    "headline": "今日 1 条新报价或新动态",
     "items": [
       {
-        "tag": "检索",
-        "text": "今日检索到 1 篇可读来源，读正文 1 篇，新增 0 条"
-      },
-      {
-        "tag": "近7天",
-        "text": "11-23 路透：部分中国客户开始取消RTX PRO 5500订单，担心该卡无法入境",
-        "url": "https://www.investing.com/news/stock-market-news/how-nvidias-billiondollar-turnaround-in-china-is-threatened-by-huangs-exit-5044929"
-      },
-      {
-        "tag": "近7天",
-        "text": "11-23 Digitimes：部分英伟达服务器供应商暂停向东南亚发货",
-        "url": "https://news.qq.com/rain/a/20261123A0DLR300"
-      },
-      {
-        "tag": "近7天",
-        "text": "11-18 雷峰网：黄仁勋归期未决，B300现货价与昇腾950排期成买家顾虑",
-        "url": "https://www.leiphone.com/category/chips/WHSLCH74nrSJW6OE.html"
+        "tag": "情报",
+        "text": "[B 单一可信来源] 快科技：杭州园林子公司采购2万片RTX PRO 5500 Blackwell GPU（快科技）",
+        "url": "https://news.mydrivers.com/1/1168/1168507.htm"
       }
     ],
-    "quiet": true,
+    "quiet": false,
     "days_since_quote": 1,
     "last_quote": {
       "label": "德国 B2B OEM 版",
