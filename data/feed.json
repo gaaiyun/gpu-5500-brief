@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-25T07:06:39+08:00",
+  "updated_at": "2026-11-25T09:03:20+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -856,8 +856,7 @@
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
-      "Google 新闻 \"RTX PRO 5500\" when:3d 失败：503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22RTX%20PRO%205500%22%20when%3A3d&h"
+      "GDELT \"RTX PRO 5500\" 失败：HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=12)"
     ]
   }
 }
