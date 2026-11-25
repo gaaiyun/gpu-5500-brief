@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-26T04:28:14+08:00",
+  "updated_at": "2026-11-26T07:06:22+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -37,6 +37,25 @@
       "claims": [],
       "checked_at": "2026-11-25",
       "found_via": "快科技"
+    },
+    {
+      "id": "ithome-20261125-rtx50-supply-cut",
+      "title": "IT之家：英伟达被曝缩减RTX 50系列供货，ODM产能转向B300、GB300",
+      "published_at": "2026-11-25",
+      "publisher": "IT之家转述《工商时报》",
+      "source_type": "行业媒体",
+      "scope": "context",
+      "url": "https://www.ithome.com/1/032/097.htm",
+      "grade": "B",
+      "summary": "IT之家11月25日援引中国台湾《工商时报》：ODM厂商透露，B300、GB300新订单交货周期大幅拉长，英伟达已缩减GeForce RTX 50系列供货。业界人士称B300新订单交货周期延长至26至40周，GB300约为14至26周；供应链预估近两个季度下单的新项目，大多要等到2027年第二至第三季度才能交付。",
+      "impact": "推断：ODM产能重心转向B300、GB300和Vera Rubin，同属Blackwell的5500的板卡产能、GDDR7配给可能同样受挤，首批到货节奏有延后风险。原文未提5500。",
+      "watch": "5500样卡与首批到货是否延后",
+      "corroboration": [
+        "https://news.qq.com/rain/a/20261125A08KC400"
+      ],
+      "claims": [],
+      "checked_at": "2026-11-26",
+      "ci_checked": "2026-11-26"
     },
     {
       "id": "reuters-20261123-5500-cancellations",
@@ -398,22 +417,6 @@
         "https://finance.yahoo.com/technology/ai/articles/nvidia-chips-stockpile-hong-kong-120548918.html",
         "https://www.eet-china.com/news/202611092617.html"
       ],
-      "claims": [],
-      "checked_at": "2026-11-06"
-    },
-    {
-      "id": "videocardz-20261105-shi-msrp",
-      "title": "VideoCardz：5500在美国经销商SHI现身，标价17,999美元",
-      "published_at": "2026-11-05",
-      "publisher": "VideoCardz",
-      "source_type": "行业媒体",
-      "scope": "5500",
-      "url": "https://videocardz.com/newz/nvidia-rtx-pro-5500-blackwell-appears-at-17999-msrp-higher-than-rtx-pro-6000",
-      "grade": "B",
-      "summary": "VideoCardz称RTX PRO 5500 Blackwell 84GB在美国经销商SHI Government Solutions出现首个零售标价，为PNY Workstation Edition，MSRP为17,999美元。该卡配备21,760个CUDA核心和84GB GDDR7 ECC显存。",
-      "impact": "这是美国政府采购渠道的挂牌价，不是英伟达官方价，也不是大陆价；只能作为海外标价的参照，大陆报价仍以渠道报价为准。推断。",
-      "watch": "英伟达是否公布官方价格",
-      "corroboration": [],
       "claims": [],
       "checked_at": "2026-11-06"
     }
@@ -853,8 +856,8 @@
     }
   },
   "take": {
-    "date": "2026-11-25",
-    "text": "过去一天没有新报价、批文或到货消息，路透称部分客户取消订单、Digitimes称服务器供应商暂停东南亚发货仍是最新信号。接下来等11月底样卡和年底首批到货，大陆报价暂按已有区间。"
+    "date": "2026-11-26",
+    "text": "今天无新报价、批文或到货消息。新增信号是台湾媒体称ODM产能转向B300、GB300，新订单要到2027年第二至第三季度交付，5500首批到货有延后风险。大陆报价暂按已有区间，等11月底样卡和年底首批。"
   },
   "sweep": {
     "date": "2026-11-26",
@@ -864,8 +867,7 @@
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
-      "重复报道 reuters：https://news.qq.com/rain/a/20261021A07X2300"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
     ]
   }
 }
