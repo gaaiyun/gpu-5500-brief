@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-26T17:25:19+08:00",
+  "updated_at": "2026-11-27T04:07:45+08:00",
   "agent": "actions-sweep+cloud-routine",
   "searched": [
     "GDELT \"RTX PRO 5500\"",
@@ -22,6 +22,94 @@
     "搜狗微信 RTX PRO 5500 / RTX PRO 5500 报价 / RTX PRO 5500 到货"
   ],
   "items": [
+    {
+      "id": "finance-20261126-f726c6",
+      "title": "新浪财经：微盟拟采购约5000张RTX PRO 5500 Blackwell GPU，总金额约4.3亿元",
+      "published_at": "2026-11-26",
+      "publisher": "新浪财经",
+      "source_type": "行业媒体",
+      "url": "https://finance.sina.com.cn/roll/2026-11-26/doc-inkaatuz3570278.shtml",
+      "grade": "B",
+      "summary": "新浪财经报道，微盟集团全资附属公司微盟智算与英迈电子、上海赋欣签署GPU算力设备采购协议，采购及部署约5000张NVIDIA RTX PRO 5500 Blackwell GPU，协议总金额约为4.3亿元。",
+      "impact": "微盟的采购计划进一步验证了RTX PRO 5500 Blackwell在AI推理和多模态应用场景中的市场需求，并增加了该卡的实际采购量。",
+      "watch": "核实微盟采购的GPU具体型号是否确认为RTX PRO 5500 Blackwell。",
+      "corroboration": [],
+      "claims": [],
+      "checked_at": "2026-11-27",
+      "found_via": "Bing 新闻"
+    },
+    {
+      "id": "finance-20261126-9e7b38",
+      "title": "新浪财经：微盟集团拟采购约5000张GPU建设自有算力集群",
+      "published_at": "2026-11-26",
+      "publisher": "新浪财经",
+      "source_type": "行业媒体",
+      "url": "https://finance.sina.com.cn/stock/estate/integration/2026-11-26/doc-inkaaawz8979126.shtml",
+      "grade": "B",
+      "summary": "新浪财经观点网讯报道，微盟集团计划加大人工智能算力基础设施投入，拟采购及部署约5000张NVIDIA RTX PRO 5500 Blackwell GPU，建设自有GPU算力集群。",
+      "impact": "微盟的采购计划进一步验证了RTX PRO 5500 Blackwell在AI推理和多模态应用场景中的市场需求，并增加了该卡的实际采购量。",
+      "watch": "核实微盟采购的GPU具体型号是否确认为RTX PRO 5500 Blackwell。",
+      "corroboration": [],
+      "claims": [],
+      "checked_at": "2026-11-27",
+      "found_via": "Bing 新闻"
+    },
+    {
+      "id": "finance-20261126-53baf3",
+      "title": "微盟集团斥资4.3亿元采购5000张RTX PRO 5500",
+      "published_at": "2026-11-26",
+      "publisher": "新浪财经",
+      "source_type": "行业媒体",
+      "url": "https://finance.sina.com.cn/wm/2026-11-26/doc-inkaatuz3543902.shtml",
+      "grade": "B",
+      "summary": "微盟集团子公司微盟智算与英迈电子、上海赋欣签订采购协议，合计采购5000张RTX PRO 5500 Blackwell GPU，总金额4.305亿元；向英迈电子采购4000张，金额3.44亿元，折合每张约8.6万元；向上海赋欣采购1000张，金额8650万元，折合每张8.65万元。",
+      "impact": "新的大客户采购订单落地，进一步验证了RTX PRO 5500在B端市场的需求热度，单卡价格区间与此前报道基本吻合。",
+      "watch": "核实英迈电子与上海赋欣的供货能力及交付进度。",
+      "corroboration": [],
+      "claims": [],
+      "checked_at": "2026-11-27",
+      "found_via": "Bing 新闻",
+      "price_cny": [
+        86000,
+        86000
+      ]
+    },
+    {
+      "id": "sohu-20261126-7c6753",
+      "title": "微盟集团斥资4.3亿采购5000张英伟达GPU",
+      "published_at": "2026-11-26",
+      "publisher": "搜狐号",
+      "source_type": "公众号",
+      "url": "https://www.sohu.com/a/1106862858_122066678",
+      "grade": "C",
+      "summary": "微盟集团子公司微盟智算与英迈电子和上海赋欣分别签署协议，共采购5000张英伟达RTX PRO 5500 Blackwell GPU，总金额为4.305亿元人民币；向英迈电子购买4000张GPU，总价3.44亿元，每张约8.6万元；向上海赋欣购买1000张，总价8650万元，每张8.65万元。",
+      "impact": "新增5000张订单，进一步确认了RTX PRO 5500在B端市场的需求热度，单卡价格区间与此前报道基本吻合。",
+      "watch": "核实英迈电子与上海赋欣的供货能力及交付进度。",
+      "corroboration": [],
+      "claims": [
+        {
+          "text": "向英迈电子购买4000张GPU，总价3.44亿元，每张约8.6万元",
+          "status": "无出处",
+          "ref": ""
+        },
+        {
+          "text": "向上海赋欣购买1000张，总价8650万元，每张8.65万元",
+          "status": "无出处",
+          "ref": ""
+        },
+        {
+          "text": "微盟智算将分别支付给英迈电子和上海赋欣采购金额的10%和5%作为预付款",
+          "status": "有出处",
+          "ref": "https://www.bnnbloomberg.ca/business/company-news/2026/10/20/bytedance-alibaba-tencent-place-over-us35-billion-worth-of-nvidia-chip-orders-reuters-exclusive/"
+        }
+      ],
+      "checked_at": "2026-11-27",
+      "found_via": "Bing 新闻",
+      "price_cny": [
+        86000,
+        86000
+      ]
+    },
     {
       "id": "news-20261125-acab0d",
       "title": "快科技：杭州园林子公司采购2万片RTX PRO 5500 Blackwell GPU",
@@ -349,75 +437,6 @@
       ],
       "checked_at": "2026-11-07",
       "found_via": "Bing 新闻"
-    },
-    {
-      "id": "finance-20261106-c232df",
-      "title": "RTX PRO 5500在美国标价超12万元",
-      "published_at": "2026-11-06",
-      "publisher": "新浪财经",
-      "source_type": "行业媒体",
-      "url": "https://finance.sina.com.cn/tech/roll/2026-11-06/doc-inixuiyu8241405.shtml",
-      "grade": "B",
-      "summary": "快科技11月6日消息，RTX PRO 5500 Blackwell在美国零售商SHI Government Solutions上架，PNY版本标价17999美元，折扣后约17408.63美元。",
-      "impact": "美国渠道零售价倒挂，侧面印证中国市场需求旺盛推高价格。",
-      "watch": "核实该价格是否为官方MSRP或仅限特定渠道/版本。",
-      "corroboration": [],
-      "claims": [],
-      "checked_at": "2026-11-07",
-      "found_via": "Bing 新闻"
-    },
-    {
-      "id": "news-20261105-10bb1f",
-      "title": "快科技：AI巨头砸4700亿元买RTX Pro 5500，英伟达只能交付1%",
-      "published_at": "2026-11-05",
-      "publisher": "快科技",
-      "source_type": "行业媒体",
-      "url": "https://news.mydrivers.com/1/1163/1163315.htm",
-      "grade": "B",
-      "summary": "快科技11月5日消息，据报道称国内AI与云计算企业已向英伟达下达约600万颗RTX Pro 5500芯片订单，总价值约700亿美元（约合人民币4702亿元）。知情人士透露未来四个月预计只能收到约1%的订单量，即数万颗。英伟达2027年RTX Pro 5500全球规划产能不足300万颗，仅中国订单规模已远超全球产能两倍。首批样品预计2026年12月供应，商业出货预计2027年第一季度，到2027年底中国客户累计能拿到的总量可能仅为70万颗左右。",
-      "impact": "未来四个月交付量仅占总订单1%，意味着首批数千颗预计年底前到货，后续交付节奏将严重受制于英伟达全球产能限制。",
-      "watch": "核实首批数千颗与数万颗的具体交付时间节点及获配比例5%-10%的来源。",
-      "corroboration": [
-        "https://cj.sina.com.cn/articles/view/5953466437/162dab0450670bh1rw"
-      ],
-      "claims": [],
-      "checked_at": "2026-11-05",
-      "found_via": "快科技"
-    },
-    {
-      "id": "leiphone-20261105-1b0532",
-      "title": "雷峰网：游族网络公告采购42.25亿元PRO5500 GPU",
-      "published_at": "2026-11-05",
-      "publisher": "雷峰网",
-      "source_type": "行业媒体",
-      "url": "https://www.leiphone.com/category/zaobao/uojoiQ2Owilfvr8B.html",
-      "grade": "B",
-      "summary": "雷峰网11月4日消息，A股游戏公司游族网络公告全资子公司拟采购金额为42.25亿元的GPU，推进公司转型升级。子公司上海游族信息技术有限公司与A公司签署《销售合同》，采购型号为PRO5500（PCIe）的GPU产品，协议总金额为人民币42.25亿元。公司提示交付延期等风险，供方不承担违约责任。",
-      "impact": "42.25亿元的采购合同为RTX PRO 5500在游戏/企业级市场的应用提供了具体案例，但分批交付模式增加了短期到货的不确定性。",
-      "watch": "核实合同中具体采购数量及分批交付的详细时间表。",
-      "corroboration": [],
-      "claims": [],
-      "checked_at": "2026-11-05",
-      "found_via": "雷峰网"
-    },
-    {
-      "id": "reuters-20261105-h200-hk",
-      "title": "路透：约60万枚H200滞留香港，北京未批大规模进口",
-      "published_at": "2026-11-05",
-      "publisher": "法广（援引路透社）",
-      "source_type": "主流媒体",
-      "scope": "context",
-      "url": "https://www.rfi.fr/cn/%E7%A7%91%E6%8A%80%E4%B8%8E%E6%96%87%E5%8C%96/20261105-%E5%8C%97%E4%BA%AC%E6%9C%AA%E6%89%B9%E5%87%86%E5%A4%A7%E8%A7%84%E6%A8%A1%E8%BF%9B%E5%8F%A3-%E7%BA%A6%E6%9C%8960%E4%B8%87%E6%9E%9A%E8%8B%B1%E4%BC%9F%E8%BE%BEh200%E8%8A%AF%E7%89%87%E8%A2%AB%E6%8C%87%E6%BB%9E%E7%95%99%E9%A6%99%E6%B8%AF",
-      "grade": "B",
-      "summary": "据路透社援引两位知情人士，约有60万枚英伟达H200芯片存放在香港，等待运往内地。另一位知情人士称，截至10月底，内地一台搭载8枚H200的服务器售价超过600万元人民币，约为一年前价格的三倍。路透上月报导称字节、阿里、腾讯已订购超过300万张RTX Pro 5500。",
-      "impact": "进口审批仍是瓶颈：H200有货也进不来，说明5500即便到货也可能卡在批准环节；H200服务器价格走高会把需求推向合规的5500。以上为推断。",
-      "watch": "工信部对5500的批文与首批到货",
-      "corroboration": [
-        "https://finance.yahoo.com/technology/ai/articles/nvidia-chips-stockpile-hong-kong-120548918.html",
-        "https://www.eet-china.com/news/202611092617.html"
-      ],
-      "claims": [],
-      "checked_at": "2026-11-06"
     }
   ],
   "leads": [
@@ -850,6 +869,10 @@
       "wechat": 0
     },
     "2026-11-26": {
+      "media": 15,
+      "wechat": 1
+    },
+    "2026-11-27": {
       "media": 2,
       "wechat": 0
     }
@@ -859,14 +882,20 @@
     "text": "今天无新报价、批文或到货消息。新增信号是台湾媒体称ODM产能转向B300、GB300，新订单要到2027年第二至第三季度交付，5500首批到货有延后风险。大陆报价暂按已有区间，等11月底样卡和年底首批。"
   },
   "sweep": {
-    "date": "2026-11-26",
-    "candidates": 1,
-    "read": 1,
-    "added": [],
+    "date": "2026-11-27",
+    "candidates": 5,
+    "read": 5,
+    "added": [
+      "finance-20261126-f726c6",
+      "finance-20261126-9e7b38",
+      "finance-20261126-53baf3",
+      "sohu-20261126-7c6753"
+    ],
     "corroborated": 0,
     "model": "@cf/zai-org/glm-4.7-flash",
     "notes": [
-      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo"
+      "GDELT \"RTX PRO 5500\" 失败：429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%22RTX%20PRO%205500%22&mo",
+      "重复报道 reuters：https://news.qq.com/rain/a/20261021A07X2300"
     ]
   }
 }
