@@ -1,5 +1,32 @@
 [
  {
+  "url": "https://news.qq.com/rain/a/20261126A0BGSG00",
+  "title": "泰国：英伟达暂停向泰马新印尼发运搭载其芯片的AI服务器",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-26",
+  "scope": "context",
+  "snippets": [
+   "其后，英伟达董事会于11月23日重新任命 黄仁勋 出任首席执行官。"
+  ],
+  "seen_at": "2026-11-26",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1106572560_223785",
+  "title": "MiniMax加快转向阿里和昇腾等国产AI芯片，恒生科技ETF博时(159742)跟踪 ...",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-25",
+  "scope": "context",
+  "snippets": [
+   "流动性方面，恒生科技ETF博时盘中换手2.01%，成交5745.83万元。",
+   "从资金净流入方面来看，恒生科技ETF博时近3天获得连续资金净流入，最高单日获得3021.79万元净流入，合计“吸金”4773.70万元，日均净流入达1591.2"
+  ],
+  "seen_at": "2026-11-26",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.ithome.com/1/032/097.htm",
   "title": "AI 芯片挤占消费级 GPU 产能，英伟达被曝缩减 RTX 50 系列显卡供货量",
   "publisher": "IT之家",
@@ -133,7 +160,7 @@
   "published_at": "2026-11-23",
   "scope": "context",
   "snippets": [],
-  "seen_at": "2026-11-24",
+  "seen_at": "2026-11-26",
   "found_via": "Bing 新闻"
  },
  {
