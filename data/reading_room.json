@@ -1,5 +1,137 @@
 [
  {
+  "url": "https://www.sohu.com/a/1106862858_122066678",
+  "title": "微盟集团斥资4.3亿采购5000张英伟达GPU，布局算力市场",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-26",
+  "scope": "5500",
+  "snippets": [
+   "2026年11月26日，微盟集团（02013.HK）宣布其全资子公司微盟智算与英迈电子和上海赋欣分别签署协议，共采购5000张英伟达RTX PRO 5500 B",
+   "根据协议，微盟智算将向英迈电子购买4000张GPU，总价3.44亿元，每张约8.6万元；",
+   "向上海赋欣购买1000张，总价8650万元，每张8.65万元。",
+   "微盟智算将分别支付给英迈电子和上海赋欣采购金额的10%和5%作为预付款，剩余款项按约定分批支付。"
+  ],
+  "seen_at": "2026-11-27",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.rfi.fr/cn/%E5%9B%BD%E9%99%85/20261126-ai%E6%96%B0%E4%BA%91%E8%A2%AB%E5%91%8A%E7%9F%A5%E8%8B%A5%E7%AE%97%E5%8A%9B%E5%87%BA%E7%A7%9F%E7%BB%99%E4%B8%AD%E5%9B%BD%E5%85%AC%E5%8F%B8%EF%BC%8C%E5%B0%86%E6%97%A0%E6%B3%95%E8%B4%AD%E4%B9%B0%E8%8B%B1%E4%BC%9F%E8%BE%BE%E8%8A%AF%E7%89%87",
+  "title": "AI新云被告知若算力出租给中国公司，将无法购买英伟达芯片",
+  "publisher": "法广",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-26",
+  "scope": "context",
+  "snippets": [
+   "CNBC报导指，在这项新规发布之前，英伟达曾表示，如果客户将所租用的GPU中超过50%的算力提供给中国企业使用，英伟达将不会向这些客户出售其芯片。",
+   "知情人士称，自11月16日出台限制中国企业租用英伟达先进芯片访问权的新规以来，市场上出现了数量异常庞大的英伟达GPU。"
+  ],
+  "seen_at": "2026-11-27",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.cnbc.com/2026/11/26/neoclouds-nvidia-china-ai.html",
+  "title": "Nvidia chip buyers told to rule out Chinese renters to purchase GPUs, sources say",
+  "publisher": "CNBC",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-26",
+  "scope": "context",
+  "snippets": [
+   "Prior to the new rule's announcement, Nvidia had said it would not sell its chip"
+  ],
+  "seen_at": "2026-11-27",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://news.qq.com/rain/a/20261126A0BGSG00",
+  "title": "泰国：英伟达暂停向泰马新印尼发运搭载其芯片的AI服务器",
+  "publisher": "腾讯新闻",
+  "source_type": "公众号",
+  "published_at": "2026-11-26",
+  "scope": "context",
+  "snippets": [
+   "其后，英伟达董事会于11月23日重新任命 黄仁勋 出任首席执行官。"
+  ],
+  "seen_at": "2026-11-26",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-chips-reach-chinese-owned-031146505.html",
+  "title": "Nvidia chips reach Chinese-owned U.S. firms despite export curbs, CBS reports",
+  "publisher": "雅虎财经",
+  "source_type": "主流媒体",
+  "published_at": "2026-11-26",
+  "scope": "context",
+  "snippets": [
+   "Citing an analysis of trade records by The New York Times, CBS reported that Aiv",
+   "About $3 billion involved computers containing Nvidia's Blackwell chips, which a"
+  ],
+  "seen_at": "2026-11-27",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.sina.com.cn/wm/2026-11-26/doc-inkaatuz3543902.shtml",
+  "title": "4.3 亿、5000 张英伟达 GPU 大单：微盟入局算力市场！",
+  "publisher": "新浪财经",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-26",
+  "scope": "5500",
+  "snippets": [
+   "2026 年 11 月 26 日，微盟集团（02013.HK）发布公告，宣布旗下全资子公司微盟智算与英迈电子、上海赋欣分别签订 GPU 采购协议，合计采购 50",
+   "1）向英迈电子采购 4000 张，金额为 3.44 亿元，折合每张约 8.6 万元；",
+   "2）向上海赋欣采购 1000 张，金额为 8650 万元，折合每张 8.65 万元。",
+   "根据协议，微盟智算将分别向英迈电子、上海赋欣支付采购金额 10% 和 5% 的预付款，GPU 将分批交付，剩余款项按协议约定分批支付。",
+   "03 / 黄仁勋：愿回归，董事会：无意让他复职，业绩超预期，英伟达盘后涨超4%",
+   "07 / 黄仁勋公开表态：愿意重新执掌英伟达"
+  ],
+  "seen_at": "2026-11-27",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.sina.com.cn/stock/estate/integration/2026-11-26/doc-inkaaawz8979126.shtml",
+  "title": "微盟集团拟采购约5000张GPU 建设自有算力集群并拓展智算云服务",
+  "publisher": "新浪财经",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-26",
+  "scope": "5500",
+  "snippets": [
+   "观点网讯： 11月26日，微盟集团宣布，计划加大人工智能算力基础设施投入，拟采购及部署约5000张NVIDIA RTX PRO 5500 Blackwell G",
+   "03 / 黄仁勋：愿回归，董事会：无意让他复职，业绩超预期，英伟达盘后涨超4%",
+   "07 / 黄仁勋公开表态：愿意重新执掌英伟达"
+  ],
+  "seen_at": "2026-11-27",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://finance.sina.com.cn/roll/2026-11-26/doc-inkaatuz3570278.shtml",
+  "title": "掷4.3亿元采购约5000张Blackwell GPU 微盟拟加大人工智能算力基础设施投入",
+  "publisher": "新浪财经",
+  "source_type": "行业媒体",
+  "published_at": "2026-11-26",
+  "scope": "5500",
+  "snippets": [
+   "11月26日，微盟集团（02013.HK）公告称，旗下全资附属公司微盟智算与英迈电子、上海赋欣签署GPU算力设备采购协议，将采购及部署约5000张NVIDIA ",
+   "03 / 黄仁勋：愿回归，董事会：无意让他复职，业绩超预期，英伟达盘后涨超4%",
+   "07 / 黄仁勋公开表态：愿意重新执掌英伟达"
+  ],
+  "seen_at": "2026-11-27",
+  "found_via": "Bing 新闻"
+ },
+ {
+  "url": "https://www.sohu.com/a/1106572560_223785",
+  "title": "MiniMax加快转向阿里和昇腾等国产AI芯片，恒生科技ETF博时(159742)跟踪 ...",
+  "publisher": "搜狐号",
+  "source_type": "公众号",
+  "published_at": "2026-11-25",
+  "scope": "context",
+  "snippets": [
+   "流动性方面，恒生科技ETF博时盘中换手2.01%，成交5745.83万元。",
+   "从资金净流入方面来看，恒生科技ETF博时近3天获得连续资金净流入，最高单日获得3021.79万元净流入，合计“吸金”4773.70万元，日均净流入达1591.2"
+  ],
+  "seen_at": "2026-11-26",
+  "found_via": "Bing 新闻"
+ },
+ {
   "url": "https://www.ithome.com/1/032/097.htm",
   "title": "AI 芯片挤占消费级 GPU 产能，英伟达被曝缩减 RTX 50 系列显卡供货量",
   "publisher": "IT之家",
@@ -70,7 +202,7 @@
    "财报显示，至2026年第三季度，英伟达已在华实现24亿美元的销售收入，而随后的第四季度预估则被降至零——一条长期存在的独特出口渠道，宣告从此归入历史。",
    "摩根士丹利最新报告指出，华为昇腾系列有望在2026年占据国内AI芯片市场半壁江山，其部分推理芯片价格仅为英伟达同类产品的四分之一。"
   ],
-  "seen_at": "2026-11-26",
+  "seen_at": "2026-11-27",
   "found_via": "Bing 新闻"
  },
  {
@@ -133,7 +265,7 @@
   "published_at": "2026-11-23",
   "scope": "context",
   "snippets": [],
-  "seen_at": "2026-11-24",
+  "seen_at": "2026-11-26",
   "found_via": "Bing 新闻"
  },
  {
@@ -300,22 +432,6 @@
   "found_via": "Bing 新闻"
  },
  {
-  "url": "https://www.sohu.com/a/1104538416_122483404",
-  "title": "美媒发现：英伟达丢失中国市场之后，最危险的对手正在中国长出来",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-21",
-  "scope": "context",
-  "snippets": [
-   "10月中旬，路透社拿到一份IDC的统计，随后被美国几家财经媒体反复引用：2026年上半年，英伟达在中国数据中心AI芯片市场的份额，掉到了34%。",
-   "英伟达财报里写明，光是一个季度，就因为这批库存积压和没法交付的订单计提了45亿美元的费用。",
-   "公开数据里，昇腾950PR主打推理场景，推理性能达到英伟达H20的三倍。",
-   "英伟达的全球生意并没有垮掉， 最新一个财季营收1158亿美元，数据中心收入1076亿美元，同比翻倍还多，其他市场的需求仍然很强。"
-  ],
-  "seen_at": "2026-11-21",
-  "found_via": "Bing 新闻"
- },
- {
   "url": "https://finance.yahoo.com/markets/stocks/articles/tsmc-sinks-20-week-nvidia-100729822.html",
   "title": "TSMC Sinks 20% in a Week on Nvidia Jitters and New US Chip Curbs on China. Time to Buy?",
   "publisher": "雅虎财经",
@@ -331,20 +447,6 @@
    "Nvidia's revenue more than doubled to $115.8 billion in its fiscal third quarter"
   ],
   "seen_at": "2026-11-22",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.sohu.com/a/1104169829_121945034",
-  "title": "美媒：阿里巴巴借道新加坡购入英伟达芯片",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-20",
-  "scope": "context",
-  "snippets": [
-   "11月18日，美国媒体报道称，英伟达芯片经新加坡公司Megaspeed采购，最终被中国互联网巨头阿里巴巴实际使用。",
-   "路演后，新加坡公司Megaspeed成立，买下逾40亿美元的英伟达芯片。"
-  ],
-  "seen_at": "2026-11-21",
   "found_via": "Bing 新闻"
  },
  {
@@ -372,20 +474,6 @@
   "found_via": "Bing 新闻"
  },
  {
-  "url": "https://finance.yahoo.com/video/nvidias-troubles-mount-as-china-chip-sales-face-scrutiny-151642511.html",
-  "title": "Nvidia's troubles mount as China chip sales face scrutiny",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-20",
-  "scope": "context",
-  "snippets": [
-   "\"The 8:30\" hosts Julie Hyman, Pras Subramanian, and Jake Conley discuss mounting",
-   "Like each H200 chip costs like $30 to $40,000."
-  ],
-  "seen_at": "2026-11-21",
-  "found_via": "Bing 新闻"
- },
- {
   "url": "https://finance.yahoo.com/video/lutnick-faces-scrutiny-over-nvidia-225714495.html",
   "title": "Lutnick faces scrutiny over Nvidia chip exports to China",
   "publisher": "雅虎财经",
@@ -394,42 +482,6 @@
   "scope": "context",
   "snippets": [],
   "seen_at": "2026-11-22",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/u-approved-879-000-nvidia-142855736.html",
-  "title": "The U.S. Approved 879,000 Nvidia and AMD Chips for China in 6 Months",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-20",
-  "scope": "context",
-  "snippets": [
-   "Commerce approved about 879,000 of 3.4 million requested Nvidia and AMD China ch",
-   "NVIDIA ( NASDAQ:NVDA ) fell 3.30% to $145.98.",
-   "Advanced Micro Devices ( NASDAQ:AMD ) dropped 7.72% to $489.19, although that sl",
-   "The approvals ran from December 2025 through May 2026 and covered NVIDIA's H200 ",
-   "NVIDIA said the approvals carried strict conditions and limited volumes and that",
-   "Its fiscal third quarter included $2.4 billion of Hopper data center shipments t"
-  ],
-  "seen_at": "2026-11-21",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://finance.yahoo.com/technology/ai/articles/trump-treasury-secretary-keeps-nvidia-215837212.html",
-  "title": "Trump’s Treasury Secretary Keeps Nvidia’s H200 China Policy as House Data Show Nearly 880,000 AI Chi",
-  "publisher": "雅虎财经",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-20",
-  "scope": "context",
-  "snippets": [
-   "House data show Commerce approved nearly 880,000 NVIDIA and AMD AI chips for Chi",
-   "Treasury Secretary Scott Bessent says the policy letting NVIDIA ( NVDA:NASDAQ ) ",
-   "He said it a day after House data showed nearly 880,000 NVIDIA and Advanced Micr",
-   "As CNBC's Megan Casella reported on Thursday's Closing Bell , the House Foreign ",
-   "TIKR tracks 62 analysts on Nvidia.",
-   "It shipped $2.4 billion of them to China in the quarter ended Oct."
-  ],
-  "seen_at": "2026-11-21",
   "found_via": "Bing 新闻"
  },
  {
@@ -451,21 +503,6 @@
   "found_via": "Bing 新闻"
  },
  {
-  "url": "https://www.sohu.com/a/1103742010_121107745",
-  "title": "花700亿抢GPU的人，现在开始盯上云专线了",
-  "publisher": "搜狐号",
-  "source_type": "公众号",
-  "published_at": "2026-11-19",
-  "scope": "5500",
-  "snippets": [
-   "11月4日有条新闻，彭博社报的：阿里、腾讯、字节这些国内大厂，加起来订了大约600万张英伟达RTX Pro 5500，订单金额接近700亿美元。",
-   "但未来四个月只能到货几万张，交付率大概1%。",
-   "700亿美元买一张卡都到不了手，这事听着夸张，但这就是眼下算力市场的真实状态。"
-  ],
-  "seen_at": "2026-11-21",
-  "found_via": "Bing 新闻"
- },
- {
   "url": "https://www.rfi.fr/cn/%E7%BE%8E%E6%B4%B2/20261119-%E7%BE%8E%E5%9B%BD%E8%8A%AF%E7%89%87%E5%87%BA%E5%8F%A3%E7%AE%A1%E5%88%B6%E9%81%87%E6%8C%91%E6%88%98-cnn%E7%A7%B0%E5%A4%9A%E6%89%80%E4%B8%AD%E5%9B%BD%E9%AB%98%E6%A0%A1%E9%87%87%E8%B4%AD%E8%8B%B1%E4%BC%9F%E8%BE%BE%E8%8A%AF%E7%89%87",
   "title": "美国芯片出口管制遇挑战 CNN称多所中国高校采购英伟达芯片",
   "publisher": "法广",
@@ -479,51 +516,6 @@
    "在CNN调查的90个买家中，约八成是高校，另有研究机构和政府部门参与采购。"
   ],
   "seen_at": "2026-11-22",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://videocardz.com/newz/nvidia-rtx-pro-5500-blackwell-84gb-launches-in-japan",
-  "title": "NVIDIA RTX PRO 5500 Blackwell 84GB launches in Japan",
-  "publisher": "VideoCardz",
-  "source_type": "行业媒体",
-  "published_at": "2026-11-19",
-  "scope": "5500",
-  "snippets": [
-   "NVIDIA RTX PRO 5500 Blackwell launches in Japan as US listings top $20,000",
-   "Ryosan Ryoyo has launched the NVIDIA RTX PRO 5500 Blackwell Workstation Edition ",
-   "The authorized NVIDIA distributor confirmed on November 18 that it had started o",
-   "The RTX PRO 5500 Blackwell has 21,760 CUDA cores and 84GB of GDDR7 memory with E",
-   "We previously covered the $17,999 MSRP shown by SHI Government Solutions for the",
-   "That listing shows a price of $17,408.63 and asks buyers to verify stock."
-  ],
-  "seen_at": "2026-11-21",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://www.cnbc.com/2026/11/18/nvidia-chips-china-military-ai.html",
-  "title": "China’s military seeks Nvidia’s advanced chips for AI capabilities, commission says",
-  "publisher": "CNBC",
-  "source_type": "主流媒体",
-  "published_at": "2026-11-18",
-  "scope": "context",
-  "snippets": [],
-  "seen_at": "2026-11-21",
-  "found_via": "Bing 新闻"
- },
- {
-  "url": "https://m.163.com/news/article/LC1D20Q70001899O.html",
-  "title": "英伟达停止向中国供应H200芯片 外交部回应",
-  "publisher": "网易号",
-  "source_type": "公众号",
-  "published_at": "2026-11-18",
-  "scope": "context",
-  "snippets": [
-   "原标题：英伟达停止向中国供应H200芯片 外交部回应",
-   "法新社记者提问，英伟达的临时CEO称，将不再向中国出货H200芯片。",
-   "傲慢与自负》，甚至批评黄仁勋偷偷给1000美元小费，都是在“掩盖自己的傲慢”。",
-   "贝森特也继续敲打英伟达，威胁董事会10天内必须选定一个外部人来当CEO。"
-  ],
-  "seen_at": "2026-11-21",
   "found_via": "Bing 新闻"
  },
  {
@@ -541,7 +533,7 @@
    "英伟达已向合作伙伴打过招呼，最终可能只能满足所订数量的5%至10%。",
    "对中国客户来说，RTX PRO 5500有一个很实在的优势：合规，能买。"
   ],
-  "seen_at": "2026-11-26",
+  "seen_at": "2026-11-27",
   "found_via": "人工转入"
  }
 ]
